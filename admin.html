@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — Los Artesanos Verdes</title>
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a2e1f;
+    --forest-deep: #0a1810;
+    --sage: #5a6b4a;
+    --brand-green: #22a044;
+    --brand-green-deep: #158035;
+    --cream: #f5efe1;
+    --ivory: #faf6ec;
+    --terracotta: #b8733a;
+    --gold: #c8944a;
+    --line: rgba(26, 46, 31, 0.15);
+    --display: 'Fraunces', Georgia, serif;
+    --body: 'Manrope', -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--body);
+    background: var(--ivory);
+    color: var(--forest);
+    min-height: 100vh;
+  }
+
+  /* Login screen */
+  .login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
+  }
+  .login-box {
+    background: var(--ivory);
+    border-radius: 12px;
+    padding: 3rem;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  .login-box img { width: 120px; margin-bottom: 1rem; }
+  .login-box h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--forest-deep);
+    margin-bottom: 0.3rem;
+  }
+  .login-box .sub {
+    font-size: 0.85rem;
+    color: var(--sage);
+    margin-bottom: 2rem;
+  }
+  .login-box input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-family: var(--body);
+    font-size: 1rem;
+    background: white;
+    margin-bottom: 1rem;
+  }
+  .login-box input:focus { outline: none; border-color: var(--brand-green); }
+  .login-box button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--brand-green);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.3s;
+  }
+  .login-box button:hover { background: var(--brand-green-deep); }
+  .login-error {
+    color: #e4322b;
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+    height: 1.2rem;
+  }
+
+  /* Dashboard */
+  .dashboard { display: none; }
+  .dashboard.active { display: block; }
+
+  header {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header img { height: 40px; background: var(--ivory); padding: 4px 8px; border-radius: 4px; }
+  header .title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  header h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+  header .badge {
+    background: var(--brand-green);
+    color: white;
+    padding: 0.2rem 0.7rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .logout-btn {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(250, 246, 236, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-family: var(--body);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .logout-btn:hover { background: rgba(250, 246, 236, 0.1); }
+
+  main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .stat-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(26,46,31,0.08);
+  }
+  .stat-card .lbl {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+  .stat-card .val {
+    font-family: var(--display);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--forest-deep);
+    line-height: 1;
+  }
+  .stat-card .val sup {
+    font-size: 0.9rem;
+    color: var(--brand-green);
+    margin-left: 3px;
+  }
+  .stat-card.primary { border-left: 3px solid var(--brand-green); }
+  .stat-card.warning { border-left: 3px solid var(--gold); }
+
+  /* Toolbar */
+  .toolbar {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .toolbar input, .toolbar select {
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: var(--body);
+    font-size: 0.9rem;
+    background: var(--ivory);
+  }
+  .toolbar input[type="search"] { flex: 1; min-width: 200px; }
+  .toolbar input:focus, .toolbar select:focus { outline: none; border-color: var(--brand-green); }
+  .toolbar button {
+    padding: 0.7rem 1.2rem;
+    background: var(--forest);
+    color: var(--cream);
+    border: none;
+    border-radius: 100px;
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .toolbar button:hover { background: var(--brand-green); }
+  .toolbar button svg { width: 14px; height: 14px; }
+
+  /* Leads table */
+  .leads-wrapper {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .leads-table { width: 100%; border-collapse: collapse; }
+  .leads-table thead {
+    background: var(--cream);
+    border-bottom: 2px solid var(--line);
+  }
+  .leads-table th {
+    text-align: left;
+    padding: 1rem 1.2rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 700;
+  }
+  .leads-table td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.9rem;
+    vertical-align: top;
+  }
+  .leads-table tr:hover td { background: var(--ivory); }
+  .leads-table tr:last-child td { border-bottom: none; }
+
+  .lead-name {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--forest-deep);
+    margin-bottom: 0.2rem;
+  }
+  .lead-date {
+    font-size: 0.78rem;
+    color: var(--sage);
+  }
+  .lead-contact a {
+    display: block;
+    color: var(--forest);
+    text-decoration: none;
+    font-size: 0.88rem;
+    padding: 2px 0;
+    transition: color 0.2s;
+  }
+  .lead-contact a:hover { color: var(--brand-green); }
+  .lead-tag {
+    display: inline-block;
+    background: rgba(34, 160, 68, 0.1);
+    color: var(--brand-green-deep);
+    padding: 0.2rem 0.7rem;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-bottom: 4px;
+  }
+  .lead-tag.warning { background: rgba(200, 148, 74, 0.15); color: var(--terracotta); }
+  .lead-tag.neutral { background: rgba(26, 46, 31, 0.08); color: var(--forest); }
+
+  .lead-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .lead-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--forest);
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    transition: all 0.2s;
+  }
+  .lead-actions a:hover {
+    background: var(--brand-green);
+    color: white;
+    border-color: var(--brand-green);
+    transform: scale(1.05);
+  }
+  .lead-actions a svg { width: 15px; height: 15px; }
+  .lead-actions a.wa:hover { background: #25d366; border-color: #25d366; }
+
+  .lead-message {
+    font-size: 0.85rem;
+    color: var(--forest);
+    opacity: 0.75;
+    max-width: 300px;
+    line-height: 1.5;
+  }
+
+  .empty-state, .loading-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--sage);
+  }
+  .empty-state h2, .loading-state h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    color: var(--forest-deep);
+    margin-bottom: 0.5rem;
+  }
+  .spinner {
+    width: 40px; height: 40px;
+    border: 3px solid var(--line);
+    border-top-color: var(--brand-green);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .results-count {
+    font-size: 0.85rem;
+    color: var(--sage);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 968px) {
+    main { padding: 1rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .toolbar { flex-direction: column; align-items: stretch; }
+    header { padding: 1rem; }
+    header h1 { font-size: 1rem; }
+    .leads-table thead { display: none; }
+    .leads-table, .leads-table tbody, .leads-table tr, .leads-table td { display: block; }
+    .leads-table tr {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+    .leads-table td {
+      border: none;
+      padding: 0.5rem 0;
+    }
+    .lead-message { max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" class="login-screen">
+  <form class="login-box" onsubmit="login(event)">
+    <img src="logo.png" alt="Los Artesanos Verdes">
+    <h1>Dashboard Admin</h1>
+    <div class="sub">Acceso restringido</div>
+    <input type="password" id="passwordInput" placeholder="Contraseña" autofocus required>
+    <button type="submit">Entrar</button>
+    <div class="login-error" id="loginError"></div>
+  </form>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="dashboard">
+  <header>
+    <div class="title">
+      <img src="logo.png" alt="">
+      <h1>Leads · Admin</h1>
+      <span class="badge" id="liveBadge">● Live</span>
+    </div>
+    <button class="logout-btn" onclick="logout()">Cerrar sesión</button>
+  </header>
+
+  <main>
+    <div class="stats-grid">
+      <div class="stat-card primary">
+        <div class="lbl">Total leads</div>
+        <div class="val" id="statTotal">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="lbl">Hoy</div>
+        <div class="val" id="statToday">0<sup>↑</sup></div>
+      </div>
+      <div class="stat-card">
+        <div class="lbl">Esta semana</div>
+        <div class="val" id="statWeek">0</div>
+      </div>
+      <div class="stat-card warning">
+        <div class="lbl">Este mes</div>
+        <div class="val" id="statMonth">0</div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="searchInput" placeholder="🔍 Buscar por nombre, email, provincia, teléfono…">
+      <select id="filterTipo">
+        <option value="">Todos los tipos</option>
+        <option value="unifamiliar">Vivienda unifamiliar</option>
+        <option value="otro">Otro</option>
+      </select>
+      <select id="filterAno">
+        <option value="">Todas las fechas</option>
+        <option value="antes-2000">Antes de 2000</option>
+        <option value="despues-2000">Después de 2000</option>
+        <option value="no-se">No lo sé</option>
+      </select>
+      <button onclick="exportCSV()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Exportar CSV
+      </button>
+    </div>
+
+    <div class="results-count" id="resultsCount"></div>
+
+    <div class="leads-wrapper">
+      <div class="loading-state" id="loadingState">
+        <div class="spinner"></div>
+        <h2>Cargando leads…</h2>
+      </div>
+
+      <table class="leads-table" id="leadsTable" style="display:none;">
+        <thead>
+          <tr>
+            <th style="width:22%">Lead</th>
+            <th style="width:26%">Contacto</th>
+            <th style="width:22%">Vivienda</th>
+            <th style="width:18%">Mensaje</th>
+            <th style="width:12%">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="leadsBody"></tbody>
+      </table>
+
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <h2>Aún no hay leads</h2>
+        <p>Los leads aparecerán aquí en tiempo real cuando alguien rellene el formulario.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Firebase SDK + Dashboard logic -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAgYXJhKGUVOr_esrI0kbs4_1IKePJAUHg",
+    authDomain: "artesanos-verdes-site.firebaseapp.com",
+    projectId: "artesanos-verdes-site",
+    storageBucket: "artesanos-verdes-site.firebasestorage.app",
+    messagingSenderId: "113919847755",
+    appId: "1:113919847755:web:c2b7c47669066ef17e4cce",
+    measurementId: "G-1B5SEEEMJP"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.__fb = { db, collection, query, orderBy, onSnapshot };
+  window.dispatchEvent(new Event('fb-ready'));
+</script>
+
+<script>
+  // ===== CONFIG =====
+  const ADMIN_PASSWORD = 'Artesanos2026@';
+  const SESSION_KEY = 'adminAuth_av2026';
+  const SESSION_MAX_HOURS = 8;
+
+  // ===== STATE =====
+  let allLeads = [];
+
+  // ===== AUTH =====
+  function checkSession() {
+    const raw = localStorage.getItem(SESSION_KEY);
+    if (!raw) return false;
+    try {
+      const { ts, token } = JSON.parse(raw);
+      const age = (Date.now() - ts) / 1000 / 3600;
+      // Token is a simple checksum, not secure - just session persistence
+      if (age < SESSION_MAX_HOURS && token === btoa(ADMIN_PASSWORD).substring(0, 12)) {
+        return true;
+      }
+    } catch (e) {}
+    localStorage.removeItem(SESSION_KEY);
+    return false;
+  }
+
+  function login(e) {
+    e.preventDefault();
+    const pwd = document.getElementById('passwordInput').value;
+    const err = document.getElementById('loginError');
+    if (pwd === ADMIN_PASSWORD) {
+      localStorage.setItem(SESSION_KEY, JSON.stringify({
+        ts: Date.now(),
+        token: btoa(ADMIN_PASSWORD).substring(0, 12)
+      }));
+      showDashboard();
+    } else {
+      err.textContent = 'Contraseña incorrecta';
+      document.getElementById('passwordInput').value = '';
+      setTimeout(() => err.textContent = '', 3000);
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem(SESSION_KEY);
+    location.reload();
+  }
+
+  function showDashboard() {
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('dashboard').classList.add('active');
+    loadLeads();
+  }
+
+  // ===== FIRESTORE LISTENER =====
+  function loadLeads() {
+    const waitFb = () => new Promise((resolve) => {
+      if (window.__fb) return resolve();
+      window.addEventListener('fb-ready', resolve, { once: true });
+    });
+
+    waitFb().then(() => {
+      const { db, collection, query, orderBy, onSnapshot } = window.__fb;
+      const q = query(collection(db, 'leads'), orderBy('timestamp', 'desc'));
+
+      onSnapshot(q, (snapshot) => {
+        allLeads = [];
+        snapshot.forEach(doc => {
+          allLeads.push({ id: doc.id, ...doc.data() });
+        });
+        renderLeads();
+        updateStats();
+      }, (error) => {
+        console.error('Firestore error:', error);
+        document.getElementById('loadingState').innerHTML = `
+          <h2>Error de conexión</h2>
+          <p style="color:#e4322b;">${error.message}</p>
+          <p style="margin-top:1rem;font-size:0.85rem;">
+            Verifica las reglas de seguridad de Firestore.<br>
+            Para que el admin pueda leer leads, necesitas actualizar las reglas.
+          </p>
+        `;
+      });
+    });
+  }
+
+  // ===== RENDER =====
+  function renderLeads() {
+    const search = document.getElementById('searchInput').value.toLowerCase().trim();
+    const tipoFilter = document.getElementById('filterTipo').value;
+    const anoFilter = document.getElementById('filterAno').value;
+
+    let filtered = allLeads.filter(lead => {
+      if (tipoFilter && lead.tipo !== tipoFilter) return false;
+      if (anoFilter && lead.ano !== anoFilter) return false;
+      if (search) {
+        const haystack = [
+          lead.nombre, lead.email, lead.telefono, lead.provincia, lead.mensaje
+        ].filter(Boolean).join(' ').toLowerCase();
+        if (!haystack.includes(search)) return false;
+      }
+      return true;
+    });
+
+    document.getElementById('loadingState').style.display = 'none';
+
+    if (filtered.length === 0) {
+      document.getElementById('leadsTable').style.display = 'none';
+      document.getElementById('emptyState').style.display = 'block';
+      document.getElementById('emptyState').querySelector('h2').textContent =
+        allLeads.length === 0 ? 'Aún no hay leads' : 'Sin resultados';
+      document.getElementById('emptyState').querySelector('p').textContent =
+        allLeads.length === 0
+          ? 'Los leads aparecerán aquí en tiempo real cuando alguien rellene el formulario.'
+          : 'Prueba a ajustar los filtros o la búsqueda.';
+      document.getElementById('resultsCount').textContent = '';
+      return;
+    }
+
+    document.getElementById('emptyState').style.display = 'none';
+    document.getElementById('leadsTable').style.display = '';
+    document.getElementById('resultsCount').textContent =
+      `${filtered.length} lead${filtered.length > 1 ? 's' : ''} ${filtered.length !== allLeads.length ? '(de ' + allLeads.length + ' totales)' : ''}`;
+
+    const body = document.getElementById('leadsBody');
+    body.innerHTML = filtered.map(lead => {
+      const date = lead.timestamp?.toDate ? lead.timestamp.toDate() : new Date();
+      const dateStr = date.toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' });
+      const timeStr = date.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+      const telClean = (lead.telefono || '').replace(/[^0-9+]/g, '');
+      const waMsg = encodeURIComponent(`Hola ${lead.nombre || ''}, soy de Los Artesanos Verdes. Respecto a tu solicitud de estudio gratuito de aislamiento CAE…`);
+
+      const tipoLabels = {
+        'unifamiliar': 'Vivienda unifamiliar',
+        'otro': 'Otro tipo'
+      };
+      const anoLabels = {
+        'antes-2000': 'Antes de 2000',
+        'despues-2000': 'Después de 2000',
+        'no-se': 'No lo sé'
+      };
+      const anoClass = lead.ano === 'antes-2000' ? '' : (lead.ano === 'despues-2000' ? 'warning' : 'neutral');
+
+      return `
+        <tr>
+          <td>
+            <div class="lead-name">${escapeHtml(lead.nombre || 'Sin nombre')}</div>
+            <div class="lead-date">${dateStr} · ${timeStr}</div>
+            ${lead.provincia ? `<div style="font-size:0.8rem;color:var(--sage);margin-top:4px;">📍 ${escapeHtml(lead.provincia)}</div>` : ''}
+          </td>
+          <td class="lead-contact">
+            ${lead.telefono ? `<a href="tel:${telClean}">📞 ${escapeHtml(lead.telefono)}</a>` : ''}
+            ${lead.email ? `<a href="mailto:${escapeHtml(lead.email)}">✉ ${escapeHtml(lead.email)}</a>` : ''}
+          </td>
+          <td>
+            ${lead.tipo ? `<span class="lead-tag">${tipoLabels[lead.tipo] || lead.tipo}</span><br>` : ''}
+            ${lead.ano ? `<span class="lead-tag ${anoClass}">${anoLabels[lead.ano] || lead.ano}</span>` : ''}
+          </td>
+          <td class="lead-message">${lead.mensaje ? escapeHtml(lead.mensaje) : '<em style="opacity:0.4;">(sin mensaje)</em>'}</td>
+          <td>
+            <div class="lead-actions">
+              ${telClean ? `
+                <a href="tel:${telClean}" title="Llamar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="https://wa.me/${telClean.replace('+','')}?text=${waMsg}" target="_blank" class="wa" title="WhatsApp">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                </a>
+              ` : ''}
+              ${lead.email ? `
+                <a href="mailto:${escapeHtml(lead.email)}" title="Email">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linejoin="round"/><path d="M22 6l-10 7L2 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              ` : ''}
+            </div>
+          </td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  function updateStats() {
+    const now = new Date();
+    const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const startOfWeek = new Date(startOfDay);
+    startOfWeek.setDate(startOfWeek.getDate() - startOfDay.getDay());
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+
+    const getDate = l => l.timestamp?.toDate ? l.timestamp.toDate() : null;
+    const today = allLeads.filter(l => { const d = getDate(l); return d && d >= startOfDay; }).length;
+    const week = allLeads.filter(l => { const d = getDate(l); return d && d >= startOfWeek; }).length;
+    const month = allLeads.filter(l => { const d = getDate(l); return d && d >= startOfMonth; }).length;
+
+    document.getElementById('statTotal').textContent = allLeads.length;
+    document.getElementById('statToday').innerHTML = today + (today > 0 ? '<sup>↑</sup>' : '');
+    document.getElementById('statWeek').textContent = week;
+    document.getElementById('statMonth').textContent = month;
+  }
+
+  // ===== CSV EXPORT =====
+  function exportCSV() {
+    if (allLeads.length === 0) {
+      alert('No hay leads para exportar');
+      return;
+    }
+    const headers = ['Fecha', 'Nombre', 'Teléfono', 'Email', 'Provincia', 'Tipo vivienda', 'Año construcción', 'Mensaje', 'Fuente'];
+    const rows = allLeads.map(l => {
+      const d = l.timestamp?.toDate ? l.timestamp.toDate() : new Date();
+      return [
+        d.toLocaleString('es-ES'),
+        l.nombre || '',
+        l.telefono || '',
+        l.email || '',
+        l.provincia || '',
+        l.tipo || '',
+        l.ano || '',
+        (l.mensaje || '').replace(/\n/g, ' '),
+        l.source || ''
+      ].map(escapeCSV).join(',');
+    });
+    const csv = '\uFEFF' + headers.join(',') + '\n' + rows.join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `leads-artesanos-verdes-${new Date().toISOString().substring(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function escapeCSV(val) {
+    const s = String(val || '');
+    if (s.includes(',') || s.includes('"') || s.includes('\n')) {
+      return '"' + s.replace(/"/g, '""') + '"';
+    }
+    return s;
+  }
+
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  // ===== EVENTS =====
+  document.getElementById('searchInput').addEventListener('input', renderLeads);
+  document.getElementById('filterTipo').addEventListener('change', renderLeads);
+  document.getElementById('filterAno').addEventListener('change', renderLeads);
+
+  // Expose to global
+  window.login = login;
+  window.logout = logout;
+  window.exportCSV = exportCSV;
+
+  // ===== INIT =====
+  if (checkSession()) {
+    showDashboard();
+  }
+</script>
+
+</body>
+</html>
