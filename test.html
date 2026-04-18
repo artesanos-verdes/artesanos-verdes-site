@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>🧪 Test Agent — Los Artesanos Verdes</title>
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a2e1f;
+    --forest-deep: #0a1810;
+    --sage: #5a6b4a;
+    --brand-green: #22a044;
+    --brand-green-deep: #158035;
+    --cream: #f5efe1;
+    --ivory: #faf6ec;
+    --terracotta: #b8733a;
+    --gold: #c8944a;
+    --red: #e4322b;
+    --line: rgba(26, 46, 31, 0.15);
+    --display: 'Fraunces', Georgia, serif;
+    --body: 'Manrope', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', Consolas, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--body); background: #0a1810; color: var(--cream); min-height: 100vh; padding: 2rem 1rem; }
+  .wrapper { max-width: 1100px; margin: 0 auto; }
+  header { background: var(--forest); border: 1px solid rgba(34, 160, 68, 0.2); border-radius: 12px; padding: 2rem 2.5rem; margin-bottom: 2rem; }
+  header h1 { font-family: var(--display); font-weight: 400; font-size: 2.3rem; margin-bottom: 0.3rem; color: var(--cream); }
+  header h1 em { font-style: italic; color: var(--brand-green); }
+  header p { opacity: 0.8; font-size: 0.95rem; }
+  .controls { background: rgba(250, 246, 236, 0.04); border: 1px solid rgba(250, 246, 236, 0.1); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  button { background: var(--brand-green); color: white; border: none; padding: 0.9rem 1.8rem; border-radius: 100px; font-family: var(--body); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.04em; cursor: pointer; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.6rem; }
+  button:hover { background: var(--brand-green-deep); transform: translateY(-1px); }
+  button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  button.secondary { background: transparent; color: var(--cream); border: 1px solid rgba(250, 246, 236, 0.2); }
+  button.secondary:hover { background: rgba(250, 246, 236, 0.05); }
+  button.danger { background: var(--red); }
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+  .stat-pill { background: rgba(250, 246, 236, 0.03); border: 1px solid rgba(250, 246, 236, 0.1); border-radius: 10px; padding: 1.2rem 1.5rem; text-align: center; }
+  .stat-pill .val { font-family: var(--display); font-size: 2.4rem; font-weight: 400; line-height: 1; }
+  .stat-pill.pass .val { color: var(--brand-green); }
+  .stat-pill.fail .val { color: var(--red); }
+  .stat-pill.warn .val { color: var(--gold); }
+  .stat-pill.total .val { color: var(--cream); }
+  .stat-pill .lbl { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); font-weight: 600; margin-top: 0.6rem; }
+  .section-title { font-family: var(--display); font-size: 1.3rem; color: var(--cream); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(250, 246, 236, 0.1); display: flex; align-items: center; gap: 0.8rem; }
+  .section-title .count { font-family: var(--body); font-size: 0.75rem; background: rgba(34, 160, 68, 0.2); color: var(--brand-green); padding: 0.2rem 0.6rem; border-radius: 100px; font-weight: 600; }
+  .test-item { display: grid; grid-template-columns: auto 120px 1fr auto; gap: 1rem; align-items: center; padding: 0.9rem 1.2rem; background: rgba(250, 246, 236, 0.02); border: 1px solid transparent; border-left-width: 3px; border-radius: 6px; margin-bottom: 0.5rem; font-size: 0.88rem; font-family: var(--mono); }
+  .test-item.pass { border-left-color: var(--brand-green); }
+  .test-item.fail { border-left-color: var(--red); background: rgba(228, 50, 43, 0.05); }
+  .test-item.warn { border-left-color: var(--gold); }
+  .test-item.info { border-left-color: var(--sage); opacity: 0.85; }
+  .test-status { width: 22px; height: 22px; font-size: 1.1rem; text-align: center; }
+  .test-category { font-size: 0.7rem; letter-spacing: 0.1em; font-weight: 700; color: var(--sage); text-transform: uppercase; }
+  .test-item.pass .test-category { color: var(--brand-green); }
+  .test-item.fail .test-category { color: var(--red); }
+  .test-item.warn .test-category { color: var(--gold); }
+  .test-message { font-family: var(--body); font-size: 0.92rem; color: var(--cream); }
+  .test-detail { font-size: 0.78rem; color: var(--sage); font-family: var(--mono); }
+  .summary { background: var(--forest); border: 1px solid rgba(34, 160, 68, 0.3); border-radius: 12px; padding: 2rem; margin-top: 2rem; text-align: center; }
+  .summary.all-pass { border-color: var(--brand-green); background: rgba(34, 160, 68, 0.08); }
+  .summary.has-fail { border-color: var(--red); background: rgba(228, 50, 43, 0.05); }
+  .summary h2 { font-family: var(--display); font-weight: 400; font-size: 2.2rem; margin-bottom: 0.5rem; }
+  .summary .score { font-family: var(--display); font-size: 4.5rem; font-weight: 300; color: var(--brand-green); line-height: 1; margin: 1rem 0; }
+  .summary .score.fail { color: var(--red); }
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(250, 246, 236, 0.2); border-top-color: var(--brand-green); border-radius: 50%; animation: spin 0.7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (max-width: 768px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .test-item { grid-template-columns: 1fr; gap: 0.3rem; padding: 1rem; } header h1 { font-size: 1.8rem; } }
+</style>
+</head>
+<body>
+<div class="wrapper">
+<header>
+<h1>🧪 Test Agent — <em>Los Artesanos Verdes</em></h1>
+<p>Vérifie l'intégration du site : assets, SEO, Firebase, Analytics, formulaire, dashboard admin.</p>
+</header>
+<div class="controls">
+<button id="runBtn" onclick="runAll()"><span id="runBtnTxt">▶ Lancer tous les tests</span></button>
+<button class="secondary" onclick="window.open('/', '_blank')">↗ Voir le site</button>
+<button class="secondary" onclick="window.open('/admin.html', '_blank')">↗ Voir admin.html</button>
+<button class="danger" onclick="testFirestoreWrite()" id="writeBtn">🔥 Tester écriture Firestore</button>
+</div>
+<div class="stats-row">
+<div class="stat-pill total"><div class="val" id="statTotal">—</div><div class="lbl">Tests</div></div>
+<div class="stat-pill pass"><div class="val" id="statPass">0</div><div class="lbl">Pass</div></div>
+<div class="stat-pill warn"><div class="val" id="statWarn">0</div><div class="lbl">Warn</div></div>
+<div class="stat-pill fail"><div class="val" id="statFail">0</div><div class="lbl">Fail</div></div>
+</div>
+<div id="results"></div>
+<div id="summary" style="display:none;"></div>
+</div>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, serverTimestamp, query, limit } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+const firebaseConfig = { apiKey: "AIzaSyAgYXJhKGUVOr_esrI0kbs4_1IKePJAUHg", authDomain: "artesanos-verdes-site.firebaseapp.com", projectId: "artesanos-verdes-site", storageBucket: "artesanos-verdes-site.firebasestorage.app", messagingSenderId: "113919847755", appId: "1:113919847755:web:c2b7c47669066ef17e4cce", measurementId: "G-1B5SEEEMJP" };
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+window.__testFb = { db, collection, addDoc, getDocs, serverTimestamp, query, limit };
+</script>
+<script>
+const counts = { pass: 0, fail: 0, warn: 0, info: 0 };
+const sections = {};
+function log(status, category, message, detail = '') {
+  counts[status.toLowerCase()] = (counts[status.toLowerCase()] || 0) + 1;
+  if (!sections[category]) {
+    const title = document.createElement('div');
+    title.className = 'section-title';
+    title.innerHTML = `📋 ${category} <span class="count" id="count-${category}">0</span>`;
+    document.getElementById('results').appendChild(title);
+    const container = document.createElement('div');
+    container.id = 'section-' + category;
+    document.getElementById('results').appendChild(container);
+    sections[category] = { container, count: 0 };
+  }
+  sections[category].count++;
+  document.getElementById('count-' + category).textContent = sections[category].count;
+  const icon = { pass: '✅', fail: '❌', warn: '⚠️', info: 'ℹ️' }[status.toLowerCase()];
+  const item = document.createElement('div');
+  item.className = 'test-item ' + status.toLowerCase();
+  item.innerHTML = `<span class="test-status">${icon}</span><span class="test-category">${status.toUpperCase()}</span><span class="test-message">${escapeHtml(message)}</span><span class="test-detail">${escapeHtml(detail || '')}</span>`;
+  sections[category].container.appendChild(item);
+  updateStats();
+}
+function updateStats() {
+  document.getElementById('statPass').textContent = counts.pass;
+  document.getElementById('statFail').textContent = counts.fail;
+  document.getElementById('statWarn').textContent = counts.warn;
+  document.getElementById('statTotal').textContent = counts.pass + counts.fail + counts.warn;
+}
+function escapeHtml(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;'); }
+function reset() {
+  counts.pass = 0; counts.fail = 0; counts.warn = 0; counts.info = 0;
+  Object.keys(sections).forEach(k => delete sections[k]);
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('summary').style.display = 'none';
+  updateStats();
+}
+async function runAll() {
+  reset();
+  const btn = document.getElementById('runBtn');
+  const txt = document.getElementById('runBtnTxt');
+  btn.disabled = true;
+  txt.innerHTML = '<span class="spinner"></span> Tests en cours...';
+  try {
+    const baseRes = await fetch('/');
+    const html = await baseRes.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    await testAccess(baseRes, html);
+    await testSeo(doc, html);
+    await testFavicons(doc);
+    await testImages(doc);
+    await testFirebase(html);
+    await testAnalytics(html);
+    await testForm(doc, html);
+    await testLinks(doc);
+    await testContent(html);
+    await testSeoFiles();
+    await testAdmin();
+    await testFirestoreRead();
+    showSummary();
+  } catch (e) { log('fail', 'ERREUR', 'Test interrompu', e.message); }
+  finally { btn.disabled = false; txt.innerHTML = '▶ Relancer les tests'; }
+}
+async function testAccess(res, html) {
+  log(res.ok ? 'pass' : 'fail', '1. Accessibilite', res.ok ? 'Site accessible' : 'Site inaccessible', `HTTP ${res.status}`);
+  log(location.protocol === 'https:' ? 'pass' : 'fail', '1. Accessibilite', 'HTTPS actif', location.protocol);
+  const kb = (html.length / 1024).toFixed(1);
+  log(kb < 250 ? 'pass' : 'warn', '1. Accessibilite', `Taille HTML`, `${kb} KB`);
+}
+async function testSeo(doc, html) {
+  const t = doc.querySelector('title');
+  log(t && t.textContent.trim() ? 'pass' : 'fail', '2. SEO', 'Balise title', t ? t.textContent.substring(0, 60) : '');
+  const d = doc.querySelector('meta[name="description"]');
+  if (d && d.content) { const l = d.content.length; log(l >= 50 && l <= 200 ? 'pass' : 'warn', '2. SEO', `Meta description (${l} car.)`); } else log('fail', '2. SEO', 'Meta description manquante');
+  ['og:title', 'og:description', 'og:image', 'og:url'].forEach(p => {
+    const el = doc.querySelector(`meta[property="${p}"]`);
+    log(el && el.content ? 'pass' : 'warn', '2. SEO', `OG ${p}`, el && el.content ? el.content.substring(0, 50) : 'manquant');
+  });
+  const ld = doc.querySelector('script[type="application/ld+json"]');
+  if (ld) { try { const s = JSON.parse(ld.textContent); log('pass', '2. SEO', 'Schema.org', s['@type']); } catch (e) { log('warn', '2. SEO', 'Schema.org JSON invalide'); } } else log('warn', '2. SEO', 'Pas de Schema.org');
+  const c = doc.querySelector('link[rel="canonical"]');
+  log(c ? 'pass' : 'warn', '2. SEO', c ? 'Canonical' : 'Canonical manquant', c ? c.href : '');
+}
+async function testFavicons(doc) {
+  for (const [sel, name] of [['link[rel="icon"]', 'favicon'], ['link[rel="apple-touch-icon"]', 'apple-touch-icon'], ['link[rel="manifest"]', 'manifest']]) {
+    const el = doc.querySelector(sel);
+    if (el) { const href = el.getAttribute('href'); try { const r = await fetch(href, { method: 'HEAD' }); log(r.ok ? 'pass' : 'fail', '3. Favicons', `${name} ${r.ok ? 'accessible' : 'HTTP ' + r.status}`, href); } catch (e) { log('fail', '3. Favicons', `${name} inaccessible`, href); } } else log('warn', '3. Favicons', `${name} manquant`);
+  }
+}
+async function testImages(doc) {
+  const imgs = doc.querySelectorAll('img');
+  log('info', '4. Images', `${imgs.length} images`);
+  let ok = 0, err = 0, noAlt = 0;
+  for (const img of imgs) { const src = img.getAttribute('src'); if (!src) continue; try { const r = await fetch(src, { method: 'HEAD' }); if (r.ok) ok++; else err++; if (!img.getAttribute('alt')) noAlt++; } catch (e) { err++; } }
+  log(err === 0 ? 'pass' : 'fail', '4. Images', `${ok}/${imgs.length} accessibles`);
+  if (noAlt > 0) log('warn', '4. Images', `${noAlt} sans alt`); else if (imgs.length > 0) log('pass', '4. Images', 'Toutes avec alt');
+}
+async function testFirebase(html) {
+  for (const [p, n] of [['firebase-app.js', 'SDK app'], ['firebase-firestore.js', 'SDK firestore'], ['firebaseConfig', 'Config'], ['artesanos-verdes-site', 'projectId'], ['addDoc(collection(db', 'addDoc écriture'], ['serverTimestamp', 'serverTimestamp']]) {
+    log(html.includes(p) ? 'pass' : 'fail', '5. Firebase', n + (html.includes(p) ? '' : ' ABSENT'));
+  }
+}
+async function testAnalytics(html) {
+  if (html.includes('G-XXXXXXXXXX')) log('fail', '6. Analytics', 'ID GA4 non remplacé');
+  else { const m = html.match(/G-[A-Z0-9]{10}/); log(m ? 'pass' : 'fail', '6. Analytics', m ? 'ID GA4 OK' : 'Aucun ID GA4', m ? m[0] : ''); }
+  log(html.includes('googletagmanager.com/gtag/js') ? 'pass' : 'fail', '6. Analytics', 'gtag.js');
+  const evs = ['generate_lead', 'contact_phone', 'contact_email', 'contact_whatsapp', 'cta_click', 'scroll_depth', 'section_view', 'engaged_time'];
+  const miss = evs.filter(e => !html.includes(e));
+  log(miss.length === 0 ? 'pass' : 'warn', '6. Analytics', miss.length === 0 ? `${evs.length} events custom` : `Events manquants`, miss.join(', '));
+}
+async function testForm(doc, html) {
+  const form = doc.querySelector('#contactForm');
+  if (!form) { log('fail', '7. Formulaire', 'Formulaire absent'); return; }
+  log('pass', '7. Formulaire', 'Formulaire détecté');
+  const req = ['nombre', 'telefono', 'email', 'provincia', 'tipo', 'ano'];
+  const names = Array.from(form.querySelectorAll('input, select, textarea')).map(i => i.name).filter(Boolean);
+  const miss = req.filter(r => !names.includes(r));
+  log(miss.length === 0 ? 'pass' : 'fail', '7. Formulaire', miss.length === 0 ? 'Tous les champs' : `Manquants: ${miss.join(',')}`);
+  log((form.getAttribute('onsubmit') || '').includes('handleSubmit') ? 'pass' : 'fail', '7. Formulaire', 'handleSubmit lié');
+  log(doc.querySelector('#toast') ? 'pass' : 'fail', '7. Formulaire', 'Toast présent');
+}
+async function testLinks(doc) {
+  log(doc.querySelectorAll('a[href^="tel:"]').length > 0 ? 'pass' : 'fail', '8. Liens', `tel: (${doc.querySelectorAll('a[href^="tel:"]').length})`);
+  log(doc.querySelectorAll('a[href^="mailto:"]').length > 0 ? 'pass' : 'warn', '8. Liens', `mailto: (${doc.querySelectorAll('a[href^="mailto:"]').length})`);
+  log(doc.querySelectorAll('a[href*="wa.me"]').length > 0 ? 'pass' : 'warn', '8. Liens', `WhatsApp (${doc.querySelectorAll('a[href*="wa.me"]').length})`);
+}
+async function testContent(html) {
+  const kw = { 'Aislamiento por 1': 'Valeur 1€', 'GreenFlex': 'Sujet delegué', 'CAE': 'Sistema CAE', 'Isolene': 'Isover', 'Los Artesanos Verdes': 'Nom société' };
+  for (const [w, d] of Object.entries(kw)) log(html.includes(w) ? 'pass' : 'fail', '9. Contenu', `${d}`, w);
+  const obl = ['Repsol', 'Iberdrola', 'Endesa', 'Naturgy', 'Moeve', 'TotalEnergies', 'Galp'];
+  const f = obl.filter(o => html.includes(o));
+  log(f.length >= 6 ? 'pass' : 'warn', '9. Contenu', `Obligados ${f.length}/${obl.length}`);
+}
+async function testSeoFiles() {
+  for (const f of ['robots.txt', 'sitemap.xml', 'manifest.json']) { try { const r = await fetch('/' + f); log(r.ok ? 'pass' : 'warn', '10. Fichiers', `${f} ${r.ok ? 'OK' : 'HTTP ' + r.status}`); } catch (e) { log('warn', '10. Fichiers', `${f} KO`); } }
+}
+async function testAdmin() {
+  try {
+    const r = await fetch('/admin.html');
+    if (!r.ok) { log('fail', '11. Admin', `HTTP ${r.status}`); return; }
+    log('pass', '11. Admin', 'admin.html accessible');
+    const h = await r.text();
+    const d = new DOMParser().parseFromString(h, 'text/html');
+    log(d.querySelector('#loginScreen') ? 'pass' : 'fail', '11. Admin', 'Login screen');
+    log(/ADMIN_PASSWORD\s*=\s*['"][^'"]+['"]/.test(h) ? 'pass' : 'fail', '11. Admin', 'Mot de passe configuré');
+    log(h.includes('onSnapshot') ? 'pass' : 'fail', '11. Admin', 'Firestore temps réel');
+    log(h.includes('exportCSV') ? 'pass' : 'warn', '11. Admin', 'Export CSV');
+    log(h.includes('noindex') ? 'pass' : 'warn', '11. Admin', 'noindex');
+  } catch (e) { log('fail', '11. Admin', 'Test admin échoué', e.message); }
+}
+async function testFirestoreRead() {
+  if (!window.__testFb) { log('warn', '12. Firestore', 'SDK pas chargé'); return; }
+  try { const { db, collection, getDocs, query, limit } = window.__testFb; const snap = await getDocs(query(collection(db, 'leads'), limit(1))); log('pass', '12. Firestore', `Lecture OK (${snap.size} doc)`); } catch (e) { log('fail', '12. Firestore', 'Lecture échouée', e.message); }
+}
+function showSummary() {
+  const total = counts.pass + counts.fail + counts.warn;
+  const score = total > 0 ? Math.round(100 * counts.pass / total) : 0;
+  const allPass = counts.fail === 0;
+  const s = document.getElementById('summary');
+  s.style.display = 'block';
+  s.className = 'summary ' + (allPass ? 'all-pass' : 'has-fail');
+  s.innerHTML = `<h2>${allPass ? '🎉 Tous les tests passent !' : '🔧 ' + counts.fail + ' erreur(s)'}</h2><div class="score ${allPass ? '' : 'fail'}">${score}/100</div><p>${counts.pass} OK · ${counts.warn} warn · ${counts.fail} fail</p>${allPass ? '<p style="color:var(--brand-green);margin-top:1rem;">✅ Site prêt pour production</p>' : ''}`;
+  s.scrollIntoView({ behavior: 'smooth' });
+}
+window.testFirestoreWrite = async function() {
+  const btn = document.getElementById('writeBtn');
+  btn.disabled = true; btn.textContent = '⏳ Écriture...';
+  try {
+    if (!window.__testFb) { alert('Firebase pas chargé'); return; }
+    const { db, collection, addDoc, serverTimestamp } = window.__testFb;
+    const ref = await addDoc(collection(db, 'leads'), { nombre: '🧪 Test Agent — ' + new Date().toLocaleString('es-ES'), telefono: '+34 000 000 000', email: 'test@agent.test', provincia: 'Test', tipo: 'unifamiliar', ano: 'antes-2000', mensaje: 'Lead de test auto, à supprimer.', source: 'test_agent', url: location.href, userAgent: navigator.userAgent.substring(0, 200), language: navigator.language, timestamp: serverTimestamp(), status: 'test' });
+    alert('✅ Lead créé : ' + ref.id + '\n\nVérifie dans Firestore et admin.html. Puis supprime-le.');
+    btn.textContent = '✅ OK';
+  } catch (e) { alert('❌ Erreur : ' + e.message); btn.textContent = '❌ Échec'; }
+  finally { setTimeout(() => { btn.disabled = false; btn.textContent = '🔥 Tester écriture Firestore'; }, 3000); }
+};
+window.addEventListener('load', () => setTimeout(runAll, 800));
+</script>
+</body>
+</html>
