@@ -2752,6 +2752,40 @@
 
       const leadId = await saveToFirestore();
       console.log('[lead saved]', leadId);
+    // ========================================
+    // Déclencher les emails automatiques (Resend)
+    // ========================================
+    try {
+      const { db: _emDb, collection: _emCol, addDoc: _emAdd } = window.__firestore;
+      const emailData = {
+        nombre: (leadData.nombre || 'Cliente').split(' ')[0],
+        telefono: leadData.telefono || '—',
+        telefonoClean: (leadData.telefono || '').replace(/[^0-9]/g, ''),
+        email: leadData.email || '—',
+        provincia: leadData.provincia || '—',
+        tipo: leadData.tipo || '—',
+        ano: leadData.ano || '—',
+        mensaje: leadData.mensaje || 'Sin mensaje',
+        source: leadData.source || 'website_form',
+        timestamp: new Date().toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Madrid' })
+      };
+      if (leadData.email) {
+        _emAdd(_emCol(_emDb, 'mail'), {
+          to: leadData.email,
+          template: { name: 'lead_confirmation', data: emailData }
+        }).catch(err => console.warn('[email] confirmation failed:', err));
+      }
+      _emAdd(_emCol(_emDb, 'mail'), {
+        to: 'contacto@artesanosverdes.com',
+        replyTo: leadData.email || 'contacto@artesanosverdes.com',
+        template: { name: 'lead_notification', data: emailData }
+      }).catch(err => console.warn('[email] notification failed:', err));
+      console.log('[emails queued for', leadData.email || 'lead', ']');
+    } catch (emErr) {
+      console.warn('[email] trigger failed:', emErr);
+    }
+    // ========================================
+
 
       showToast(
         '¡Gracias ' + (leadData.nombre.split(' ')[0] || '') + '!',
