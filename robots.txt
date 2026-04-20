@@ -1,4 +1,18 @@
+# robots.txt for artesanosverdes.com
+# Los Artesanos Verdes SL
+
 User-agent: *
 Allow: /
+Disallow: /admin.html
+Disallow: /api/
 
+# Google specifically
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
 Sitemap: https://artesanosverdes.com/sitemap.xml
