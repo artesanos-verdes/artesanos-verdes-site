@@ -995,3 +995,26 @@ h1.av-article-title {
     line-height: 1.5;
   }
 }
+
+
+/* ============ Infographie SVG ============ */
+.av-infographic-svg {
+  margin: 40px 0;
+}
+.av-infographic-svg svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.av-infographic-svg figcaption {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #5a6358;
+  text-align: center;
+  font-style: italic;
+  padding: 0 10px;
+}
