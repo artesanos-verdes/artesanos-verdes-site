@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+
+  <!-- ========== BACKGROUND ========== -->
+  <rect width="1200" height="630" fill="#f7f7f5"/>
+
+  <!-- ========== TOP BRAND BAR ========== -->
+  <rect x="0" y="0" width="1200" height="110" fill="#1a4d30"/>
+  <text x="60" y="48" fill="#a8c4b0" font-size="13" font-weight="700" letter-spacing="3.5" text-transform="uppercase">LOS ARTESANOS VERDES · COBERTURA TERRITORIAL</text>
+  <text x="60" y="82" fill="#ffffff" font-size="32" font-weight="700">13 provincias españolas</text>
+  
+  <!-- Big numbers right side -->
+  <g transform="translate(1140, 55) text-anchor: end">
+    <text x="0" y="0" fill="#ffffff" font-size="48" font-weight="800" text-anchor="end">250</text>
+    <text x="0" y="28" fill="#a8c4b0" font-size="13" font-weight="600" letter-spacing="2" text-anchor="end">KM DE RADIO</text>
+  </g>
+
+  <!-- ========== MAIN MAP AREA ========== -->
+  <!-- Zona de la península ibérica stylizada en bloques rectangulares -->
+  
+  <!-- Portugal (neutral grey, contour only) -->
+  <g>
+    <path d="M 210 210 L 180 240 L 175 320 L 180 420 L 200 480 L 240 500 L 280 495 L 280 210 Z" 
+          fill="#ece8dd" stroke="#d0ccc0" stroke-width="2"/>
+    <text x="228" y="360" font-size="12" fill="#a09a8a" font-weight="600" text-anchor="middle">Portugal</text>
+  </g>
+
+  <!-- ========== PROVINCIAS CUBIERTAS ========== -->
+  
+  <!-- GALICIA (Lugo + Ourense) - Northwest -->
+  <g>
+    <!-- Lugo -->
+    <rect x="210" y="150" width="85" height="60" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="252" y="175" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">LUGO</text>
+    <text x="252" y="193" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(27)</text>
+    
+    <!-- Ourense -->
+    <rect x="210" y="215" width="85" height="55" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="252" y="238" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">OURENSE</text>
+    <text x="252" y="254" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(32)</text>
+  </g>
+
+  <!-- ASTURIAS + CANTABRIA - North coast -->
+  <g>
+    <!-- Asturias -->
+    <rect x="300" y="150" width="115" height="50" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="358" y="172" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">ASTURIAS</text>
+    <text x="358" y="189" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(33)</text>
+    
+    <!-- Cantabria -->
+    <rect x="420" y="150" width="100" height="50" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="470" y="172" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">CANTABRIA</text>
+    <text x="470" y="189" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(39)</text>
+  </g>
+
+  <!-- País Vasco + Navarra (NOT covered, light grey) -->
+  <g>
+    <rect x="525" y="150" width="95" height="50" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="572" y="180" fill="#a09a8a" font-size="11" font-weight="600" text-anchor="middle">País Vasco</text>
+  </g>
+
+  <!-- CASTILLA Y LEÓN — Main block with 8 provinces -->
+  <!-- Row 1: León, Palencia, Burgos -->
+  <g>
+    <!-- León -->
+    <rect x="300" y="205" width="85" height="60" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="342" y="230" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">LEÓN</text>
+    <text x="342" y="248" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(24)</text>
+    
+    <!-- Palencia -->
+    <rect x="390" y="205" width="75" height="60" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="427" y="230" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">PALENCIA</text>
+    <text x="427" y="248" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(34)</text>
+    
+    <!-- Burgos -->
+    <rect x="470" y="205" width="85" height="60" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="512" y="230" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">BURGOS</text>
+    <text x="512" y="248" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(09)</text>
+  </g>
+
+  <!-- Row 2: Zamora, Valladolid★, Soria (non cubierta) -->
+  <g>
+    <!-- Zamora -->
+    <rect x="300" y="270" width="85" height="60" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="342" y="295" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">ZAMORA</text>
+    <text x="342" y="313" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(49)</text>
+    
+    <!-- VALLADOLID (star - sede) -->
+    <rect x="390" y="270" width="75" height="60" rx="6" fill="#c07856" stroke="#8a5038" stroke-width="2.5"/>
+    <text x="427" y="292" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">VALLADOLID</text>
+    <text x="427" y="308" fill="#f3dccb" font-size="9" font-weight="600" text-anchor="middle">(47)</text>
+    <text x="427" y="322" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">★</text>
+    
+    <!-- Soria (not covered) -->
+    <rect x="470" y="270" width="85" height="60" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="512" y="303" fill="#a09a8a" font-size="11" font-weight="600" text-anchor="middle">Soria</text>
+  </g>
+
+  <!-- Row 3: Salamanca, Ávila, Segovia -->
+  <g>
+    <!-- Salamanca -->
+    <rect x="300" y="335" width="85" height="60" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="342" y="360" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">SALAMANCA</text>
+    <text x="342" y="378" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(37)</text>
+    
+    <!-- Ávila -->
+    <rect x="390" y="335" width="75" height="60" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="427" y="360" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">ÁVILA</text>
+    <text x="427" y="378" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(05)</text>
+    
+    <!-- Segovia -->
+    <rect x="470" y="335" width="85" height="60" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="512" y="360" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">SEGOVIA</text>
+    <text x="512" y="378" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(40)</text>
+  </g>
+
+  <!-- MADRID - Central -->
+  <g>
+    <rect x="395" y="405" width="80" height="55" rx="6" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="435" y="428" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">MADRID</text>
+    <text x="435" y="445" fill="#c1d9cc" font-size="10" font-weight="600" text-anchor="middle">(28)</text>
+  </g>
+
+  <!-- ========== NORTH-EAST: Aragón + Cataluña (not covered, grey) ========== -->
+  <g>
+    <rect x="625" y="205" width="100" height="100" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="675" y="258" fill="#a09a8a" font-size="11" font-weight="600" text-anchor="middle">Aragón</text>
+    
+    <rect x="730" y="205" width="90" height="60" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="775" y="238" fill="#a09a8a" font-size="11" font-weight="600" text-anchor="middle">Cataluña</text>
+  </g>
+
+  <!-- Valencia (not covered) -->
+  <g>
+    <rect x="730" y="270" width="90" height="95" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="775" y="320" fill="#a09a8a" font-size="11" font-weight="600" text-anchor="middle">Valencia</text>
+  </g>
+
+  <!-- Castilla-La Mancha (not covered) -->
+  <g>
+    <rect x="480" y="410" width="245" height="55" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="602" y="442" fill="#a09a8a" font-size="11" font-weight="600" text-anchor="middle">Castilla-La Mancha</text>
+  </g>
+
+  <!-- Extremadura (not covered) -->
+  <g>
+    <rect x="300" y="410" width="85" height="90" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="342" y="460" fill="#a09a8a" font-size="11" font-weight="600" text-anchor="middle">Extremadura</text>
+  </g>
+
+  <!-- Murcia (not covered) -->
+  <g>
+    <rect x="670" y="370" width="100" height="60" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="720" y="403" fill="#a09a8a" font-size="11" font-weight="600" text-anchor="middle">Murcia</text>
+  </g>
+
+  <!-- Andalucía (not covered) -->
+  <g>
+    <rect x="300" y="505" width="470" height="60" rx="6" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+    <text x="535" y="540" fill="#a09a8a" font-size="13" font-weight="700" text-anchor="middle">Andalucía</text>
+  </g>
+
+  <!-- ========== 250 KM CIRCLE ========== -->
+  <!-- Radius ~140px centered around Valladolid at (427, 300) -->
+  <circle cx="427" cy="300" r="140" fill="none" stroke="#c07856" stroke-width="3" stroke-dasharray="8 6" opacity="0.7"/>
+  <!-- Label on circle -->
+  <g transform="translate(427, 160)">
+    <rect x="-55" y="-11" width="110" height="22" rx="11" fill="#c07856"/>
+    <text x="0" y="5" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">RADIO 250 KM</text>
+  </g>
+
+  <!-- ========== RIGHT PANEL — STATS & LEGEND ========== -->
+  <g transform="translate(880, 150)">
+    <!-- Stats cards -->
+    <rect x="0" y="0" width="280" height="78" rx="10" fill="#ffffff" stroke="#e8e4d8" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#c07856" font-size="11" font-weight="700" letter-spacing="2">COMUNIDADES AUTÓNOMAS</text>
+    <text x="20" y="65" fill="#1a4d30" font-size="36" font-weight="800">5</text>
+    <text x="80" y="65" fill="#666" font-size="13" font-weight="600">CyL · Madrid · Galicia · Asturias · Cantabria</text>
+
+    <rect x="0" y="92" width="280" height="78" rx="10" fill="#ffffff" stroke="#e8e4d8" stroke-width="1.5"/>
+    <text x="20" y="122" fill="#c07856" font-size="11" font-weight="700" letter-spacing="2">ZONAS CLIMÁTICAS CTE</text>
+    <text x="20" y="157" fill="#1a4d30" font-size="30" font-weight="800">C · D · E</text>
+    <text x="150" y="157" fill="#666" font-size="13" font-weight="600">las más exigentes</text>
+
+    <rect x="0" y="184" width="280" height="78" rx="10" fill="#ffffff" stroke="#e8e4d8" stroke-width="1.5"/>
+    <text x="20" y="214" fill="#c07856" font-size="11" font-weight="700" letter-spacing="2">TIEMPO DE VISITA</text>
+    <text x="20" y="249" fill="#1a4d30" font-size="30" font-weight="800">&lt; 7 días</text>
+    <text x="145" y="249" fill="#666" font-size="13" font-weight="600">desde tu solicitud</text>
+
+    <!-- Legend -->
+    <g transform="translate(0, 290)">
+      <text x="0" y="0" fill="#1a4d30" font-size="13" font-weight="700" letter-spacing="2">LEYENDA</text>
+      
+      <g transform="translate(0, 22)">
+        <rect x="0" y="0" width="20" height="18" rx="3" fill="#2d7a4e" stroke="#1a4d30" stroke-width="1.5"/>
+        <text x="30" y="13" fill="#333" font-size="12" font-weight="600">Provincia cubierta (13)</text>
+      </g>
+
+      <g transform="translate(0, 50)">
+        <rect x="0" y="0" width="20" height="18" rx="3" fill="#c07856" stroke="#8a5038" stroke-width="1.5"/>
+        <text x="30" y="13" fill="#333" font-size="12" font-weight="600">Sede operativa (Valladolid ★)</text>
+      </g>
+
+      <g transform="translate(0, 78)">
+        <rect x="0" y="0" width="20" height="18" rx="3" fill="#e8e4d8" stroke="#d0ccc0" stroke-width="1.5"/>
+        <text x="30" y="13" fill="#666" font-size="12" font-weight="600">Fuera de zona operativa</text>
+      </g>
+
+      <g transform="translate(0, 106)">
+        <line x1="0" y1="9" x2="20" y2="9" stroke="#c07856" stroke-width="2.5" stroke-dasharray="4 3"/>
+        <text x="30" y="13" fill="#666" font-size="12" font-weight="600">Radio 250 km · Valladolid-León</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========== BOTTOM BAR ========== -->
+  <rect x="0" y="580" width="1200" height="50" fill="#1a4d30"/>
+  <text x="60" y="610" fill="#a8c4b0" font-size="12" font-weight="600" letter-spacing="2">MAPA ESQUEMÁTICO · NO APTO PARA NAVEGACIÓN GEOGRÁFICA PRECISA</text>
+  <text x="1140" y="610" fill="#a8c4b0" font-size="12" font-weight="700" letter-spacing="2" text-anchor="end">ARTESANOSVERDES.COM</text>
+
+</svg>
