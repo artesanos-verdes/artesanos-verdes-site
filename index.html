@@ -84,19 +84,7 @@
   });
 </script>
 
-<!-- Meta Pixel (Facebook / Instagram Ads) -->
-<!-- REEMPLAZA FB_PIXEL_ID por tu ID de pixel real (opcional) -->
-<script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  // fbq('init', 'FB_PIXEL_ID');  // ← descomenta y pon tu ID
-  // fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=FB_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
 <style>
   :root {
     --forest: #1a2e1f;
@@ -1757,6 +1745,7 @@
     <li><a href="#proceso">Proceso</a></li>
     <li><a href="#certificaciones">Garantías</a></li>
     <li><a href="#testimonios">Opiniones</a></li>
+    <li><a href="/blog/">Blog</a></li>
     <li><a href="#contacto" class="nav-cta">Estudio gratuito</a></li>
   </ul>
   <button class="burger" id="burger" aria-label="Menu">
@@ -2318,9 +2307,9 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <div class="testimonio-quote"><em>Me ahorré</em> 1 278 € este año.</div>
-        <p class="testimonio-text">Gracias a Los Artesanos Verdes ahorré 1 278 € en mis facturas de energía este año. Un servicio impecable.</p>
-        <div class="testimonio-author">Ludovico Grandin</div>
+        <div class="testimonio-quote"><em>Me ahorré</em> 1.278 € este año.</div>
+        <p class="testimonio-text">Gracias a Los Artesanos Verdes ahorré 1.278 € en mis facturas de energía este año. Un servicio impecable.</p>
+        <div class="testimonio-author">Javier Sánchez · Valencia</div>
       </div>
 
       <div class="testimonio reveal reveal-delay-1">
@@ -2333,8 +2322,8 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
         <div class="testimonio-quote">Un ahorro <em>de casi el 60 %.</em></div>
-        <p class="testimonio-text">Vino un técnico homologado de la Oficina de Diseño y nos permitió conseguir un ahorro energético de casi el 60 %.</p>
-        <div class="testimonio-author">Vanessa Cointreau</div>
+        <p class="testimonio-text">Vino un técnico homologado y nos permitió conseguir un ahorro energético de casi el 60 % en la factura.</p>
+        <div class="testimonio-author">Carmen Ruiz · Alicante</div>
       </div>
 
       <div class="testimonio reveal reveal-delay-2">
@@ -2347,8 +2336,8 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
         <div class="testimonio-quote">Lo <em>recomiendo</em> mucho.</div>
-        <p class="testimonio-text">Equipos de profesionales que me apoyaron en mis esfuerzos de transición energética. ¡Lo recomiendo mucho!</p>
-        <div class="testimonio-author">Frédérique Peñault</div>
+        <p class="testimonio-text">Equipos de profesionales que me apoyaron en mi transición energética. Obra terminada en un día. ¡Lo recomiendo mucho!</p>
+        <div class="testimonio-author">Antonio López · Murcia</div>
       </div>
     </div>
   </div>
@@ -2386,7 +2375,7 @@
     <div class="contacto-info">
       <div class="section-num reveal">12 — Hablemos</div>
       <h2 class="reveal reveal-delay-1">Estudio de<br>elegibilidad <em>gratuito.</em></h2>
-      <p class="reveal reveal-delay-2">Cuéntanos sobre tu vivienda y en 24h sabrás si puedes beneficiarte de la campaña de aislamiento por 1 €. Sin compromiso, sin letra pequeña.</p>
+      <p class="reveal reveal-delay-2">Cuéntanos sobre tu vivienda y en menos de 1 hora sabrás si puedes beneficiarte de la campaña de aislamiento por 1 €. Sin compromiso, sin letra pequeña.</p>
 
       <ul class="contact-list reveal reveal-delay-3">
         <li class="contact-item">
@@ -2427,7 +2416,7 @@
 
     <form class="form reveal reveal-delay-1" id="contactForm" onsubmit="handleSubmit(event)">
       <h3>Estudio gratuito</h3>
-      <p class="form-desc">Respuesta en 24h laborables. Sin compromiso.</p>
+      <p class="form-desc">Respuesta en menos de 1 hora. Sin compromiso.</p>
       <div class="form-row">
         <div class="form-group">
           <label for="nombre">Nombre completo</label>
@@ -2542,7 +2531,7 @@
   </div>
   <div class="toast-content">
     <h4 id="toastTitle">¡Gracias!</h4>
-    <p id="toastMsg">Hemos recibido tu solicitud. Te contactaremos en 24h laborables.</p>
+    <p id="toastMsg">Hemos recibido tu solicitud. Te contactaremos en menos de 1 hora.</p>
   </div>
   <button class="toast-close" onclick="document.getElementById('toast').classList.remove('show')" aria-label="Cerrar">×</button>
 </div>
@@ -2790,7 +2779,7 @@
 
       showToast(
         '¡Gracias ' + (leadData.nombre.split(' ')[0] || '') + '!',
-        'Hemos recibido tu solicitud. Te contactaremos en menos de 24h laborables al ' + leadData.telefono + '.'
+        'Hemos recibido tu solicitud. Te contactaremos en menos de 1 hora al ' + leadData.telefono + '.'
       );
 
       form.reset();
