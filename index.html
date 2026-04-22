@@ -71,17 +71,36 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NBF0X2893"></script>
+<!-- Google Consent Mode v2 defaults (must precede gtag.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var s = null;
+    try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+    gtag('consent', 'default', {
+      ad_storage: (s && s.ads) ? 'granted' : 'denied',
+      analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
+      ad_user_data: (s && s.ads) ? 'granted' : 'denied',
+      ad_personalization: (s && s.ads) ? 'granted' : 'denied',
+      wait_for_update: 500
+    });
+  })();
+</script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NBF0X2893"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-0NBF0X2893', {
     'anonymize_ip': true,
     'cookie_flags': 'SameSite=None;Secure'
   });
 </script>
+
+<!-- Cookie consent banner -->
+<link rel="stylesheet" href="/assets/cookie-banner.css">
+<script defer src="/assets/cookie-banner.js"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
 <style>
@@ -1423,6 +1442,11 @@
   }
   .form button:hover { background: var(--brand-green-deep); transform: translateY(-2px); box-shadow: 0 15px 40px -10px rgba(34, 160, 68, 0.4); }
   .form-note { font-size: 0.78rem; opacity: 0.6; margin-top: 1rem; line-height: 1.5; }
+  .form-note a { color: inherit; text-decoration: underline; }
+  .form-consent { margin: 0.8rem 0 1.2rem; font-size: 0.85rem; line-height: 1.45; }
+  .form-consent label { display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; }
+  .form-consent input[type="checkbox"] { flex-shrink: 0; margin-top: 3px; width: 16px; height: 16px; accent-color: var(--brand-green-deep, #1a4d30); cursor: pointer; }
+  .form-consent a { color: var(--brand-green-deep, #1a4d30); text-decoration: underline; font-weight: 600; }
 
   /* ===== FOOTER ===== */
   footer {
@@ -2565,11 +2589,17 @@
           <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu buhardilla o desván, superficie aproximada…"></textarea>
         </div>
       </div>
+      <div class="form-consent">
+        <label for="consent-privacy">
+          <input type="checkbox" id="consent-privacy" name="consent_privacy" required>
+          <span>He leído y acepto la <a href="/legal/politica-privacidad/" target="_blank" rel="noopener">política de privacidad</a>.</span>
+        </label>
+      </div>
       <button type="submit">
         Comprobar mi elegibilidad
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       </button>
-      <p class="form-note">Al enviar aceptas que te contactemos para el estudio de elegibilidad. No compartimos tus datos con terceros.</p>
+      <p class="form-note">Respuesta en menos de 1 hora. Trataremos tus datos conforme a nuestra <a href="/legal/politica-privacidad/">política de privacidad</a> únicamente para responder a tu solicitud.</p>
     </form>
   </div>
 </section>
@@ -2611,6 +2641,16 @@
         <li><a href="mailto:contacto@artesanosverdes.com">contacto@artesanosverdes.com</a></li>
         <li><a href="https://wa.me/34632180509" target="_blank" rel="noopener">WhatsApp directo</a></li>
         <li><a href="https://www.instagram.com/los_artesanos_verdes/" target="_blank" rel="noopener">@los_artesanos_verdes</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="/legal/aviso-legal/">Aviso legal</a></li>
+        <li><a href="/legal/politica-privacidad/">Política de privacidad</a></li>
+        <li><a href="/legal/politica-cookies/">Política de cookies</a></li>
+        <li><a href="#" onclick="event.preventDefault();if(window.avOpenCookieSettings)avOpenCookieSettings();">Configurar cookies</a></li>
       </ul>
     </div>
   </div>

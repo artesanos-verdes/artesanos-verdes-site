@@ -1,0 +1,110 @@
+/* ================================================================
+   Cookie Consent Banner — Los Artesanos Verdes
+   Complies with RGPD / LOPDGDD + Google Consent Mode v2
+   ================================================================ */
+#av-cookie-banner {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 9999;
+  background: #1a4d30;
+  color: #ffffff;
+  box-shadow: 0 -4px 24px rgba(0,0,0,.25);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  animation: av-cb-slide-up .35s ease-out;
+}
+@keyframes av-cb-slide-up { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+.av-cb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+#av-cookie-banner h3 {
+  margin: 0 0 8px 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+#av-cookie-banner p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #d4e6dc;
+}
+#av-cookie-banner a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.av-cb-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.av-cb-btn {
+  padding: 11px 18px;
+  border-radius: 24px;
+  border: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease, color .2s ease;
+  white-space: nowrap;
+}
+.av-cb-btn.primary {
+  background: #c07856;
+  color: #ffffff;
+}
+.av-cb-btn.primary:hover { background: #a8624a; transform: translateY(-1px); }
+.av-cb-btn.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255,255,255,.4);
+}
+.av-cb-btn.secondary:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.7); }
+
+.av-cb-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0 16px 0;
+}
+.av-cb-opts label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.av-cb-opts label input[type="checkbox"]:disabled + span,
+.av-cb-opts label input[type="checkbox"]:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+.av-cb-opts input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #c07856;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .av-cb-inner {
+    grid-template-columns: 1fr;
+    padding: 20px 20px 22px;
+    gap: 16px;
+  }
+  .av-cb-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .av-cb-btn.primary { grid-column: 1 / -1; }
+  #av-cookie-banner p { font-size: 13px; }
+}
