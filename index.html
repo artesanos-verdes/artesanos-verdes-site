@@ -1697,6 +1697,78 @@
     .hero-stamp { width: 110px; height: 110px; }
     .hero-stamp .big { font-size: 1.8rem; }
   }
+
+  /* ===== TRUST NUMBERS ===== */
+  .av-trust-numbers {
+    background: #2d5a3d;
+    color: #ffffff;
+    padding: 80px 24px;
+  }
+  .av-trust-numbers .av-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .av-trust-eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #c1d9cc;
+    margin: 0 0 16px 0;
+  }
+  .av-trust-title {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 16px 0;
+    color: #ffffff;
+  }
+  .av-trust-title em {
+    color: #c07856;
+    font-style: italic;
+  }
+  .av-trust-intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #c1d9cc;
+    max-width: 720px;
+    margin: 0 0 56px 0;
+  }
+  .av-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+  }
+  .av-trust-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+    border-top: 2px solid rgba(255,255,255,0.15);
+  }
+  .av-trust-number {
+    font-size: clamp(48px, 7vw, 72px);
+    font-weight: 800;
+    line-height: 1;
+    color: #ffffff;
+    letter-spacing: -1px;
+  }
+  .av-trust-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 8px;
+  }
+  .av-trust-detail {
+    font-size: 14px;
+    color: #a8c4b0;
+    line-height: 1.4;
+  }
+  @media (max-width: 640px) {
+    .av-trust-numbers { padding: 56px 20px; }
+    .av-trust-grid { gap: 24px; }
+    .av-trust-stat { padding: 20px 0; }
+  }
 </style>
 
 <!-- ===== Firebase SDK (v10 modular, loaded from CDN) ===== -->
@@ -1810,6 +1882,38 @@
     <div class="hero-stamp">
       <span class="big">11<sup style="font-size:0.6em;">+</sup></span>
       <span class="sm">Años de<br>experiencia</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST NUMBERS -->
+<section class="av-trust-numbers" aria-label="Nuestra trayectoria">
+  <div class="av-container">
+    <p class="av-trust-eyebrow">01 BIS — Nuestra trayectoria en España</p>
+    <h2 class="av-trust-title">Una empresa <em>consolidada,</em> con resultados.</h2>
+    <p class="av-trust-intro">Llegamos a España hace más de un año tras 11 años de experiencia en Francia. Los números hablan por nosotros.</p>
+
+    <div class="av-trust-grid">
+      <div class="av-trust-stat">
+        <span class="av-trust-number">500+</span>
+        <span class="av-trust-label">Viviendas aisladas</span>
+        <span class="av-trust-detail">Obras completadas en España</span>
+      </div>
+      <div class="av-trust-stat">
+        <span class="av-trust-number">40 000+</span>
+        <span class="av-trust-label">m² de celulosa insuflada</span>
+        <span class="av-trust-detail">Lana mineral Isolene 4 (Isover)</span>
+      </div>
+      <div class="av-trust-stat">
+        <span class="av-trust-number">13</span>
+        <span class="av-trust-label">Provincias cubiertas</span>
+        <span class="av-trust-detail">Castilla y León, Madrid, Galicia, Asturias, Cantabria</span>
+      </div>
+      <div class="av-trust-stat">
+        <span class="av-trust-number">100%</span>
+        <span class="av-trust-label">Obra financiada vía CAE</span>
+        <span class="av-trust-detail">Sujeto delegado oficial GreenFlex</span>
+      </div>
     </div>
   </div>
 </section>
