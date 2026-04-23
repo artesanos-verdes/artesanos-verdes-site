@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="1200" height="520" fill="#f7f7f5"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="70" fill="#1a4d30"/>
+  <text x="60" y="30" fill="#a8c4b0" font-size="11" font-weight="700" letter-spacing="2.5">COMPARATIVA TÉCNICA</text>
+  <text x="60" y="55" fill="#ffffff" font-size="22" font-weight="700">Las 3 técnicas de insuflación para cubierta</text>
+
+  <!-- Card 1: Lana mineral -->
+  <g transform="translate(60, 110)">
+    <rect x="0" y="0" width="340" height="370" rx="12" fill="#ffffff" stroke="#2d7a4e" stroke-width="3"/>
+    <rect x="0" y="0" width="340" height="60" rx="12" fill="#2d7a4e"/>
+    <rect x="0" y="30" width="340" height="30" fill="#2d7a4e"/>
+    <text x="170" y="38" fill="#ffffff" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1.5">RECOMENDADO ISOVER</text>
+
+    <!-- Icon -->
+    <circle cx="170" cy="120" r="38" fill="#e8f5ee" stroke="#2d7a4e" stroke-width="2"/>
+    <text x="170" y="130" font-size="32" text-anchor="middle">🪟</text>
+
+    <text x="170" y="190" fill="#1a4d30" font-size="20" font-weight="800" text-anchor="middle">Lana mineral</text>
+    <text x="170" y="212" fill="#666" font-size="13" font-weight="600" text-anchor="middle">Isolene 4 · Isover</text>
+
+    <!-- Stats -->
+    <g transform="translate(30, 240)">
+      <text x="0" y="0" fill="#888" font-size="11" font-weight="600">ORIGEN</text>
+      <text x="0" y="18" fill="#1a1a1a" font-size="13" font-weight="700">Vidrio reciclado + arena</text>
+
+      <text x="0" y="48" fill="#888" font-size="11" font-weight="600">CONDUCTIVIDAD λ</text>
+      <text x="0" y="66" fill="#1a1a1a" font-size="13" font-weight="700">0,040-0,046 W/m·K</text>
+
+      <text x="0" y="96" fill="#888" font-size="11" font-weight="600">REACCIÓN FUEGO</text>
+      <text x="0" y="114" fill="#2d7a4e" font-size="13" font-weight="800">A1 · Incombustible</text>
+    </g>
+  </g>
+
+  <!-- Card 2: Celulosa -->
+  <g transform="translate(430, 110)">
+    <rect x="0" y="0" width="340" height="370" rx="12" fill="#ffffff" stroke="#c07856" stroke-width="2"/>
+
+    <circle cx="170" cy="90" r="38" fill="#fdf3ea" stroke="#c07856" stroke-width="2"/>
+    <text x="170" y="100" font-size="32" text-anchor="middle">📄</text>
+
+    <text x="170" y="160" fill="#1a1a1a" font-size="20" font-weight="800" text-anchor="middle">Celulosa</text>
+    <text x="170" y="182" fill="#666" font-size="13" font-weight="600" text-anchor="middle">Papel reciclado</text>
+
+    <g transform="translate(30, 210)">
+      <text x="0" y="0" fill="#888" font-size="11" font-weight="600">ORIGEN</text>
+      <text x="0" y="18" fill="#1a1a1a" font-size="13" font-weight="700">Papel reciclado + sales</text>
+
+      <text x="0" y="48" fill="#888" font-size="11" font-weight="600">CONDUCTIVIDAD λ</text>
+      <text x="0" y="66" fill="#1a1a1a" font-size="13" font-weight="700">0,038-0,042 W/m·K</text>
+
+      <text x="0" y="96" fill="#888" font-size="11" font-weight="600">REACCIÓN FUEGO</text>
+      <text x="0" y="114" fill="#c07856" font-size="13" font-weight="800">E · Requiere tratamiento</text>
+
+      <text x="0" y="144" fill="#888" font-size="11" font-weight="600">ASENTAMIENTO 20 AÑOS</text>
+      <text x="0" y="162" fill="#c07856" font-size="13" font-weight="800">15-20% ⚠️</text>
+    </g>
+  </g>
+
+  <!-- Card 3: Lana de roca -->
+  <g transform="translate(800, 110)">
+    <rect x="0" y="0" width="340" height="370" rx="12" fill="#ffffff" stroke="#888" stroke-width="2"/>
+
+    <circle cx="170" cy="90" r="38" fill="#f0f0f0" stroke="#888" stroke-width="2"/>
+    <text x="170" y="100" font-size="32" text-anchor="middle">🪨</text>
+
+    <text x="170" y="160" fill="#1a1a1a" font-size="20" font-weight="800" text-anchor="middle">Lana de roca</text>
+    <text x="170" y="182" fill="#666" font-size="13" font-weight="600" text-anchor="middle">Basalto volcánico</text>
+
+    <g transform="translate(30, 210)">
+      <text x="0" y="0" fill="#888" font-size="11" font-weight="600">ORIGEN</text>
+      <text x="0" y="18" fill="#1a1a1a" font-size="13" font-weight="700">Rocas volcánicas fundidas</text>
+
+      <text x="0" y="48" fill="#888" font-size="11" font-weight="600">CONDUCTIVIDAD λ</text>
+      <text x="0" y="66" fill="#1a1a1a" font-size="13" font-weight="700">0,035-0,040 W/m·K</text>
+
+      <text x="0" y="96" fill="#888" font-size="11" font-weight="600">REACCIÓN FUEGO</text>
+      <text x="0" y="114" fill="#2d7a4e" font-size="13" font-weight="800">A1 · Incombustible</text>
+
+      <text x="0" y="144" fill="#888" font-size="11" font-weight="600">PRECIO</text>
+      <text x="0" y="162" fill="#c07856" font-size="13" font-weight="800">+30 a +50% más caro 💰</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="505" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Datos técnicos verificados · Los Artesanos Verdes · artesanosverdes.com</text>
+</svg>
