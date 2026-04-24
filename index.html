@@ -96,8 +96,8 @@
     'anonymize_ip': true,
     'cookie_flags': 'SameSite=None;Secure'
   });
-  // Google Ads conversion tracking (ID to be provided when account created)
-  // gtag('config', 'AW-XXXXXXXXXX');
+  // Google Ads tag — remarketing audiences (conversions imported from GA4)
+  gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Cookie consent banner -->
@@ -2782,22 +2782,10 @@
       else fbq('trackCustom', eventName, params);
     }
 
-    // ==================================================================
-    // Google Ads conversion tracking
-    // ⚠️ PLACEHOLDER — replace AW-XXXXXXXXXX and the per-event labels
-    //    (PRIMARY_LABEL, WHATSAPP_LABEL) once the Google Ads account
-    //    and conversion actions are live. The guard below keeps events
-    //    from firing against the placeholder ID (which Google Ads would
-    //    log as an unrecognized conversion).
-    // ==================================================================
-    const googleAdsConversions = {
-      'generate_lead':    { send_to: 'AW-XXXXXXXXXX/PRIMARY_LABEL',  value: 1.0, currency: 'EUR' },
-      'contact_whatsapp': { send_to: 'AW-XXXXXXXXXX/WHATSAPP_LABEL', value: 1.0, currency: 'EUR' }
-    };
-    const adsConv = googleAdsConversions[eventName];
-    if (typeof gtag === 'function' && adsConv && adsConv.send_to.indexOf('AW-XXXXXXXXXX') !== 0) {
-      gtag('event', 'conversion', adsConv);
-    }
+    // Google Ads conversions are imported from GA4 (generate_lead,
+    // contact_whatsapp, contact_phone), so no dedicated gtag('event','conversion',...)
+    // call is needed here — the gtag('event', eventName, ...) above flows to both
+    // GA4 and Google Ads via the AW-3024885050 config in <head>.
   }
 
   // =====================================================
