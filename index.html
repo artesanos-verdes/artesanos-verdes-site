@@ -1948,25 +1948,25 @@
     <p class="av-trust-intro">Llegamos a España hace más de un año tras 11 años de experiencia en Francia. Los números hablan por nosotros.</p>
 
     <div class="av-trust-grid">
-      <div class="av-trust-stat">
-        <span class="av-trust-number">500+</span>
+      <div class="av-trust-stat" role="group" aria-label="500 o más viviendas aisladas">
+        <span class="av-trust-number" data-count-to="500" data-count-suffix="+">500+</span>
         <span class="av-trust-label">Viviendas aisladas</span>
         <span class="av-trust-detail">Obras completadas en España</span>
       </div>
-      <div class="av-trust-stat">
-        <span class="av-trust-number">40 000+</span>
+      <div class="av-trust-stat" role="group" aria-label="40.000 o más metros cuadrados insuflados">
+        <span class="av-trust-number" data-count-to="40000" data-count-suffix="+">40.000+</span>
         <span class="av-trust-label">m² de celulosa insuflada</span>
         <span class="av-trust-detail">Lana mineral Isolene 4 (Isover)</span>
       </div>
-      <div class="av-trust-stat">
-        <span class="av-trust-number">13</span>
+      <div class="av-trust-stat" role="group" aria-label="13 provincias cubiertas">
+        <span class="av-trust-number" data-count-to="13" data-count-suffix="">13</span>
         <span class="av-trust-label">Provincias cubiertas</span>
         <span class="av-trust-detail">Castilla y León, Madrid, Galicia, Asturias, Cantabria</span>
       </div>
-      <div class="av-trust-stat">
-        <span class="av-trust-number">100%</span>
-        <span class="av-trust-label">Obra financiada vía CAE</span>
-        <span class="av-trust-detail">Sujeto delegado oficial GreenFlex</span>
+      <div class="av-trust-stat" role="group" aria-label="11 años de experiencia">
+        <span class="av-trust-number" data-count-to="11" data-count-suffix="">11</span>
+        <span class="av-trust-label">Años de experiencia</span>
+        <span class="av-trust-detail">Trayectoria iniciada en Francia, operamos en España desde 2025</span>
       </div>
     </div>
   </div>
@@ -3028,6 +3028,67 @@
       nextInterval++;
     }
   }, 1000);
+</script>
+
+<!-- Trust counter animation (IntersectionObserver, one-shot, easeOutQuart) -->
+<script>
+(function () {
+  var section = document.querySelector('.av-trust-numbers');
+  if (!section) return;
+  var numbers = section.querySelectorAll('.av-trust-number[data-count-to]');
+  if (!numbers.length) return;
+
+  function formatEs(n) {
+    return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
+  function finalValue(el) {
+    return formatEs(parseInt(el.dataset.countTo, 10)) + (el.dataset.countSuffix || '');
+  }
+
+  var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) {
+    numbers.forEach(function (el) { el.textContent = finalValue(el); });
+    return;
+  }
+
+  // Reset to "0" before the observer fires so users see the count-up start,
+  // not a flash of the final value when the section scrolls into view.
+  numbers.forEach(function (el) { el.textContent = '0'; });
+
+  function animate(el) {
+    var target = parseInt(el.dataset.countTo, 10);
+    var suffix = el.dataset.countSuffix || '';
+    var duration = 1500;
+    var start = null;
+    function tick(ts) {
+      if (start === null) start = ts;
+      var t = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - t, 4); // easeOutQuart
+      if (t < 1) {
+        el.textContent = formatEs(eased * target);
+        requestAnimationFrame(tick);
+      } else {
+        // "+" suffix only appears once the count reaches its final value.
+        el.textContent = formatEs(target) + suffix;
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    // Fallback for very old browsers: show final values immediately.
+    numbers.forEach(function (el) { el.textContent = finalValue(el); });
+    return;
+  }
+
+  var io = new IntersectionObserver(function (entries, obs) {
+    if (entries[0].isIntersecting) {
+      numbers.forEach(animate);
+      obs.unobserve(section); // one-shot
+    }
+  }, { threshold: 0.3 });
+  io.observe(section);
+})();
 </script>
 
 </body>
