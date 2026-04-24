@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+
+  <!-- ========== BACKGROUND ========== -->
+  <rect width="1200" height="520" fill="#f7f7f5"/>
+
+  <!-- ========== TOP BRAND BAR ========== -->
+  <rect x="0" y="0" width="1200" height="70" fill="#1a4d30"/>
+  <text x="60" y="30" fill="#a8c4b0" font-size="11" font-weight="700" letter-spacing="2.5">NUESTRO MÉTODO</text>
+  <text x="60" y="55" fill="#ffffff" font-size="22" font-weight="700">De tu solicitud a la obra terminada — en 4 etapas</text>
+
+  <!-- Badge 1€ top right -->
+  <g transform="translate(1100, 35)">
+    <circle cx="0" cy="0" r="30" fill="#c07856"/>
+    <text x="0" y="-4" fill="#ffffff" font-size="20" font-weight="800" text-anchor="middle">1 €</text>
+    <text x="0" y="12" fill="#f3dccb" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1">CAE</text>
+  </g>
+
+  <!-- ========== STEPS ROW ========== -->
+  <!-- 4 steps, equally spaced across 1100px width from x=60 -->
+
+  <!-- Connector line behind steps -->
+  <line x1="160" y1="230" x2="1040" y2="230" stroke="#d0ccc0" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- STEP 1 - Solicitud -->
+  <g transform="translate(100, 180)">
+    <!-- Number circle -->
+    <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
+    <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">1</text>
+    
+    <!-- Icon below (chat bubble) -->
+    <g transform="translate(45, 110)">
+      <path d="M 0 8 Q 0 0 8 0 L 22 0 Q 30 0 30 8 L 30 16 Q 30 24 22 24 L 15 24 L 10 29 L 10 24 L 8 24 Q 0 24 0 16 Z" fill="none" stroke="#2d7a4e" stroke-width="2"/>
+    </g>
+    
+    <!-- Title -->
+    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Solicitud</text>
+    
+    <!-- Subtitle -->
+    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Web o WhatsApp</text>
+    
+    <!-- Time badge -->
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="80" height="22" rx="11" fill="#e8f5ee"/>
+      <text x="40" y="14" fill="#2d7a4e" font-size="10" font-weight="700" text-anchor="middle">&lt; 1 minuto</text>
+    </g>
+  </g>
+
+  <!-- STEP 2 - Estudio -->
+  <g transform="translate(370, 180)">
+    <!-- Number circle -->
+    <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
+    <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">2</text>
+    
+    <!-- Icon: house with check -->
+    <g transform="translate(42, 108)">
+      <path d="M 18 0 L 0 14 L 0 32 L 36 32 L 36 14 Z" fill="none" stroke="#2d7a4e" stroke-width="2"/>
+      <path d="M 10 20 L 16 26 L 26 14" fill="none" stroke="#2d7a4e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Title -->
+    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Estudio gratuito</text>
+    
+    <!-- Subtitle -->
+    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Visita técnica in situ</text>
+    
+    <!-- Time badge -->
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="80" height="22" rx="11" fill="#e8f5ee"/>
+      <text x="40" y="14" fill="#2d7a4e" font-size="10" font-weight="700" text-anchor="middle">&lt; 7 días</text>
+    </g>
+  </g>
+
+  <!-- STEP 3 - Obra -->
+  <g transform="translate(640, 180)">
+    <!-- Number circle with highlight -->
+    <circle cx="60" cy="50" r="42" fill="#c07856" stroke="#8a5038" stroke-width="3"/>
+    <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">3</text>
+    
+    <!-- Icon: tool/installation -->
+    <g transform="translate(44, 108)">
+      <!-- Insuflation machine simplified -->
+      <rect x="4" y="4" width="12" height="20" rx="2" fill="none" stroke="#c07856" stroke-width="2"/>
+      <circle cx="10" cy="10" r="2" fill="#c07856"/>
+      <path d="M 16 12 Q 24 12 28 18 Q 32 24 32 30" fill="none" stroke="#c07856" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Title -->
+    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Obra profesional</text>
+    
+    <!-- Subtitle -->
+    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Insuflación lana mineral</text>
+    
+    <!-- Time badge highlighted -->
+    <g transform="translate(15, 220)">
+      <rect x="0" y="0" width="90" height="22" rx="11" fill="#fdf3ea"/>
+      <text x="45" y="14" fill="#c07856" font-size="10" font-weight="700" text-anchor="middle">1 jornada</text>
+    </g>
+  </g>
+
+  <!-- STEP 4 - Resultado -->
+  <g transform="translate(910, 180)">
+    <!-- Number circle -->
+    <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
+    <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">4</text>
+    
+    <!-- Icon: trending down (savings) -->
+    <g transform="translate(42, 108)">
+      <path d="M 2 8 L 12 18 L 20 12 L 34 26" fill="none" stroke="#2d7a4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 26 26 L 34 26 L 34 18" fill="none" stroke="#2d7a4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Title -->
+    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Ahorro real</text>
+    
+    <!-- Subtitle -->
+    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Hasta 30% en calefacción</text>
+    
+    <!-- Cost badge -->
+    <g transform="translate(25, 220)">
+      <rect x="0" y="0" width="70" height="22" rx="11" fill="#1a4d30"/>
+      <text x="35" y="14" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">Tú pagas 1 €</text>
+    </g>
+  </g>
+
+  <!-- ========== BOTTOM INFO BAR ========== -->
+  <rect x="0" y="455" width="1200" height="65" fill="#1a4d30"/>
+
+  <!-- Left : Stats -->
+  <g transform="translate(60, 480)">
+    <text x="0" y="0" fill="#a8c4b0" font-size="10" font-weight="700" letter-spacing="1.5">NUESTRA EXPERIENCIA</text>
+    <text x="0" y="22" fill="#ffffff" font-size="15" font-weight="700">500+ viviendas · 40 000+ m² · 13 provincias</text>
+  </g>
+
+  <!-- Middle : GreenFlex + Isover (trust) -->
+  <g transform="translate(600, 480)">
+    <text x="0" y="0" fill="#a8c4b0" font-size="10" font-weight="700" letter-spacing="1.5" text-anchor="middle">SUJETO DELEGADO · MATERIAL</text>
+    <text x="0" y="22" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">GreenFlex · Isolene 4 (Isover)</text>
+  </g>
+
+  <!-- Right : CTA -->
+  <g transform="translate(1140, 480)">
+    <text x="0" y="0" fill="#a8c4b0" font-size="10" font-weight="700" letter-spacing="1.5" text-anchor="end">SOLICITA YA</text>
+    <text x="0" y="22" fill="#ffffff" font-size="15" font-weight="700" text-anchor="end">+34 632 18 05 09</text>
+  </g>
+
+</svg>
