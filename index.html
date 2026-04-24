@@ -278,20 +278,23 @@
 
   .hero-bg {
     position: absolute;
-    top: 0; right: -10%;
-    width: 65%; height: 100%;
-    background:
-      radial-gradient(ellipse at 30% 40%, rgba(143, 160, 120, 0.15) 0%, transparent 60%),
-      linear-gradient(135deg, var(--cream) 0%, rgba(245, 239, 225, 0.4) 100%);
-    z-index: -1;
-    border-radius: 0 0 0 40% / 0 0 0 15%;
-  }
-  .hero-bg::after {
-    content: '';
-    position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(135deg, transparent 0, transparent 140px, rgba(34, 160, 68, 0.03) 140px, rgba(34, 160, 68, 0.03) 280px);
+    background:
+      linear-gradient(135deg, rgba(26, 77, 48, 0.75) 0%, rgba(26, 77, 48, 0.55) 100%),
+      url('/blog/assets/artisan-hero.jpg') center right / cover no-repeat;
+    z-index: -1;
   }
+  /* Text-color overrides for photo-background hero (WCAG AA on white/dark-green overlay) */
+  .hero .hero-eyebrow { color: #e8f0ea; }
+  .hero h1 { color: #ffffff; }
+  .hero h1 em { color: #f5c6a8; }
+  .hero h1 .euro-accent { color: #c1d9cc; }
+  .hero .hero-sub { color: #e8f0ea; opacity: 0.95; }
+  .hero .hero-trust { border-top-color: rgba(255, 255, 255, 0.25); }
+  .hero .trust-item { color: #e8f0ea; }
+  .hero .trust-item svg { color: #8dd4a8; }
+  .hero .btn-ghost { color: #ffffff; border-color: rgba(255, 255, 255, 0.5); }
+  .hero .btn-ghost:hover { background: #ffffff; color: var(--forest); border-color: #ffffff; }
 
   .hero-content { max-width: 640px; z-index: 2; }
 
@@ -1036,6 +1039,28 @@
     line-height: 1.6;
   }
 
+  /* ===== HOME ILLUSTRATIONS (photo figures inside content sections) ===== */
+  .av-home-illustration {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+  }
+  .av-home-illustration img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  .av-home-illustration figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+    line-height: 1.5;
+    padding: 0 1rem;
+  }
+
   /* ===== MATERIAL / ISOLENE ===== */
   .material {
     background: var(--ivory);
@@ -1670,7 +1695,6 @@
     .burger.open span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
 
     .hero { grid-template-columns: 1fr; padding: 4rem 1.5rem 3rem; gap: 3rem; }
-    .hero-bg { width: 100%; right: 0; opacity: 0.5; }
     .hero-visual { min-height: 500px; }
 
     section { padding: 5rem 1.5rem; }
@@ -1790,6 +1814,10 @@
     color: #a8c4b0;
     line-height: 1.4;
   }
+  @media (max-width: 768px) {
+    .hero-bg { background-position: center; }
+  }
+
   @media (max-width: 640px) {
     .av-trust-numbers { padding: 56px 20px; }
     .av-trust-grid { gap: 24px; }
@@ -2309,6 +2337,14 @@
         <p>En casos de acceso complicado, la instalación puede realizarse desde el techo exterior.</p>
       </div>
     </div>
+
+    <figure class="av-home-illustration reveal">
+      <img src="/blog/assets/antes-despues.jpg"
+           alt="Antes y después del aislamiento de cubierta — ahorros hasta 30% en calefacción"
+           loading="lazy"
+           width="1400" height="1050">
+      <figcaption>Resultado visual del aislamiento de cubierta: antes (pérdidas de calor, facturas altas) y después (aislamiento óptimo, ahorro hasta 30 %).</figcaption>
+    </figure>
   </div>
 </section>
 
