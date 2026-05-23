@@ -432,8 +432,8 @@
       </select>
       <select id="filterAno">
         <option value="">Todas las fechas</option>
-        <option value="antes-2000">Antes de 2000</option>
-        <option value="despues-2000">Después de 2000</option>
+        <option value="antes-2000">Antes de 2006</option>
+        <option value="despues-2000">Después de 2006</option>
         <option value="no-se">No lo sé</option>
       </select>
       <button onclick="exportCSV()">
@@ -629,8 +629,8 @@
         'otro': 'Otro tipo'
       };
       const anoLabels = {
-        'antes-2000': 'Antes de 2000',
-        'despues-2000': 'Después de 2000',
+        'antes-2000': 'Antes de 2006',
+        'despues-2000': 'Después de 2006',
         'no-se': 'No lo sé'
       };
       const anoClass = lead.ano === 'antes-2000' ? '' : (lead.ano === 'despues-2000' ? 'warning' : 'neutral');

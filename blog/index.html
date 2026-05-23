@@ -20,6 +20,12 @@
 <meta property="og:image" content="https://artesanosverdes.com/blog/assets/og-default.jpg">
 
 <link rel="icon" type="image/png" href="/logo.png">
+
+<!-- Fonts (aligned with site home) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="/blog/assets/blog.css">
 
 <!-- Google Consent Mode v2 defaults (must precede gtag.js) -->
@@ -54,6 +60,9 @@ gtag('config', 'AW-3024885050');
 <!-- Cookie consent banner -->
 <link rel="stylesheet" href="/assets/cookie-banner.css">
 <script defer src="/assets/cookie-banner.js"></script>
+
+<!-- Magazine enhancements: reading progress + TOC + reveal -->
+<script defer src="/blog/assets/blog.js"></script>
 
 <!-- Schema.org Blog -->
 <script type="application/ld+json">
@@ -95,9 +104,26 @@ gtag('config', 'AW-3024885050');
 
 <!-- ===== Hero ===== -->
 <section class="av-blog-hero">
-  <h1>El Blog</h1>
+  <span class="av-blog-hero-eyebrow">blog editorial</span>
+  <h1>El <em>Blog.</em></h1>
+
+  <div class="av-blog-hero-ornament" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 2L22 12L12 22L2 12Z" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  </div>
+
   <p>Guías técnicas, casos reales y análisis sobre aislamiento de cubiertas, subvenciones CAE y eficiencia energética en viviendas españolas.</p>
+
+  <div class="av-blog-hero-stats">
+    <div class="stat"><strong>4</strong>artículos</div>
+    <div class="stat"><strong>50+</strong>min de lectura</div>
+    <div class="stat"><strong>2026</strong>actualizado</div>
+  </div>
 </section>
+
+<!-- Subtle divider before grid -->
+<div class="av-section-divider" aria-hidden="true"></div>
 
 <!-- ===== Grille d'articles ===== -->
 <section class="av-articles-grid">
@@ -106,7 +132,7 @@ gtag('config', 'AW-3024885050');
   <a href="/blog/subvenciones-aislamiento-cubierta-2026/" class="av-article-card featured">
     <div class="av-article-card-body">
       <span class="av-article-card-tag">Ayudas y subvenciones</span>
-      <h2>Subvenciones aislamiento cubierta 2026: guía completa (CAE + NextGen + IRPF)</h2>
+      <h2>Subvenciones aislamiento cubierta 2026: la guía <em>completa.</em></h2>
       <p>Descubre cómo combinar las tres ayudas disponibles en 2026 para aislar tu cubierta hasta el 100 % gratis. Con ejemplos reales en Castilla y León y Galicia.</p>
       <div class="av-article-card-meta">
         <span>21 de abril de 2026 · 11 min</span>
@@ -158,7 +184,7 @@ gtag('config', 'AW-3024885050');
     <div class="av-article-card-body">
       <span class="av-article-card-tag">Comparativa técnica</span>
       <h2>Lana mineral, celulosa o lana de roca: ¿cuál aisla mejor?</h2>
-      <p>Comparativa técnica real entre los 3 materiales dominantes del mercado español de la insuflación, con datos de 40 000 m² instalados.</p>
+      <p>Comparativa técnica real entre los 3 materiales dominantes del mercado español de la insuflación, con datos de 50 000 m² instalados.</p>
       <div class="av-article-card-meta">
         <span>24 de abril de 2026 · 14 min</span>
         <span class="av-article-card-readmore">Leer la comparativa →</span>
