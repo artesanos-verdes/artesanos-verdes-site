@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ch-title ch-desc" font-family="Manrope, -apple-system, sans-serif">
+  <title id="ch-title">Aislamiento de cubierta inclinada con aislante reflectante TETRIS SUPER 12</title>
+  <desc id="ch-desc">Ilustración en corte de una vivienda con tejado en pendiente a dos aguas y buhardilla habitable. El aislante reflectante flexible TETRIS SUPER 12 se coloca en lés bajo los rampantes, por el interior. Refleja hasta el 95 por ciento de la radiación infrarroja. Resistencia térmica R igual a 6,13 metros cuadrados kelvin por vatio según la norma EN 16012.</desc>
+
+  <defs>
+    <radialGradient id="ch-warm" cx="50%" cy="60%" r="65%">
+      <stop offset="0%" stop-color="#fbeede"/>
+      <stop offset="100%" stop-color="#fbfaf6"/>
+    </radialGradient>
+    <linearGradient id="ch-foil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef4f3"/>
+      <stop offset="0.5" stop-color="#bfcdcc"/>
+      <stop offset="1" stop-color="#dde7e5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== FONDO ===== -->
+  <rect width="1200" height="630" fill="#f7f7f5"/>
+
+  <!-- ===== BARRA SUPERIOR ===== -->
+  <rect x="0" y="0" width="1200" height="110" fill="#1a4d30"/>
+  <text x="60" y="48" fill="#a8c4b0" font-size="13" font-weight="700" letter-spacing="3.5">LOS ARTESANOS VERDES · AISLAMIENTO DE CUBIERTA INCLINADA</text>
+  <text x="60" y="86" fill="#ffffff" font-size="30" font-weight="700">Rampantes aislados con aislante reflectante</text>
+  <g transform="translate(975, 40)">
+    <rect x="0" y="0" width="165" height="30" rx="15" fill="#245c3b"/>
+    <text x="82" y="20" fill="#c1d9cc" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">FICHA CAE · RES010</text>
+  </g>
+
+  <!-- ===== SOMBRA DE SUELO ===== -->
+  <ellipse cx="430" cy="514" rx="330" ry="14" fill="#1a4d30" opacity="0.06"/>
+
+  <!-- ===== SOL + REFLEXIÓN IR ===== -->
+  <g transform="translate(150,190)">
+    <circle cx="0" cy="0" r="20" fill="#e8caa9" stroke="#c07856" stroke-width="1.8"/>
+    <g stroke="#c07856" stroke-width="2.4" stroke-linecap="round">
+      <line x1="0" y1="-32" x2="0" y2="-25"/><line x1="23" y1="-23" x2="18" y2="-18"/>
+      <line x1="32" y1="0" x2="25" y2="0"/><line x1="-23" y1="-23" x2="-18" y2="-18"/>
+      <line x1="-32" y1="0" x2="-25" y2="0"/><line x1="-23" y1="23" x2="-18" y2="18"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#c07856" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 188 212 L 300 266"/>
+    <path d="M 300 266 L 412 212"/>
+    <path d="M 404 212 L 412 212 L 410 220"/>
+  </g>
+  <g transform="translate(210,150)">
+    <rect x="0" y="0" width="196" height="26" rx="13" fill="#fdf3ea" stroke="#e2c3ad" stroke-width="1.2"/>
+    <circle cx="19" cy="13" r="4.5" fill="#c07856"/>
+    <text x="34" y="18" fill="#b0623f" font-size="12" font-weight="800">Refleja hasta 95 % IR</text>
+  </g>
+
+  <!-- ===== CASA EN CORTE ===== -->
+  <!-- Relleno interior (buhardilla habitable) -->
+  <path d="M178,508 L178,388 L430,214 L682,388 L682,508 Z" fill="url(#ch-warm)"/>
+
+  <!-- Ondas de calor conservado -->
+  <g stroke="#c07856" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.32">
+    <path d="M392,472 q7,-9 0,-18 q-7,-9 0,-18"/>
+    <path d="M430,476 q7,-9 0,-18 q-7,-9 0,-18"/>
+    <path d="M468,472 q7,-9 0,-18 q-7,-9 0,-18"/>
+  </g>
+
+  <!-- Sofá -->
+  <g>
+    <rect x="388" y="486" width="130" height="20" rx="5" fill="#cfe0d5" stroke="#1a4d30" stroke-width="1.4"/>
+    <rect x="388" y="470" width="130" height="20" rx="6" fill="#bcd7c6" stroke="#1a4d30" stroke-width="1.4"/>
+    <rect x="384" y="480" width="14" height="26" rx="5" fill="#bcd7c6" stroke="#1a4d30" stroke-width="1.4"/>
+    <rect x="508" y="480" width="14" height="26" rx="5" fill="#bcd7c6" stroke="#1a4d30" stroke-width="1.4"/>
+  </g>
+
+  <!-- Muros -->
+  <rect x="150" y="382" width="28" height="126" fill="#efece3" stroke="#d7d2c6" stroke-width="1.5"/>
+  <rect x="682" y="382" width="28" height="126" fill="#efece3" stroke="#d7d2c6" stroke-width="1.5"/>
+  <!-- Suelo -->
+  <line x1="150" y1="508" x2="710" y2="508" stroke="#cfcabd" stroke-width="2.5"/>
+
+  <!-- Aislante reflectante en lés (banda bajo el rampante) -->
+  <path d="M160,388 L430,192 L700,388 L680,388 L430,214 L180,388 Z" fill="url(#ch-foil)" stroke="#1a4d30" stroke-width="1.4"/>
+  <!-- alvéolos + solapes de lés -->
+  <g fill="#eef7f1" stroke="#a8c4b0" stroke-width="0.8">
+    <circle cx="250" cy="333" r="4"/><circle cx="310" cy="290" r="4"/><circle cx="370" cy="246" r="4"/>
+    <circle cx="610" cy="333" r="4"/><circle cx="550" cy="290" r="4"/><circle cx="490" cy="246" r="4"/>
+  </g>
+  <g stroke="#9fb3ac" stroke-width="0.9" opacity="0.6" stroke-dasharray="3 3">
+    <line x1="300" y1="365" x2="360" y2="222"/>
+    <line x1="560" y1="365" x2="500" y2="222"/>
+  </g>
+
+  <!-- Tejado (tejas) -->
+  <path d="M140,388 L430,160 L720,388 L700,388 L430,192 L160,388 Z" fill="#b7c4ba" stroke="#93a89b" stroke-width="1.4"/>
+  <path d="M151,388 L430,176 L709,388" fill="none" stroke="#93a89b" stroke-width="1" opacity="0.55"/>
+  <path d="M430,158 l16,12 l-16,6 l-16,-6 Z" fill="#93a89b"/>
+
+  <!-- Chevrons / cabios (marcas de estructura) -->
+  <g stroke="#8f7550" stroke-width="4" stroke-linecap="round" opacity="0.5">
+    <line x1="360" y1="248" x2="368" y2="254"/><line x1="300" y1="292" x2="308" y2="298"/>
+    <line x1="500" y1="248" x2="492" y2="254"/><line x1="560" y1="292" x2="552" y2="298"/>
+  </g>
+
+  <!-- Etiqueta interior -->
+  <g>
+    <line x1="430" y1="236" x2="430" y2="256" stroke="#22a044" stroke-width="1.5"/>
+    <circle cx="430" cy="236" r="3" fill="#22a044"/>
+    <rect x="286" y="256" width="288" height="32" rx="16" fill="#ffffff" stroke="#22a044" stroke-width="1.5"/>
+    <text x="430" y="277" fill="#1a4d30" font-size="13" font-weight="700" text-anchor="middle">Aislante reflectante en lés, bajo el rampante</text>
+  </g>
+
+  <!-- ===== COLUMNA DERECHA ===== -->
+  <!-- Badge R -->
+  <g transform="translate(770, 150)">
+    <rect x="0" y="0" width="390" height="110" rx="14" fill="#1a4d30"/>
+    <rect x="0" y="0" width="7" height="110" rx="3.5" fill="#22a044"/>
+    <text x="28" y="60" fill="#ffffff" font-size="36" font-weight="800">R = 6,13</text>
+    <text x="238" y="60" fill="#a8c4b0" font-size="22" font-weight="700">m²·K/W</text>
+    <text x="28" y="90" fill="#a8c4b0" font-size="12.5" font-weight="600">TETRIS SUPER 12 · aislante reflectante (EN 16012)</text>
+  </g>
+
+  <!-- Feature 1 -->
+  <g transform="translate(770, 289)">
+    <rect x="0" y="0" width="52" height="52" rx="12" fill="#e8f5ee" stroke="#a8c4b0" stroke-width="1.5"/>
+    <path d="M12,30 L26,16 L40,30" fill="none" stroke="#1a4d30" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26,42 L26,30 M26,30 l-4,4 M26,30 l4,4" fill="none" stroke="#22a044" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="800">Bajo el rampante, por el interior</text>
+    <text x="72" y="44" fill="#5c6b62" font-size="13" font-weight="600">Sin intervenir en la cubierta exterior</text>
+  </g>
+
+  <!-- Feature 2 -->
+  <g transform="translate(770, 367)">
+    <rect x="0" y="0" width="52" height="52" rx="12" fill="#e8f5ee" stroke="#a8c4b0" stroke-width="1.5"/>
+    <line x1="10" y1="38" x2="42" y2="38" stroke="#1a4d30" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M16,15 L26,37" fill="none" stroke="#c07856" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M26,37 L36,15 M36,15 l-5,2 M36,15 l1,5" fill="none" stroke="#22a044" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="800">Reflectante y flexible, en lés</text>
+    <text x="72" y="44" fill="#5c6b62" font-size="13" font-weight="600">Tecnología alveolar TRIPLEX · refleja hasta 95 % IR</text>
+  </g>
+
+  <!-- Feature 3 -->
+  <g transform="translate(770, 445)">
+    <rect x="0" y="0" width="52" height="52" rx="12" fill="#e8f5ee" stroke="#a8c4b0" stroke-width="1.5"/>
+    <path d="M12,26 L26,14 L40,26 L40,40 L12,40 Z" fill="none" stroke="#1a4d30" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M20,40 L20,30 L32,30 L32,40" fill="none" stroke="#22a044" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="800">Para desván o buhardilla habitable</text>
+    <text x="72" y="44" fill="#5c6b62" font-size="13" font-weight="600">Aísla el espacio bajo cubierta acondicionable</text>
+  </g>
+
+  <!-- Chip financiación -->
+  <g transform="translate(770, 515)">
+    <rect x="0" y="0" width="372" height="30" rx="15" fill="#f0ede4" stroke="#d0ccc0" stroke-width="1.2"/>
+    <circle cx="18" cy="15" r="4" fill="#22a044"/>
+    <text x="32" y="20" fill="#5c6b62" font-size="12" font-weight="700">Sistema CAE · financiación privada · ficha RES010</text>
+  </g>
+
+  <!-- ===== BARRA INFERIOR ===== -->
+  <rect x="0" y="580" width="1200" height="50" fill="#1a4d30"/>
+  <text x="60" y="610" fill="#a8c4b0" font-size="12" font-weight="600" letter-spacing="1.5">Rampantes aislados por el interior · para desván habitable o acondicionable</text>
+  <text x="1140" y="610" fill="#a8c4b0" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="end">ARTESANOSVERDES.COM</text>
+</svg>

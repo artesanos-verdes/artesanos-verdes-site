@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ac-title ac-desc" font-family="Manrope, -apple-system, sans-serif">
+  <title id="ac-title">Caldera de combustión frente a aerotermia</title>
+  <desc id="ac-desc">Comparativa cualitativa entre una caldera de gas o gasóleo y una bomba de calor aerotérmica según eficiencia, emisiones de CO2 y dependencia de combustible fósil. Índices relativos, sin importes.</desc>
+
+  <!-- ========== BACKGROUND ========== -->
+  <rect width="1200" height="520" fill="#f7f7f5"/>
+
+  <!-- ========== TOP BRAND BAR ========== -->
+  <rect x="0" y="0" width="1200" height="70" fill="#1a4d30"/>
+  <text x="60" y="30" fill="#a8c4b0" font-size="11" font-weight="700" letter-spacing="2.5">COMPARATIVA · CLIMATIZACIÓN</text>
+  <text x="60" y="55" fill="#ffffff" font-size="22" font-weight="700">Caldera de combustión vs. aerotermia</text>
+
+  <!-- ================= LEFT CARD · Caldera ================= -->
+  <g>
+    <rect x="60" y="110" width="520" height="370" rx="14" fill="#ffffff" stroke="#c07856" stroke-width="2"/>
+    <!-- header band -->
+    <path d="M 60 146 L 60 124 Q 60 110 74 110 L 566 110 Q 580 110 580 124 L 580 146 Z" fill="#b8b0a1"/>
+    <text x="320" y="134" fill="#ffffff" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">SISTEMA DE COMBUSTIÓN</text>
+
+    <!-- icon: flame -->
+    <circle cx="122" cy="200" r="30" fill="#fdf3ea" stroke="#c07856" stroke-width="2"/>
+    <g transform="translate(122, 200)">
+      <path d="M 0 20 C -16 8 -8 -6 -2 -20 C 2 -8 12 -6 8 6 C 6 14 0 12 0 20 Z" fill="#c07856"/>
+      <path d="M 0 16 C -8 8 -4 -2 0 -10 C 3 -2 7 4 4 10 C 2 15 0 12 0 16 Z" fill="#e7a06f"/>
+    </g>
+    <text x="172" y="194" fill="#1a4d30" font-size="21" font-weight="800">Caldera de gas / gasóleo</text>
+    <text x="172" y="216" fill="#666" font-size="13" font-weight="600">Genera calor quemando combustible</text>
+
+    <!-- Row 1: Eficiencia -->
+    <text x="90" y="262" fill="#888" font-size="11" font-weight="700" letter-spacing="1.5">EFICIENCIA · ÍNDICE RELATIVO</text>
+    <rect x="90" y="272" width="300" height="16" rx="8" fill="#e8e4d8"/>
+    <rect x="90" y="272" width="84" height="16" rx="8" fill="#c07856"/>
+    <text x="90" y="310" fill="#1a1a1a" font-size="15" font-weight="800">Rendimiento siempre &lt; 100%</text>
+
+    <!-- Row 2: Emisiones -->
+    <text x="90" y="346" fill="#888" font-size="11" font-weight="700" letter-spacing="1.5">EMISIONES CO₂ (EN USO)</text>
+    <rect x="90" y="356" width="300" height="16" rx="8" fill="#e8e4d8"/>
+    <rect x="90" y="356" width="258" height="16" rx="8" fill="#c07856"/>
+    <path d="M 90 398 L 98 386 L 106 398 Z" fill="#c07856"/>
+    <text x="114" y="398" fill="#1a1a1a" font-size="15" font-weight="800">Altas · combustión directa</text>
+
+    <!-- Row 3: Dependencia -->
+    <text x="90" y="434" fill="#888" font-size="11" font-weight="700" letter-spacing="1.5">DEPENDENCIA</text>
+    <text x="90" y="458" fill="#c07856" font-size="15" font-weight="800">Ligada al precio del gas o gasóleo</text>
+  </g>
+
+  <!-- ================= RIGHT CARD · Aerotermia ================= -->
+  <g>
+    <rect x="620" y="110" width="520" height="370" rx="14" fill="#ffffff" stroke="#2d7a4e" stroke-width="3"/>
+    <!-- header band -->
+    <path d="M 620 146 L 620 124 Q 620 110 634 110 L 1126 110 Q 1140 110 1140 124 L 1140 146 Z" fill="#2d7a4e"/>
+    <text x="880" y="134" fill="#ffffff" font-size="13" font-weight="700" letter-spacing="1.5" text-anchor="middle">RECOMENDADO</text>
+
+    <!-- icon: leaf -->
+    <circle cx="682" cy="200" r="30" fill="#e8f5ee" stroke="#2d7a4e" stroke-width="2"/>
+    <g transform="translate(682, 200)">
+      <path d="M -14 12 C -14 -12 12 -20 24 -20 C 24 4 2 16 -14 12 Z" fill="#22a044"/>
+      <path d="M -8 8 Q 6 -4 20 -14" stroke="#ffffff" stroke-width="2" fill="none"/>
+    </g>
+    <text x="732" y="194" fill="#1a4d30" font-size="21" font-weight="800">Aerotermia</text>
+    <text x="732" y="216" fill="#4d6b58" font-size="13" font-weight="600">Bomba de calor aire-agua / aire-aire</text>
+
+    <!-- Row 1: Eficiencia -->
+    <text x="650" y="262" fill="#888" font-size="11" font-weight="700" letter-spacing="1.5">EFICIENCIA · ÍNDICE RELATIVO</text>
+    <rect x="650" y="272" width="300" height="16" rx="8" fill="#e8e4d8"/>
+    <rect x="650" y="272" width="276" height="16" rx="8" fill="#22a044"/>
+    <text x="650" y="310" fill="#1a1a1a" font-size="15" font-weight="800">SCOP &gt; 1 · aprovecha el aire</text>
+
+    <!-- Row 2: Emisiones -->
+    <text x="650" y="346" fill="#888" font-size="11" font-weight="700" letter-spacing="1.5">EMISIONES CO₂ (EN USO)</text>
+    <rect x="650" y="356" width="300" height="16" rx="8" fill="#e8e4d8"/>
+    <rect x="650" y="356" width="20" height="16" rx="8" fill="#22a044"/>
+    <path d="M 650 388 L 658 400 L 666 388 Z" fill="#22a044"/>
+    <text x="674" y="398" fill="#1a1a1a" font-size="15" font-weight="800">Nulas en el punto de uso</text>
+
+    <!-- Row 3: Dependencia -->
+    <text x="650" y="434" fill="#888" font-size="11" font-weight="700" letter-spacing="1.5">DEPENDENCIA</text>
+    <text x="650" y="458" fill="#2d7a4e" font-size="15" font-weight="800">Sin combustible fósil · compatible con solar</text>
+  </g>
+
+  <!-- ========== FOOTER ========== -->
+  <text x="600" y="505" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Comparación cualitativa e índices relativos · SCOP = rendimiento estacional · Los Artesanos Verdes</text>
+</svg>

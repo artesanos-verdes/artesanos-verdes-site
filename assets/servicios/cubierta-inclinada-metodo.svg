@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="cm-title cm-desc" font-family="Manrope, -apple-system, sans-serif">
+  <title id="cm-title">Nuestro método en 4 etapas para aislar la cubierta inclinada</title>
+  <desc id="cm-desc">Las cuatro etapas del servicio: solicitud, estudio técnico, obra con la instalación del aislante TETRIS SUPER 12 bajo los rampantes, y resultado en confort y menor consumo. Sistema CAE de financiación privada, ficha RES010.</desc>
+
+  <!-- ===== FONDO ===== -->
+  <rect width="1200" height="520" fill="#f7f7f5"/>
+
+  <!-- ===== BARRA SUPERIOR ===== -->
+  <rect x="0" y="0" width="1200" height="70" fill="#1a4d30"/>
+  <text x="60" y="30" fill="#a8c4b0" font-size="11" font-weight="700" letter-spacing="2.5">NUESTRO MÉTODO · CUBIERTA INCLINADA</text>
+  <text x="60" y="55" fill="#ffffff" font-size="22" font-weight="700">De tu solicitud al confort — en 4 etapas</text>
+
+  <!-- Badge CAE arriba a la derecha -->
+  <g transform="translate(1100, 35)">
+    <circle cx="0" cy="0" r="30" fill="#2d7a4e" stroke="#1a4d30" stroke-width="2"/>
+    <text x="0" y="-2" fill="#ffffff" font-size="16" font-weight="800" text-anchor="middle">CAE</text>
+    <text x="0" y="13" fill="#a8c4b0" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1">RES010</text>
+  </g>
+
+  <!-- ===== LÍNEA CONECTORA ===== -->
+  <line x1="160" y1="230" x2="1040" y2="230" stroke="#d0ccc0" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- ===== ETAPA 1 · Solicitud ===== -->
+  <g transform="translate(100, 180)">
+    <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
+    <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">1</text>
+    <g transform="translate(45, 110)">
+      <path d="M 0 8 Q 0 0 8 0 L 22 0 Q 30 0 30 8 L 30 16 Q 30 24 22 24 L 15 24 L 10 29 L 10 24 L 8 24 Q 0 24 0 16 Z" fill="none" stroke="#2d7a4e" stroke-width="2"/>
+    </g>
+    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Solicitud</text>
+    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Web o WhatsApp</text>
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="80" height="22" rx="11" fill="#e8f5ee"/>
+      <text x="40" y="14" fill="#2d7a4e" font-size="10" font-weight="700" text-anchor="middle">&lt; 1 minuto</text>
+    </g>
+  </g>
+
+  <!-- ===== ETAPA 2 · Estudio técnico ===== -->
+  <g transform="translate(370, 180)">
+    <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
+    <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">2</text>
+    <g transform="translate(44, 106)" fill="none" stroke="#2d7a4e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="4" width="30" height="34" rx="3"/>
+      <rect x="13" y="0" width="12" height="8" rx="2" fill="#2d7a4e" stroke="none"/>
+      <path d="M 11 22 L 17 28 L 28 15"/>
+    </g>
+    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Estudio técnico</text>
+    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Visita + cálculo del ahorro</text>
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="80" height="22" rx="11" fill="#e8f5ee"/>
+      <text x="40" y="14" fill="#2d7a4e" font-size="10" font-weight="700" text-anchor="middle">&lt; 7 días</text>
+    </g>
+  </g>
+
+  <!-- ===== ETAPA 3 · Obra (destacada) ===== -->
+  <g transform="translate(640, 180)">
+    <circle cx="60" cy="50" r="42" fill="#c07856" stroke="#8a5038" stroke-width="3"/>
+    <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">3</text>
+    <!-- icono: aislante en lé bajo el rampante -->
+    <g transform="translate(40, 104)">
+      <path d="M3 16 L20 3 L37 16" fill="none" stroke="#8a5038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 23 L20 11 L33 23" fill="none" stroke="#c07856" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <g stroke="#c07856" stroke-width="1.8" stroke-linecap="round"><line x1="14" y1="15" x2="14" y2="10"/><line x1="26" y1="15" x2="26" y2="10"/></g>
+    </g>
+    <text x="60" y="168" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Obra</text>
+    <text x="60" y="186" fill="#666" font-size="10.5" font-weight="600" text-anchor="middle">Instalación del aislante</text>
+    <text x="60" y="200" fill="#666" font-size="10.5" font-weight="600" text-anchor="middle">TETRIS SUPER 12</text>
+    <text x="60" y="214" fill="#666" font-size="10.5" font-weight="600" text-anchor="middle">bajo rampantes</text>
+    <g transform="translate(17, 222)">
+      <rect x="0" y="0" width="86" height="22" rx="11" fill="#fdf3ea"/>
+      <text x="43" y="14" fill="#c07856" font-size="10" font-weight="700" text-anchor="middle">1-2 jornadas</text>
+    </g>
+  </g>
+
+  <!-- ===== ETAPA 4 · Resultado ===== -->
+  <g transform="translate(910, 180)">
+    <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
+    <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">4</text>
+    <g transform="translate(42, 108)">
+      <path d="M 2 26 L 12 16 L 20 22 L 34 8" fill="none" stroke="#2d7a4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 26 8 L 34 8 L 34 16" fill="none" stroke="#2d7a4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Confort y eficiencia</text>
+    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Más confort, menos consumo</text>
+    <g transform="translate(20, 220)">
+      <rect x="0" y="0" width="80" height="22" rx="11" fill="#e8f5ee"/>
+      <text x="40" y="14" fill="#2d7a4e" font-size="10" font-weight="700" text-anchor="middle">Todo el año</text>
+    </g>
+  </g>
+
+  <!-- ===== BARRA INFERIOR ===== -->
+  <rect x="0" y="455" width="1200" height="65" fill="#1a4d30"/>
+  <g transform="translate(60, 480)">
+    <text x="0" y="0" fill="#a8c4b0" font-size="10" font-weight="700" letter-spacing="1.5">NUESTRA EXPERIENCIA</text>
+    <text x="0" y="22" fill="#ffffff" font-size="15" font-weight="700">500+ viviendas · 13 provincias</text>
+  </g>
+  <g transform="translate(600, 480)">
+    <text x="0" y="0" fill="#a8c4b0" font-size="10" font-weight="700" letter-spacing="1.5" text-anchor="middle">SISTEMA CAE · FINANCIACIÓN PRIVADA</text>
+    <text x="0" y="22" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">RD 36/2023 · Ficha RES010</text>
+  </g>
+  <g transform="translate(1140, 480)">
+    <text x="0" y="0" fill="#a8c4b0" font-size="10" font-weight="700" letter-spacing="1.5" text-anchor="end">SOLICITA TU ESTUDIO</text>
+    <text x="0" y="22" fill="#ffffff" font-size="15" font-weight="700" text-anchor="end">+34 632 18 05 09</text>
+  </g>
+</svg>

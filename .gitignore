@@ -1,0 +1,19 @@
+# Documents internes — NE JAMAIS publier
+# Le site est servi par GitHub Pages : tout fichier commité devient public.
+AUDIT_MITECO_CONSUMO.md
+
+# Tableau de bord interne. Contient un mot de passe en clair cote client :
+# tant qu'il n'est pas passe sous Firebase Auth, il ne doit PAS etre publie.
+# Le fichier reste sur le disque, il n'est simplement plus deploye.
+admin.html
+
+# Configuration locale des outils
+.claude/
+
+# Fichiers de travail accidentels
+pwd
+test.txt
+
+# Systeme
+.DS_Store
+Thumbs.db

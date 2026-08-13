@@ -1255,6 +1255,48 @@ img.av-infographic-svg {
   font-variation-settings: "SOFT" 50, "WONK" 1;
 }
 
+/* Image d'ouverture d'article — la classe etait posee dans le HTML
+   des 4 articles sans exister nulle part : l'image s'affichait brute. */
+.av-article-hero-image {
+  margin: 0 0 44px;
+}
+
+.av-article-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--av-radius-md);
+  box-shadow: var(--av-shadow-sm);
+}
+
+.av-article-hero-image figcaption {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--av-text-mute);
+  text-align: center;
+  font-style: italic;
+  font-family: var(--av-display);
+  padding: 0 10px;
+  font-variation-settings: "SOFT" 50, "WONK" 1;
+}
+
+/* Renvoi vers les pages liees, en pied d'article et de page legale. */
+.av-article-related {
+  margin-top: 48px;
+  padding: 18px 22px;
+  border-left: 3px solid var(--av-border);
+  background: var(--av-border-soft);
+  border-radius: 0 var(--av-radius-sm) var(--av-radius-sm) 0;
+  font-size: 15px;
+  color: var(--av-text-soft);
+  line-height: 1.65;
+}
+
+.av-article-related a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
 /* ============================================
    MAGAZINE FEATURES — drop cap, pull quote,
    progress bar, TOC, ornaments, reveal
