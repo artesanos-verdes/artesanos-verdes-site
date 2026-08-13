@@ -1084,7 +1084,10 @@
   .certs-desc { font-size: 1.05rem; opacity: 0.8; max-width: 650px; margin: 1rem auto 3rem; line-height: 1.7; }
   .certs-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    /* 3 colonnes sur 2 rangs pour les 6 badges. Cette valeur etait posee en
+       style inline sur les 4 pages, ce qui ecrasait les media queries et
+       forcait 3 colonnes jusque sur mobile (debordement horizontal). */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
   .cert-badge {
@@ -1439,6 +1442,9 @@
   /* ===== TOAST de confirmation ===== */
   .toast {
     position: fixed;
+    /* masque hors ecran par translateX : sans visibility, son bouton de
+       fermeture reste focusable au clavier en permanence. */
+    visibility: hidden;
     top: 2rem; right: 2rem;
     max-width: 380px;
     background: var(--forest);
@@ -1458,6 +1464,7 @@
   .toast.show {
     transform: translateX(0);
     opacity: 1;
+    visibility: visible;
   }
   .toast.error {
     border-left-color: #e4322b;
@@ -1584,11 +1591,22 @@
       justify-content: center;
       gap: 2rem;
       transform: translateX(100%);
-      transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      /* visibility retire le panneau ferme du parcours clavier et de l'arbre
+         d'accessibilite, et l'empeche d'elargir la page hors ecran.
+         Sans elle : 668 px de large sur un viewport de 375, et les 7 liens
+         restaient atteignables au Tab alors qu'ils sont invisibles. */
+      visibility: hidden;
+      transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1),
+                  visibility 0s linear 0.5s;
       padding: 2rem;
       z-index: 101;
     }
-    .nav-links.open { transform: translateX(0); }
+    .nav-links.open {
+      transform: translateX(0);
+      visibility: visible;
+      transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1),
+                  visibility 0s;
+    }
     .nav-links a { color: var(--cream); font-size: 1rem; }
     .nav-links .nav-cta { background: var(--brand-green) !important; color: white !important; }
     .burger { display: block; }
@@ -1603,7 +1621,10 @@
     section { padding: 5rem 1.5rem; }
 
     .nosotros-header, .apoyo-header, .metodo-header, .cae-flow-header,
-    .material-inner, .contacto-inner { grid-template-columns: 1fr; gap: 3rem; }
+    /* minmax(0, 1fr) et non 1fr : une colonne 1fr refuse de descendre sous la
+       largeur minimale de son contenu, ce qui faisait deborder le formulaire
+       de 5 px hors du viewport sur mobile. */
+    .material-inner, .contacto-inner { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
 
     .stats { grid-template-columns: 1fr 1fr; }
     .stat { border-bottom: 1px solid var(--line); }
@@ -1785,7 +1806,9 @@
 
 @media (max-width: 968px) {
   .nav-sub {
-    position: static; opacity: 1; visibility: visible; transform: none;
+    /* visibility: inherit et non visible — sinon le sous-menu reste
+       atteignable au clavier quand le panneau mobile est ferme. */
+    position: static; opacity: 1; visibility: inherit; transform: none;
     box-shadow: none; border: none; background: transparent;
     min-width: 0; padding: .2rem 0 .4rem 1rem;
   }
