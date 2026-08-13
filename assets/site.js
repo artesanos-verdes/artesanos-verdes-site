@@ -222,19 +222,63 @@
     // ========================================
     try {
       const { db: _emDb, collection: _emCol, addDoc: _emAdd } = window.__firestore;
+
+      // Les gabarits d'e-mail recevaient les valeurs brutes des <select>
+      // ("unifamiliar", "gasoleo"...) et les affichaient telles quelles au
+      // client. On envoie desormais des libelles lisibles. Une valeur absente
+      // devient une chaine vide : le gabarit peut alors masquer la ligne
+      // entiere avec {{#if}} au lieu d'afficher un tiret orphelin.
+      const LIBELLES = {
+        tipo: {
+          unifamiliar: 'Vivienda unifamiliar',
+          piso: 'Piso',
+          comunidad: 'Comunidad de propietarios',
+          terciario: 'Edificio terciario',
+          otro: 'Otro tipo'
+        },
+        proyecto: {
+          desvan: 'Aislamiento de desván',
+          'cubierta-inclinada': 'Aislamiento de cubierta inclinada',
+          aerotermia: 'Aerotermia (bomba de calor)',
+          'no-se': 'Por definir'
+        },
+        calefaccion: {
+          gas: 'Gas (natural o propano)',
+          gasoleo: 'Gasóleo',
+          electrica: 'Eléctrica',
+          otra: 'Otra'
+        },
+        ano: {
+          'antes-2000': 'Antes de 2006',
+          'despues-2000': 'Después de 2006',
+          'no-se': 'No lo sé'
+        }
+      };
+      const libelle = (champ, valeur) => valeur ? (LIBELLES[champ][valeur] || valeur) : '';
+
       const emailData = {
         nombre: (leadData.nombre || 'Cliente').split(' ')[0],
         telefono: leadData.telefono || '—',
         telefonoClean: (leadData.telefono || '').replace(/[^0-9]/g, ''),
-        email: leadData.email || '—',
-        provincia: leadData.provincia || '—',
-        tipo: leadData.tipo || '—',
-        ano: leadData.ano || '—',
-        calefaccion: leadData.calefaccion || '—',
-        proyecto: leadData.proyecto || '—',
-        mensaje: leadData.mensaje || 'Sin mensaje',
+        email: leadData.email || '',
+        provincia: leadData.provincia || '',
+        tipo: libelle('tipo', leadData.tipo),
+        ano: libelle('ano', leadData.ano),
+        calefaccion: libelle('calefaccion', leadData.calefaccion),
+        proyecto: libelle('proyecto', leadData.proyecto),
+        mensaje: leadData.mensaje || '',
         source: leadData.source || 'website_form',
-        timestamp: new Date().toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Madrid' })
+        timestamp: new Date().toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Madrid' }),
+        // Indicateurs booleens : permettent au gabarit Handlebars de
+        // personnaliser la reponse selon le service demande, sans avoir a
+        // maintenir un document distinct par service.
+        esDesvan: leadData.proyecto === 'desvan',
+        esCubierta: leadData.proyecto === 'cubierta-inclinada',
+        esAerotermia: leadData.proyecto === 'aerotermia',
+        esSinDefinir: !leadData.proyecto || leadData.proyecto === 'no-se',
+        // Cas non eligible : chauffage electrique sur une demande de PAC.
+        // Le gabarit doit alors temperer les attentes plutot que promettre.
+        noElegible: leadData.proyecto === 'aerotermia' && leadData.calefaccion === 'electrica'
       };
       if (leadData.email) {
         _emAdd(_emCol(_emDb, 'mail'), {
