@@ -2,10 +2,10 @@
 # Le site est servi par GitHub Pages : tout fichier commité devient public.
 AUDIT_MITECO_CONSUMO.md
 
-# Tableau de bord interne. Contient un mot de passe en clair cote client :
-# tant qu'il n'est pas passe sous Firebase Auth, il ne doit PAS etre publie.
-# Le fichier reste sur le disque, il n'est simplement plus deploye.
-admin.html
+# admin.html est de nouveau publie depuis le 13 aout 2026 : il ne contient
+# plus aucun mot de passe et passe par Firebase Authentication (Google).
+# L'acces aux donnees est verrouille par la regle Firestore, qui n'autorise
+# la lecture de 'leads' qu'a une adresse nominative verifiee.
 
 # Configuration locale des outils
 .claude/
