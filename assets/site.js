@@ -240,6 +240,7 @@
           desvan: 'Aislamiento de desván',
           'cubierta-inclinada': 'Aislamiento de cubierta inclinada',
           aerotermia: 'Aerotermia (bomba de calor)',
+          'aire-aire': 'Bomba de calor aire-aire',
           'no-se': 'Por definir'
         },
         calefaccion: {

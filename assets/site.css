@@ -215,6 +215,12 @@
       url('/assets/servicios/hero-aerotermia.jpg') center right / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
+  .hero-bg--aire-aire {
+    background:
+      linear-gradient(100deg, rgba(10,24,16,0.94) 0%, rgba(15,46,28,0.88) 32%, rgba(26,77,48,0.60) 62%, rgba(26,77,48,0.40) 100%),
+      url('/assets/servicios/hero-aire-aire.jpg') center right / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+  }
 
   /* Text-color overrides for photo-background hero (WCAG AA on white/dark-green overlay) */
   .hero .hero-eyebrow { color: #e8f0ea; }
@@ -1856,7 +1862,8 @@
 /* ===== Sección Servicios (hub multiservicio) ===== */
 .servicios { text-align: center; }
 .servicios-intro { max-width: 720px; margin: 1rem auto 0; color: var(--sage); }
-.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 3rem; text-align: left; }
+/* Quatre services depuis aout 2026 : 2x2 plutot que 3+1 orphelin. */
+.servicios-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; margin-top: 3rem; text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto; }
 .servicio-card { display: flex; flex-direction: column; background: var(--ivory); border: 1px solid var(--line-soft); border-radius: 20px; overflow: hidden; text-decoration: none; color: inherit; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .servicio-card:hover { transform: translateY(-6px); box-shadow: 0 22px 50px rgba(26,46,31,.12); border-color: var(--brand-green); }
 .servicio-card img { width: 100%; height: auto; display: block; background: #eef4ee; border-bottom: 1px solid var(--line-soft); }
