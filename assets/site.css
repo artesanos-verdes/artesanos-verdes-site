@@ -201,7 +201,7 @@
     background:
       linear-gradient(100deg, rgba(10,24,16,0.94) 0%, rgba(15,46,28,0.88) 32%, rgba(26,77,48,0.60) 62%, rgba(26,77,48,0.40) 100%),
       url('/assets/servicios/hero-desvan.jpg') center right / cover no-repeat,
-      url('/blog/assets/artisan-hero.jpg') center right / cover no-repeat;
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--cubierta-inclinada {
     background:
@@ -1783,7 +1783,19 @@
     line-height: 1.4;
   }
   @media (max-width: 768px) {
-    .hero-bg { background-position: center; }
+    /* Sur mobile le hero est en portrait (375 x ~1000) alors que les photos
+       sont en paysage 16:10. Avec background-size: cover, l'image est agrandie
+       pour remplir la hauteur et il n'en reste que ~23 % de la largeur visible :
+       une tranche verticale illisible, qui donne un effet de gros plan.
+       On passe donc la couche photo en 'contain', calee en haut : la photo
+       s'affiche entiere sur toute la largeur, en bandeau, et le degrade occupe
+       le reste de la hauteur. L'ordre des couches est
+       [degrade de lisibilite, photo, degrade de repli]. */
+    .hero-bg {
+      background-size: auto, contain, auto;
+      background-position: center, top center, center;
+      background-repeat: no-repeat, no-repeat, no-repeat;
+    }
   }
 
   @media (max-width: 640px) {
