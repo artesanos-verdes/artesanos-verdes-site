@@ -159,66 +159,76 @@
   .burger span:nth-child(3) { bottom: 4px; }
 
   /* ===== HERO ===== */
+  /* ===== HERO EN DEUX PANNEAUX =====
+     Le texte et la photo ne se recouvrent plus : chacun occupe sa moitie.
+     Auparavant la photo etait un fond plein cadre et un degrade sombre la
+     masquait sur toute la moitie gauche pour rendre le titre lisible — on
+     perdait donc la moitie de l'image, et le sujet avec. */
   .hero {
     min-height: calc(100vh - 100px);
-    padding: 5rem 2.5rem 4rem;
+    padding: 0;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 0;
+    align-items: stretch;
     overflow: hidden;
+    background: linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+  }
+  .hero > .hero-content {
+    padding: 5rem 2.5rem 4rem;
+    align-self: center;
+    position: relative;
+    z-index: 2;
   }
 
-  /* ===== FOND DU HERO, UNE PHOTO PAR SERVICE =====
-     Le degrade est peint PAR-DESSUS la photo et reste tres dense a gauche,
-     la ou se trouve le titre : sans lui, le logo imprime sur le materiel et
-     sur la veste du technicien se superposait au texte.
-     Le degrade est aussi le fond de repli : tant qu'un fichier photo n'existe
-     pas, la page affiche un aplat propre au lieu d'une image cassee. Il suffit
-     de deposer le fichier au chemin indique pour que la photo apparaisse. */
+  /* La photo n'occupe que la moitie droite. Le seul degrade conserve est un
+     raccord de quelques pour cent sur son bord gauche, pour eviter une
+     couture nette avec le panneau sombre. */
   .hero-bg {
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    z-index: 0;
     background:
-      linear-gradient(100deg,
-        rgba(10, 24, 16, 0.94) 0%,
-        rgba(15, 46, 28, 0.88) 32%,
-        rgba(26, 77, 48, 0.60) 62%,
-        rgba(26, 77, 48, 0.40) 100%),
+      linear-gradient(90deg,
+        rgba(10, 24, 16, 1) 0%,
+        rgba(10, 24, 16, 0.55) 8%,
+        rgba(10, 24, 16, 0) 22%),
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
-    z-index: -1;
   }
 
   /* Une photo par service. Depose le fichier au chemin indique et il apparait. */
   .hero-bg--home {
     background:
-      linear-gradient(100deg, rgba(10,24,16,0.94) 0%, rgba(15,46,28,0.88) 32%, rgba(26,77,48,0.60) 62%, rgba(26,77,48,0.40) 100%),
-      url('/blog/assets/artisan-hero.jpg') center right / cover no-repeat,
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/blog/assets/artisan-hero.jpg') center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--desvan {
     background:
-      linear-gradient(100deg, rgba(10,24,16,0.94) 0%, rgba(15,46,28,0.88) 32%, rgba(26,77,48,0.60) 62%, rgba(26,77,48,0.40) 100%),
-      url('/assets/servicios/hero-desvan.jpg') center right / cover no-repeat,
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/assets/servicios/hero-desvan.jpg') center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--cubierta-inclinada {
     background:
-      linear-gradient(100deg, rgba(10,24,16,0.94) 0%, rgba(15,46,28,0.88) 32%, rgba(26,77,48,0.60) 62%, rgba(26,77,48,0.40) 100%),
-      url('/assets/servicios/hero-cubierta-inclinada.jpg') center right / cover no-repeat,
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/assets/servicios/hero-cubierta-inclinada.jpg') center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--aerotermia {
     background:
-      linear-gradient(100deg, rgba(10,24,16,0.94) 0%, rgba(15,46,28,0.88) 32%, rgba(26,77,48,0.60) 62%, rgba(26,77,48,0.40) 100%),
-      url('/assets/servicios/hero-aerotermia.jpg') center right / cover no-repeat,
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/assets/servicios/hero-aerotermia.jpg') center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--aire-aire {
     background:
-      linear-gradient(100deg, rgba(10,24,16,0.94) 0%, rgba(15,46,28,0.88) 32%, rgba(26,77,48,0.60) 62%, rgba(26,77,48,0.40) 100%),
-      url('/assets/servicios/hero-aire-aire.jpg') center right / cover no-repeat,
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/assets/servicios/hero-aire-aire.jpg') center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
 
@@ -1821,18 +1831,32 @@
     line-height: 1.4;
   }
   @media (max-width: 768px) {
-    /* Sur mobile le hero est en portrait (375 x ~1000) alors que les photos
-       sont en paysage 16:10. Avec background-size: cover, l'image est agrandie
-       pour remplir la hauteur et il n'en reste que ~23 % de la largeur visible :
-       une tranche verticale illisible, qui donne un effet de gros plan.
-       On passe donc la couche photo en 'contain', calee en haut : la photo
-       s'affiche entiere sur toute la largeur, en bandeau, et le degrade occupe
-       le reste de la hauteur. L'ordre des couches est
-       [degrade de lisibilite, photo, degrade de repli]. */
+    /* Sur mobile il n'y a plus qu'une colonne : la photo devient un bandeau
+       en haut, pleine largeur, et le texte se place dessous sur le panneau
+       sombre. Aucun recouvrement, la photo reste entierement lisible. */
     .hero-bg {
-      background-size: auto, contain, auto;
-      background-position: center, top center, center;
+      left: 0;
+      bottom: auto;
+      height: 46vw;
+      max-height: 300px;
+      min-height: 200px;
+      background-size: auto, cover, auto;
+      background-position: center, center center, center;
       background-repeat: no-repeat, no-repeat, no-repeat;
+    }
+    /* Raccord horizontal en bas du bandeau plutot que sur son bord gauche. */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 44%;
+      background: linear-gradient(180deg, rgba(10,24,16,0) 0%, rgba(10,24,16,0.85) 78%, #0f2e1c 100%);
+    }
+    .hero > .hero-content {
+      /* align-self: center recentrerait le bloc et annulerait le decalage :
+         il faut l'ancrer en haut pour que le texte parte sous le bandeau. */
+      align-self: start;
+      padding-top: calc(46vw + 2.5rem);
     }
   }
 
