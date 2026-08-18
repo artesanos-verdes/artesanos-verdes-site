@@ -330,6 +330,44 @@
     z-index: 1;
   }
 
+  /* ===== VISUEL SORTI DU HERO =====
+     Les cartes d'infographie occupaient la moitie droite du hero et
+     recouvraient la photo : il ne restait qu'une soixantaine de pixels de
+     photo visible entre le titre et la carte. Le visuel vit desormais dans
+     sa propre section, sous le hero, ou il est lisible en pleine largeur —
+     et la photo du hero redevient visible. */
+  .hero-figure {
+    padding: 4.5rem 2.5rem;
+    background: var(--ivory);
+  }
+  .hero-figure-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /* .hero-stamp est en position absolue et s'ancrait sur .hero-visual :
+       sans conteneur positionne ici, il se rattacherait au viewport. */
+    position: relative;
+    min-height: 180px;
+    align-items: center;
+  }
+  .hero-figure-inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 24px 60px -24px rgba(10, 24, 16, 0.28);
+  }
+  /* La carte d'offre etait positionnee en absolu dans .hero-visual.
+     Hors du hero, elle doit reprendre le flux normal. */
+  .offer-card--static {
+    position: static;
+    width: 100%;
+    max-width: 620px;
+  }
+  @media (max-width: 768px) {
+    .hero-figure { padding: 3rem 1.5rem; }
+  }
+
   .offer-card {
     position: absolute;
     top: 0; right: 0;
