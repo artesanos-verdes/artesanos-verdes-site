@@ -50,11 +50,90 @@
     "name": "Los Artesanos Verdes SL",
     "url": "https://artesanosverdes.com/"
   },
-  "areaServed": {
-    "@type": "Country",
-    "name": "ES"
-  },
+  "areaServed": ["Valladolid", "León", "Burgos", "Palencia", "Zamora", "Salamanca", "Segovia", "Ávila", "Madrid", "Lugo", "Ourense", "Asturias", "Cantabria"],
   "category": "Rehabilitación energética / Climatización eficiente"
+}
+</script>
+
+<!-- Schema.org JSON-LD : FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mi calefacción es eléctrica, ¿puedo acogerme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La ficha RES060 reconoce el ahorro que se obtiene al dejar de quemar un combustible fósil, así que la actuación exige que la calefacción actual sea de gas natural, propano o gasóleo. Si tu vivienda se calienta con radiadores eléctricos, acumuladores o una caldera eléctrica, la sustitución no es elegible dentro del sistema CAE. En ese caso la vía que sí puede reducir tu consumo es actuar sobre la envolvente: aislamiento del desván por soplado o aislamiento de la cubierta inclinada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La aerotermia funciona con mis radiadores actuales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En la mayoría de los casos, sí. Las bombas de calor aire-agua trabajan tanto con radiadores como con suelo radiante. En el estudio gratuito comprobamos tu sistema de emisión y dimensionamos el equipo para que rinda al máximo con lo que ya tienes instalado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tengo que quitar mi caldera antigua?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de tu zona climática. Lo habitual es desmontarla y gestionar su retirada como parte de la instalación. Pero en las zonas climáticas D y E la caldera existente puede quedarse conectada como sistema de apoyo: la bomba de calor cubre el día a día y la caldera sigue disponible para los días de frío extremo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Importa el año de construcción de mi vivienda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A diferencia del aislamiento de cubierta, en la sustitución de caldera por aerotermia la antigüedad del edificio es indiferente. Lo que cuenta es el combustible de la calefacción actual y el ahorro energético que se consigue con el cambio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Me da también agua caliente sanitaria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El sistema cubre calefacción y agua caliente sanitaria (ACS) durante todo el año, y muchos equipos ofrecen además refrigeración en verano."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Rinde bien en zonas frías?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Las bombas de calor aerotérmicas actuales están diseñadas para trabajar con temperaturas exteriores bajas manteniendo un buen rendimiento. Seleccionamos el equipo en función de tu zona climática y, en las zonas D y E, la caldera antigua puede permanecer como apoyo puntual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto ahorraré en la factura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El ahorro depende de tu vivienda, del equipo que se sustituye y del SCOP del nuevo sistema. Como una bomba de calor entrega varias unidades de calor por cada unidad de electricidad, el consumo suele reducirse de forma notable frente a una caldera de combustión. La estimación concreta la calculamos en el estudio gratuito."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se calcula la prima del sistema CAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Según el ahorro energético de tu instalación: superficie, demanda de calefacción del CEE, rendimiento de la caldera antigua y SCOP del nuevo equipo. No es un importe fijo y solo puede confirmarse tras el estudio. Las primas están sujetas a verificación del ahorro por organismo acreditado (ENAC). Lo explicamos con detalle en el artículo Aerotermia y primas CAE: cuánto cuesta realmente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El sistema CAE es una ayuda pública?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El CAE es un mecanismo de financiación privada regulado por el Real Decreto 36/2023: el importe lo aportan las empresas energéticas obligadas por ley a acreditar ahorro, no la Administración. Los programas de apoyo público —Next Generation, IDAE o las deducciones del IRPF— son ayudas distintas e independientes, que no forman parte del sistema CAE."
+      }
+    }
+  ]
 }
 </script>
 
@@ -261,6 +340,35 @@
   .cta-final h2 em { color: #f5c6a8; }
   .cta-final .cta-lead { color: #e8f0ea; opacity: 0.9; font-size: 1.1rem; line-height: 1.7; max-width: 620px; margin: 0 auto 2.2rem; }
   .cta-final .cta-fine { color: #c1d9cc; opacity: 0.85; font-size: 0.82rem; letter-spacing: 0.05em; margin-top: 1.4rem; }
+
+  /* Jerarquía de títulos corregida (h3/h4): se conserva el aspecto original */
+  .criterion h3 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: inherit;
+    font-variation-settings: normal;
+    margin-bottom: 0.6rem;
+    color: var(--forest-deep);
+  }
+  .step-content h3 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: inherit;
+    font-variation-settings: normal;
+    margin-bottom: 0.5rem;
+    color: var(--forest-deep);
+  }
+  .footer-col h4 {
+    font-family: var(--display);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
 </style>
 
 <!-- HERO -->
@@ -435,7 +543,7 @@
         <div class="criterion-icon">
           <svg viewBox="0 0 24 24" fill="none"><path d="M12 2s5 4.5 5 9a5 5 0 01-10 0c0-4.5 5-9 5-9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <h4>Calefacción actual de gas o gasóleo</h4>
+        <h3>Calefacción actual de gas o gasóleo</h3>
         <p>Tu vivienda se calienta hoy con una caldera de gas natural, propano o gasóleo. Las calefacciones y calderas eléctricas no son elegibles.</p>
       </div>
 
@@ -444,7 +552,7 @@
         <div class="criterion-icon">
           <svg viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22V12h6v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h4>Vivienda unifamiliar o piso</h4>
+        <h3>Vivienda unifamiliar o piso</h3>
         <p>Sirve tanto una casa unifamiliar como un piso, siempre que exista un emplazamiento viable para la unidad exterior.</p>
       </div>
 
@@ -453,7 +561,7 @@
         <div class="criterion-icon">
           <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <h4>Cualquier año de construcción</h4>
+        <h3>Cualquier año de construcción</h3>
         <p>A diferencia del aislamiento, la antigüedad de la vivienda es indiferente. No hay fecha límite para sustituir una caldera de combustión.</p>
       </div>
     </div>
@@ -491,7 +599,7 @@
       <div class="step-item reveal">
         <div class="step-num">1</div>
         <div class="step-content">
-          <h4>Estudio de elegibilidad gratuito</h4>
+          <h3>Estudio de elegibilidad gratuito</h3>
           <p>Comprobamos primero lo esencial: qué caldera tienes y con qué combustible funciona. Después analizamos la demanda de calefacción, la superficie y tu sistema de emisión (radiadores o suelo radiante).</p>
         </div>
       </div>
@@ -499,7 +607,7 @@
       <div class="step-item reveal reveal-delay-1">
         <div class="step-num">2</div>
         <div class="step-content">
-          <h4>Dimensionado y propuesta cerrada</h4>
+          <h3>Dimensionado y propuesta cerrada</h3>
           <p>Calculamos la potencia, el equipo y el SCOP óptimos para tu vivienda y te entregamos un presupuesto detallado con la financiación CAE aplicable a tu caso ya reflejada. Sin sorpresas ni letra pequeña.</p>
         </div>
       </div>
@@ -507,7 +615,7 @@
       <div class="step-item reveal reveal-delay-2">
         <div class="step-num">3</div>
         <div class="step-content">
-          <h4>Retirada de la caldera antigua</h4>
+          <h3>Retirada de la caldera antigua</h3>
           <p>Desmontamos y gestionamos la retirada del equipo de combustión. En zonas climáticas D y E, si lo prefieres, la mantenemos conectada como sistema de apoyo para los días más fríos.</p>
         </div>
       </div>
@@ -515,7 +623,7 @@
       <div class="step-item reveal reveal-delay-3">
         <div class="step-num">4</div>
         <div class="step-content">
-          <h4>Instalación de la bomba de calor</h4>
+          <h3>Instalación de la bomba de calor</h3>
           <p>Montamos la unidad exterior y la interior, conectamos el circuito de calefacción y el de agua caliente sanitaria y ajustamos el control. Habitualmente en una o dos jornadas de trabajo.</p>
         </div>
       </div>
@@ -523,7 +631,7 @@
       <div class="step-item reveal">
         <div class="step-num">5</div>
         <div class="step-content">
-          <h4>Puesta en marcha y ajuste</h4>
+          <h3>Puesta en marcha y ajuste</h3>
           <p>Configuramos las curvas de temperatura para maximizar el rendimiento y el confort, y te explicamos el manejo del sistema hasta que lo domines.</p>
         </div>
       </div>
@@ -531,7 +639,7 @@
       <div class="step-item reveal reveal-delay-1">
         <div class="step-num">6</div>
         <div class="step-content">
-          <h4>Certificación y verificación del ahorro</h4>
+          <h3>Certificación y verificación del ahorro</h3>
           <p>Emitimos los CEE anterior y posterior a la actuación. El expediente se tramita a través de nuestro sujeto delegado GreenFlex, con verificación del ahorro por organismo acreditado (ENAC).</p>
         </div>
       </div>
@@ -554,7 +662,7 @@
         <div class="criterion-icon">
           <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h4>Ficha RES060</h4>
+        <h3>Ficha RES060</h3>
         <p>Sustitución de caldera por bomba de calor aerotérmica: una actuación estandarizada del catálogo de CAE, regulado por el MITECO.</p>
       </div>
 
@@ -563,7 +671,7 @@
         <div class="criterion-icon">
           <svg viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h4>Sujeto delegado GreenFlex</h4>
+        <h3>Sujeto delegado GreenFlex</h3>
         <p>El ahorro conseguido se transfiere a un sujeto obligado a través de nuestro sujeto delegado, que tramita el expediente de principio a fin.</p>
       </div>
 
@@ -572,7 +680,7 @@
         <div class="criterion-icon">
           <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
         </div>
-        <h4>Prima verificada por ENAC</h4>
+        <h3>Prima verificada por ENAC</h3>
         <p>La prima CAE no es un importe fijo: se calcula en el estudio gratuito y está sujeta a verificación del ahorro por organismo acreditado.</p>
       </div>
     </div>
@@ -792,6 +900,7 @@
             <option value="desvan">Aislar mi desván</option>
             <option value="cubierta-inclinada">Aislar mi cubierta inclinada</option>
             <option value="aerotermia" selected>Cambiar mi caldera por aerotermia</option>
+            <option value="aire-aire">Bomba de calor aire-aire</option>
             <option value="no-se">No lo sé todavía</option>
           </select>
         </div>
@@ -870,7 +979,7 @@
     </div>
 
     <div class="footer-col">
-      <h5>Servicios</h5>
+      <h4>Servicios</h4>
       <ul>
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván (soplado)</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Cubierta inclinada (rampantes)</a></li>
@@ -881,7 +990,7 @@
     </div>
 
     <div class="footer-col">
-      <h5>Empresa</h5>
+      <h4>Empresa</h4>
       <ul>
         <li><a href="/#nosotros">Sobre nosotros</a></li>
         <li><a href="#certificaciones">Regulado por MITECO</a></li>
@@ -891,7 +1000,7 @@
     </div>
 
     <div class="footer-col">
-      <h5>Contacto</h5>
+      <h4>Contacto</h4>
       <ul>
         <li><a href="tel:+34632180509">+34 632 18 05 09</a></li>
         <li><a href="mailto:contacto@artesanosverdes.com">contacto@artesanosverdes.com</a></li>
@@ -901,7 +1010,7 @@
     </div>
 
     <div class="footer-col">
-      <h5>Legal</h5>
+      <h4>Legal</h4>
       <ul>
         <li><a href="/legal/aviso-legal/">Aviso legal</a></li>
         <li><a href="/legal/politica-privacidad/">Política de privacidad</a></li>

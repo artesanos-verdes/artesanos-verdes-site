@@ -698,6 +698,10 @@
       const anoClass = lead.ano === 'antes-2000' ? '' : (lead.ano === 'despues-2000' ? 'warning' : 'neutral');
       const calefaccionClass = lead.calefaccion === 'electrica' ? 'warning' : (lead.calefaccion === 'otra' ? 'neutral' : '');
       const proyectoClass = lead.proyecto === 'no-se' ? 'neutral' : '';
+      const consentTitle = [
+        lead.consentAt ? `Consentimiento: ${lead.consentAt}` : '',
+        lead.consentPolicy ? `Política: ${lead.consentPolicy}` : ''
+      ].filter(Boolean).join(' · ');
 
       return `
         <tr>
@@ -715,6 +719,7 @@
             ${lead.tipo ? `<span class="lead-tag">${escapeHtml(tipoLabels[lead.tipo] || lead.tipo)}</span><br>` : ''}
             ${lead.calefaccion ? `<span class="lead-tag ${calefaccionClass}">${escapeHtml(calefaccionLabels[lead.calefaccion] || lead.calefaccion)}</span><br>` : ''}
             ${lead.ano ? `<span class="lead-tag ${anoClass}">${anoLabels[lead.ano] || lead.ano}</span>` : ''}
+            ${lead.consentPrivacy ? `${lead.ano ? '<br>' : ''}<span class="lead-tag neutral" title="${escapeHtml(consentTitle)}">Consentimiento OK</span>` : ''}
           </td>
           <td class="lead-message">${lead.mensaje ? escapeHtml(lead.mensaje) : '<em style="opacity:0.4;">(sin mensaje)</em>'}</td>
           <td>
@@ -763,7 +768,7 @@
       alert('No hay leads para exportar');
       return;
     }
-    const headers = ['Fecha', 'Nombre', 'Teléfono', 'Email', 'Provincia', 'Proyecto', 'Tipo vivienda', 'Calefacción actual', 'Año construcción', 'Mensaje', 'Fuente'];
+    const headers = ['Fecha', 'Nombre', 'Teléfono', 'Email', 'Provincia', 'Proyecto', 'Tipo vivienda', 'Calefacción actual', 'Año construcción', 'Mensaje', 'Fuente', 'Consentimiento', 'Fecha consentimiento', 'Versión política'];
     const rows = allLeads.map(l => {
       const d = l.timestamp?.toDate ? l.timestamp.toDate() : new Date();
       return [
@@ -777,7 +782,10 @@
         l.calefaccion || '',
         l.ano || '',
         (l.mensaje || '').replace(/\n/g, ' '),
-        l.source || ''
+        l.source || '',
+        l.consentPrivacy ? 'Sí' : 'No',
+        l.consentAt || '',
+        l.consentPolicy || ''
       ].map(escapeCSV).join(',');
     });
     const csv = '\uFEFF' + headers.join(',') + '\n' + rows.join('\n');

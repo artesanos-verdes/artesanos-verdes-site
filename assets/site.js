@@ -276,10 +276,14 @@
         esDesvan: leadData.proyecto === 'desvan',
         esCubierta: leadData.proyecto === 'cubierta-inclinada',
         esAerotermia: leadData.proyecto === 'aerotermia',
+        esAireAire: leadData.proyecto === 'aire-aire',
         esSinDefinir: !leadData.proyecto || leadData.proyecto === 'no-se',
-        // Cas non eligible : chauffage electrique sur une demande de PAC.
+        // Cas non eligible : chauffage electrique sur une demande de pompe a
+        // chaleur. Les DEUX pompes sont concernees — aerotermia et aire-aire
+        // exigent identiquement un chauffage fossile au depart.
         // Le gabarit doit alors temperer les attentes plutot que promettre.
-        noElegible: leadData.proyecto === 'aerotermia' && leadData.calefaccion === 'electrica'
+        noElegible: (leadData.proyecto === 'aerotermia' || leadData.proyecto === 'aire-aire')
+          && leadData.calefaccion === 'electrica'
       };
       if (leadData.email) {
         _emAdd(_emCol(_emDb, 'mail'), {
