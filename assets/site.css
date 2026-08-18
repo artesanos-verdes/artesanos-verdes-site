@@ -176,7 +176,7 @@
     background: linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero > .hero-content {
-    padding: 5rem 2.5rem 4rem;
+    padding: 3.5rem 2.5rem 3rem;
     align-self: center;
     position: relative;
     z-index: 2;
@@ -266,11 +266,13 @@
   h1 {
     font-family: var(--display);
     font-weight: 300;
-    font-size: clamp(2.8rem, 6.5vw, 5.5rem);
-    line-height: 0.95;
+    /* Taille calibree pour le hero en deux panneaux : le titre vit sur une
+       demi-largeur, l'ancienne taille (jusqu'a 5.5rem) debordait du viewport. */
+    font-size: clamp(2.4rem, 4.6vw, 4rem);
+    line-height: 1.0;
     letter-spacing: -0.03em;
     color: var(--forest-deep);
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.4rem;
     font-variation-settings: "SOFT" 50, "WONK" 1;
   }
   h1 em {
@@ -291,12 +293,35 @@
     font-size: 1.1rem;
     color: var(--forest);
     opacity: 0.8;
-    margin-bottom: 2.2rem;
+    margin-bottom: 1.8rem;
     max-width: 520px;
     line-height: 1.65;
   }
 
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+  /* Liste compacte des 4 services, dans le panneau texte de l'accueil.
+     Remplace la carte qui recouvrait la photo du hero. */
+  .hero-checklist {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem 1.6rem;
+  }
+  .hero-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #e8f0ea;
+  }
+  .hero-checklist svg { width: 16px; height: 16px; flex: none; color: #8dd4a8; }
+  @media (max-width: 640px) {
+    .hero-checklist { grid-template-columns: 1fr; }
+  }
 
   .btn {
     display: inline-flex;
