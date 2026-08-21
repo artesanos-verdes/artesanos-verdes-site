@@ -1838,11 +1838,15 @@
     border-top: 2px solid rgba(255,255,255,0.15);
   }
   .av-trust-number {
-    font-size: clamp(48px, 7vw, 72px);
+    /* 52px maximum : a 72px en graisse 800, « 100.000+ » (le compteur le
+       plus long) mesurait ~340px dans une colonne de ~276px et debordait
+       sur le chiffre voisin. */
+    font-size: clamp(36px, 3.6vw, 52px);
     font-weight: 800;
     line-height: 1;
     color: #ffffff;
     letter-spacing: -1px;
+    white-space: nowrap;
   }
   .av-trust-label {
     font-size: 16px;
