@@ -300,25 +300,63 @@
 
   /* Liste compacte des 4 services, dans le panneau texte de l'accueil.
      Remplace la carte qui recouvrait la photo du hero. */
-  .hero-checklist {
-    list-style: none;
-    margin: 0 0 2rem;
-    padding: 0;
+  /* ===== ARRANQUE RÁPIDO DEL HERO (chips -> formulario prellenado) ===== */
+  .hero-quickstart { margin: 0 0 2rem; }
+  .hero-quickstart-label {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8dd4a8;
+  }
+  .hero-quickstart-chips {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.65rem 1.6rem;
+    gap: 0.6rem 0.8rem;
   }
-  .hero-checklist li {
+  .hero-chip {
     display: flex;
     align-items: center;
     gap: 0.55rem;
-    font-size: 0.95rem;
-    font-weight: 500;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid rgba(232, 240, 234, 0.35);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.06);
     color: #e8f0ea;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
   }
-  .hero-checklist svg { width: 16px; height: 16px; flex: none; color: #8dd4a8; }
+  .hero-chip svg { width: 16px; height: 16px; flex: none; color: #8dd4a8; transition: color 0.25s ease; }
+  .hero-chip:hover, .hero-chip:focus-visible {
+    background: #8dd4a8;
+    border-color: #8dd4a8;
+    color: var(--forest-deep);
+    transform: translateY(-2px);
+  }
+  .hero-chip:hover svg, .hero-chip:focus-visible svg { color: var(--forest-deep); }
+  .hero-chip--nose {
+    margin-top: 0.7rem;
+    padding: 0.45rem 0.2rem;
+    border: 0;
+    background: transparent;
+    font-weight: 500;
+    font-size: 0.88rem;
+    color: rgba(232, 240, 234, 0.75);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .hero-chip--nose:hover, .hero-chip--nose:focus-visible {
+    background: transparent;
+    color: #8dd4a8;
+    transform: none;
+  }
   @media (max-width: 640px) {
-    .hero-checklist { grid-template-columns: 1fr; }
+    .hero-quickstart-chips { grid-template-columns: 1fr; }
   }
 
   .btn {
@@ -1442,6 +1480,28 @@
   }
   .form h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
   .form-desc { font-size: 0.95rem; color: var(--forest); opacity: 0.75; margin-bottom: 2rem; }
+  .form-etapa { border: 0; padding: 0; margin: 0 0 2rem; min-width: 0; }
+  .form-etapa legend {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.3rem;
+    padding: 0;
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: var(--forest);
+  }
+  .etapa-num {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: var(--cream);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    flex: none;
+  }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
   .form-group { display: flex; flex-direction: column; }
   .form-group.full { grid-column: 1 / -1; }
@@ -1656,6 +1716,8 @@
       max-width: none;
     }
   }
+  section[id], footer[id] { scroll-margin-top: 88px; }
+
   .whatsapp-float {
     position: fixed;
     bottom: 2rem; right: 2rem;
@@ -1673,6 +1735,37 @@
   }
   .whatsapp-float:hover { transform: scale(1.1) rotate(5deg); }
   .whatsapp-float svg { width: 32px; height: 32px; }
+
+  /* ===== CTA PERSISTANT MOBILE ===== */
+  .cta-bar-movil { display: none; }
+  @media (max-width: 768px) {
+    .cta-bar-movil {
+      display: flex;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 98;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem 1.2rem calc(1rem + env(safe-area-inset-bottom));
+      background: var(--brand-green-deep);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      box-shadow: 0 -6px 24px rgba(10, 24, 16, 0.3);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .cta-bar-movil.oculta {
+      transform: translateY(110%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    /* laisser la place à la barre : WhatsApp remonte, le footer respire */
+    .whatsapp-float { bottom: calc(4.8rem + env(safe-area-inset-bottom)); right: 1.2rem; }
+    footer { padding-bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
+  }
 
   /* ===== REVEAL ===== */
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 1s cubic-bezier(0.23, 1, 0.32, 1); }
@@ -1740,6 +1833,8 @@
        largeur minimale de son contenu, ce qui faisait deborder le formulaire
        de 5 px hors du viewport sur mobile. */
     .material-inner, .contacto-inner { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+    /* sur mobile, le formulaire passe avant le bloc coordonnées : c'est lui qu'on vient chercher */
+    .contacto-inner .form { order: -1; }
 
     .stats { grid-template-columns: 1fr 1fr; }
     .stat { border-bottom: 1px solid var(--line); }
@@ -1772,7 +1867,8 @@
     footer { padding: 3rem 1.5rem 2rem; }
     .footer-bottom { flex-direction: column; text-align: center; }
 
-    .whatsapp-float { bottom: 1rem; right: 1rem; width: 54px; height: 54px; }
+    /* remonté au-dessus de la barre CTA fixe */
+    .whatsapp-float { bottom: calc(4.6rem + env(safe-area-inset-bottom)); right: 1rem; width: 54px; height: 54px; }
     .whatsapp-float svg { width: 28px; height: 28px; }
   }
 

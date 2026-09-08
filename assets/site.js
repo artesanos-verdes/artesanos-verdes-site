@@ -422,3 +422,39 @@
   }, { threshold: 0.3 });
   io.observe(section);
 })();
+
+/* ===== Arranque rápido del hero + CTA persistente móvil ===== */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var seccion = document.getElementById('contacto');
+
+  // Chips del hero: preseleccionan el proyecto y llevan al formulario
+  var chips = document.querySelectorAll('.hero-chip');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var proyecto = chip.getAttribute('data-proyecto');
+      var sel = document.getElementById('proyecto');
+      if (sel) {
+        sel.value = proyecto;
+        sel.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      if (typeof gtag === 'function') gtag('event', 'quickstart_click', { proyecto: proyecto });
+      if (seccion) seccion.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+      var nombre = document.getElementById('nombre');
+      if (nombre) setTimeout(function () { nombre.focus({ preventScroll: true }); }, reduce ? 0 : 650);
+    });
+  });
+
+  // Barra fija móvil: se oculta mientras el formulario está a la vista
+  var barra = document.getElementById('ctaBarMovil');
+  if (barra) {
+    if (seccion && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (entradas) {
+        barra.classList.toggle('oculta', entradas[0].isIntersecting);
+      }, { rootMargin: '0px 0px -15% 0px' }).observe(seccion);
+    }
+    barra.addEventListener('click', function () {
+      if (typeof gtag === 'function') gtag('event', 'cta_bar_movil_click');
+    });
+  }
+})();

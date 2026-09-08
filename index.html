@@ -49,7 +49,6 @@
   "url": "https://artesanosverdes.com/",
   "telephone": "+34632180509",
   "email": "contacto@artesanosverdes.com",
-  "priceRange": "€",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Calle Castell D'Olimbroi Nº 30",
@@ -105,7 +104,7 @@
 <script defer src="/assets/cookie-banner.js"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=20260909">
 
 <!-- ===== Firebase SDK (v10 modular, loaded from CDN) ===== -->
 <script type="module">
@@ -223,12 +222,16 @@
     <p class="hero-sub reveal reveal-delay-2">
       Más de 11 años mejorando el confort térmico de las viviendas, con la <strong>financiación privada del sistema CAE</strong> y la verificación del ahorro por organismo acreditado (ENAC).
     </p>
-    <ul class="hero-checklist reveal reveal-delay-2">
-      <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Aislamiento de desván</li>
-      <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Cubierta inclinada</li>
-      <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Aerotermia</li>
-      <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Bomba de calor aire-aire</li>
-    </ul>
+    <div class="hero-quickstart reveal reveal-delay-2">
+      <p class="hero-quickstart-label" id="quickstart-label">¿Qué quieres mejorar? Empieza aquí:</p>
+      <div class="hero-quickstart-chips" role="group" aria-labelledby="quickstart-label">
+        <button type="button" class="hero-chip" data-proyecto="desvan"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Aislar el desván</button>
+        <button type="button" class="hero-chip" data-proyecto="cubierta-inclinada"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Cubierta inclinada</button>
+        <button type="button" class="hero-chip" data-proyecto="aerotermia"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Aerotermia</button>
+        <button type="button" class="hero-chip" data-proyecto="aire-aire"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Bomba de calor aire-aire</button>
+      </div>
+      <button type="button" class="hero-chip hero-chip--nose" data-proyecto="no-se">No lo sé todavía — ayúdame a elegir</button>
+    </div>
     <div class="hero-actions reveal reveal-delay-3">
       <a href="#servicios" class="btn btn-primary">
         Ver nuestros servicios
@@ -749,7 +752,7 @@
     <div class="contacto-info">
       <div class="section-num reveal">12 — Hablemos</div>
       <h2 class="reveal reveal-delay-1">Estudio de<br>elegibilidad <em>gratuito.</em></h2>
-      <p class="reveal reveal-delay-2">Cuéntanos sobre tu vivienda y en menos de 1 hora sabrás si puedes saber si tu vivienda es elegible para el sistema CAE. Sin compromiso, sin letra pequeña.</p>
+      <p class="reveal reveal-delay-2">Cuéntanos sobre tu vivienda y en menos de 1 hora sabrás si es elegible para el sistema CAE. Sin compromiso, sin letra pequeña.</p>
 
       <ul class="contact-list reveal reveal-delay-3">
         <li class="contact-item">
@@ -791,6 +794,8 @@
     <form class="form reveal reveal-delay-1" id="contactForm" onsubmit="handleSubmit(event)">
       <h3>Estudio gratuito</h3>
       <p class="form-desc">Respuesta en menos de 1 hora. Sin compromiso.</p>
+      <fieldset class="form-etapa">
+        <legend><span class="etapa-num">1</span>Tu proyecto</legend>
       <div class="form-row">
         <div class="form-group full" data-field="proyecto">
           <label for="proyecto">¿Qué proyecto te interesa?</label>
@@ -817,26 +822,6 @@
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group">
-          <label for="nombre">Nombre completo</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="María García">
-        </div>
-        <div class="form-group">
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" required placeholder="+34 6...">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" required placeholder="tu@email.com">
-        </div>
-        <div class="form-group">
-          <label for="provincia">Provincia</label>
-          <input type="text" id="provincia" name="provincia" required placeholder="Valladolid, León...">
-        </div>
-      </div>
-      <div class="form-row">
         <div class="form-group" data-field="tipo-vivienda">
           <label for="tipo">Tipo de vivienda</label>
           <select id="tipo" name="tipo" required>
@@ -857,12 +842,36 @@
           </select>
         </div>
       </div>
+      </fieldset>
+      <fieldset class="form-etapa">
+        <legend><span class="etapa-num">2</span>Tus datos de contacto</legend>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="María García">
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required placeholder="+34 6...">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com">
+        </div>
+        <div class="form-group">
+          <label for="provincia">Provincia</label>
+          <input type="text" id="provincia" name="provincia" required placeholder="Valladolid, León...">
+        </div>
+      </div>
       <div class="form-row">
         <div class="form-group full" data-field="mensaje">
           <label for="mensaje">Mensaje (opcional)</label>
           <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto (desván, cubierta inclinada, aerotermia o aire-aire), superficie aproximada…"></textarea>
         </div>
       </div>
+      </fieldset>
       <div class="form-consent">
         <label for="consent-privacy">
           <input type="checkbox" id="consent-privacy" name="consent_privacy" required>
@@ -877,6 +886,12 @@
     </form>
   </div>
 </section>
+
+<!-- CTA persistant mobile -->
+<a href="#contacto" class="cta-bar-movil" id="ctaBarMovil">
+  Estudio gratuito · 1 min
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+</a>
 
 <!-- FOOTER -->
 <footer>
@@ -958,7 +973,7 @@
   <button class="toast-close" onclick="document.getElementById('toast').classList.remove('show')" aria-label="Cerrar">×</button>
 </div>
 
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=20260909" defer></script>
 
 </body>
 </html>
