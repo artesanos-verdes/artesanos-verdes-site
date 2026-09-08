@@ -100,8 +100,6 @@
     display: block;
   }
   .logo:hover .logo-img { transform: scale(1.03); }
-  /* Logo PNG has white background — fuse it into the cream/beige nav bar. */
-  nav .logo-img { mix-blend-mode: multiply; }
   footer .logo {
     background: var(--cream);
     padding: 0.8rem 1.2rem;
