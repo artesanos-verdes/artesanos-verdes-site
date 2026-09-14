@@ -204,11 +204,19 @@
       linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
       url('/blog/assets/artisan-hero.jpg') center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/blog/assets/artisan-hero.webp') type('image/webp'), url('/blog/assets/artisan-hero.jpg') type('image/jpeg')) center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--desvan {
     background:
       linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
       url('/assets/servicios/hero-desvan.jpg') center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/assets/servicios/hero-desvan.webp') type('image/webp'), url('/assets/servicios/hero-desvan.jpg') type('image/jpeg')) center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--cubierta-inclinada {
@@ -216,17 +224,29 @@
       linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
       url('/assets/servicios/hero-cubierta-inclinada.jpg') center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/assets/servicios/hero-cubierta-inclinada.webp') type('image/webp'), url('/assets/servicios/hero-cubierta-inclinada.jpg') type('image/jpeg')) center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--aerotermia {
     background:
       linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
       url('/assets/servicios/hero-aerotermia.jpg') center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/assets/servicios/hero-aerotermia.webp') type('image/webp'), url('/assets/servicios/hero-aerotermia.jpg') type('image/jpeg')) center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero-bg--aire-aire {
     background:
       linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
       url('/assets/servicios/hero-aire-aire.jpg') center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/assets/servicios/hero-aire-aire.webp') type('image/webp'), url('/assets/servicios/hero-aire-aire.jpg') type('image/jpeg')) center center / cover no-repeat,
       linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
 

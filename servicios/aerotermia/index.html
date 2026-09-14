@@ -176,30 +176,11 @@
 <script defer src="/assets/cookie-banner.js"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
+<link rel="preload" as="image" href="/assets/servicios/hero-aerotermia.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="/assets/site.css?v=20260914">
 
-<!-- ===== Firebase SDK (v10 modular, loaded from CDN) ===== -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyAgYXJhKGUVOr_esrI0kbs4_1IKePJAUHg",
-    authDomain: "artesanos-verdes-site.firebaseapp.com",
-    projectId: "artesanos-verdes-site",
-    storageBucket: "artesanos-verdes-site.firebasestorage.app",
-    messagingSenderId: "113919847755",
-    appId: "1:113919847755:web:c2b7c47669066ef17e4cce",
-    measurementId: "G-1B5SEEEMJP"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  // Expose to global scope for handleSubmit
-  window.__firestore = { db, collection, addDoc, serverTimestamp };
-  window.dispatchEvent(new Event('firebase-ready'));
-</script>
+<!-- SDK Firebase chargé en différé : voir assets/firebase-lazy.js -->
+<script src="/assets/firebase-lazy.js?v=20260914" defer></script>
 </head>
 <body>
 
@@ -414,7 +395,7 @@
   <div class="hero-figure-inner reveal">
   <img src="/assets/servicios/aerotermia-hero.svg"
   alt="Bomba de calor aerotérmica aire-agua que sustituye a una caldera de gas o gasóleo y produce calefacción y agua caliente sanitaria"
-  width="1200" height="630" loading="eager" fetchpriority="high"
+  width="1200" height="630" loading="lazy"
   style="width:100%;height:auto">
   </div>
 </section>
