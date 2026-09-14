@@ -122,7 +122,7 @@
 <script defer src="/assets/cookie-banner.js"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=20260914">
 
 <!-- ===== Firebase SDK (v10 modular, loaded from CDN) ===== -->
 <script type="module">
@@ -222,7 +222,7 @@
     <li><a href="/blog/">Blog</a></li>
     <li><a href="#contacto" class="nav-cta">Estudio gratuito</a></li>
   </ul>
-  <button class="burger" id="burger" aria-label="Menu">
+  <button class="burger" id="burger" aria-label="Menú de navegación" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -893,6 +893,23 @@
 </section>
 
 <!-- CONTACTO -->
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div style="max-width:760px; margin:0 auto;">
+    <h2 class="reveal">¿Tu desván <em>cumple</em> los criterios?</h2>
+    <p class="cta-lead reveal reveal-delay-1">
+      Cuéntanos cómo es tu casa y un técnico confirmará si tu desván es apto para el aislamiento por insuflado, con la financiación del sistema CAE aplicable a tu caso.
+    </p>
+    <div class="reveal reveal-delay-2" style="display:flex; justify-content:center;">
+      <a href="#contacto" class="btn btn-primary">
+        Solicitar estudio gratuito
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+    <p class="cta-fine reveal reveal-delay-2">Sin compromiso · Estudio gratuito · Respuesta en menos de 1 hora</p>
+  </div>
+</section>
+
 <section id="contacto" class="contacto">
   <div class="contacto-inner">
     <div class="contacto-info">
@@ -1096,7 +1113,7 @@
   <button class="toast-close" onclick="document.getElementById('toast').classList.remove('show')" aria-label="Cerrar">×</button>
 </div>
 
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=20260914" defer></script>
 
 </body>
 </html>

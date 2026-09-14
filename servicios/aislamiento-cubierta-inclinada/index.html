@@ -94,7 +94,7 @@
 <script defer src="/assets/cookie-banner.js"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=20260914">
 
 <!-- ===== Firebase SDK (v10 modular, loaded from CDN) ===== -->
 <script type="module">
@@ -118,6 +118,64 @@
   window.__firestore = { db, collection, addDoc, serverTimestamp };
   window.dispatchEvent(new Event('firebase-ready'));
 </script>
+<!-- Schema.org FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿En qué se diferencia esto del aislamiento por soplado del desván?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El soplado consiste en proyectar material aislante sobre el suelo del desván y se reserva para áticos perdidos o desván no habitable. Cuando la buhardilla es habitable o quieres acondicionarla, lo correcto es aislar los rampantes por el interior, para conservar el espacio útil de la estancia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pierdo mucha altura en la buhardilla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TETRIS SUPER 12 es un aislante reflectante flexible que se coloca sobre un rail metálico de 70 mm bajo los rampantes, por lo que la reducción de altura es contenida. En el estudio gratuito optimizamos la solución para maximizar el confort sin comprometer la habitabilidad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué resistencia térmica consigo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El sistema alcanza una resistencia térmica R = 6,13 m²·K/W (norma EN 16012), y además refleja hasta el 95 % de la radiación infrarroja, lo que aporta confort tanto en invierno como en verano."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hace falta una barrera de vapor aparte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. TETRIS SUPER 12 integra una barrera de vapor en su film externo (Sd > 60 m) y es estanco al aire de forma intrínseca, por lo que no es necesario colocar una barrera de vapor independiente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta la obra con el sistema CAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La financiación privada a través del sistema CAE reduce de forma significativa el coste para el propietario. El importe final se determina en el estudio gratuito, en función de tu vivienda; las primas están sujetas a verificación del ahorro por organismo acreditado (ENAC)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito licencia de obra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En la mayoría de los municipios se trata de una obra menor; en algunos ayuntamientos basta una comunicación previa. Si procede, nos encargamos del trámite por ti."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 
@@ -194,7 +252,7 @@
     <li><a href="/blog/">Blog</a></li>
     <li><a href="#contacto" class="nav-cta">Estudio gratuito</a></li>
   </ul>
-  <button class="burger" id="burger" aria-label="Menu">
+  <button class="burger" id="burger" aria-label="Menú de navegación" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -911,7 +969,7 @@
   <button class="toast-close" onclick="document.getElementById('toast').classList.remove('show')" aria-label="Cerrar">×</button>
 </div>
 
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=20260914" defer></script>
 
 </body>
 </html>

@@ -94,7 +94,7 @@
 <script defer src="/assets/cookie-banner.js"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=20260914">
 
 <!-- ===== Firebase SDK (v10 modular, loaded from CDN) ===== -->
 <script type="module">
@@ -118,6 +118,104 @@
   window.__firestore = { db, collection, addDoc, serverTimestamp };
   window.dispatchEvent(new Event('firebase-ready'));
 </script>
+<!-- Schema.org FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mi calefacción es eléctrica, ¿puedo acogerme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El sistema CAE reconoce el ahorro que se obtiene al dejar de quemar un combustible fósil, así que la actuación exige que la calefacción actual sea de gas natural, propano o gasóleo. Si tu vivienda se calienta con radiadores eléctricos, acumuladores o una caldera eléctrica, la instalación de una bomba de calor aire-aire no es elegible dentro del sistema CAE. En ese caso la vía que sí puede reducir tu consumo es actuar sobre la envolvente: aislamiento del desván por soplado o aislamiento de la cubierta inclinada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La aire-aire me da también agua caliente sanitaria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, y preferimos decírtelo claramente. Una bomba de calor aire-aire climatiza el aire de las estancias, pero no produce agua caliente sanitaria. El agua caliente seguirá dependiendo del equipo que ya tengas (termo eléctrico, calentador…). Si lo que buscas es cubrir calefacción y agua caliente con un mismo sistema, la solución es la aerotermia aire-agua, siempre que tu vivienda tenga o pueda tener un circuito de agua."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué se diferencia exactamente de la aerotermia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En cómo se reparte el calor. La aerotermia es una bomba de calor aire-agua: calienta un circuito de agua que alimenta radiadores o suelo radiante y produce además el agua caliente sanitaria. La aire-aire no tiene circuito de agua: impulsa aire caliente o frío mediante unidades interiores, murales o por conductos. Como regla práctica: si ya tienes radiadores o suelo radiante, la aerotermia suele ser la mejor opción; si no hay red hidráulica —por ejemplo con una caldera de aire— o quieres además refrescar en verano, la aire-aire encaja mejor. Los requisitos de elegibilidad son idénticos en ambos casos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Refresca de verdad en verano?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El equipo es reversible: en verano invierte el ciclo y extrae el calor del interior para expulsarlo al exterior, igual que un aire acondicionado. Es la principal ventaja de esta solución frente a una caldera, que solo sirve en invierno, y frente a tener dos aparatos distintos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tengo que quitar mi caldera antigua?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de tu zona climática. Lo habitual es desmontarla y gestionar su retirada como parte de la instalación. Pero en las zonas climáticas D y E la caldera existente puede quedarse conectada como sistema de apoyo: la bomba de calor cubre el día a día y la caldera sigue disponible para los días de frío extremo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Importa el año de construcción de mi vivienda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A diferencia del aislamiento de cubierta, en la sustitución de una caldera por una bomba de calor la antigüedad del edificio es indiferente. Lo que cuenta es el combustible de la calefacción actual y el ahorro energético que se consigue con el cambio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Vale para un piso o solo para casas unifamiliares?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vale para las dos cosas. La única condición práctica es que exista un emplazamiento viable para la unidad exterior —terraza, patio, fachada o cubierta— y, en el caso de un piso, que la comunidad lo permita. Lo comprobamos en la visita técnica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánta obra supone la instalación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bastante menos que una aerotermia, porque no hay red de agua que tocar. Se instala la unidad exterior, se pasan las líneas frigoríficas hasta las unidades interiores y se pone en marcha el sistema. En la mayoría de las viviendas se resuelve en una o dos jornadas de trabajo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto ahorraré en la factura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El ahorro depende de tu vivienda, del equipo que se sustituye y de los rendimientos estacionales del nuevo sistema. Como una bomba de calor entrega varias unidades de calor por cada unidad de electricidad, el consumo suele reducirse de forma apreciable frente a una caldera de combustión. La estimación concreta la calculamos en el estudio gratuito, a partir de tus datos reales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se calcula la prima del sistema CAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Según el ahorro energético de tu instalación: superficie, demanda de calefacción del CEE, rendimiento de la caldera antigua y rendimientos estacionales del nuevo equipo. No es un importe fijo y solo puede confirmarse tras el estudio. Las primas están sujetas a verificación del ahorro por organismo acreditado (ENAC). Lo explicamos con detalle en el artículo Aerotermia y primas CAE: cuánto cuesta realmente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El sistema CAE es una ayuda pública?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El CAE es un mecanismo de financiación privada regulado por el Real Decreto 36/2023: el importe lo aportan las empresas energéticas obligadas por ley a acreditar ahorro, no la Administración. Los programas de apoyo público —Next Generation, IDAE o las deducciones del IRPF— son ayudas distintas e independientes, que no forman parte del sistema CAE."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 
@@ -197,7 +295,7 @@
     <li><a href="/blog/">Blog</a></li>
     <li><a href="#contacto" class="nav-cta">Estudio gratuito</a></li>
   </ul>
-  <button class="burger" id="burger" aria-label="Menu">
+  <button class="burger" id="burger" aria-label="Menú de navegación" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -956,7 +1054,7 @@
   <button class="toast-close" onclick="document.getElementById('toast').classList.remove('show')" aria-label="Cerrar">×</button>
 </div>
 
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=20260914" defer></script>
 
 </body>
 </html>

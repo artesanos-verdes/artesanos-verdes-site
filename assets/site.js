@@ -6,10 +6,20 @@
   burger.addEventListener('click', () => {
     burger.classList.toggle('open');
     navLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', burger.classList.contains('open') ? 'true' : 'false');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      burger.classList.remove('open');
+      navLinks.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.focus();
+    }
   });
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     burger.classList.remove('open');
     navLinks.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
   }));
 
   // =====================================================

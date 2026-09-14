@@ -57,7 +57,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--brand-green);
+    background: var(--brand-green-deep);
     color: white;
     padding: 0.3rem 0.9rem;
     border-radius: 100px;
@@ -140,7 +140,7 @@
   .nav-links a:hover::after { width: 100%; }
 
   .nav-cta {
-    background: var(--brand-green) !important;
+    background: var(--brand-green-deep) !important;
     color: var(--ivory) !important;
     padding: 0.7rem 1.3rem;
     border-radius: 100px;
@@ -374,8 +374,8 @@
     cursor: pointer;
     font-family: var(--body);
   }
-  .btn-primary { background: var(--brand-green); color: white; box-shadow: 0 8px 24px -8px rgba(34, 160, 68, 0.5); }
-  .btn-primary:hover { background: var(--brand-green-deep); transform: translateY(-2px); box-shadow: 0 12px 32px -8px rgba(34, 160, 68, 0.6); }
+  .btn-primary { background: var(--brand-green-deep); color: white; box-shadow: 0 8px 24px -8px rgba(34, 160, 68, 0.5); }
+  .btn-primary:hover { background: #0f6428; transform: translateY(-2px); box-shadow: 0 12px 32px -8px rgba(34, 160, 68, 0.6); }
   .btn-dark { background: var(--forest); color: var(--cream); }
   .btn-dark:hover { background: var(--terracotta-deep); transform: translateY(-2px); }
   .btn-ghost { background: transparent; color: var(--forest); border-color: var(--line); }
@@ -464,7 +464,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--brand-green);
+    background: var(--brand-green-deep);
     color: white;
     padding: 0.4rem 0.9rem;
     border-radius: 100px;
@@ -549,7 +549,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--brand-green);
+    background: var(--brand-green-deep);
     color: white;
     padding: 1rem 1.3rem;
     border-radius: 6px;
@@ -601,7 +601,7 @@
     font-size: 0.9rem;
     font-weight: 400;
     font-style: italic;
-    color: var(--terracotta);
+    color: var(--terracotta-deep);
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
     display: flex;
@@ -670,7 +670,7 @@
   }
   .stat .n sup {
     font-size: 1.1rem;
-    color: var(--terracotta);
+    color: var(--terracotta-deep);
     vertical-align: super;
   }
   .stat .l {
@@ -758,7 +758,7 @@
     top: 1.5rem; right: 1.5rem;
     font-family: var(--display);
     font-size: 0.9rem;
-    color: var(--terracotta);
+    color: var(--terracotta-deep);
     font-style: italic;
     opacity: 0.6;
   }
@@ -819,7 +819,7 @@
     text-align: center;
     position: relative;
   }
-  .flow-node.highlight { background: var(--brand-green); border-color: var(--brand-green); color: white; }
+  .flow-node.highlight { background: var(--brand-green-deep); border-color: var(--brand-green-deep); color: white; }
   .flow-node .role {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
@@ -965,7 +965,7 @@
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--terracotta);
+    color: var(--terracotta-deep);
     font-weight: 600;
     margin-bottom: 1.5rem;
   }
@@ -999,7 +999,7 @@
   .step-num {
     width: 80px; height: 80px;
     border-radius: 50%;
-    background: var(--brand-green);
+    background: var(--brand-green-deep);
     color: white;
     display: flex;
     align-items: center;
@@ -1328,7 +1328,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--terracotta);
+    color: var(--terracotta-deep);
     font-weight: 700;
     border-top: 1px solid var(--line);
     padding-top: 1rem;
@@ -1440,7 +1440,7 @@
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--terracotta);
+    color: var(--terracotta-deep);
     margin-bottom: 0.3rem;
     font-weight: 600;
   }
@@ -1465,8 +1465,8 @@
     transition: all 0.3s;
   }
   .social-links a:hover {
-    background: var(--brand-green);
-    border-color: var(--brand-green);
+    background: var(--brand-green-deep);
+    border-color: var(--brand-green-deep);
     color: white;
     transform: translateY(-3px);
   }
@@ -1509,7 +1509,7 @@
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--terracotta);
+    color: var(--terracotta-deep);
     margin-bottom: 0.6rem;
     font-weight: 600;
   }
@@ -1532,7 +1532,7 @@
   }
   .form-group textarea { resize: vertical; min-height: 100px; }
   .form button {
-    background: var(--brand-green);
+    background: var(--brand-green-deep);
     color: white;
     border: none;
     padding: 1.1rem 2.2rem;
@@ -1548,7 +1548,7 @@
     gap: 0.7rem;
     transition: all 0.3s;
   }
-  .form button:hover { background: var(--brand-green-deep); transform: translateY(-2px); box-shadow: 0 15px 40px -10px rgba(34, 160, 68, 0.4); }
+  .form button:hover { background: #0f6428; transform: translateY(-2px); box-shadow: 0 15px 40px -10px rgba(34, 160, 68, 0.4); }
   .form-note { font-size: 0.78rem; opacity: 0.6; margin-top: 1rem; line-height: 1.5; }
   .form-note a { color: inherit; text-decoration: underline; }
   .form-consent { margin: 0.8rem 0 1.2rem; font-size: 0.85rem; line-height: 1.45; }
@@ -1736,6 +1736,14 @@
   .whatsapp-float:hover { transform: scale(1.1) rotate(5deg); }
   .whatsapp-float svg { width: 32px; height: 32px; }
 
+
+  /* ===== CTA FINAL (composant partagé accueil + services) ===== */
+  .cta-final { background: linear-gradient(150deg, var(--forest) 0%, var(--forest-deep) 100%); text-align: center; overflow: hidden; }
+  .cta-final h2 { color: var(--cream); }
+  .cta-final h2 em { color: #f5c6a8; }
+  .cta-final .cta-lead { color: #e8f0ea; opacity: 0.9; font-size: 1.1rem; line-height: 1.7; max-width: 620px; margin: 0 auto 2.2rem; }
+  .cta-final .cta-fine { color: #c1d9cc; opacity: 0.85; font-size: 0.82rem; letter-spacing: 0.05em; margin-top: 1.4rem; }
+
   /* ===== CTA PERSISTANT MOBILE ===== */
   .cta-bar-movil { display: none; }
   @media (max-width: 768px) {
@@ -1816,7 +1824,7 @@
                   visibility 0s;
     }
     .nav-links a { color: var(--cream); font-size: 1rem; }
-    .nav-links .nav-cta { background: var(--brand-green) !important; color: white !important; }
+    .nav-links .nav-cta { background: var(--brand-green-deep) !important; color: white !important; }
     .burger { display: block; }
     .burger.open span { background: var(--cream); }
     .burger.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
@@ -1909,7 +1917,7 @@
     color: #ffffff;
   }
   .av-trust-title em {
-    color: #c07856;
+    color: #f5c6a8;
     font-style: italic;
   }
   .av-trust-intro {
