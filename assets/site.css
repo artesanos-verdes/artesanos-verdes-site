@@ -13,8 +13,8 @@
     --euro: #0f7c2e;
     --line: rgba(26, 46, 31, 0.15);
     --line-soft: rgba(26, 46, 31, 0.08);
-    --display: 'Fraunces', Georgia, serif;
-    --body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    --display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --body: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -269,11 +269,11 @@
     align-items: center;
     gap: 0.8rem;
     font-size: 0.78rem;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--sage);
     margin-bottom: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .hero-eyebrow::before {
     content: '';
@@ -283,27 +283,24 @@
 
   h1 {
     font-family: var(--display);
-    font-weight: 300;
+    font-weight: 600;
     /* Taille calibree pour le hero en deux panneaux : le titre vit sur une
        demi-largeur, l'ancienne taille (jusqu'a 5.5rem) debordait du viewport. */
     font-size: clamp(2.4rem, 4.6vw, 4rem);
-    line-height: 1.0;
-    letter-spacing: -0.03em;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     color: var(--forest-deep);
     margin-bottom: 1.4rem;
-    font-variation-settings: "SOFT" 50, "WONK" 1;
   }
   h1 em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--terracotta-deep);
-    font-variation-settings: "SOFT" 100, "WONK" 1;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--brand-green-deep);
   }
   h1 .euro-accent {
     color: var(--brand-green-deep);
-    font-style: italic;
-    font-weight: 400;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
+    font-style: normal;
+    font-weight: 600;
     white-space: nowrap;
   }
 
@@ -500,22 +497,21 @@
   .offer-title {
     position: relative;
     font-family: var(--display);
-    font-weight: 300;
+    font-weight: 600;
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     margin-bottom: 0.5rem;
-    font-variation-settings: "SOFT" 40;
   }
   .offer-price {
     position: relative;
     font-family: var(--display);
     font-size: 6rem;
-    font-weight: 300;
+    font-weight: 700;
     line-height: 1;
     color: var(--brand-green);
     margin: 1rem 0 0.5rem;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    font-style: italic;
+    font-variant-numeric: tabular-nums;
     display: flex;
     align-items: baseline;
     gap: 0.3rem;
@@ -525,7 +521,6 @@
     font-family: var(--body, inherit);
     font-size: 1.1rem;
     font-style: normal;
-    font-variation-settings: normal;
     letter-spacing: 0.02em;
     align-self: center;
     opacity: 0.75;
@@ -598,11 +593,10 @@
   .hero-stamp .big {
     font-family: var(--display);
     font-size: 2.4rem;
-    font-weight: 300;
+    font-weight: 700;
     color: var(--terracotta-deep);
     line-height: 1;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    font-style: italic;
+    font-variant-numeric: tabular-nums;
   }
   .hero-stamp .sm {
     font-size: 0.68rem;
@@ -617,12 +611,12 @@
   section { padding: 7rem 2.5rem; position: relative; }
 
   .section-num {
-    font-family: var(--display);
-    font-size: 0.9rem;
-    font-weight: 400;
-    font-style: italic;
+    font-family: var(--body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
     color: var(--terracotta-deep);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.13em;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -632,28 +626,26 @@
 
   h2 {
     font-family: var(--display);
-    font-weight: 300;
+    font-weight: 600;
     font-size: clamp(2.2rem, 5vw, 3.8rem);
-    line-height: 1;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     color: var(--forest-deep);
     margin-bottom: 1.5rem;
-    font-variation-settings: "SOFT" 30;
   }
   h2 em {
-    font-style: italic;
-    color: var(--terracotta-deep);
-    font-variation-settings: "SOFT" 100, "WONK" 1;
+    font-style: normal;
+    color: var(--brand-green-deep);
   }
 
   h3 {
     font-family: var(--display);
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.6rem;
     line-height: 1.15;
+    letter-spacing: -0.012em;
     color: var(--forest-deep);
     margin-bottom: 1rem;
-    font-variation-settings: "SOFT" 40;
   }
 
   /* ===== NOSOTROS ===== */
@@ -683,10 +675,10 @@
   .stat .n {
     font-family: var(--display);
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 700;
     color: var(--forest);
     line-height: 1;
-    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-variant-numeric: tabular-nums;
   }
   .stat .n sup {
     font-size: 1.1rem;
@@ -699,7 +691,7 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-top: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   /* ===== SECTION OFERTA CAE ===== */
@@ -726,15 +718,14 @@
   .euro-tagline {
     font-family: var(--display);
     font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 300;
-    line-height: 1;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     margin: 1rem 0 1.5rem;
-    font-variation-settings: "SOFT" 60, "WONK" 1;
   }
   .euro-tagline em {
-    font-style: italic;
+    font-style: normal;
     color: var(--brand-green-deep);
-    font-variation-settings: "SOFT" 100, "WONK" 1;
   }
   .euro-desc {
     font-size: 1.15rem;
@@ -776,15 +767,16 @@
   .criterion .step {
     position: absolute;
     top: 1.5rem; right: 1.5rem;
-    font-family: var(--display);
-    font-size: 0.9rem;
+    font-family: var(--body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     color: var(--terracotta-deep);
-    font-style: italic;
-    opacity: 0.6;
+    opacity: 0.7;
   }
   .criterion h4 {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
     margin-bottom: 0.6rem;
     color: var(--forest-deep);
@@ -851,7 +843,7 @@
   .flow-node.highlight .role { color: rgba(255,255,255,0.85); }
   .flow-node .name {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
     line-height: 1.1;
     margin-bottom: 0.5rem;
@@ -984,7 +976,7 @@
   .pillar .kicker {
     font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.14em;
     color: var(--terracotta-deep);
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -1026,12 +1018,11 @@
     justify-content: center;
     font-family: var(--display);
     font-size: 2rem;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
     z-index: 2;
     position: relative;
     box-shadow: 0 10px 30px -10px rgba(34, 160, 68, 0.5);
-    font-variation-settings: "SOFT" 80;
   }
   .step-content {
     background: var(--ivory);
@@ -1046,7 +1037,7 @@
     font-size: 1.3rem;
     color: var(--forest-deep);
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .step-content p { font-size: 0.95rem; color: var(--forest); opacity: 0.8; line-height: 1.65; }
 
@@ -1093,18 +1084,17 @@
   .metodo-step .mstep-num {
     font-family: var(--display);
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 700;
     color: var(--gold);
     line-height: 1;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    font-style: italic;
+    font-variant-numeric: tabular-nums;
     margin-bottom: 1.2rem;
     display: block;
   }
   .metodo-step h4 {
     font-family: var(--display);
     font-size: 1.15rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.8rem;
     line-height: 1.2;
     color: var(--cream);
@@ -1187,7 +1177,7 @@
     font-family: var(--display);
     font-size: 1.3rem;
     color: var(--forest-deep);
-    font-weight: 500;
+    font-weight: 600;
   }
   .material-pack-box::after {
     content: 'lana mineral · nódulos';
@@ -1234,7 +1224,7 @@
   .spec-row .key { color: var(--forest); opacity: 0.75; }
   .spec-row .val {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--forest-deep);
     text-align: right;
   }
@@ -1282,14 +1272,14 @@
     background: #e4322b;
     color: white;
     font-size: 0.6rem;
-    font-weight: 800;
+    font-weight: 700;
     padding: 0.15rem 0.4rem;
     border-radius: 2px;
     letter-spacing: 0.1em;
   }
   .cert-badge .cert-name {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     color: var(--forest-deep);
     text-align: center;
@@ -1323,20 +1313,18 @@
     opacity: 0.2;
     position: absolute;
     top: 1rem; left: 1.5rem;
-    font-style: italic;
   }
   .testimonio-quote {
     font-family: var(--display);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.5rem;
     color: var(--forest-deep);
     line-height: 1.25;
     margin-bottom: 1.5rem;
-    font-variation-settings: "SOFT" 50;
     position: relative;
     z-index: 2;
   }
-  .testimonio-quote em { font-style: italic; color: var(--brand-green-deep); }
+  .testimonio-quote em { font-style: normal; font-weight: 600; color: var(--brand-green-deep); }
   .testimonio-text {
     font-size: 0.95rem;
     line-height: 1.65;
@@ -1406,8 +1394,7 @@
     font-size: 2.2rem;
     color: var(--cream);
     margin-bottom: 1rem;
-    font-weight: 400;
-    font-variation-settings: "SOFT" 40;
+    font-weight: 600;
   }
   .sede-card .addr {
     font-size: 0.95rem;
@@ -1599,13 +1586,13 @@
     max-width: 320px;
   }
   .footer-col h5 {
-    font-family: var(--display);
-    font-size: 0.85rem;
+    font-family: var(--body);
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.14em;
     color: var(--gold);
     margin-bottom: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
   .footer-col a {
@@ -1629,7 +1616,7 @@
   }
   .footer-bottom .slogan {
     font-family: var(--display);
-    font-style: italic;
+    font-weight: 500;
     color: var(--gold);
     opacity: 1;
   }
@@ -1681,7 +1668,7 @@
   .toast-content h4 {
     font-family: var(--display);
     font-size: 1.15rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--cream);
     margin-bottom: 0.3rem;
   }
@@ -1923,22 +1910,23 @@
   }
   .av-trust-eyebrow {
     font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     color: #c1d9cc;
     margin: 0 0 16px 0;
   }
   .av-trust-title {
     font-size: clamp(32px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.15;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     margin: 0 0 16px 0;
     color: #ffffff;
   }
   .av-trust-title em {
     color: #f5c6a8;
-    font-style: italic;
+    font-style: normal;
   }
   .av-trust-intro {
     font-size: 18px;
@@ -1964,10 +1952,11 @@
        plus long) mesurait ~340px dans une colonne de ~276px et debordait
        sur le chiffre voisin. */
     font-size: clamp(36px, 3.6vw, 52px);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1;
     color: #ffffff;
     letter-spacing: -1px;
+    font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
   .av-trust-label {

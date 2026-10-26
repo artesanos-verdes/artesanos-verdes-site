@@ -9,7 +9,7 @@
   background: #1a4d30;
   color: #ffffff;
   box-shadow: 0 -4px 24px rgba(0,0,0,.25);
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
   animation: av-cb-slide-up .35s ease-out;
 }
 @keyframes av-cb-slide-up { from { transform: translateY(100%); } to { transform: translateY(0); } }
