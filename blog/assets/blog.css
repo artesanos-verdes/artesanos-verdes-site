@@ -2,8 +2,8 @@
    Los Artesanos Verdes — Blog stylesheet
    v2 — palette + typo alignées sur la home
    Brand: brand-green #22a044 · terra #b8733a · cream #f5efe1
-   Display: Fraunces (variable opsz, wght, SOFT, WONK)
-   Body: Manrope
+   Display: Source Serif 4 (variable opsz, wght 500..700)
+   Body: Source Sans 3
    ============================================ */
 
 :root {
@@ -35,8 +35,8 @@
   --av-radius-lg: 24px;
 
   /* Typography */
-  --av-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --av-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --av-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --av-body: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
   --av-font-mono: 'SF Mono', Monaco, Consolas, monospace;
 
   /* Legacy aliases so any leftover refs keep working */
@@ -113,11 +113,10 @@ img, svg {
   gap: 12px;
   text-decoration: none;
   color: var(--av-forest-deep);
-  font-family: var(--av-display);
+  font-family: var(--av-body);
   font-size: 19px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  font-variation-settings: "SOFT" 60, "WONK" 1;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .av-logo img {
@@ -206,15 +205,14 @@ img, svg {
 
 .av-article-kicker {
   display: inline-block;
-  font-family: var(--av-display);
-  font-style: italic;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: none;
+  font-family: var(--av-body);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
   color: var(--av-terra);
   margin-bottom: 14px;
-  font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 .av-article-kicker::before {
@@ -225,18 +223,16 @@ img, svg {
 h1.av-article-title {
   font-family: var(--av-display);
   font-size: clamp(34px, 5.5vw, 52px);
-  font-weight: 300;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
   color: var(--av-forest-deep);
   margin-bottom: 22px;
-  font-variation-settings: "SOFT" 30;
 }
 
 h1.av-article-title em {
-  font-style: italic;
-  color: var(--av-terra-deep);
-  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-style: normal;
+  color: var(--av-brand-green-deep);
 }
 
 .av-article-meta {
@@ -274,19 +270,17 @@ h1.av-article-title em {
 .av-content h2 {
   font-family: var(--av-display);
   font-size: clamp(26px, 3.4vw, 34px);
-  font-weight: 300;
-  line-height: 1.18;
-  letter-spacing: -0.015em;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.012em;
   color: var(--av-forest-deep);
   margin: 64px 0 22px;
-  font-variation-settings: "SOFT" 30;
   position: relative;
 }
 
 .av-content h2 em {
-  font-style: italic;
-  color: var(--av-terra-deep);
-  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-style: normal;
+  color: var(--av-brand-green-deep);
 }
 
 .av-content h2::before {
@@ -302,17 +296,16 @@ h1.av-article-title em {
 .av-content h3 {
   font-family: var(--av-display);
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.3;
   color: var(--av-brand-green-deep);
   margin: 44px 0 12px;
-  font-variation-settings: "SOFT" 50;
 }
 
 .av-content h4 {
   font-family: var(--av-display);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--av-forest);
   margin: 28px 0 8px;
 }
@@ -367,13 +360,12 @@ h1.av-article-title em {
   margin: 36px 0;
   background: linear-gradient(180deg, var(--av-cream) 0%, var(--av-ivory) 100%);
   border-radius: 0 var(--av-radius-md) var(--av-radius-md) 0;
-  font-family: var(--av-display);
-  font-size: 19px;
-  font-weight: 300;
+  font-family: var(--av-body);
+  font-size: 18px;
+  font-weight: 400;
   font-style: italic;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--av-forest);
-  font-variation-settings: "SOFT" 70, "WONK" 1;
 }
 
 .av-content blockquote p {
@@ -382,7 +374,7 @@ h1.av-article-title em {
 
 .av-content blockquote strong {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--av-forest-deep);
 }
 
@@ -482,8 +474,7 @@ h1.av-article-title em {
   text-align: center;
   margin-top: 12px;
   font-style: italic;
-  font-family: var(--av-display);
-  font-variation-settings: "SOFT" 50, "WONK" 1;
+  font-family: var(--av-body);
 }
 
 /* HR */
@@ -551,12 +542,11 @@ h1.av-article-title em {
   font-family: var(--av-display);
   color: var(--av-brand-green-deep);
   font-size: 19px;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 0 !important;
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--av-border-soft);
-  font-variation-settings: "SOFT" 50;
 }
 
 .av-case ul {
@@ -638,14 +628,14 @@ h1.av-article-title em {
 .av-cta-final h2 {
   font-family: var(--av-display);
   font-size: clamp(28px, 4vw, 38px);
-  font-weight: 300;
-  line-height: 1.15;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
   color: var(--av-cream);
   margin: 0 0 18px;
   border: none;
   padding: 0;
   position: relative;
-  font-variation-settings: "SOFT" 50;
 }
 
 .av-cta-final h2::before {
@@ -653,9 +643,8 @@ h1.av-article-title em {
 }
 
 .av-cta-final h2 em {
-  font-style: italic;
-  color: var(--av-gold);
-  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-style: normal;
+  color: #f5c6a8;
 }
 
 .av-cta-final p {
@@ -800,14 +789,14 @@ h1.av-article-title em {
 
 .av-blog-hero-eyebrow {
   display: inline-block;
-  font-family: var(--av-display);
-  font-style: italic;
-  font-size: 14px;
+  font-family: var(--av-body);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 13px;
   color: var(--av-terra);
-  letter-spacing: 0.1em;
   margin-bottom: 20px;
-  font-variation-settings: "SOFT" 100, "WONK" 1;
-  text-transform: lowercase;
 }
 
 .av-blog-hero-eyebrow::before { content: '— '; opacity: 0.55; }
@@ -816,19 +805,16 @@ h1.av-article-title em {
 .av-blog-hero h1 {
   font-family: var(--av-display);
   font-size: clamp(54px, 9vw, 96px);
-  font-weight: 200;
+  font-weight: 600;
   color: var(--av-forest-deep);
   margin-bottom: 24px;
-  letter-spacing: -0.035em;
-  line-height: 0.95;
-  font-variation-settings: "SOFT" 20;
+  letter-spacing: -0.012em;
+  line-height: 1.1;
 }
 
 .av-blog-hero h1 em {
-  font-style: italic;
-  color: var(--av-terra-deep);
-  font-variation-settings: "SOFT" 100, "WONK" 1;
-  letter-spacing: -0.04em;
+  font-style: normal;
+  color: var(--av-brand-green-deep);
 }
 
 .av-blog-hero p {
@@ -878,12 +864,12 @@ h1.av-article-title em {
   display: block;
   font-family: var(--av-display);
   font-size: 26px;
-  font-weight: 300;
+  font-weight: 700;
   color: var(--av-forest-deep);
   letter-spacing: -0.01em;
   margin-bottom: 4px;
   text-transform: none;
-  font-variation-settings: "SOFT" 50, "WONK" 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .av-articles-grid {
@@ -922,14 +908,14 @@ h1.av-article-title em {
 
 .av-article-card-tag {
   display: inline-block;
-  font-family: var(--av-display);
-  font-style: italic;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
+  font-family: var(--av-body);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
   color: var(--av-terra);
   margin-bottom: 14px;
-  font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 .av-article-card-tag::before { content: '— '; opacity: 0.55; }
@@ -937,12 +923,11 @@ h1.av-article-title em {
 .av-article-card h2 {
   font-family: var(--av-display);
   font-size: 23px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-weight: 600;
+  line-height: 1.2;
   color: var(--av-forest-deep);
   margin-bottom: 12px;
   letter-spacing: -0.01em;
-  font-variation-settings: "SOFT" 50;
 }
 
 .av-article-card p {
@@ -1008,17 +993,15 @@ h1.av-article-title em {
 
 .av-article-card.featured h2 {
   font-size: clamp(28px, 3.4vw, 38px);
-  font-weight: 300;
-  line-height: 1.12;
+  font-weight: 600;
+  line-height: 1.1;
   margin-bottom: 14px;
   letter-spacing: -0.015em;
-  font-variation-settings: "SOFT" 30;
 }
 
 .av-article-card.featured h2 em {
-  font-style: italic;
-  color: var(--av-terra-deep);
-  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-style: normal;
+  color: var(--av-brand-green-deep);
 }
 
 .av-article-card.featured .av-article-card-tag {
@@ -1049,14 +1032,12 @@ h1.av-article-title em {
   font-family: var(--av-display);
   font-size: 22px;
   color: var(--av-cream);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.35;
   position: relative;
   z-index: 1;
   text-align: center;
   letter-spacing: -0.01em;
-  font-variation-settings: "SOFT" 70, "WONK" 1;
-  font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -1100,11 +1081,10 @@ h1.av-article-title em {
 .av-footer-brand h3 {
   font-family: var(--av-display);
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--av-cream);
   margin-bottom: 12px;
   letter-spacing: -0.01em;
-  font-variation-settings: "SOFT" 50, "WONK" 1;
 }
 
 .av-footer-brand p {
@@ -1113,15 +1093,14 @@ h1.av-article-title em {
 }
 
 .av-footer-col h4 {
-  font-family: var(--av-display);
-  font-style: italic;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
+  font-family: var(--av-body);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
   color: var(--av-gold);
   margin-bottom: 18px;
-  text-transform: none;
-  font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 .av-footer-col h4::before { content: '— '; opacity: 0.55; }
@@ -1225,9 +1204,8 @@ h1.av-article-title em {
   color: var(--av-text-mute);
   text-align: center;
   font-style: italic;
-  font-family: var(--av-display);
+  font-family: var(--av-body);
   padding: 0 10px;
-  font-variation-settings: "SOFT" 50, "WONK" 1;
 }
 
 .av-figure {
@@ -1250,9 +1228,8 @@ img.av-infographic-svg {
   color: var(--av-text-mute);
   text-align: center;
   font-style: italic;
-  font-family: var(--av-display);
+  font-family: var(--av-body);
   padding: 0 10px;
-  font-variation-settings: "SOFT" 50, "WONK" 1;
 }
 
 /* Image d'ouverture d'article — la classe etait posee dans le HTML
@@ -1275,9 +1252,8 @@ img.av-infographic-svg {
   color: var(--av-text-mute);
   text-align: center;
   font-style: italic;
-  font-family: var(--av-display);
+  font-family: var(--av-body);
   padding: 0 10px;
-  font-variation-settings: "SOFT" 50, "WONK" 1;
 }
 
 /* Renvoi vers les pages liees, en pied d'article et de page legale. */
@@ -1319,14 +1295,13 @@ img.av-infographic-svg {
 /* Drop cap — first letter of first paragraph in any article */
 .av-content > p:first-of-type::first-letter {
   font-family: var(--av-display);
-  font-style: italic;
-  font-weight: 300;
+  font-style: normal;
+  font-weight: 600;
   font-size: 5.6em;
   line-height: 0.85;
   float: left;
   margin: 0.04em 0.12em 0 0;
   color: var(--av-terra-deep);
-  font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 @media (max-width: 700px) {
@@ -1343,16 +1318,15 @@ img.av-infographic-svg {
   margin: 56px auto 56px;
   padding: 30px 0 30px 36px;
   max-width: 100%;
-  font-family: var(--av-display);
+  font-family: var(--av-body);
   font-size: clamp(22px, 2.6vw, 30px);
-  font-weight: 300;
+  font-weight: 500;
   font-style: italic;
   line-height: 1.32;
   color: var(--av-forest-deep);
   letter-spacing: -0.01em;
   border-left: 3px solid var(--av-terra);
   background: none;
-  font-variation-settings: "SOFT" 80, "WONK" 1;
   position: relative;
 }
 
@@ -1416,8 +1390,6 @@ img.av-infographic-svg {
   font-size: 10px;
   letter-spacing: 0.4em;
   font-family: var(--av-display);
-  font-style: italic;
-  font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 /* Article hero — monumental header for articles (optional richer header) */
@@ -1462,15 +1434,14 @@ img.av-infographic-svg {
 }
 
 .av-toc-label {
-  font-family: var(--av-display);
-  font-style: italic;
+  font-family: var(--av-body);
+  font-weight: 600;
   font-size: 11px;
   letter-spacing: 0.14em;
   color: var(--av-terra);
   text-transform: uppercase;
   margin-bottom: 14px;
   padding-left: 14px;
-  font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 .av-toc ol {
