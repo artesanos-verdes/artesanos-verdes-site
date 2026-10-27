@@ -13,11 +13,11 @@
     --euro: #0f7c2e;
     --line: rgba(26, 46, 31, 0.15);
     --line-soft: rgba(26, 46, 31, 0.08);
-    --display: 'Fraunces', Georgia, serif;
-    --body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-    /* Accents italiques (em des titres) : terracotta sur fond clair,
+    --display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --body: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+    /* Accents des titres (em, non italiques depuis la typographie Source Serif) : vert sur fond clair,
        pêche sur fond sombre (contraste AA, audit #25). */
-    --accent-on-light: var(--terracotta-deep);
+    --accent-on-light: var(--brand-green-deep);
     --accent-on-dark: #f5c6a8;
     /* Textes sur fonds sombres (forêt) : principal, atténué, vert clair. */
     --on-dark: #e8f0ea;
@@ -93,6 +93,8 @@
   }
   .topbar a { color: var(--gold); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 0.4rem;}
   .topbar a:hover { color: var(--cream); }
+  .topbar .pill svg, .topbar a svg { width: 13px; height: 13px; flex-shrink: 0; }
+  .av-icon-inline { width: 1em; height: 1em; vertical-align: -0.15em; margin-right: 0.3em; color: var(--brand-green-deep); }
   .topbar .tb-right { display: flex; gap: 2rem; align-items: center; }
 
   /* ===== NAV ===== */
@@ -362,11 +364,11 @@
     align-items: center;
     gap: 0.8rem;
     font-size: 0.78rem;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--sage);
     margin-bottom: 1.4rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .hero-eyebrow::before {
     content: '';
@@ -376,27 +378,24 @@
 
   h1 {
     font-family: var(--display);
-    font-weight: 300;
+    font-weight: 600;
     /* Taille calibree pour le hero en deux panneaux : le titre vit sur une
        demi-largeur, l'ancienne taille (jusqu'a 5.5rem) debordait du viewport. */
     font-size: clamp(2.4rem, 4.6vw, 4rem);
-    line-height: 1.0;
-    letter-spacing: -0.03em;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     color: var(--forest-deep);
     margin-bottom: 1.4rem;
-    font-variation-settings: "SOFT" 50, "WONK" 1;
   }
   h1 em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--terracotta-deep);
-    font-variation-settings: "SOFT" 100, "WONK" 1;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--brand-green-deep);
   }
   h1 .euro-accent {
     color: var(--brand-green-deep);
-    font-style: italic;
-    font-weight: 400;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
+    font-style: normal;
+    font-weight: 600;
     white-space: nowrap;
   }
 
@@ -617,22 +616,21 @@
   .offer-title {
     position: relative;
     font-family: var(--display);
-    font-weight: 300;
+    font-weight: 600;
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     margin-bottom: 0.5rem;
-    font-variation-settings: "SOFT" 40;
   }
   .offer-price {
     position: relative;
     font-family: var(--display);
     font-size: 6rem;
-    font-weight: 300;
+    font-weight: 700;
     line-height: 1;
     color: var(--brand-green);
     margin: 1rem 0 0.5rem;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    font-style: italic;
+    font-variant-numeric: tabular-nums;
     display: flex;
     align-items: baseline;
     gap: 0.3rem;
@@ -642,7 +640,6 @@
     font-family: var(--body, inherit);
     font-size: 1.1rem;
     font-style: normal;
-    font-variation-settings: normal;
     letter-spacing: 0.02em;
     align-self: center;
     opacity: 0.75;
@@ -715,11 +712,10 @@
   .hero-stamp .big {
     font-family: var(--display);
     font-size: 2.4rem;
-    font-weight: 300;
+    font-weight: 700;
     color: var(--terracotta-deep);
     line-height: 1;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    font-style: italic;
+    font-variant-numeric: tabular-nums;
   }
   .hero-stamp .sm {
     font-size: 0.68rem;
@@ -734,12 +730,12 @@
   section { padding: 7rem 2.5rem; position: relative; }
 
   .section-num {
-    font-family: var(--display);
-    font-size: 0.9rem;
-    font-weight: 400;
-    font-style: italic;
+    font-family: var(--body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
     color: var(--terracotta-deep);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.13em;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -749,18 +745,16 @@
 
   h2 {
     font-family: var(--display);
-    font-weight: 300;
+    font-weight: 600;
     font-size: clamp(2.2rem, 5vw, 3.8rem);
-    line-height: 1;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     color: var(--forest-deep);
     margin-bottom: 1.5rem;
-    font-variation-settings: "SOFT" 30;
   }
   h2 em {
-    font-style: italic;
-    color: var(--accent-on-light);
-    font-variation-settings: "SOFT" 100, "WONK" 1;
+    font-style: normal;
+    color: var(--brand-green-deep);
   }
   /* Sur fonds sombres, l'accent terracotta tombait a ~2,2-2,8:1 (audit #25). */
   .cae-flow h2 em,
@@ -771,12 +765,12 @@
 
   h3 {
     font-family: var(--display);
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.6rem;
     line-height: 1.15;
+    letter-spacing: -0.012em;
     color: var(--forest-deep);
     margin-bottom: 1rem;
-    font-variation-settings: "SOFT" 40;
   }
 
   /* ===== NOSOTROS ===== */
@@ -806,10 +800,10 @@
   .stat .n {
     font-family: var(--display);
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 700;
     color: var(--forest);
     line-height: 1;
-    font-variation-settings: "SOFT" 50, "WONK" 1;
+    font-variant-numeric: tabular-nums;
   }
   .stat .n sup {
     font-size: 1.1rem;
@@ -822,7 +816,7 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-top: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   /* ===== SECTION OFERTA CAE ===== */
@@ -849,15 +843,14 @@
   .euro-tagline {
     font-family: var(--display);
     font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 300;
-    line-height: 1;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     margin: 1rem 0 1.5rem;
-    font-variation-settings: "SOFT" 60, "WONK" 1;
   }
   .euro-tagline em {
-    font-style: italic;
+    font-style: normal;
     color: var(--brand-green-deep);
-    font-variation-settings: "SOFT" 100, "WONK" 1;
   }
   .euro-desc {
     font-size: 1.15rem;
@@ -899,15 +892,16 @@
   .criterion .step {
     position: absolute;
     top: 1.5rem; right: 1.5rem;
-    font-family: var(--display);
-    font-size: 0.9rem;
+    font-family: var(--body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     color: var(--terracotta-deep);
-    font-style: italic;
-    opacity: 0.6;
+    opacity: 0.7;
   }
   .criterion h4 {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
     margin-bottom: 0.6rem;
     color: var(--forest-deep);
@@ -975,7 +969,7 @@
   .flow-node.highlight .role { color: rgba(255,255,255,0.85); }
   .flow-node .name {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
     line-height: 1.1;
     margin-bottom: 0.5rem;
@@ -1108,7 +1102,7 @@
   .pillar .kicker {
     font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.14em;
     color: var(--terracotta-deep);
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -1148,14 +1142,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--display);
+    font-family: var(--body);
     font-size: 2rem;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
     z-index: 2;
     position: relative;
     box-shadow: 0 10px 30px -10px rgba(34, 160, 68, 0.5);
-    font-variation-settings: "SOFT" 80;
   }
   .step-content {
     background: var(--ivory);
@@ -1170,7 +1163,7 @@
     font-size: 1.3rem;
     color: var(--forest-deep);
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .step-content p { font-size: 0.95rem; color: var(--forest); opacity: 0.8; line-height: 1.65; }
   /* Hierarchie des titres corrigee (h4 -> h3 sous un h2, audit #26) : les h3
@@ -1240,18 +1233,17 @@
   .metodo-step .mstep-num {
     font-family: var(--display);
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 700;
     color: var(--gold);
     line-height: 1;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    font-style: italic;
+    font-variant-numeric: tabular-nums;
     margin-bottom: 1.2rem;
     display: block;
   }
   .metodo-step h4 {
     font-family: var(--display);
     font-size: 1.15rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.8rem;
     line-height: 1.2;
     color: var(--cream);
@@ -1334,7 +1326,7 @@
     font-family: var(--display);
     font-size: 1.3rem;
     color: var(--forest-deep);
-    font-weight: 500;
+    font-weight: 600;
   }
   .material-pack-box::after {
     content: 'lana mineral · nódulos';
@@ -1381,7 +1373,7 @@
   .spec-row .key { color: var(--forest); opacity: 0.75; }
   .spec-row .val {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--forest-deep);
     text-align: right;
   }
@@ -1445,14 +1437,14 @@
     background: #e4322b;
     color: white;
     font-size: 0.6rem;
-    font-weight: 800;
+    font-weight: 700;
     padding: 0.15rem 0.4rem;
     border-radius: 2px;
     letter-spacing: 0.1em;
   }
   .cert-badge .cert-name {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     color: var(--forest-deep);
     text-align: center;
@@ -1486,20 +1478,18 @@
     opacity: 0.2;
     position: absolute;
     top: 1rem; left: 1.5rem;
-    font-style: italic;
   }
   .testimonio-quote {
     font-family: var(--display);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.5rem;
     color: var(--forest-deep);
     line-height: 1.25;
     margin-bottom: 1.5rem;
-    font-variation-settings: "SOFT" 50;
     position: relative;
     z-index: 2;
   }
-  .testimonio-quote em { font-style: italic; color: var(--brand-green-deep); }
+  .testimonio-quote em { font-style: normal; font-weight: 600; color: var(--brand-green-deep); }
   .testimonio-text {
     font-size: 0.95rem;
     line-height: 1.65;
@@ -1569,8 +1559,7 @@
     font-size: 2.2rem;
     color: var(--cream);
     margin-bottom: 1rem;
-    font-weight: 400;
-    font-variation-settings: "SOFT" 40;
+    font-weight: 600;
   }
   .sede-card .addr {
     font-size: 0.95rem;
@@ -1792,13 +1781,13 @@
   /* .footer-title remplace les anciens <h5> (§4.3) avec la meme apparence. */
   .footer-col h5,
   .footer-title {
-    font-family: var(--display);
-    font-size: 0.85rem;
+    font-family: var(--body);
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.14em;
     color: var(--gold);
     margin-bottom: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
   .footer-col a,
@@ -1840,7 +1829,7 @@
   }
   .footer-bottom .slogan {
     font-family: var(--display);
-    font-style: italic;
+    font-weight: 500;
     color: var(--gold);
     opacity: 1;
   }
@@ -1892,7 +1881,7 @@
   .toast-content h4 {
     font-family: var(--display);
     font-size: 1.15rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--cream);
     margin-bottom: 0.3rem;
   }
@@ -2178,14 +2167,12 @@
   }
   .av-trust-eyebrow,
   .av-trust-numbers .section-num {
-    font-family: var(--display);
-    font-size: 0.9rem;
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: 0.05em;
-    text-transform: none;
-    color: var(--green-on-dark);
-    margin: 0 0 1rem;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #c1d9cc;
+    margin: 0 0 16px 0;
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -2193,19 +2180,16 @@
   .av-trust-eyebrow::before,
   .av-trust-numbers .section-num::before { content: ''; width: 1.5rem; height: 1px; background: var(--green-on-dark); }
   .av-trust-title {
-    font-family: var(--display);
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    margin: 0 0 1.5rem;
-    color: var(--cream);
-    font-variation-settings: "SOFT" 30;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    margin: 0 0 16px 0;
+    color: #ffffff;
   }
   .av-trust-title em {
-    color: var(--accent-on-dark);
-    font-style: italic;
-    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: #f5c6a8;
+    font-style: normal;
   }
   .av-trust-intro {
     font-size: 1.05rem;
@@ -2227,15 +2211,15 @@
     border-top: 1px solid rgba(250, 246, 236, 0.18);
   }
   .av-trust-number {
-    /* Fraunces 300 comme .stat .n. Plafond conserve : « 100.000+ » (le
-       compteur le plus long) doit tenir dans une colonne de ~276 px. */
-    font-family: var(--display);
-    font-size: clamp(2.25rem, 3.6vw, 3.25rem);
-    font-weight: 300;
+    /* 52px maximum : a 72px en graisse 800, « 100.000+ » (le compteur le
+       plus long) mesurait ~340px dans une colonne de ~276px et debordait
+       sur le chiffre voisin. */
+    font-size: clamp(36px, 3.6vw, 52px);
+    font-weight: 700;
     line-height: 1;
-    color: var(--cream);
-    letter-spacing: -0.01em;
-    font-variation-settings: "SOFT" 50, "WONK" 1;
+    color: #ffffff;
+    letter-spacing: -1px;
+    font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
   .av-trust-label {
@@ -2477,7 +2461,7 @@ html.menu-open .nav-overlay {
 .servicio-card:hover .servicio-card-link { gap: .7rem; }
 @media (max-width: 968px) { .servicios-grid { grid-template-columns: 1fr; } }
 
-/* =====================================================================
+/* ==============================================================
    LOT 1 — REFONTE (14/10/2026)
    Composants du cahier des charges (§4, §5, §10) et corrections de
    l'audit d'attractivite. Les numeros « audit #n » renvoient aux
@@ -3113,3 +3097,7 @@ html:not(.js) .servicios-quiz { display: none; }
   }
   .servicio-card:hover .servicio-card-media img { transform: none; }
 }
+=======
+/* Fond sombre : graisse 700 pour épaissir les déliés de la serif (mots pêche / vert pâle sur vert profond). */
+.hero h1, .hero h1 em, .hero h1 .euro-accent,
+.cae-flow h2, .metodo h2, .sedes h2, .sede-card h3, .cta-final h2, .av-trust-title { font-weight: 700; }
