@@ -64,9 +64,20 @@
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Garde-fou contre tout débordement horizontal (audit #1/#21) : clip, et non
+     hidden, pour ne pas créer de conteneur de défilement (la nav sticky
+     continue de fonctionner). Les tableaux défilent dans .av-table-scroll. */
+  overflow-x: clip;
 }
+
+/* Défilement doux seulement si l'utilisateur n'a pas demandé moins d'animations. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Ancres (#sommaire, #contenido) : ne pas passer sous la nav sticky. */
+[id] { scroll-margin-top: 88px; }
 
 body {
   font-family: var(--av-body);
@@ -110,7 +121,9 @@ img, svg {
 .av-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
+  min-width: 0;
   text-decoration: none;
   color: var(--av-forest-deep);
   font-family: var(--av-display);
@@ -120,9 +133,13 @@ img, svg {
   font-variation-settings: "SOFT" 60, "WONK" 1;
 }
 
+/* Le texte du logo ne se coupe jamais sur plusieurs lignes (audit #24). */
+.av-logo span { white-space: nowrap; }
+
 .av-logo img {
-  width: 38px;
-  height: 38px;
+  /* logo.png = 480 x 334 : on fixe la hauteur, la largeur suit le ratio. */
+  width: auto;
+  height: 42px;
   object-fit: contain;
   /* Logo PNG has white background — fuse it into the cream/beige nav bar. */
   mix-blend-mode: multiply;
@@ -131,41 +148,182 @@ img, svg {
 .av-nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 26px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+.av-nav-links li { flex-shrink: 0; }
 
 .av-nav-links a {
   color: var(--av-text);
   text-decoration: none;
   font-size: 14.5px;
   font-weight: 500;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 
 .av-nav-links a:hover {
-  color: var(--av-brand-green);
+  color: var(--av-brand-green-deep);
 }
 
+/* Téléphone (§10.5) : icône + numéro sur desktop, icône seule en mobile. */
+.av-nav-links a.av-nav-tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--av-brand-green-deep);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.av-nav-tel svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.av-nav-links a.av-nav-tel:hover { color: var(--av-forest-deep); }
+
+.av-nav-links a.av-nav-cta,
 .av-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Jamais coupé en deux (audit #24). */
+  white-space: nowrap;
+  min-height: 44px;
   padding: 10px 22px;
-  background: var(--av-brand-green);
-  color: #fff !important;
+  background: var(--av-brand-green-deep);
+  color: #fff;
+  font-weight: 600;
   border-radius: var(--av-radius-sm);
-  transition: all 0.18s ease;
+  transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
 }
 
+.av-nav-links a.av-nav-cta:hover,
 .av-nav-cta:hover {
-  background: var(--av-brand-green-deep);
+  color: #fff;
+  background: #0f6a2b;
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(34, 160, 68, 0.3);
+  box-shadow: 0 6px 18px rgba(21, 128, 53, 0.3);
 }
 
-@media (max-width: 760px) {
-  .av-nav-links { gap: 14px; }
-  .av-nav-links a:not(.av-nav-cta) { display: none; }
+/* Focus clavier visible sur tous les éléments interactifs du gabarit. */
+.av-nav a:focus-visible,
+.av-footer a:focus-visible,
+.av-footer button:focus-visible,
+.av-filter-chip:focus-visible,
+.av-article-card:focus-visible,
+.av-related a:focus-visible {
+  outline: 2px solid var(--av-brand-green-deep);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
+
+.av-footer a:focus-visible,
+.av-footer button:focus-visible { outline-color: var(--av-gold); }
+
+/* Entre 761 et 1080 px : numéro masqué (icône seule dans un cercle de 44 px),
+   espacements resserrés. */
+@media (max-width: 1080px) {
+  .av-nav-links { gap: 18px; }
+  .av-nav-links a.av-nav-tel {
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    gap: 0;
+    border: 1px solid var(--av-border);
+    border-radius: 50%;
+  }
+  .av-nav-links a.av-nav-tel:hover {
+    background: var(--av-brand-green-deep);
+    border-color: var(--av-brand-green-deep);
+    color: #fff;
+  }
+  .av-nav-tel span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+/* 761-900 px : le logo image (qui porte le nom) suffit, les liens tiennent. */
+@media (max-width: 900px) and (min-width: 761px) {
+  .av-logo span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+  }
+}
+
+/* Mobile (audit #24) : seuls le téléphone (icône 44 x 44) et le bouton
+   « Estudio gratuito » restent visibles, sur une ligne, sans coupure. */
+@media (max-width: 760px) {
+  .av-nav-inner { padding: 10px 16px; gap: 12px; }
+  .av-nav-links { gap: 8px; }
+  .av-nav-link,
+  /* repli pour l'ancien gabarit sans classe .av-nav-link */
+  .av-nav-links a:not(.av-nav-cta):not(.av-nav-tel) { display: none; }
+  .av-nav-tel svg { width: 20px; height: 20px; }
+  .av-nav-links a.av-nav-cta { padding: 10px 16px; font-size: 14.5px; }
+  .av-logo { font-size: 17px; }
+  .av-logo img { height: 40px; }
+}
+
+/* 520 px et non 480 : entre 481 et 520 px, logo texte + téléphone + bouton
+   ne tiennent pas sur une ligne. */
+@media (max-width: 520px) {
+  /* Texte du logo masqué : le logo image porte déjà le nom (§10.5). */
+  .av-logo span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+  }
+  .av-logo img { height: 44px; }
+}
+
+/* Lien d'évitement (§4.3) : invisible jusqu'au focus clavier (même rendu
+   que site.css). */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  z-index: 1000;
+  padding: 13px 19px;
+  background: var(--av-forest-deep);
+  color: var(--av-cream);
+  font-family: var(--av-body);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid var(--av-gold);
+  outline-offset: 2px;
+}
+
+main:focus,
+#contenido:focus { outline: none; }
 
 /* ============================================
    Article — layout
@@ -196,6 +354,12 @@ img, svg {
 .av-breadcrumb span {
   margin: 0 8px;
   color: var(--av-border);
+}
+
+/* Page courante du fil d'Ariane : lisible (et non couleur de séparateur). */
+.av-breadcrumb span[aria-current] {
+  margin: 0;
+  color: var(--av-text-soft);
 }
 
 .av-article-header {
@@ -244,18 +408,27 @@ h1.av-article-title em {
   align-items: center;
   gap: 18px;
   font-size: 13.5px;
-  color: var(--av-text-mute);
+  /* --av-text-soft (sauge, ~5,3:1) et non --av-text-mute (3,1:1) : WCAG AA
+     (verif. visuel-12). */
+  color: var(--av-text-soft);
   flex-wrap: wrap;
   letter-spacing: 0.01em;
 }
 
 .av-article-meta strong {
   color: var(--av-text-soft);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .av-article-meta .separator {
   color: var(--av-border);
+}
+
+/* Sur mobile, une information par ligne : plus de « · » orphelin en fin de
+   ligne quand la ligne de metadonnees passe a la ligne (verif. visuel-13). */
+@media (max-width: 640px) {
+  .av-article-meta { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .av-article-meta .separator { display: none; }
 }
 
 /* ============================================
@@ -421,6 +594,47 @@ h1.av-article-title em {
 
 .av-content tr:nth-child(even) td {
   background: var(--av-ivory);
+}
+
+/* §10.10 / audit #21 : chaque tableau est enveloppé dans
+   <div class="av-table-scroll" role="region" tabindex="0" aria-label="Tabla desplazable">.
+   Sur mobile, le tableau défile dans son cadre au lieu d'élargir la page. */
+.av-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  margin: 32px 0;
+  border-radius: var(--av-radius-md);
+  box-shadow: var(--av-shadow-sm);
+  background: #fff;
+}
+
+.av-content .av-table-scroll > table,
+.av-table-scroll > table {
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.av-table-scroll:focus-visible {
+  outline: 2px solid var(--av-brand-green-deep);
+  outline-offset: 3px;
+}
+
+/* Indice de défilement (classes posées par blog.js) : bord droit estompé tant
+   que la fin du tableau n'est pas visible. */
+.av-table-scroll.is-overflowing:not(.is-end) {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), rgba(0, 0, 0, 0.25));
+  mask-image: linear-gradient(to right, #000 calc(100% - 48px), rgba(0, 0, 0, 0.25));
+}
+
+@media (max-width: 700px) {
+  /* Colonnes lisibles plutôt qu'écrasées : le cadre défile. */
+  .av-table-scroll > table { min-width: 34rem; }
+  .av-content th,
+  .av-content td { padding: 12px 14px; }
 }
 
 /* Code inline */
@@ -668,28 +882,60 @@ h1.av-article-title em {
   position: relative;
 }
 
-.av-cta-button {
+/* Audit #6 : « .av-content a » (spécificité 0,1,1) écrasait la couleur du
+   bouton (0,1,0) → texte vert souligné sur fond vert (~1,5:1). Les sélecteurs
+   « .av-content a.av-cta-button » (0,2,1) rétablissent le blanc. Fond #158035 :
+   ~5:1 avec le blanc. */
+.av-cta-button,
+.av-content a.av-cta-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  background: var(--av-brand-green);
+  max-width: 100%;
+  background: var(--av-brand-green-deep);
   color: #fff;
   padding: 16px 36px;
   border-radius: var(--av-radius-sm);
   font-family: var(--av-body);
   font-size: 16px;
   font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
   text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 6px 20px rgba(34, 160, 68, 0.35);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 20px rgba(21, 128, 53, 0.35);
   position: relative;
 }
 
-.av-cta-button:hover {
-  background: var(--av-brand-green-deep);
+.av-cta-button:hover,
+.av-cta-button:focus-visible,
+.av-content a.av-cta-button:hover,
+.av-content a.av-cta-button:focus-visible {
+  background: #0f6a2b;
+  color: #fff;
+  text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(34, 160, 68, 0.5);
-  text-decoration: none !important;
+  box-shadow: 0 10px 28px rgba(21, 128, 53, 0.45);
+}
+
+.av-cta-button:focus-visible,
+.av-content a.av-cta-button:focus-visible {
+  outline: 2px solid var(--av-gold);
+  outline-offset: 3px;
+}
+
+/* Même conflit pour les encarts CTA en ligne : ils doivent rester sombres
+   et non soulignés à l'intérieur de .av-content. */
+.av-content a.av-cta-inline,
+.av-content a.av-cta-inline:hover {
+  color: var(--av-forest-deep);
+  text-decoration: none;
+}
+
+.av-content a.av-cta-inline:focus-visible {
+  outline: 2px solid var(--av-brand-green-deep);
+  outline-offset: 3px;
 }
 
 .av-cta-reassurance {
@@ -765,7 +1011,7 @@ h1.av-article-title em {
 .av-blog-hero {
   max-width: var(--av-max-w-wide);
   margin: 0 auto;
-  padding: 128px 24px 88px;
+  padding: 88px 24px 64px;
   text-align: center;
   position: relative;
 }
@@ -813,14 +1059,17 @@ h1.av-article-title em {
 .av-blog-hero-eyebrow::before { content: '— '; opacity: 0.55; }
 .av-blog-hero-eyebrow::after  { content: ' —'; opacity: 0.55; }
 
+/* H1 descriptif (§7) : plus long que l'ancien « El Blog. », donc plus petit. */
 .av-blog-hero h1 {
   font-family: var(--av-display);
-  font-size: clamp(54px, 9vw, 96px);
-  font-weight: 200;
+  font-size: clamp(36px, 5.6vw, 64px);
+  font-weight: 300;
   color: var(--av-forest-deep);
-  margin-bottom: 24px;
-  letter-spacing: -0.035em;
-  line-height: 0.95;
+  max-width: 17ch;
+  margin: 0 auto 24px;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  text-wrap: balance;
   font-variation-settings: "SOFT" 20;
 }
 
@@ -1070,6 +1319,276 @@ h1.av-article-title em {
 }
 
 /* ============================================
+   Blog index — cartes : un visuel exact par carte (audit #30)
+   ============================================ */
+
+/* Visuel en tête de carte, cadre 16:10 constant. */
+.av-article-card:not(.featured) .av-article-card-visual {
+  order: -1;
+  aspect-ratio: 16 / 10;
+  min-height: 0;
+}
+
+.av-article-card-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Schémas et illustrations : affichés en entier, sur leur propre fond. */
+.av-article-card-visual--diagram,
+.av-article-card .av-article-card-visual--diagram {
+  background: #f7f7f5;
+}
+
+.av-article-card-visual--diagram img {
+  object-fit: contain;
+}
+
+/* Carte vedette illustrée par une photo (plus de dégradé ni de padding). */
+.av-article-card.featured .av-article-card-visual--photo {
+  padding: 0;
+  background: var(--av-forest);
+}
+
+.av-article-card.featured .av-article-card-visual--photo::after {
+  content: none;
+}
+
+/* Méta : date et « Leer… » ne se coupent jamais au milieu ; le lien passe
+   à la ligne entier si la carte est étroite. */
+.av-article-card-meta {
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+.av-article-card-meta > span,
+.av-article-card-meta time { white-space: nowrap; }
+
+.av-article-card-readmore { margin-left: auto; }
+
+/* Mention de conformité dans la carte vedette (§0). */
+.av-article-card .av-article-card-note {
+  flex: none;
+  margin: -10px 0 22px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--av-text-soft);
+}
+
+@media (max-width: 768px) {
+  .av-article-card.featured .av-article-card-visual--photo {
+    order: -1;
+    padding: 0;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Hero de l'index plus compact sur mobile : les filtres et les premières
+   cartes arrivent plus tôt. */
+@media (max-width: 600px) {
+  .av-blog-hero { padding: 32px 16px 36px; }
+  .av-blog-hero .av-breadcrumb { margin-bottom: 18px; }
+  .av-blog-hero-eyebrow { margin-bottom: 14px; }
+  .av-blog-hero h1 { margin-bottom: 16px; }
+  .av-blog-hero-ornament { margin: 18px auto 16px; }
+  .av-blog-hero p { font-size: 16.5px; }
+  .av-blog-hero-stats { margin-top: 26px; gap: 22px; }
+  .av-blog-hero-stats .stat strong { font-size: 22px; }
+  .av-section-divider::before { height: 28px; }
+}
+
+/* Mobile : cartes compactes (vignette + titre), l'index passait de ~12 800 px
+   à un défilement raisonnable. Le résumé reste dans le DOM. */
+@media (max-width: 600px) {
+  .av-articles-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 8px 16px 64px;
+  }
+  .av-article-card:not(.featured) {
+    display: grid;
+    grid-template-columns: 108px minmax(0, 1fr);
+  }
+  .av-article-card:not(.featured) .av-article-card-visual {
+    aspect-ratio: auto;
+    min-height: 128px;
+  }
+  .av-article-card:not(.featured) .av-article-card-visual--diagram img {
+    object-fit: cover;
+  }
+  .av-article-card:not(.featured) .av-article-card-body { padding: 14px 16px 12px; }
+  .av-article-card:not(.featured) .av-article-card-tag { margin-bottom: 6px; }
+  .av-article-card:not(.featured) h2 { font-size: 18px; line-height: 1.28; margin-bottom: 6px; }
+  .av-article-card:not(.featured) p,
+  .av-article-card:not(.featured) .av-article-card-readmore { display: none; }
+  .av-article-card:not(.featured) .av-article-card-meta {
+    border-top: 0;
+    padding-top: 6px;
+    font-size: 12.5px;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+  }
+  .av-article-card.featured .av-article-card-body { padding: 24px 20px; }
+  .av-article-card.featured h2 { font-size: 24px; }
+  .av-article-card:hover { transform: none; }
+}
+
+/* Contrastes AA des petits textes de l'index (étiquette, méta, chiffres) :
+   terracotta clair (~3,8:1) et gris (~3,1:1) passaient sous 4,5:1. */
+.av-article-card-tag,
+.av-blog-hero-eyebrow { color: var(--av-terra-deep); }
+.av-article-card.featured .av-article-card-tag { color: var(--av-brand-green-deep); }
+.av-article-card-meta,
+.av-blog-hero-stats { color: var(--av-text-soft); }
+
+/* Filtrage par catégorie : cartes masquées par blog.js. */
+.av-articles-grid > [hidden] { display: none !important; }
+
+/* ============================================
+   Blog index — puces de filtre par catégorie (§10.7)
+   Masquées sans JavaScript (elles n'auraient aucun effet).
+   ============================================ */
+.av-blog-filters { display: none; }
+
+.js .av-blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: var(--av-max-w-wide);
+  margin: 0 auto;
+  padding: 8px 24px 0;
+}
+
+.av-filter-chip {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--av-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--av-forest-deep);
+  font-family: var(--av-body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.av-filter-chip:hover {
+  border-color: var(--av-brand-green-deep);
+  color: var(--av-brand-green-deep);
+}
+
+.av-filter-chip[aria-pressed="true"] {
+  background: var(--av-forest-deep);
+  border-color: var(--av-forest-deep);
+  color: var(--av-cream);
+}
+
+.av-filter-count {
+  font-size: 12.5px;
+  font-weight: 500;
+  opacity: 0.72;
+  font-variant-numeric: tabular-nums;
+}
+
+.av-filter-status {
+  max-width: var(--av-max-w-wide);
+  margin: 14px auto 0;
+  padding: 0 24px;
+  min-height: 1.5em;
+  text-align: center;
+  font-size: 14px;
+  color: var(--av-text-soft);
+}
+
+@media (max-width: 600px) {
+  .js .av-blog-filters { gap: 8px; padding: 4px 16px 0; }
+  .av-filter-chip { min-height: 40px; padding: 8px 14px; font-size: 13.5px; }
+  .av-filter-status { padding: 0 16px; margin-top: 10px; }
+}
+
+/* Mention de conformité sous la grille (§0). */
+.av-blog-note {
+  max-width: 760px;
+  margin: -48px auto 56px;
+  padding: 0 24px;
+  text-align: center;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--av-text-soft);
+}
+
+/* Bloc « Nuestros servicios » en bas de l'index. */
+.av-blog-services {
+  max-width: var(--av-max-w-wide);
+  margin: 0 auto;
+  padding: 0 24px 80px;
+  text-align: center;
+}
+
+.av-blog-services-title {
+  font-family: var(--av-display);
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 300;
+  color: var(--av-forest-deep);
+  margin-bottom: 20px;
+  font-variation-settings: "SOFT" 30;
+}
+
+.av-blog-services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.av-blog-services-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid var(--av-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--av-brand-green-deep);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.av-blog-services-list a:hover {
+  border-color: var(--av-brand-green-deep);
+  color: var(--av-forest-deep);
+  box-shadow: var(--av-shadow-md);
+}
+
+.av-blog-services-list a:focus-visible {
+  outline: 2px solid var(--av-brand-green-deep);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .av-blog-note { margin: -40px auto 44px; padding: 0 16px; }
+  .av-blog-services { padding: 0 16px 56px; }
+  .av-blog-services-list { flex-direction: column; align-items: stretch; }
+  .av-blog-services-list a { justify-content: center; }
+}
+
+/* ============================================
    Footer
    ============================================ */
 .av-footer {
@@ -1085,10 +1604,15 @@ h1.av-article-title em {
   margin: 0 auto;
 }
 
+/* §10.5 : marque + 3 colonnes (Servicios, Contenido, Contacto).
+   La colonne Contacto ne descend jamais sous la largeur de son contenu
+   (minmax(max-content, 1fr)) : l'adresse contacto@artesanosverdes.com
+   (~208 px, insécable) débordait de la page entre 962 et 1010 px et
+   entre 641 et 662 px. */
 .av-footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(0, 1fr)) minmax(max-content, 1fr);
+  gap: 40px;
   padding-bottom: 32px;
   border-bottom: 1px solid rgba(245, 239, 225, 0.08);
 }
@@ -1097,11 +1621,16 @@ h1.av-article-title em {
   max-width: 380px;
 }
 
+/* .av-footer-title (<p>) remplace l'ancien <h3> : même apparence
+   (sélecteur 0,2,0 pour passer devant « .av-footer-brand p »). */
+.av-footer-brand .av-footer-title,
+.av-footer-title,
 .av-footer-brand h3 {
   font-family: var(--av-display);
   font-size: 22px;
   font-weight: 400;
   color: var(--av-cream);
+  line-height: 1.25;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
   font-variation-settings: "SOFT" 50, "WONK" 1;
@@ -1112,6 +1641,8 @@ h1.av-article-title em {
   color: rgba(245, 239, 225, 0.65);
 }
 
+/* .av-footer-heading (<p>) remplace l'ancien <h4> : même apparence. */
+.av-footer-heading,
 .av-footer-col h4 {
   font-family: var(--av-display);
   font-style: italic;
@@ -1124,6 +1655,7 @@ h1.av-article-title em {
   font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
+.av-footer-heading::before,
 .av-footer-col h4::before { content: '— '; opacity: 0.55; }
 
 .av-footer-col ul {
@@ -1152,7 +1684,8 @@ h1.av-article-title em {
   flex-wrap: wrap;
   gap: 16px;
   font-size: 13px;
-  color: rgba(245, 239, 225, 0.45);
+  /* 0.45 tombait sous 4,5:1 sur la forêt : 0.62 (~6:1). */
+  color: rgba(245, 239, 225, 0.62);
 }
 
 .av-footer-bottom .legal {
@@ -1161,18 +1694,51 @@ h1.av-article-title em {
   flex-wrap: wrap;
 }
 
-.av-footer-bottom a {
-  color: rgba(245, 239, 225, 0.55);
+.av-footer-bottom a,
+.av-link-btn {
+  color: rgba(245, 239, 225, 0.7);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.av-footer-bottom a:hover {
+/* « Configurar cookies » : un <button> qui a l'apparence d'un lien (§10.5). */
+.av-link-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.av-footer-bottom a:hover,
+.av-link-btn:hover {
   color: var(--av-gold);
 }
 
-@media (max-width: 760px) {
-  .av-footer-top { grid-template-columns: 1fr; gap: 32px; }
+@media (max-width: 1080px) {
+  .av-footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(max-content, 1fr); gap: 32px; }
+  .av-footer-brand { grid-column: 1 / -1; max-width: 560px; }
+}
+
+@media (max-width: 640px) {
+  .av-footer { padding: 44px 16px 32px; }
+  /* Servicios | Contenido côte à côte, Contacto (e-mail long) sur toute la largeur. */
+  .av-footer-top { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 20px; }
+  .av-footer-brand,
+  .av-footer-col:last-child { grid-column: 1 / -1; }
+  .av-footer-col li { margin-bottom: 0; }
+  /* Cibles tactiles d'au moins 40 px (audit #31). */
+  .av-footer-col a {
+    display: inline-block;
+    padding: 9px 0;
+  }
+  .av-footer-bottom { flex-direction: column; }
+  .av-footer-bottom .legal { gap: 4px 20px; }
+  .av-footer-bottom .legal a,
+  .av-footer-bottom .av-link-btn { display: inline-block; padding: 9px 0; }
 }
 
 /* ============================================
@@ -1461,6 +2027,17 @@ img.av-infographic-svg {
   pointer-events: auto;
 }
 
+/* Audit #30 : le sommaire fixe recouvrait le pied de page en fin d'article.
+   blog.js pose .is-near-footer dès que le pied de page (ou le bloc
+   « Sigue leyendo ») entre dans la fenêtre. */
+.av-toc.is-visible.is-near-footer {
+  opacity: 0;
+  transform: translateX(8px);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+}
+
 .av-toc-label {
   font-family: var(--av-display);
   font-style: italic;
@@ -1525,7 +2102,8 @@ img.av-infographic-svg {
   .av-reading-progress { transition: none !important; }
 }
 
-/* Card hover refinements — arrow micro-anim on read more */
+/* Card hover refinements — arrow micro-anim on read more
+   (la flèche n'existe plus que dans ce ::after : audit #30, double flèche) */
 .av-article-card-readmore::after {
   content: ' \2192';
   display: inline-block;
@@ -1607,9 +2185,210 @@ body::before {
   position: relative;
 }
 
+/* ============================================
+   Bloc « Sigue leyendo » (§10.8) — après .av-cta-final, avant
+   .av-article-footer, en général à l'intérieur de .av-content : les
+   sélecteurs sont assez spécifiques pour neutraliser « .av-content a/ul/h2 ».
+   ============================================ */
+.av-related {
+  margin: 56px 0 0;
+  padding: 36px 0 0;
+  border-top: 1px solid var(--av-border);
+  font-family: var(--av-body);
+}
+
+.av-content .av-related > h2,
+.av-related > h2 {
+  font-family: var(--av-display);
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--av-forest-deep);
+  margin: 0 0 22px;
+  font-variation-settings: "SOFT" 30;
+}
+
+.av-related .av-related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.av-related .av-related-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.av-related .av-related-list li::marker { content: none; }
+
+.av-related .av-related-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 18px 18px 20px;
+  background: #fff;
+  border: 1px solid var(--av-border);
+  border-radius: var(--av-radius-md);
+  color: var(--av-forest-deep);
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.av-related .av-related-list a:hover {
+  color: var(--av-forest-deep);
+  border-color: rgba(21, 128, 53, 0.45);
+  box-shadow: var(--av-shadow-md);
+  transform: translateY(-2px);
+}
+
+.av-related-cat {
+  font-family: var(--av-display);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--av-terra-deep);
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+
+.av-related-title {
+  font-family: var(--av-display);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--av-forest-deep);
+  font-variation-settings: "SOFT" 50;
+}
+
+.av-related .av-related-list a:hover .av-related-title { color: var(--av-brand-green-deep); }
+
+.av-content .av-related .av-related-service,
+.av-related-service {
+  margin: 22px 0 0;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--av-text-soft);
+}
+
+.av-related .av-related-service a {
+  color: var(--av-brand-green-deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(184, 115, 58, 0.6);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+.av-related .av-related-service a:hover { color: var(--av-terra-deep); }
+
+@media (max-width: 700px) {
+  .av-related .av-related-list { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .av-related .av-related-list a { padding: 14px 16px 16px; }
+}
+
+/* ============================================
+   Barre d'action mobile (§4.1) — même balisage et même rendu que site.css :
+   Llamar · WhatsApp · Estudio gratuito, fixe en bas sous 769 px.
+   ============================================ */
+.cta-bar-movil { display: none; }
+
+@media (max-width: 768px) {
+  .cta-bar-movil {
+    display: grid;
+    grid-template-columns: 52px 52px 1fr;
+    gap: 8px;
+    align-items: stretch;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    background: var(--av-forest-deep);
+    border-top: 1px solid rgba(250, 246, 236, 0.12);
+    box-shadow: 0 -6px 24px rgba(10, 24, 16, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0s;
+  }
+  .cta-bar-movil.oculta {
+    transform: translateY(110%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+  .cta-bar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(250, 246, 236, 0.35);
+    color: var(--av-cream);
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .cta-bar-icon svg { width: 22px; height: 22px; }
+  /* vert WhatsApp sur fond très sombre : ~9:1 */
+  .cta-bar-icon--wa { color: #25d366; }
+  .cta-bar-icon:active { background: rgba(250, 246, 236, 0.12); }
+  .cta-bar-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background: var(--av-brand-green-deep);
+    color: #fff;
+    font-family: var(--av-body);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 6px 18px -8px rgba(34, 160, 68, 0.6);
+  }
+  .cta-bar-main:active { background: #0f6428; }
+  .cta-bar-movil a:focus-visible {
+    outline: 2px solid #8dd4a8;
+    outline-offset: 2px;
+    border-radius: 12px;
+  }
+
+  /* Le pied de page n'est jamais masqué par la barre (65 px + zone de
+     sécurité) ; son fond sombre se prolonge sous la barre. */
+  #ctaBarMovil ~ .av-footer {
+    padding-bottom: calc(36px + 65px + env(safe-area-inset-bottom));
+  }
+  /* Pas de bulle WhatsApp flottante en doublon : la barre la remplace. */
+  .whatsapp-float,
+  .ads-wa-sticky { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .av-article-card,
+  .av-article-card-visual img,
+  .av-related .av-related-list a,
+  .av-cta-button,
+  .av-nav-cta,
+  .cta-bar-movil,
+  .av-toc { transition: none !important; }
+  .av-article-card:hover,
+  .av-related .av-related-list a:hover,
+  .av-cta-button:hover,
+  .av-content a.av-cta-button:hover,
+  .av-nav-links a.av-nav-cta:hover { transform: none; }
+  .av-article-card:hover .av-article-card-visual img { transform: none; }
+  .av-article-card:hover .av-article-card-readmore::after { transform: none; }
+}
+
 /* Print: hide enhancements */
 @media print {
-  .av-reading-progress, .av-toc, body::before { display: none !important; }
+  .av-reading-progress, .av-toc, body::before, .cta-bar-movil, .skip-link, .av-blog-filters { display: none !important; }
   .av-content > p:first-of-type::first-letter {
     font-size: 1em !important;
     float: none !important;

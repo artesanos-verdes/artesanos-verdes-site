@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="metodo-title metodo-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <title id="metodo-title">Nuestro método: de tu solicitud a la obra terminada, en 4 etapas</title>
+  <desc id="metodo-desc">Cuatro etapas: solicitud por la web o por WhatsApp, estudio gratuito con visita técnica, obra de insuflación de lana mineral y verificación del ahorro por una entidad acreditada por ENAC. Con la financiación privada del sistema CAE, la prima CAE se descuenta del presupuesto y el importe a tu cargo se indica por escrito antes de firmar.</desc>
 
   <!-- ========== BACKGROUND ========== -->
   <rect width="1200" height="520" fill="#f7f7f5"/>
@@ -8,12 +10,15 @@
   <text x="60" y="30" fill="#a8c4b0" font-size="11" font-weight="700" letter-spacing="2.5">NUESTRO MÉTODO</text>
   <text x="60" y="55" fill="#ffffff" font-size="22" font-weight="700">De tu solicitud a la obra terminada — en 4 etapas</text>
 
-  <!-- Badge 1€ top right -->
-  <g transform="translate(1100, 35)">
-    <circle cx="0" cy="0" r="30" fill="#c07856"/>
-    <text x="0" y="-4" fill="#ffffff" font-size="20" font-weight="800" text-anchor="middle">1 €</text>
-    <text x="0" y="12" fill="#f3dccb" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1">CAE</text>
+  <!-- Pill top right (sin importes) -->
+  <g transform="translate(1140, 35)">
+    <rect x="-262" y="-15" width="262" height="30" rx="15" fill="#c07856"/>
+    <text x="-131" y="5" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.5">Financiación privada · sistema CAE</text>
   </g>
+
+  <!-- ========== MENSAJE CLAVE (sin importes ni porcentajes) ========== -->
+  <text x="600" y="117" fill="#1a4d30" font-size="16" font-weight="700" text-anchor="middle">Prima CAE descontada del presupuesto</text>
+  <text x="600" y="141" fill="#666666" font-size="13" font-weight="600" text-anchor="middle">Importe a tu cargo, por escrito antes de firmar</text>
 
   <!-- ========== STEPS ROW ========== -->
   <!-- 4 steps, equally spaced across 1100px width from x=60 -->
@@ -23,22 +28,14 @@
 
   <!-- STEP 1 - Solicitud -->
   <g transform="translate(100, 180)">
-    <!-- Number circle -->
     <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
     <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">1</text>
-    
-    <!-- Icon below (chat bubble) -->
+    <!-- Icon: chat bubble -->
     <g transform="translate(45, 110)">
       <path d="M 0 8 Q 0 0 8 0 L 22 0 Q 30 0 30 8 L 30 16 Q 30 24 22 24 L 15 24 L 10 29 L 10 24 L 8 24 Q 0 24 0 16 Z" fill="none" stroke="#2d7a4e" stroke-width="2"/>
     </g>
-    
-    <!-- Title -->
     <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Solicitud</text>
-    
-    <!-- Subtitle -->
     <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Web o WhatsApp</text>
-    
-    <!-- Time badge -->
     <g transform="translate(20, 220)">
       <rect x="0" y="0" width="80" height="22" rx="11" fill="#e8f5ee"/>
       <text x="40" y="14" fill="#2d7a4e" font-size="10" font-weight="700" text-anchor="middle">&lt; 1 minuto</text>
@@ -47,23 +44,15 @@
 
   <!-- STEP 2 - Estudio -->
   <g transform="translate(370, 180)">
-    <!-- Number circle -->
     <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
     <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">2</text>
-    
     <!-- Icon: house with check -->
     <g transform="translate(42, 108)">
       <path d="M 18 0 L 0 14 L 0 32 L 36 32 L 36 14 Z" fill="none" stroke="#2d7a4e" stroke-width="2"/>
       <path d="M 10 20 L 16 26 L 26 14" fill="none" stroke="#2d7a4e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    
-    <!-- Title -->
     <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Estudio gratuito</text>
-    
-    <!-- Subtitle -->
     <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Visita técnica in situ</text>
-    
-    <!-- Time badge -->
     <g transform="translate(20, 220)">
       <rect x="0" y="0" width="80" height="22" rx="11" fill="#e8f5ee"/>
       <text x="40" y="14" fill="#2d7a4e" font-size="10" font-weight="700" text-anchor="middle">&lt; 7 días</text>
@@ -72,63 +61,49 @@
 
   <!-- STEP 3 - Obra -->
   <g transform="translate(640, 180)">
-    <!-- Number circle with highlight -->
     <circle cx="60" cy="50" r="42" fill="#c07856" stroke="#8a5038" stroke-width="3"/>
     <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">3</text>
-    
-    <!-- Icon: tool/installation -->
+    <!-- Icon: insuflation machine simplified -->
     <g transform="translate(44, 108)">
-      <!-- Insuflation machine simplified -->
       <rect x="4" y="4" width="12" height="20" rx="2" fill="none" stroke="#c07856" stroke-width="2"/>
       <circle cx="10" cy="10" r="2" fill="#c07856"/>
       <path d="M 16 12 Q 24 12 28 18 Q 32 24 32 30" fill="none" stroke="#c07856" stroke-width="2" stroke-linecap="round"/>
     </g>
-    
-    <!-- Title -->
     <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Obra profesional</text>
-    
-    <!-- Subtitle -->
     <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Insuflación lana mineral</text>
-    
-    <!-- Time badge highlighted -->
     <g transform="translate(15, 220)">
       <rect x="0" y="0" width="90" height="22" rx="11" fill="#fdf3ea"/>
       <text x="45" y="14" fill="#c07856" font-size="10" font-weight="700" text-anchor="middle">1 jornada</text>
     </g>
   </g>
 
-  <!-- STEP 4 - Resultado -->
+  <!-- STEP 4 - Verificación del ahorro (sin cifras de ahorro) -->
   <g transform="translate(910, 180)">
-    <!-- Number circle -->
     <circle cx="60" cy="50" r="42" fill="#2d7a4e" stroke="#1a4d30" stroke-width="3"/>
     <text x="60" y="62" fill="#ffffff" font-size="32" font-weight="800" text-anchor="middle">4</text>
-    
-    <!-- Icon: trending down (savings) -->
-    <g transform="translate(42, 108)">
-      <path d="M 2 8 L 12 18 L 20 12 L 34 26" fill="none" stroke="#2d7a4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M 26 26 L 34 26 L 34 18" fill="none" stroke="#2d7a4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Icon: shield with check (verification) -->
+    <g transform="translate(43, 106)">
+      <path d="M 17 0 L 34 6 L 34 17 Q 34 29 17 36 Q 0 29 0 17 L 0 6 Z" fill="none" stroke="#2d7a4e" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M 10 18 L 15 23 L 25 12" fill="none" stroke="#2d7a4e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    
-    <!-- Title -->
-    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Ahorro real</text>
-    
-    <!-- Subtitle -->
-    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Hasta 30% en calefacción</text>
-    
-    <!-- Cost badge -->
-    <g transform="translate(25, 220)">
-      <rect x="0" y="0" width="70" height="22" rx="11" fill="#1a4d30"/>
-      <text x="35" y="14" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">Tú pagas 1 €</text>
+    <text x="60" y="170" fill="#1a4d30" font-size="15" font-weight="800" text-anchor="middle">Ahorro verificado</text>
+    <text x="60" y="195" fill="#666" font-size="11" font-weight="600" text-anchor="middle">Por una entidad acreditada por ENAC</text>
+    <g transform="translate(5, 220)">
+      <rect x="0" y="0" width="110" height="22" rx="11" fill="#1a4d30"/>
+      <text x="55" y="14" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">Expediente CAE</text>
     </g>
   </g>
+
+  <!-- ========== MENCIÓN LEGAL ========== -->
+  <text x="600" y="443" fill="#777777" font-size="10.5" font-weight="600" text-anchor="middle">Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023) · Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC</text>
 
   <!-- ========== BOTTOM INFO BAR ========== -->
   <rect x="0" y="455" width="1200" height="65" fill="#1a4d30"/>
 
-  <!-- Left : Stats -->
+  <!-- Left : zona de trabajo (sin contadores) -->
   <g transform="translate(60, 480)">
-    <text x="0" y="0" fill="#a8c4b0" font-size="10" font-weight="700" letter-spacing="1.5">NUESTRA EXPERIENCIA</text>
-    <text x="0" y="22" fill="#ffffff" font-size="15" font-weight="700">500+ viviendas · 40 000+ m² · 13 provincias</text>
+    <text x="0" y="0" fill="#a8c4b0" font-size="10" font-weight="700" letter-spacing="1.5">ZONA DE TRABAJO</text>
+    <text x="0" y="22" fill="#ffffff" font-size="15" font-weight="700">13 provincias del norte y centro</text>
   </g>
 
   <!-- Middle : GreenFlex + Isover (trust) -->

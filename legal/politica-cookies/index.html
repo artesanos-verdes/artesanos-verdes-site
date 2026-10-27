@@ -2,6 +2,7 @@
 <html lang="es-ES">
 <head>
 <meta charset="UTF-8" />
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#2d5a3d" />
 
@@ -25,11 +26,14 @@
 <!-- Fonts + CSS -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/blog/assets/blog.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/blog/assets/blog.css?v=20261014" />
 
 <style>
-  .av-cookie-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; }
+  /* Pages légales : pas de lettrine « magazine » sur le premier paragraphe d'un texte juridique. */
+  .av-legal .av-content > p:first-of-type::first-letter { font: inherit; float: none; margin: 0; color: inherit; line-height: inherit; font-variation-settings: normal; }
+  /* Tableau défilable sur mobile (§10.10, .av-table-scroll dans blog.css) : le tableau garde une largeur lisible. */
+  .av-cookie-table { width: 100%; min-width: 600px; border-collapse: collapse; margin: 0; font-size: 14px; }
   .av-cookie-table th, .av-cookie-table td { border: 1px solid #e0ddd4; padding: 10px 12px; text-align: left; vertical-align: top; }
   .av-cookie-table th { background: #f7f5ef; font-weight: 700; color: #1a4d30; }
   .av-cookie-table td code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; background: #f5f2e9; padding: 2px 6px; border-radius: 4px; }
@@ -58,14 +62,16 @@ function gtag(){dataLayer.push(arguments);}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NBF0X2893"></script>
 <script>
 gtag('js', new Date());
+if (location.hostname !== 'artesanosverdes.com') { window['ga-disable-G-0NBF0X2893'] = true; window['ga-disable-AW-3024885050'] = true; }
 gtag('config', 'G-0NBF0X2893', {
-  page_path: '/legal/politica-cookies/',
-  page_title: 'Política de Cookies — Los Artesanos Verdes',
-  anonymize_ip: true
+  page_path: '/legal/politica-cookies/'
 });
 // Google Ads tag — remarketing audiences (conversions imported from GA4)
 gtag('config', 'AW-3024885050');
 </script>
+
+<!-- Suivi des clics et attribution (assets/tracking.js) -->
+<script defer src="/assets/tracking.js?v=20261014"></script>
 
 <!-- Cookie consent banner -->
 <link rel="stylesheet" href="/assets/cookie-banner.css" />
@@ -73,27 +79,30 @@ gtag('config', 'AW-3024885050');
 </head>
 <body>
 
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
 <!-- ===== Nav ===== -->
-<nav class="av-nav">
+<nav class="av-nav" aria-label="Principal">
   <div class="av-nav-inner">
-    <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes">
-      <img src="/logo.png" alt="" loading="eager" />
-      <span>Los Artesanos Verdes</span>
-    </a>
+    <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
-      <li><a href="/#cae">¿Qué es el CAE?</a></li>
-      <li><a href="/#proceso">Proceso</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/#contacto" class="av-nav-cta">Estudio gratuito</a></li>
+      <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
+      <li class="av-nav-link"><a href="/blog/">Blog</a></li>
+      <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
+      <li><a href="/#contacto" class="av-nav-cta" data-cta="nav">Estudio gratuito</a></li>
     </ul>
   </div>
 </nav>
 
+<main id="contenido">
+<article class="av-article av-legal">
+
 <!-- ===== Breadcrumb ===== -->
 <nav class="av-breadcrumb" aria-label="Ruta de navegación">
   <a href="/">Inicio</a>
-  <span>›</span>
-  <span>Política de cookies</span>
+  <span aria-hidden="true">›</span>
+  <span aria-current="page">Política de cookies</span>
 </nav>
 
 <!-- ===== Header ===== -->
@@ -126,6 +135,7 @@ gtag('config', 'AW-3024885050');
 
   <h2 id="tabla">3. Tabla detallada de cookies</h2>
 
+  <div class="av-table-scroll" role="region" tabindex="0" aria-label="Tabla desplazable">
   <table class="av-cookie-table">
     <thead>
       <tr>
@@ -181,6 +191,7 @@ gtag('config', 'AW-3024885050');
       </tr>
     </tbody>
   </table>
+  </div>
 
   <p>Esta tabla se actualizará si añadimos o retiramos proveedores. Si detectas una cookie adicional no listada, te agradecemos que nos lo comuniques en <a href="mailto:contacto@artesanosverdes.com">contacto@artesanosverdes.com</a>.</p>
 
@@ -207,11 +218,39 @@ gtag('config', 'AW-3024885050');
 
 </div>
 
+</article>
+</main>
+
 <!-- ===== Footer ===== -->
 <footer class="av-footer">
   <div class="av-footer-inner">
-    <p>© 2026 Los Artesanos Verdes SL · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#contacto">Contacto</a></p>
-    <p><a href="/legal/aviso-legal/">Aviso legal</a> · <a href="/legal/politica-privacidad/">Política de privacidad</a> · <a href="/legal/politica-cookies/">Política de cookies</a> · <a href="#" onclick="event.preventDefault();if(window.avOpenCookieSettings)avOpenCookieSettings();">Configurar cookies</a></p>
+    <div class="av-footer-top">
+      <div class="av-footer-brand">
+        <p class="av-footer-title">Los Artesanos Verdes</p>
+        <p>Renovación energética de viviendas con la financiación privada del sistema CAE: aislamiento de desván y de cubierta inclinada, aerotermia y bomba de calor aire-aire.</p>
+      </div>
+      <div class="av-footer-col"><p class="av-footer-heading">Servicios</p><ul>
+        <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
+        <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
+        <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+      </ul></div>
+      <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
+        <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>
+        <li><a href="/blog/que-es-el-cae-sistema-ahorro-energetico/">¿Qué es el CAE?</a></li>
+        <li><a href="/blog/aislamiento-espana-provincias-cobertura/">Zona de trabajo</a></li>
+      </ul></div>
+      <div class="av-footer-col"><p class="av-footer-heading">Contacto</p><ul>
+        <li><a href="tel:+34632180509" data-cta="footer-llamar">+34 632 18 05 09</a></li>
+        <li><a href="mailto:contacto@artesanosverdes.com" data-cta="footer-email">contacto@artesanosverdes.com</a></li>
+        <li><a href="https://wa.me/34632180509" target="_blank" rel="noopener" data-cta="footer-whatsapp">WhatsApp</a></li>
+        <li><a href="/#contacto" data-cta="footer">Estudio gratuito</a></li>
+      </ul></div>
+    </div>
+    <div class="av-footer-bottom">
+      <div>© 2026 Los Artesanos Verdes SL · Denia, España</div>
+      <div class="legal"><a href="/legal/aviso-legal/">Aviso legal</a><a href="/legal/politica-privacidad/">Política de privacidad</a><a href="/legal/politica-cookies/">Política de cookies</a><button type="button" class="av-link-btn" onclick="if(window.avOpenCookieSettings)avOpenCookieSettings();">Configurar cookies</button></div>
+    </div>
   </div>
 </footer>
 

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es-ES" data-page-type="404">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada | Los Artesanos Verdes</title>
+<meta name="description" content="La página que buscas no existe o ha cambiado de dirección. Consulta nuestros servicios de renovación energética con el sistema CAE o contáctanos.">
+<meta name="robots" content="noindex">
+<meta name="author" content="Los Artesanos Verdes">
+<meta name="theme-color" content="#22a044">
+
+<!-- Página 404 servida por GitHub Pages : TODAS las rutas son absolutas
+     (la URL mostrada puede estar a cualquier profundidad). Sin canonical. -->
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Google Consent Mode v2 defaults (must precede gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var s = null;
+    try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+    gtag('consent', 'default', {
+      ad_storage: (s && s.ads) ? 'granted' : 'denied',
+      analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
+      ad_user_data: (s && s.ads) ? 'granted' : 'denied',
+      ad_personalization: (s && s.ads) ? 'granted' : 'denied',
+      wait_for_update: 500
+    });
+  })();
+</script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NBF0X2893"></script>
+<script>
+  gtag('js', new Date());
+  if (location.hostname !== 'artesanosverdes.com') { window['ga-disable-G-0NBF0X2893'] = true; window['ga-disable-AW-3024885050'] = true; }
+  gtag('config', 'G-0NBF0X2893', {
+    'cookie_flags': 'SameSite=None;Secure'
+  });
+  // Google Ads tag — remarketing audiences (conversions imported from GA4)
+  gtag('config', 'AW-3024885050');
+</script>
+
+<!-- Suivi des clics et attribution (assets/tracking.js) -->
+<script defer src="/assets/tracking.js?v=20261014"></script>
+
+<!-- Cookie consent banner -->
+<link rel="stylesheet" href="/assets/cookie-banner.css">
+<script defer src="/assets/cookie-banner.js"></script>
+
+<link rel="stylesheet" href="/assets/site.css?v=20261014">
+
+<!-- Styles propres à la page 404 -->
+<style>
+  .e404 { background: var(--cream); padding: 4.5rem 2.5rem 4rem; position: relative; overflow: hidden; border-bottom: 1px solid var(--line-soft); }
+  .e404-inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 1; }
+  .e404-num { position: absolute; right: -0.04em; top: 50%; transform: translateY(-50%); font-family: var(--display); font-weight: 300; font-style: italic; font-size: clamp(9rem, 22vw, 17rem); line-height: 1; letter-spacing: -0.04em; color: var(--terracotta); opacity: 0.13; pointer-events: none; user-select: none; z-index: 0; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .e404 h1 { font-size: clamp(2.4rem, 5vw, 4rem); max-width: 16ch; }
+  .e404-lead { font-size: 1.12rem; line-height: 1.7; color: var(--forest); max-width: 620px; }
+  .e404-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+  .e404-actions .btn svg:not(.btn-arrow) { flex-shrink: 0; }
+  .e404-links { padding-top: 4.5rem; padding-bottom: 5rem; }
+  .e404-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
+  .e404-col h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); margin-bottom: 1.2rem; }
+  .e404-list { list-style: none; border-top: 1px solid var(--line); }
+  .e404-list li { border-bottom: 1px solid var(--line); }
+  .e404-list a { display: flex; flex-direction: column; gap: 0.15rem; padding: 1rem 2.2rem 1rem 0.2rem; text-decoration: none; color: var(--forest-deep); position: relative; transition: background 0.2s ease, padding 0.2s ease; }
+  .e404-list a::after { content: '→'; position: absolute; right: 0.4rem; top: 50%; transform: translateY(-50%); color: var(--brand-green-deep); transition: right 0.2s ease; }
+  .e404-list a:hover, .e404-list a:focus-visible { background: rgba(34, 160, 68, 0.06); }
+  .e404-list a:hover::after { right: 0.1rem; }
+  .e404-list-t { font-family: var(--display); font-size: 1.15rem; font-weight: 400; line-height: 1.3; }
+  .e404-list-d { font-size: 0.9rem; color: var(--sage); line-height: 1.5; }
+  .e404-more { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.2rem; color: var(--brand-green-deep); font-weight: 600; text-underline-offset: 3px; }
+  @media (max-width: 968px) {
+    .e404 { padding: 2.8rem 1.5rem 3rem; }
+    .e404-links { padding-top: 3rem; padding-bottom: 3.5rem; }
+  }
+  @media (max-width: 768px) {
+    .e404-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+    .e404-actions .btn { width: 100%; justify-content: center; }
+    .e404-num { top: -0.4rem; transform: none; font-size: 6rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .e404-list a, .e404-list a::after { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Renovación energética · Sistema CAE</span>
+  <div class="tb-right">
+    <a href="tel:+34632180509" data-cta="topbar-llamar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +34 632 18 05 09</a>
+    <a href="mailto:contacto@artesanosverdes.com"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> contacto@artesanosverdes.com</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav aria-label="Principal">
+  <a href="/" class="logo" aria-label="Los Artesanos Verdes — Inicio">
+    <img class="logo-img" src="/logo.png" alt="Los Artesanos Verdes" width="480" height="334">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-has-sub">
+      <a href="/servicios/">Servicios</a>
+      <ul class="nav-sub">
+        <li><a href="/servicios/aislamiento-desvan/">Aislar el desván</a></li>
+        <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislar la cubierta inclinada</a></li>
+        <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+      </ul>
+    </li>
+    <li><a href="/#cae">Sistema CAE</a></li>
+    <li><a href="/#proceso">Proceso</a></li>
+    <li><a href="/#certificaciones">Garantías</a></li>
+    <li><a href="/#testimonios">Opiniones</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#contacto" class="nav-cta" data-cta="nav">Estudio gratuito</a></li>
+    <li class="nav-links-actions">
+      <a class="btn btn-primary" href="tel:+34632180509" data-cta="menu-llamar">Llamar</a>
+      <a class="btn btn-ghost" href="https://wa.me/34632180509?text=Hola%2C%20me%20interesa%20un%20estudio%20de%20elegibilidad%20CAE" target="_blank" rel="noopener" data-cta="menu-whatsapp">WhatsApp</a>
+    </li>
+  </ul>
+  <a href="/#contacto" class="nav-cta nav-cta--compact" data-cta="nav">Estudio gratuito</a>
+  <a class="nav-tel" href="tel:+34632180509" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <button class="burger" id="burger" aria-label="Menú de navegación" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main id="contenido">
+
+<section class="e404" data-zone="404" aria-labelledby="e404-title">
+  <span class="e404-num" aria-hidden="true">404</span>
+  <div class="e404-inner">
+    <p class="section-num">Error 404</p>
+    <h1 id="e404-title">Página no encontrada</h1>
+    <p class="e404-lead">La dirección que has abierto no existe o la página ha cambiado de sitio. Desde aquí puedes volver a nuestros servicios, leer una guía o hablar directamente con nosotros.</p>
+    <div class="e404-actions">
+      <a class="btn btn-primary" href="/#contacto" data-cta="404-estudio">
+        Estudio gratuito
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="tel:+34632180509" data-cta="404-llamar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Llamar</a>
+      <a class="btn btn-ghost" href="https://wa.me/34632180509?text=Hola%2C%20me%20interesa%20un%20estudio%20de%20elegibilidad%20CAE" target="_blank" rel="noopener" data-cta="404-whatsapp"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="e404-links" aria-label="Enlaces útiles">
+  <div class="e404-grid">
+    <div class="e404-col">
+      <h2 id="e404-servicios">Nuestros servicios</h2>
+      <ul class="e404-list" aria-labelledby="e404-servicios">
+        <li><a href="/servicios/aislamiento-desvan/"><span class="e404-list-t">Aislamiento de desván</span><span class="e404-list-d">Para un desván o ático no habitable</span></a></li>
+        <li><a href="/servicios/aislamiento-cubierta-inclinada/"><span class="e404-list-t">Aislamiento de cubierta inclinada</span><span class="e404-list-d">Para una buhardilla habitable</span></a></li>
+        <li><a href="/servicios/aerotermia/"><span class="e404-list-t">Aerotermia</span><span class="e404-list-d">Caldera de gas o gasóleo con radiadores o suelo radiante de agua</span></a></li>
+        <li><a href="/servicios/aire-aire/"><span class="e404-list-t">Bomba de calor aire-aire</span><span class="e404-list-d">Caldera de gas o gasóleo sin circuito de agua</span></a></li>
+      </ul>
+      <a class="e404-more" href="/servicios/">Ver todos los servicios</a>
+    </div>
+    <div class="e404-col">
+      <h2 id="e404-guias">Guías para decidir</h2>
+      <ul class="e404-list" aria-labelledby="e404-guias">
+        <li><a href="/blog/que-es-el-cae-sistema-ahorro-energetico/"><span class="e404-list-t">¿Qué es el CAE? Guía completa del sistema de Certificados de Ahorro Energético (2026)</span><span class="e404-list-d">Sistema CAE</span></a></li>
+        <li><a href="/blog/aire-aire-o-aerotermia-cual-elegir/"><span class="e404-list-t">¿Aerotermia o bomba de calor aire-aire? Cuál elegir</span><span class="e404-list-d">Aerotermia</span></a></li>
+        <li><a href="/blog/aislamiento-espana-provincias-cobertura/"><span class="e404-list-t">Aislamiento de cubierta en España: ¿cubrimos tu provincia?</span><span class="e404-list-d">Normativa y zonas</span></a></li>
+      </ul>
+      <a class="e404-more" href="/blog/">Ir al blog</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Barre d'action mobile (§4.1) -->
+<div class="cta-bar-movil" id="ctaBarMovil" data-zone="barra-movil">
+  <a class="cta-bar-icon" href="tel:+34632180509" data-cta="barra-movil-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a class="cta-bar-icon cta-bar-icon--wa" href="https://wa.me/34632180509?text=Hola%2C%20me%20interesa%20un%20estudio%20de%20elegibilidad%20CAE" target="_blank" rel="noopener" data-cta="barra-movil-whatsapp" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg></a>
+  <a class="cta-bar-main" href="/#contacto" data-cta="barra-movil">Estudio gratuito</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="/" class="logo" aria-label="Los Artesanos Verdes — Inicio">
+        <img class="logo-img" src="/logo.png" alt="Los Artesanos Verdes" width="480" height="334">
+      </a>
+      <p>En camino hacia los edificios del mañana. Especialistas en renovación energética financiada a través del sistema CAE (financiación privada) en España.</p>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-title">Servicios</p>
+      <ul>
+        <li><a href="/servicios/aislamiento-desvan/">Aislar el desván (soplado)</a></li>
+        <li><a href="/servicios/aislamiento-cubierta-inclinada/">Cubierta inclinada (rampantes)</a></li>
+        <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/#cae">Sistema CAE</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-title">Empresa</p>
+      <ul>
+        <li><a href="/#nosotros">Sobre nosotros</a></li>
+        <li><a href="/#certificaciones">Marco legal CAE</a></li>
+        <li><a href="/#testimonios">Opiniones clientes</a></li>
+        <li><a href="/#sedes">Sedes</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-title">Contacto</p>
+      <ul>
+        <li><a href="tel:+34632180509" data-cta="footer-llamar">+34 632 18 05 09</a></li>
+        <li><a href="mailto:contacto@artesanosverdes.com" data-cta="footer-email">contacto@artesanosverdes.com</a></li>
+        <li><a href="https://wa.me/34632180509" target="_blank" rel="noopener" data-cta="footer-whatsapp">WhatsApp directo</a></li>
+        <li><a href="https://www.instagram.com/los_artesanos_verdes/" target="_blank" rel="noopener">@los_artesanos_verdes</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-title">Legal</p>
+      <ul>
+        <li><a href="/legal/aviso-legal/">Aviso legal</a></li>
+        <li><a href="/legal/politica-privacidad/">Política de privacidad</a></li>
+        <li><a href="/legal/politica-cookies/">Política de cookies</a></li>
+        <li><button type="button" class="footer-link-btn" onclick="if(window.avOpenCookieSettings)avOpenCookieSettings();">Configurar cookies</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Los Artesanos Verdes · Sucursal España — CP 03700 Denia</span>
+    <span class="slogan">En camino hacia los edificios del mañana</span>
+  </div>
+</footer>
+
+<!-- WhatsApp floating -->
+<a href="https://wa.me/34632180509?text=Hola,%20me%20interesa%20la%20renovaci%C3%B3n%20energ%C3%A9tica%20con%20el%20sistema%20CAE" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp" data-cta="whatsapp-flotante">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg>
+</a>
+
+<script src="/assets/site.js?v=20261014" defer></script>
+<!-- Événement page_not_found : tracking.js (defer) est exécuté avant DOMContentLoaded.
+     Seul le chemin est envoyé (jamais la query string, qui peut contenir des données saisies). -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      if (typeof window.avTrack === 'function') {
+        window.avTrack('page_not_found', { path: location.pathname });
+      }
+    } catch (e) { /* ne jamais casser la page */ }
+  });
+</script>
+
+</body>
+</html>

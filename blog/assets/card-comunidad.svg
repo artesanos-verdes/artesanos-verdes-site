@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-labelledby="com-title com-desc" font-family="Manrope, -apple-system, sans-serif">
+  <title id="com-title">Aislamiento de la cubierta de una comunidad de propietarios</title>
+  <desc id="com-desc">Ilustración de un edificio de viviendas de tres plantas con una capa de aislamiento bajo la cubierta común.</desc>
+
+  <!-- ===== FONDO + ESCENARIO ===== -->
+  <rect width="640" height="420" fill="#f7f7f5"/>
+  <circle cx="320" cy="180" r="150" fill="#e9f2ec"/>
+
+  <!-- ===== EDIFICIO ===== -->
+  <rect x="226" y="148" width="188" height="150" fill="#ffffff" stroke="#1a4d30" stroke-width="4" stroke-linejoin="round"/>
+  <!-- forjados -->
+  <g stroke="#a8c4b0" stroke-width="2.5" stroke-linecap="round">
+    <line x1="230" y1="196" x2="410" y2="196"/>
+    <line x1="230" y1="244" x2="410" y2="244"/>
+  </g>
+  <!-- ventanas -->
+  <g fill="#a8c4b0" stroke="#1a4d30" stroke-width="2.5">
+    <rect x="248" y="160" width="26" height="24" rx="3"/>
+    <rect x="307" y="160" width="26" height="24" rx="3"/>
+    <rect x="366" y="160" width="26" height="24" rx="3"/>
+    <rect x="248" y="208" width="26" height="24" rx="3"/>
+    <rect x="307" y="208" width="26" height="24" rx="3"/>
+    <rect x="366" y="208" width="26" height="24" rx="3"/>
+    <rect x="248" y="256" width="26" height="24" rx="3"/>
+    <rect x="366" y="256" width="26" height="24" rx="3"/>
+  </g>
+  <!-- portal -->
+  <path d="M306,298 L306,262 Q320,250 334,262 L334,298" fill="#ffffff" stroke="#1a4d30" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- ===== CUBIERTA COMÚN ===== -->
+  <path d="M200,148 L320,82 L440,148" fill="none" stroke="#1a4d30" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- ===== MANTA AISLANTE SOBRE EL ÚLTIMO FORJADO ===== -->
+  <path d="M236,148 C236,138 254,130 274,129 C292,128 300,123 320,123 C340,123 348,128 366,129 C386,130 404,138 404,148 Z" fill="#a8c4b0" stroke="#1a4d30" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#1a4d30" opacity="0.22">
+    <circle cx="262" cy="141" r="2"/>
+    <circle cx="288" cy="136" r="2.2"/>
+    <circle cx="314" cy="140" r="1.8"/>
+    <circle cx="338" cy="135" r="2.2"/>
+    <circle cx="362" cy="141" r="2"/>
+    <circle cx="384" cy="143" r="1.8"/>
+  </g>
+  <!-- marca verde -->
+  <circle cx="320" cy="112" r="6" fill="#22a044" stroke="#1a4d30" stroke-width="1.5"/>
+
+  <!-- ===== SUELO ===== -->
+  <line x1="150" y1="300" x2="490" y2="300" stroke="#a8c4b0" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ===== ETIQUETA ===== -->
+  <line x1="306" y1="344" x2="334" y2="344" stroke="#22a044" stroke-width="4" stroke-linecap="round"/>
+  <text x="320" y="378" fill="#1a4d30" font-size="26" font-weight="800" letter-spacing="5" text-anchor="middle">COMUNIDADES</text>
+</svg>

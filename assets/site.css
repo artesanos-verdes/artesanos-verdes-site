@@ -15,10 +15,30 @@
     --line-soft: rgba(26, 46, 31, 0.08);
     --display: 'Fraunces', Georgia, serif;
     --body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Accents italiques (em des titres) : terracotta sur fond clair,
+       pêche sur fond sombre (contraste AA, audit #25). */
+    --accent-on-light: var(--terracotta-deep);
+    --accent-on-dark: #f5c6a8;
+    /* Textes sur fonds sombres (forêt) : principal, atténué, vert clair. */
+    --on-dark: #e8f0ea;
+    --on-dark-muted: #c4d8ca;
+    --green-on-dark: #8dd4a8;
+    /* Liens de contenu (audit #22). */
+    --link: #0f6428; /* vert foncé : 6,4:1 sur crème, 6,8:1 sur ivoire (AA) */
+    --link-underline: rgba(184, 115, 58, 0.6);
+    /* Hauteur de la barre d'action mobile (§4.1), hors zone de sécurité. */
+    --cta-bar-h: 65px;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  /* Défilement doux seulement si l'utilisateur n'a pas demandé moins d'animations (audit #7). */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  /* Débordement horizontal (audit #1) : clip, et non hidden, pour ne pas
+     transformer html/body en conteneur de défilement (la nav sticky resterait
+     sinon bloquée). hidden reste en repli pour les navigateurs sans clip. */
+  html { overflow-x: clip; }
   body {
     font-family: var(--body);
     background: var(--ivory);
@@ -26,6 +46,7 @@
     line-height: 1.6;
     font-weight: 400;
     overflow-x: hidden;
+    overflow-x: clip;
     position: relative;
   }
 
@@ -51,8 +72,12 @@
     align-items: center;
     letter-spacing: 0.03em;
     position: relative;
-    z-index: 101;
+    /* Sous la nav (100) : le panneau du menu mobile, rattaché à la nav,
+       doit pouvoir recouvrir la topbar. */
+    z-index: 99;
   }
+  /* Icônes SVG au trait de la topbar (§10.1). */
+  .topbar svg { width: 14px; height: 14px; flex-shrink: 0; }
   .topbar .pill {
     display: inline-flex;
     align-items: center;
@@ -75,16 +100,36 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 1.2rem 2.5rem;
+    /* 0.85rem (et non 1.2rem) et logo de 112 px : nav de ~106 px au lieu de
+       137 px, pour que le bouton principal du hero tienne dans le premier
+       ecran en 1440 x 900 (verif. visuel-04). */
+    padding: 0.85rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--line-soft);
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+  }
+  /* Fond flouté porté par un pseudo-élément (audit #1) : un backdrop-filter
+     sur <nav> en faisait le bloc conteneur du panneau position:fixed du menu
+     mobile, qui élargissait alors la page à ~694 px. */
+  nav::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background: rgba(250, 246, 236, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line-soft);
-    transition: all 0.4s ease;
+    pointer-events: none;
   }
+  /* Nav compacte après 50 px de défilement (classe posée par site.js, audit #24). */
+  nav.is-scrolled {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+    box-shadow: 0 4px 30px rgba(26, 46, 31, 0.08);
+  }
+  nav.is-scrolled .logo-img { width: 96px; }
 
   .logo {
     display: flex;
@@ -93,10 +138,10 @@
     color: var(--forest);
   }
   .logo-img {
-    width: 140px;
+    width: 112px;
     height: auto;
     flex-shrink: 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, width 0.3s ease;
     display: block;
   }
   .logo:hover .logo-img { transform: scale(1.03); }
@@ -146,15 +191,63 @@
     border-radius: 100px;
     letter-spacing: 0.05em !important;
     transition: all 0.3s;
+    /* Jamais coupé sur deux lignes (audit #24). */
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
   }
   .nav-cta:hover { background: var(--brand-green-deep) !important; transform: translateY(-1px); }
   .nav-cta::after { display: none; }
 
-  .burger { display: none; background: none; border: none; cursor: pointer; width: 30px; height: 24px; position: relative; z-index: 102; }
-  .burger span { position: absolute; left: 0; width: 100%; height: 1.5px; background: var(--forest); transition: all 0.3s; }
-  .burger span:nth-child(1) { top: 4px; }
+  /* Burger : cible tactile de 44 x 44 px (audit #23), barres de 24 px centrées. */
+  .burger { display: none; background: none; border: none; cursor: pointer; width: 44px; height: 44px; position: relative; z-index: 102; flex-shrink: 0; border-radius: 8px; }
+  .burger span { position: absolute; left: 10px; width: 24px; height: 1.5px; background: var(--forest); transition: all 0.3s; }
+  .burger span:nth-child(1) { top: 15px; }
   .burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
-  .burger span:nth-child(3) { bottom: 4px; }
+  .burger span:nth-child(3) { bottom: 15px; }
+  .burger:focus-visible { outline: 2px solid var(--brand-green-deep); outline-offset: 2px; }
+
+  /* Téléphone dans la nav (§4.2) : visible seulement avec le burger. */
+  .nav-tel {
+    display: none;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: 0.35rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    color: var(--brand-green-deep);
+    background: transparent;
+    flex-shrink: 0;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  .nav-tel svg { width: 20px; height: 20px; }
+  .nav-tel:hover { background: var(--brand-green-deep); border-color: var(--brand-green-deep); color: #fff; }
+  .nav-tel:focus-visible { outline: 2px solid var(--brand-green-deep); outline-offset: 2px; }
+
+  /* « Estudio gratuito » hors du menu entre 769 et 1180 px : le burger y
+     masque le bouton du menu et aucun CTA de devis n'etait visible au premier
+     ecran (verif. visuel-04). Sous 769 px, la barre d'action le remplace. */
+  .nav-cta--compact { display: none; }
+  @media (min-width: 769px) and (max-width: 1180px) {
+    .nav-cta.nav-cta--compact {
+      display: inline-flex;
+      min-height: 44px;
+      margin-left: auto;
+      margin-right: 0.6rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .nav-cta--compact + .nav-tel { margin-left: 0; }
+    .nav-cta--compact:focus-visible { outline: 2px solid var(--brand-green-deep); outline-offset: 2px; }
+  }
+
+  /* Actions « Llamar » / « WhatsApp » en bas du menu : menu mobile seulement (§4.2). */
+  .nav-links-actions { display: none; }
 
   /* ===== HERO ===== */
   /* ===== HERO EN DEUX PANNEAUX =====
@@ -174,7 +267,7 @@
     background: linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
   }
   .hero > .hero-content {
-    padding: 3.5rem 2.5rem 3rem;
+    padding: 2.25rem 2.5rem 3rem;
     align-self: center;
     position: relative;
     z-index: 2;
@@ -272,7 +365,7 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--sage);
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.4rem;
     font-weight: 500;
   }
   .hero-eyebrow::before {
@@ -317,11 +410,18 @@
   }
 
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  /* Mention « Importe sujeto a estudio técnico previo… » (<small> dans le
+     paragraphe du hero) : sur sa propre ligne, pour ne pas meler deux tailles
+     de texte sur une meme ligne (verif. visuel-09). */
+  .hero-sub small { display: block; margin-top: 0.35rem; font-size: 0.85em; line-height: 1.5; }
 
   /* Liste compacte des 4 services, dans le panneau texte de l'accueil.
      Remplace la carte qui recouvrait la photo du hero. */
   /* ===== ARRANQUE RÁPIDO DEL HERO (chips -> formulario prellenado) ===== */
   .hero-quickstart { margin: 0 0 2rem; }
+  /* Chips = boutons pilotes par site.js : sans JS ils ne feraient rien
+     (verif. fonctionnel-01). Les liens du hero restent. */
+  html:not(.js) .hero-quickstart { display: none; }
   .hero-quickstart-label {
     margin: 0 0 0.75rem;
     font-size: 0.8rem;
@@ -352,6 +452,8 @@
     transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
   }
   .hero-chip svg { width: 16px; height: 16px; flex: none; color: #8dd4a8; transition: color 0.25s ease; }
+  /* « aire-aire » jamais coupe sur son trait d'union (verif. visuel-11). */
+  .nowrap { white-space: nowrap; }
   .hero-chip:hover, .hero-chip:focus-visible {
     background: #8dd4a8;
     border-color: #8dd4a8;
@@ -375,9 +477,8 @@
     color: #8dd4a8;
     transform: none;
   }
-  @media (max-width: 640px) {
-    .hero-quickstart-chips { grid-template-columns: 1fr; }
-  }
+  /* Sous 640 px, les chips restent en grille 2 x 2 compacte : voir le bloc
+     « HERO MOBILE COMPACT » en fin de fichier (audit #11). */
 
   .btn {
     display: inline-flex;
@@ -448,13 +549,6 @@
     border-radius: 10px;
     box-shadow: 0 24px 60px -24px rgba(10, 24, 16, 0.28);
   }
-  /* La carte d'offre etait positionnee en absolu dans .hero-visual.
-     Hors du hero, elle doit reprendre le flux normal. */
-  .offer-card--static {
-    position: static;
-    width: 100%;
-    max-width: 620px;
-  }
   @media (max-width: 768px) {
     .hero-figure { padding: 3rem 1.5rem; }
   }
@@ -469,6 +563,29 @@
     padding: 2.5rem;
     box-shadow: 0 40px 80px -20px rgba(10, 24, 16, 0.35);
     overflow: hidden;
+  }
+  /* La carte d'offre etait positionnee en absolu dans .hero-visual.
+     Hors du hero, elle doit reprendre le flux normal (audit #2) : cette regle
+     etait declaree AVANT .offer-card, qui l'emportait (position:absolute) et
+     faisait recouvrir la carte — mention legale et CTA compris — par la
+     section suivante. Placee apres et plus specifique ; relative (et non
+     static) pour que le decor ::before reste contenu dans la carte. */
+  .offer-card.offer-card--static {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 620px;
+  }
+  /* Pastille « 11+ años » : elle flottait au bord gauche du conteneur, loin de
+     la carte (audit #2). Epinglee sur le coin superieur droit de la carte
+     (620 px centree : 310 px - la moitie de la pastille), zone vide a cote de
+     l'etiquette ; masquee sur mobile, ou elle recouvrait le bouton
+     « Comprobar elegibilidad » (l'anciennete figure juste dessous, dans le
+     bandeau des chiffres). */
+  .hero-figure .hero-stamp { left: calc(50% + 235px); top: -2.5rem; bottom: auto; }
+  @media (max-width: 768px) {
+    .hero-figure .hero-stamp { display: none; }
   }
   .offer-card::before {
     content: '';
@@ -642,9 +759,15 @@
   }
   h2 em {
     font-style: italic;
-    color: var(--terracotta-deep);
+    color: var(--accent-on-light);
     font-variation-settings: "SOFT" 100, "WONK" 1;
   }
+  /* Sur fonds sombres, l'accent terracotta tombait a ~2,2-2,8:1 (audit #25). */
+  .cae-flow h2 em,
+  .sedes h2 em,
+  .metodo h2 em,
+  .cta-final h2 em,
+  .av-trust-numbers h2 em { color: var(--accent-on-dark); }
 
   h3 {
     font-family: var(--display);
@@ -807,7 +930,8 @@
     pointer-events: none;
   }
   .cae-flow h2 { color: var(--cream); }
-  .cae-flow .section-num { color: var(--brand-green); }
+  /* vert clair : le vert de marque tombait a ~4,2:1 sur la foret (petit texte) */
+  .cae-flow .section-num { color: var(--green-on-dark); }
   .cae-flow .section-num::before { background: var(--brand-green); }
 
   .cae-flow-inner { max-width: 1400px; margin: 0 auto; position: relative; }
@@ -1049,6 +1173,29 @@
     font-weight: 500;
   }
   .step-content p { font-size: 0.95rem; color: var(--forest); opacity: 0.8; line-height: 1.65; }
+  /* Hierarchie des titres corrigee (h4 -> h3 sous un h2, audit #26) : les h3
+     gardent l'aspect des anciens h4 (meme regle que celle deja posee en ligne
+     sur les pages services). */
+  .criterion h3,
+  .step-content h3 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: inherit;
+    font-variation-settings: normal;
+    color: var(--forest-deep);
+  }
+  .criterion h3 { margin-bottom: 0.6rem; }
+  .step-content h3 { margin-bottom: 0.5rem; }
+  .metodo-step h3 {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+    font-variation-settings: normal;
+    color: var(--cream);
+  }
 
   /* ===== MÉTODO  ===== */
   .metodo {
@@ -1239,6 +1386,22 @@
     text-align: right;
   }
   .spec-row .val .unit { font-size: 0.8rem; color: var(--sage); margin-left: 3px; }
+  /* Ligne « Euroclase F » du TETRIS SUPER 12 : la mention de protection
+     imposee (§0) passe sous la valeur, sur 32 caracteres au plus, pour ne pas
+     ecraser la colonne des libelles (verif. conformite-13). */
+  .spec-row .val .unit--nota {
+    display: block;
+    max-width: 32ch;
+    margin: 0.35rem 0 0 auto;
+    font-family: var(--body);
+    font-weight: 400;
+    line-height: 1.45;
+  }
+  @media (max-width: 640px) {
+    .spec-row--nota { grid-template-columns: minmax(0, 1fr); gap: 0.35rem; }
+    .spec-row--nota .val { text-align: left; }
+    .spec-row--nota .val .unit--nota { max-width: none; margin-left: 0; }
+  }
 
   .material-features { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
   .material-features li {
@@ -1372,7 +1535,7 @@
       radial-gradient(ellipse at 80% 70%, rgba(200, 148, 74, 0.06) 0%, transparent 50%);
   }
   .sedes h2 { color: var(--cream); }
-  .sedes .section-num { color: var(--brand-green); }
+  .sedes .section-num { color: var(--green-on-dark); }
   .sedes .section-num::before { background: var(--brand-green); }
   .sedes-inner { max-width: 1400px; margin: 0 auto; position: relative; }
   .sedes-header { text-align: center; margin-bottom: 4rem; }
@@ -1522,8 +1685,10 @@
     font-size: 0.82rem;
     flex: none;
   }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
-  .form-group { display: flex; flex-direction: column; }
+  /* minmax(0, 1fr) : un select a long libelle ne peut plus elargir sa colonne
+     ni deborder de la carte (audit #19). */
+  .form-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
+  .form-group { display: flex; flex-direction: column; min-width: 0; }
   .form-group.full { grid-column: 1 / -1; }
   .form-group label {
     font-size: 0.72rem;
@@ -1543,12 +1708,32 @@
     color: var(--forest-deep);
     font-family: var(--body);
     font-size: 1rem;
-    transition: border-color 0.3s, background 0.3s;
+    transition: border-color 0.3s, background-color 0.3s;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  /* Tous les select (dont le nouveau #provincia, §4.7) : meme rendu sur iOS,
+     Android et desktop, chevron dessine plutot que la fleche native. */
+  .form-group select {
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 2.6rem;
+    text-overflow: ellipsis;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%231a2e1f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px 8px;
+    cursor: pointer;
   }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--brand-green);
-    background: white;
+    /* background-color et non background : le raccourci effacait le chevron */
+    background-color: white;
+  }
+  .form-group input:focus-visible, .form-group select:focus-visible, .form-group textarea:focus-visible {
+    box-shadow: 0 0 0 3px rgba(34, 160, 68, 0.25);
   }
   .form-group textarea { resize: vertical; min-height: 100px; }
   .form button {
@@ -1569,11 +1754,14 @@
     transition: all 0.3s;
   }
   .form button:hover { background: #0f6428; transform: translateY(-2px); box-shadow: 0 15px 40px -10px rgba(34, 160, 68, 0.4); }
-  .form-note { font-size: 0.78rem; opacity: 0.6; margin-top: 1rem; line-height: 1.5; }
+  /* opacity 0.8 (et non 0.6 : 3,8:1) : ~7:1 sur le fond creme du formulaire (verif. visuel-12). */
+  .form-note { font-size: 0.78rem; opacity: 0.8; margin-top: 1rem; line-height: 1.5; }
   .form-note a { color: inherit; text-decoration: underline; }
   .form-consent { margin: 0.8rem 0 1.2rem; font-size: 0.85rem; line-height: 1.45; }
-  .form-consent label { display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; }
-  .form-consent input[type="checkbox"] { flex-shrink: 0; margin-top: 3px; width: 16px; height: 16px; accent-color: var(--brand-green-deep, #1a4d30); cursor: pointer; }
+  /* Case de consentement de 22 px, libelle entier cliquable (audit #19). */
+  .form-consent label { display: flex; align-items: flex-start; gap: 0.7rem; cursor: pointer; padding: 0.25rem 0; }
+  .form-consent input[type="checkbox"] { flex-shrink: 0; margin-top: 0; width: 22px; height: 22px; accent-color: var(--brand-green-deep, #1a4d30); cursor: pointer; }
+  .form-consent label span { padding-top: 1px; }
   .form-consent a { color: var(--brand-green-deep, #1a4d30); text-decoration: underline; font-weight: 600; }
 
   /* ===== FOOTER ===== */
@@ -1586,7 +1774,10 @@
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    /* 5 colonnes pour les 5 blocs (marque + 4 colonnes de liens, audit #31).
+       Les colonnes de liens prennent la largeur de leur contenu (l'adresse
+       e-mail ne se coupe jamais) ; la marque prend le reste. */
+    grid-template-columns: minmax(0, 1.3fr) repeat(4, max-content);
     gap: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid rgba(250, 246, 236, 0.1);
@@ -1598,7 +1789,9 @@
     margin-top: 1.5rem;
     max-width: 320px;
   }
-  .footer-col h5 {
+  /* .footer-title remplace les anciens <h5> (§4.3) avec la meme apparence. */
+  .footer-col h5,
+  .footer-title {
     font-family: var(--display);
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -1608,14 +1801,29 @@
     font-weight: 500;
   }
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-  .footer-col a {
+  .footer-col a,
+  .footer-col .footer-link-btn {
     color: var(--cream);
     text-decoration: none;
     font-size: 0.9rem;
     opacity: 0.75;
     transition: opacity 0.3s, color 0.3s;
   }
-  .footer-col a:hover { color: var(--brand-green); opacity: 1; }
+  /* « Configurar cookies » : un vrai <button> avec l'apparence des liens du
+     pied de page (et non plus un <a href="#">, verif. fonctionnel-02). */
+  .footer-link-btn {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    line-height: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .footer-link-btn:focus-visible { outline: 2px solid var(--green-on-dark); outline-offset: 2px; }
+  .footer-col a:hover,
+  .footer-col .footer-link-btn:hover { color: var(--brand-green); opacity: 1; }
   .footer-bottom {
     max-width: 1400px;
     margin: 2rem auto 0;
@@ -1623,7 +1831,10 @@
     justify-content: space-between;
     align-items: center;
     font-size: 0.8rem;
-    opacity: 0.6;
+    /* couleur attenuee plutot qu'opacity (audit #26) ; marge droite pour que
+       le bouton WhatsApp flottant ne recouvre pas le slogan (audit #31) */
+    color: var(--on-dark-muted);
+    padding-right: 90px;
     flex-wrap: wrap;
     gap: 1rem;
   }
@@ -1760,44 +1971,100 @@
   /* ===== CTA FINAL (composant partagé accueil + services) ===== */
   .cta-final { background: linear-gradient(150deg, var(--forest) 0%, var(--forest-deep) 100%); text-align: center; overflow: hidden; }
   .cta-final h2 { color: var(--cream); }
-  .cta-final h2 em { color: #f5c6a8; }
+  .cta-final h2 em { color: var(--accent-on-dark); }
   .cta-final .cta-lead { color: #e8f0ea; opacity: 0.9; font-size: 1.1rem; line-height: 1.7; max-width: 620px; margin: 0 auto 2.2rem; }
   .cta-final .cta-fine { color: #c1d9cc; opacity: 0.85; font-size: 0.82rem; letter-spacing: 0.05em; margin-top: 1.4rem; }
 
-  /* ===== CTA PERSISTANT MOBILE ===== */
+  /* ===== BARRE D'ACTION MOBILE : Llamar · WhatsApp · Estudio gratuito (§4.1) =====
+     Visible seulement sous 769 px. Elle remplace .whatsapp-float et
+     .ads-wa-sticky, masques a ces largeurs. */
   .cta-bar-movil { display: none; }
   @media (max-width: 768px) {
     .cta-bar-movil {
-      display: flex;
+      display: grid;
+      grid-template-columns: 52px 52px 1fr;
+      gap: 0.5rem;
+      align-items: stretch;
       position: fixed;
       left: 0; right: 0; bottom: 0;
       z-index: 98;
+      padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom));
+      background: var(--forest-deep);
+      border-top: 1px solid rgba(250, 246, 236, 0.12);
+      box-shadow: 0 -6px 24px rgba(10, 24, 16, 0.3);
+      transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0s;
+    }
+    /* Masquee quand le formulaire est a l'ecran (classe posee par site.js) ;
+       visibility la retire aussi du parcours clavier une fois sortie. */
+    .cta-bar-movil.oculta {
+      transform: translateY(110%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
+    }
+    .cta-bar-icon {
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.6rem;
-      padding: 1rem 1.2rem calc(1rem + env(safe-area-inset-bottom));
+      height: 48px;
+      border-radius: 12px;
+      border: 1.5px solid rgba(250, 246, 236, 0.35);
+      color: var(--cream);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .cta-bar-icon svg { width: 22px; height: 22px; }
+    /* vert WhatsApp sur fond tres sombre : ~9:1 */
+    .cta-bar-icon--wa { color: #25d366; }
+    .cta-bar-icon:active { background: rgba(250, 246, 236, 0.12); }
+    .cta-bar-main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      height: 48px;
+      padding: 0 1rem;
+      border-radius: 12px;
       background: var(--brand-green-deep);
       color: #fff;
       font-weight: 700;
       font-size: 1rem;
       letter-spacing: 0.02em;
       text-decoration: none;
-      box-shadow: 0 -6px 24px rgba(10, 24, 16, 0.3);
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      white-space: nowrap;
+      box-shadow: 0 6px 18px -8px rgba(34, 160, 68, 0.6);
     }
-    .cta-bar-movil.oculta {
-      transform: translateY(110%);
-      opacity: 0;
-      pointer-events: none;
+    .cta-bar-main:active { background: #0f6428; }
+    .cta-bar-icon:focus-visible,
+    .cta-bar-main:focus-visible { outline: 2px solid var(--green-on-dark); outline-offset: 2px; }
+
+    /* La barre remplace les bulles WhatsApp sur mobile. */
+    .whatsapp-float,
+    body.ads-visitor .ads-wa-sticky { display: none; }
+
+    /* Place reservee sous le pied de page pour qu'il ne soit jamais masque par
+       la barre ; le pseudo-element prolonge le fond du pied de page dans cette
+       marge, pour ne pas laisser une bande ivoire si la barre est masquee. */
+    body { padding-bottom: calc(var(--cta-bar-h) + env(safe-area-inset-bottom)); }
+    footer { position: relative; }
+    footer::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      top: 100%;
+      height: calc(var(--cta-bar-h) + env(safe-area-inset-bottom));
+      background: var(--forest-deep);
     }
-    /* laisser la place à la barre : WhatsApp remonte, le footer respire */
-    .whatsapp-float { bottom: calc(4.8rem + env(safe-area-inset-bottom)); right: 1.2rem; }
-    footer { padding-bottom: calc(3.5rem + env(safe-area-inset-bottom)); }
   }
 
-  /* ===== REVEAL ===== */
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 1s cubic-bezier(0.23, 1, 0.32, 1); }
-  .reveal.in { opacity: 1; transform: translateY(0); }
+  /* ===== REVEAL =====
+     Masque seulement si JavaScript tourne (classe .js posee en tete de <head>,
+     §2a) : sans JS, le H1, le formulaire et les blocs restaient invisibles
+     (audit #7). */
+  .reveal { transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 1s cubic-bezier(0.23, 1, 0.32, 1); }
+  .js .reveal { opacity: 0; transform: translateY(30px); }
+  .js .reveal.in { opacity: 1; transform: translateY(0); }
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
@@ -1817,39 +2084,8 @@
     nav { padding: 1rem 1.5rem; }
     .logo-img { width: 110px; }
     footer .logo-img { width: 115px; }
-    .nav-links {
-      position: fixed;
-      top: 0; right: 0;
-      height: 100vh;
-      width: 78%; max-width: 340px;
-      background: var(--forest);
-      flex-direction: column;
-      justify-content: center;
-      gap: 2rem;
-      transform: translateX(100%);
-      /* visibility retire le panneau ferme du parcours clavier et de l'arbre
-         d'accessibilite, et l'empeche d'elargir la page hors ecran.
-         Sans elle : 668 px de large sur un viewport de 375, et les 7 liens
-         restaient atteignables au Tab alors qu'ils sont invisibles. */
-      visibility: hidden;
-      transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1),
-                  visibility 0s linear 0.5s;
-      padding: 2rem;
-      z-index: 101;
-    }
-    .nav-links.open {
-      transform: translateX(0);
-      visibility: visible;
-      transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1),
-                  visibility 0s;
-    }
-    .nav-links a { color: var(--cream); font-size: 1rem; }
-    .nav-links .nav-cta { background: var(--brand-green-deep) !important; color: white !important; }
-    .burger { display: block; }
-    .burger.open span { background: var(--cream); }
-    .burger.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
-    .burger.open span:nth-child(2) { opacity: 0; }
-    .burger.open span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
+    /* Le panneau du menu mobile est defini dans le bloc « MENU MOBILE »
+       (burger actif jusqu'a 1180 px). */
 
     .hero { grid-template-columns: 1fr; padding: 4rem 1.5rem 3rem; gap: 3rem; }
     .hero-visual { min-height: 500px; }
@@ -1889,19 +2125,23 @@
     .step-content { padding: 1.5rem; }
 
     .form { padding: 2rem 1.5rem; }
-    .form-row { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: minmax(0, 1fr); }
 
-    .footer-main { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; }
+    /* Pied de page : la marque sur toute la largeur, puis 2 colonnes de liens
+       (1 colonne sous 480 px, voir plus bas). */
+    .footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; padding-bottom: 2rem; }
+    .footer-brand { grid-column: 1 / -1; }
     footer { padding: 3rem 1.5rem 2rem; }
-    .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-bottom { flex-direction: column; text-align: center; padding-right: 0; }
 
-    /* remonté au-dessus de la barre CTA fixe */
-    .whatsapp-float { bottom: calc(4.6rem + env(safe-area-inset-bottom)); right: 1rem; width: 54px; height: 54px; }
+    /* Entre 769 et 968 px (pas de barre d'action) : bulle un peu plus petite.
+       Sous 769 px elle est masquee, la barre d'action la remplace. */
+    .whatsapp-float { bottom: 1.5rem; right: 1.2rem; width: 54px; height: 54px; }
     .whatsapp-float svg { width: 28px; height: 28px; }
   }
 
   @media (max-width: 480px) {
-    h1 { font-size: 2.6rem; }
+    /* h1 : taille geree dans le bloc « HERO MOBILE COMPACT » (< 640 px) */
     h2 { font-size: 1.9rem; }
     .offer-price { font-size: 4.5rem; }
     .offer-card { padding: 1.8rem; }
@@ -1911,75 +2151,104 @@
     .hero-stamp .big { font-size: 1.8rem; }
   }
 
-  /* ===== TRUST NUMBERS ===== */
+  /* ===== TRUST NUMBERS « Una empresa consolidada » =====
+     Remis dans le systeme (audit #25) : fond foret, eyebrow au style
+     .section-num, titre h2 en Fraunces 300, chiffres en Fraunces 300 comme
+     .stat .n, couleurs par tokens, unites en rem. Le texte (chiffres compris)
+     n'est pas modifie. */
   .av-trust-numbers {
-    background: #2d5a3d;
-    color: #ffffff;
-    padding: 80px 24px;
+    background: var(--forest);
+    color: var(--cream);
+    padding: 6rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .av-trust-numbers::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -80px;
+    width: 460px; height: 460px;
+    background: radial-gradient(circle, rgba(34, 160, 68, 0.12) 0%, transparent 70%);
+    pointer-events: none;
   }
   .av-trust-numbers .av-container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
   }
-  .av-trust-eyebrow {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: #c1d9cc;
-    margin: 0 0 16px 0;
+  .av-trust-eyebrow,
+  .av-trust-numbers .section-num {
+    font-family: var(--display);
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: var(--green-on-dark);
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
   }
+  .av-trust-eyebrow::before,
+  .av-trust-numbers .section-num::before { content: ''; width: 1.5rem; height: 1px; background: var(--green-on-dark); }
   .av-trust-title {
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.15;
-    margin: 0 0 16px 0;
-    color: #ffffff;
+    font-family: var(--display);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+    color: var(--cream);
+    font-variation-settings: "SOFT" 30;
   }
   .av-trust-title em {
-    color: #f5c6a8;
+    color: var(--accent-on-dark);
     font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
   }
   .av-trust-intro {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #c1d9cc;
-    max-width: 720px;
-    margin: 0 0 56px 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--on-dark-muted);
+    max-width: 640px;
+    margin: 0 0 3.5rem;
   }
   .av-trust-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+    gap: 2rem;
   }
   .av-trust-stat {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 24px 0;
-    border-top: 2px solid rgba(255,255,255,0.15);
+    gap: 0.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(250, 246, 236, 0.18);
   }
   .av-trust-number {
-    /* 52px maximum : a 72px en graisse 800, « 100.000+ » (le compteur le
-       plus long) mesurait ~340px dans une colonne de ~276px et debordait
-       sur le chiffre voisin. */
-    font-size: clamp(36px, 3.6vw, 52px);
-    font-weight: 800;
+    /* Fraunces 300 comme .stat .n. Plafond conserve : « 100.000+ » (le
+       compteur le plus long) doit tenir dans une colonne de ~276 px. */
+    font-family: var(--display);
+    font-size: clamp(2.25rem, 3.6vw, 3.25rem);
+    font-weight: 300;
     line-height: 1;
-    color: #ffffff;
-    letter-spacing: -1px;
+    color: var(--cream);
+    letter-spacing: -0.01em;
+    font-variation-settings: "SOFT" 50, "WONK" 1;
     white-space: nowrap;
   }
   .av-trust-label {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cream);
+    margin-top: 0.5rem;
   }
   .av-trust-detail {
-    font-size: 14px;
-    color: #a8c4b0;
-    line-height: 1.4;
+    font-size: 0.875rem;
+    /* #a8c4b0 sur #2d5a3d ne faisait que ~4,2:1 (audit #26) */
+    color: var(--on-dark-muted);
+    line-height: 1.45;
   }
   @media (max-width: 768px) {
     /* Sur mobile il n'y a plus qu'une colonne : la photo devient un bandeau
@@ -2011,10 +2280,14 @@
     }
   }
 
+  @media (max-width: 968px) {
+    .av-trust-numbers { padding: 5rem 1.5rem; }
+  }
   @media (max-width: 640px) {
-    .av-trust-numbers { padding: 56px 20px; }
-    .av-trust-grid { gap: 24px; }
-    .av-trust-stat { padding: 20px 0; }
+    .av-trust-numbers { padding: 3.5rem 1.25rem; }
+    .av-trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; }
+    .av-trust-stat { padding: 1.25rem 0; }
+    .av-trust-number { font-size: clamp(1.9rem, 8.5vw, 2.25rem); }
   }
 
   /* ===== ADS LANDING (paid traffic) =====
@@ -2030,29 +2303,10 @@
   body.ads-visitor .form-row:has([data-field="tipo-vivienda"]),
   body.ads-visitor .form-row:has([data-field="mensaje"]) { display: none; }
 
+  /* La bulle WhatsApp « Ads » n'etait affichee que sous 769 px. A ces
+     largeurs, la barre d'action mobile (§4.1, avec son bouton WhatsApp) la
+     remplace : elle reste donc toujours masquee. */
   .ads-wa-sticky { display: none; }
-  @media (max-width: 768px) {
-    body.ads-visitor .ads-wa-sticky {
-      display: flex;
-      position: fixed;
-      bottom: 16px; right: 16px;
-      width: 56px; height: 56px;
-      background: #25D366;
-      border-radius: 50%;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
-      z-index: 9999;
-      text-decoration: none;
-      animation: ads-wa-pulse 2s ease-in-out infinite;
-    }
-    body.ads-visitor .ads-wa-sticky svg { width: 30px; height: 30px; fill: #fff; }
-    body.ads-visitor .whatsapp-float { display: none; }
-  }
-  @keyframes ads-wa-pulse {
-    0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5), 0 0 0 0 rgba(37, 211, 102, 0.6); }
-    50%      { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5), 0 0 0 14px rgba(37, 211, 102, 0); }
-  }
 
 /* ===== Menú "Servicios" (dropdown) — refonte multiservicio ===== */
 .nav-has-sub { position: relative; }
@@ -2073,15 +2327,138 @@
 .nav-sub a::after { display: none !important; }
 .nav-sub a:hover { background: var(--cream); }
 
-@media (max-width: 968px) {
+/* ===== MENU MOBILE (burger actif jusqu'a 1180 px — audit #23, #24) =====
+   Etat ouvert : html.menu-open (§3) ou, en repli, .open sur #navLinks et
+   #burger (ancien site.js). Plein ecran sous 769 px ; au-dessus, panneau
+   lateral et voile .nav-overlay (cree par site.js) qui ferme au clic.
+   Entre 969 et 1180 px, les 7 liens ne tenaient plus sur une ligne. */
+@media (max-width: 1180px) {
+  .burger { display: block; }
+  .nav-tel { display: inline-flex; }
+
+  .nav-links {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: min(420px, 88vw);
+    background: var(--forest);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    /* place laissee en haut pour la nav (et la topbar, visible au-dessus de
+       640 px tant que la page n'a pas defile) : le burger reste cliquable */
+    padding: 8.5rem 1.75rem calc(1.5rem + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    box-shadow: -24px 0 60px rgba(10, 24, 16, 0.3);
+    transform: translateX(100%);
+    /* visibility retire le panneau ferme du parcours clavier et de l'arbre
+       d'accessibilite. */
+    visibility: hidden;
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1),
+                visibility 0s linear 0.45s;
+    z-index: 101;
+  }
+  .nav-links.open,
+  html.menu-open .nav-links {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1),
+                visibility 0s;
+  }
+  /* Liens de 48 px de haut minimum, separes par un filet. */
+  .nav-links > li { border-bottom: 1px solid rgba(250, 246, 236, 0.1); }
+  .nav-links a { color: var(--cream); font-size: 0.95rem; }
+  .nav-links > li > a { display: flex; align-items: center; min-height: 48px; padding: 0.4rem 0; }
+  .nav-links a::after { display: none; }
+  .nav-links > li > a:hover { color: var(--green-on-dark); }
+  .nav-links a:focus-visible { outline: 2px solid var(--green-on-dark); outline-offset: 2px; }
+
+  /* Sous-menu « Servicios » a plat ; retours a la ligne autorises (le libelle
+     « Aerotermia (bomba de calor) » debordait du panneau). */
   .nav-sub {
     /* visibility: inherit et non visible — sinon le sous-menu reste
        atteignable au clavier quand le panneau mobile est ferme. */
     position: static; opacity: 1; visibility: inherit; transform: none;
     box-shadow: none; border: none; background: transparent;
-    min-width: 0; padding: .2rem 0 .4rem 1rem;
+    min-width: 0; padding: 0 0 .6rem .9rem;
   }
-  .nav-sub a { color: var(--cream); font-size: .95rem; padding: .45rem .2rem; }
+  .nav-sub a {
+    display: flex; align-items: center; min-height: 40px;
+    color: var(--on-dark); font-size: .95rem; padding: .4rem .5rem;
+    white-space: normal; text-transform: none; letter-spacing: .01em;
+  }
+  .nav-sub a:hover { background: rgba(250, 246, 236, 0.07); color: #fff; }
+
+  /* « Estudio gratuito », « Llamar » et « WhatsApp » regroupes en bas du panneau. */
+  .nav-links > li:has(> .nav-cta) { margin-top: auto; padding-top: 1.5rem; border-bottom: 0; }
+  .nav-links .nav-cta {
+    justify-content: center;
+    min-height: 50px;
+    font-size: 0.95rem;
+    background: var(--brand-green-deep) !important;
+    color: #fff !important;
+  }
+  .nav-links .nav-links-actions { display: flex; gap: 0.75rem; padding-top: 0.75rem; border-bottom: 0; }
+  .nav-links .nav-links-actions .btn {
+    flex: 1 1 0;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.7rem 1rem;
+    background: transparent;
+    color: var(--cream);
+    border: 1.5px solid rgba(250, 246, 236, 0.45);
+    box-shadow: none;
+    font-size: 0.85rem;
+  }
+  .nav-links .nav-links-actions .btn:hover {
+    background: var(--cream);
+    border-color: var(--cream);
+    color: var(--forest-deep);
+    transform: none;
+  }
+
+  /* Burger en croix, clair sur le panneau. */
+  .burger.open span,
+  html.menu-open .burger span { background: var(--cream); }
+  .burger.open span:nth-child(1),
+  html.menu-open .burger span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+  .burger.open span:nth-child(2),
+  html.menu-open .burger span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3),
+  html.menu-open .burger span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
+
+  /* La page ne defile plus derriere le menu ouvert (html seulement : sur
+     body, overflow:hidden casserait la nav sticky). */
+  html.menu-open { overflow: hidden; }
+}
+
+/* Voile cliquable derriere le panneau (element .nav-overlay cree par site.js). */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(10, 24, 16, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+html.menu-open .nav-overlay {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+  transition: opacity 0.3s ease, visibility 0s;
+}
+@media (min-width: 1181px) {
+  .nav-overlay { display: none; }
+}
+
+/* Telephone : panneau plein ecran (le voile n'a alors plus de surface visible). */
+@media (max-width: 768px) {
+  .nav-links { width: 100%; box-shadow: none; }
 }
 
 /* ===== Sección Servicios (hub multiservicio) ===== */
@@ -2092,9 +2469,647 @@
 .servicio-card { display: flex; flex-direction: column; background: var(--ivory); border: 1px solid var(--line-soft); border-radius: 20px; overflow: hidden; text-decoration: none; color: inherit; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .servicio-card:hover { transform: translateY(-6px); box-shadow: 0 22px 50px rgba(26,46,31,.12); border-color: var(--brand-green); }
 .servicio-card img { width: 100%; height: auto; display: block; background: #eef4ee; border-bottom: 1px solid var(--line-soft); }
-.servicio-card-body { padding: 1.6rem 1.7rem 1.8rem; display: flex; flex-direction: column; gap: .7rem; }
+/* flex: 1 : le corps s'etire jusqu'en bas de la carte, et les liens « Ver el servicio » d'une meme rangee s'alignent (verif. visuel-05). */
+.servicio-card-body { padding: 1.6rem 1.7rem 1.8rem; display: flex; flex-direction: column; gap: .7rem; flex: 1 1 auto; }
 .servicio-card-body h3 { font-family: var(--display); font-size: 1.5rem; color: var(--forest); }
 .servicio-card-body p { color: var(--sage); font-size: .98rem; line-height: 1.55; flex: 1; }
-.servicio-card-link { display: inline-flex; align-items: center; gap: .4rem; color: var(--brand-green-deep); font-weight: 600; }
+.servicio-card-link { display: inline-flex; align-items: center; gap: .4rem; color: var(--brand-green-deep); font-weight: 600; margin-top: auto; }
 .servicio-card:hover .servicio-card-link { gap: .7rem; }
 @media (max-width: 968px) { .servicios-grid { grid-template-columns: 1fr; } }
+
+/* =====================================================================
+   LOT 1 — REFONTE (14/10/2026)
+   Composants du cahier des charges (§4, §5, §10) et corrections de
+   l'audit d'attractivite. Les numeros « audit #n » renvoient aux
+   quick fixes de l'audit.
+   ===================================================================== */
+
+/* ===== LIENS DE CONTENU (audit #22) =====
+   Les liens sans classe des paragraphes s'affichaient en bleu navigateur.
+   Specificite (0,0,1) grace a :where() : toute regle de composant prime
+   (.form-note a, boutons des panneaux .form-ok/.form-error...). */
+:where(section :is(p, .flow-note, .av-aviso), .faq-body) a:where(:not([class])) {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+:where(section :is(p, .flow-note, .av-aviso), .faq-body) a:where(:not([class])):hover {
+  color: var(--forest-deep);
+  text-decoration-color: currentColor;
+}
+/* Sur les fonds sombres : couleur claire (le vert de marque y serait illisible). */
+:where(.hero, .cae-flow, .metodo, .sedes, .cta-final, .av-trust-numbers) :where(p, .flow-note) a:where(:not([class])) {
+  color: var(--accent-on-dark);
+  text-decoration-color: rgba(245, 198, 168, 0.55);
+}
+:where(.hero, .cae-flow, .metodo, .sedes, .cta-final, .av-trust-numbers) :where(p, .flow-note) a:where(:not([class])):hover {
+  color: #fff;
+}
+
+/* ===== LIEN D'EVITEMENT + CONTENU PRINCIPAL (§4.3) ===== */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  z-index: 1000;
+  padding: 0.8rem 1.2rem;
+  background: var(--forest-deep);
+  color: var(--cream);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+#contenido:focus { outline: none; }
+
+/* ===== FIL D'ARIANE (§4.4) =====
+   C'est un <nav> : on neutralise les styles generiques de la nav principale
+   (sticky, flou, bordure). Fonctionne en bandeau clair entre la nav et le
+   hero, ou dans le hero sombre (variante plus bas). */
+nav.breadcrumb {
+  position: static;
+  z-index: auto;
+  display: block;
+  min-height: 0;
+  padding: 0.85rem 2.5rem;
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line-soft);
+  box-shadow: none;
+  transition: none;
+}
+nav.breadcrumb::before { content: none; }
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+.breadcrumb li { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--sage); }
+/* Chevron APRES chaque element sauf le dernier (et non avant chaque element
+   sauf le premier) : quand le fil passe sur deux lignes, il reste en fin de
+   1re ligne au lieu d'ouvrir la 2e (verif. visuel-07). */
+.breadcrumb li:not(:last-child)::after {
+  content: '';
+  width: 6px; height: 6px;
+  border-top: 1.5px solid var(--terracotta);
+  border-right: 1.5px solid var(--terracotta);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.breadcrumb a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+}
+.breadcrumb a:hover { color: var(--brand-green-deep); text-decoration-color: currentColor; }
+.breadcrumb [aria-current="page"] { color: var(--forest-deep); font-weight: 600; }
+/* Variante : fil d'Ariane place dans le hero sombre. */
+.hero nav.breadcrumb { padding: 0; margin: 0 0 1.5rem; background: transparent; border: 0; }
+.hero .breadcrumb li { color: var(--on-dark-muted); }
+.hero .breadcrumb a { color: var(--on-dark); text-decoration-color: rgba(232, 240, 234, 0.4); }
+.hero .breadcrumb a:hover { color: #fff; }
+.hero .breadcrumb [aria-current="page"] { color: #fff; }
+.hero .breadcrumb li:not(:last-child)::after { border-color: var(--accent-on-dark); }
+@media (max-width: 968px) {
+  nav.breadcrumb { padding: 0.7rem 1.5rem; }
+}
+
+/* ===== BLOC « GUIAS » : liens vers le blog (§4.5) ===== */
+.guias { background: var(--cream); }
+.guias-inner { max-width: 1200px; margin: 0 auto; }
+.guias .section-num { justify-content: center; }
+.guias h2 { text-align: center; }
+.guias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+/* 5 guides ou plus (accueil : 6) : 3 colonnes, pas de ligne orpheline. */
+.guias-grid:has(> :nth-child(5)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.guia-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.6rem 1.5rem 1.4rem;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--forest);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.guia-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-green);
+  box-shadow: 0 20px 44px -18px rgba(26, 46, 31, 0.22);
+}
+.guia-card:focus-visible { outline: 3px solid var(--brand-green-deep); outline-offset: 3px; }
+.guia-cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--terracotta-deep);
+}
+.guia-title {
+  flex: 1;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.22rem;
+  line-height: 1.25;
+  color: var(--forest-deep);
+  font-variation-settings: "SOFT" 40;
+}
+.guia-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--brand-green-deep);
+}
+.guia-more::after { content: '→'; transition: transform 0.25s ease; }
+.guia-card:hover .guia-more::after { transform: translateX(4px); }
+/* (regles :has() separees : un navigateur sans :has() ignorerait toute la liste) */
+@media (max-width: 968px) {
+  .guias-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2.2rem; }
+  .guias-grid:has(> :nth-child(5)) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Telephone : rangee defilable au doigt (la carte suivante depasse pour
+   signaler le defilement) au lieu de 4 a 6 cartes empilees (~1 400 px). */
+@media (max-width: 560px) {
+  .guias-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 82%;
+    gap: 0.9rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.5rem;
+    scrollbar-width: thin;
+    margin: 2rem -1.5rem 0;
+    padding: 0.25rem 1.5rem 1rem;
+  }
+  .guias-grid:has(> :nth-child(5)) { grid-template-columns: none; }
+  .guia-card { scroll-snap-align: start; padding: 1.3rem 1.25rem 1.2rem; }
+  .guia-card:hover { transform: none; }
+}
+
+/* ===== FAQ — accordeon <details> (§4.6) =====
+   Regles deplacees a l'identique depuis les <style> inline de
+   servicios/aerotermia, aire-aire et aislamiento-cubierta-inclinada.
+   Seule difference entre les trois copies : cubierta n'avait pas d'espace
+   entre deux paragraphes d'une meme reponse (margin: 0) ; la version
+   aerotermia/aire-aire (0.8rem, rien apres le dernier) est retenue. */
+.faq-list { border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.4rem 0.2rem;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.12rem;
+  color: var(--forest-deep);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--brand-green);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item .faq-body { padding: 0 0.2rem 1.5rem; }
+.faq-item .faq-body p { font-size: 0.97rem; line-height: 1.7; color: var(--forest); opacity: 0.85; margin: 0 0 0.8rem; }
+.faq-item .faq-body p:last-child { margin-bottom: 0; }
+/* Complement : focus clavier visible sur les questions. */
+.faq-item summary:focus-visible { outline: 2px solid var(--brand-green-deep); outline-offset: 2px; border-radius: 4px; }
+
+/* FAQ « Antes de decidir » de l'accueil (§10.4) : meme accordeon, colonne de 820 px. */
+.faq-home { background: var(--ivory); }
+.faq-home > * { max-width: 820px; margin-left: auto; margin-right: auto; }
+.faq-home .section-num { justify-content: center; }
+.faq-home h2 { text-align: center; margin-bottom: 2.5rem; }
+
+/* ===== FORMULAIRE : avertissement, confirmation, echec (§4.7, §5) ===== */
+/* Avertissement d'eligibilite (#avisoElegibilidad, rempli par site.js). */
+.form-aviso {
+  margin: -0.5rem 0 1.5rem;
+  padding: 1rem 1.2rem;
+  background: rgba(200, 148, 74, 0.12);
+  border-left: 3px solid var(--terracotta);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--forest-deep);
+}
+.form-aviso[hidden] { display: none; }
+/* .form-aviso doit l'emporter sur « .form button » (bouton vert plein). */
+.form-aviso .form-aviso-btn {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.8rem 0 0;
+  padding: 0.65rem 1.1rem;
+  background: var(--ivory);
+  color: var(--forest-deep);
+  border: 1.5px solid var(--forest);
+  border-radius: 100px;
+  font-family: var(--body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  text-align: left;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.form-aviso .form-aviso-btn:hover {
+  background: var(--forest);
+  color: var(--cream);
+  transform: none;
+  box-shadow: none;
+}
+.form-aviso .form-aviso-btn:focus-visible { outline: 2px solid var(--brand-green-deep); outline-offset: 2px; }
+
+/* Panneaux de confirmation (.form-ok) et d'echec (.form-error). */
+.form-ok,
+.form-error {
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+  color: var(--forest-deep);
+  line-height: 1.6;
+  scroll-margin-top: 100px;
+}
+.form-ok {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--brand-green-deep);
+}
+/* Dans la grille .contacto-inner, le panneau ne s'etire pas a la hauteur
+   de la colonne de coordonnees (sinon ~400 px vides sous le contenu). */
+.contacto-inner .form-ok { align-self: start; }
+.form-ok:focus { outline: none; }
+.form-ok:focus-visible { outline: 3px solid var(--brand-green); outline-offset: 3px; }
+.form-ok > :first-child,
+.form-ok .form-ok-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1.15;
+  color: var(--forest-deep);
+  margin-bottom: 0.9rem;
+  font-variation-settings: "SOFT" 40;
+}
+.form-ok p { font-size: 1rem; margin-bottom: 0.7rem; }
+.form-ok p:last-child { margin-bottom: 0; }
+/* ligne d'aide « Por ejemplo: ... » sous le bouton WhatsApp */
+.form-ok .form-ok-ayuda { margin-top: 0.6rem; font-size: 0.9rem; color: var(--sage); }
+/* Panneau d'echec : insere dans le formulaire, sous le bouton d'envoi. */
+.form-error {
+  margin: 1.5rem 0 0;
+  background: #fbefe8;
+  border: 1px solid rgba(138, 79, 34, 0.25);
+  border-left: 4px solid #a8432a;
+}
+.form-error p { font-size: 0.97rem; font-weight: 600; margin-bottom: 1rem; }
+.form-error p:last-child { margin-bottom: 0; }
+.form-error-acciones { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.form-error .form-error-acciones :is(a, button) { margin: 0; }
+/* Boutons d'action des deux panneaux, quel que soit leur element (a/button)
+   ou leur classe ; la couleur suit la destination du lien. */
+.form-ok :is(a, button),
+.form-error :is(a, button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  margin: 0.3rem 0.5rem 0.3rem 0;
+  padding: 0.75rem 1.3rem;
+  border-radius: 100px;
+  border: 1.5px solid var(--forest);
+  background: var(--forest);
+  color: var(--cream);
+  font-family: var(--body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+/* WhatsApp : vert fonce de la marque, blanc ~5:1 */
+.form-ok :is(a, button)[href*="wa.me"],
+.form-error :is(a, button)[href*="wa.me"] { background: var(--brand-green-deep); border-color: var(--brand-green-deep); color: #fff; }
+/* E-mail : action secondaire, en contour */
+.form-error :is(a, button)[href^="mailto:"] { background: transparent; color: var(--forest-deep); }
+.form-ok :is(a, button):hover,
+.form-error :is(a, button):hover { background: var(--forest-deep); border-color: var(--forest-deep); color: #fff; transform: none; box-shadow: none; }
+.form-ok :is(a, button):focus-visible,
+.form-error :is(a, button):focus-visible { outline: 3px solid var(--brand-green); outline-offset: 2px; }
+.form-ok svg,
+.form-error svg { width: 18px; height: 18px; flex-shrink: 0; }
+@media (max-width: 968px) {
+  /* comme le formulaire, le panneau de confirmation passe avant les coordonnees */
+  .contacto-inner .form-ok { order: -1; }
+}
+@media (max-width: 480px) {
+  .form-ok, .form-error { padding: 1.5rem 1.25rem; }
+  .form-ok :is(a, button),
+  .form-error :is(a, button) { display: flex; width: 100%; margin: 0.5rem 0 0; }
+}
+
+/* ===== CARTES SERVICES DE L'ACCUEIL : photos (§10.2) ===== */
+.servicios .section-num { justify-content: center; }
+.servicio-card-media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #eef4ee;
+  border-bottom: 1px solid var(--line-soft);
+}
+.servicio-card .servicio-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: 0;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.servicio-card:hover .servicio-card-media img { transform: scale(1.04); }
+/* Bouton « ¿No sabes cuál elegir? » sous la grille. */
+.servicios-quiz { margin-top: 2.5rem; text-align: center; }
+/* Sans JS, le bouton du test est masque (quiz.css) : le paragraphe vide aussi. */
+html:not(.js) .servicios-quiz { display: none; }
+.servicios-quiz .btn { white-space: normal; justify-content: center; text-align: center; }
+/* Libelle sur deux lignes equilibrees, sans « minuto » seul (verif. visuel-10). */
+.servicios-quiz .btn,
+.hub-quiz .btn { text-wrap: balance; }
+
+/* ===== « ¿TRABAJAMOS EN TU ZONA? » (§10.3) ===== */
+.zonas { background: var(--cream); }
+.zonas-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+.zonas .section-num { justify-content: center; }
+.zonas-intro {
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--forest);
+}
+.zonas-grupos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem 1.5rem;
+}
+/* Castilla y Leon (8 provinces) sur toute la largeur, les 4 autres dessous. */
+.zonas-grupo:first-child { grid-column: 1 / -1; }
+.zonas-ccaa {
+  margin-bottom: 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--terracotta-deep);
+}
+.zonas-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.zona-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.55rem 1.1rem;
+  border: 1.5px solid var(--line);
+  border-radius: 100px;
+  background: var(--ivory);
+  color: var(--forest-deep);
+  font-family: var(--body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.zona-chip:hover { border-color: var(--brand-green-deep); color: var(--brand-green-deep); }
+.zona-chip:focus-visible { outline: 3px solid var(--brand-green-deep); outline-offset: 2px; }
+/* Province selectionnee (aria-pressed exclusif, gere par site.js). */
+.zona-chip[aria-pressed="true"] {
+  background: var(--brand-green-deep);
+  border-color: var(--brand-green-deep);
+  color: #fff;
+}
+.zona-chip[aria-pressed="true"]::before {
+  content: '';
+  width: 10px; height: 6px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(-45deg);
+}
+.zonas-resultado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  max-width: 680px;
+  margin: 2.5rem auto 0;
+  padding: 1.4rem 1.6rem;
+  background: var(--ivory);
+  border: 1px solid var(--brand-green);
+  border-radius: 12px;
+}
+.zonas-resultado[hidden] { display: none; }
+.zonas-resultado-txt {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--forest-deep);
+  font-variation-settings: "SOFT" 40;
+}
+.zonas-otra { margin-top: 2rem; font-size: 0.95rem; color: var(--forest); }
+@media (max-width: 768px) {
+  .zonas-grupos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; align-items: start; }
+  /* Intitules sur 1 ou 2 lignes (« Principado de Asturias ») : hauteur de
+     2 lignes, texte cale en bas, pour que les puces s'alignent d'une
+     colonne a l'autre (verif. visuel-06). */
+  .zonas-ccaa { min-height: 2.9em; line-height: 1.45; display: flex; align-items: flex-end; justify-content: center; }
+  .zonas-grupo:first-child .zonas-ccaa { min-height: 0; }
+  .zonas-resultado { padding: 1.2rem; }
+  .zonas-resultado .btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 480px) {
+  /* Puces un peu plus compactes : Lugo et Ourense tiennent cote a cote
+     dans une demi-colonne a 390 px. */
+  .zonas-chips { gap: 0.4rem; }
+  .zona-chip { padding: 0.5rem 0.85rem; font-size: 0.88rem; }
+}
+
+/* ===== PIED DE PAGE responsive (audit #31) ===== */
+@media (min-width: 969px) and (max-width: 1180px) {
+  /* 5 colonnes trop etroites a ces largeurs : la marque passe au-dessus. */
+  .footer-main { grid-template-columns: repeat(4, max-content); justify-content: space-between; gap: 2.5rem 2rem; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  /* liens de 44 px de haut (cible tactile) au lieu de 19 px */
+  .footer-col ul { gap: 0; }
+  /* overflow-wrap : l'adresse e-mail ne deborde pas d'une colonne etroite */
+  .footer-col a { display: flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+  .footer-col .footer-link-btn { display: flex; align-items: center; min-height: 44px; }
+  .footer-col h5,
+  .footer-title { margin-bottom: 0.6rem; }
+}
+@media (max-width: 480px) {
+  .footer-main { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ===== HEROS : variante 800 px sous 968 px (audit #27, §9) ===== */
+@media (max-width: 968px) {
+  .hero-bg--home {
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/blog/assets/artisan-hero.jpg') center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/blog/assets/artisan-hero-800.webp') type('image/webp'), url('/blog/assets/artisan-hero.jpg') type('image/jpeg')) center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+  }
+  .hero-bg--desvan {
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/assets/servicios/hero-desvan.jpg') center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/assets/servicios/hero-desvan-800.webp') type('image/webp'), url('/assets/servicios/hero-desvan.jpg') type('image/jpeg')) center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+  }
+  .hero-bg--cubierta-inclinada {
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/assets/servicios/hero-cubierta-inclinada.jpg') center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/assets/servicios/hero-cubierta-inclinada-800.webp') type('image/webp'), url('/assets/servicios/hero-cubierta-inclinada.jpg') type('image/jpeg')) center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+  }
+  .hero-bg--aerotermia {
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/assets/servicios/hero-aerotermia.jpg') center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/assets/servicios/hero-aerotermia-800.webp') type('image/webp'), url('/assets/servicios/hero-aerotermia.jpg') type('image/jpeg')) center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+  }
+  .hero-bg--aire-aire {
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      url('/assets/servicios/hero-aire-aire.jpg') center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+    background:
+      linear-gradient(90deg, rgba(10,24,16,1) 0%, rgba(10,24,16,0.55) 8%, rgba(10,24,16,0) 22%),
+      image-set(url('/assets/servicios/hero-aire-aire-800.webp') type('image/webp'), url('/assets/servicios/hero-aire-aire.jpg') type('image/jpeg')) center center / cover no-repeat,
+      linear-gradient(135deg, #1a4d30 0%, #0a1810 100%);
+  }
+}
+
+/* ===== HERO MOBILE COMPACT < 640 px (audit #11) =====
+   Objectif : « ¿Qué quieres mejorar? » et au moins 2 chips dans les 844
+   premiers pixels (ils etaient a 1 105 px). Le telephone passe dans la nav
+   (.nav-tel), la topbar est masquee. */
+@media (max-width: 640px) {
+  .topbar { display: none; }
+  /* 64 px : logo de 84 px (58 px de haut) + 2 px de marge + filet */
+  nav { min-height: 64px; padding: 2px 1rem; }
+  nav.is-scrolled { padding-top: 2px; padding-bottom: 2px; }
+  .logo-img,
+  nav.is-scrolled .logo-img { width: 84px; }
+  /* sans topbar, la nav ne fait plus que 64 px : le panneau du menu remonte */
+  .nav-links { padding-top: 5.5rem; }
+
+  .hero { padding: 0 0 2.5rem; min-height: 0; }
+  /* Bandeau de 128 px (et non 150) : en 390 x 844, le bas du bouton
+     principal du hero passait sous la barre #ctaBarMovil (verif. visuel-03). */
+  .hero-bg { height: 128px; min-height: 0; max-height: none; }
+  .hero > .hero-content { padding: calc(128px + 1rem) 1.25rem 0; }
+  .hero-eyebrow { margin-bottom: 0.9rem; font-size: 0.7rem; letter-spacing: 0.2em; }
+  .hero h1 br { display: none; }
+  h1 { font-size: clamp(2rem, 8.2vw, 2.4rem); line-height: 1.05; margin-bottom: 1rem; }
+  .hero-sub { font-size: 1rem; line-height: 1.6; margin-bottom: 1.4rem; }
+  .hero-quickstart { margin-bottom: 1.2rem; }
+  .hero-quickstart-label { margin-bottom: 0.6rem; font-size: 0.74rem; }
+  .hero-quickstart-chips { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .hero-chip {
+    min-height: 48px;
+    padding: 0.55rem 0.75rem;
+    gap: 0.45rem;
+    border-radius: 14px;
+    font-size: 0.86rem;
+    line-height: 1.25;
+  }
+  .hero-chip.hero-chip--nose { min-height: 44px; margin-top: 0.4rem; padding: 0.45rem 0.2rem; border-radius: 0; }
+  .hero-trust { display: none; }
+
+  /* Paragraphes longs alignes a gauche (ils etaient centres sur 12 a 20 lignes, audit #31) */
+  :is(.euro, .obligados, .certs, .servicios, .cta-final) p:not(.section-num):not(.cta-fine):not(.servicios-quiz) { text-align: left; }
+  .certs-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ===== MOINS D'ANIMATIONS (prefers-reduced-motion, audit #7) ===== */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .servicio-card:hover .servicio-card-media img { transform: none; }
+}

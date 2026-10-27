@@ -2,11 +2,12 @@
 <html lang="es-ES">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2d5a3d">
 
-<title>Blog — Aislamiento, sistema CAE y eficiencia energética</title>
-<meta name="description" content="Artículos y guías sobre aislamiento de cubiertas, aerotermia, el sistema CAE y eficiencia energética en viviendas españolas.">
+<title>Guías de aislamiento, aerotermia y sistema CAE | Blog</title>
+<meta name="description" content="Guías para aislar el desván, la buhardilla o el tejado y cambiar la caldera de gasoil por aerotermia, con la financiación privada del sistema CAE.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://artesanosverdes.com/blog/">
 
@@ -14,10 +15,19 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Los Artesanos Verdes">
-<meta property="og:title" content="Blog — Los Artesanos Verdes">
-<meta property="og:description" content="Artículos sobre aislamiento, aerotermia, financiación privada a través del sistema CAE y eficiencia energética en viviendas españolas.">
+<meta property="og:title" content="Guías de aislamiento, aerotermia y sistema CAE | Blog">
+<meta property="og:description" content="Guías para aislar el desván, la buhardilla o el tejado y cambiar la caldera de gasoil por aerotermia, con la financiación privada del sistema CAE.">
 <meta property="og:url" content="https://artesanosverdes.com/blog/">
 <meta property="og:image" content="https://artesanosverdes.com/blog/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="Técnico insuflando lana mineral en el desván de una vivienda">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guías de aislamiento, aerotermia y sistema CAE | Blog">
+<meta name="twitter:description" content="Guías para aislar el desván, la buhardilla o el tejado y cambiar la caldera de gasoil por aerotermia, con la financiación privada del sistema CAE.">
+<meta name="twitter:image" content="https://artesanosverdes.com/blog/assets/og-default.jpg">
 
 <link rel="icon" type="image/png" href="/logo.png">
 
@@ -26,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/blog/assets/blog.css">
+<link rel="stylesheet" href="/blog/assets/blog.css?v=20261014">
 
 <!-- Google Consent Mode v2 defaults (must precede gtag.js) -->
 <script>
@@ -49,64 +59,80 @@ function gtag(){dataLayer.push(arguments);}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NBF0X2893"></script>
 <script>
 gtag('js', new Date());
-gtag('config', 'G-0NBF0X2893', {
-  page_path: '/blog/',
-  page_title: 'Blog — Los Artesanos Verdes'
-});
+// Hors production (localhost, previsualizaciones…) no se envía nada a GA4 ni a Google Ads.
+if (location.hostname !== 'artesanosverdes.com') { window['ga-disable-G-0NBF0X2893'] = true; window['ga-disable-AW-3024885050'] = true; }
+gtag('config', 'G-0NBF0X2893');
 // Google Ads tag — remarketing audiences (conversions imported from GA4)
 gtag('config', 'AW-3024885050');
 </script>
+
+<!-- Medición propia (avTrack, atribución, clics de contacto) -->
+<script defer src="/assets/tracking.js?v=20261014"></script>
 
 <!-- Cookie consent banner -->
 <link rel="stylesheet" href="/assets/cookie-banner.css">
 <script defer src="/assets/cookie-banner.js"></script>
 
-<!-- Magazine enhancements: reading progress + TOC + reveal -->
-<script defer src="/blog/assets/blog.js"></script>
+<!-- Blog: progreso de lectura, sumario, filtros por categoría -->
+<script defer src="/blog/assets/blog.js?v=20261014"></script>
 
-<!-- Schema.org Blog -->
+<!-- Schema.org Blog + BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Blog de Los Artesanos Verdes",
-  "description": "Artículos sobre aislamiento, aerotermia, financiación privada a través del sistema CAE y eficiencia energética en España",
-  "url": "https://artesanosverdes.com/blog/",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Los Artesanos Verdes SL",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://artesanosverdes.com/logo.png"
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://artesanosverdes.com/blog/#blog",
+      "name": "Guías de aislamiento, aerotermia y sistema CAE",
+      "alternateName": "Blog de Los Artesanos Verdes",
+      "description": "Guías para aislar el desván, la buhardilla o el tejado y cambiar la caldera de gasoil por aerotermia, con la financiación privada del sistema CAE.",
+      "url": "https://artesanosverdes.com/blog/",
+      "inLanguage": "es-ES",
+      "isPartOf": { "@id": "https://artesanosverdes.com/#website" },
+      "publisher": { "@id": "https://artesanosverdes.com/#organization", "name": "Los Artesanos Verdes" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://artesanosverdes.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://artesanosverdes.com/blog/" }
+      ]
     }
-  },
-  "inLanguage": "es-ES"
+  ]
 }
 </script>
 </head>
 <body>
 
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
 <!-- ===== Nav ===== -->
-<nav class="av-nav">
+<nav class="av-nav" aria-label="Principal">
   <div class="av-nav-inner">
-    <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes">
-      <img src="/logo.png" alt="" loading="eager">
-      <span>Los Artesanos Verdes</span>
-    </a>
+    <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
-      <li><a href="/#servicios">Servicios</a></li>
-      <li><a href="/#cae">¿Qué es el CAE?</a></li>
-      <li><a href="/#proceso">Proceso</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/#contacto" class="av-nav-cta">Estudio gratuito</a></li>
+      <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
+      <li class="av-nav-link"><a href="/blog/" aria-current="page">Blog</a></li>
+      <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
+      <li><a href="/#contacto" class="av-nav-cta" data-cta="nav">Estudio gratuito</a></li>
     </ul>
   </div>
 </nav>
 
+<main id="contenido">
+
 <!-- ===== Hero ===== -->
-<section class="av-blog-hero">
+<section class="av-blog-hero" data-zone="blog-hero">
+  <nav class="av-breadcrumb" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Blog</span>
+  </nav>
+
   <span class="av-blog-hero-eyebrow">blog editorial</span>
-  <h1>El <em>Blog.</em></h1>
+  <h1>Guías sobre aislamiento, aerotermia y <em>el sistema CAE</em></h1>
 
   <div class="av-blog-hero-ornament" aria-hidden="true">
     <svg viewBox="0 0 24 24" fill="none">
@@ -126,342 +152,362 @@ gtag('config', 'AW-3024885050');
 <!-- Subtle divider before grid -->
 <div class="av-section-divider" aria-hidden="true"></div>
 
+<!-- ===== Filtros por categoría (§10.7) — activados por blog.js ===== -->
+<div class="av-blog-filters" role="group" aria-label="Filtrar las guías por categoría">
+  <button type="button" class="av-filter-chip" data-filter="todas" aria-pressed="true"><span class="av-filter-label">Todas</span> <span class="av-filter-count" aria-hidden="true">18</span></button>
+  <button type="button" class="av-filter-chip" data-filter="sistema-cae" aria-pressed="false"><span class="av-filter-label">Sistema CAE</span> <span class="av-filter-count" aria-hidden="true">4</span></button>
+  <button type="button" class="av-filter-chip" data-filter="aislamiento" aria-pressed="false"><span class="av-filter-label">Aislamiento</span> <span class="av-filter-count" aria-hidden="true">4</span></button>
+  <button type="button" class="av-filter-chip" data-filter="aerotermia" aria-pressed="false"><span class="av-filter-label">Aerotermia</span> <span class="av-filter-count" aria-hidden="true">5</span></button>
+  <button type="button" class="av-filter-chip" data-filter="confort-en-casa" aria-pressed="false"><span class="av-filter-label">Confort en casa</span> <span class="av-filter-count" aria-hidden="true">2</span></button>
+  <button type="button" class="av-filter-chip" data-filter="normativa-y-zonas" aria-pressed="false"><span class="av-filter-label">Normativa y zonas</span> <span class="av-filter-count" aria-hidden="true">3</span></button>
+</div>
+<p class="av-filter-status" role="status" aria-live="polite"></p>
+
 <!-- ===== Grille d'articles ===== -->
-<section class="av-articles-grid">
+<section class="av-articles-grid" aria-label="Guías del blog">
 
   <!-- Featured (premier article) -->
-  <a href="/blog/subvenciones-aislamiento-cubierta-2026/" class="av-article-card featured">
+  <a href="/blog/subvenciones-aislamiento-cubierta-2026/" class="av-article-card featured" data-cat="sistema-cae">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Financiación y ayudas</span>
+      <span class="av-article-card-tag">Sistema CAE</span>
       <h2>Financiar el aislamiento de tu cubierta en 2026: la guía <em>completa.</em></h2>
-      <p>Descubre cómo se articulan los mecanismos disponibles en 2026 para cubrir el aislamiento de tu cubierta hasta el 100 % del coste en viviendas elegibles, siempre sujeto a la verificación del ahorro por un organismo acreditado por ENAC. Con ejemplos reales en Castilla y León y Galicia.</p>
+      <p>Por qué el CAE no es una subvención sino financiación privada, y qué otras vías existen en 2026 para aislar tu cubierta. El sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100 %.</p>
+      <p class="av-article-card-note">Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
       <div class="av-article-card-meta">
-        <span>21 de abril de 2026 · 11 min</span>
-        <span class="av-article-card-readmore">Leer guía completa →</span>
+        <span><time datetime="2026-04-21">21 de abril de 2026</time> · 11 min</span>
+        <span class="av-article-card-readmore">Leer la guía completa</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <div class="av-visual-label">
-        Guía pilar 2026<br>
-        CAE · NextGen · IRPF
-      </div>
+    <div class="av-article-card-visual av-article-card-visual--photo">
+      <img src="/blog/assets/artisan-hero-800.webp" srcset="/blog/assets/artisan-hero-800.webp 800w, /blog/assets/artisan-hero.webp 1402w" sizes="(max-width: 768px) 100vw, 460px" alt="Técnico insuflando lana mineral en el desván de una vivienda, junto a la máquina de insuflado" width="800" height="641" decoding="async">
     </div>
   </a>
 
   <!-- Article — Cubierta inclinada / rampantes -->
-  <a href="/blog/aislar-cubierta-inclinada-cae/" class="av-article-card">
+  <a href="/blog/aislar-cubierta-inclinada-cae/" class="av-article-card" data-cat="aislamiento">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Cubierta inclinada</span>
+      <span class="av-article-card-tag">Aislamiento</span>
       <h2>Aislar la cubierta inclinada con CAE: rampantes y financiación privada</h2>
       <p>El aislamiento de la cubierta inclinada se resuelve por los rampantes con un aislante reflectante y se financia a través del sistema CAE. Te contamos cómo funciona y qué pagas.</p>
       <div class="av-article-card-meta">
-        <span>12 de agosto de 2026 · 9 min</span>
-        <span class="av-article-card-readmore">Leer la guía técnica →</span>
+        <span><time datetime="2026-08-12">12 de agosto de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer la guía técnica</span>
       </div>
     </div>
     <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-cubierta-inclinada.svg" alt="Esquema del aislamiento de una cubierta inclinada por los rampantes" loading="lazy" />
+      <img src="/assets/servicios/hero-cubierta-inclinada-800.webp" srcset="/assets/servicios/hero-cubierta-inclinada-800.webp 800w, /assets/servicios/hero-cubierta-inclinada.webp 1600w" sizes="(max-width: 600px) 108px, 380px" alt="Dos técnicos colocan un aislante reflectante bajo los rampantes de una buhardilla" width="800" height="533" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article — Aerotermia -->
-  <a href="/blog/aerotermia-primas-cae-cuanto-cuesta/" class="av-article-card">
+  <!-- Article — Aerotermia y primas CAE -->
+  <a href="/blog/aerotermia-primas-cae-cuanto-cuesta/" class="av-article-card" data-cat="sistema-cae">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Aerotermia</span>
+      <span class="av-article-card-tag">Sistema CAE</span>
       <h2>Aerotermia con primas CAE: cuánto cuesta de verdad</h2>
       <p>Sustituir la caldera de gas o gasóleo por aerotermia genera una prima del sistema CAE, pero no cubre el total: es una inversión real. Cómo se calcula la prima y qué pagas de verdad.</p>
       <div class="av-article-card-meta">
-        <span>12 de agosto de 2026 · 10 min</span>
-        <span class="av-article-card-readmore">Leer el análisis →</span>
+        <span><time datetime="2026-08-12">12 de agosto de 2026</time> · 10 min</span>
+        <span class="av-article-card-readmore">Leer el análisis</span>
       </div>
     </div>
     <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-aerotermia.svg" alt="Sustitución de una caldera de gas o gasóleo por una bomba de calor aerotérmica" loading="lazy" />
+      <img src="/assets/servicios/hero-aerotermia-800.webp" srcset="/assets/servicios/hero-aerotermia-800.webp 800w, /assets/servicios/hero-aerotermia.webp 1600w" sizes="(max-width: 600px) 108px, 380px" alt="Técnico con una tableta junto a la unidad exterior de una aerotermia, en el exterior de una vivienda" width="800" height="500" loading="lazy" decoding="async">
     </div>
   </a>
 
   <!-- Article — Aire-aire o aerotermia -->
-  <a href="/blog/aire-aire-o-aerotermia-cual-elegir/" class="av-article-card">
+  <a href="/blog/aire-aire-o-aerotermia-cual-elegir/" class="av-article-card" data-cat="aerotermia">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Bomba de calor</span>
-      <h2>Aire-aire o aerotermia: cuál necesita tu vivienda</h2>
+      <span class="av-article-card-tag">Aerotermia</span>
+      <h2>¿Aerotermia o bomba de calor aire-aire? Cuál elegir</h2>
       <p>La respuesta no depende del presupuesto, sino de lo que ya tienes en casa: si hay radiadores o suelo radiante, la solución no es la misma. Guía de decisión sin rodeos.</p>
       <div class="av-article-card-meta">
-        <span>17 de agosto de 2026 · 9 min</span>
-        <span class="av-article-card-readmore">Leer la comparativa →</span>
+        <span><time datetime="2026-08-17">17 de agosto de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer la comparativa</span>
       </div>
     </div>
     <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-aire-aire.svg" alt="Unidad interior de una bomba de calor aire-aire montada en la pared" loading="lazy" />
+      <img src="/assets/servicios/hero-aire-aire-800.webp" srcset="/assets/servicios/hero-aire-aire-800.webp 800w, /assets/servicios/hero-aire-aire.webp 1600w" sizes="(max-width: 600px) 108px, 380px" alt="Técnico junto a la unidad interior de una bomba de calor aire-aire instalada en un salón" width="800" height="500" loading="lazy" decoding="async">
     </div>
   </a>
 
   <!-- Article — Requisitos para cambiar la caldera -->
-  <a href="/blog/cambiar-caldera-gasoleo-requisitos-cae/" class="av-article-card">
+  <a href="/blog/cambiar-caldera-gasoleo-requisitos-cae/" class="av-article-card" data-cat="aerotermia">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Elegibilidad</span>
-      <h2>Cambiar la caldera de gasóleo: qué requisitos pide el CAE</h2>
+      <span class="av-article-card-tag">Aerotermia</span>
+      <h2>Cambiar caldera de gasoil por aerotermia: requisitos CAE (2026)</h2>
       <p>El sistema CAE financia la salida de las energías fósiles. Por eso el punto de partida cuenta más que el de llegada, y la calefacción eléctrica queda fuera. Quién puede y quién no.</p>
       <div class="av-article-card-meta">
-        <span>17 de agosto de 2026 · 9 min</span>
-        <span class="av-article-card-readmore">Ver los requisitos →</span>
+        <span><time datetime="2026-08-17">17 de agosto de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Ver los requisitos</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-aerotermia.svg" alt="Sustitución de una caldera de combustión por una bomba de calor" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/assets/servicios/aerotermia-comparativa.svg" alt="Comparativa entre una caldera de gas o gasóleo y una aerotermia: eficiencia, emisiones y dependencia del combustible" width="1200" height="520" loading="lazy" decoding="async">
     </div>
   </a>
 
   <!-- Article — Comunidades de propietarios -->
-  <a href="/blog/aislamiento-comunidades-propietarios-cae/" class="av-article-card">
+  <a href="/blog/aislamiento-comunidades-propietarios-cae/" class="av-article-card" data-cat="sistema-cae">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Comunidades</span>
+      <span class="av-article-card-tag">Sistema CAE</span>
       <h2>Aislar la cubierta de una comunidad de propietarios</h2>
-      <p>La cubierta es un elemento común y el poste de pérdidas más rentable de un edificio. Cómo se acuerda en junta, quién firma y qué papel juega el administrador de fincas.</p>
+      <p>La cubierta es un elemento común y el foco de pérdidas más rentable de tratar en un edificio. Cómo se acuerda en junta, quién firma y qué papel juega el administrador de fincas.</p>
       <div class="av-article-card-meta">
-        <span>17 de agosto de 2026 · 9 min</span>
-        <span class="av-article-card-readmore">Leer la guía →</span>
+        <span><time datetime="2026-08-17">17 de agosto de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-desvan.svg" alt="Aislamiento de la cubierta de un edificio en comunidad de propietarios" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/card-comunidad.svg" alt="Ilustración: edificio de viviendas con una capa de aislamiento bajo la cubierta común" width="640" height="420" loading="lazy" decoding="async">
     </div>
   </a>
 
   <!-- Article — Zonas climáticas -->
-  <a href="/blog/zonas-climaticas-cte-aislamiento-cae/" class="av-article-card">
+  <a href="/blog/zonas-climaticas-cte-aislamiento-cae/" class="av-article-card" data-cat="normativa-y-zonas">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Elegibilidad</span>
-      <h2>Zonas climáticas C, D y E: por qué deciden tu aislamiento</h2>
+      <span class="av-article-card-tag">Normativa y zonas</span>
+      <h2>Zonas climáticas del CTE: cómo saber la tuya</h2>
       <p>El CTE divide España en zonas según la severidad del clima, y el sistema CAE solo reconoce las más frías. Qué significa, por qué es así y cómo saber en cuál estás.</p>
       <div class="av-article-card-meta">
-        <span>17 de agosto de 2026 · 11 min</span>
-        <span class="av-article-card-readmore">Entender las zonas →</span>
+        <span><time datetime="2026-08-17">17 de agosto de 2026</time> · 11 min</span>
+        <span class="av-article-card-readmore">Entender las zonas</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/blog/assets/cobertura-hero.svg" alt="Mapa de las zonas climáticas del CTE en España" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/zonas-climaticas-cte.svg" alt="Escala de las zonas climáticas de invierno del CTE: el aislamiento es elegible con el sistema CAE en las zonas C, D y E" width="800" height="520" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article 2 — Sistema CAE -->
-  <a href="/blog/que-es-el-cae-sistema-ahorro-energetico/" class="av-article-card">
+  <!-- Article — Sistema CAE -->
+  <a href="/blog/que-es-el-cae-sistema-ahorro-energetico/" class="av-article-card" data-cat="sistema-cae">
     <div class="av-article-card-body">
       <span class="av-article-card-tag">Sistema CAE</span>
       <h2>¿Qué es el CAE? El sistema español de ahorro energético</h2>
       <p>Todo sobre los Certificados de Ahorro Energético: quién paga, cómo funciona y por qué puede cubrir gran parte del coste de aislar tu cubierta.</p>
       <div class="av-article-card-meta">
-        <span>21 de abril de 2026 · 12 min</span>
-        <span class="av-article-card-readmore">Leer la guía CAE →</span>
+        <span><time datetime="2026-04-21">21 de abril de 2026</time> · 12 min</span>
+        <span class="av-article-card-readmore">Leer la guía CAE</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/blog/assets/cae-hero.jpg" alt="Infografía del sistema CAE en España" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/cae-vs-sin-cae-infografia.svg" alt="Infografía: sin CAE, el presupuesto completo queda a tu cargo; con la financiación privada del sistema CAE, la prima se descuenta del presupuesto" width="1200" height="520" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article 3 — Cobertura geográfica -->
-  <a href="/blog/aislamiento-espana-provincias-cobertura/" class="av-article-card">
+  <!-- Article — Cobertura geográfica -->
+  <a href="/blog/aislamiento-espana-provincias-cobertura/" class="av-article-card" data-cat="normativa-y-zonas">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Zonas de cobertura</span>
+      <span class="av-article-card-tag">Normativa y zonas</span>
       <h2>Aislamiento con financiación CAE en España: ¿cubrimos tu provincia?</h2>
       <p>Los Artesanos Verdes interviene en 13 provincias españolas. Descubre si tu vivienda entra en nuestra zona de cobertura para el aislamiento financiado a través del sistema CAE.</p>
       <div class="av-article-card-meta">
-        <span>21 de abril de 2026 · 13 min</span>
-        <span class="av-article-card-readmore">Ver las 13 provincias →</span>
+        <span><time datetime="2026-04-21">21 de abril de 2026</time> · 13 min</span>
+        <span class="av-article-card-readmore">Ver las 13 provincias</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/blog/assets/cobertura-hero.svg" alt="Mapa esquemático de las 13 provincias cubiertas por Los Artesanos Verdes" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/cobertura-hero.svg" alt="Mapa esquemático de las 13 provincias cubiertas por Los Artesanos Verdes" width="1200" height="630" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article 4 — Comparativa materiales -->
-  <a href="/blog/lana-mineral-celulosa-lana-roca-comparativa/" class="av-article-card">
+  <!-- Article — Comparativa materiales -->
+  <a href="/blog/lana-mineral-celulosa-lana-roca-comparativa/" class="av-article-card" data-cat="aislamiento">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Comparativa técnica</span>
-      <h2>Lana mineral, celulosa o lana de roca: ¿cuál aisla mejor?</h2>
-      <p>Comparativa técnica real entre los 3 materiales dominantes del mercado español de la insuflación, con datos de 100 000 m² instalados.</p>
+      <span class="av-article-card-tag">Aislamiento</span>
+      <h2>Lana mineral, celulosa o lana de roca: ¿cuál aísla mejor?</h2>
+      <p>Comparativa técnica real entre los 3 materiales dominantes del mercado español de la insuflación.</p>
       <div class="av-article-card-meta">
-        <span>24 de abril de 2026 · 14 min</span>
-        <span class="av-article-card-readmore">Leer la comparativa →</span>
+        <span><time datetime="2026-04-24">24 de abril de 2026</time> · 14 min</span>
+        <span class="av-article-card-readmore">Leer la comparativa</span>
       </div>
     </div>
     <div class="av-article-card-visual">
-      <img src="/blog/assets/antes-despues.jpg" alt="Comparativa de materiales de aislamiento: lana mineral, celulosa y lana de roca" loading="lazy" />
+      <img src="/assets/servicios/hero-desvan-800.webp" srcset="/assets/servicios/hero-desvan-800.webp 800w, /assets/servicios/hero-desvan.webp 1600w" sizes="(max-width: 600px) 108px, 380px" alt="Dos técnicos insuflan lana mineral sobre el suelo de un desván" width="800" height="512" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article — Bomba de calor -->
-  <a href="/blog/bomba-de-calor-frio-invierno-zonas-frias/" class="av-article-card">
+  <!-- Article — Bomba de calor con frío -->
+  <a href="/blog/bomba-de-calor-frio-invierno-zonas-frias/" class="av-article-card" data-cat="aerotermia">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Bomba de calor</span>
+      <span class="av-article-card-tag">Aerotermia</span>
       <h2>¿Funciona la bomba de calor con frío? Aerotermia en zonas D y E</h2>
       <p>«En León, a bajo cero, una bomba de calor no puede funcionar.» Es la objeción número uno, y no es cierta. Cómo trabaja con frío y por qué la caldera puede quedar de apoyo.</p>
       <div class="av-article-card-meta">
-        <span>26 de agosto de 2026 · 9 min</span>
-        <span class="av-article-card-readmore">Leer el artículo →</span>
+        <span><time datetime="2026-08-26">26 de agosto de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer el artículo</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-aerotermia.svg" alt="Bomba de calor aerotérmica funcionando en una vivienda de zona climática fría" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/card-frio.svg" alt="Ilustración: unidad exterior de aerotermia junto a una vivienda nevada" width="640" height="420" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article — Confort -->
-  <a href="/blog/calor-buhardilla-verano-soluciones/" class="av-article-card">
+  <!-- Article — Calor en la buhardilla -->
+  <a href="/blog/calor-buhardilla-verano-soluciones/" class="av-article-card" data-cat="confort-en-casa">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Confort</span>
+      <span class="av-article-card-tag">Confort en casa</span>
       <h2>¿Por qué tu buhardilla es un horno en verano y qué hacer?</h2>
       <p>Fuera 35 °C, bajo la cubierta 40. El ventilador no basta y el aire acondicionado se pelea contra un tejado que irradia calor. La solución está en la propia cubierta.</p>
       <div class="av-article-card-meta">
-        <span>26 de agosto de 2026 · 8 min</span>
-        <span class="av-article-card-readmore">Leer la guía →</span>
+        <span><time datetime="2026-08-26">26 de agosto de 2026</time> · 8 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-cubierta-inclinada.svg" alt="Buhardilla habitable aislada por los rampantes para evitar el calor en verano" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/card-calor-verano.svg" alt="Ilustración: el sol calienta el tejado de una buhardilla y el aislante bajo los rampantes devuelve el calor hacia fuera" width="640" height="420" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article — Materiales -->
-  <a href="/blog/aislante-reflectante-como-funciona/" class="av-article-card">
+  <!-- Article — Aislante reflectante -->
+  <a href="/blog/aislante-reflectante-como-funciona/" class="av-article-card" data-cat="aislamiento">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Materiales</span>
+      <span class="av-article-card-tag">Aislamiento</span>
       <h2>Aislante reflectante: cómo funciona y cuándo tiene sentido</h2>
       <p>Te han dicho que «eso no aísla nada». La verdad es más matizada: explicamos cómo funciona un reflectante alveolar, cuándo es la mejor opción y cuándo conviene lana mineral.</p>
       <div class="av-article-card-meta">
-        <span>26 de agosto de 2026 · 12 min</span>
-        <span class="av-article-card-readmore">Leer el análisis →</span>
+        <span><time datetime="2026-08-26">26 de agosto de 2026</time> · 12 min</span>
+        <span class="av-article-card-readmore">Leer el análisis</span>
       </div>
     </div>
     <div class="av-article-card-visual">
-      <img src="/blog/assets/materiales-comparativa-hero.svg" alt="Aislante reflectante alveolar TETRIS SUPER 12 en lámina" loading="lazy" />
+      <img src="/blog/assets/aislante-reflectante-800.webp" alt="Rollo de aislante reflectante alveolar desenrollado por un técnico en una buhardilla" width="800" height="500" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article — Aislamiento -->
-  <a href="/blog/condensacion-humedad-desvan-tejado/" class="av-article-card">
+  <!-- Article — Condensación -->
+  <a href="/blog/condensacion-humedad-desvan-tejado/" class="av-article-card" data-cat="aislamiento">
     <div class="av-article-card-body">
       <span class="av-article-card-tag">Aislamiento</span>
       <h2>Condensación y humedad en el desván: por qué aparece y cómo evitarla</h2>
       <p>Gotas en el techo, manchas, madera que ennegrece. La condensación bajo cubierta tiene una causa física clara y una solución en dos frentes: aislar la frontera y ventilar el volumen frío.</p>
       <div class="av-article-card-meta">
-        <span>26 de agosto de 2026 · 11 min</span>
-        <span class="av-article-card-readmore">Leer la guía →</span>
+        <span><time datetime="2026-08-26">26 de agosto de 2026</time> · 11 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-desvan.svg" alt="Condensación y humedad en el desván de una vivienda, bajo el tejado" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/card-condensacion.svg" alt="Ilustración: gotas de condensación bajo el tejado de un desván y aire que entra por los aleros y sale por la cumbrera" width="640" height="420" loading="lazy" decoding="async">
     </div>
   </a>
 
   <!-- Article — Certificado energético -->
-  <a href="/blog/certificado-eficiencia-energetica-que-es/" class="av-article-card">
+  <a href="/blog/certificado-eficiencia-energetica-que-es/" class="av-article-card" data-cat="normativa-y-zonas">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Certificado energético</span>
+      <span class="av-article-card-tag">Normativa y zonas</span>
       <h2>Certificado de eficiencia energética (CEE): qué es y para qué sirve</h2>
       <p>Obligatorio para vender o alquilar, califica tu vivienda de la A a la G. Qué mide, quién lo emite y por qué es la prueba de que una obra de aislamiento mejora de verdad tu casa.</p>
       <div class="av-article-card-meta">
-        <span>27 de agosto de 2026 · 9 min</span>
-        <span class="av-article-card-readmore">Leer la guía →</span>
+        <span><time datetime="2026-08-27">27 de agosto de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/blog/assets/cae-vs-sin-cae-infografia.svg" alt="Etiqueta del certificado de eficiencia energética con la escala de la A a la G" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/cee-escala.svg" alt="Escala del certificado de eficiencia energética, de la A (más eficiente) a la G (menos eficiente)" width="820" height="600" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article — Bomba de calor -->
-  <a href="/blog/aerotermia-merece-la-pena-ventajas-inconvenientes/" class="av-article-card">
+  <!-- Article — Merece la pena la aerotermia -->
+  <a href="/blog/aerotermia-merece-la-pena-ventajas-inconvenientes/" class="av-article-card" data-cat="aerotermia">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Bomba de calor</span>
+      <span class="av-article-card-tag">Aerotermia</span>
       <h2>¿Merece la pena la aerotermia? Ventajas e inconvenientes reales</h2>
       <p>Sin adornos: las ventajas reales de la aerotermia, los inconvenientes que nadie te cuenta y para quién compensa de verdad. Depende de tu punto de partida.</p>
       <div class="av-article-card-meta">
-        <span>27 de agosto de 2026 · 10 min</span>
-        <span class="av-article-card-readmore">Leer el análisis →</span>
+        <span><time datetime="2026-08-27">27 de agosto de 2026</time> · 10 min</span>
+        <span class="av-article-card-readmore">Leer el análisis</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-aerotermia.svg" alt="Bomba de calor aerotérmica instalada junto a una vivienda unifamiliar" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/assets/servicios/card-aerotermia.svg" alt="Ilustración: unidad exterior de aerotermia conectada a una vivienda" width="640" height="420" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article — Diagnóstico -->
-  <a href="/blog/senales-casa-pierde-calor-mal-aislada/" class="av-article-card">
+  <!-- Article — Señales de una casa mal aislada -->
+  <a href="/blog/senales-casa-pierde-calor-mal-aislada/" class="av-article-card" data-cat="confort-en-casa">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Diagnóstico</span>
+      <span class="av-article-card-tag">Confort en casa</span>
       <h2>7 señales de que tu casa está mal aislada (y pierde calor)</h2>
       <p>Si pagas mucha calefacción y nunca tienes calor, el problema no es la caldera. Siete señales que puedes comprobar tú mismo, y qué revela cada una.</p>
       <div class="av-article-card-meta">
-        <span>27 de agosto de 2026 · 8 min</span>
-        <span class="av-article-card-readmore">Ver las señales →</span>
+        <span><time datetime="2026-08-27">27 de agosto de 2026</time> · 8 min</span>
+        <span class="av-article-card-readmore">Ver las señales</span>
       </div>
     </div>
     <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-desvan.svg" alt="Vivienda con pérdidas de calor por una cubierta mal aislada" loading="lazy" />
+      <img src="/blog/assets/antes-despues-800.webp" alt="Desván antes y después del aislamiento: arriba sin aislar, abajo con lana mineral insuflada sobre el suelo" width="800" height="554" loading="lazy" decoding="async">
     </div>
   </a>
 
-  <!-- Article — Bomba de calor -->
-  <a href="/blog/aerotermia-consumo-electrico-factura-luz/" class="av-article-card">
+  <!-- Article — Consumo eléctrico de la aerotermia -->
+  <a href="/blog/aerotermia-consumo-electrico-factura-luz/" class="av-article-card" data-cat="aerotermia">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Bomba de calor</span>
+      <span class="av-article-card-tag">Aerotermia</span>
       <h2>Aerotermia y factura de la luz: ¿dispara el consumo eléctrico?</h2>
       <p>La objeción que frena a media España: «funciona con electricidad, me disparará la luz». La verdad, sin cifras mágicas: qué consume de verdad una bomba de calor y de qué depende.</p>
       <div class="av-article-card-meta">
-        <span>27 de agosto de 2026 · 9 min</span>
-        <span class="av-article-card-readmore">Leer el artículo →</span>
+        <span><time datetime="2026-08-27">27 de agosto de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer el artículo</span>
       </div>
     </div>
-    <div class="av-article-card-visual">
-      <img src="/assets/servicios/card-aire-aire.svg" alt="Bomba de calor aerotérmica y su relación con la factura de electricidad" loading="lazy" />
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/card-consumo.svg" alt="Ilustración: unidad exterior de aerotermia conectada a un enchufe" width="640" height="420" loading="lazy" decoding="async">
     </div>
   </a>
 
 </section>
 
+<p class="av-blog-note">Financiación privada del sistema CAE, que no constituye una ayuda de la Administración. El sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
+
 <!-- ===== Nuestros servicios ===== -->
-<section class="av-article" style="padding-top: 0; padding-bottom: 72px;">
-  <p class="av-article-related" style="margin-top: 0;"><strong>Nuestros servicios</strong> → <a href="/servicios/aislamiento-desvan/">Aislamiento de desván y ático no habitable</a> &middot; <a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a> &middot; <a href="/servicios/aerotermia/">Aerotermia (bomba de calor aire-agua)</a> &middot; <a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></p>
+<section class="av-blog-services" aria-labelledby="av-servicios-title" data-zone="blog-servicios">
+  <h2 class="av-blog-services-title" id="av-servicios-title">Nuestros servicios</h2>
+  <ul class="av-blog-services-list">
+    <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván y ático no habitable</a></li>
+    <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
+    <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor aire-agua)</a></li>
+    <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+  </ul>
 </section>
+
+</main>
+
+<!-- ===== Barra de acción móvil (§4.1) ===== -->
+<div class="cta-bar-movil" id="ctaBarMovil" data-zone="barra-movil">
+  <a class="cta-bar-icon" href="tel:+34632180509" data-cta="barra-movil-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a class="cta-bar-icon cta-bar-icon--wa" href="https://wa.me/34632180509?text=Hola%2C%20me%20interesa%20un%20estudio%20de%20elegibilidad%20CAE" target="_blank" rel="noopener" data-cta="barra-movil-whatsapp" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg></a>
+  <a class="cta-bar-main" href="/#contacto" data-cta="barra-movil">Estudio gratuito</a>
+</div>
 
 <!-- ===== Footer ===== -->
 <footer class="av-footer">
   <div class="av-footer-inner">
     <div class="av-footer-top">
       <div class="av-footer-brand">
-        <h3>Los Artesanos Verdes</h3>
-        <p>Empresa española especializada en aislamiento por insuflado de lana mineral. Sede en Denia. Operamos principalmente en Castilla y León y Galicia.</p>
+        <p class="av-footer-title">Los Artesanos Verdes</p>
+        <p>Renovación energética de viviendas con la financiación privada del sistema CAE: aislamiento de desván y de cubierta inclinada, aerotermia y bomba de calor aire-aire.</p>
       </div>
-      <div class="av-footer-col">
-        <h4>Contenido</h4>
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/#cae">¿Qué es el CAE?</a></li>
-          <li><a href="/#proceso">Proceso</a></li>
-        </ul>
-      </div>
-      <div class="av-footer-col">
-        <h4>Contacto</h4>
-        <ul>
-          <li><a href="tel:+34632180509">+34 632 18 05 09</a></li>
-          <li><a href="mailto:contacto@artesanosverdes.com">contacto@artesanosverdes.com</a></li>
-          <li><a href="https://wa.me/34632180509" rel="noopener">WhatsApp</a></li>
-          <li><a href="/#contacto">Estudio gratuito</a></li>
-        </ul>
-      </div>
+      <div class="av-footer-col"><p class="av-footer-heading">Servicios</p><ul>
+        <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
+        <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
+        <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+      </ul></div>
+      <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
+        <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>
+        <li><a href="/blog/que-es-el-cae-sistema-ahorro-energetico/">¿Qué es el CAE?</a></li>
+        <li><a href="/blog/aislamiento-espana-provincias-cobertura/">Zona de trabajo</a></li>
+      </ul></div>
+      <div class="av-footer-col"><p class="av-footer-heading">Contacto</p><ul>
+        <li><a href="tel:+34632180509" data-cta="footer-llamar">+34 632 18 05 09</a></li>
+        <li><a href="mailto:contacto@artesanosverdes.com" data-cta="footer-email">contacto@artesanosverdes.com</a></li>
+        <li><a href="https://wa.me/34632180509" target="_blank" rel="noopener" data-cta="footer-whatsapp">WhatsApp</a></li>
+        <li><a href="/#contacto" data-cta="footer">Estudio gratuito</a></li>
+      </ul></div>
     </div>
     <div class="av-footer-bottom">
       <div>© 2026 Los Artesanos Verdes SL · Denia, España</div>
-      <div class="legal">
-        <a href="/legal/aviso-legal/">Aviso legal</a>
-        <a href="/legal/politica-privacidad/">Política de privacidad</a>
-        <a href="/legal/politica-cookies/">Política de cookies</a>
-        <a href="#" onclick="event.preventDefault();if(window.avOpenCookieSettings)avOpenCookieSettings();">Configurar cookies</a>
-      </div>
+      <div class="legal"><a href="/legal/aviso-legal/">Aviso legal</a><a href="/legal/politica-privacidad/">Política de privacidad</a><a href="/legal/politica-cookies/">Política de cookies</a><button type="button" class="av-link-btn" onclick="if(window.avOpenCookieSettings)avOpenCookieSettings();">Configurar cookies</button></div>
     </div>
   </div>
 </footer>

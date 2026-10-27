@@ -1,0 +1,266 @@
+/* Quiz d'orientation (assets/quiz.js) — dialogue <dialog class="avq">.
+   Reprend les variables de site.css quand elles existent, avec des valeurs de
+   repli pour les pages qui ne le chargent pas. Plein écran sur mobile. */
+
+/* Le test n'existe qu'avec JavaScript (classe .js posée en tête de <head>) :
+   sans JS, ses boutons d'ouverture ne feraient rien, on les masque. */
+html:not(.js) [data-quiz-open] { display: none !important; }
+
+.avq {
+  --avq-forest: var(--forest, #1a3a2a);
+  --avq-green: var(--brand-green-deep, #158035);
+  --avq-cream: var(--cream, #f8f4ea);
+  --avq-ivory: var(--ivory, #faf6ec);
+  --avq-terracotta: var(--terracotta, #b8733a);
+  --avq-accent: var(--accent-on-light, #8a4f22);
+  --avq-line: var(--line, rgba(26, 46, 31, 0.15));
+  --avq-display: var(--display, 'Fraunces', Georgia, serif);
+  --avq-body: var(--body, 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+
+  box-sizing: border-box;
+  width: min(640px, calc(100% - 2rem));
+  max-width: none;
+  max-height: calc(100% - 2rem);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  background: var(--avq-ivory);
+  color: var(--avq-forest);
+  font-family: var(--avq-body);
+  line-height: 1.5;
+  overflow: auto;
+  overscroll-behavior: contain;
+  box-shadow: 0 30px 80px -20px rgba(10, 24, 16, 0.45);
+}
+.avq *, .avq *::before, .avq *::after { box-sizing: border-box; }
+.avq [hidden] { display: none !important; }
+.avq::backdrop { background: rgba(10, 24, 16, 0.62); }
+
+/* Repli sans showModal() (très vieux navigateurs) */
+.avq.avq--repli[open] {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: block;
+  box-shadow: 0 0 0 100vmax rgba(10, 24, 16, 0.62);
+}
+
+/* Page derrière le dialogue : pas de défilement */
+html.avq-abierto { overflow: hidden; }
+
+.avq-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1rem 1.5rem 1.75rem;
+}
+
+.avq-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+}
+.avq-atras,
+.avq-cerrar {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--avq-forest);
+  font: inherit;
+  cursor: pointer;
+  border-radius: 999px;
+}
+.avq-atras {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0 0.9rem 0 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.avq-atras::before {
+  content: '';
+  width: 0.55rem;
+  height: 0.55rem;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+.avq-cerrar {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+.avq-atras:hover,
+.avq-cerrar:hover { background: rgba(26, 46, 31, 0.07); }
+.avq-atras:focus-visible,
+.avq-cerrar:focus-visible,
+.avq-opcion:focus-visible,
+.avq-cta:focus-visible,
+.avq-enlace:focus-visible {
+  outline: 3px solid var(--avq-green);
+  outline-offset: 2px;
+}
+
+.avq-kicker {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--avq-accent);
+}
+
+.avq-progreso {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(26, 46, 31, 0.1);
+  overflow: hidden;
+}
+.avq-progreso-barra {
+  display: block;
+  height: 100%;
+  width: 4%;
+  border-radius: inherit;
+  background: var(--avq-green);
+  transition: width 0.3s ease;
+}
+.avq-paso {
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  color: rgba(26, 46, 31, 0.75);
+}
+
+.avq-pregunta {
+  margin: 0.75rem 0 1.25rem;
+  font-family: var(--avq-display);
+  font-weight: 400;
+  font-size: clamp(1.45rem, 4.5vw, 1.95rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--avq-forest);
+}
+.avq-pregunta:focus { outline: none; }
+.avq-pregunta em {
+  font-style: italic;
+  color: var(--avq-accent);
+}
+
+/* Tuiles de réponse */
+.avq-opciones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.avq-opciones--compacto { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+
+.avq-opcion {
+  appearance: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  min-height: 76px;
+  padding: 0.9rem 1rem;
+  border: 2px solid var(--avq-line);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--avq-forest);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+.avq-opciones--compacto .avq-opcion { min-height: 52px; padding: 0.6rem 0.75rem; }
+.avq-opcion:hover { border-color: var(--avq-green); background: #f3f8f2; }
+.avq-opcion:active { transform: scale(0.99); }
+.avq-opcion[aria-pressed="true"] { border-color: var(--avq-green); background: #e9f3ea; }
+.avq-opcion-txt { font-weight: 700; font-size: 1rem; line-height: 1.3; }
+.avq-opcion-sub { font-size: 0.85rem; color: rgba(26, 46, 31, 0.72); }
+.avq-opciones--compacto .avq-opcion-txt { font-weight: 600; font-size: 0.95rem; }
+
+/* Résultat */
+.avq-resultado { display: flex; flex-direction: column; gap: 1rem; }
+.avq-resultado p { margin: 0; }
+.avq-resultado-txt { font-size: 1.05rem; }
+.avq-enlace {
+  align-self: flex-start;
+  color: var(--avq-green);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.avq-zona {
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--avq-terracotta);
+  border-radius: 0 10px 10px 0;
+  background: rgba(184, 115, 58, 0.1);
+}
+.avq-legal {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(26, 46, 31, 0.78);
+}
+.avq-cta {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.9rem 1.6rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--avq-green);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px -8px rgba(34, 160, 68, 0.5);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.avq-cta:hover { background: #0f6428; transform: translateY(-1px); }
+
+/* Entrée de chaque écran */
+.avq-entra > * { animation: avq-entra 0.22s ease both; }
+@keyframes avq-entra {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Mobile : plein écran */
+@media (max-width: 640px) {
+  .avq {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .avq.avq--repli[open] { box-shadow: none; }
+  .avq-inner {
+    padding: max(0.5rem, env(safe-area-inset-top)) 16px calc(1.25rem + env(safe-area-inset-bottom));
+  }
+  .avq-opciones { grid-template-columns: 1fr; }
+  .avq-opciones--compacto { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .avq-opcion { min-height: 64px; }
+  .avq-opciones--compacto .avq-opcion { min-height: 48px; }
+  .avq-cta { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avq-entra > * { animation: none; }
+  .avq-progreso-barra,
+  .avq-opcion,
+  .avq-cta { transition: none; }
+  .avq-opcion:active,
+  .avq-cta:hover { transform: none; }
+}
