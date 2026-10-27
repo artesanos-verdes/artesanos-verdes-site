@@ -113,10 +113,10 @@ img, svg {
   gap: 12px;
   text-decoration: none;
   color: var(--av-forest-deep);
-  font-family: var(--av-display);
+  font-family: var(--av-body);
   font-size: 19px;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
 }
 
 .av-logo img {
@@ -628,7 +628,7 @@ h1.av-article-title em {
 .av-cta-final h2 {
   font-family: var(--av-display);
   font-size: clamp(28px, 4vw, 38px);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.012em;
   color: var(--av-cream);

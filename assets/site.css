@@ -1018,7 +1018,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--display);
+    font-family: var(--body);
     font-size: 2rem;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
@@ -2089,3 +2089,7 @@
 .servicio-card-link { display: inline-flex; align-items: center; gap: .4rem; color: var(--brand-green-deep); font-weight: 600; }
 .servicio-card:hover .servicio-card-link { gap: .7rem; }
 @media (max-width: 968px) { .servicios-grid { grid-template-columns: 1fr; } }
+
+/* Fond sombre : graisse 700 pour épaissir les déliés de la serif (mots pêche / vert pâle sur vert profond). */
+.hero h1, .hero h1 em, .hero h1 .euro-accent,
+.cae-flow h2, .metodo h2, .sedes h2, .sede-card h3, .cta-final h2, .av-trust-title { font-weight: 700; }
