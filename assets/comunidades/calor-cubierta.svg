@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" role="img" aria-labelledby="cc-title cc-desc">
+  <title id="cc-title">El calor sube y se escapa por la cubierta</title>
+  <desc id="cc-desc">Dos edificios de viviendas en corte. En el de la izquierda, sin aislamiento en la buhardilla, el calor de las viviendas sube y sale por la cubierta. En el de la derecha, una capa de lana mineral insuflada cubre el suelo de la buhardilla y reduce las pérdidas por la cubierta.</desc>
+
+  <defs>
+    <marker id="cc-flecha" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#b8733a"/>
+    </marker>
+    <pattern id="cc-lana" width="14" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.6" fill="#1a4d30" opacity="0.2"/>
+      <circle cx="10" cy="7" r="1.3" fill="#1a4d30" opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="720" height="380" rx="16" fill="#f7f7f5"/>
+  <circle cx="180" cy="190" r="150" fill="#f6ebe0"/>
+  <circle cx="540" cy="190" r="150" fill="#e9f2ec"/>
+
+  <!-- ===================== EDIFICIO 1 : SIN AISLAR ===================== -->
+  <g>
+    <!-- buhardilla vacía -->
+    <path d="M58,150 L180,78 L302,150 Z" fill="#fbfaf6"/>
+    <!-- fachada -->
+    <rect x="76" y="150" width="208" height="186" fill="#ffffff" stroke="#1a4d30" stroke-width="4" stroke-linejoin="round"/>
+    <g stroke="#a8c4b0" stroke-width="2.5" stroke-linecap="round">
+      <line x1="80" y1="196" x2="280" y2="196"/>
+      <line x1="80" y1="242" x2="280" y2="242"/>
+      <line x1="80" y1="288" x2="280" y2="288"/>
+    </g>
+    <g fill="#a8c4b0" stroke="#1a4d30" stroke-width="2.5">
+      <rect x="98" y="162" width="28" height="24" rx="3"/>
+      <rect x="166" y="162" width="28" height="24" rx="3"/>
+      <rect x="234" y="162" width="28" height="24" rx="3"/>
+      <rect x="98" y="208" width="28" height="24" rx="3"/>
+      <rect x="166" y="208" width="28" height="24" rx="3"/>
+      <rect x="234" y="208" width="28" height="24" rx="3"/>
+      <rect x="98" y="254" width="28" height="24" rx="3"/>
+      <rect x="166" y="254" width="28" height="24" rx="3"/>
+      <rect x="234" y="254" width="28" height="24" rx="3"/>
+      <rect x="98" y="300" width="28" height="24" rx="3"/>
+      <rect x="234" y="300" width="28" height="24" rx="3"/>
+    </g>
+    <path d="M166,336 L166,306 Q180,295 194,306 L194,336" fill="#ffffff" stroke="#1a4d30" stroke-width="3" stroke-linejoin="round"/>
+    <!-- cubierta -->
+    <path d="M58,150 L180,78 L302,150" fill="none" stroke="#1a4d30" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- trampilla -->
+    <rect x="200" y="147" width="26" height="6" rx="1.5" fill="#1a4d30" opacity="0.45"/>
+    <!-- calor que se escapa -->
+    <g fill="none" stroke="#b8733a" stroke-width="3.5" stroke-linecap="round" marker-end="url(#cc-flecha)">
+      <path d="M130,176 C122,160 138,148 130,132 C122,116 138,100 130,84 C124,72 134,62 130,48"/>
+      <path d="M180,170 C172,152 188,138 180,120 C172,102 188,86 180,64 C176,52 184,42 180,26"/>
+      <path d="M230,176 C222,160 238,148 230,132 C222,116 238,100 230,84 C224,72 234,62 230,48"/>
+    </g>
+  </g>
+
+  <!-- ===================== EDIFICIO 2 : BUHARDILLA AISLADA ===================== -->
+  <g>
+    <path d="M418,150 L540,78 L662,150 Z" fill="#fbfaf6"/>
+    <rect x="436" y="150" width="208" height="186" fill="#ffffff" stroke="#1a4d30" stroke-width="4" stroke-linejoin="round"/>
+    <g stroke="#a8c4b0" stroke-width="2.5" stroke-linecap="round">
+      <line x1="440" y1="196" x2="640" y2="196"/>
+      <line x1="440" y1="242" x2="640" y2="242"/>
+      <line x1="440" y1="288" x2="640" y2="288"/>
+    </g>
+    <g fill="#a8c4b0" stroke="#1a4d30" stroke-width="2.5">
+      <rect x="458" y="162" width="28" height="24" rx="3"/>
+      <rect x="526" y="162" width="28" height="24" rx="3"/>
+      <rect x="594" y="162" width="28" height="24" rx="3"/>
+      <rect x="458" y="208" width="28" height="24" rx="3"/>
+      <rect x="526" y="208" width="28" height="24" rx="3"/>
+      <rect x="594" y="208" width="28" height="24" rx="3"/>
+      <rect x="458" y="254" width="28" height="24" rx="3"/>
+      <rect x="526" y="254" width="28" height="24" rx="3"/>
+      <rect x="594" y="254" width="28" height="24" rx="3"/>
+      <rect x="458" y="300" width="28" height="24" rx="3"/>
+      <rect x="594" y="300" width="28" height="24" rx="3"/>
+    </g>
+    <path d="M526,336 L526,306 Q540,295 554,306 L554,336" fill="#ffffff" stroke="#1a4d30" stroke-width="3" stroke-linejoin="round"/>
+    <!-- lana mineral insuflada sobre el suelo de la buhardilla -->
+    <path d="M444,150 C444,138 458,129 476,128 C492,127 500,121 518,121 C534,121 544,126 560,126 C578,126 588,120 604,122 C622,124 636,136 636,150 Z" fill="#fdfcf8" stroke="#1a4d30" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M444,150 C444,138 458,129 476,128 C492,127 500,121 518,121 C534,121 544,126 560,126 C578,126 588,120 604,122 C622,124 636,136 636,150 Z" fill="url(#cc-lana)"/>
+    <!-- cubierta -->
+    <path d="M418,150 L540,78 L662,150" fill="none" stroke="#1a4d30" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- el calor se queda bajo la capa de aislamiento -->
+    <g fill="none" stroke="#b8733a" stroke-width="3.5" stroke-linecap="round" marker-end="url(#cc-flecha)">
+      <path d="M490,186 C490,170 492,164 500,160 C508,157 514,162 514,174"/>
+      <path d="M590,186 C590,170 588,164 580,160 C572,157 566,162 566,174"/>
+    </g>
+    <!-- pérdida residual, mucho menor -->
+    <path d="M540,104 C536,94 544,86 540,72" fill="none" stroke="#b8733a" stroke-width="2.5" stroke-linecap="round" opacity="0.45" marker-end="url(#cc-flecha)"/>
+    <!-- marca verde -->
+    <circle cx="540" cy="58" r="11" fill="#22a044" stroke="#1a4d30" stroke-width="2"/>
+    <path d="M534.5,58 L538.5,62 L546,54" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Suelo -->
+  <line x1="30" y1="337" x2="690" y2="337" stroke="#1a4d30" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+</svg>

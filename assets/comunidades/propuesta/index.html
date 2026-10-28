@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Propuesta para comunidades · Los Artesanos Verdes</title>
+<!--
+  Fuente de impresión de la brochure « Propuesta para comunidades de propietarios ».
+  Formato 16:9 (338,67 × 190,5 mm = 1280 × 720 px CSS), una <section class="page"> por página.
+  PDF generado: /assets/comunidades/propuesta-comunidades-artesanos-verdes.pdf
+  Versión alineada con las decisiones del propietario del 28/10/2026:
+  - coste: solo la formulación validada (bloques COSTE:INICIO / COSTE:FIN);
+  - materiales: solo los datos del CRM (tipo, espesor, R, λ), sin certificaciones francesas;
+  - ejemplo real publicado con el consentimiento del cliente y su aviso completo.
+  Portada: img/portada.jpg (2400 × 1350, 16:9), obtenida de la portada original de la brochure
+  (imagen de 3840 × 2160), sin su texto ni su logotipo.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600..700&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
+<style>
+  @page { size: 338.67mm 190.5mm; margin: 0; }
+
+  :root {
+    --navy: #16285a;
+    --navy-card: #1f3a78;
+    --navy-line: rgba(255, 255, 255, 0.14);
+    --green: #2e7d32;
+    --green-l: #7fc98a;
+    --green-bg: #e5eee2;
+    --bg: #f4f5f2;
+    --card: #fcfcfa;
+    --line: #e1e4dd;
+    --ink: #16285a;
+    --text: #3a4556;
+    --muted: #6a7381;
+    --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --sans: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #d8dbd4;
+    font-family: var(--sans);
+    color: var(--text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    -webkit-font-smoothing: antialiased;
+    font-kerning: normal;
+  }
+  b, strong { font-weight: 700; }
+  p { margin: 0; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ---------- Página ---------- */
+  .page {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    background: var(--bg);
+    padding: 70px 88px 0;
+    page-break-after: always;
+    break-after: page;
+    counter-increment: pagina;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .page.dark { background: var(--navy); color: #dfe5f2; }
+  body { counter-reset: pagina; }
+
+  @media screen {
+    body { padding: 28px 0; }
+    .page { margin: 0 auto 28px; box-shadow: 0 6px 28px rgba(15, 25, 50, 0.18); }
+  }
+  @media print {
+    body { background: none; }
+  }
+
+  .foot {
+    position: absolute;
+    left: 88px;
+    bottom: 30px;
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+  }
+  .foot::after { content: " · " counter(pagina); }
+  .dark .foot { color: rgba(223, 229, 242, 0.62); }
+
+  /* ---------- Tipografía ---------- */
+  .eyebrow {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin: 0 0 10px;
+  }
+  .dark .eyebrow { color: var(--green-l); }
+
+  h1, h2, h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    margin: 0;
+  }
+  h2 { font-size: 46px; }
+  .dark h1, .dark h2, .dark h3 { color: #fff; font-weight: 700; }
+  .num { font-family: var(--serif); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .nowrap { white-space: nowrap; }
+
+  .head { margin-bottom: 26px; }
+
+  /* ---------- Tarjetas ---------- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  .ico {
+    width: 22px; height: 22px;
+    flex: none;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+  }
+
+  /* ---------- 1. Portada ---------- */
+  .cover { padding: 0; background: var(--navy); }
+  .cover-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: 50% 0;
+  }
+  .cover-shade {
+    position: absolute; inset: 0;
+    /* La foto (img/portada.jpg) ya funde a azul marino a partir del 41 % de su altura. */
+    background: linear-gradient(180deg,
+      rgba(22, 40, 90, 0.04) 0%,
+      rgba(22, 40, 90, 0.12) 32%,
+      rgba(22, 40, 90, 0.50) 47%,
+      #16285a 54%,
+      #16285a 100%);
+  }
+  .cover-logo {
+    position: absolute; top: 48px; right: 82px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px 19px;
+    box-shadow: 0 8px 30px rgba(10, 20, 50, 0.25);
+  }
+  .cover-logo img { display: block; width: 196px; height: auto; }
+  .cover-text { position: absolute; left: 88px; right: 88px; bottom: 76px; }
+  .cover .eyebrow { color: var(--green-l); font-size: 16px; margin-bottom: 16px; }
+  .cover h1 { font-size: 68px; line-height: 1.04; color: #fff; font-weight: 700; }
+  .cover-line {
+    margin-top: 22px;
+    font-size: 23px;
+    color: #e8edf7;
+  }
+  .cover-line .sep { color: var(--green-l); padding: 0 6px; }
+
+  /* ---------- 2. Propuesta ---------- */
+  .propuesta { padding-top: 132px; }
+  .propuesta h2 { font-size: 50px; max-width: 980px; }
+  .propuesta .lead {
+    margin-top: 30px;
+    max-width: 1010px;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #dfe5f2;
+  }
+  .coste-box {
+    margin-top: 34px;
+    max-width: 1010px;
+    border-left: 4px solid var(--green-l);
+    padding: 4px 0 4px 26px;
+  }
+  .coste-box .coste-main {
+    font-size: 22px; line-height: 1.45; color: #fff; font-weight: 600;
+  }
+  .coste-box .coste-legal {
+    margin-top: 10px;
+    font-size: 15.5px; line-height: 1.5; color: rgba(223, 229, 242, 0.78);
+  }
+
+  /* ---------- 3. Todo incluido ---------- */
+  .incluido-grid {
+    display: grid;
+    grid-template-columns: 1fr 408px;
+    gap: 26px;
+    align-items: start;
+  }
+  .inc-list { display: flex; flex-direction: column; gap: 10px; }
+  .inc {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 13px 22px 13px 20px;
+  }
+  .inc .ico { color: var(--green); margin-top: 2px; }
+  .inc h3 { font-family: var(--sans); font-weight: 700; font-size: 19px; line-height: 1.25; letter-spacing: 0; color: var(--ink); }
+  .inc p { margin-top: 4px; font-size: 16px; line-height: 1.42; color: var(--text); }
+  .inc.feature { background: var(--navy); border-color: var(--navy); }
+  .inc.feature h3 { color: #fff; }
+  .inc.feature p { color: #dfe5f2; }
+  .inc.feature .ico { color: var(--green-l); }
+
+  .escala-card { padding: 18px 18px 18px; }
+  .escala {
+    border-bottom: 3px solid #1b1b1b;
+  }
+  .escala-top {
+    background: #fbe3cf;
+    border-bottom: 2px solid #1b1b1b;
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+    color: #1b1b1b;
+    padding: 7px 10px;
+  }
+  .escala-body { display: grid; grid-template-columns: 150px 1fr; }
+  .escala-label {
+    background: #e6e6e6;
+    display: flex; align-items: center;
+    padding: 10px 10px;
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+    font-weight: 700; font-size: 14.5px; line-height: 1.28; color: #1b1b1b;
+    text-transform: uppercase;
+  }
+  .escala-label small { display: block; text-transform: none; font-size: 14px; margin-top: 2px; }
+  .escala-bars { padding: 9px 0 9px 12px; display: flex; flex-direction: column; gap: 5px; }
+  .bar {
+    height: 27px;
+    display: flex; align-items: center; justify-content: flex-end;
+    padding-right: 20px;
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+    font-weight: 700; font-size: 18px; color: #161616;
+    clip-path: polygon(0 0, calc(100% - 13px) 0, 100% 50%, calc(100% - 13px) 100%, 0 100%);
+  }
+  .bar.a { width: 46%; background: #00a651; }
+  .bar.b { width: 54%; background: #50b848; }
+  .bar.c { width: 62%; background: #bed62f; }
+  .bar.d { width: 70%; background: #fff200; }
+  .bar.e { width: 78%; background: #fdb913; }
+  .bar.f { width: 86%; background: #f37021; }
+  .bar.g { width: 94%; background: #ed1c24; }
+  .escala-cap { margin-top: 14px; font-size: 16px; line-height: 1.42; color: var(--text); }
+  .escala-note { margin-top: 6px; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+
+  /* ---------- 4. Beneficios ---------- */
+  .benef-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .benef { padding: 28px 30px 26px; min-height: 196px; }
+  .benef-head { display: flex; align-items: center; gap: 14px; }
+  .benef-ico {
+    width: 46px; height: 46px; flex: none;
+    border-radius: 12px;
+    background: var(--green-bg);
+    color: var(--green);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .benef-ico .ico { width: 24px; height: 24px; }
+  .benef h3 { font-family: var(--sans); font-weight: 700; font-size: 26px; letter-spacing: 0; color: var(--green); line-height: 1.15; }
+  .benef p { margin-top: 14px; font-size: 19px; line-height: 1.5; color: var(--text); }
+
+  /* ---------- 5. Intervención ---------- */
+  .fotos { display: flex; gap: 26px; }
+  .foto img {
+    display: block;
+    height: 392px;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+  .foto.tecnico img { width: 500px; object-position: 30% 50%; }
+  .foto.antes img { width: 578px; }
+  .foto figcaption { margin-top: 14px; font-size: 18px; line-height: 1.42; color: var(--text); }
+  .foto figcaption b { color: var(--ink); }
+  figure { margin: 0; }
+
+  /* ---------- 6. Materiales ---------- */
+  .mat-intro { margin-top: -8px; margin-bottom: 20px; font-size: 19px; line-height: 1.45; color: var(--text); }
+  .mat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .mat { padding: 22px 26px 20px; display: flex; flex-direction: column; }
+  .mat .tag {
+    align-self: flex-start;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--green);
+    background: var(--green-bg);
+    border-radius: 999px;
+    padding: 4px 11px;
+  }
+  .mat h3 { margin-top: 12px; font-size: 30px; }
+  .mat .fab { margin-top: 4px; font-size: 16px; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; }
+  .mat .tipo { margin-top: 10px; font-size: 16.5px; line-height: 1.42; color: var(--text); min-height: 70px; }
+  .specs { margin-top: 14px; border-top: 1px solid var(--line); }
+  .spec {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+  }
+  .spec span:first-child { color: var(--muted); }
+  .spec .val { font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .spec .val small { font-family: var(--sans); font-weight: 600; font-size: 14.5px; color: var(--text); margin-left: 3px; }
+  .mat .extra { margin-top: 10px; font-size: 14.5px; color: var(--muted); line-height: 1.4; }
+
+  /* ---------- 7. Ejemplo real ---------- */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .stat {
+    background: var(--navy-card);
+    border-radius: 14px;
+    padding: 24px 22px 24px;
+    min-height: 252px;
+  }
+  .stat .big { font-size: 58px; line-height: 1; color: var(--green-l); letter-spacing: -0.01em; white-space: nowrap; }
+  .stat .lbl { margin-top: 18px; font-size: 19px; line-height: 1.25; font-weight: 700; color: #fff; }
+  .stat .det { margin-top: 12px; font-size: 16px; line-height: 1.42; color: rgba(223, 229, 242, 0.84); }
+  .aviso {
+    margin-top: 36px;
+    border-left: 4px solid var(--green-l);
+    padding: 4px 0 4px 22px;
+    font-size: 16.5px; line-height: 1.5; color: rgba(223, 229, 242, 0.9);
+  }
+  .aviso b { color: #fff; }
+
+  /* ---------- 8. 5 pasos ---------- */
+  .pasos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .paso { padding: 24px 20px 22px; min-height: 380px; }
+  .paso .n { font-size: 60px; line-height: 1; color: var(--green); }
+  .paso h3 { margin-top: 18px; font-family: var(--sans); font-weight: 700; font-size: 21px; line-height: 1.2; letter-spacing: 0; color: var(--ink); min-height: 50px; }
+  .paso p { margin-top: 10px; font-size: 18px; line-height: 1.45; color: var(--text); }
+  .paso p b { color: var(--ink); }
+  .paso p.ok { margin-top: 14px; font-weight: 700; color: var(--green); }
+
+  /* ---------- 9. Quién prepara qué ---------- */
+  .quien-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .quien { padding: 22px 30px 22px; }
+  .quien h3 { font-family: var(--sans); font-weight: 700; font-size: 24px; letter-spacing: 0; color: var(--green); }
+  .quien ol { margin: 14px 0 0; padding-left: 26px; font-size: 17.5px; line-height: 1.38; color: var(--text); }
+  .quien li { padding-left: 4px; margin-bottom: 3px; }
+  .quien li::marker { font-variant-numeric: tabular-nums; }
+  .quien li b { color: var(--ink); }
+  .quien.admin { background: var(--navy); border-color: var(--navy); }
+  .quien.admin h3 { color: var(--green-l); }
+  .quien.admin ol { color: #e3e8f3; }
+  .quien.admin li b { color: #fff; }
+  .firma {
+    margin-top: 20px;
+    background: var(--green-bg);
+    border-radius: 12px;
+    padding: 16px 22px;
+    font-size: 17px; line-height: 1.45; color: var(--ink);
+  }
+  .firma b:first-child { color: var(--green); }
+  .todos { margin-top: 14px; font-size: 16px; color: var(--text); }
+  .todos b { color: var(--ink); }
+
+  /* ---------- 10. Contacto ---------- */
+  .cta { padding-top: 84px; }
+  .cta-grid { display: grid; grid-template-columns: 1fr 432px; gap: 60px; align-items: start; }
+  .cta h2 { font-size: 64px; line-height: 1.05; margin-top: 18px; }
+  .cta .lead { margin-top: 24px; font-size: 22px; line-height: 1.48; color: #dfe5f2; max-width: 620px; }
+  .firma-av { margin-top: 28px; border-left: 4px solid var(--green-l); padding: 2px 0 2px 22px; }
+  .firma-av strong { display: block; font-size: 22px; color: #fff; }
+  .firma-av span { display: block; margin-top: 6px; font-size: 19px; color: var(--green-l); }
+  .logo-card { background: #fff; border-radius: 16px; padding: 18px 0 16px; display: flex; justify-content: center; }
+  .logo-card img { display: block; width: 216px; height: auto; }
+  .contactos { margin-top: 24px; display: flex; flex-direction: column; gap: 13px; }
+  .contacto { display: flex; align-items: center; gap: 14px; font-size: 17.5px; line-height: 1.3; color: #fff; white-space: nowrap; }
+  .contacto .ico { width: 20px; height: 20px; color: var(--green-l); }
+  .contacto small { display: block; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(223, 229, 242, 0.62); font-weight: 600; }
+  .legal {
+    position: absolute; left: 88px; right: 88px; bottom: 66px;
+    padding-top: 14px;
+    border-top: 1px solid var(--navy-line);
+    font-size: 13.5px; line-height: 1.45; color: rgba(223, 229, 242, 0.66);
+  }
+  .legal b { color: rgba(255, 255, 255, 0.86); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. Portada ============ -->
+<section class="page cover" aria-label="Portada">
+  <img class="cover-img" src="img/portada.jpg" alt="" width="2400" height="1350">
+  <div class="cover-shade"></div>
+  <div class="cover-logo"><img src="../../../logo.png" alt="Los Artesanos Verdes" width="480" height="334"></div>
+  <div class="cover-text">
+    <p class="eyebrow">Propuesta para comunidades de propietarios</p>
+    <h1>Aislamiento de la cubierta<br>de su edificio</h1>
+    <!-- COSTE:INICIO -->
+    <p class="cover-line">Financiación privada del sistema CAE<span class="sep">·</span>Sin obras en las viviendas<span class="sep">·</span>En una jornada</p>
+    <!-- COSTE:FIN -->
+  </div>
+</section>
+
+<!-- ============ 2. Nuestra propuesta ============ -->
+<section class="page dark propuesta" aria-label="Nuestra propuesta">
+  <p class="eyebrow">Nuestra propuesta</p>
+  <h2>Aislamos la cubierta de su edificio, <!-- COSTE:INICIO -->con la financiación privada del sistema CAE<!-- COSTE:FIN --></h2>
+  <p class="lead">La obra se enmarca en el sistema de Certificados de Ahorro Energético (CAE, Real Decreto 36/2023). La Comunidad cede el ahorro energético generado y nuestra empresa, Los Artesanos Verdes, realiza la obra completa: material, mano de obra y gestión del expediente.</p>
+  <!-- COSTE:INICIO -->
+  <div class="coste-box">
+    <p class="coste-main">La financiación privada del sistema CAE puede cubrir gran parte de la inversión; en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%.</p>
+    <p class="coste-legal">Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023).<br>Primas sujetas a verificación del ahorro por una entidad acreditada&nbsp;por&nbsp;ENAC.</p>
+  </div>
+  <!-- COSTE:FIN -->
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+<!-- ============ 3. Todo incluido ============ -->
+<section class="page" aria-label="Lo que aportamos al edificio">
+  <div class="head">
+    <p class="eyebrow">Lo que aportamos al edificio</p>
+    <h2><!-- COSTE:INICIO -->Todo incluido, de principio a fin<!-- COSTE:FIN --></h2>
+  </div>
+  <div class="incluido-grid">
+    <div class="inc-list">
+      <div class="card inc">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M9.5 20v-5h5v5"/></svg>
+        <div>
+          <h3>El aislamiento completo de la buhardilla</h3>
+          <p>Lana mineral insuflada (ISOVER Isolene&nbsp;4 o Knauf Supafil Loft&nbsp;045) o rollos de lana mineral VOLCALIS EASY desenrollados sobre el suelo del desván, según el edificio. <!-- COSTE:INICIO -->Material y mano de obra incluidos, en una jornada.<!-- COSTE:FIN --></p>
+        </div>
+      </div>
+      <div class="card inc">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        <div>
+          <h3>Control de calidad documentado</h3>
+          <p>Espesor medido en varios puntos, fotos fechadas y geolocalizadas.</p>
+        </div>
+      </div>
+      <div class="card inc feature">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m8.4 12.3 2.5 2.5 4.8-5"/></svg>
+        <div>
+          <h3>El certificado energético, antes y después</h3>
+          <p>Un técnico certificador habilitado emite el certificado de eficiencia energética antes y después de la obra. El certificado final, con la nueva calificación del edificio, se inscribe en el registro oficial de la comunidad autónoma.</p>
+        </div>
+      </div>
+      <div class="card inc">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>
+        <div>
+          <h3>Gestión completa del expediente CAE</h3>
+          <!-- COSTE:INICIO -->
+          <p>Acuerdo de cesión del ahorro, justificante y factura: toda la gestión del expediente CAE corre de nuestra cuenta.</p>
+          <!-- COSTE:FIN -->
+        </div>
+      </div>
+    </div>
+
+    <div class="card escala-card">
+      <div class="escala" role="img" aria-label="Escala oficial de calificación energética, de la A (más eficiente) a la G (menos eficiente)">
+        <div class="escala-top">CALIFICACIÓN ENERGÉTICA</div>
+        <div class="escala-body">
+          <div class="escala-label"><div>Consumo de energía primaria no renovable <small>[kWh/m²·año]</small></div></div>
+          <div class="escala-bars">
+            <div class="bar a">A</div>
+            <div class="bar b">B</div>
+            <div class="bar c">C</div>
+            <div class="bar d">D</div>
+            <div class="bar e">E</div>
+            <div class="bar f">F</div>
+            <div class="bar g">G</div>
+          </div>
+        </div>
+      </div>
+      <p class="escala-cap">La escala oficial del certificado: su edificio recibe su calificación energética tras el aislamiento.</p>
+      <p class="escala-note">Los límites de cada letra dependen de la zona climática.</p>
+    </div>
+  </div>
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+<!-- ============ 4. Todo el edificio sale ganando ============ -->
+<section class="page" aria-label="Beneficios">
+  <div class="head">
+    <p class="eyebrow">Beneficios para la Comunidad</p>
+    <h2>Todo el edificio sale ganando</h2>
+  </div>
+  <div class="benef-grid">
+    <div class="card benef">
+      <div class="benef-head">
+        <span class="benef-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M12 12.5v4.5"/><circle cx="12" cy="17.5" r="0.6"/></svg></span>
+        <h3>Confort para todas las viviendas</h3>
+      </div>
+      <p>El calor sube y se escapa por la cubierta: al aislarla, todo el edificio gana en confort, en invierno y en verano, no solo la última planta.</p>
+    </div>
+    <div class="card benef">
+      <div class="benef-head">
+        <span class="benef-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6z"/></svg></span>
+        <h3>Menos consumo</h3>
+      </div>
+      <p>Menos pérdidas por la cubierta, lo que se traduce en menos gasto en calefacción y aire acondicionado para toda la Comunidad.</p>
+    </div>
+    <div class="card benef">
+      <div class="benef-head">
+        <span class="benef-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+        <h3>Obra en una jornada</h3>
+      </div>
+      <p>Visita técnica e instalación el mismo día, sin molestias para los vecinos.</p>
+    </div>
+    <div class="card benef">
+      <div class="benef-head">
+        <span class="benef-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="m9 14 2 2 4-4"/></svg></span>
+        <h3><!-- COSTE:INICIO -->Certificado CEE incluido<!-- COSTE:FIN --></h3>
+      </div>
+      <p>Le entregamos el certificado de eficiencia energética (CEE) del edificio, antes y después, con reportaje fotográfico fechado y geolocalizado.</p>
+    </div>
+  </div>
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+<!-- ============ 5. Nuestra intervención ============ -->
+<section class="page" aria-label="Nuestra intervención">
+  <div class="head">
+    <p class="eyebrow">Nuestra intervención</p>
+    <h2>Una jornada basta, el resultado se ve</h2>
+  </div>
+  <div class="fotos">
+    <figure class="foto tecnico">
+      <img src="img/tecnico.jpg" alt="Técnico insuflando lana mineral en una buhardilla" width="1200" height="960">
+      <figcaption>Nuestro técnico insufla la <b>lana mineral Isolene&nbsp;4</b> directamente en la buhardilla.</figcaption>
+    </figure>
+    <figure class="foto antes">
+      <img src="img/antes-despues.jpg" alt="La misma buhardilla antes y después del aislamiento" width="1200" height="831">
+      <figcaption><b>Antes y después:</b> de una buhardilla desnuda a un aislamiento completo.</figcaption>
+    </figure>
+  </div>
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+<!-- ============ 6. Materiales que instalamos ============ -->
+<!-- Datos: CRM de la empresa (fichas de los fabricantes). Solo tipo, espesor, R y λ. -->
+<section class="page" aria-label="Materiales que instalamos">
+  <div class="head">
+    <p class="eyebrow">Aislamiento del desván o buhardilla</p>
+    <h2>Materiales que instalamos</h2>
+  </div>
+  <p class="mat-intro">Tres aislantes de lana mineral, elegidos según el edificio. Valores de las fichas técnicas de los fabricantes.</p>
+  <div class="mat-grid">
+    <div class="card mat">
+      <span class="tag">Insuflado</span>
+      <h3>Isolene&nbsp;4</h3>
+      <p class="fab">ISOVER</p>
+      <p class="tipo">Lana mineral insuflada (soplada).</p>
+      <div class="specs">
+        <div class="spec"><span>Espesor instalado</span><span class="val">220<small>mm</small></span></div>
+        <div class="spec"><span>Resistencia térmica R</span><span class="val">4,75<small>m²·K/W</small></span></div>
+        <div class="spec"><span>Conductividad λ</span><span class="val">0,046<small>W/(m·K)</small></span></div>
+      </div>
+      <p class="extra">También en 300&nbsp;mm: R&nbsp;=&nbsp;6,50&nbsp;m²·K/W.</p>
+    </div>
+    <div class="card mat">
+      <span class="tag">Insuflado</span>
+      <h3>Supafil Loft&nbsp;045</h3>
+      <p class="fab">Knauf Insulation</p>
+      <p class="tipo">Lana mineral insuflada (soplada).</p>
+      <div class="specs">
+        <div class="spec"><span>Espesor instalado</span><span class="val">225<small>mm</small></span></div>
+        <div class="spec"><span>Resistencia térmica R</span><span class="val">5,00<small>m²·K/W</small></span></div>
+        <div class="spec"><span>Conductividad λ</span><span class="val">0,045<small>W/(m·K)</small></span></div>
+      </div>
+    </div>
+    <div class="card mat">
+      <span class="tag">En rollo</span>
+      <h3>VOLCALIS EASY</h3>
+      <p class="fab">VOLCALIS</p>
+      <p class="tipo">Lana mineral en rollo revestida de papel kraft, desenrollada sobre el suelo del desván.</p>
+      <div class="specs">
+        <div class="spec"><span>Espesor instalado</span><span class="val">280<small>mm</small></span></div>
+        <div class="spec"><span>Resistencia térmica R</span><span class="val">7,00<small>m²·K/W</small></span></div>
+        <div class="spec"><span>Conductividad λ</span><span class="val">0,040<small>W/(m·K)</small></span></div>
+      </div>
+    </div>
+  </div>
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+<!-- ============ 7. Ejemplo real ============ -->
+<!-- Publicado con el consentimiento del cliente (decisión del propietario, 28/10/2026). Aviso completo, sin cambios. -->
+<section class="page dark" aria-label="Ejemplo real">
+  <div class="head">
+    <p class="eyebrow">Ejemplo real · estimaciones de los certificados antes y después</p>
+    <h2>Lo que puede cambiar el aislamiento de la cubierta</h2>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <p class="big num">−93&nbsp;%</p>
+      <p class="lbl">de pérdidas por la cubierta (estimado)</p>
+      <p class="det">Transmitancia del techo: de 2,50 a 0,18&nbsp;W/m²·K</p>
+    </div>
+    <div class="stat">
+      <p class="big num">−29&nbsp;%</p>
+      <p class="lbl">de demanda de calefacción (estimado)</p>
+      <p class="det">De 271,5 a 192,3&nbsp;kWh/m² al año</p>
+    </div>
+    <div class="stat">
+      <p class="big num">−27&nbsp;%</p>
+      <p class="lbl">de consumo de energía (estimado)</p>
+      <p class="det">Energía primaria no renovable: de 428,3 a 311,0&nbsp;kWh/m² al año</p>
+    </div>
+    <div class="stat">
+      <p class="big num">F&nbsp;→&nbsp;E</p>
+      <p class="lbl">calificación estimada de emisiones de CO₂</p>
+      <p class="det">De 108,6 a 78,8&nbsp;kg&nbsp;CO₂/m² al año (−27&nbsp;%)</p>
+    </div>
+  </div>
+  <p class="aviso"><b>Estimaciones, no garantizadas.</b> Valores obtenidos de los certificados energéticos oficiales emitidos antes y después de una obra real (vivienda de 204&nbsp;m², septiembre de 2026, 220&nbsp;mm de lana mineral insuflada), calculados con el procedimiento oficial CE3X en condiciones normalizadas. Son orientativos y pueden diferir de los consumos reales según el uso, la ocupación, el clima y las características de cada edificio. No constituyen un compromiso de resultado.</p>
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+<!-- ============ 8. 5 pasos ============ -->
+<section class="page" aria-label="5 pasos">
+  <div class="head">
+    <!-- COSTE:INICIO -->
+    <p class="eyebrow">Sencillo y documentado</p>
+    <!-- COSTE:FIN -->
+    <h2>5 pasos, nada más</h2>
+  </div>
+  <div class="pasos">
+    <div class="card paso">
+      <p class="n num">1</p>
+      <h3>Estudio</h3>
+      <p>Envíenos las <b>fotos de la buhardilla</b> y la <b>nota simple</b> o la escritura.</p>
+      <p class="ok">Respuesta en 24&nbsp;h.</p>
+    </div>
+    <div class="card paso">
+      <p class="n num">2</p>
+      <h3>Votación<br>en Junta</h3>
+      <p>Ustedes convocan la <b>Junta</b>.</p>
+      <p class="ok">Se vota el aislamiento y la cesión del CAE.</p>
+    </div>
+    <div class="card paso">
+      <p class="n num">3</p>
+      <h3>Documentos</h3>
+      <p>Envíenos el <b>acta firmada</b>, el <b>CIF</b> y los <b>DNI</b>.</p>
+      <p class="ok">Acta con firma digital del Presidente o del Administrador.</p>
+    </div>
+    <div class="card paso">
+      <p class="n num">4</p>
+      <h3>Obra</h3>
+      <p>Nuestro técnico realiza el <b>certificado energético</b>.</p>
+      <p class="ok">El mismo día, aislamos la buhardilla.</p>
+    </div>
+    <div class="card paso">
+      <p class="n num">5</p>
+      <h3>Fin de obra</h3>
+      <p>El Presidente y el Administrador <b>firman</b> el fin de obra.</p>
+      <p class="ok">Firma digital: Presidente o Administrador.</p>
+    </div>
+  </div>
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+<!-- ============ 9. Quién prepara qué ============ -->
+<section class="page" aria-label="Lista de documentos">
+  <div class="head">
+    <p class="eyebrow">Lista de documentos</p>
+    <h2>Quién prepara qué</h2>
+  </div>
+  <div class="quien-grid">
+    <div class="card quien admin">
+      <h3>El Administrador</h3>
+      <ol>
+        <li><b>Fotos</b> de la trampilla y de la buhardilla por dentro</li>
+        <li><b>Nota simple</b> o <b>escritura</b> del edificio</li>
+        <li><b>Acta de la Junta</b> indicando: aprobación del aislamiento, cesión del CAE a Los Artesanos Verdes, asistentes y resultado de la votación</li>
+        <li><b>Firma</b> del acta, <b>también digital</b></li>
+        <li><b>CIF</b> de la Comunidad</li>
+        <li><b>DNI</b> por ambas caras</li>
+        <li><b>Firma</b> del fin de obra</li>
+      </ol>
+    </div>
+    <div class="card quien">
+      <h3>El Presidente</h3>
+      <ol>
+        <li><b>Firma</b> del acta</li>
+        <li><b>DNI</b> por ambas caras</li>
+        <li><b>Firma</b> del fin de obra</li>
+      </ol>
+    </div>
+  </div>
+  <p class="firma"><b>Firma digital (acta y fin de obra):</b> firman los dos, pero basta una sola firma digital: la del Presidente <b>o</b> la del Administrador. Si es el Administrador, con el certificado de representante de la empresa administradora (no un certificado personal).</p>
+  <p class="todos"><b>Todos los documentos:</b> escaneo completo y legible en PDF, sin tachaduras · actas de 2025 o posteriores.</p>
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+<!-- ============ 10. Contacto ============ -->
+<section class="page dark cta" aria-label="Contacto">
+  <div class="cta-grid">
+    <div>
+      <h2>¿Aislamos<br>su edificio?</h2>
+      <p class="lead">Empiece por el paso 1: envíenos las fotos de la buhardilla y la nota simple o la escritura del edificio.</p>
+      <div class="firma-av">
+        <strong>Los Artesanos Verdes</strong>
+        <span>Su asesor le acompaña en cada paso.</span>
+      </div>
+    </div>
+    <div>
+      <div class="logo-card"><img src="../../../logo.png" alt="Los Artesanos Verdes" width="480" height="334"></div>
+      <div class="contactos">
+        <a class="contacto" href="tel:+34632180509">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          <span><small>Teléfono</small>+34 632 18 05 09</span>
+        </a>
+        <a class="contacto" href="https://wa.me/34632180509">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8.5 8.5 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"/></svg>
+          <span><small>WhatsApp</small>+34 632 18 05 09</span>
+        </a>
+        <a class="contacto" href="mailto:contacto@artesanosverdes.com">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+          <span><small>Correo</small>contacto@artesanosverdes.com</span>
+        </a>
+        <a class="contacto" href="https://artesanosverdes.com/comunidades-de-propietarios/">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <span><small>Web</small>artesanosverdes.com/comunidades-de-propietarios/</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- COSTE:INICIO -->
+  <p class="legal"><b>Los Artesanos Verdes SL</b> · Financiación privada del sistema CAE: importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023).<br>Primas sujetas a verificación del ahorro por una entidad acreditada&nbsp;por&nbsp;ENAC.</p>
+  <!-- COSTE:FIN -->
+  <p class="foot">Los Artesanos Verdes · Propuesta para comunidades</p>
+</section>
+
+</body>
+</html>
