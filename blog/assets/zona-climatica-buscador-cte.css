@@ -1,0 +1,337 @@
+/* ============================================
+   Buscador de zona climática (CTE DB-HE, anejo B)
+   Article : /blog/zona-climatica-buscador-cte/
+   Dépend des variables de blog.css (--av-*). Aucun stockage, aucun cookie.
+   ============================================ */
+
+.zc-tool {
+  background: #fff;
+  border: 1px solid var(--av-border);
+  border-radius: var(--av-radius-md);
+  box-shadow: var(--av-shadow-md);
+  padding: 28px;
+  margin: 32px 0 40px;
+  font-family: var(--av-body);
+}
+
+.zc-tool-title {
+  font-family: var(--av-display);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.012em;
+  color: var(--av-forest-deep);
+  margin: 0 0 6px;
+}
+
+.zc-tool-intro {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--av-text-soft);
+  margin: 0 0 20px;
+}
+
+/* Sans JavaScript : le formulaire est masqué, un message renvoie au tableau. */
+html:not(.js) .zc-form,
+html:not(.js) .zc-tool-intro { display: none; }
+
+.zc-noscript {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 14px 16px;
+  border-left: 3px solid var(--av-terra);
+  background: var(--av-cream);
+  border-radius: 0 var(--av-radius-sm) var(--av-radius-sm) 0;
+}
+
+.zc-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 640px) {
+  .zc-form-grid { grid-template-columns: 1.4fr 1fr; }
+}
+
+.zc-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+
+.zc-field label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--av-forest-deep);
+}
+
+.zc-hint {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--av-text-soft);
+  margin: 0;
+}
+
+.zc-field select,
+.zc-field input {
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 14px;
+  font-family: var(--av-body);
+  font-size: 17px;
+  color: var(--av-forest-deep);
+  background: var(--av-ivory);
+  border: 1.5px solid rgba(26, 46, 31, 0.28);
+  border-radius: var(--av-radius-sm);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.zc-field select {
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%231a2e1f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.zc-field input { font-variant-numeric: tabular-nums; }
+
+.zc-field select:focus-visible,
+.zc-field input:focus-visible {
+  outline: 2px solid var(--av-brand-green-deep);
+  outline-offset: 2px;
+  border-color: var(--av-brand-green-deep);
+}
+
+.zc-field [aria-invalid="true"] {
+  border-color: #b3261e;
+}
+
+.zc-error {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b3261e;
+  margin: 0;
+}
+
+.zc-error:empty { display: none; }
+
+.zc-submit {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 28px;
+  font-family: var(--av-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--av-brand-green-deep);
+  border: 0;
+  border-radius: var(--av-radius-sm);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .zc-submit { width: auto; }
+}
+
+.zc-submit:hover { background: #0f6a2b; }
+
+.zc-submit:focus-visible {
+  outline: 2px solid var(--av-gold);
+  outline-offset: 3px;
+}
+
+/* ----- Résultat ----- */
+.zc-result:empty { display: none; }
+
+.zc-result {
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid var(--av-border);
+}
+
+/* Le résultat reçoit le focus par script (lecteurs d'écran, défilement) :
+   ce n'est pas un élément interactif, donc pas d'anneau de focus. */
+.zc-result:focus,
+.zc-result:focus-visible { outline: none; }
+
+.zc-result > * + * { margin-top: 14px; }
+
+.zc-result p { margin-bottom: 0; }
+
+.zc-result-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.zc-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 10px 18px;
+  border-radius: var(--av-radius-md);
+  font-family: var(--av-display);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+  background: #2d5a3d;
+}
+
+.zc-badge--alfa,
+.zc-badge--a,
+.zc-badge--b { background: #e6e4df; color: #4a4f44; }
+.zc-badge--c { background: #3f7a53; }
+.zc-badge--d { background: #2d5a3d; }
+.zc-badge--e { background: #1a4d30; }
+
+.zc-result-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--av-terra-deep);
+  margin: 0;
+}
+
+.zc-result-split {
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--av-forest-deep);
+  margin: 2px 0 0;
+}
+
+.zc-result-detail,
+.zc-result-scale {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.zc-result-scale { color: var(--av-text-soft); }
+
+.zc-warn {
+  font-size: 15px;
+  line-height: 1.55;
+  padding: 12px 14px;
+  background: #fff8ec;
+  border-left: 3px solid var(--av-gold);
+  border-radius: 0 var(--av-radius-sm) var(--av-radius-sm) 0;
+}
+
+.zc-disclaimer {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--av-text-soft);
+  font-style: italic;
+}
+
+.zc-cae {
+  padding: 18px 20px;
+  border-radius: var(--av-radius-sm);
+  font-size: 16px;
+  line-height: 1.6;
+  background: linear-gradient(135deg, var(--av-cream) 0%, var(--av-ivory) 100%);
+  border: 1px solid var(--av-border);
+  border-left: 4px solid var(--av-brand-green);
+}
+
+.zc-cae--neutral { border-left-color: var(--av-terra); }
+
+.zc-cae p { margin: 0; }
+
+.zc-cae .av-cta-button { margin-top: 16px; }
+
+/* ----- Tableaux ----- */
+.zc-caption {
+  caption-side: top;
+  text-align: left;
+  padding: 14px 16px 10px;
+  font-size: 14px;
+  color: var(--av-text-soft);
+  background: #fff;
+}
+
+.zc-zone-table td strong {
+  font-family: var(--av-display);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--av-brand-green-deep);
+}
+
+.zc-zone-table th[scope="row"] {
+  background: transparent;
+  color: var(--av-forest-deep);
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.zc-zone-table tr:nth-child(even) th[scope="row"] { background: var(--av-ivory); }
+
+.zc-req-table th[scope="row"] {
+  background: transparent;
+  color: var(--av-forest-deep);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+.zc-req-table tr:nth-child(even) th[scope="row"] { background: var(--av-ivory); }
+
+.zc-req-table td { font-size: 16px; font-weight: 600; color: var(--av-brand-green-deep); }
+
+.zc-req-table th[scope="col"] { white-space: nowrap; }
+
+.zc-num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Reste des provinces : bloc dépliable */
+.zc-more {
+  margin: 8px 0 32px;
+  border: 1px solid var(--av-border);
+  border-radius: var(--av-radius-md);
+  background: #fff;
+}
+
+.zc-more > summary {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-weight: 600;
+  color: var(--av-brand-green-deep);
+  list-style-position: inside;
+}
+
+.zc-more > summary:focus-visible {
+  outline: 2px solid var(--av-brand-green-deep);
+  outline-offset: 2px;
+  border-radius: var(--av-radius-md);
+}
+
+.zc-more[open] > summary { border-bottom: 1px solid var(--av-border-soft); }
+
+.zc-more .av-table-scroll { margin: 0; box-shadow: none; border-radius: 0 0 var(--av-radius-md) var(--av-radius-md); }
+
+@media (max-width: 640px) {
+  .zc-tool { padding: 20px 18px; }
+  .zc-badge { font-size: 38px; min-width: 84px; }
+}
+
+/* Mobile : ces tableaux tiennent dans la largeur en passant à la ligne,
+   plutôt que de défiler (blog.css impose min-width: 34rem sous 700 px). */
+@media (max-width: 700px) {
+  .av-table-scroll > table.zc-zone-table,
+  .av-table-scroll > table.zc-req-table { min-width: 0; }
+  .zc-zone-table th[scope="row"] { white-space: normal; }
+  .av-content .zc-zone-table th,
+  .av-content .zc-zone-table td,
+  .av-content .zc-req-table th,
+  .av-content .zc-req-table td { padding: 11px 10px; }
+  .zc-zone-table td { font-size: 15px; }
+  .zc-req-table th[scope="row"] { font-size: 14px; }
+}

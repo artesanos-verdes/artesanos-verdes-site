@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 1054" width="360" height="1054" role="img" aria-labelledby="recm-title recm-desc" font-family="'Source Sans 3', Arial, sans-serif">
+  <title id="recm-title">El recorrido de un ahorro en el sistema CAE</title>
+  <desc id="recm-desc">Seis pasos: 1, el propietario del ahorro hace la obra y cede el ahorro a cambio de una contraprestación; 2, el sujeto delegado, acreditado por el Coordinador Nacional, firma el convenio CAE, pasa a ser dueño del ahorro y prepara el expediente; 3, un verificador acreditado por ENAC revisa la documentación y el ahorro y emite un dictamen; 4, el gestor autonómico valida el expediente, emite el CAE y lo preinscribe; 5, el Coordinador Nacional lo inscribe en el Registro Nacional, a razón de 1 CAE por kWh de ahorro anual; 6, los CAE se liquidan para cumplir parte de la obligación anual de ahorro del sujeto obligado, por él o, en su nombre, por el sujeto delegado. El obligado puede encargar los ahorros a un sujeto delegado mediante un contrato de delegación, pero la obligación sigue siendo suya.</desc>
+  <rect width="360" height="1054" fill="#f7f7f5"/>
+  <text x="16" y="34" fill="#1a4d30" font-family="'Source Serif 4', Georgia, serif" font-size="21" font-weight="700">El recorrido de un ahorro</text>
+  <text x="16" y="57" fill="#5a6b4a" font-size="14">en el sistema CAE, según el RD 36/2023</text>
+  <g>
+    <rect x="16" y="72" width="328" height="122" rx="14" fill="#e9f2ec" stroke="#22a044" stroke-width="2.5"/>
+    <circle cx="45" cy="101" r="15" fill="#158035"/>
+    <text x="45" y="106.5" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">1</text>
+    <text x="72" y="107" fill="#1a4d30" font-family="'Source Serif 4', Georgia, serif" font-size="17" font-weight="700">Propietario del ahorro</text>
+    <text x="36" y="138" fill="#2b3a2f" font-size="13.5">Haces la obra (desván, tejado, bomba de</text>
+    <text x="36" y="159" fill="#2b3a2f" font-size="13.5">calor) y cedes el ahorro a cambio de una</text>
+    <text x="36" y="180" fill="#2b3a2f" font-size="13.5">contraprestación.</text>
+  </g>
+  <line x1="180" y1="199" x2="180" y2="208" stroke="#22a044" stroke-width="3" stroke-linecap="round"/>
+  <path d="M180,217 L174,208 L186,208 Z" fill="#22a044"/>
+  <g>
+    <rect x="16" y="222" width="328" height="122" rx="14" fill="#ffffff" stroke="#1a4d30" stroke-width="2"/>
+    <circle cx="45" cy="251" r="15" fill="#1a4d30"/>
+    <text x="45" y="256.5" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">2</text>
+    <text x="72" y="257" fill="#1a4d30" font-family="'Source Serif 4', Georgia, serif" font-size="17" font-weight="700">Sujeto delegado</text>
+    <text x="36" y="288" fill="#2b3a2f" font-size="13.5">Acreditado por el Coordinador Nacional.</text>
+    <text x="36" y="309" fill="#2b3a2f" font-size="13.5">Firma el convenio CAE, pasa a ser dueño</text>
+    <text x="36" y="330" fill="#2b3a2f" font-size="13.5">del ahorro y prepara el expediente.</text>
+  </g>
+  <line x1="180" y1="349" x2="180" y2="358" stroke="#22a044" stroke-width="3" stroke-linecap="round"/>
+  <path d="M180,367 L174,358 L186,358 Z" fill="#22a044"/>
+  <g>
+    <rect x="16" y="372" width="328" height="122" rx="14" fill="#ffffff" stroke="#1a4d30" stroke-width="2"/>
+    <circle cx="45" cy="401" r="15" fill="#1a4d30"/>
+    <text x="45" y="406.5" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">3</text>
+    <text x="72" y="407" fill="#1a4d30" font-family="'Source Serif 4', Georgia, serif" font-size="17" font-weight="700">Verificador</text>
+    <text x="36" y="438" fill="#2b3a2f" font-size="13.5">Entidad acreditada por ENAC. Revisa la</text>
+    <text x="36" y="459" fill="#2b3a2f" font-size="13.5">documentación y el ahorro según la ficha</text>
+    <text x="36" y="480" fill="#2b3a2f" font-size="13.5">y emite un dictamen.</text>
+  </g>
+  <line x1="180" y1="499" x2="180" y2="508" stroke="#22a044" stroke-width="3" stroke-linecap="round"/>
+  <path d="M180,517 L174,508 L186,508 Z" fill="#22a044"/>
+  <g>
+    <rect x="16" y="522" width="328" height="122" rx="14" fill="#ffffff" stroke="#1a4d30" stroke-width="2"/>
+    <circle cx="45" cy="551" r="15" fill="#1a4d30"/>
+    <text x="45" y="556.5" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">4</text>
+    <text x="72" y="557" fill="#1a4d30" font-family="'Source Serif 4', Georgia, serif" font-size="17" font-weight="700">Gestor autonómico</text>
+    <text x="36" y="588" fill="#2b3a2f" font-size="13.5">Órgano de tu comunidad autónoma. Valida</text>
+    <text x="36" y="609" fill="#2b3a2f" font-size="13.5">el expediente, emite el CAE y lo</text>
+    <text x="36" y="630" fill="#2b3a2f" font-size="13.5">preinscribe en el Registro Nacional.</text>
+  </g>
+  <line x1="180" y1="649" x2="180" y2="658" stroke="#22a044" stroke-width="3" stroke-linecap="round"/>
+  <path d="M180,667 L174,658 L186,658 Z" fill="#22a044"/>
+  <g>
+    <rect x="16" y="672" width="328" height="122" rx="14" fill="#ffffff" stroke="#1a4d30" stroke-width="2"/>
+    <circle cx="45" cy="701" r="15" fill="#1a4d30"/>
+    <text x="45" y="706.5" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">5</text>
+    <text x="72" y="707" fill="#1a4d30" font-family="'Source Serif 4', Georgia, serif" font-size="17" font-weight="700">Coordinador Nacional</text>
+    <text x="36" y="738" fill="#2b3a2f" font-size="13.5">Órgano del MITECO. Inscribe el CAE en</text>
+    <text x="36" y="759" fill="#2b3a2f" font-size="13.5">el Registro Nacional. Cada CAE equivale</text>
+    <text x="36" y="780" fill="#2b3a2f" font-size="13.5">a 1 kWh de ahorro anual de energía final.</text>
+  </g>
+  <line x1="180" y1="799" x2="180" y2="808" stroke="#22a044" stroke-width="3" stroke-linecap="round"/>
+  <path d="M180,817 L174,808 L186,808 Z" fill="#22a044"/>
+  <g>
+    <rect x="16" y="822" width="328" height="122" rx="14" fill="#ffffff" stroke="#1a4d30" stroke-width="2"/>
+    <circle cx="45" cy="851" r="15" fill="#1a4d30"/>
+    <text x="45" y="856.5" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">6</text>
+    <text x="72" y="857" fill="#1a4d30" font-family="'Source Serif 4', Georgia, serif" font-size="17" font-weight="700">Sujeto obligado</text>
+    <text x="36" y="888" fill="#2b3a2f" font-size="13.5">Cumple con los CAE parte de su obligación</text>
+    <text x="36" y="909" fill="#2b3a2f" font-size="13.5">anual de ahorro. Los liquida él o, en su</text>
+    <text x="36" y="930" fill="#2b3a2f" font-size="13.5">nombre, el sujeto delegado.</text>
+  </g>
+  <rect x="16" y="964" width="328" height="76" rx="10" fill="#e9f2ec"/>
+  <text x="32" y="989" fill="#1a4d30" font-size="13.5"><tspan font-weight="700">Contrato de delegación:</tspan> el obligado</text>
+  <text x="32" y="1009" fill="#1a4d30" font-size="13.5">puede encargar los ahorros a un sujeto</text>
+  <text x="32" y="1029" fill="#1a4d30" font-size="13.5">delegado, pero la obligación sigue siendo suya.</text>
+</svg>

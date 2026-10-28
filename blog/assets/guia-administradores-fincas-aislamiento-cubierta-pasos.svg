@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 900" width="560" height="900" role="img" aria-labelledby="pasos-title pasos-desc" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif">
+  <title id="pasos-title">Aislamiento de la cubierta en una comunidad de propietarios: 5 pasos</title>
+  <desc id="pasos-desc">Cinco pasos. 1, estudio: el administrador envía las fotos de la buhardilla y la nota simple o la escritura del edificio; respuesta en 24 horas. 2, votación en junta: el presidente convoca la junta, que vota el aislamiento y la cesión del CAE. 3, documentos: acta firmada, CIF de la comunidad y DNI por ambas caras, con la firma digital del presidente o del administrador. 4, obra: Los Artesanos Verdes realiza el certificado energético y aísla la buhardilla el mismo día. 5, fin de obra: el presidente y el administrador firman el fin de obra; basta una firma digital. Incluye el certificado energético del edificio, antes y después.</desc>
+
+  <!-- Fondo -->
+  <rect x="0" y="0" width="560" height="900" rx="16" fill="#faf6ec"/>
+  <rect x="0.5" y="0.5" width="559" height="899" rx="16" fill="none" stroke="#e3dccb"/>
+
+  <!-- Cabecera -->
+  <text x="36" y="54" font-size="15" font-weight="700" letter-spacing="2" fill="#8a4f22">COMUNIDADES DE PROPIETARIOS</text>
+  <text x="36" y="96" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#1a2e1f">5 pasos, nada más</text>
+  <text x="36" y="128" font-size="19" fill="#5a6b4a">Qué se hace y quién interviene en cada paso</text>
+
+  <!-- Línea vertical que une los pasos -->
+  <line x1="72" y1="198" x2="72" y2="750" stroke="#158035" stroke-width="2" stroke-dasharray="4 6" opacity="0.45"/>
+
+  <!-- Paso 1 -->
+  <g transform="translate(0,150)">
+    <rect x="24" y="0" width="512" height="128" rx="12" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12"/>
+    <circle cx="72" cy="48" r="26" fill="#158035"/>
+    <text x="72" y="57" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#ffffff">1</text>
+    <text x="116" y="44" font-family="'Source Serif 4', Georgia, serif" font-size="24" font-weight="700" fill="#1a2e1f">Estudio</text>
+    <text x="516" y="42" text-anchor="end" font-size="18" font-weight="700" fill="#8a4f22">Respuesta en 24 h</text>
+    <text x="116" y="72" font-size="19" fill="#2f3b2c">Fotos de la buhardilla y nota simple</text>
+    <text x="116" y="95" font-size="19" fill="#2f3b2c">o escritura del edificio.</text>
+    <text x="116" y="119" font-size="19" font-weight="700" fill="#158035">Envía: el administrador</text>
+  </g>
+
+  <!-- Paso 2 -->
+  <g transform="translate(0,288)">
+    <rect x="24" y="0" width="512" height="128" rx="12" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12"/>
+    <circle cx="72" cy="48" r="26" fill="#158035"/>
+    <text x="72" y="57" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#ffffff">2</text>
+    <text x="116" y="44" font-family="'Source Serif 4', Georgia, serif" font-size="24" font-weight="700" fill="#1a2e1f">Votación en junta</text>
+    <text x="116" y="72" font-size="19" fill="#2f3b2c">Se vota el aislamiento</text>
+    <text x="116" y="95" font-size="19" fill="#2f3b2c">y la cesión del CAE.</text>
+    <text x="116" y="119" font-size="19" font-weight="700" fill="#158035">Convoca: el presidente</text>
+  </g>
+
+  <!-- Paso 3 -->
+  <g transform="translate(0,426)">
+    <rect x="24" y="0" width="512" height="128" rx="12" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12"/>
+    <circle cx="72" cy="48" r="26" fill="#158035"/>
+    <text x="72" y="57" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#ffffff">3</text>
+    <text x="116" y="44" font-family="'Source Serif 4', Georgia, serif" font-size="24" font-weight="700" fill="#1a2e1f">Documentos</text>
+    <text x="116" y="72" font-size="19" fill="#2f3b2c">Acta firmada, CIF de la comunidad</text>
+    <text x="116" y="95" font-size="19" fill="#2f3b2c">y DNI por ambas caras.</text>
+    <text x="116" y="119" font-size="18" font-weight="700" fill="#158035">Firma digital: presidente o administrador</text>
+  </g>
+
+  <!-- Paso 4 -->
+  <g transform="translate(0,564)">
+    <rect x="24" y="0" width="512" height="128" rx="12" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12"/>
+    <circle cx="72" cy="48" r="26" fill="#158035"/>
+    <text x="72" y="57" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#ffffff">4</text>
+    <text x="116" y="44" font-family="'Source Serif 4', Georgia, serif" font-size="24" font-weight="700" fill="#1a2e1f">Obra</text>
+    <text x="116" y="72" font-size="19" fill="#2f3b2c">Certificado energético y aislamiento</text>
+    <text x="116" y="95" font-size="19" fill="#2f3b2c">de la buhardilla, el mismo día.</text>
+    <text x="116" y="119" font-size="19" font-weight="700" fill="#158035">Realiza: Los Artesanos Verdes</text>
+  </g>
+
+  <!-- Paso 5 -->
+  <g transform="translate(0,702)">
+    <rect x="24" y="0" width="512" height="128" rx="12" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12"/>
+    <circle cx="72" cy="48" r="26" fill="#158035"/>
+    <text x="72" y="57" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#ffffff">5</text>
+    <text x="116" y="44" font-family="'Source Serif 4', Georgia, serif" font-size="24" font-weight="700" fill="#1a2e1f">Fin de obra</text>
+    <text x="116" y="72" font-size="19" fill="#2f3b2c">El presidente y el administrador</text>
+    <text x="116" y="95" font-size="19" fill="#2f3b2c">firman el fin de obra.</text>
+    <text x="116" y="119" font-size="19" font-weight="700" fill="#158035">Basta una firma digital</text>
+  </g>
+
+  <!-- Pie -->
+  <text x="280" y="870" text-anchor="middle" font-size="17" fill="#5a6b4a">Incluye el certificado energético del edificio, antes y después.</text>
+</svg>

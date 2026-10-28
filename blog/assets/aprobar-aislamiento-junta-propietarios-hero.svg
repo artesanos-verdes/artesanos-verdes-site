@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="hero-acta-title hero-acta-desc">
+  <title id="hero-acta-title">Lo que debe recoger el acta de la Junta de propietarios</title>
+  <desc id="hero-acta-desc">Esquema de un acta de la Junta de propietarios y de los cuatro puntos que debe recoger para un expediente CAE: aprobación del aislamiento, cesión del CAE, asistentes y resultado de la votación. Artículo 17.2 de la Ley de Propiedad Horizontal: mayoría simple, con el límite de doce mensualidades ordinarias de gastos comunes.</desc>
+
+  <!-- Fondo -->
+  <rect width="1200" height="630" fill="#faf6ec"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#22a044"/>
+
+  <!-- ===== Documento: acta ===== -->
+  <rect x="84" y="86" width="380" height="460" rx="12" fill="#0a1810" opacity="0.08"/>
+  <rect x="70" y="72" width="380" height="460" rx="12" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.14" stroke-width="2"/>
+
+  <text x="108" y="138" fill="#0a1810" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="40" font-weight="600" letter-spacing="1">ACTA</text>
+  <text x="108" y="170" fill="#5a6b4a" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="600">Junta de propietarios</text>
+
+  <!-- líneas de texto -->
+  <rect x="108" y="200" width="300" height="10" rx="5" fill="#e9e3d3"/>
+  <rect x="108" y="222" width="250" height="10" rx="5" fill="#e9e3d3"/>
+
+  <!-- casillas -->
+  <g stroke="#22a044" stroke-width="3" fill="#ffffff">
+    <rect x="108" y="256" width="24" height="24" rx="4"/>
+    <rect x="108" y="300" width="24" height="24" rx="4"/>
+    <rect x="108" y="344" width="24" height="24" rx="4"/>
+    <rect x="108" y="388" width="24" height="24" rx="4"/>
+  </g>
+  <g stroke="#158035" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M113 268 l6 6 l10 -12"/>
+    <path d="M113 312 l6 6 l10 -12"/>
+    <path d="M113 356 l6 6 l10 -12"/>
+    <path d="M113 400 l6 6 l10 -12"/>
+  </g>
+  <g fill="#e9e3d3">
+    <rect x="148" y="263" width="230" height="10" rx="5"/>
+    <rect x="148" y="307" width="190" height="10" rx="5"/>
+    <rect x="148" y="351" width="150" height="10" rx="5"/>
+    <rect x="148" y="395" width="210" height="10" rx="5"/>
+  </g>
+
+  <!-- firmas -->
+  <g stroke="#1a2e1f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M112 468 c10 -22 18 -22 22 -6 c4 14 10 14 18 -4 c6 -14 12 -12 16 2 c4 10 12 8 22 -6"/>
+    <path d="M276 468 c8 -18 20 -24 26 -8 c4 12 -10 16 -2 4 c8 -12 18 -14 22 0 c3 10 12 8 26 -8"/>
+  </g>
+  <g stroke="#1a2e1f" stroke-opacity="0.35" stroke-width="2">
+    <line x1="108" y1="482" x2="236" y2="482"/>
+    <line x1="272" y1="482" x2="410" y2="482"/>
+  </g>
+  <text x="108" y="510" fill="#5a6b4a" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600">Presidente</text>
+  <text x="272" y="510" fill="#5a6b4a" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600">Secretario</text>
+
+  <!-- sello art. 17.2 -->
+  <circle cx="440" cy="92" r="58" fill="#1a2e1f"/>
+  <circle cx="440" cy="92" r="50" fill="none" stroke="#f5c6a8" stroke-width="2" stroke-dasharray="4 5"/>
+  <text x="440" y="90" fill="#ffffff" text-anchor="middle" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">17.2</text>
+  <text x="440" y="116" fill="#f5c6a8" text-anchor="middle" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">LPH</text>
+
+  <!-- ===== Texto ===== -->
+  <text x="560" y="128" fill="#8a4f22" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="2.9">JUNTA DE PROPIETARIOS</text>
+  <text x="560" y="196" fill="#0a1810" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="56" font-weight="600" letter-spacing="-0.6">Lo que debe recoger</text>
+  <text x="560" y="258" fill="#0a1810" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="56" font-weight="600" letter-spacing="-0.6">el <tspan fill="#158035">acta</tspan></text>
+
+  <g font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="36" font-weight="600" fill="#1a2e1f">
+    <circle cx="580" cy="330" r="19" fill="#22a044"/>
+    <text x="616" y="343">Aprobación del aislamiento</text>
+    <circle cx="580" cy="392" r="19" fill="#22a044"/>
+    <text x="616" y="405">Cesión del CAE</text>
+    <circle cx="580" cy="454" r="19" fill="#22a044"/>
+    <text x="616" y="467">Asistentes</text>
+    <circle cx="580" cy="516" r="19" fill="#22a044"/>
+    <text x="616" y="529">Resultado de la votación</text>
+  </g>
+  <g stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M571 330 l6 6 l11 -12"/>
+    <path d="M571 392 l6 6 l11 -12"/>
+    <path d="M571 454 l6 6 l11 -12"/>
+    <path d="M571 516 l6 6 l11 -12"/>
+  </g>
+
+  <!-- ===== Banda inferior ===== -->
+  <rect x="0" y="566" width="1200" height="64" fill="#1a2e1f"/>
+  <text x="70" y="609" fill="#f5efe1" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif" font-size="31" font-weight="600">Art. 17.2 LPH · Mayoría simple, con el límite de 12 mensualidades</text>
+</svg>

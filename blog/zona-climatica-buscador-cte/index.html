@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2d5a3d">
+
+<!-- SEO primary -->
+<title>Zona climática por municipios: buscador del CTE</title>
+<meta name="description" content="Elige tu provincia, escribe la altitud de tu municipio y obtén tu zona climática según la tabla oficial del CTE DB-HE (anejo B). Qué cambia en C, D y E.">
+<meta name="author" content="Los Artesanos Verdes">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://artesanosverdes.com/blog/zona-climatica-buscador-cte/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Los Artesanos Verdes">
+<meta property="og:title" content="¿En qué zona climática está tu municipio? Buscador CTE por provincia y altitud">
+<meta property="og:description" content="Provincia + altitud = zona climática. Buscador con la tabla oficial del anejo B del DB-HE y lo que tu zona cambia al aislar el desván.">
+<meta property="og:url" content="https://artesanosverdes.com/blog/zona-climatica-buscador-cte/">
+<meta property="og:image" content="https://artesanosverdes.com/blog/assets/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="article:published_time" content="2026-10-28T10:00:00+01:00">
+<meta property="article:modified_time" content="2026-10-28T10:00:00+01:00">
+<meta property="article:author" content="Los Artesanos Verdes">
+<meta property="article:section" content="Normativa y zonas">
+<meta property="article:tag" content="Zona climática">
+<meta property="article:tag" content="CTE DB-HE">
+<meta property="article:tag" content="Aislamiento de desván">
+<meta property="article:tag" content="CAE">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¿En qué zona climática está tu municipio? Buscador CTE por provincia y altitud">
+<meta name="twitter:description" content="Provincia + altitud = zona climática. Buscador con la tabla oficial del anejo B del DB-HE y lo que tu zona cambia al aislar el desván.">
+<meta name="twitter:image" content="https://artesanosverdes.com/blog/assets/og-default.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/logo.png">
+
+<!-- Fonts (aligned with site home) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500..700&family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/blog/assets/blog.css?v=20261028">
+<link rel="stylesheet" href="/blog/assets/zona-climatica-buscador-cte.css?v=20261028">
+
+<!-- Google Consent Mode v2 defaults (must precede gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  var s = null;
+  try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
+  gtag('consent', 'default', {
+    ad_storage: (s && s.ads) ? 'granted' : 'denied',
+    analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
+    ad_user_data: (s && s.ads) ? 'granted' : 'denied',
+    ad_personalization: (s && s.ads) ? 'granted' : 'denied',
+    wait_for_update: 500
+  });
+})();
+</script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NBF0X2893"></script>
+<script>
+gtag('js', new Date());
+if (location.hostname !== 'artesanosverdes.com') { window['ga-disable-G-0NBF0X2893'] = true; window['ga-disable-AW-3024885050'] = true; }
+gtag('config', 'G-0NBF0X2893', {
+  page_path: '/blog/zona-climatica-buscador-cte/'
+});
+// Google Ads tag — remarketing audiences (conversions imported from GA4)
+gtag('config', 'AW-3024885050');
+</script>
+
+<!-- Seguimiento de clics y atribución -->
+<script defer src="/assets/tracking.js?v=20261028"></script>
+
+<!-- Cookie consent banner -->
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
+
+<!-- Magazine enhancements: reading progress + TOC + reveal -->
+<script defer src="/blog/assets/blog.js?v=20261028"></script>
+
+<!-- Buscador de zona climática (sin dependencias, sin cookies) -->
+<script defer src="/blog/assets/zona-climatica-buscador-cte.js?v=20261028"></script>
+
+<!-- Schema.org JSON-LD : Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artesanosverdes.com/blog/zona-climatica-buscador-cte/"
+  },
+  "headline": "¿En qué zona climática está tu municipio? Buscador CTE por provincia y altitud",
+  "description": "Elige tu provincia, escribe la altitud de tu municipio y obtén tu zona climática según la tabla oficial del CTE DB-HE (anejo B). Qué cambia en C, D y E.",
+  "image": "https://artesanosverdes.com/blog/assets/og-default.jpg",
+  "datePublished": "2026-10-28T10:00:00+01:00",
+  "dateModified": "2026-10-28T10:00:00+01:00",
+  "inLanguage": "es-ES",
+  "author": {"@type": "Organization", "@id": "https://artesanosverdes.com/#organization", "name": "Los Artesanos Verdes", "url": "https://artesanosverdes.com/"},
+  "publisher": {"@type": "Organization", "@id": "https://artesanosverdes.com/#organization", "name": "Los Artesanos Verdes", "url": "https://artesanosverdes.com/"},
+  "keywords": "zona climática por municipios, zona climática CTE, tabla zonas climáticas, anejo B DB-HE, altitud, aislamiento de desván, RES022, sistema CAE",
+  "articleSection": "Normativa y zonas",
+  "wordCount": 1611
+}
+</script>
+
+<!-- Schema.org JSON-LD : BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://artesanosverdes.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://artesanosverdes.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Buscador de zona climática"
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org JSON-LD : FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé en qué zona climática está mi municipio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con dos datos: la provincia y la altitud sobre el nivel del mar. La tabla a-Anejo B del Documento Básico HE del CTE asigna una zona a cada tramo de altitud de cada provincia, y el buscador de esta página aplica esa tabla. Si tu vivienda tiene certificado de eficiencia energética, la zona figura también en él."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué altitud uso: la del pueblo o la de mi casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La de tu casa. Los comentarios del Ministerio al DB-HE indican que se toma la altitud de la parcela donde está el edificio. La altitud del municipio sirve como aproximación, pero si estás cerca de un cambio de tramo conviene confirmar la cota exacta, por ejemplo en el visor Iberpix del Instituto Geográfico Nacional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué significan la letra y el número de la zona climática?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La letra indica la severidad del invierno, de la α (la más suave) a la E (la más fría). El número, del 1 al 4, indica la severidad del verano. Para el aislamiento cuenta sobre todo la letra: de ella dependen los valores límite de transmitancia del CTE y el ámbito de la ficha RES022 del sistema CAE."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con mi zona climática puedo aislar el desván con el sistema CAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La ficha RES022 del catálogo CAE se aplica a viviendas existentes situadas en las zonas climáticas C, D o E, con un desván o bajo cubierta no habitable. Estar en esas zonas es necesario, pero no suficiente: la ficha pide también, entre otros documentos, un certificado de eficiencia energética anterior a la obra e inscrito en el registro. El resto de requisitos se comprueba en el estudio técnico gratuito. Trabajamos en 13 provincias del norte y del centro de España."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ha cambiado la tabla de zonas climáticas con la última versión del CTE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La versión consolidada vigente del DB-HE, que incorpora el Real Decreto 450/2022, recoge la misma tabla de zonas climáticas que la versión de diciembre de 2019, aprobada por el Real Decreto 732/2019. Comparando los dos documentos publicados en codigotecnico.org, la tabla del anejo B es idéntica fila por fila."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ===== Navigation ===== -->
+<nav class="av-nav" aria-label="Principal">
+  <div class="av-nav-inner">
+    <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
+    <ul class="av-nav-links">
+      <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
+      <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
+      <li class="av-nav-link"><a href="/blog/">Blog</a></li>
+      <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
+      <li><a href="/#contacto" class="av-nav-cta" data-cta="nav">Estudio gratuito</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== Article ===== -->
+<main id="contenido">
+<article class="av-article" itemscope itemtype="https://schema.org/Article">
+
+  <!-- Breadcrumb -->
+  <nav class="av-breadcrumb" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a>
+    <span aria-hidden="true">›</span>
+    <a href="/blog/">Blog</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Buscador de zona climática</span>
+  </nav>
+
+  <!-- Header -->
+  <header class="av-article-header">
+    <span class="av-article-kicker">Herramienta · Zonas climáticas CTE</span>
+    <h1 class="av-article-title" itemprop="headline">¿En qué zona climática está tu municipio? Buscador CTE por provincia y altitud</h1>
+    <div class="av-article-meta">
+      <span><strong>Por el Equipo de Los Artesanos Verdes</strong></span>
+      <span class="separator">·</span>
+      <span>Publicado el <time itemprop="datePublished" datetime="2026-10-28">28 de octubre de 2026</time></span>
+      <span class="separator">·</span>
+      <span>9 min de lectura</span>
+    </div>
+  </header>
+
+<!-- Hero image -->
+<figure class="av-article-hero-image">
+  <img src="/blog/assets/zona-climatica-buscador-cte.svg?v=20261028" alt="Montaña con curvas de nivel y una casa en la ladera, junto a las zonas climáticas C, D y E: la zona de invierno se vuelve más severa con la altitud" width="640" height="420" loading="eager" fetchpriority="high">
+</figure>
+
+
+  <!-- Content -->
+  <div class="av-content" itemprop="articleBody">
+
+    <p>La zona climática de una vivienda depende de dos datos: la <strong>provincia</strong> y la <strong>altitud</strong>. Con ellos, el Código Técnico de la Edificación (CTE) asigna a cada emplazamiento una letra y un número, como D2 o E1. No hace falta una lista de pueblos: basta con saber a qué altura está tu casa.</p>
+
+    <p>Este buscador aplica la tabla oficial del <strong>Documento Básico HE (DB-HE), anejo B</strong>, en su versión vigente. Elige tu provincia, escribe la altitud de tu municipio en metros y verás tu zona climática al momento. Sirve para todas las provincias de España.</p>
+
+    <p>¿Prefieres entender antes qué es una zona climática y por qué decide si el aislamiento entra en el sistema CAE? Lo explicamos en <a href="/blog/zonas-climaticas-cte-aislamiento-cae/">Zonas climáticas del CTE: cómo saber la tuya</a>. Esta página es su complemento práctico: aquí se consulta la zona.</p>
+
+    <h2 id="buscador">Buscador de zona climática por provincia y altitud</h2>
+
+    <div class="zc-tool" id="zc-tool">
+      <p class="zc-tool-intro">Dos datos y un clic. El cálculo se hace en tu navegador: no guardamos ni enviamos lo que escribes.</p>
+      <noscript><p class="zc-noscript">El buscador necesita JavaScript. Sin él, puedes consultar tu zona en las tablas de más abajo: busca tu provincia y el tramo que corresponde a la altitud de tu municipio.</p></noscript>
+      <form id="zc-form" class="zc-form" novalidate>
+        <div class="zc-form-grid">
+          <div class="zc-field">
+            <label for="zc-provincia">Provincia</label>
+            <select id="zc-provincia" name="provincia" aria-describedby="zc-err-provincia" required>
+              <option value="">Elige tu provincia</option>
+            <option value="a-coruna">A Coruña</option>
+            <option value="albacete">Albacete</option>
+            <option value="alicante-alacant">Alicante/Alacant</option>
+            <option value="almeria">Almería</option>
+            <option value="araba-alava">Araba/Álava</option>
+            <option value="asturias">Asturias</option>
+            <option value="avila">Ávila</option>
+            <option value="badajoz">Badajoz</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="bizkaia">Bizkaia</option>
+            <option value="burgos">Burgos</option>
+            <option value="caceres">Cáceres</option>
+            <option value="cadiz">Cádiz</option>
+            <option value="cantabria">Cantabria</option>
+            <option value="castellon-castello">Castellón/Castelló</option>
+            <option value="ceuta">Ceuta</option>
+            <option value="ciudad-real">Ciudad Real</option>
+            <option value="cordoba">Córdoba</option>
+            <option value="cuenca">Cuenca</option>
+            <option value="gipuzkoa">Gipuzkoa</option>
+            <option value="girona">Girona</option>
+            <option value="granada">Granada</option>
+            <option value="guadalajara">Guadalajara</option>
+            <option value="huelva">Huelva</option>
+            <option value="huesca">Huesca</option>
+            <option value="illes-balears">Illes Balears</option>
+            <option value="jaen">Jaén</option>
+            <option value="la-rioja">La Rioja</option>
+            <option value="las-palmas">Las Palmas</option>
+            <option value="leon">León</option>
+            <option value="lleida">Lleida</option>
+            <option value="lugo">Lugo</option>
+            <option value="madrid">Madrid</option>
+            <option value="malaga">Málaga</option>
+            <option value="melilla">Melilla</option>
+            <option value="murcia">Murcia</option>
+            <option value="navarra">Navarra</option>
+            <option value="ourense">Ourense</option>
+            <option value="palencia">Palencia</option>
+            <option value="pontevedra">Pontevedra</option>
+            <option value="salamanca">Salamanca</option>
+            <option value="santa-cruz-de-tenerife">Santa Cruz de Tenerife</option>
+            <option value="segovia">Segovia</option>
+            <option value="sevilla">Sevilla</option>
+            <option value="soria">Soria</option>
+            <option value="tarragona">Tarragona</option>
+            <option value="teruel">Teruel</option>
+            <option value="toledo">Toledo</option>
+            <option value="valencia-valencia">Valencia/València</option>
+            <option value="valladolid">Valladolid</option>
+            <option value="zamora">Zamora</option>
+            <option value="zaragoza">Zaragoza</option>
+            </select>
+            <p class="zc-error" id="zc-err-provincia"></p>
+          </div>
+          <div class="zc-field">
+            <label for="zc-altitud">Altitud (metros)</label>
+            <input id="zc-altitud" name="altitud" type="text" inputmode="decimal" autocomplete="off" placeholder="Por ejemplo, 735" aria-describedby="zc-hint-altitud zc-err-altitud" required>
+            <p class="zc-hint" id="zc-hint-altitud">Sobre el nivel del mar. Mejor la de tu casa; si no la sabes, la de tu municipio.</p>
+            <p class="zc-error" id="zc-err-altitud"></p>
+          </div>
+        </div>
+        <button type="submit" class="zc-submit">Ver mi zona climática</button>
+      </form>
+      <div id="zc-resultado" class="zc-result" role="region" aria-label="Resultado del buscador" tabindex="-1"></div>
+    </div>
+
+    <h2 id="como-leer">Cómo se lee el resultado: letra de invierno y número de verano</h2>
+
+    <p>Cada zona climática combina dos indicaciones. La <strong>letra</strong> mide la severidad del invierno: va de la α (alfa), la más suave, a la E, la más fría. El <strong>número</strong>, del 1 al 4, mide la severidad del verano. Una zona E1, por ejemplo, combina el invierno más severo de la escala con el verano más suave.</p>
+
+    <p>Para aislar un desván o un tejado, lo que cuenta es la letra. De ella dependen los valores límite de aislamiento del CTE y el ámbito de la ficha CAE de aislamiento de desván, como verás más abajo. El número describe el verano y no interviene en esos requisitos.</p>
+
+    <p>La tabla también explica por qué dos pueblos de una misma provincia pueden tener zonas distintas. En Madrid, el CTE asigna C3 hasta 500 m, D3 de 501 a 950 m, D2 de 951 a 1000 m y E1 desde 1001 m. Un pueblo de vega y otro de sierra no comparten zona, aunque estén a una hora de coche.</p>
+
+    <h2 id="tabla-13-provincias">Tabla de zonas climáticas por altitud en nuestras 13 provincias</h2>
+
+    <p>Esta es la tabla a-Anejo B del DB-HE para las provincias en las que trabajamos. Cada tramo indica la zona que corresponde a esa franja de altitud sobre el nivel del mar.</p>
+
+    <div class="av-table-scroll" role="region" tabindex="0" aria-label="Tabla desplazable">
+      <table class="zc-zone-table">
+        <caption class="zc-caption">Zona climática según la altitud del emplazamiento. Fuente: CTE DB-HE, tabla a-Anejo B.</caption>
+        <thead>
+          <tr><th scope="col">Provincia</th><th scope="col">Zona por tramo de altitud</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Asturias</th><td><strong>C1</strong> hasta 50&nbsp;m · <strong>D1</strong> de 51 a 550&nbsp;m · <strong>E1</strong> desde 551&nbsp;m</td></tr>
+          <tr><th scope="row">Ávila</th><td><strong>D2</strong> hasta 550&nbsp;m · <strong>D1</strong> de 551 a 850&nbsp;m · <strong>E1</strong> desde 851&nbsp;m</td></tr>
+          <tr><th scope="row">Burgos</th><td><strong>D1</strong> hasta 600&nbsp;m · <strong>E1</strong> desde 601&nbsp;m</td></tr>
+          <tr><th scope="row">Cantabria</th><td><strong>C1</strong> hasta 150&nbsp;m · <strong>D1</strong> de 151 a 650&nbsp;m · <strong>E1</strong> desde 651&nbsp;m</td></tr>
+          <tr><th scope="row">León</th><td><strong>E1</strong> cualquier altitud</td></tr>
+          <tr><th scope="row">Lugo</th><td><strong>D1</strong> hasta 500&nbsp;m · <strong>E1</strong> desde 501&nbsp;m</td></tr>
+          <tr><th scope="row">Madrid</th><td><strong>C3</strong> hasta 500&nbsp;m · <strong>D3</strong> de 501 a 950&nbsp;m · <strong>D2</strong> de 951 a 1000&nbsp;m · <strong>E1</strong> desde 1001&nbsp;m</td></tr>
+          <tr><th scope="row">Ourense</th><td><strong>C3</strong> hasta 150&nbsp;m · <strong>C2</strong> de 151 a 300&nbsp;m · <strong>D2</strong> de 301 a 800&nbsp;m · <strong>E1</strong> desde 801&nbsp;m</td></tr>
+          <tr><th scope="row">Palencia</th><td><strong>D1</strong> hasta 800&nbsp;m · <strong>E1</strong> desde 801&nbsp;m</td></tr>
+          <tr><th scope="row">Salamanca</th><td><strong>D2</strong> hasta 850&nbsp;m · <strong>E1</strong> desde 851&nbsp;m</td></tr>
+          <tr><th scope="row">Segovia</th><td><strong>D2</strong> hasta 1050&nbsp;m · <strong>E1</strong> desde 1051&nbsp;m</td></tr>
+          <tr><th scope="row">Valladolid</th><td><strong>D2</strong> hasta 800&nbsp;m · <strong>E1</strong> desde 801&nbsp;m</td></tr>
+          <tr><th scope="row">Zamora</th><td><strong>D2</strong> hasta 800&nbsp;m · <strong>E1</strong> desde 801&nbsp;m</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Dos lecturas rápidas. Ninguna de estas provincias tiene zonas α, A o B: todas sus altitudes caen en C, D o E. Y la zona C solo aparece en cotas bajas de Asturias (hasta 50 m), Cantabria (hasta 150 m), Ourense (hasta 300 m) y Madrid (hasta 500 m). León es un caso aparte: la tabla le asigna E1 a cualquier altitud.</p>
+
+    <details class="zc-more">
+      <summary>Ver la tabla del resto de provincias de España</summary>
+      <div class="av-table-scroll" role="region" tabindex="0" aria-label="Tabla desplazable">
+        <table class="zc-zone-table">
+          <caption class="zc-caption">Resto de provincias y ciudades autónomas. Fuente: CTE DB-HE, tabla a-Anejo B.</caption>
+          <thead>
+            <tr><th scope="col">Provincia</th><th scope="col">Zona por tramo de altitud</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">A Coruña</th><td><strong>C1</strong> hasta 200&nbsp;m · <strong>D1</strong> desde 201&nbsp;m</td></tr>
+            <tr><th scope="row">Albacete</th><td><strong>C3</strong> hasta 450&nbsp;m · <strong>D3</strong> de 451 a 950&nbsp;m · <strong>E1</strong> desde 951&nbsp;m</td></tr>
+            <tr><th scope="row">Alicante/Alacant</th><td><strong>B4</strong> hasta 250&nbsp;m · <strong>C3</strong> de 251 a 700&nbsp;m · <strong>D3</strong> desde 701&nbsp;m</td></tr>
+            <tr><th scope="row">Almería</th><td><strong>A4</strong> hasta 100&nbsp;m · <strong>B4</strong> de 101 a 250&nbsp;m · <strong>B3</strong> de 251 a 400&nbsp;m · <strong>C3</strong> de 401 a 800&nbsp;m · <strong>D3</strong> desde 801&nbsp;m</td></tr>
+            <tr><th scope="row">Araba/Álava</th><td><strong>D1</strong> hasta 600&nbsp;m · <strong>E1</strong> desde 601&nbsp;m</td></tr>
+            <tr><th scope="row">Badajoz</th><td><strong>C4</strong> hasta 400&nbsp;m · <strong>C3</strong> de 401 a 450&nbsp;m · <strong>D3</strong> desde 451&nbsp;m</td></tr>
+            <tr><th scope="row">Barcelona</th><td><strong>C2</strong> hasta 250&nbsp;m · <strong>D2</strong> de 251 a 450&nbsp;m · <strong>D1</strong> de 451 a 750&nbsp;m · <strong>E1</strong> desde 751&nbsp;m</td></tr>
+            <tr><th scope="row">Bizkaia</th><td><strong>C1</strong> hasta 250&nbsp;m · <strong>D1</strong> desde 251&nbsp;m</td></tr>
+            <tr><th scope="row">Cáceres</th><td><strong>C4</strong> hasta 600&nbsp;m · <strong>D3</strong> de 601 a 1050&nbsp;m · <strong>E1</strong> desde 1051&nbsp;m</td></tr>
+            <tr><th scope="row">Cádiz</th><td><strong>A3</strong> hasta 150&nbsp;m · <strong>B3</strong> de 151 a 450&nbsp;m · <strong>C3</strong> de 451 a 600&nbsp;m · <strong>C2</strong> de 601 a 850&nbsp;m · <strong>D2</strong> desde 851&nbsp;m</td></tr>
+            <tr><th scope="row">Castellón/Castelló</th><td><strong>B3</strong> hasta 100&nbsp;m · <strong>C3</strong> de 101 a 500&nbsp;m · <strong>D3</strong> de 501 a 600&nbsp;m · <strong>D2</strong> de 601 a 1000&nbsp;m · <strong>E1</strong> desde 1001&nbsp;m</td></tr>
+            <tr><th scope="row">Ceuta</th><td><strong>B3</strong> cualquier altitud</td></tr>
+            <tr><th scope="row">Ciudad Real</th><td><strong>C4</strong> hasta 450&nbsp;m · <strong>C3</strong> de 451 a 500&nbsp;m · <strong>D3</strong> desde 501&nbsp;m</td></tr>
+            <tr><th scope="row">Córdoba</th><td><strong>B4</strong> hasta 150&nbsp;m · <strong>C4</strong> de 151 a 550&nbsp;m · <strong>D3</strong> desde 551&nbsp;m</td></tr>
+            <tr><th scope="row">Cuenca</th><td><strong>D3</strong> hasta 800&nbsp;m · <strong>D2</strong> de 801 a 1050&nbsp;m · <strong>E1</strong> desde 1051&nbsp;m</td></tr>
+            <tr><th scope="row">Gipuzkoa</th><td><strong>D1</strong> hasta 400&nbsp;m · <strong>E1</strong> desde 401&nbsp;m</td></tr>
+            <tr><th scope="row">Girona</th><td><strong>C2</strong> hasta 100&nbsp;m · <strong>D2</strong> de 101 a 600&nbsp;m · <strong>E1</strong> desde 601&nbsp;m</td></tr>
+            <tr><th scope="row">Granada</th><td><strong>A4</strong> hasta 50&nbsp;m · <strong>B4</strong> de 51 a 350&nbsp;m · <strong>C4</strong> de 351 a 600&nbsp;m · <strong>C3</strong> de 601 a 800&nbsp;m · <strong>D3</strong> de 801 a 1300&nbsp;m · <strong>E1</strong> desde 1301&nbsp;m</td></tr>
+            <tr><th scope="row">Guadalajara</th><td><strong>D3</strong> hasta 950&nbsp;m · <strong>D2</strong> de 951 a 1000&nbsp;m · <strong>E1</strong> desde 1001&nbsp;m</td></tr>
+            <tr><th scope="row">Huelva</th><td><strong>A4</strong> hasta 50&nbsp;m · <strong>B4</strong> de 51 a 150&nbsp;m · <strong>B3</strong> de 151 a 350&nbsp;m · <strong>C3</strong> de 351 a 800&nbsp;m · <strong>D3</strong> desde 801&nbsp;m</td></tr>
+            <tr><th scope="row">Huesca</th><td><strong>C3</strong> hasta 200&nbsp;m · <strong>D3</strong> de 201 a 400&nbsp;m · <strong>D2</strong> de 401 a 700&nbsp;m · <strong>E1</strong> desde 701&nbsp;m</td></tr>
+            <tr><th scope="row">Illes Balears</th><td><strong>B3</strong> hasta 250&nbsp;m · <strong>C3</strong> desde 251&nbsp;m</td></tr>
+            <tr><th scope="row">Jaén</th><td><strong>B4</strong> hasta 350&nbsp;m · <strong>C4</strong> de 351 a 750&nbsp;m · <strong>D3</strong> de 751 a 1250&nbsp;m · <strong>E1</strong> desde 1251&nbsp;m</td></tr>
+            <tr><th scope="row">La Rioja</th><td><strong>C2</strong> hasta 200&nbsp;m · <strong>D2</strong> de 201 a 700&nbsp;m · <strong>E1</strong> desde 701&nbsp;m</td></tr>
+            <tr><th scope="row">Las Palmas</th><td><strong>α3</strong> hasta 350&nbsp;m · <strong>A2</strong> de 351 a 750&nbsp;m · <strong>B2</strong> de 751 a 1000&nbsp;m · <strong>C2</strong> desde 1001&nbsp;m</td></tr>
+            <tr><th scope="row">Lleida</th><td><strong>C3</strong> hasta 100&nbsp;m · <strong>D3</strong> de 101 a 600&nbsp;m · <strong>E1</strong> desde 601&nbsp;m</td></tr>
+            <tr><th scope="row">Málaga</th><td><strong>A3</strong> hasta 100&nbsp;m · <strong>B3</strong> de 101 a 300&nbsp;m · <strong>C3</strong> de 301 a 700&nbsp;m · <strong>D3</strong> desde 701&nbsp;m</td></tr>
+            <tr><th scope="row">Melilla</th><td><strong>A3</strong> cualquier altitud</td></tr>
+            <tr><th scope="row">Murcia</th><td><strong>B3</strong> hasta 100&nbsp;m · <strong>C3</strong> de 101 a 550&nbsp;m · <strong>D3</strong> desde 551&nbsp;m</td></tr>
+            <tr><th scope="row">Navarra</th><td><strong>C2</strong> hasta 100&nbsp;m · <strong>D2</strong> de 101 a 350&nbsp;m · <strong>D1</strong> de 351 a 600&nbsp;m · <strong>E1</strong> desde 601&nbsp;m</td></tr>
+            <tr><th scope="row">Pontevedra</th><td><strong>C1</strong> hasta 350&nbsp;m · <strong>D1</strong> desde 351&nbsp;m</td></tr>
+            <tr><th scope="row">Santa Cruz de Tenerife</th><td><strong>α3</strong> hasta 350&nbsp;m · <strong>A2</strong> de 351 a 750&nbsp;m · <strong>B2</strong> de 751 a 1000&nbsp;m · <strong>C2</strong> desde 1001&nbsp;m</td></tr>
+            <tr><th scope="row">Sevilla</th><td><strong>B4</strong> hasta 200&nbsp;m · <strong>C4</strong> desde 201&nbsp;m</td></tr>
+            <tr><th scope="row">Soria</th><td><strong>D2</strong> hasta 750&nbsp;m · <strong>D1</strong> de 751 a 800&nbsp;m · <strong>E1</strong> desde 801&nbsp;m</td></tr>
+            <tr><th scope="row">Tarragona</th><td><strong>B3</strong> hasta 100&nbsp;m · <strong>C3</strong> de 101 a 500&nbsp;m · <strong>D3</strong> desde 501&nbsp;m</td></tr>
+            <tr><th scope="row">Teruel</th><td><strong>C3</strong> hasta 450&nbsp;m · <strong>C2</strong> de 451 a 500&nbsp;m · <strong>D2</strong> de 501 a 1000&nbsp;m · <strong>E1</strong> desde 1001&nbsp;m</td></tr>
+            <tr><th scope="row">Toledo</th><td><strong>C4</strong> hasta 500&nbsp;m · <strong>D3</strong> desde 501&nbsp;m</td></tr>
+            <tr><th scope="row">Valencia/València</th><td><strong>B3</strong> hasta 50&nbsp;m · <strong>C3</strong> de 51 a 500&nbsp;m · <strong>D2</strong> de 501 a 950&nbsp;m · <strong>E1</strong> desde 951&nbsp;m</td></tr>
+            <tr><th scope="row">Zaragoza</th><td><strong>C3</strong> hasta 200&nbsp;m · <strong>D3</strong> de 201 a 650&nbsp;m · <strong>E1</strong> desde 651&nbsp;m</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <a href="/servicios/aislamiento-desvan/?proyecto=desvan#contacto" class="av-cta-inline" data-cta="articulo-inline">
+      ¿Tu municipio está cerca de un cambio de tramo? <strong>Confirmamos tu zona en el estudio gratuito</strong> <span class="arrow">→</span>
+    </a>
+
+    <h2 id="altitud">Cómo saber la altitud de tu municipio (y de tu casa)</h2>
+
+    <p>El buscador pide la altitud en metros sobre el nivel del mar. Un matiz importante: los comentarios del Ministerio al DB-HE indican que la zona se elige con la <strong>altitud de la parcela</strong> donde está el edificio. La del centro del pueblo sirve como aproximación. En municipios con mucho desnivel, o cerca de un cambio de tramo, conviene afinar.</p>
+
+    <p>Tres formas sencillas de conseguir el dato:</p>
+
+    <ol>
+      <li><strong>El visor Iberpix del IGN.</strong> El Instituto Geográfico Nacional ofrece este visor de mapas en su web. Localiza tu municipio con su buscador y consulta el Mapa Topográfico Nacional: las curvas de nivel indican la altitud del terreno, también la de tu calle.</li>
+      <li><strong>El certificado de eficiencia energética.</strong> Si tu vivienda ya tiene uno, quizá ni necesites la altitud: el modelo oficial de certificado incluye un campo «Zona climática». Compara esa zona con la que te da el buscador.</li>
+      <li><strong>Tu ayuntamiento.</strong> Si vives en una urbanización o en un núcleo alejado del centro, pregunta allí por la altitud de tu zona.</li>
+    </ol>
+
+    <p>El DB-HE también permite fijar la zona con documentos reconocidos elaborados por las comunidades autónomas. Por eso, en un trámite oficial, la última palabra la tiene el técnico que firma el proyecto o el certificado.</p>
+
+    <h2 id="por-que-importa">Por qué tu zona climática importa al aislar</h2>
+
+    <p>La letra de invierno fija el nivel mínimo de aislamiento que el CTE exige a la envolvente del edificio. La tabla 3.1.1.a de la sección HE1 del DB-HE limita la <strong>transmitancia térmica</strong> (U), es decir, el calor que deja pasar un cerramiento. Cuanto más fría es la zona, más bajo es el límite y más aislamiento hace falta para cumplirlo.</p>
+
+    <div class="av-table-scroll" role="region" tabindex="0" aria-label="Tabla desplazable">
+      <table class="zc-req-table">
+        <caption class="zc-caption">Valores para las zonas C, D y E. Fuentes: CTE DB-HE (tabla 3.1.1.a-HE1) y ficha RES022 del catálogo CAE (BOE-A-2026-12283).</caption>
+        <thead>
+          <tr><th scope="col">Requisito</th><th scope="col">Zona C</th><th scope="col">Zona D</th><th scope="col">Zona E</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">CTE: transmitancia máxima de cubiertas en contacto con el aire exterior (U<sub>C</sub>), en W/m²K</th><td class="zc-num">0,40</td><td class="zc-num">0,35</td><td class="zc-num">0,33</td></tr>
+          <tr><th scope="row">CTE: transmitancia máxima de muros, suelos y cubiertas en contacto con espacios no habitables o con el terreno (U<sub>T</sub>), en W/m²K</th><td class="zc-num">0,70</td><td class="zc-num">0,65</td><td class="zc-num">0,59</td></tr>
+          <tr><th scope="row">Ficha RES022: resistencia térmica mínima del aislamiento (R<sub>t</sub>), en m²K/W</th><td class="zc-num">3,8</td><td class="zc-num">4,0</td><td class="zc-num">4,7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Dos precisiones. En una reforma, los límites del CTE se aplican, en general, a los elementos que se sustituyen, se incorporan o se modifican de forma sustancial, no a toda la casa. Y la resistencia mínima de la ficha RES022 se traduce en un espesor: la ficha lo calcula con la fórmula e = R<sub>t</sub> · λ<sub>d</sub>, donde λ<sub>d</sub> es la conductividad térmica del aislante. Con un material de λ<sub>d</sub> = 0,040 W/(m·K), por ejemplo, salen algo más de 15 cm en zona C, 16 cm en zona D y casi 19 cm en zona E.</p>
+
+    <h2 id="zona-y-cae">Zona climática y sistema CAE: qué cambia en las zonas C, D y E</h2>
+
+    <p>El sistema de Certificados de Ahorro Energético (CAE), regulado por el Real Decreto 36/2023, financia obras de eficiencia a partir del ahorro de energía que generan. No es una subvención ni dinero público: es <strong>financiación privada</strong> que aportan empresas energéticas con obligaciones de ahorro. El ahorro de las actuaciones más habituales se calcula con las fichas estandarizadas del catálogo aprobado por la Orden TED/845/2023.</p>
+
+    <p>La ficha <strong>RES022</strong>, «Rehabilitación de buhardillas o desvanes no habitables de edificios de viviendas», entró en el catálogo en junio de 2026. Su ámbito es claro: edificios existentes de uso residencial privado <strong>situados en las zonas climáticas C, D o E</strong>. La ficha exige además que el desván o bajo cubierta no sea habitable y que el aislamiento cumpla los valores límite del CTE para su zona.</p>
+
+    <p>La zona también pesa en el cálculo. La ficha estima el ahorro con la superficie aislada y un valor por metro cuadrado que depende de la zona y del año de construcción del edificio. Ese valor es más alto en las zonas D y E que en la C. Otras fichas de envolvente del mismo catálogo remiten expresamente, para fijar la zona, a la tabla del anejo B que aplica este buscador.</p>
+
+    <p>Ese cálculo tiene además un tope ligado al consumo de calefacción del edificio, tal como figura en su certificado de eficiencia energética anterior a la obra. Por eso la ficha exige un <strong>certificado energético previo</strong>, con su justificante de inscripción en el registro. Si tu casa no lo tiene, habrá que hacerlo antes de empezar.</p>
+
+    <p>En nuestras 13 provincias, todas las altitudes caen en zona C, D o E. Eso no basta para que un desván concreto entre en el sistema: el resto de requisitos de la ficha se comprueba en el estudio técnico gratuito. El importe que aporta el sistema CAE se concreta después de ese estudio, conforme a la normativa CAE vigente (RD&nbsp;36/2023). Las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC, y el ahorro se tramita a través de un sujeto delegado, GreenFlex.</p>
+
+    <p>Si lo que te interesa es una bomba de calor, el criterio principal es otro: la calefacción actual debe ser de gas (natural o propano) o de gasóleo, y la eléctrica queda fuera. Lo contamos en <a href="/blog/cambiar-caldera-gasoleo-requisitos-cae/">los requisitos CAE para cambiar la caldera de gasoil</a>.</p>
+
+    <a href="/servicios/aislamiento-desvan/?proyecto=desvan#contacto" class="av-cta-inline" data-cta="articulo-inline">
+      ¿Tu zona es C, D o E? <strong>Comprobamos si tu desván encaja en la ficha RES022</strong> <span class="arrow">→</span>
+    </a>
+
+    <h2 id="faq">Preguntas frecuentes</h2>
+
+    <h3>¿Cómo sé en qué zona climática está mi municipio?</h3>
+    <p>Con dos datos: la provincia y la altitud sobre el nivel del mar. La tabla a-Anejo B del Documento Básico HE del CTE asigna una zona a cada tramo de altitud de cada provincia, y el buscador de esta página aplica esa tabla. Si tu vivienda tiene certificado de eficiencia energética, la zona figura también en él.</p>
+
+    <h3>¿Qué altitud uso: la del pueblo o la de mi casa?</h3>
+    <p>La de tu casa. Los comentarios del Ministerio al DB-HE indican que se toma la altitud de la parcela donde está el edificio. La altitud del municipio sirve como aproximación, pero si estás cerca de un cambio de tramo conviene confirmar la cota exacta, por ejemplo en el visor Iberpix del Instituto Geográfico Nacional.</p>
+
+    <h3>¿Qué significan la letra y el número de la zona climática?</h3>
+    <p>La letra indica la severidad del invierno, de la α (la más suave) a la E (la más fría). El número, del 1 al 4, indica la severidad del verano. Para el aislamiento cuenta sobre todo la letra: de ella dependen los valores límite de transmitancia del CTE y el ámbito de la ficha RES022 del sistema CAE.</p>
+
+    <h3>¿Con mi zona climática puedo aislar el desván con el sistema CAE?</h3>
+    <p>La ficha RES022 del catálogo CAE se aplica a viviendas existentes situadas en las zonas climáticas C, D o E, con un desván o bajo cubierta no habitable. Estar en esas zonas es necesario, pero no suficiente: la ficha pide también, entre otros documentos, un certificado de eficiencia energética anterior a la obra e inscrito en el registro. El resto de requisitos se comprueba en el estudio técnico gratuito. Trabajamos en 13 provincias del norte y del centro de España.</p>
+
+    <h3>¿Ha cambiado la tabla de zonas climáticas con la última versión del CTE?</h3>
+    <p>No. La versión consolidada vigente del DB-HE, que incorpora el Real Decreto 450/2022, recoge la misma tabla de zonas climáticas que la versión de diciembre de 2019, aprobada por el Real Decreto 732/2019. Comparando los dos documentos publicados en codigotecnico.org, la tabla del anejo B es idéntica fila por fila.</p>
+
+
+    <!-- ===== Final CTA ===== -->
+    <div class="av-cta-final">
+      <h2>Confirma tu zona climática con la altitud de tu casa</h2>
+      <p>Dinos tu municipio y cómo es tu desván. En el estudio técnico gratuito comprobamos la zona con la altitud de tu vivienda y el resto de requisitos de la ficha RES022. Si tu caso no encaja, te lo diremos sin rodeos.</p>
+      <a href="/servicios/aislamiento-desvan/?proyecto=desvan#contacto" class="av-cta-button" data-cta="articulo-final">Solicitar estudio gratuito →</a>
+      <div class="av-cta-reassurance">
+        <span>Sin compromiso</span>
+        <span>Estudio gratuito</span>
+        <span>13 provincias</span>
+      </div>
+    </div>
+
+    <!-- ===== Sigue leyendo (§10.8) ===== -->
+    <aside class="av-related" aria-labelledby="av-related-title">
+      <h2 id="av-related-title">Sigue leyendo</h2>
+      <ul class="av-related-list">
+        <li><a href="/blog/zonas-climaticas-cte-aislamiento-cae/"><span class="av-related-cat">Normativa y zonas</span><span class="av-related-title">Zonas climáticas del CTE: cómo saber la tuya</span></a></li>
+        <li><a href="/blog/aislamiento-espana-provincias-cobertura/"><span class="av-related-cat">Normativa y zonas</span><span class="av-related-title">Aislamiento de cubierta en España: ¿cubrimos tu provincia?</span></a></li>
+        <li><a href="/blog/lana-mineral-celulosa-lana-roca-comparativa/"><span class="av-related-cat">Aislamiento</span><span class="av-related-title">Lana mineral, celulosa o lana de roca: ¿cuál aísla mejor tu cubierta?</span></a></li>
+      </ul>
+      <p class="av-related-service">¿Te interesa este tema para tu vivienda? Descubre nuestro servicio de <a href="/servicios/aislamiento-desvan/">aislamiento de desván</a>.</p>
+    </aside>
+
+    <!-- ===== Article footer with sources ===== -->
+    <footer class="av-article-footer">
+      <p><em>Este artículo y su buscador han sido elaborados por el equipo técnico de Los Artesanos Verdes SL. Los datos proceden de la tabla a-Anejo B del Documento Básico HE del Código Técnico de la Edificación (versión consolidada publicada en codigotecnico.org), extraída del documento oficial y contrastada con la versión con comentarios y con la versión de diciembre de 2019, cuya tabla es idéntica. El resultado es orientativo y no sustituye la determinación de la zona por un técnico. Las referencias corresponden a la normativa vigente en octubre de 2026.</em></p>
+
+      <h3>Fuentes oficiales consultadas</h3>
+      <ul>
+        <li>Código Técnico de la Edificación, Documento Básico HE «Ahorro de energía», versión consolidada (anejo B, tabla a-Anejo B; sección HE1, tabla 3.1.1.a) — <a href="https://www.codigotecnico.org/pdf/Documentos/HE/DBHE.pdf" rel="noopener noreferrer" target="_blank">codigotecnico.org</a></li>
+        <li>Documento Básico HE con comentarios del Ministerio (criterio de la altitud de la parcela) — <a href="https://www.codigotecnico.org/pdf/Documentos/HE/DccHE.pdf" rel="noopener noreferrer" target="_blank">codigotecnico.org</a></li>
+        <li>Documento Básico HE, versión de 20 de diciembre de 2019 (comparación del anejo B) — <a href="https://www.codigotecnico.org/pdf/Documentos/HE/DBAnteriores/DBHE_20191220.pdf" rel="noopener noreferrer" target="_blank">codigotecnico.org</a></li>
+        <li>Resolución de 3 de junio de 2026, de la Dirección General de Planificación y Coordinación Energética, que incorpora la ficha RES022 al catálogo de medidas estandarizadas: ámbito, requisitos, documentación y cálculo del ahorro (BOE-A-2026-12283) — <a href="https://www.boe.es/eli/es/res/2026/06/03/(3)" rel="noopener noreferrer" target="_blank">BOE</a></li>
+        <li>Orden TED/845/2023, de 18 de julio, por la que se aprueba el catálogo de medidas estandarizadas de eficiencia energética — <a href="https://www.boe.es/eli/es/o/2023/07/18/ted845" rel="noopener noreferrer" target="_blank">BOE</a></li>
+        <li>Real Decreto 36/2023, de 24 de enero, por el que se establece un sistema de Certificados de Ahorro Energético — <a href="https://www.boe.es/eli/es/rd/2023/01/24/36" rel="noopener noreferrer" target="_blank">BOE</a></li>
+        <li>Modelo oficial de certificado de eficiencia energética (documento reconocido, campo «Zona climática») — <a href="https://www.miteco.gob.es/content/dam/miteco/es/energia/eficiencia/certificacionenergetica/documentosreconocidos/documentosreconocidos/ddrr2026/Certificado_v3.pdf" rel="noopener noreferrer" target="_blank">MITECO</a></li>
+        <li>Visor Iberpix del Instituto Geográfico Nacional — <a href="https://www.ign.es/iberpix/visor" rel="noopener noreferrer" target="_blank">ign.es</a></li>
+      </ul>
+
+      <p class="updated">Última actualización: 28 de octubre de 2026</p>
+    </footer>
+
+  </div>
+</article>
+</main>
+
+<!-- ===== Barra de acción móvil (§4.1) ===== -->
+<div class="cta-bar-movil" id="ctaBarMovil" data-zone="barra-movil">
+  <a class="cta-bar-icon" href="tel:+34632180509" data-cta="barra-movil-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a class="cta-bar-icon cta-bar-icon--wa" href="https://wa.me/34632180509?text=Hola%2C%20me%20interesa%20un%20estudio%20de%20elegibilidad%20CAE" target="_blank" rel="noopener" data-cta="barra-movil-whatsapp" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg></a>
+  <a class="cta-bar-main" href="/servicios/aislamiento-desvan/?proyecto=desvan#contacto" data-cta="barra-movil">Estudio gratuito</a>
+</div>
+
+<!-- ===== Footer global ===== -->
+<footer class="av-footer">
+  <div class="av-footer-inner">
+    <div class="av-footer-top">
+      <div class="av-footer-brand">
+        <p class="av-footer-title">Los Artesanos Verdes</p>
+        <p>Renovación energética de viviendas con la financiación privada del sistema CAE: aislamiento de desván y de cubierta inclinada, aerotermia y bomba de calor aire-aire.</p>
+      </div>
+      <div class="av-footer-col"><p class="av-footer-heading">Servicios</p><ul>
+        <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
+        <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
+        <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
+      </ul></div>
+      <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
+        <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>
+        <li><a href="/blog/que-es-el-cae-sistema-ahorro-energetico/">¿Qué es el CAE?</a></li>
+        <li><a href="/blog/aislamiento-espana-provincias-cobertura/">Zona de trabajo</a></li>
+      </ul></div>
+      <div class="av-footer-col"><p class="av-footer-heading">Contacto</p><ul>
+        <li><a href="tel:+34632180509" data-cta="footer-llamar">+34 632 18 05 09</a></li>
+        <li><a href="mailto:contacto@artesanosverdes.com" data-cta="footer-email">contacto@artesanosverdes.com</a></li>
+        <li><a href="https://wa.me/34632180509" target="_blank" rel="noopener" data-cta="footer-whatsapp">WhatsApp</a></li>
+        <li><a href="/#contacto" data-cta="footer">Estudio gratuito</a></li>
+      </ul></div>
+    </div>
+    <div class="av-footer-bottom">
+      <div>© 2026 Los Artesanos Verdes SL · Denia, España</div>
+      <div class="legal"><a href="/legal/aviso-legal/">Aviso legal</a><a href="/legal/politica-privacidad/">Política de privacidad</a><a href="/legal/politica-cookies/">Política de cookies</a><button type="button" class="av-link-btn" onclick="if(window.avOpenCookieSettings)avOpenCookieSettings();">Configurar cookies</button></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
