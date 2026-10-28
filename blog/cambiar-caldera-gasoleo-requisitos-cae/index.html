@@ -56,6 +56,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -79,14 +81,14 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Seguimiento de clics y atribución -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Magazine enhancements: reading progress + TOC + reveal -->
-<script defer src="/blog/assets/blog.js?v=20261014"></script>
+<script defer src="/blog/assets/blog.js?v=20261028"></script>
 
 <!-- Schema.org JSON-LD : Article -->
 <script type="application/ld+json">
@@ -198,6 +200,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -309,8 +312,8 @@ gtag('config', 'AW-3024885050');
     <p>Una vez confirmado que la calefacción actual es fósil, el estudio deja de ser una cuestión de elegibilidad y pasa a ser una cuestión de <strong>solución técnica</strong>. Y lo primero que mira el técnico son <strong>los emisores</strong>: por dónde entra hoy el calor en las habitaciones. De ahí sale casi todo lo demás.</p>
 
     <ul>
-      <li><strong>Radiadores de agua o suelo radiante.</strong> Existe un circuito hidráulico. La solución natural es la <a href="/servicios/aerotermia/">aerotermia aire-agua</a>: una bomba de calor que alimenta ese mismo circuito y que, además, produce el <strong>agua caliente sanitaria</strong>. Se aprovecha la instalación existente.</li>
-      <li><strong>Aire pulsado por conductos, o ningún circuito de agua.</strong> Es el caso de muchas calderas de gas de aire caliente. Aquí no hay red hidráulica que reutilizar, y montar una desde cero encarece mucho la obra. La solución es una bomba de calor <a href="/servicios/aire-aire/">aire-aire</a>, que impulsa aire caliente o frío por splits murales o por conductos. No lleva circuito de agua y <strong>no produce agua caliente sanitaria</strong>, que habrá que resolver aparte.</li>
+      <li><strong>Radiadores de agua o suelo radiante.</strong> Existe un circuito hidráulico. La solución natural es la <a href="/servicios/aerotermia/">aerotermia aire-agua</a>: una bomba de calor que alimenta ese mismo circuito y que, además, produce el <strong>agua caliente sanitaria</strong>. Se aprovecha la instalación existente; si te preguntas si tus radiadores sirven, lo explicamos en <a href="/blog/aerotermia-con-radiadores/">aerotermia con radiadores</a>.</li>
+      <li><strong>Aire pulsado por conductos, o ningún circuito de agua.</strong> Es el caso de muchas calderas de gas de aire caliente. Aquí no hay red hidráulica que reutilizar, y montar una desde cero encarece mucho la obra. La solución es una bomba de calor <a href="/servicios/aire-aire/"><span class="nowrap">aire-aire</span></a>, que impulsa aire caliente o frío por splits murales o por conductos. No lleva circuito de agua y <strong>no produce agua caliente sanitaria</strong>, que habrá que resolver aparte.</li>
     </ul>
 
     <p>Las dos soluciones exigen exactamente <strong>el mismo criterio de elegibilidad</strong> —calefacción fósil existente—, así que la elección entre una y otra no cambia si entras o no en el sistema: cambia qué se instala y cuánto cuesta instalarlo. Un detalle nada menor: la aire-aire también <strong>refresca en verano</strong>, algo que en el interior peninsular pesa cada vez más en la decisión.</p>
@@ -362,7 +365,7 @@ gtag('config', 'AW-3024885050');
     <h3>¿Hay que retirar obligatoriamente la caldera antigua?</h3>
     <p>En las zonas climáticas D y E la caldera puede permanecer como apoyo, no es obligatorio desmontarla. La bomba de calor cubre el día a día y la caldera queda disponible para los días más fríos del invierno. Es una solución de tranquilidad que evita rehacer toda la instalación de golpe.</p>
 
-    <h3>¿Cómo sé si me corresponde una bomba de calor aire-agua o aire-aire?</h3>
+    <h3>¿Cómo sé si me corresponde una bomba de calor <span class="nowrap">aire-agua</span> o <span class="nowrap">aire-aire</span>?</h3>
     <p>Lo decide el tipo de emisores que ya tienes. Si la casa distribuye calor por agua —radiadores o suelo radiante— y necesitas agua caliente sanitaria, la solución natural es la aerotermia aire-agua. Si el calor llega por aire pulsado o no existe circuito hidráulico, la opción es una bomba de calor aire-aire, que climatiza por splits o conductos pero no produce agua caliente sanitaria.</p>
 
     <!-- ===== Final CTA ===== -->
@@ -383,7 +386,7 @@ gtag('config', 'AW-3024885050');
       <ul class="av-related-list">
         <li><a href="/blog/aerotermia-primas-cae-cuanto-cuesta/"><span class="av-related-cat">Sistema CAE</span><span class="av-related-title">Aerotermia con primas CAE: cuánto cuesta de verdad</span></a></li>
         <li><a href="/blog/aerotermia-merece-la-pena-ventajas-inconvenientes/"><span class="av-related-cat">Aerotermia</span><span class="av-related-title">¿Merece la pena la aerotermia? Ventajas e inconvenientes reales</span></a></li>
-        <li><a href="/blog/aire-aire-o-aerotermia-cual-elegir/"><span class="av-related-cat">Aerotermia</span><span class="av-related-title">¿Aerotermia o bomba de calor aire-aire? Cuál elegir</span></a></li>
+        <li><a href="/blog/aire-aire-o-aerotermia-cual-elegir/"><span class="av-related-cat">Aerotermia</span><span class="av-related-title">¿Aerotermia o bomba de calor <span class="nowrap">aire-aire</span>? Cuál elegir</span></a></li>
       </ul>
       <p class="av-related-service">¿Te interesa este tema para tu vivienda? Descubre nuestro servicio de <a href="/servicios/aerotermia/">aerotermia</a>.</p>
     </aside>
@@ -394,7 +397,7 @@ gtag('config', 'AW-3024885050');
 
       <h3>Fuentes oficiales consultadas</h3>
       <ul>
-        <li>Real Decreto 36/2023 (Sistema de Certificados de Ahorro Energético) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-1866" rel="noopener noreferrer" target="_blank">BOE núm. 22, 25/01/2023</a></li>
+        <li>Real Decreto 36/2023 (Sistema de Certificados de Ahorro Energético) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-2027" rel="noopener noreferrer" target="_blank">BOE núm. 21, 25/01/2023</a></li>
         <li>Orden TED/815/2023 (metodología de cálculo y catálogo de fichas estandarizadas del sistema CAE, incluida la ficha RES060) — <a href="https://www.boe.es" rel="noopener noreferrer" target="_blank">BOE</a></li>
         <li>Certificado de Eficiencia Energética (CEE) — Real Decreto 390/2021, procedimiento básico para la certificación de la eficiencia energética de los edificios — <a href="https://www.boe.es" rel="noopener noreferrer" target="_blank">BOE</a></li>
         <li>Código Técnico de la Edificación, Documento Básico HE (zonas climáticas) — <a href="https://www.codigotecnico.org" rel="noopener noreferrer" target="_blank">codigotecnico.org</a></li>
@@ -427,7 +430,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>

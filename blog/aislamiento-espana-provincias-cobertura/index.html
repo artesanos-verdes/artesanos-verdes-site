@@ -44,6 +44,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -67,14 +69,14 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Seguimiento de clics y atribución -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Magazine enhancements: reading progress + TOC + reveal -->
-<script defer src="/blog/assets/blog.js?v=20261014"></script>
+<script defer src="/blog/assets/blog.js?v=20261028"></script>
 
 <!-- Schema.org Article -->
 <script type="application/ld+json">
@@ -91,7 +93,7 @@ gtag('config', 'AW-3024885050');
   "author": {"@type": "Organization", "@id": "https://artesanosverdes.com/#organization", "name": "Los Artesanos Verdes", "url": "https://artesanosverdes.com/"},
   "publisher": {"@type": "Organization", "@id": "https://artesanosverdes.com/#organization", "name": "Los Artesanos Verdes", "url": "https://artesanosverdes.com/"},
   "datePublished": "2026-04-21",
-  "dateModified": "2026-10-14",
+  "dateModified": "2026-10-28",
   "inLanguage": "es-ES"
 }
 </script>
@@ -204,6 +206,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -246,7 +249,7 @@ gtag('config', 'AW-3024885050');
 <!-- ===== Content ===== -->
 <div class="av-content" itemprop="articleBody">
 
-  <p>En Los Artesanos Verdes no trabajamos en todo el territorio nacional. Nuestra red de equipos técnicos se concentra en una zona geográfica precisa: un <strong>radio de 250 km alrededor de León y Valladolid</strong>. Esta área engloba <strong>13 provincias españolas</strong> donde ejecutamos obras de aislamiento de cubierta apoyadas por la <strong>financiación privada del sistema CAE</strong> (fichas RES022 y RES010 del catálogo del Real Decreto 36/2023). El sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023).</p>
+  <p>En Los Artesanos Verdes no trabajamos en todo el territorio nacional. Nuestra red de equipos técnicos se concentra en una zona geográfica precisa: un <strong>radio de 250 km alrededor de León y Valladolid</strong>. Esta área engloba <strong>13 provincias españolas</strong> donde ejecutamos obras de aislamiento de cubierta apoyadas por la <strong>financiación privada del sistema CAE</strong> (fichas RES022 y RES010 del catálogo del Real Decreto 36/2023). El sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023).</p>
 
   <p>Conviene precisar dos cosas desde el principio. La primera: el CAE <strong>no es una subvención ni una ayuda pública</strong>, sino un mecanismo de financiación privada entre obligados y sujetos delegados; nada que ver con Next Generation, el IDAE o la deducción del IRPF, que sí son ayudas públicas y se tramitan aparte. La segunda: las primas están <strong>sujetas a verificación del ahorro por una entidad acreditada por ENAC</strong>, de modo que el importe final se confirma una vez realizado el estudio técnico.</p>
 
@@ -258,7 +261,7 @@ gtag('config', 'AW-3024885050');
 
   <p>Un vistazo rápido a las provincias donde intervenimos, agrupadas por comunidad autónoma:</p>
 
-  <p><strong>Castilla y León</strong> (8 provincias):</p>
+  <p><strong>Castilla y León</strong> (ocho de sus nueve provincias, todas salvo Soria):</p>
   <ul>
     <li>Valladolid (47) — sede operativa</li>
     <li>León (24)</li>
@@ -278,7 +281,7 @@ gtag('config', 'AW-3024885050');
   <figure class="av-figure av-infographic-svg">
     <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cov-title cov-desc">
       <title id="cov-title">Mapa de la zona de cobertura de Los Artesanos Verdes en España</title>
-      <desc id="cov-desc">Mapa estilizado que muestra las 13 provincias españolas donde Los Artesanos Verdes interviene para obras de aislamiento por el sistema CAE. Las provincias cubiertas forman un bloque contiguo en el noroeste de la península: Castilla y León (8 provincias), Comunidad de Madrid, Galicia interior (Lugo y Ourense), Asturias y Cantabria.</desc>
+      <desc id="cov-desc">Mapa estilizado que muestra las 13 provincias españolas donde Los Artesanos Verdes interviene para obras de aislamiento por el sistema CAE. Las provincias cubiertas forman un bloque contiguo en el noroeste de la península: Castilla y León (ocho de sus nueve provincias, todas salvo Soria), Comunidad de Madrid, Galicia interior (Lugo y Ourense), Asturias y Cantabria.</desc>
 
       <!-- Background panel -->
       <rect x="0" y="0" width="800" height="600" fill="#f7f7f5" rx="16"/>
@@ -322,7 +325,7 @@ gtag('config', 'AW-3024885050');
 
       <!-- Castilla y León label (centered inside the shape) -->
       <text x="328" y="293" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Castilla y Le&#243;n</text>
-      <text x="328" y="313" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="#c9e4d2">8 provincias</text>
+      <text x="328" y="313" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="#c9e4d2">todas salvo Soria</text>
 
       <!-- Madrid label -->
       <line x1="385" y1="430" x2="385" y2="458" stroke="#1a4d30" stroke-width="1.2"/>
@@ -350,7 +353,7 @@ gtag('config', 'AW-3024885050');
   <p> El interior de Castilla y León registra inviernos con medias mínimas de −2 °C y máximas que no superan los 8 °C durante 3 a 4 meses. Una cubierta mal aislada en estas condiciones puede concentrar una parte importante de las <strong>pérdidas térmicas</strong> de la vivienda y elevar de forma apreciable el gasto de calefacción respecto a las zonas más templadas del sur peninsular.</p>
 
   <p><strong>2. Parque edificado antiguo, ideal para el CAE</strong></p>
-  <p>Según datos del INE, <strong>más del 68 % de las viviendas unifamiliares</strong> en Castilla y León se construyeron antes del año 2006, fecha de entrada en vigor de la normativa térmica moderna (CTE). La gran mayoría tiene buhardillas sin aislar o con materiales obsoletos asentados con el tiempo.</p>
+  <p>Según datos del INE, <strong>más del 68&nbsp;% de las viviendas unifamiliares</strong> en Castilla y León se construyeron antes del año 2006, fecha de entrada en vigor de la normativa térmica moderna (CTE). La gran mayoría tiene buhardillas sin aislar o con materiales obsoletos asentados con el tiempo.</p>
 
   <p><strong>3. Operativa centralizada y eficiente</strong></p>
   <p>Nuestra base técnica está optimizada para intervenir en esta zona en <strong>menos de 72 horas</strong> desde la confirmación de elegibilidad. Equipos certificados, material (sacos de lana mineral <strong>Isolene 4 de Isover</strong>) y maquinaria de soplado están disponibles en stock permanente en nuestros almacenes de Valladolid.</p>
@@ -456,7 +459,7 @@ gtag('config', 'AW-3024885050');
   <p>No. Estas provincias quedan fuera de nuestro radio operativo de 250 km alrededor de León-Valladolid. Te recomendamos buscar un instalador local adherido al sistema CAE.</p>
 
   <p><strong>¿El coste cambia según la provincia?</strong></p>
-  <p>La provincia por sí sola no determina el resultado: las 13 que cubrimos se sitúan todas en <strong>zonas climáticas C, D o E</strong>, las únicas elegibles. Lo que varía es el <strong>nivel de compensación</strong> del sistema CAE, que depende de la zona climática exacta, de la superficie a aislar y del estado previo de la cubierta. Esa financiación privada puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Las primas están <strong>sujetas a verificación del ahorro por una entidad acreditada por ENAC</strong>.</p>
+  <p>La provincia por sí sola no determina el resultado: las 13 que cubrimos se sitúan todas en <strong>zonas climáticas C, D o E</strong>, las únicas elegibles. Lo que varía es el <strong>nivel de compensación</strong> del sistema CAE, que depende de la zona climática exacta, de la superficie a aislar y del estado previo de la cubierta. Esa financiación privada puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Las primas están <strong>sujetas a verificación del ahorro por una entidad acreditada por ENAC</strong>.</p>
 
   <p><strong>¿Cuánto tardáis desde Valladolid hasta mi provincia?</strong></p>
   <p>Las 13 provincias están dentro del radio de 250 km. <strong>Respuesta inicial en menos de 1 hora</strong>, visita técnica en menos de 7 días, obra programada en 2-4 semanas según agenda y condiciones meteorológicas.</p>
@@ -480,12 +483,12 @@ gtag('config', 'AW-3024885050');
     <li>✅ Áticos perdidos o buhardilla accesible</li>
   </ul>
 
-  <p>…tu proyecto de aislamiento puede acogerse a la financiación privada del sistema CAE, que puede cubrir gran parte de la inversión; en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). El nivel exacto depende de la zona climática, de la superficie a aislar y del estado previo de la cubierta, con primas sujetas a verificación del ahorro por una entidad acreditada por ENAC. Sin letra pequeña: te lo decimos por escrito antes de que decidas nada.</p>
+  <p>…tu proyecto de aislamiento puede acogerse a la financiación privada del sistema CAE, que puede cubrir gran parte de la inversión; en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). El nivel exacto depende de la zona climática, de la superficie a aislar y del estado previo de la cubierta, con primas sujetas a verificación del ahorro por una entidad acreditada por ENAC. Sin letra pequeña: te lo decimos por escrito antes de que decidas nada.</p>
 
   <!-- ===== CTA Final ===== -->
   <aside class="av-cta-final">
     <h2>Comprueba tu elegibilidad en menos de 1 hora</h2>
-    <p>Estudio técnico y financiero gratuito y sin compromiso. Respuesta inmediata por WhatsApp, email o teléfono.</p>
+    <p>Estudio gratuito y sin compromiso. Respuesta inmediata por WhatsApp, email o teléfono.</p>
     <a href="/servicios/aislamiento-desvan/?proyecto=desvan#contacto" class="av-cta-button" data-cta="articulo-final">Comprobar mi elegibilidad</a>
   </aside>
 
@@ -494,7 +497,7 @@ gtag('config', 'AW-3024885050');
     <h2 id="av-related-title">Sigue leyendo</h2>
     <ul class="av-related-list">
       <li><a href="/blog/zonas-climaticas-cte-aislamiento-cae/"><span class="av-related-cat">Normativa y zonas</span><span class="av-related-title">Zonas climáticas del CTE: cómo saber la tuya</span></a></li>
-      <li><a href="/blog/aislamiento-comunidades-propietarios-cae/"><span class="av-related-cat">Sistema CAE</span><span class="av-related-title">Aislar la cubierta de una comunidad de propietarios con el sistema CAE</span></a></li>
+      <li><a href="/blog/aislamiento-comunidades-propietarios-cae/"><span class="av-related-cat">Comunidades</span><span class="av-related-title">Aislar la cubierta de una comunidad de propietarios con el sistema CAE</span></a></li>
       <li><a href="/blog/senales-casa-pierde-calor-mal-aislada/"><span class="av-related-cat">Confort en casa</span><span class="av-related-title">7 señales de que tu casa está mal aislada (y pierde calor)</span></a></li>
     </ul>
     <p class="av-related-service">¿Te interesa este tema para tu vivienda? Descubre nuestro servicio de <a href="/servicios/aislamiento-desvan/">aislamiento de desván</a>.</p>
@@ -504,10 +507,10 @@ gtag('config', 'AW-3024885050');
   <footer class="av-article-footer">
     <h3>Fuentes oficiales consultadas</h3>
     <ul>
-      <li>Real Decreto 36/2023 (Sistema de Certificados de Ahorro Energético) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-1866" rel="noopener noreferrer" target="_blank">BOE núm. 22, 25/01/2023</a></li>
+      <li>Real Decreto 36/2023 (Sistema de Certificados de Ahorro Energético) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-2027" rel="noopener noreferrer" target="_blank">BOE núm. 21, 25/01/2023</a></li>
       <li>Código Técnico de la Edificación, Documento Básico HE, Anejo B (zonas climáticas) — <a href="https://www.codigotecnico.org" rel="noopener noreferrer" target="_blank">codigotecnico.org</a></li>
     </ul>
-    <p class="updated">Última actualización: 14 de octubre de 2026</p>
+    <p class="updated">Última actualización: 28 de octubre de 2026</p>
   </footer>
 
 </div>
@@ -533,7 +536,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>

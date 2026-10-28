@@ -12,6 +12,9 @@
   --av-forest: #1a2e1f;
   --av-brand-green: #22a044;
   --av-brand-green-deep: #158035;
+  /* Vert de texte pour les petits textes sur crème : #158035 n'y fait que
+     4,4:1 ; #0f6428 ~6,4:1 (même valeur que --link de site.css). */
+  --av-green-text: #0f6428;
   --av-cream: #f5efe1;
   --av-ivory: #faf6ec;
   --av-terra: #b8733a;
@@ -135,6 +138,12 @@ img, svg {
 /* Le texte du logo ne se coupe jamais sur plusieurs lignes (audit #24). */
 .av-logo span { white-space: nowrap; }
 
+/* « aire-aire » jamais coupé sur son trait d'union (contrat §C, même règle
+   que site.css, que les pages du blog ne chargent pas). display: contents :
+   pas de boîte, donc pas d'élément flex séparé quand le parent est en flex
+   (l'espace avant le mot disparaissait) ; le nowrap reste hérité. */
+.nowrap { white-space: nowrap; display: contents; }
+
 .av-logo img {
   /* logo.png = 480 x 334 : on fixe la hauteur, la largeur suit le ratio. */
   width: auto;
@@ -153,7 +162,10 @@ img, svg {
   padding: 0;
 }
 
-.av-nav-links li { flex-shrink: 0; }
+/* li en flex centré : le lien téléphone (inline-flex avec icône) et les
+   liens texte partagent le même axe vertical (le numéro était 3,7 px plus
+   haut, verif. visuel#3). */
+.av-nav-links li { flex-shrink: 0; display: flex; align-items: center; }
 
 .av-nav-links a {
   color: var(--av-text);
@@ -335,7 +347,8 @@ main:focus,
 
 .av-breadcrumb {
   font-size: 13.5px;
-  color: var(--av-text-mute);
+  /* --av-text-soft (~5,3:1) et non --av-text-mute (3,1:1) : AA */
+  color: var(--av-text-soft);
   margin-bottom: 28px;
   letter-spacing: 0.01em;
 }
@@ -350,9 +363,12 @@ main:focus,
   color: var(--av-brand-green);
 }
 
-.av-breadcrumb span {
+/* Séparateurs « › » : enfants directs seulement — un <span class="nowrap">
+   placé dans la page courante ne doit pas prendre leur couleur pâle ni leurs
+   marges. */
+.av-breadcrumb > span {
   margin: 0 8px;
-  color: var(--av-border);
+  color: var(--av-sage-light);
 }
 
 /* Page courante du fil d'Ariane : lisible (et non couleur de séparateur). */
@@ -375,7 +391,9 @@ main:focus,
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 12px;
-  color: var(--av-terra);
+  /* terracotta foncé (~6,4:1) : le terracotta clair faisait 3,5:1 (AA),
+     comme pour les étiquettes des cartes de l'index */
+  color: var(--av-terra-deep);
   margin-bottom: 14px;
 }
 
@@ -416,15 +434,25 @@ h1.av-article-title em {
   font-weight: 600;
 }
 
-.av-article-meta .separator {
-  color: var(--av-border);
+/* Séparateurs « · » : le <span class="separator"> est masqué et le point
+   est redessiné en ::before de l'élément suivant, dans l'espace entre les
+   deux. Quand cet élément ouvre une nouvelle ligne, son point tombe hors de
+   la boîte (overflow: hidden) : plus de « · » orphelin en fin ou en début de
+   ligne, à toutes les largeurs (verif. visuel-13). */
+.av-article-meta { overflow: hidden; }
+.av-article-meta .separator { display: none; }
+.av-article-meta .separator + * { position: relative; }
+.av-article-meta .separator + *::before {
+  content: '·';
+  position: absolute;
+  left: -11px;
+  font-weight: 700;
+  color: var(--av-sage-light);
 }
 
-/* Sur mobile, une information par ligne : plus de « · » orphelin en fin de
-   ligne quand la ligne de metadonnees passe a la ligne (verif. visuel-13). */
+/* Sur mobile, une information par ligne. */
 @media (max-width: 640px) {
   .av-article-meta { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .av-article-meta .separator { display: none; }
 }
 
 /* ============================================
@@ -684,7 +712,7 @@ h1.av-article-title em {
 
 .av-content figcaption {
   font-size: 14px;
-  color: var(--av-text-mute);
+  color: var(--av-text-soft);
   text-align: center;
   margin-top: 12px;
   font-style: italic;
@@ -727,9 +755,28 @@ h1.av-article-title em {
   border-left-color: var(--av-brand-green);
 }
 
+/* Titre d'un encart CTA en ligne (<aside>) : vert de texte AA sur crème. */
+.av-content .av-cta-inline h3 { color: var(--av-green-text); }
+
+/* Variante <aside> (h3 + p + bouton) : dans la colonne d'article de 672 px,
+   la mise en ligne (flex, space-between) écrasait les trois éléments en
+   colonnes serrées (titre sur 4-5 lignes, bouton sur 3). On les empile à
+   toutes les largeurs, comme sur mobile. */
+aside.av-cta-inline {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+aside.av-cta-inline h3,
+aside.av-cta-inline p { margin: 0; }
+@media (min-width: 701px) {
+  aside.av-cta-inline .av-cta-button { white-space: nowrap; }
+}
+
 .av-cta-inline .arrow {
   display: inline-block;
-  color: var(--av-terra);
+  /* terracotta foncé : la flèche (caractère texte) passait à 3,3:1 */
+  color: var(--av-terra-deep);
   font-size: 18px;
   transition: transform 0.2s ease, color 0.2s ease;
   flex-shrink: 0;
@@ -798,7 +845,7 @@ h1.av-article-title em {
   padding: 12px 14px;
   border-radius: var(--av-radius-sm);
   font-weight: 600;
-  color: var(--av-brand-green-deep);
+  color: var(--av-green-text);
 }
 
 /* ============================================
@@ -839,7 +886,11 @@ h1.av-article-title em {
   pointer-events: none;
 }
 
-.av-cta-final h2 {
+/* h3 : 5 articles (certificado, condensacion, lana-mineral, que-es-el-cae,
+   zonas) ouvrent leur CTA final par un <h3>, qui prenait le vert de
+   « .av-content h3 » sur le fond sombre ; même rendu que le h2. */
+.av-cta-final h2,
+.av-cta-final h3 {
   font-family: var(--av-display);
   font-size: clamp(28px, 4vw, 38px);
   font-weight: 700;
@@ -852,13 +903,22 @@ h1.av-article-title em {
   position: relative;
 }
 
-.av-cta-final h2::before {
+.av-cta-final h2::before,
+.av-cta-final h3::before {
   content: none;
 }
 
-.av-cta-final h2 em {
+.av-cta-final h2 em,
+.av-cta-final h3 em {
   font-style: normal;
   color: #f5c6a8;
+}
+
+/* « .av-content strong » (forêt foncée) rendait le gras invisible sur le
+   fond sombre du CTA final (« gratuito y sin compromiso »). */
+.av-cta-final strong {
+  color: var(--av-cream);
+  font-weight: 700;
 }
 
 .av-cta-final p {
@@ -990,7 +1050,8 @@ h1.av-article-title em {
 .av-article-footer .updated {
   margin-top: 24px;
   font-style: italic;
-  color: var(--av-text-mute);
+  /* --av-text-soft : ~5,3:1 (AA) au lieu de 3,1:1 (verif. visuel#3) */
+  color: var(--av-text-soft);
   font-size: 13px;
 }
 
@@ -1199,7 +1260,7 @@ h1.av-article-title em {
 }
 
 .av-article-card-readmore {
-  color: var(--av-brand-green-deep);
+  color: var(--av-green-text);
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -1421,7 +1482,7 @@ h1.av-article-title em {
    terracotta clair (~3,8:1) et gris (~3,1:1) passaient sous 4,5:1. */
 .av-article-card-tag,
 .av-blog-hero-eyebrow { color: var(--av-terra-deep); }
-.av-article-card.featured .av-article-card-tag { color: var(--av-brand-green-deep); }
+.av-article-card.featured .av-article-card-tag { color: var(--av-green-text); }
 .av-article-card-meta,
 .av-blog-hero-stats { color: var(--av-text-soft); }
 
@@ -1520,10 +1581,11 @@ h1.av-article-title em {
 .av-blog-services-title {
   font-family: var(--av-display);
   font-size: clamp(24px, 3vw, 30px);
-  font-weight: 300;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
   color: var(--av-forest-deep);
   margin-bottom: 20px;
-  font-variation-settings: "SOFT" 30;
 }
 
 .av-blog-services-list {
@@ -1729,7 +1791,8 @@ h1.av-article-title em {
   .av-content h2 { font-size: 24px; margin-top: 44px; }
   .av-content h3 { font-size: 19px; }
   .av-cta-final { padding: 40px 24px; }
-  .av-cta-final h2 { font-size: 26px; }
+  .av-cta-final h2,
+  .av-cta-final h3 { font-size: 26px; }
   .av-case { padding: 20px; }
   .av-case li { font-size: 15px; flex-direction: column; gap: 4px; }
   .av-cta-inline {
@@ -1767,7 +1830,7 @@ h1.av-article-title em {
 .av-infographic-svg figcaption {
   margin-top: 14px;
   font-size: 14px;
-  color: var(--av-text-mute);
+  color: var(--av-text-soft);
   text-align: center;
   font-style: italic;
   font-family: var(--av-body);
@@ -1791,7 +1854,7 @@ img.av-infographic-svg {
 .av-figure figcaption {
   margin-top: 14px;
   font-size: 14px;
-  color: var(--av-text-mute);
+  color: var(--av-text-soft);
   text-align: center;
   font-style: italic;
   font-family: var(--av-body);
@@ -1815,7 +1878,7 @@ img.av-infographic-svg {
 .av-article-hero-image figcaption {
   margin-top: 14px;
   font-size: 14px;
-  color: var(--av-text-mute);
+  color: var(--av-text-soft);
   text-align: center;
   font-style: italic;
   font-family: var(--av-body);
@@ -2015,7 +2078,8 @@ img.av-infographic-svg {
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0.14em;
-  color: var(--av-terra);
+  /* terracotta foncée : var(--av-terra) ne donnait que 3,5:1 sur ivoire */
+  color: var(--av-terra-deep);
   text-transform: uppercase;
   margin-bottom: 14px;
   padding-left: 14px;
@@ -2035,7 +2099,8 @@ img.av-infographic-svg {
   padding: 6px 0 6px 14px;
   margin-left: -1px;
   border-left: 2px solid transparent;
-  color: var(--av-text-mute);
+  /* --av-text-mute (#8a8f7a) : 3,1:1 sur ivoire, sous le seuil AA */
+  color: var(--av-text-soft);
   text-decoration: none;
   transition: color 0.15s, border-color 0.15s;
   font-size: 12.5px;
@@ -2047,7 +2112,7 @@ img.av-infographic-svg {
 }
 
 .av-toc a.is-active {
-  color: var(--av-brand-green-deep);
+  color: var(--av-green-text);
   border-left-color: var(--av-brand-green);
   font-weight: 500;
 }
@@ -2172,11 +2237,11 @@ body::before {
 .av-related > h2 {
   font-family: var(--av-display);
   font-size: clamp(24px, 3vw, 30px);
-  font-weight: 300;
-  line-height: 1.2;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
   color: var(--av-forest-deep);
   margin: 0 0 22px;
-  font-variation-settings: "SOFT" 30;
 }
 
 .av-related .av-related-list {
@@ -2216,22 +2281,24 @@ body::before {
   transform: translateY(-2px);
 }
 
+/* Surtitre de carte : texte 600 en capitales, comme .av-article-card-tag. */
 .av-related-cat {
-  font-family: var(--av-display);
-  font-style: italic;
-  font-size: 13px;
-  letter-spacing: 0.04em;
+  font-family: var(--av-body);
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
   color: var(--av-terra-deep);
-  font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 .av-related-title {
   font-family: var(--av-display);
   font-size: 18px;
-  font-weight: 400;
-  line-height: 1.3;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.012em;
   color: var(--av-forest-deep);
-  font-variation-settings: "SOFT" 50;
 }
 
 .av-related .av-related-list a:hover .av-related-title { color: var(--av-brand-green-deep); }
@@ -2359,7 +2426,9 @@ body::before {
 
 /* Print: hide enhancements */
 @media print {
-  .av-reading-progress, .av-toc, body::before, .cta-bar-movil, .skip-link, .av-blog-filters { display: none !important; }
+  .av-reading-progress, .av-toc, body::before, .cta-bar-movil, .skip-link, .av-blog-filters, #av-cookie-banner { display: none !important; }
+  /* blocs révélés au défilement (blog.js) : visibles à l'impression */
+  .av-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
   .av-content > p:first-of-type::first-letter {
     font-size: 1em !important;
     float: none !important;

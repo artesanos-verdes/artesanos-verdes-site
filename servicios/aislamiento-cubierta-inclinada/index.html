@@ -24,7 +24,7 @@
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Los Artesanos Verdes">
 <meta property="og:title" content="Aislar el tejado por dentro: buhardilla habitable · CAE">
-<meta property="og:description" content="Aislamos los rampantes de tu buhardilla habitable desde el interior con TETRIS SUPER 12 (R = 6,13 m²·K/W, reflectante 2 en 1). Financiación privada a través del sistema CAE. Estudio gratuito.">
+<meta property="og:description" content="Aislamos los rampantes de tu buhardilla habitable desde el interior con TETRIS SUPER 12, un aislante reflectante 2 en 1. Financiación privada a través del sistema CAE. Estudio gratuito.">
 <meta property="og:image" content="https://artesanosverdes.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -34,7 +34,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Aislar el tejado por dentro: buhardilla habitable · CAE">
-<meta name="twitter:description" content="Rampantes aislados por el interior con TETRIS SUPER 12 (R = 6,13 m²·K/W). Financiación privada a través del sistema CAE (ficha RES010). Estudio gratuito.">
+<meta name="twitter:description" content="Rampantes aislados por el interior con TETRIS SUPER 12. Financiación privada a través del sistema CAE (ficha RES010). Estudio gratuito.">
 <meta name="twitter:image" content="https://artesanosverdes.com/og-image.jpg">
 
 <!-- Schema.org Service -->
@@ -44,7 +44,7 @@
   "@type": "Service",
   "name": "Aislamiento del tejado por dentro en buhardillas habitables (cubierta inclinada y rampantes)",
   "serviceType": "Aislamiento térmico de rampantes por el interior con aislante reflectante",
-  "description": "Aislamiento de los rampantes de buhardillas habitables o acondicionables con TETRIS SUPER 12, aislante reflectante alveolar flexible (R = 6,13 m²·K/W), instalado por el interior. Financiación privada a través del sistema CAE (ficha RES010). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.",
+  "description": "Aislamiento de los rampantes de buhardillas habitables o acondicionables con TETRIS SUPER 12, aislante reflectante alveolar flexible, instalado por el interior. Financiación privada a través del sistema CAE (ficha RES010). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.",
   "provider": {
     "@id": "https://artesanosverdes.com/#organization",
     "name": "Los Artesanos Verdes"
@@ -94,6 +94,8 @@
   (function(){
     var s = null;
     try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+    // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+    if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
     gtag('consent', 'default', {
       ad_storage: (s && s.ads) ? 'granted' : 'denied',
       analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -118,9 +120,9 @@
 </script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/tracking.js?v=20261014"></script>
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/tracking.js?v=20261028"></script>
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
 <link rel="preload" as="image" href="/assets/servicios/hero-cubierta-inclinada-800.webp" type="image/webp" media="(max-width: 968px)" fetchpriority="high">
@@ -128,7 +130,7 @@
 <link rel="stylesheet" href="/assets/site.css?v=20261028">
 
 <!-- SDK Firebase chargé en différé : voir assets/firebase-lazy.js -->
-<script src="/assets/firebase-lazy.js?v=20261014" defer></script>
+<script src="/assets/firebase-lazy.js?v=20261028" defer></script>
 <!-- Schema.org FAQPage -->
 <script type="application/ld+json">
 {
@@ -156,7 +158,7 @@
       "name": "¿Qué resistencia térmica consigo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El sistema alcanza una resistencia térmica R = 6,13 m²·K/W (norma EN 16012), y además refleja hasta el 95 % de la radiación infrarroja, lo que aporta confort tanto en invierno como en verano."
+        "text": "El sistema alcanza una resistencia térmica R = 6,13 m²·K/W (norma EN 16012), y además refleja hasta el 95 % de la radiación infrarroja, lo que aporta confort tanto en invierno como en verano. Reacción al fuego: Euroclase F, instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado), que es el revestimiento que aporta la protección frente al fuego del conjunto."
       }
     },
     {
@@ -172,7 +174,7 @@
       "name": "¿Cuánto cuesta la obra con el sistema CAE?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La financiación privada a través del sistema CAE reduce de forma significativa el coste para el propietario. El importe final se determina en el estudio gratuito, en función de tu vivienda; las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC."
+        "text": "La financiación privada a través del sistema CAE puede reducir de forma significativa el coste para el propietario. El importe final se determina en el estudio gratuito, en función de tu vivienda; las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC."
       }
     },
     {
@@ -258,9 +260,10 @@
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislar la cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
       </ul>
     </li>
+    <li><a href="/comunidades-de-propietarios/">Comunidades</a></li>
     <li><a href="/#cae">Sistema CAE</a></li>
     <li><a href="/#proceso">Proceso</a></li>
     <li><a href="/#certificaciones">Garantías</a></li>
@@ -284,6 +287,9 @@
 
 <!-- Estilos específicos de esta página (capas del corte y CTA final; la FAQ está en site.css) -->
 <style>
+  /* Formule feu (§0) à côté de la pastille « R = 6,13 » : masquée avec .hero-trust sous 768 px. */
+  .hero-trust .trust-nota { flex-basis: 100%; margin-top: -0.9rem; font-size: 0.78rem; line-height: 1.5; color: var(--forest); opacity: 0.85; max-width: 600px; }
+  .hero .hero-trust .trust-nota { color: #c4d8ca; opacity: 1; }
   .capas-list { list-style: none; max-width: 640px; margin: 0 auto; text-align: left; }
   .capas-list li {
     display: flex;
@@ -300,20 +306,15 @@
     font-family: var(--display);
     font-weight: 700;
     font-variant-numeric: tabular-nums;
-    color: var(--terracotta);
+    color: var(--terracotta-deep);
     font-size: 0.95rem;
     min-width: 1.6rem;
     flex-shrink: 0;
   }
   .capas-list .cap-name { font-weight: 600; color: var(--forest-deep); }
   .capas-list li.is-core { background: rgba(34, 160, 68, 0.06); border-radius: 6px; padding: 0.9rem 0.8rem; border-bottom: none; }
-  .capas-list li.is-core .cap-name { color: var(--brand-green-deep); }
+  .capas-list li.is-core .cap-name { color: var(--link); }
 
-  .cta-final { background: linear-gradient(150deg, var(--forest) 0%, var(--forest-deep) 100%); text-align: center; overflow: hidden; }
-  .cta-final h2 { color: var(--cream); }
-  .cta-final h2 em { color: #f5c6a8; }
-  .cta-final .cta-lead { color: #e8f0ea; opacity: 0.9; font-size: 1.1rem; line-height: 1.7; max-width: 620px; margin: 0 auto 2.2rem; }
-  .cta-final .cta-fine { color: #c1d9cc; opacity: 0.85; font-size: 0.82rem; letter-spacing: 0.05em; margin-top: 1.4rem; }
 </style>
 
 <main id="contenido">
@@ -341,6 +342,7 @@
         <svg viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         R = 6,13 m²K/W
       </div>
+      <p class="trust-nota">TETRIS SUPER 12 · Reacción al fuego: Euroclase F, instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado), que es el revestimiento que aporta la protección frente al fuego del conjunto.</p>
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Reflectante 2 en 1
@@ -371,7 +373,7 @@
       </div>
       <div class="nosotros-text reveal reveal-delay-1">
         <p>En una buhardilla o desván habitable —o que quieres acondicionar para vivir en él— los <strong>rampantes</strong> (los planos inclinados del techo que siguen la pendiente del tejado) están en contacto directo con el exterior. Si no están aislados, se convierten en la principal vía de fuga térmica de la planta superior.</p>
-        <p>El resultado lo notas cada día: frío que baja del techo en invierno por mucho que enciendas la calefacción, un calor sofocante bajo el tejado en verano y riesgo de condensaciones en las zonas más frías del plano inclinado. En una vivienda tipo española, la cubierta puede representar entre el <strong>25 % y el 30 %</strong> de las pérdidas de calor.</p>
+        <p>El resultado lo notas cada día: frío que baja del techo en invierno por mucho que enciendas la calefacción, un calor sofocante bajo el tejado en verano y riesgo de condensaciones en las zonas más frías del plano inclinado. En una vivienda tipo española, la cubierta puede representar entre el <strong>25&nbsp;% y el 30&nbsp;%</strong> de las pérdidas de calor.</p>
         <p>A diferencia de un ático perdido —donde basta con aislar el suelo del desván—, aquí el espacio se usa. Por eso la solución no es soplar material sobre el forjado, sino <strong>aislar el propio plano inclinado por dentro</strong>, conservando la habitabilidad y la altura útil de la estancia.</p>
       </div>
     </div>
@@ -419,7 +421,7 @@
     </div>
 
     <figure class="reveal" style="margin:0 0 2.5rem;">
-      <img src="/assets/servicios/tetris-super12-ficha.svg" alt="Ficha técnica de TETRIS SUPER 12: R = 6,13 m²·K/W, reflectante, barrera de vapor integrada y estanqueidad al aire" width="1200" height="520" style="width:100%; height:auto; border-radius:6px;">
+      <img src="/assets/servicios/tetris-super12-ficha.svg" alt="Ficha técnica de TETRIS SUPER 12, aislante reflectante con barrera de vapor integrada" width="1200" height="520" style="width:100%; height:auto; border-radius:6px;">
     </figure>
 
     <div style="max-width:760px; margin:0 auto;">
@@ -438,7 +440,7 @@
         </div>
         <div class="spec-row">
           <span class="key">Espesor declarado</span>
-          <span class="val">120 <span class="unit">mm ± 10 %</span></span>
+          <span class="val">120 <span class="unit">mm ± 10&nbsp;%</span></span>
         </div>
         <div class="spec-row">
           <span class="key">Formato del rollo</span>
@@ -446,7 +448,7 @@
         </div>
         <div class="spec-row">
           <span class="key">Masa superficial</span>
-          <span class="val">970 <span class="unit">g/m² ± 5 %</span></span>
+          <span class="val">970 <span class="unit">g/m² ± 5&nbsp;%</span></span>
         </div>
         <div class="spec-row">
           <span class="key">Emisividad de los films metalizados</span>
@@ -496,7 +498,7 @@
       <!-- Precauciones de instalación segun la documentacion del fabricante:
            demuestran al visitante que la colocacion sigue un protocolo. -->
       <div style="margin-top:2.5rem; padding:1.6rem 1.8rem; background:var(--ivory); border:1px solid var(--line); border-left:3px solid var(--terracotta); border-radius:0 8px 8px 0; text-align:left;">
-        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--terracotta); margin-bottom:0.8rem;">Puntos calientes: la precaución que no se ve</div>
+        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--terracotta-deep); margin-bottom:0.8rem;">Puntos calientes: la precaución que no se ve</div>
         <p style="margin:0 0 0.8rem; font-size:0.95rem; line-height:1.65;">Todo aislante reflectante debe mantenerse alejado de cualquier fuente de calor que pueda superar los 80&nbsp;°C. En cada obra respetamos una <strong>distancia mínima de 15&nbsp;cm</strong> entre el aislante y los conductos de humos o los focos empotrados, e intercalamos una pantalla rígida cuando el espacio no lo permite.</p>
         <p style="margin:0; font-size:0.95rem; line-height:1.65;">Por eso recomendamos siempre <strong>iluminación LED</strong> en la buhardilla: no desprende calor, y evita el punto débil más habitual de este tipo de obra.</p>
       </div>
@@ -632,7 +634,7 @@
     </div>
 
     <p class="reveal" style="max-width:720px; margin:2.5rem auto 0; font-size:0.9rem; opacity:0.8; line-height:1.65;">
-      La financiación privada a través del sistema CAE reduce de forma significativa el coste de la obra para el propietario. <strong>Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</strong> El importe exacto se determina durante el estudio gratuito, en función de la superficie, la zona climática y la mejora térmica conseguida.
+      La financiación privada a través del sistema CAE puede reducir de forma significativa el coste de la obra para el propietario. <strong>Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</strong> El importe exacto se determina durante el estudio gratuito, en función de la superficie, la zona climática y la mejora térmica conseguida.
     </p>
   </div>
 </section>
@@ -665,7 +667,7 @@
       <div class="cert-badge reveal" style="min-height: 180px; padding: 2rem 1.5rem;">
         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#22a044" stroke-width="1.8" style="margin-bottom: 0.8rem;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linejoin="round"/></svg>
         <div class="cert-name" style="font-size: 1.05rem; margin-bottom: 0.5rem;">Marcado CE · EN 13984</div>
-        <div style="font-size: 0.78rem; color: var(--sage); line-height: 1.5;">TETRIS SUPER 12 — prestación certificada EN 16012 (R = 6,13)</div>
+        <div style="font-size: 0.78rem; color: var(--sage); line-height: 1.5;">TETRIS SUPER 12 — prestación certificada EN 16012</div>
       </div>
       <div class="cert-badge reveal reveal-delay-1" style="min-height: 180px; padding: 2rem 1.5rem;">
         <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#22a044" stroke-width="1.8" style="margin-bottom: 0.8rem;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -680,7 +682,7 @@
     </div>
 
     <div style="max-width: 800px; margin: 3rem auto 0; padding: 1.5rem 2rem; background: var(--ivory); border: 1px solid var(--line); border-radius: 6px; text-align: left;">
-      <div style="font-family: var(--display); font-size: 1rem; color: var(--forest-deep); margin-bottom: 0.5rem; font-weight: 500;">
+      <div style="font-family: var(--display); font-size: 1rem; line-height: 1.2; letter-spacing: -0.012em; color: var(--forest-deep); margin-bottom: 0.5rem; font-weight: 600;">
         <svg class="av-icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Tu tranquilidad, por escrito
       </div>
       <p style="font-size: 0.9rem; color: var(--forest); opacity: 0.8; line-height: 1.6; margin: 0;">
@@ -730,7 +732,7 @@
       <details class="faq-item">
         <summary>¿Qué resistencia térmica consigo?</summary>
         <div class="faq-body">
-          <p>El sistema alcanza una resistencia térmica <strong>R = 6,13 m²·K/W</strong> (norma EN 16012), y además refleja hasta el 95 % de la radiación infrarroja, lo que aporta confort tanto en invierno como en verano.</p>
+          <p>El sistema alcanza una resistencia térmica <strong>R = 6,13 m²·K/W</strong> (norma EN 16012), y además refleja hasta el 95&nbsp;% de la radiación infrarroja, lo que aporta confort tanto en invierno como en verano. Reacción al fuego: Euroclase F, instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado), que es el revestimiento que aporta la protección frente al fuego del conjunto.</p>
         </div>
       </details>
 
@@ -744,7 +746,7 @@
       <details class="faq-item">
         <summary>¿Cuánto cuesta la obra con el sistema CAE?</summary>
         <div class="faq-body">
-          <p>La financiación privada a través del sistema CAE reduce de forma significativa el coste para el propietario. El importe final se determina en el estudio gratuito, en función de tu vivienda; las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
+          <p>La financiación privada a través del sistema CAE puede reducir de forma significativa el coste para el propietario. El importe final se determina en el estudio gratuito, en función de tu vivienda; las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
         </div>
       </details>
 
@@ -940,7 +942,8 @@
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván (soplado)</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Cubierta inclinada (rampantes)</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
         <li><a href="#cae">Sistema CAE</a></li>
       </ul>
     </div>
@@ -1006,7 +1009,7 @@
   <button class="toast-close" onclick="document.getElementById('toast').classList.remove('show')" aria-label="Cerrar">×</button>
 </div>
 
-<script src="/assets/site.js?v=20261014" defer></script>
+<script src="/assets/site.js?v=20261028" defer></script>
 
 </body>
 </html>

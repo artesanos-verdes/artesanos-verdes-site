@@ -424,8 +424,8 @@
   .hero-quickstart-label {
     margin: 0 0 0.75rem;
     font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-weight: 600;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     color: #8dd4a8;
   }
@@ -451,8 +451,13 @@
     transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
   }
   .hero-chip svg { width: 16px; height: 16px; flex: none; color: #8dd4a8; transition: color 0.25s ease; }
-  /* « aire-aire » jamais coupe sur son trait d'union (verif. visuel-11). */
-  .nowrap { white-space: nowrap; }
+  /* « aire-aire » jamais coupe sur son trait d'union (verif. visuel-11).
+     display: contents : le span ne cree pas de boite. Dans un parent flex
+     (liens du pied de page et du menu mobile, <summary> de la FAQ, surtitre
+     du hero), un span inline devenait un element flex a part : l'espace
+     avant lui disparaissait (« Bomba de caloraire-aire ») ou s'elargissait
+     (gap, space-between). Le nowrap reste herite par le texte. */
+  .nowrap { white-space: nowrap; display: contents; }
   .hero-chip:hover, .hero-chip:focus-visible {
     background: #8dd4a8;
     border-color: #8dd4a8;
@@ -653,6 +658,33 @@
     margin-left: 0.8rem;
     align-self: center;
   }
+  /* Carte d'offre du desvan (decision du 28/10/2026) : « Gran parte » en
+     texte, a la place du pourcentage geant. Display 700 (fond sombre), taille
+     fluide : ~44 px a 390 px de large (la carte n'y offre que ~285 px utiles),
+     72 px sur desktop. Vert de marque sur la foret : ~4,4:1, AA grand texte. */
+  .offer-price.offer-price--texto {
+    display: block;
+    font-size: clamp(2.6rem, 11vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.012em;
+    font-variant-numeric: normal;
+    margin: 1rem 0 0.6rem;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
+  /* Suite de la phrase sous « Gran parte » : texte clair, ~13:1 sur la foret. */
+  .offer-price-sub {
+    position: relative;
+    max-width: 40ch;
+    text-wrap: balance;
+    margin: 0 0 1.1rem;
+    font-family: var(--body);
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--on-dark);
+  }
   .offer-caption {
     position: relative;
     font-size: 0.95rem;
@@ -837,7 +869,8 @@
     transform: translateX(-50%);
     pointer-events: none;
   }
-  .euro .section-num { justify-content: center; color: var(--brand-green); }
+  /* vert fonce (lien, ~6,4:1) et non vert de marque (3:1 sur creme) : AA */
+  .euro .section-num { justify-content: center; color: var(--link); }
   .euro .section-num::before { background: var(--brand-green); }
   .euro-inner { max-width: 1100px; margin: 0 auto; position: relative; }
   .euro-tagline {
@@ -897,7 +930,8 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     color: var(--terracotta-deep);
-    opacity: 0.7;
+    /* opacite pleine : 0.7 tombait a 3,2:1 (AA) */
+    opacity: 1;
   }
   .criterion h4 {
     font-family: var(--display);
@@ -966,7 +1000,9 @@
     margin-bottom: 0.8rem;
     font-weight: 600;
   }
-  .flow-node.highlight .role { color: rgba(255,255,255,0.85); }
+  /* blanc plein sur le vert fonce : ~5:1 (0.85 / 0.75 d'opacite tombaient a 4,1 et 3,6:1) */
+  .flow-node.highlight .role { color: #fff; }
+  .flow-node.highlight .desc { opacity: 1; }
   .flow-node .name {
     font-family: var(--display);
     font-weight: 600;
@@ -1007,7 +1043,11 @@
     opacity: 0.95;
     border-radius: 0 6px 6px 0;
   }
-  .flow-note strong { color: var(--gold); }
+  /* Or sur les fonds sombres (.cae-flow) ; sur les fonds clairs des pages
+     services (.euro, .material…), l'or ne faisait que 2,3:1 : terracotta
+     fonce, ~6:1 sur le fond de l'encadre (AA, verif. visuel#3). */
+  .flow-note strong { color: var(--terracotta-deep); }
+  :is(.hero, .cae-flow, .metodo, .sedes, .cta-final, .av-trust-numbers) .flow-note strong { color: var(--gold); }
 
   /* ===== OBLIGADOS LOGOS ===== */
   .obligados {
@@ -1167,15 +1207,20 @@
   }
   .step-content p { font-size: 0.95rem; color: var(--forest); opacity: 0.8; line-height: 1.65; }
   /* Hierarchie des titres corrigee (h4 -> h3 sous un h2, audit #26) : les h3
-     gardent l'aspect des anciens h4 (meme regle que celle deja posee en ligne
-     sur les pages services). */
+     gardent l'aspect des anciens h4, dans la typographie de main (Source
+     Serif 4 600). Interligne 1.2 des titres de cartes (comme .metodo-step h4
+     et les cartes du blog) : ces titres passent souvent sur deux lignes.
+     Les h4 encore présents (desván, cubierta, aire-aire) reçoivent le même
+     rendu, pour qu'un même composant ne change pas d'aspect d'une page à l'autre. */
   .criterion h3,
-  .step-content h3 {
+  .step-content h3,
+  .criterion h4,
+  .step-content h4 {
     font-family: var(--display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
-    line-height: inherit;
-    font-variation-settings: normal;
+    line-height: 1.2;
+    letter-spacing: -0.012em;
     color: var(--forest-deep);
   }
   .criterion h3 { margin-bottom: 0.6rem; }
@@ -1183,10 +1228,10 @@
   .metodo-step h3 {
     font-family: var(--display);
     font-size: 1.15rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.8rem;
     line-height: 1.2;
-    font-variation-settings: normal;
+    letter-spacing: -0.012em;
     color: var(--cream);
   }
 
@@ -1246,6 +1291,7 @@
     font-weight: 600;
     margin-bottom: 0.8rem;
     line-height: 1.2;
+    letter-spacing: -0.012em;
     color: var(--cream);
   }
   .metodo-step p {
@@ -1270,7 +1316,8 @@
     margin-top: 1rem;
     font-size: 0.9rem;
     text-align: center;
-    font-style: italic;
+    /* Section A : l'italique est réservé aux citations et au corps des articles */
+    font-style: normal;
     opacity: 0.7;
     line-height: 1.5;
     padding: 0 1rem;
@@ -1398,7 +1445,8 @@
   .material-features { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
   .material-features li {
     background: rgba(34, 160, 68, 0.08);
-    color: var(--brand-green-deep);
+    /* vert fonce : ~6:1 sur la pastille (le vert de marque fonce faisait 4,1:1) */
+    color: var(--link);
     padding: 0.4rem 0.9rem;
     border-radius: 100px;
     font-size: 0.78rem;
@@ -1676,7 +1724,10 @@
   }
   /* minmax(0, 1fr) : un select a long libelle ne peut plus elargir sa colonne
      ni deborder de la carte (audit #19). */
-  .form-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;
+    /* champs d'une même rangée alignés par le bas : un libellé sur 2 lignes
+       (« Año de construcción (opcional) » à 1024) ne décale plus son champ */
+    align-items: end; }
   .form-group { display: flex; flex-direction: column; min-width: 0; }
   .form-group.full { grid-column: 1 / -1; }
   .form-group label {
@@ -1751,7 +1802,8 @@
   .form-consent label { display: flex; align-items: flex-start; gap: 0.7rem; cursor: pointer; padding: 0.25rem 0; }
   .form-consent input[type="checkbox"] { flex-shrink: 0; margin-top: 0; width: 22px; height: 22px; accent-color: var(--brand-green-deep, #1a4d30); cursor: pointer; }
   .form-consent label span { padding-top: 1px; }
-  .form-consent a { color: var(--brand-green-deep, #1a4d30); text-decoration: underline; font-weight: 600; }
+  /* --link (~6,4:1 sur creme) et non le vert de marque fonce (4,4:1) : AA (verif. visuel#2) */
+  .form-consent a { color: var(--link); text-decoration: underline; font-weight: 600; }
 
   /* ===== FOOTER ===== */
   footer {
@@ -1801,16 +1853,25 @@
   /* « Configurar cookies » : un vrai <button> avec l'apparence des liens du
      pied de page (et non plus un <a href="#">, verif. fonctionnel-02). */
   .footer-link-btn {
+    -webkit-appearance: none;
+    appearance: none;
     background: none;
     border: 0;
+    border-radius: 0;
     padding: 0;
     margin: 0;
+    /* le bouton n'herite pas de ces proprietes par defaut (styles UA) */
     font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
     line-height: inherit;
     text-align: left;
     cursor: pointer;
   }
-  .footer-link-btn:focus-visible { outline: 2px solid var(--green-on-dark); outline-offset: 2px; }
+  /* Focus clavier : meme anneau pour les liens et le bouton du pied de page. */
+  .footer-col a:focus-visible,
+  .footer-link-btn:focus-visible { outline: 2px solid var(--green-on-dark); outline-offset: 2px; opacity: 1; }
   .footer-col a:hover,
   .footer-col .footer-link-btn:hover { color: var(--brand-green); opacity: 1; }
   .footer-bottom {
@@ -2133,6 +2194,7 @@
     /* h1 : taille geree dans le bloc « HERO MOBILE COMPACT » (< 640 px) */
     h2 { font-size: 1.9rem; }
     .offer-price { font-size: 4.5rem; }
+    .offer-price.offer-price--texto { font-size: clamp(2.4rem, 11vw, 3rem); }
     .offer-card { padding: 1.8rem; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .hero-actions .btn { justify-content: center; }
@@ -2142,9 +2204,9 @@
 
   /* ===== TRUST NUMBERS « Una empresa consolidada » =====
      Remis dans le systeme (audit #25) : fond foret, eyebrow au style
-     .section-num, titre h2 en Fraunces 300, chiffres en Fraunces 300 comme
-     .stat .n, couleurs par tokens, unites en rem. Le texte (chiffres compris)
-     n'est pas modifie. */
+     .section-num, typographie de main (titre en display 700 sur fond sombre,
+     chiffres en Source Sans 3 700 tabular-nums comme sur main), couleurs par
+     tokens, unites en rem. Le texte (chiffres compris) n'est pas modifie. */
   .av-trust-numbers {
     background: var(--forest);
     color: var(--cream);
@@ -2262,6 +2324,21 @@
       align-self: start;
       padding-top: calc(46vw + 2.5rem);
     }
+  }
+
+  /* Entre 769 et 968 px, le hero passe sur une colonne mais la photo restait
+     sur la moitie droite, sous le texte (defaut signale au lot 1). Meme
+     bandeau qu'en mobile, de hauteur fixe ; .hero a deja 4rem de marge haute. */
+  @media (min-width: 769px) and (max-width: 968px) {
+    .hero-bg { left: 0; bottom: auto; height: 300px; }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 44%;
+      background: linear-gradient(180deg, rgba(10,24,16,0) 0%, rgba(10,24,16,0.85) 78%, #0f2e1c 100%);
+    }
+    .hero > .hero-content { align-self: start; padding-top: calc(300px - 4rem + 2.25rem); }
   }
 
   @media (max-width: 968px) {
@@ -2544,17 +2621,22 @@ nav.breadcrumb::before { content: none; }
   font-size: 0.82rem;
   line-height: 1.4;
 }
-.breadcrumb li { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--sage); }
+/* li en bloc (et non inline-flex) : le texte de la page courante garde ses
+   espaces et se coupe normalement, y compris autour de <span class="nowrap">
+   (en flex, l'espace avant le span disparaissait). */
+.breadcrumb li { display: block; color: var(--sage); }
 /* Chevron APRES chaque element sauf le dernier (et non avant chaque element
    sauf le premier) : quand le fil passe sur deux lignes, il reste en fin de
-   1re ligne au lieu d'ouvrir la 2e (verif. visuel-07). */
+   1re ligne, colle a son lien, au lieu d'ouvrir la 2e (verif. visuel-07). */
 .breadcrumb li:not(:last-child)::after {
   content: '';
+  display: inline-block;
   width: 6px; height: 6px;
+  margin: 0 0.15rem 0 0.55rem;
+  vertical-align: middle;
   border-top: 1.5px solid var(--terracotta);
   border-right: 1.5px solid var(--terracotta);
-  transform: rotate(45deg);
-  flex-shrink: 0;
+  transform: translateY(-1px) rotate(45deg);
 }
 .breadcrumb a {
   color: var(--forest);
@@ -2610,20 +2692,21 @@ nav.breadcrumb::before { content: none; }
 }
 .guia-card:focus-visible { outline: 3px solid var(--brand-green-deep); outline-offset: 3px; }
 .guia-cat {
+  font-family: var(--body);
   font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--terracotta-deep);
 }
 .guia-title {
   flex: 1;
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.22rem;
-  line-height: 1.25;
+  line-height: 1.2;
+  letter-spacing: -0.012em;
   color: var(--forest-deep);
-  font-variation-settings: "SOFT" 40;
 }
 .guia-more {
   display: inline-flex;
@@ -2675,8 +2758,9 @@ nav.breadcrumb::before { content: none; }
   cursor: pointer;
   padding: 1.4rem 0.2rem;
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.12rem;
+  line-height: 1.3;
   color: var(--forest-deep);
   display: flex;
   justify-content: space-between;
@@ -2770,12 +2854,12 @@ nav.breadcrumb::before { content: none; }
 .form-ok > :first-child,
 .form-ok .form-ok-title {
   font-family: var(--display);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.7rem;
-  line-height: 1.15;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
   color: var(--forest-deep);
   margin-bottom: 0.9rem;
-  font-variation-settings: "SOFT" 40;
 }
 .form-ok p { font-size: 1rem; margin-bottom: 0.7rem; }
 .form-ok p:last-child { margin-bottom: 0; }
@@ -2887,9 +2971,10 @@ html:not(.js) .servicios-quiz { display: none; }
 .zonas-grupo:first-child { grid-column: 1 / -1; }
 .zonas-ccaa {
   margin-bottom: 0.7rem;
+  font-family: var(--body);
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--terracotta-deep);
 }
@@ -2941,10 +3026,11 @@ html:not(.js) .servicios-quiz { display: none; }
 .zonas-resultado[hidden] { display: none; }
 .zonas-resultado-txt {
   font-family: var(--display);
+  font-weight: 600;
   font-size: 1.35rem;
   line-height: 1.2;
+  letter-spacing: -0.012em;
   color: var(--forest-deep);
-  font-variation-settings: "SOFT" 40;
 }
 .zonas-otra { margin-top: 2rem; font-size: 0.95rem; color: var(--forest); }
 @media (max-width: 768px) {
@@ -3056,10 +3142,12 @@ html:not(.js) .servicios-quiz { display: none; }
      principal du hero passait sous la barre #ctaBarMovil (verif. visuel-03). */
   .hero-bg { height: 128px; min-height: 0; max-height: none; }
   .hero > .hero-content { padding: calc(128px + 1rem) 1.25rem 0; }
-  .hero-eyebrow { margin-bottom: 0.9rem; font-size: 0.7rem; letter-spacing: 0.2em; }
+  .hero-eyebrow { margin-bottom: 0.9rem; font-size: 0.7rem; letter-spacing: 0.13em; }
   .hero h1 br { display: none; }
-  h1 { font-size: clamp(2rem, 8.2vw, 2.4rem); line-height: 1.05; margin-bottom: 1rem; }
-  .hero-sub { font-size: 1rem; line-height: 1.6; margin-bottom: 1.4rem; }
+  /* interligne 1.1 des titres (typographie de main) ; marges resserrees
+     pour garder le bouton du hero au-dessus de la barre d'action en 390 x 844 */
+  h1 { font-size: clamp(2rem, 8.2vw, 2.4rem); line-height: 1.1; margin-bottom: 0.75rem; }
+  .hero-sub { font-size: 1rem; line-height: 1.6; margin-bottom: 1.1rem; }
   .hero-quickstart { margin-bottom: 1.2rem; }
   .hero-quickstart-label { margin-bottom: 0.6rem; font-size: 0.74rem; }
   .hero-quickstart-chips { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
@@ -3097,7 +3185,51 @@ html:not(.js) .servicios-quiz { display: none; }
   }
   .servicio-card:hover .servicio-card-media img { transform: none; }
 }
-=======
+
+/* ===== LOT 1-B (28/10/2026) ===== */
+
+/* Boutons du test (quiz.js) : sans JavaScript ils ne feraient rien (§C). */
+html:not(.js) [data-quiz-open] { display: none; }
+
+/* Heros des services : recadrage horizontal pour garder le poseur dans le
+   cadre quand la photo n'occupe que la moitie droite (969 px et plus, le
+   panneau est plus haut que large : on n'y voit que 35 a 60 % de la largeur
+   de l'image). Valeurs choisies sur les photos : sujet entre 49 et 85 % de
+   la largeur. Sous 769 px, le bandeau est pleine largeur : sans effet.
+   Calques : degrade de raccord, photo, fond de secours (verif. visuel#2 et #3). */
+.hero-bg--desvan { background-position: 0 0, 80% 50%, 0 0; }
+.hero-bg--aerotermia { background-position: 0 0, 75% 50%, 0 0; }
+.hero-bg--aire-aire { background-position: 0 0, 75% 50%, 0 0; }
+.hero-bg--cubierta-inclinada { background-position: 0 0, 70% 50%, 0 0; }
+
+/* ===== IMPRESSION (revue finale) =====
+   Ni barre d'action, ni navigation, ni bulle WhatsApp ; tous les blocs
+   .reveal visibles, meme ceux qui n'ont pas encore defile. */
+@media print {
+  .topbar,
+  nav:not(.breadcrumb),
+  .nav-overlay,
+  .cta-bar-movil,
+  .whatsapp-float,
+  .ads-wa-sticky,
+  .skip-link,
+  .hero-quickstart,
+  [data-quiz-open],
+  #av-cookie-banner,
+  .toast { display: none !important; }
+  body { padding-bottom: 0 !important; }
+  body::before,
+  footer::after { content: none !important; display: none !important; }
+  .reveal,
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  section { break-inside: auto; }
+  h1, h2, h3 { break-after: avoid; }
+}
+
 /* Fond sombre : graisse 700 pour épaissir les déliés de la serif (mots pêche / vert pâle sur vert profond). */
 .hero h1, .hero h1 em, .hero h1 .euro-accent,
 .cae-flow h2, .metodo h2, .sedes h2, .sede-card h3, .cta-final h2, .av-trust-title { font-weight: 700; }

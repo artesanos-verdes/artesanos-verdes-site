@@ -43,6 +43,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -66,14 +68,14 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Seguimiento de clics y atribución -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Magazine enhancements: reading progress + TOC + reveal -->
-<script defer src="/blog/assets/blog.js?v=20261014"></script>
+<script defer src="/blog/assets/blog.js?v=20261028"></script>
 
 <!-- Schema.org Article -->
 <script type="application/ld+json">
@@ -90,7 +92,7 @@ gtag('config', 'AW-3024885050');
   "author": {"@type": "Organization", "@id": "https://artesanosverdes.com/#organization", "name": "Los Artesanos Verdes", "url": "https://artesanosverdes.com/"},
   "publisher": {"@type": "Organization", "@id": "https://artesanosverdes.com/#organization", "name": "Los Artesanos Verdes", "url": "https://artesanosverdes.com/"},
   "datePublished": "2026-04-21",
-  "dateModified": "2026-10-14",
+  "dateModified": "2026-10-28",
   "inLanguage": "es-ES"
 }
 </script>
@@ -175,6 +177,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -237,7 +240,7 @@ gtag('config', 'AW-3024885050');
 
   <p>El CAE no es un invento aislado. Es la <strong>transposición española</strong> de la <strong>Directiva Europea 2012/27/UE</strong> de eficiencia energética, reforzada por la directiva 2018/2002 y, más recientemente, la directiva <strong>EED III (2023/1791)</strong>.</p>
 
-  <p>Europa obliga a los estados miembros a conseguir un ahorro energético anual del 1,49 % (objetivo que sube progresivamente hasta 2030). Cada país elige cómo hacerlo. España, con la <strong>Ley 18/2014</strong>, creó el <strong>FNEE</strong> (Fondo Nacional de Eficiencia Energética), donde las comercializadoras pagaban directamente al Estado.</p>
+  <p>Europa obliga a los estados miembros a conseguir un ahorro energético anual del 1,49&nbsp;% (objetivo que sube progresivamente hasta 2030). Cada país elige cómo hacerlo. España, con la <strong>Ley 18/2014</strong>, creó el <strong>FNEE</strong> (Fondo Nacional de Eficiencia Energética), donde las comercializadoras pagaban directamente al Estado.</p>
 
   <p>El problema: el FNEE era opaco, lento, y no generaba obras tangibles. Por eso, en 2023, España publicó el <strong>Real Decreto 36/2023</strong>, que crea el sistema CAE en paralelo al FNEE. Ahora, las empresas obligadas pueden elegir: <strong>pagar al FNEE o financiar obras reales</strong> vía CAE. Como las obras salen más baratas que la aportación al FNEE, prácticamente todas las grandes empresas optan por el CAE.</p>
 
@@ -249,15 +252,17 @@ gtag('config', 'AW-3024885050');
 
   <ol>
     <li><strong>Grandes obligados</strong>: las grandes comercializadoras de energía (Iberdrola, Endesa, Naturgy, Repsol, Cepsa, Enagás). Están obligadas por el Estado a conseguir ahorros energéticos y pueden cumplir su obligación <strong>mediante la compra de CAEs</strong> generados por otros sujetos.</li>
-    <li><strong>Sujeto delegado</strong>: una empresa acreditada que actúa como <strong>intermediario y agregador</strong>. Identifica proyectos de eficiencia energética, verifica y cuantifica los ahorros, gestiona la obtención de los CAEs y los vende a los grandes obligados. En el caso de Los Artesanos Verdes, trabajamos con GreenFlex.</li>
+    <li><strong>Sujeto delegado</strong>: una empresa acreditada que actúa como <strong>intermediario y agregador</strong>. Identifica proyectos de eficiencia energética, gestiona el expediente y obtiene los CAE; la verificación del ahorro la realiza una entidad acreditada por ENAC. Después, vende los CAE a los grandes obligados. En el caso de Los Artesanos Verdes, trabajamos con GreenFlex.</li>
     <li><strong>Sujeto delegante</strong>: <strong>la empresa que realiza el proyecto de ahorro</strong> sobre el terreno — como Los Artesanos Verdes cuando aislamos tu cubierta. Firma una delegación con el sujeto delegado y recibe una parte de los ingresos obtenidos por la venta de los CAEs, lo que permite <strong>reducir el precio final para el propietario</strong>.</li>
   </ol>
+
+  <p>El papel de cada uno, y también el del verificador acreditado por ENAC y el de la Administración, lo detallamos en <a href="/blog/quien-es-quien-sistema-cae/">quién es quién en el sistema CAE</a>.</p>
 
   <p>El flujo completo consta de <strong>5 pasos</strong>:</p>
 
   <ol>
     <li><strong>El sujeto delegante</strong> (Los Artesanos Verdes) realiza un proyecto de eficiencia energética en tu vivienda.</li>
-    <li><strong>El sujeto delegado</strong> (GreenFlex) verifica, cuantifica y obtiene los CAEs generados por el proyecto.</li>
+    <li><strong>El sujeto delegado</strong> (GreenFlex) gestiona el expediente y obtiene los CAE; la verificación del ahorro la realiza una entidad acreditada por ENAC.</li>
     <li>Se <strong>emiten los CAE</strong> (Certificados de Ahorro Energético) dentro del sistema regulado por el Estado e inscritos en el registro correspondiente.</li>
     <li>GreenFlex <strong>vende los CAEs</strong> a los grandes obligados (Iberdrola, Endesa, etc.).</li>
     <li>Los grandes obligados cumplen su obligación legal, y <strong>Los Artesanos Verdes reciben una parte de los ingresos</strong>, que se traduce en un <strong>descuento para ti</strong> en la obra.</li>
@@ -265,13 +270,13 @@ gtag('config', 'AW-3024885050');
 
   <p>Además, un <strong>verificador independiente acreditado por ENAC</strong> audita las obras antes y después para confirmar que los ahorros son reales. Por eso, todas las primas del sistema están <strong>sujetas a la verificación del ahorro por una entidad acreditada por ENAC</strong>: sin esa verificación no hay certificado y no hay financiación.</p>
 
-  <p>El propietario, en la mayoría de los casos, solo firma documentos y ve cómo su casa queda aislada. El sistema CAE puede cubrir <strong>gran parte de la inversión</strong> y, en determinados casos, la actuación puede quedar cubierta al 100 %; en el resto de casos queda una parte a cargo del propietario, que varía según el tipo de obra y la zona climática. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Solo el estudio técnico previo permite saber cuál es tu caso.</p>
+  <p>El propietario, en la mayoría de los casos, solo firma documentos y ve cómo su casa queda aislada. El sistema CAE puede cubrir <strong>gran parte de la inversión</strong> y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%; en el resto de casos queda una parte a cargo del propietario, que varía según el tipo de obra y la zona climática. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Solo el estudio técnico previo permite saber cuál es tu caso.</p>
 
   <h2 id="quien-financia">¿Quién financia realmente el CAE?</h2>
 
   <p>Esta es probablemente la pregunta más importante, porque mucha gente desconfía cuando le dicen que una parte muy importante de su obra la paga otro. <strong>Es completamente legal</strong>, y así funciona:</p>
 
-  <p>La Ley 18/2014 y el RD 36/2023 obligan a las siguientes empresas a participar en el sistema:</p>
+  <p>La Ley 18/2014 y el RD&nbsp;36/2023 obligan a las siguientes empresas a participar en el sistema:</p>
 
   <ul>
     <li><strong>Comercializadoras de electricidad</strong> con más de 50.000 clientes.</li>
@@ -287,7 +292,7 @@ gtag('config', 'AW-3024885050');
   <figure class="av-figure av-infographic-svg">
   <svg viewBox="0 0 800 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cae-title cae-desc">
     <title id="cae-title">Comparativa de una obra de aislamiento sin financiación CAE y con financiación CAE</title>
-    <desc id="cae-desc">Esquema comparativo: sin CAE, el propietario asume el coste íntegro de la obra; con la financiación privada del sistema CAE —que no es una subvención ni una ayuda pública, sino una aportación de las empresas obligadas—, gran parte de ese coste puede quedar cubierta, siempre sujeta a verificación del ahorro por una entidad acreditada por ENAC.</desc>
+    <desc id="cae-desc">Esquema comparativo: sin CAE, el propietario asume el coste íntegro de la obra; con la financiación privada del sistema CAE —que no es una subvención ni una ayuda pública, sino una aportación de las empresas obligadas—, gran parte de ese coste puede quedar cubierta. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</desc>
 
     <!-- Background -->
     <rect x="0" y="0" width="800" height="620" fill="#f7f7f5" rx="16"/>
@@ -355,7 +360,7 @@ gtag('config', 'AW-3024885050');
       <text x="690" y="550" text-anchor="end" font-family="Source Serif 4, serif" font-size="18" font-weight="700" fill="#2d7a4e">Gran parte del coste</text>
     </g>
   </svg>
-  <figcaption>Simulaci&#243;n orientativa: en las zonas clim&#225;ticas elegibles (C, D y E), el sistema CAE puede cubrir <strong>gran parte de la inversi&#243;n</strong> en el aislamiento y, en determinados casos, la actuaci&#243;n puede quedar cubierta al 100 %. Importe sujeto a estudio t&#233;cnico previo y a la normativa CAE vigente (RD 36/2023). Toda prima queda sujeta a verificaci&#243;n del ahorro por una entidad acreditada por ENAC.</figcaption>
+  <figcaption>Simulaci&#243;n orientativa: en las zonas clim&#225;ticas elegibles (C, D y E), el sistema CAE puede cubrir <strong>gran parte de la inversi&#243;n</strong> en el aislamiento y, en determinados casos, la actuaci&#243;n puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio t&#233;cnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Toda prima queda sujeta a verificaci&#243;n del ahorro por una entidad acreditada por ENAC.</figcaption>
 </figure>
 
   <!-- ===== CTA Mid-Article ===== -->
@@ -385,7 +390,7 @@ gtag('config', 'AW-3024885050');
 
   <h2 id="cuanto-ahorro">¿Cuánto dinero te puede ahorrar el CAE?</h2>
 
-  <p>La respuesta corta: el sistema CAE puede cubrir <strong>gran parte de la inversión</strong> y, en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). La respuesta larga necesita un ejemplo:</p>
+  <p>La respuesta corta: el sistema CAE puede cubrir <strong>gran parte de la inversión</strong> y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). La respuesta larga necesita un ejemplo:</p>
 
   <p>Supongamos una <strong>vivienda unifamiliar de 100 m² en León capital</strong> (zona climática E, elegible), con desván sin aislar. El propietario quiere aplicar aislamiento con <strong>lana mineral insuflada</strong> de 30 cm de espesor.</p>
 
@@ -396,7 +401,7 @@ gtag('config', 'AW-3024885050');
     <li><strong>Financiación CAE aplicada</strong>: resulta del ahorro certificado y solo se consolida tras la <strong>verificación del ahorro por una entidad acreditada por ENAC</strong>.</li>
   </ul>
 
-  <p>En un caso así, en zona climática E y con una superficie generosa, el sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023).</p>
+  <p>En un caso así, en zona climática E y con una superficie generosa, el sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023).</p>
 
   <p>En zona climática C, la más templada de las elegibles, el ahorro certificable por metro cuadrado es menor, por lo que <strong>lo habitual es que quede una parte del coste a cargo del propietario</strong>. Y en las zonas α, A y B <strong>no hay financiación CAE posible para el aislamiento</strong>, porque no son elegibles.</p>
 
@@ -423,12 +428,12 @@ gtag('config', 'AW-3024885050');
   <ul>
     <li><strong>CAE</strong>: financiación privada vía empresas obligadas, gestionada por sujetos delegados. Se percibe <strong>directamente como descuento en el presupuesto</strong>. Su tratamiento fiscal depende de cada caso (particular o comunidad de propietarios): consulta con tu asesor fiscal.</li>
     <li><strong>NextGeneration EU (Fondos PRTR)</strong>: subvenciones públicas gestionadas por las comunidades autónomas — un mecanismo público ajeno al sistema CAE. Se cobran <strong>a posteriori</strong>, meses después de la obra, y <strong>tributan en la declaración de la renta</strong>.</li>
-    <li><strong>Deducción IRPF</strong>: desgravación del 20-60 % del coste de la obra en la declaración anual del IRPF, dependiendo de la reducción de demanda conseguida (certificada con CEE antes y después).</li>
+    <li><strong>Deducción IRPF</strong>: desgravación del 20-60&nbsp;% del coste de la obra en la declaración anual del IRPF, dependiendo de la reducción de demanda conseguida (certificada con CEE antes y después).</li>
   </ul>
 
-  <p>La buena noticia es que, en la mayoría de casos, <strong>estos mecanismos son compatibles entre sí</strong>, aunque con límites. Por ejemplo, no puedes recibir NextGen + CAE por encima del 100 % del coste de la obra. Y la base de la deducción IRPF se reduce en el importe de las subvenciones públicas percibidas; cómo se tiene en cuenta la financiación CAE en tu declaración depende de cada caso, así que conviene consultarlo con tu asesor fiscal.</p>
+  <p>La buena noticia es que, en la mayoría de casos, <strong>estos mecanismos son compatibles entre sí</strong>, aunque con límites. Por ejemplo, no puedes recibir NextGen + CAE por encima del 100&nbsp;% del coste de la obra. Y la base de la deducción IRPF se reduce en el importe de las subvenciones públicas percibidas — el CAE no es una de ellas, precisamente por tratarse de financiación privada. Cómo se tiene en cuenta la financiación CAE en tu declaración depende de cada caso, así que conviene consultarlo con tu asesor fiscal.</p>
 
-  <p>Combinados correctamente, y siempre según la elegibilidad de cada vivienda, estos mecanismos pueden cubrir <strong>gran parte de la inversión</strong>. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Para ver cómo encajar todas las piezas, lee nuestra <a href="/blog/subvenciones-aislamiento-cubierta-2026/"><strong>guía completa de la financiación del aislamiento en 2026</strong></a>.</p>
+  <p>Combinados correctamente, y siempre según la elegibilidad de cada vivienda, estos mecanismos pueden cubrir <strong>gran parte de la inversión</strong>. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Para ver cómo encajar todas las piezas, lee nuestra <a href="/blog/subvenciones-aislamiento-cubierta-2026/"><strong>guía completa de la financiación del aislamiento en 2026</strong></a>.</p>
 
   <h2 id="errores-comunes">Errores comunes al solicitar el CAE</h2>
 
@@ -470,10 +475,10 @@ gtag('config', 'AW-3024885050');
   <p>Las obras más habituales del catálogo español del Real Decreto 36/2023 son el aislamiento de desván o ático no habitable (ficha RES022), el aislamiento de cubierta inclinada o rampantes (ficha RES010) y la sustitución de una caldera de gas o gasóleo por una bomba de calor aerotérmica (ficha RES060). También existen actuaciones para el aislamiento de fachadas y la sustitución de ventanas. Cada actuación está catalogada en una ficha técnica oficial con un ahorro energético cuantificado en kWh.</p>
 
   <p><strong>¿Cuánto dinero puedo ahorrar con el CAE?</strong></p>
-  <p>Depende del tipo de obra, del ahorro energético que genere y de la zona climática. En zonas climáticas C, D y E, que son las elegibles para el aislamiento, el sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). No es un importe cerrado: las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC y solo se conocen tras el estudio técnico previo.</p>
+  <p>Depende del tipo de obra, del ahorro energético que genere y de la zona climática. En zonas climáticas C, D y E, que son las elegibles para el aislamiento, el sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). No es un importe cerrado: las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC y solo se conocen tras el estudio técnico previo.</p>
 
   <p><strong>¿Es compatible el CAE con NextGeneration EU o con la deducción del IRPF?</strong></p>
-  <p>El CAE no es una subvención ni una ayuda pública: es financiación privada aportada por las empresas obligadas del sistema. Por eso es compatible y acumulable, bajo ciertas condiciones, con mecanismos públicos distintos como los fondos NextGeneration EU o la deducción del IRPF por obras de eficiencia energética. Combinados correctamente, y siempre según la elegibilidad de cada vivienda, pueden cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Su tratamiento fiscal depende de cada caso: consulta con tu asesor fiscal. Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
+  <p>El CAE no es una subvención ni una ayuda pública: es financiación privada aportada por las empresas obligadas del sistema. Por eso es compatible y acumulable, bajo ciertas condiciones, con mecanismos públicos distintos como los fondos NextGeneration EU o la deducción del IRPF por obras de eficiencia energética. Combinados correctamente, y siempre según la elegibilidad de cada vivienda, pueden cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Su tratamiento fiscal depende de cada caso: consulta con tu asesor fiscal. Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
 
   <p><strong>¿Cuánto tarda todo el proceso CAE?</strong></p>
   <p>Desde la firma del compromiso hasta la ejecución de la obra, suelen pasar entre 1 y 3 semanas. La tramitación administrativa y la emisión del certificado final pueden añadir 1-2 meses adicionales, pero el propietario no necesita esperar a ese trámite para disfrutar del aislamiento: la obra ya está hecha.</p>
@@ -482,9 +487,9 @@ gtag('config', 'AW-3024885050');
 
   <p>El CAE no es una estafa, ni una oferta milagro, ni un esquema piramidal. Es un <strong>sistema regulado por ley, financiado por las grandes eléctricas, y supervisado por el MITECO y ENAC</strong>. Está diseñado para trasladar el coste de la transición energética de los presupuestos públicos a las empresas que más se benefician del consumo de energía.</p>
 
-  <p>La única razón por la que mucha gente no lo aprovecha es <strong>desconocimiento</strong> — o porque la primera oferta que reciben les parece sospechosa y la descartan. Si tu vivienda cumple los requisitos (desván o cubierta accesible, zona climática C, D o E, titularidad clara), el sistema CAE puede cubrir <strong>gran parte de la inversión en tu aislamiento</strong> (en determinados casos, la actuación puede quedar cubierta al 100 %), y la obra puede mejorar tu confort en invierno y en verano y revalorizar tu inmueble. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023).</p>
+  <p>La única razón por la que mucha gente no lo aprovecha es <strong>desconocimiento</strong> — o porque la primera oferta que reciben les parece sospechosa y la descartan. Si tu vivienda cumple los requisitos (desván o cubierta accesible, zona climática C, D o E, titularidad clara), el sistema CAE puede cubrir <strong>gran parte de la inversión en tu aislamiento</strong> (en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%), y la obra puede mejorar tu confort en invierno y en verano y revalorizar tu inmueble. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023).</p>
 
-  <p>En <strong>Los Artesanos Verdes</strong> trabajamos exclusivamente con sujetos delegados acreditados por el MITECO y aplicamos materiales con marcado CE y DoP. Si quieres un estudio técnico y financiero personalizado, completamente gratuito y sin compromiso, contacta con nosotros.</p>
+  <p>En <strong>Los Artesanos Verdes</strong> trabajamos exclusivamente con sujetos delegados acreditados por el MITECO y aplicamos materiales con marcado CE y DoP. Si quieres un estudio gratuito y sin compromiso, contacta con nosotros.</p>
 
   <!-- ===== CTA Final ===== -->
   <aside class="av-cta-final">
@@ -498,15 +503,15 @@ gtag('config', 'AW-3024885050');
     <h2 id="av-related-title">Sigue leyendo</h2>
     <ul class="av-related-list">
       <li><a href="/blog/certificado-eficiencia-energetica-que-es/"><span class="av-related-cat">Normativa y zonas</span><span class="av-related-title">Certificado de eficiencia energética (CEE): qué es y para qué sirve</span></a></li>
-      <li><a href="/blog/aislamiento-comunidades-propietarios-cae/"><span class="av-related-cat">Sistema CAE</span><span class="av-related-title">Aislar la cubierta de una comunidad de propietarios con el sistema CAE</span></a></li>
+      <li><a href="/blog/aislamiento-comunidades-propietarios-cae/"><span class="av-related-cat">Comunidades</span><span class="av-related-title">Aislar la cubierta de una comunidad de propietarios con el sistema CAE</span></a></li>
       <li><a href="/blog/subvenciones-aislamiento-cubierta-2026/"><span class="av-related-cat">Sistema CAE</span><span class="av-related-title">Subvenciones aislamiento cubierta 2026: cuáles existen realmente (y por qué el CAE no es una subvención)</span></a></li>
     </ul>
-    <p class="av-related-service">¿Te interesa este tema para tu vivienda? Descubre <a href="/servicios/">nuestros servicios</a> de aislamiento, aerotermia y bomba de calor aire-aire.</p>
+    <p class="av-related-service">¿Te interesa este tema para tu vivienda? Descubre <a href="/servicios/">nuestros servicios</a> de aislamiento, aerotermia y bomba de calor <span class="nowrap">aire-aire</span>.</p>
   </aside>
 
   <!-- ===== Article footer ===== -->
   <footer class="av-article-footer">
-    <p class="updated">Última actualización: 14 de octubre de 2026</p>
+    <p class="updated">Última actualización: 28 de octubre de 2026</p>
   </footer>
 
 
@@ -534,7 +539,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>

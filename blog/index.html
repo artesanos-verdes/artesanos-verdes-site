@@ -45,6 +45,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -67,14 +69,14 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Medición propia (avTrack, atribución, clics de contacto) -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Blog: progreso de lectura, sumario, filtros por categoría -->
-<script defer src="/blog/assets/blog.js?v=20261014"></script>
+<script defer src="/blog/assets/blog.js?v=20261028"></script>
 
 <!-- Schema.org Blog + BreadcrumbList -->
 <script type="application/ld+json">
@@ -113,6 +115,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/" aria-current="page">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -143,8 +146,8 @@ gtag('config', 'AW-3024885050');
   <p>Guías técnicas, casos reales y análisis sobre aislamiento de cubiertas, aerotermia y financiación privada a través del sistema CAE en viviendas españolas.</p>
 
   <div class="av-blog-hero-stats">
-    <div class="stat"><strong>18</strong>artículos</div>
-    <div class="stat"><strong>180+</strong>min de lectura</div>
+    <div class="stat"><strong>25</strong>artículos</div>
+    <div class="stat"><strong>250</strong>min de lectura</div>
     <div class="stat"><strong>2026</strong>actualizado</div>
   </div>
 </section>
@@ -154,12 +157,13 @@ gtag('config', 'AW-3024885050');
 
 <!-- ===== Filtros por categoría (§10.7) — activados por blog.js ===== -->
 <div class="av-blog-filters" role="group" aria-label="Filtrar las guías por categoría">
-  <button type="button" class="av-filter-chip" data-filter="todas" aria-pressed="true"><span class="av-filter-label">Todas</span> <span class="av-filter-count" aria-hidden="true">18</span></button>
+  <button type="button" class="av-filter-chip" data-filter="todas" aria-pressed="true"><span class="av-filter-label">Todas</span> <span class="av-filter-count" aria-hidden="true">25</span></button>
   <button type="button" class="av-filter-chip" data-filter="sistema-cae" aria-pressed="false"><span class="av-filter-label">Sistema CAE</span> <span class="av-filter-count" aria-hidden="true">4</span></button>
-  <button type="button" class="av-filter-chip" data-filter="aislamiento" aria-pressed="false"><span class="av-filter-label">Aislamiento</span> <span class="av-filter-count" aria-hidden="true">4</span></button>
-  <button type="button" class="av-filter-chip" data-filter="aerotermia" aria-pressed="false"><span class="av-filter-label">Aerotermia</span> <span class="av-filter-count" aria-hidden="true">5</span></button>
+  <button type="button" class="av-filter-chip" data-filter="aislamiento" aria-pressed="false"><span class="av-filter-label">Aislamiento</span> <span class="av-filter-count" aria-hidden="true">5</span></button>
+  <button type="button" class="av-filter-chip" data-filter="aerotermia" aria-pressed="false"><span class="av-filter-label">Aerotermia</span> <span class="av-filter-count" aria-hidden="true">6</span></button>
   <button type="button" class="av-filter-chip" data-filter="confort-en-casa" aria-pressed="false"><span class="av-filter-label">Confort en casa</span> <span class="av-filter-count" aria-hidden="true">2</span></button>
-  <button type="button" class="av-filter-chip" data-filter="normativa-y-zonas" aria-pressed="false"><span class="av-filter-label">Normativa y zonas</span> <span class="av-filter-count" aria-hidden="true">3</span></button>
+  <button type="button" class="av-filter-chip" data-filter="normativa-y-zonas" aria-pressed="false"><span class="av-filter-label">Normativa y zonas</span> <span class="av-filter-count" aria-hidden="true">4</span></button>
+  <button type="button" class="av-filter-chip" data-filter="comunidades" aria-pressed="false"><span class="av-filter-label">Comunidades</span> <span class="av-filter-count" aria-hidden="true">4</span></button>
 </div>
 <p class="av-filter-status" role="status" aria-live="polite"></p>
 
@@ -171,8 +175,8 @@ gtag('config', 'AW-3024885050');
     <div class="av-article-card-body">
       <span class="av-article-card-tag">Sistema CAE</span>
       <h2>Financiar el aislamiento de tu cubierta en 2026: la guía <em>completa.</em></h2>
-      <p>Por qué el CAE no es una subvención sino financiación privada, y qué otras vías existen en 2026 para aislar tu cubierta. El sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100 %.</p>
-      <p class="av-article-card-note">Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
+      <p>Por qué el CAE no es una subvención sino financiación privada, y qué otras vías existen en 2026 para aislar tu cubierta. El sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%.</p>
+      <p class="av-article-card-note">Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
       <div class="av-article-card-meta">
         <span><time datetime="2026-04-21">21 de abril de 2026</time> · 11 min</span>
         <span class="av-article-card-readmore">Leer la guía completa</span>
@@ -180,6 +184,118 @@ gtag('config', 'AW-3024885050');
     </div>
     <div class="av-article-card-visual av-article-card-visual--photo">
       <img src="/blog/assets/artisan-hero-800.webp" srcset="/blog/assets/artisan-hero-800.webp 800w, /blog/assets/artisan-hero.webp 1402w" sizes="(max-width: 768px) 100vw, 460px" alt="Técnico insuflando lana mineral en el desván de una vivienda, junto a la máquina de insuflado" width="800" height="641" decoding="async">
+    </div>
+  </a>
+
+  <!-- Article — Por qué el último piso pasa frío y cómo aislar la cubierta del edificio -->
+  <a href="/blog/aislar-cubierta-edificio-viviendas/" class="av-article-card" data-cat="comunidades">
+    <div class="av-article-card-body">
+      <span class="av-article-card-tag">Comunidades</span>
+      <h2>Por qué el último piso pasa frío y cómo aislar la cubierta del edificio</h2>
+      <p>¿Frío en invierno y calor en verano en el último piso? Por qué un edificio pierde calor por la cubierta y cómo se aísla la buhardilla en una jornada.</p>
+      <div class="av-article-card-meta">
+        <span><time datetime="2026-10-28">28 de octubre de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
+      </div>
+    </div>
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/assets/comunidades/calor-cubierta.svg" alt="Dos edificios en corte: sin aislamiento, el calor sube y sale por la cubierta; con lana mineral sobre el suelo de la buhardilla, las pérdidas se reducen" width="720" height="380" loading="lazy" decoding="async">
+    </div>
+  </a>
+
+  <!-- Article — Cómo aprobar el aislamiento del edificio en la Junta de propietarios -->
+  <a href="/blog/aprobar-aislamiento-junta-propietarios/" class="av-article-card" data-cat="comunidades">
+    <div class="av-article-card-body">
+      <span class="av-article-card-tag">Comunidades</span>
+      <h2>Cómo aprobar el aislamiento del edificio en la Junta de propietarios</h2>
+      <p>Qué mayoría exige la Ley de Propiedad Horizontal para aprobar obras de eficiencia energética en la comunidad de propietarios y qué debe recoger el acta.</p>
+      <div class="av-article-card-meta">
+        <span><time datetime="2026-10-28">28 de octubre de 2026</time> · 10 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
+      </div>
+    </div>
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/aprobar-aislamiento-junta-propietarios-hero.svg" alt="Esquema de un acta de la Junta de propietarios con los cuatro puntos que debe recoger: aprobación del aislamiento, cesión del CAE, asistentes y resultado de la votación" width="1200" height="630" loading="lazy" decoding="async">
+    </div>
+  </a>
+
+  <!-- Article — Administrador de fincas: guía para aislar la cubierta del edificio -->
+  <a href="/blog/guia-administradores-fincas-aislamiento-cubierta/" class="av-article-card" data-cat="comunidades">
+    <div class="av-article-card-body">
+      <span class="av-article-card-tag">Comunidades</span>
+      <h2>Administrador de fincas: guía para aislar la cubierta del edificio</h2>
+      <p>Cómo presentar el aislamiento de la cubierta a los vecinos, qué documentos preparar y qué comprobar antes de la obra.</p>
+      <div class="av-article-card-meta">
+        <span><time datetime="2026-10-28">28 de octubre de 2026</time> · 11 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
+      </div>
+    </div>
+    <div class="av-article-card-visual">
+      <img src="/assets/comunidades/edificio-comunidad-800.webp" alt="Fachada de un edificio de viviendas de ladrillo con balcones, bajo un cielo azul" width="800" height="323" loading="lazy" decoding="async">
+    </div>
+  </a>
+
+  <!-- Article — ¿En qué zona climática está tu municipio? Buscador CTE por provincia y altitud -->
+  <a href="/blog/zona-climatica-buscador-cte/" class="av-article-card" data-cat="normativa-y-zonas">
+    <div class="av-article-card-body">
+      <span class="av-article-card-tag">Normativa y zonas</span>
+      <h2>¿En qué zona climática está tu municipio? Buscador CTE por provincia y altitud</h2>
+      <p>Elige tu provincia, escribe la altitud de tu municipio y obtén tu zona climática según la tabla oficial del CTE DB-HE (anejo B). Qué cambia en C, D y E.</p>
+      <div class="av-article-card-meta">
+        <span><time datetime="2026-10-28">28 de octubre de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Usar el buscador</span>
+      </div>
+    </div>
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/zona-climatica-buscador-cte.svg" alt="Montaña con curvas de nivel y una casa en la ladera, junto a las zonas climáticas C, D y E" width="640" height="420" loading="lazy" decoding="async">
+    </div>
+  </a>
+
+  <!-- Article — Aerotermia con radiadores: ¿sirven los que ya tienes? -->
+  <a href="/blog/aerotermia-con-radiadores/" class="av-article-card" data-cat="aerotermia">
+    <div class="av-article-card-body">
+      <span class="av-article-card-tag">Aerotermia</span>
+      <h2>Aerotermia con radiadores: ¿sirven los que ya tienes?</h2>
+      <p>¿Funciona la aerotermia con tus radiadores de siempre? Temperatura de impulsión, la prueba de los 55&nbsp;°C, cuándo cambiar alguno y qué pide el sistema CAE.</p>
+      <div class="av-article-card-meta">
+        <span><time datetime="2026-10-28">28 de octubre de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
+      </div>
+    </div>
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/aerotermia-con-radiadores-hero.svg" alt="Ilustración: unidad exterior de aerotermia conectada por la ida y el retorno a un radiador de agua" width="640" height="420" loading="lazy" decoding="async">
+    </div>
+  </a>
+
+  <!-- Article — Aislamiento insuflado en el desván: problemas reales y cómo evitarlos -->
+  <a href="/blog/aislamiento-insuflado-problemas/" class="av-article-card" data-cat="aislamiento">
+    <div class="av-article-card-body">
+      <span class="av-article-card-tag">Aislamiento</span>
+      <h2>Aislamiento insuflado en el desván: problemas reales y cómo evitarlos</h2>
+      <p>Asentamiento, poco espesor, condensación, trampilla y focos: los problemas reales del aislamiento insuflado en el desván y cómo evitarlos.</p>
+      <div class="av-article-card-meta">
+        <span><time datetime="2026-10-28">28 de octubre de 2026</time> · 9 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
+      </div>
+    </div>
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/aislamiento-insuflado-problemas-card.svg" alt="Ilustración: sección de un desván con lana mineral soplada sobre el suelo, regla de espesor y deflectores en los aleros" width="640" height="420" loading="lazy" decoding="async">
+    </div>
+  </a>
+
+  <!-- Article — Sujeto obligado, sujeto delegado y verificador: quién es quién en el CAE -->
+  <a href="/blog/quien-es-quien-sistema-cae/" class="av-article-card" data-cat="sistema-cae">
+    <div class="av-article-card-body">
+      <span class="av-article-card-tag">Sistema CAE</span>
+      <h2>Sujeto obligado, sujeto delegado y verificador: quién es quién en el CAE</h2>
+      <p>Sujeto obligado, sujeto delegado, verificador acreditado por ENAC y gestor autonómico: quién hace qué en el sistema CAE y qué revisar antes de firmar.</p>
+      <div class="av-article-card-meta">
+        <span><time datetime="2026-10-28">28 de octubre de 2026</time> · 10 min</span>
+        <span class="av-article-card-readmore">Leer la guía</span>
+      </div>
+    </div>
+    <div class="av-article-card-visual av-article-card-visual--diagram">
+      <img src="/blog/assets/quien-es-quien-sistema-cae-hero.svg" alt="Ilustración: una vivienda unida a los cuatro actores del sistema CAE" width="640" height="420" loading="lazy" decoding="async">
     </div>
   </a>
 
@@ -219,7 +335,7 @@ gtag('config', 'AW-3024885050');
   <a href="/blog/aire-aire-o-aerotermia-cual-elegir/" class="av-article-card" data-cat="aerotermia">
     <div class="av-article-card-body">
       <span class="av-article-card-tag">Aerotermia</span>
-      <h2>¿Aerotermia o bomba de calor aire-aire? Cuál elegir</h2>
+      <h2>¿Aerotermia o bomba de calor <span class="nowrap">aire-aire</span>? Cuál elegir</h2>
       <p>La respuesta no depende del presupuesto, sino de lo que ya tienes en casa: si hay radiadores o suelo radiante, la solución no es la misma. Guía de decisión sin rodeos.</p>
       <div class="av-article-card-meta">
         <span><time datetime="2026-08-17">17 de agosto de 2026</time> · 9 min</span>
@@ -248,9 +364,9 @@ gtag('config', 'AW-3024885050');
   </a>
 
   <!-- Article — Comunidades de propietarios -->
-  <a href="/blog/aislamiento-comunidades-propietarios-cae/" class="av-article-card" data-cat="sistema-cae">
+  <a href="/blog/aislamiento-comunidades-propietarios-cae/" class="av-article-card" data-cat="comunidades">
     <div class="av-article-card-body">
-      <span class="av-article-card-tag">Sistema CAE</span>
+      <span class="av-article-card-tag">Comunidades</span>
       <h2>Aislar la cubierta de una comunidad de propietarios</h2>
       <p>La cubierta es un elemento común y el foco de pérdidas más rentable de tratar en un edificio. Cómo se acuerda en junta, quién firma y qué papel juega el administrador de fincas.</p>
       <div class="av-article-card-meta">
@@ -457,7 +573,7 @@ gtag('config', 'AW-3024885050');
 
 </section>
 
-<p class="av-blog-note">Financiación privada del sistema CAE, que no constituye una ayuda de la Administración. El sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
+<p class="av-blog-note">Financiación privada del sistema CAE, que no constituye una ayuda de la Administración. El sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
 
 <!-- ===== Nuestros servicios ===== -->
 <section class="av-blog-services" aria-labelledby="av-servicios-title" data-zone="blog-servicios">
@@ -466,7 +582,7 @@ gtag('config', 'AW-3024885050');
     <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván y ático no habitable</a></li>
     <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
     <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor aire-agua)</a></li>
-    <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+    <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
   </ul>
 </section>
 
@@ -491,7 +607,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>

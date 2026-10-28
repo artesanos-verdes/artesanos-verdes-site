@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ch-title ch-desc" font-family="Manrope, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ch-title ch-desc" font-family="'Source Sans 3', Arial, sans-serif">
   <title id="ch-title">Aislamiento de cubierta inclinada con aislante reflectante TETRIS SUPER 12</title>
-  <desc id="ch-desc">Ilustración en corte de una vivienda con tejado en pendiente a dos aguas y buhardilla habitable. El aislante reflectante flexible TETRIS SUPER 12 se coloca en lés bajo los rampantes, por el interior. Refleja hasta el 95 por ciento de la radiación infrarroja. Resistencia térmica R igual a 6,13 metros cuadrados kelvin por vatio según la norma EN 16012.</desc>
+  <desc id="ch-desc">Ilustración en corte de una vivienda con tejado en pendiente a dos aguas y buhardilla habitable. El aislante reflectante flexible TETRIS SUPER 12 se coloca en lés bajo los rampantes, por el interior. Refleja hasta el 95 por ciento de la radiación infrarroja. Resistencia térmica R igual a 6,13 metros cuadrados kelvin por vatio según la norma EN 16012. Clasificación de reacción al fuego Euroclase F: instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado), que es el revestimiento que aporta la protección frente al fuego del conjunto.</desc>
 
   <defs>
     <radialGradient id="ch-warm" cx="50%" cy="60%" r="65%">
@@ -20,7 +20,7 @@
   <!-- ===== BARRA SUPERIOR ===== -->
   <rect x="0" y="0" width="1200" height="110" fill="#1a4d30"/>
   <text x="60" y="48" fill="#a8c4b0" font-size="13" font-weight="700" letter-spacing="3.5">LOS ARTESANOS VERDES · AISLAMIENTO DE CUBIERTA INCLINADA</text>
-  <text x="60" y="86" fill="#ffffff" font-size="30" font-weight="700">Rampantes aislados con aislante reflectante</text>
+  <text x="60" y="86" fill="#ffffff" font-size="30" font-weight="700" font-family="'Source Serif 4', Georgia, serif">Rampantes aislados con aislante reflectante</text>
   <g transform="translate(975, 40)">
     <rect x="0" y="0" width="165" height="30" rx="15" fill="#245c3b"/>
     <text x="82" y="20" fill="#c1d9cc" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">FICHA CAE · RES010</text>
@@ -46,7 +46,7 @@
   <g transform="translate(210,150)">
     <rect x="0" y="0" width="196" height="26" rx="13" fill="#fdf3ea" stroke="#e2c3ad" stroke-width="1.2"/>
     <circle cx="19" cy="13" r="4.5" fill="#c07856"/>
-    <text x="34" y="18" fill="#b0623f" font-size="12" font-weight="800">Refleja hasta 95 % IR</text>
+    <text x="34" y="18" fill="#b0623f" font-size="12" font-weight="700">Refleja hasta 95 % IR</text>
   </g>
 
   <!-- ===== CASA EN CORTE ===== -->
@@ -110,7 +110,7 @@
   <g transform="translate(770, 150)">
     <rect x="0" y="0" width="390" height="110" rx="14" fill="#1a4d30"/>
     <rect x="0" y="0" width="7" height="110" rx="3.5" fill="#22a044"/>
-    <text x="28" y="60" fill="#ffffff" font-size="36" font-weight="800">R = 6,13</text>
+    <text x="28" y="60" fill="#ffffff" font-size="36" font-weight="700">R = 6,13</text>
     <text x="238" y="60" fill="#a8c4b0" font-size="22" font-weight="700">m²·K/W</text>
     <text x="28" y="90" fill="#a8c4b0" font-size="12.5" font-weight="600">TETRIS SUPER 12 · aislante reflectante (EN 16012)</text>
   </g>
@@ -120,7 +120,7 @@
     <rect x="0" y="0" width="52" height="52" rx="12" fill="#e8f5ee" stroke="#a8c4b0" stroke-width="1.5"/>
     <path d="M12,30 L26,16 L40,30" fill="none" stroke="#1a4d30" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M26,42 L26,30 M26,30 l-4,4 M26,30 l4,4" fill="none" stroke="#22a044" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="800">Bajo el rampante, por el interior</text>
+    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="700">Bajo el rampante, por el interior</text>
     <text x="72" y="44" fill="#5c6b62" font-size="13" font-weight="600">Sin intervenir en la cubierta exterior</text>
   </g>
 
@@ -130,7 +130,7 @@
     <line x1="10" y1="38" x2="42" y2="38" stroke="#1a4d30" stroke-width="2.4" stroke-linecap="round"/>
     <path d="M16,15 L26,37" fill="none" stroke="#c07856" stroke-width="2.2" stroke-linecap="round"/>
     <path d="M26,37 L36,15 M36,15 l-5,2 M36,15 l1,5" fill="none" stroke="#22a044" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="800">Reflectante y flexible, en lés</text>
+    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="700">Reflectante y flexible, en lés</text>
     <text x="72" y="44" fill="#5c6b62" font-size="13" font-weight="600">Tecnología alveolar TRIPLEX · refleja hasta 95 % IR</text>
   </g>
 
@@ -139,7 +139,7 @@
     <rect x="0" y="0" width="52" height="52" rx="12" fill="#e8f5ee" stroke="#a8c4b0" stroke-width="1.5"/>
     <path d="M12,26 L26,14 L40,26 L40,40 L12,40 Z" fill="none" stroke="#1a4d30" stroke-width="2.2" stroke-linejoin="round"/>
     <path d="M20,40 L20,30 L32,30 L32,40" fill="none" stroke="#22a044" stroke-width="2.2" stroke-linejoin="round"/>
-    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="800">Para desván o buhardilla habitable</text>
+    <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="700">Para desván o buhardilla habitable</text>
     <text x="72" y="44" fill="#5c6b62" font-size="13" font-weight="600">Aísla el espacio bajo cubierta acondicionable</text>
   </g>
 
@@ -152,6 +152,7 @@
 
   <!-- ===== BARRA INFERIOR ===== -->
   <rect x="0" y="580" width="1200" height="50" fill="#1a4d30"/>
-  <text x="60" y="610" fill="#a8c4b0" font-size="12" font-weight="600" letter-spacing="1.5">Rampantes aislados por el interior · para desván habitable o acondicionable</text>
+  <text x="60" y="601" fill="#c9e0d1" font-size="11.5" font-weight="600">TETRIS SUPER 12 · Euroclase F · instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado),</text>
+  <text x="60" y="619" fill="#c9e0d1" font-size="11.5" font-weight="600">que es el revestimiento que aporta la protección frente al fuego del conjunto.</text>
   <text x="1140" y="610" fill="#a8c4b0" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="end">ARTESANOSVERDES.COM</text>
 </svg>

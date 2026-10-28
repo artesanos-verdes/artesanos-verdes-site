@@ -108,29 +108,42 @@
   }
 
   // Règles d'orientation (cahier des charges §0 et §6). Jamais de montant.
+  // resultado ∈ encaja | estudiar | electrica | otra-calefaccion | fuera-zona
   function calculer(r) {
-    var res = { resultado: 'estudiar', proyecto: 'no-se', servicio: null, electrica: false };
+    var res = { resultado: 'estudiar', proyecto: 'no-se', servicio: null, piso: false };
     if (r.mejora === 'aislamiento') {
-      if (r.espacio === 'desvan' || r.espacio === 'cubierta-inclinada') {
-        res.proyecto = r.espacio;
-        // Aislamiento : casa unifamiliar, comunidad de propietarios o edificio
-        // terciario « con cubierta propia » (§0, página desván). Un piso no
-        // tiene cubierta propia : se estudia con un técnico (verif. conformite-02).
-        if (r.tipo !== 'piso') res.resultado = 'encaja';
-      }
+      if (r.espacio === 'desvan' || r.espacio === 'cubierta-inclinada') res.proyecto = r.espacio;
+      // Aislamiento : casa unifamiliar, comunidad de propietarios o edificio
+      // terciario « con cubierta propia » (§0, página desván). Un piso no
+      // tiene cubierta propia : se estudia con un técnico, en comunidad de
+      // propietarios (verif. conformite-02).
+      if (r.tipo === 'piso') res.piso = true;
+      else if (res.proyecto !== 'no-se') res.resultado = 'encaja';
     } else if (r.calefaccion === 'electrica') {
       res.resultado = 'electrica';
-      res.electrica = true;
+    } else if (r.calefaccion === 'otra') {
+      // §0 : bomba de calor solo si sustituye gas o gasóleo (leña, pellets… no).
+      res.resultado = 'otra-calefaccion';
     } else if (r.calefaccion === 'gas' || r.calefaccion === 'gasoleo') {
       res.proyecto = r.agua === 'no' ? 'aire-aire' : 'aerotermia';
       // Bombas de calor : casa o piso confirmados ; comunidad / terciario
       // y « No lo sé » se estudian con un técnico.
       if (r.agua !== 'nose' && (r.tipo === 'unifamiliar' || r.tipo === 'piso')) res.resultado = 'encaja';
     }
+    // Fuera de las 13 provincias : este resultado prevalece sobre todos los demás.
+    if (r.provincia === 'Otra') res.resultado = 'fuera-zona';
     if (res.resultado === 'encaja') res.servicio = SERVICIOS[res.proyecto];
-    res.fueraZona = r.provincia === 'Otra';
     return res;
   }
+
+  var TITULOS = {
+    electrica: 'Con calefacción eléctrica, la bomba de calor no entra en el sistema CAE.',
+    'otra-calefaccion': 'La bomba de calor solo entra en el sistema CAE si sustituye una calefacción de gas o gasóleo.',
+    'fuera-zona': 'Por ahora, tu provincia está fuera de nuestra zona de trabajo',
+    estudiar: 'Hay que estudiarlo con un técnico'
+  };
+  var TXT_AISLAMIENTO = 'Sí podemos estudiar el aislamiento de tu desván o de tu cubierta.';
+  var TXT_PISO = 'En un piso, el aislamiento de la cubierta se plantea en comunidad de propietarios: un técnico lo estudia con la comunidad.';
 
   // =====================================================
   // Dialogue
@@ -243,6 +256,15 @@
 
   function vider(el) { while (el.firstChild) el.removeChild(el.firstChild); }
 
+  // Texte avec « aire-aire » insécable (<span class="nowrap">, site.css).
+  function texteInsecable(el, txt) {
+    String(txt).split('aire-aire').forEach(function (morceau, i) {
+      if (i) el.appendChild(creer('span', 'nowrap', 'aire-aire'));
+      if (morceau) el.appendChild(document.createTextNode(morceau));
+    });
+    return el;
+  }
+
   function afficherPas(paso) {
     pasoActual = paso;
     var def = PASOS[paso];
@@ -297,16 +319,17 @@
 
     if (res.resultado === 'encaja') {
       ui.pregunta.textContent = 'Tu vivienda podría encajar con: ';
-      ui.pregunta.appendChild(creer('em', null, res.servicio.nombre));
-    } else if (res.electrica) {
-      ui.pregunta.textContent = 'Con calefacción eléctrica, la bomba de calor no entra en el sistema CAE.';
+      ui.pregunta.appendChild(texteInsecable(creer('em'), res.servicio.nombre));
     } else {
-      ui.pregunta.textContent = 'Hay que estudiarlo con un técnico';
+      ui.pregunta.textContent = TITULOS[res.resultado] || TITULOS.estudiar;
     }
 
     var bloc = creer('div', 'avq-resultado');
-    if (res.electrica) {
-      bloc.appendChild(creer('p', 'avq-resultado-txt', 'Sí podemos estudiar el aislamiento de tu desván o de tu cubierta.'));
+    if (res.resultado === 'electrica' || res.resultado === 'otra-calefaccion') {
+      bloc.appendChild(creer('p', 'avq-resultado-txt', TXT_AISLAMIENTO));
+    }
+    if (res.resultado === 'estudiar' && res.piso) {
+      bloc.appendChild(creer('p', 'avq-resultado-txt', TXT_PISO));
     }
     if (res.servicio && location.pathname.indexOf(res.servicio.url) !== 0) {
       var lien = creer('a', 'avq-enlace', 'Ver el servicio');
@@ -314,10 +337,10 @@
       lien.setAttribute('data-cta', 'quiz-servicio');
       bloc.appendChild(lien);
     }
-    if (res.fueraZona) bloc.appendChild(creer('p', 'avq-zona', TXT_OTRA_PROVINCIA));
+    if (res.resultado === 'fuera-zona') bloc.appendChild(creer('p', 'avq-zona', TXT_OTRA_PROVINCIA));
     bloc.appendChild(creer('p', 'avq-legal', TXT_LEGAL));
 
-    var cta = creer('button', 'avq-cta', 'Pedir mi estudio gratuito');
+    var cta = creer('button', 'avq-cta', res.resultado === 'fuera-zona' ? 'Dejar mis datos' : 'Pedir mi estudio gratuito');
     cta.type = 'button';
     cta.setAttribute('data-cta', 'quiz-resultado');
     cta.addEventListener('click', function () { pedirEstudio(res); });
@@ -325,7 +348,7 @@
     ui.cuerpo.appendChild(bloc);
     animer();
 
-    track('quiz_result', { resultado: res.fueraZona ? 'fuera-zona' : res.resultado, proyecto: res.proyecto });
+    track('quiz_result', { resultado: res.resultado, proyecto: res.proyecto });
     ui.pregunta.focus();
   }
 

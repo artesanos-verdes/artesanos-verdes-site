@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ae-title ae-desc" font-family="Manrope, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="ae-title ae-desc" font-family="'Source Sans 3', Arial, sans-serif">
   <title id="ae-title">Cómo funciona la aerotermia</title>
   <desc id="ae-desc">Esquema del funcionamiento de una bomba de calor aerotérmica en tres fases: capta la energía del aire exterior, la bomba de calor eleva la temperatura y distribuye calefacción y agua caliente sanitaria (ACS).</desc>
 
@@ -8,15 +8,15 @@
   <!-- ========== TOP BRAND BAR ========== -->
   <rect x="0" y="0" width="1200" height="70" fill="#1a4d30"/>
   <text x="60" y="30" fill="#a8c4b0" font-size="11" font-weight="700" letter-spacing="2.5">CÓMO FUNCIONA</text>
-  <text x="60" y="55" fill="#ffffff" font-size="22" font-weight="700">El principio de la aerotermia — del aire a tu hogar</text>
+  <text x="60" y="55" fill="#ffffff" font-size="22" font-weight="700" font-family="'Source Serif 4', Georgia, serif">El principio de la aerotermia — del aire a tu hogar</text>
 
   <!-- ================= STEP 1 · Capta energía del aire ================= -->
   <g>
     <rect x="60" y="120" width="300" height="300" rx="14" fill="#ffffff" stroke="#2d7a4e" stroke-width="2"/>
     <circle cx="100" cy="166" r="24" fill="#2d7a4e"/>
-    <text x="100" y="175" fill="#ffffff" font-size="22" font-weight="800" text-anchor="middle">1</text>
-    <text x="138" y="162" fill="#1a4d30" font-size="18" font-weight="800">Capta energía</text>
-    <text x="138" y="184" fill="#1a4d30" font-size="18" font-weight="800">del aire</text>
+    <text x="100" y="175" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">1</text>
+    <text x="138" y="162" fill="#1a4d30" font-size="18" font-weight="700" font-family="'Source Serif 4', Georgia, serif">Capta energía</text>
+    <text x="138" y="184" fill="#1a4d30" font-size="18" font-weight="700" font-family="'Source Serif 4', Georgia, serif">del aire</text>
 
     <!-- leaf (renovable) -->
     <path d="M 232 250 C 232 226 258 216 280 216 C 280 240 258 254 232 250 Z" fill="#22a044"/>
@@ -39,8 +39,8 @@
   <g>
     <rect x="430" y="120" width="300" height="300" rx="14" fill="#ffffff" stroke="#2d7a4e" stroke-width="2"/>
     <circle cx="470" cy="166" r="24" fill="#2d7a4e"/>
-    <text x="470" y="175" fill="#ffffff" font-size="22" font-weight="800" text-anchor="middle">2</text>
-    <text x="508" y="173" fill="#1a4d30" font-size="18" font-weight="800">Bomba de calor</text>
+    <text x="470" y="175" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">2</text>
+    <text x="508" y="173" fill="#1a4d30" font-size="18" font-weight="700" font-family="'Source Serif 4', Georgia, serif">Bomba de calor</text>
 
     <!-- heat pump module -->
     <g transform="translate(505, 258)">
@@ -72,8 +72,8 @@
   <g>
     <rect x="790" y="120" width="350" height="300" rx="14" fill="#e8f5ee" stroke="#2d7a4e" stroke-width="2.5"/>
     <circle cx="830" cy="166" r="24" fill="#2d7a4e"/>
-    <text x="830" y="175" fill="#ffffff" font-size="22" font-weight="800" text-anchor="middle">3</text>
-    <text x="868" y="173" fill="#1a4d30" font-size="18" font-weight="800">Calefacción + ACS</text>
+    <text x="830" y="175" fill="#ffffff" font-size="22" font-weight="700" text-anchor="middle">3</text>
+    <text x="868" y="173" fill="#1a4d30" font-size="18" font-weight="700" font-family="'Source Serif 4', Georgia, serif">Calefacción + ACS</text>
 
     <!-- Row A: Calefacción -->
     <g transform="translate(818, 210)">
@@ -86,7 +86,7 @@
       </g>
       <rect x="-3" y="-2" width="50" height="6" rx="3" fill="#c07856"/>
       <rect x="-3" y="46" width="50" height="6" rx="3" fill="#c07856"/>
-      <text x="72" y="18" fill="#1a4d30" font-size="16" font-weight="800">Calefacción</text>
+      <text x="72" y="18" fill="#1a4d30" font-size="16" font-weight="700">Calefacción</text>
       <text x="72" y="40" fill="#4d6b58" font-size="12" font-weight="600">Emisores · suelo radiante</text>
     </g>
 
@@ -98,11 +98,11 @@
       <rect x="6" y="2" width="34" height="52" rx="8" fill="#ffffff" stroke="#1a4d30" stroke-width="2"/>
       <ellipse cx="23" cy="4" rx="17" ry="4" fill="#e8f5ee" stroke="#1a4d30" stroke-width="2"/>
       <path d="M 23 18 C 15 28 15 37 23 37 C 31 37 31 28 23 18 Z" fill="#22a044"/>
-      <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="800">Agua caliente · ACS</text>
+      <text x="72" y="22" fill="#1a4d30" font-size="16" font-weight="700">Agua caliente · ACS</text>
       <text x="72" y="44" fill="#4d6b58" font-size="12" font-weight="600">para toda la vivienda</text>
     </g>
   </g>
 
   <!-- ========== FOOTER ========== -->
-  <text x="600" y="500" fill="#666" font-size="12" font-weight="600" text-anchor="middle">Sistema aire-agua / aire-aire · La energía renovable del aire climatiza tu hogar · Ficha CAE RES060</text>
+  <text x="600" y="500" fill="#666" font-size="12" font-weight="600" text-anchor="middle">Sistema aire-agua · La energía renovable del aire climatiza tu hogar · Ficha CAE RES060</text>
 </svg>

@@ -12,10 +12,13 @@ html:not(.js) [data-quiz-open] { display: none !important; }
   --avq-cream: var(--cream, #f8f4ea);
   --avq-ivory: var(--ivory, #faf6ec);
   --avq-terracotta: var(--terracotta, #b8733a);
-  --avq-accent: var(--accent-on-light, #8a4f22);
+  /* accent des titres (em) : vert sur fond clair, comme sur le site */
+  --avq-accent: var(--accent-on-light, #158035);
+  /* surtitre : terracotta foncé (~6,4:1 sur l'ivoire) */
+  --avq-eyebrow: var(--terracotta-deep, #8a4f22);
   --avq-line: var(--line, rgba(26, 46, 31, 0.15));
-  --avq-display: var(--display, 'Fraunces', Georgia, serif);
-  --avq-body: var(--body, 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+  --avq-display: var(--display, 'Source Serif 4', Georgia, serif);
+  --avq-body: var(--body, 'Source Sans 3', Arial, sans-serif);
 
   box-sizing: border-box;
   width: min(640px, calc(100% - 2rem));
@@ -110,11 +113,12 @@ html.avq-abierto { overflow: hidden; }
 
 .avq-kicker {
   margin: 0.5rem 0 0.75rem;
+  font-family: var(--avq-body);
   font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--avq-accent);
+  color: var(--avq-eyebrow);
 }
 
 .avq-progreso {
@@ -141,15 +145,16 @@ html.avq-abierto { overflow: hidden; }
 .avq-pregunta {
   margin: 0.75rem 0 1.25rem;
   font-family: var(--avq-display);
-  font-weight: 400;
+  font-weight: 600;
   font-size: clamp(1.45rem, 4.5vw, 1.95rem);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
   color: var(--avq-forest);
 }
 .avq-pregunta:focus { outline: none; }
+/* em des titres : pas d'italique, mise en valeur par la couleur */
 .avq-pregunta em {
-  font-style: italic;
+  font-style: normal;
   color: var(--avq-accent);
 }
 
@@ -233,6 +238,16 @@ html.avq-abierto { overflow: hidden; }
 @keyframes avq-entra {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: none; }
+}
+
+/* Desktop : dialogue ancré en haut et non centré verticalement. Sa hauteur
+   change d'une étape à l'autre ; centré, l'en-tête (« Atrás », fermer)
+   montait et descendait jusqu'à 80 px entre deux étapes (verif. visuel#2). */
+@media (min-width: 641px) {
+  .avq {
+    margin: clamp(1rem, 10vh, 6rem) auto auto;
+    max-height: calc(100% - clamp(1rem, 10vh, 6rem) - 1rem);
+  }
 }
 
 /* Mobile : plein écran */

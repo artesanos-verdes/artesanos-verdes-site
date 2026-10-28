@@ -56,6 +56,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -79,14 +81,14 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Seguimiento de clics y atribución -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Magazine enhancements: reading progress + TOC + reveal -->
-<script defer src="/blog/assets/blog.js?v=20261014"></script>
+<script defer src="/blog/assets/blog.js?v=20261028"></script>
 
 <!-- Schema.org JSON-LD : Article -->
 <script type="application/ld+json">
@@ -165,7 +167,7 @@ gtag('config', 'AW-3024885050');
       "name": "¿El aislamiento reflectante sirve también en invierno?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. La misma capa que devuelve la radiación en verano frena la fuga de calor en invierno: el TETRIS SUPER 12 aporta una resistencia térmica certificada de 6,13 m²·K/W según EN 16012. Una sola obra mejora el confort de las dos estaciones."
+        "text": "Sí. La misma capa que devuelve la radiación en verano frena la fuga de calor en invierno: el TETRIS SUPER 12 aporta una resistencia térmica certificada de 6,13 m²·K/W según EN 16012. Su reacción al fuego es Euroclase F: va instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado), que es el revestimiento que aporta la protección frente al fuego del conjunto. Una sola obra mejora el confort de las dos estaciones."
       }
     },
     {
@@ -198,6 +200,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -276,7 +279,7 @@ gtag('config', 'AW-3024885050');
 
     <h3>Caso 1 — La buhardilla se habita: aislamiento de rampantes por el interior</h3>
 
-    <p>Si vives o duermes directamente bajo el tejado, el aislante tiene que colocarse <strong>siguiendo la pendiente de la cubierta</strong>, sobre los rampantes, por el interior. Para esta obra trabajamos con <strong>TETRIS SUPER 12</strong>, un aislante reflectante alveolar flexible del Groupe ORION, y su gran baza es precisamente el verano: su cara de baja emisividad <strong>devuelve hasta el 95 % de la radiación infrarroja</strong> antes de que entre en la estancia.</p>
+    <p>Si vives o duermes directamente bajo el tejado, el aislante tiene que colocarse <strong>siguiendo la pendiente de la cubierta</strong>, sobre los rampantes, por el interior. Para esta obra trabajamos con <strong>TETRIS SUPER 12</strong>, un aislante reflectante alveolar flexible del Groupe ORION, y su gran baza es precisamente el verano: su cara de baja emisividad <strong>devuelve hasta el 95&nbsp;% de la radiación infrarroja</strong> antes de que entre en la estancia.</p>
 
     <p>El principio reflectante es fácil de entender: gran parte del calor de verano no llega por conducción lenta, sino <strong>por radiación</strong>, como el calor que notas al acercarte a una chimenea. Una superficie reflectante de baja emisividad actúa como un espejo térmico: la radiación que emite la teja recalentada rebota hacia fuera en lugar de atravesar el techo. A eso se suma la estructura alveolar de la tecnología patentada TRIPLEX, que aprovecha el poder aislante del aire, con una <strong>resistencia térmica certificada R = 6,13 m²·K/W según EN 16012</strong> (y hasta 7,43 con dos láminas de aire ventiladas, según montaje).</p>
 
@@ -284,7 +287,7 @@ gtag('config', 'AW-3024885050');
 
 <figure class="av-figure">
   <img src="/assets/servicios/tetris-super12-ficha.svg" alt="Ficha del aislante reflectante TETRIS SUPER 12: tecnologia alveolar TRIPLEX, resistencia termica certificada y barrera de vapor integrada" width="1200" height="520" loading="lazy" />
-  <figcaption>El TETRIS SUPER 12 devuelve hasta el 95 % de la radiación infrarroja: la baza clave contra el sobrecalentamiento de verano.</figcaption>
+  <figcaption>El TETRIS SUPER 12 devuelve hasta el 95&nbsp;% de la radiación infrarroja: la baza clave contra el sobrecalentamiento de verano.</figcaption>
 </figure>
 
     <h3>Caso 2 — El desván no se habita: insuflado de lana mineral en el suelo</h3>
@@ -312,7 +315,7 @@ gtag('config', 'AW-3024885050');
       <li><strong>Fichas del catálogo:</strong> el aislamiento de rampantes se documenta con la ficha <strong>RES010</strong> y el insuflado del desván con la ficha <strong>RES022</strong>.</li>
     </ul>
 
-    <p>Sobre los importes, la verdad completa: <strong>no damos cifras genéricas</strong>, porque dependen de la superficie, la zona climática y la mejora energética que consiga la obra. En el insuflado del desván, <strong>el sistema CAE puede cubrir gran parte de la inversión</strong> y, en determinados casos, la actuación puede quedar cubierta al 100 %; en rampantes, con más material y más mano de obra, lo habitual es que el propietario asuma una parte. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). En ambos casos, las primas están <strong>sujetas a verificación del ahorro por una entidad acreditada por ENAC</strong> y verás la cifra reflejada como descuento en el presupuesto antes de decidir nada.</p>
+    <p>Sobre los importes, la verdad completa: <strong>no damos cifras genéricas</strong>, porque dependen de la superficie, la zona climática y la mejora energética que consiga la obra. En el insuflado del desván, <strong>el sistema CAE puede cubrir gran parte de la inversión</strong> y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%; en rampantes, con más material y más mano de obra, lo habitual es que el propietario asuma una parte. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). En ambos casos, las primas están <strong>sujetas a verificación del ahorro por una entidad acreditada por ENAC</strong> y verás la cifra reflejada como descuento en el presupuesto antes de decidir nada.</p>
 
     <a href="/servicios/aislamiento-cubierta-inclinada/?proyecto=cubierta-inclinada#contacto" class="av-cta-inline" data-cta="articulo-inline">
       ¿Quieres saber si tu vivienda es elegible? <strong>Solicita un estudio gratuito</strong> <span class="arrow">→</span>
@@ -327,7 +330,7 @@ gtag('config', 'AW-3024885050');
     <p>Puede enfriar la estancia, pero trabajará contra un techo que no deja de irradiar calor, con arranques constantes y un consumo elevado. En cuanto se apaga, la temperatura vuelve a subir. Sin tratar la cubierta, el equipo <strong>lucha contra el problema en lugar de resolverlo</strong>.</p>
 
     <h3>¿El aislamiento reflectante sirve también en invierno?</h3>
-    <p>Sí. La misma capa que devuelve la radiación en verano frena la fuga de calor en invierno: el TETRIS SUPER 12 aporta una <strong>resistencia térmica certificada de 6,13 m²·K/W según EN 16012</strong>. Una sola obra mejora el confort de las dos estaciones.</p>
+    <p>Sí. La misma capa que devuelve la radiación en verano frena la fuga de calor en invierno: el TETRIS SUPER 12 aporta una <strong>resistencia térmica certificada de 6,13 m²·K/W según EN 16012</strong>. Su reacción al fuego es Euroclase F: va instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado), que es el revestimiento que aporta la protección frente al fuego del conjunto. Una sola obra mejora el confort de las dos estaciones.</p>
 
     <h3>¿Y si el espacio bajo el tejado es un desván que no se usa?</h3>
     <p>Entonces la solución no son los rampantes, sino el <strong>insuflado de lana mineral sobre el suelo del desván</strong>. El calor que atraviesa la teja se queda en el desván y no baja a los dormitorios. Es la técnica más sencilla y la determina el estudio técnico según cada caso.</p>
@@ -364,7 +367,7 @@ gtag('config', 'AW-3024885050');
 
       <h3>Fuentes oficiales consultadas</h3>
       <ul>
-        <li>Real Decreto 36/2023 (Sistema de Certificados de Ahorro Energético) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-1866" rel="noopener noreferrer" target="_blank">BOE núm. 22, 25/01/2023</a></li>
+        <li>Real Decreto 36/2023 (Sistema de Certificados de Ahorro Energético) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-2027" rel="noopener noreferrer" target="_blank">BOE núm. 21, 25/01/2023</a></li>
         <li>Orden TED/815/2023 (metodología y catálogo de fichas estandarizadas del sistema CAE, fichas RES010 y RES022) — <a href="https://www.boe.es" rel="noopener noreferrer" target="_blank">boe.es</a></li>
         <li>Código Técnico de la Edificación, Documento Básico DB-HE (Ahorro de energía) — <a href="https://www.codigotecnico.org" rel="noopener noreferrer" target="_blank">codigotecnico.org</a></li>
         <li>Entidad Nacional de Acreditación (ENAC) — <a href="https://www.enac.es" rel="noopener noreferrer" target="_blank">enac.es</a></li>
@@ -396,7 +399,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>

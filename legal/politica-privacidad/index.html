@@ -31,7 +31,7 @@
 
 <style>
   /* Pages légales : pas de lettrine « magazine » sur le premier paragraphe d'un texte juridique. */
-  .av-legal .av-content > p:first-of-type::first-letter { font: inherit; float: none; margin: 0; color: inherit; line-height: inherit; font-variation-settings: normal; }
+  .av-legal .av-content > p:first-of-type::first-letter { font: inherit; float: none; margin: 0; color: inherit; line-height: inherit; }
 </style>
 
 <!-- Google Consent Mode v2 defaults (must precede gtag.js) -->
@@ -41,6 +41,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -64,11 +66,11 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Suivi des clics et attribution (assets/tracking.js) -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css" />
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028" />
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 </head>
 <body>
 
@@ -80,6 +82,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -103,7 +106,7 @@ gtag('config', 'AW-3024885050');
   <span class="av-article-kicker">Información legal · RGPD</span>
   <h1 class="av-article-title">Política de privacidad</h1>
   <div class="av-article-meta">
-    <span>Última actualización: <time datetime="2026-04-22">22 de abril de 2026</time></span>
+    <span>Última actualización: <time datetime="2026-10-28">28 de octubre de 2026</time></span>
   </div>
 </header>
 
@@ -129,7 +132,14 @@ gtag('config', 'AW-3024885050');
     <li><strong>Envío de comunicaciones comerciales</strong> relacionadas con nuestro servicio de aislamiento financiado por el sistema CAE, siempre que exista una relación contractual previa o hayas prestado tu consentimiento expreso.</li>
     <li><strong>Ejecución del contrato</strong> cuando el cliente formaliza la contratación del servicio: programación de visita técnica, obra, tramitación administrativa del expediente CAE.</li>
     <li><strong>Cumplimiento de obligaciones legales</strong>, en particular las de naturaleza fiscal, contable y mercantil.</li>
-    <li><strong>Análisis estadístico</strong> del uso del Sitio mediante cookies analíticas (Google Analytics 4) cuando el usuario haya otorgado su consentimiento. Los datos se tratan de forma agregada y con IP anonimizada.</li>
+    <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+    <li><strong>Análisis estadístico</strong> del uso del Sitio con Google Analytics 4. Las cookies analíticas solo se instalan cuando el usuario ha otorgado su consentimiento; mientras no lo otorgue, Google recibe señales sin cookies con la dirección de la página visitada (con los parámetros de campaña o el identificador de clic de un anuncio, si los lleva) y la de procedencia, la marca de tiempo, el agente de usuario, el estado del consentimiento y los eventos de la visita, por ejemplo: desplazamiento, secciones vistas, tiempo de lectura, clics en los botones de contacto, pasos del formulario, resultado del test de orientación y, al enviar una solicitud de estudio, la provincia, el tipo de vivienda, el año de construcción, la calefacción, el proyecto y el canal de llegada (nunca el nombre, el teléfono, el correo electrónico ni el mensaje), como se detalla en la <a href="/legal/politica-cookies/#consent-mode">política de cookies</a>. Como en cualquier conexión, Google recibe también la dirección IP. Google utiliza estas señales de forma agregada para modelizar mediciones.</li>
+    <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+    <li><strong>Medición de campañas publicitarias</strong> con la etiqueta de Google Ads: conversiones y audiencias de remarketing, con cookies solo si el usuario acepta la categoría de publicidad y, sin ese consentimiento, mediante las señales sin cookies descritas en el punto anterior.</li>
+    <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+    <li><strong>Medición del origen de las solicitudes</strong>: el almacenamiento de sesión del navegador («av_attrib») guarda el origen de la visita (parámetros de campaña <em>utm</em> e identificador de clic de Google Ads, página de referencia y página de entrada) para saber de qué canal llegan las solicitudes de estudio. Se guarda desde la primera página visitada y se borra al cerrar la pestaña; de este registro, solo el canal resultante (por ejemplo, búsqueda orgánica, anuncio o acceso directo) se transmite a Google Analytics al enviar una solicitud.</li>
+    <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+    <li><strong>Medición de las solicitudes de estudio</strong>: al enviar el formulario, con o sin consentimiento de cookies (en este caso, sin cookies), se transmite a Google Analytics y Google Ads un evento con la provincia, el tipo de vivienda, el año de construcción, la calefacción actual, el proyecto elegido y el canal de llegada. Nunca se transmiten el nombre, el teléfono, el correo electrónico ni el mensaje.</li>
   </ul>
 
   <h2 id="base-juridica">3. Base jurídica del tratamiento</h2>
@@ -143,7 +153,7 @@ gtag('config', 'AW-3024885050');
   <h2 id="datos">4. Categorías de datos recogidos</h2>
   <ul>
     <li><strong>Datos identificativos y de contacto:</strong> nombre, apellidos, teléfono, correo electrónico.</li>
-    <li><strong>Datos técnicos sobre la vivienda:</strong> provincia, tipo de vivienda (unifamiliar, piso, etc.), año aproximado de construcción, mensaje libre con descripción de la cubierta.</li>
+    <li><strong>Datos técnicos sobre la vivienda:</strong> provincia, tipo de vivienda (unifamiliar, piso, etc.), año aproximado de construcción, calefacción actual, proyecto que te interesa y mensaje libre con descripción de la cubierta.</li>
     <li><strong>Datos de navegación y uso:</strong> dirección IP anonimizada, datos de cookies, tipo de navegador, sistema operativo, páginas visitadas, tiempo de permanencia.</li>
   </ul>
   <p>No tratamos categorías especiales de datos (datos de salud, ideología, origen étnico, etc.).</p>
@@ -161,7 +171,10 @@ gtag('config', 'AW-3024885050');
   <ul>
     <li><strong>Google Cloud / Firebase</strong> (Google Ireland Limited): alojamiento del formulario y base de datos de leads. Servidores en la Unión Europea.</li>
     <li><strong>Resend</strong> (Resend, Inc.): envío transaccional del correo de confirmación al lead y de notificación interna.</li>
-    <li><strong>Google Analytics 4</strong> (Google Ireland Limited): medición del uso del Sitio, con IP anonimizada, solo si el usuario ha consentido las cookies analíticas.</li>
+    <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+    <li><strong>Google Analytics 4 y Google Ads</strong> (Google Ireland Limited): las etiquetas de Google se cargan en todas las páginas con el consentimiento denegado por defecto (Google Consent Mode v2). Mientras no se acepte, no se instalan cookies de análisis ni de publicidad, pero Google recibe señales sin cookies: avisos sin identificadores de cookie con la dirección de la página visitada (con los parámetros de campaña o el identificador de clic de un anuncio, si los lleva) y la de procedencia, la marca de tiempo, el agente de usuario, el estado del consentimiento y los eventos de la visita, por ejemplo: desplazamiento, secciones vistas, tiempo de lectura, clics en los botones de contacto, pasos del formulario, resultado del test de orientación y, al enviar una solicitud de estudio, la provincia, el tipo de vivienda, el año de construcción, la calefacción, el proyecto y el canal de llegada (nunca el nombre, el teléfono, el correo electrónico ni el mensaje), además de la dirección IP, como en cualquier conexión. Google los utiliza de forma agregada para modelizar mediciones. Al aceptar, se activan las cookies analíticas o publicitarias correspondientes, detalladas en la <a href="/legal/politica-cookies/">política de cookies</a>. La elección del usuario se guarda en su navegador («av_cookie_consent») durante 12 meses.</li>
+    <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+    <li><strong>Google Fonts</strong> (Google Ireland Limited): servicio de tipografías del Sitio. Sus servidores (<code>fonts.googleapis.com</code> y <code>fonts.gstatic.com</code>) reciben la dirección IP del visitante para servir las fuentes.</li>
     <li><strong>Meta Platforms</strong> (Meta Platforms Ireland Limited): pixel de seguimiento y remarketing publicitario, <em>únicamente cuando esté activo</em> y el usuario haya consentido las cookies publicitarias. En la fecha de esta política, el pixel de Meta está desactivado.</li>
     <li><strong>GreenFlex SL</strong>: sujeto delegado CAE acreditado por el MITECO, únicamente para clientes que hayan formalizado la contratación del servicio, a efectos de tramitación del expediente administrativo de Certificados de Ahorro Energético.</li>
   </ul>
@@ -209,7 +222,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>

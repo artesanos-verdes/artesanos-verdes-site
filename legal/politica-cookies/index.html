@@ -31,7 +31,7 @@
 
 <style>
   /* Pages légales : pas de lettrine « magazine » sur le premier paragraphe d'un texte juridique. */
-  .av-legal .av-content > p:first-of-type::first-letter { font: inherit; float: none; margin: 0; color: inherit; line-height: inherit; font-variation-settings: normal; }
+  .av-legal .av-content > p:first-of-type::first-letter { font: inherit; float: none; margin: 0; color: inherit; line-height: inherit; }
   /* Tableau défilable sur mobile (§10.10, .av-table-scroll dans blog.css) : le tableau garde une largeur lisible. */
   .av-cookie-table { width: 100%; min-width: 600px; border-collapse: collapse; margin: 0; font-size: 14px; }
   .av-cookie-table th, .av-cookie-table td { border: 1px solid #e0ddd4; padding: 10px 12px; text-align: left; vertical-align: top; }
@@ -48,6 +48,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -71,11 +73,11 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Suivi des clics et attribution (assets/tracking.js) -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css" />
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028" />
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 </head>
 <body>
 
@@ -87,6 +89,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -110,7 +113,7 @@ gtag('config', 'AW-3024885050');
   <span class="av-article-kicker">Información legal · Cookies</span>
   <h1 class="av-article-title">Política de cookies</h1>
   <div class="av-article-meta">
-    <span>Última actualización: <time datetime="2026-09-15">15 de septiembre de 2026</time></span>
+    <span>Última actualización: <time datetime="2026-10-28">28 de octubre de 2026</time></span>
   </div>
 </header>
 
@@ -128,12 +131,25 @@ gtag('config', 'AW-3024885050');
   <p>Son imprescindibles para el funcionamiento del sitio. Permiten la navegación, el uso de formularios o el recuerdo de tu decisión sobre cookies. <strong>No requieren consentimiento</strong> y no pueden desactivarse.</p>
 
   <h3>2.2 Cookies analíticas</h3>
-  <p>Nos permiten medir cómo se utiliza el sitio (páginas más visitadas, tiempo de permanencia, dispositivos usados) para mejorar nuestros contenidos y la experiencia de usuario. Utilizamos <strong>Google Analytics 4</strong> con la IP anonimizada. Estas cookies <strong>requieren tu consentimiento previo</strong>.</p>
+  <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+  <p>Nos permiten medir cómo se utiliza el sitio (páginas más visitadas, tiempo de permanencia, dispositivos usados) para mejorar nuestros contenidos y la experiencia de usuario. Utilizamos <strong>Google Analytics 4</strong> con la IP anonimizada. Estas cookies <strong>requieren tu consentimiento previo</strong>: la etiqueta de Google Analytics se carga en todas las páginas con el consentimiento denegado por defecto y, mientras no lo aceptes, no instala cookies de análisis, aunque Google recibe entonces las señales sin cookies descritas en el apartado 5.</p>
 
   <h3>2.3 Cookies publicitarias y de seguimiento</h3>
-  <p>Permiten medir la efectividad de nuestras campañas publicitarias y mostrar anuncios relevantes en otras plataformas (remarketing). <strong>Requieren tu consentimiento explícito</strong>. Este sitio incorpora la etiqueta de <strong>Google Ads</strong> (AW-3024885050) para medir conversiones y crear audiencias de remarketing. Gracias a Google Consent Mode v2, esta etiqueta <strong>no deposita cookies publicitarias mientras no aceptes expresamente</strong> la categoría de publicidad en el banner: por defecto, las señales están en estado «denied». El píxel de Meta no está activo en la fecha de esta política.</p>
+  <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+  <p>Permiten medir la efectividad de nuestras campañas publicitarias y mostrar anuncios relevantes en otras plataformas (remarketing). <strong>Requieren tu consentimiento explícito</strong>. Este sitio incorpora la etiqueta de <strong>Google Ads</strong> (AW-3024885050) para medir conversiones y crear audiencias de remarketing. Esta etiqueta se carga en todas las páginas con el consentimiento denegado por defecto (Google Consent Mode v2, estado «denied»): <strong>no instala cookies publicitarias mientras no aceptes expresamente</strong> la categoría de publicidad en el banner y, hasta entonces, Google recibe las señales sin cookies descritas en el apartado 5. El píxel de Meta no está activo en la fecha de esta política.</p>
 
-  <h2 id="tabla">3. Tabla detallada de cookies</h2>
+  <h3>2.4 Almacenamiento en el navegador y tipografías</h3>
+  <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+  <p>Además de las cookies, el sitio guarda los siguientes datos en el almacenamiento de tu navegador:</p>
+  <ul>
+    <li><strong>Almacenamiento local «av_cookie_consent»</strong>: guarda tu elección sobre las cookies (categorías aceptadas, versión de la elección y fecha) durante <strong>12 meses</strong>. Pasado ese plazo, o si esta política cambia de forma sustancial, la elección deja de aplicarse: el banner se muestra de nuevo y, hasta que vuelvas a elegir, el consentimiento se considera denegado.</li>
+    <li><strong>Almacenamiento de sesión «av_attrib»</strong>: registra el origen de la visita (parámetros de campaña <em>utm</em> e identificador de clic de Google Ads, página de referencia y página de entrada al sitio). Se guarda desde la primera página visitada, antes de cualquier elección sobre las cookies, se borra al cerrar la pestaña y se usa para medir de qué canal llegan las solicitudes de estudio: de este registro, solo el canal resultante (por ejemplo, búsqueda orgánica, anuncio o acceso directo) se transmite a Google Analytics al enviar una solicitud, también sin consentimiento, junto con los datos descritos en el apartado 5.</li>
+    <li><strong>Almacenamiento de sesión «av_ads_visitor»</strong>: en la página de inicio, en las páginas de servicios y en la página de comunidades de propietarios, indica que la visita procede de un anuncio para mostrar un formulario de contacto abreviado durante la visita. Se borra al cerrar la pestaña.</li>
+  </ul>
+  <p>Las tipografías del sitio se descargan de <strong>Google Fonts</strong> (<code>fonts.googleapis.com</code> y <code>fonts.gstatic.com</code>, servicio de Google). Para servir las fuentes, estos servidores reciben la <strong>dirección IP</strong> de tu dispositivo, como ocurre con cualquier recurso descargado de un servidor externo.</p>
+
+  <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+  <h2 id="tabla">3. Tabla detallada de cookies y almacenamiento</h2>
 
   <div class="av-table-scroll" role="region" tabindex="0" aria-label="Tabla desplazable">
   <table class="av-cookie-table">
@@ -148,11 +164,25 @@ gtag('config', 'AW-3024885050');
     </thead>
     <tbody>
       <tr>
-        <td><code>av_cookie_consent</code></td>
+        <td><code>av_cookie_consent</code><br>(almacenamiento local)</td>
         <td>Los Artesanos Verdes (first-party)</td>
         <td>Recordar tu decisión sobre las cookies para no mostrarte el banner en cada visita.</td>
-        <td>12 meses</td>
+        <td>12 meses; después se vuelve a pedir el consentimiento</td>
         <td>Técnica / necesaria</td>
+      </tr>
+      <tr>
+        <td><code>av_attrib</code><br>(almacenamiento de sesión)</td>
+        <td>Los Artesanos Verdes (first-party)</td>
+        <td>Registrar el origen de la visita para medir de qué canal llegan las solicitudes (detalle en el apartado 2.4).</td>
+        <td>Hasta cerrar la pestaña</td>
+        <td>Medición propia</td>
+      </tr>
+      <tr>
+        <td><code>av_ads_visitor</code><br>(almacenamiento de sesión)</td>
+        <td>Los Artesanos Verdes (first-party)</td>
+        <td>Recordar durante la visita que llegaste desde un anuncio, para mostrar un formulario de contacto abreviado.</td>
+        <td>Hasta cerrar la pestaña</td>
+        <td>Técnica / funcional</td>
       </tr>
       <tr>
         <td><code>_ga</code></td>
@@ -171,7 +201,7 @@ gtag('config', 'AW-3024885050');
       <tr>
         <td><code>_gid</code></td>
         <td>Google Analytics (google.com)</td>
-        <td>Distinguir usuarios durante un período corto para agregación diaria.</td>
+        <td>Distinguir usuarios durante un período corto para agregación diaria. Puede no utilizarse con Google Analytics 4.</td>
         <td>24 horas</td>
         <td>Analítica</td>
       </tr>
@@ -196,7 +226,8 @@ gtag('config', 'AW-3024885050');
   <p>Esta tabla se actualizará si añadimos o retiramos proveedores. Si detectas una cookie adicional no listada, te agradecemos que nos lo comuniques en <a href="mailto:contacto@artesanosverdes.com">contacto@artesanosverdes.com</a>.</p>
 
   <h2 id="gestionar">4. Cómo gestionar o revocar tu consentimiento</h2>
-  <p>Cuando visitas el sitio por primera vez, se muestra un banner en la parte inferior con tres opciones: <strong>Aceptar todas</strong>, <strong>Rechazar todas</strong> o <strong>Configurar</strong>. La opción «Configurar» te permite decidir individualmente si aceptas cookies analíticas y/o publicitarias.</p>
+  <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+  <p>Cuando visitas el sitio por primera vez, y de nuevo cuando tu elección tiene más de 12 meses, se muestra un banner en la parte inferior con tres opciones: <strong>Aceptar todas</strong>, <strong>Rechazar todas</strong> o <strong>Configurar</strong>. La opción «Configurar» te permite decidir individualmente si aceptas cookies analíticas y/o publicitarias.</p>
   <p>Puedes <strong>revisar o cambiar tu decisión en cualquier momento</strong> pulsando el siguiente botón:</p>
   <p><button type="button" class="av-cookie-reopen" onclick="if(window.avOpenCookieSettings)avOpenCookieSettings();">Configurar cookies</button></p>
   <p>También puedes gestionar las cookies desde los ajustes de tu navegador:</p>
@@ -209,7 +240,12 @@ gtag('config', 'AW-3024885050');
   <p>Ten en cuenta que deshabilitar todas las cookies desde el navegador puede afectar al funcionamiento de algunas funcionalidades del sitio.</p>
 
   <h2 id="consent-mode">5. Google Consent Mode v2</h2>
-  <p>Implementamos <strong>Google Consent Mode v2</strong>, un mecanismo que ajusta el comportamiento de los servicios de Google (Analytics, Ads) en función de tu consentimiento. Mientras no aceptes expresamente, las señales de consentimiento están por defecto en estado <em>«denied»</em>, lo que impide el uso de cookies analíticas y publicitarias.</p>
+  <!-- Redactado el 28/10/2026 — PENDIENTE DE VALIDACIÓN por el asesor RGPD -->
+  <p>Implementamos <strong>Google Consent Mode v2</strong>, un mecanismo que ajusta el comportamiento de los servicios de Google (Analytics, Ads) en función de tu consentimiento. Las etiquetas de Google se cargan en todas las páginas con el consentimiento <strong>denegado por defecto</strong> (estado <em>«denied»</em>):</p>
+  <ul>
+    <li><strong>Mientras no aceptes</strong>, no se instalan cookies de análisis ni de publicidad, pero las etiquetas de Google envían avisos (<em>pings</em>) sin identificadores de cookie. Contienen la dirección de la página visitada (con los parámetros de campaña o el identificador de clic de un anuncio, si los lleva) y la de procedencia, la marca de tiempo, el agente de usuario, el estado del consentimiento y los eventos de la visita, por ejemplo: desplazamiento, secciones vistas, tiempo de lectura, clics en los botones de contacto, pasos del formulario, resultado del test de orientación y, al enviar una solicitud de estudio, la provincia, el tipo de vivienda, el año de construcción, la calefacción, el proyecto y el canal de llegada (nunca el nombre, el teléfono, el correo electrónico ni el mensaje). Como en cualquier conexión, Google recibe también la dirección IP de tu dispositivo. Google utiliza estas señales de forma agregada para modelizar mediciones.</li>
+    <li><strong>Al aceptar</strong> una categoría, se activan las cookies correspondientes, enumeradas en la tabla del apartado 3: <code>_ga</code> y <code>_ga_0NBF0X2893</code> (y, en su caso, <code>_gid</code>) para la analítica; <code>_gcl_au</code> y las cookies de Google Ads para la publicidad.</li>
+  </ul>
 
   <h2 id="cambios">6. Cambios en la política de cookies</h2>
   <p>Esta política puede modificarse por cambios normativos, nuevas integraciones técnicas o actualización de nuestros proveedores. La fecha en el encabezamiento refleja la última revisión. Si los cambios son sustanciales, se mostrará de nuevo el banner de consentimiento para que actualices tu elección.</p>
@@ -233,7 +269,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>

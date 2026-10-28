@@ -56,6 +56,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -79,14 +81,14 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Seguimiento de clics y atribución -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Magazine enhancements: reading progress + TOC + reveal -->
-<script defer src="/blog/assets/blog.js?v=20261014"></script>
+<script defer src="/blog/assets/blog.js?v=20261028"></script>
 
 <!-- Schema.org JSON-LD : Article -->
 <script type="application/ld+json">
@@ -199,6 +201,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -212,12 +215,12 @@ gtag('config', 'AW-3024885050');
 <article class="av-article" itemscope itemtype="https://schema.org/Article">
 
   <!-- Breadcrumb -->
-  <nav class="av-breadcrumb" aria-label="Breadcrumb">
+  <nav class="av-breadcrumb" aria-label="Ruta de navegación">
     <a href="/">Inicio</a>
     <span aria-hidden="true">›</span>
     <a href="/blog/">Blog</a>
     <span aria-hidden="true">›</span>
-    ¿Funciona la bomba de calor con frío? Aerotermia en zonas D y E
+    <span aria-current="page">¿Funciona la bomba de calor con frío? Aerotermia en zonas D y E</span>
   </nav>
 
   <!-- Header -->
@@ -283,16 +286,16 @@ gtag('config', 'AW-3024885050');
       ¿Tu municipio está en zona D o E? <strong>Cuéntanos dónde vives y qué caldera tienes: lo comprobamos en el estudio gratuito</strong> <span class="arrow">→</span>
     </a>
 
-    <h2 id="aerotermia-o-aire-aire">¿Aerotermia aire-agua o bomba de calor aire-aire?</h2>
+    <h2 id="aerotermia-o-aire-aire">¿Aerotermia <span class="nowrap">aire-agua</span> o bomba de calor <span class="nowrap">aire-aire</span>?</h2>
 
     <p>Todo lo anterior vale para las dos familias de bomba de calor que instalamos, pero conviene no confundirlas:</p>
 
     <ul>
       <li>La <a href="/servicios/aerotermia/"><strong>aerotermia aire-agua</strong></a> calienta el agua de un circuito hidráulico: alimenta los radiadores o el suelo radiante que ya existen y produce además el <strong>agua caliente sanitaria</strong>. Es la sustituta natural de una caldera con radiadores.</li>
-      <li>La bomba de calor <a href="/servicios/aire-aire/"><strong>aire-aire</strong></a> reparte aire caliente —o frío en verano— mediante splits o conductos. No lleva circuito de agua y <strong>no produce agua caliente sanitaria</strong>, que hay que resolver aparte.</li>
+      <li>La bomba de calor <a href="/servicios/aire-aire/"><strong><span class="nowrap">aire-aire</span></strong></a> reparte aire caliente —o frío en verano— mediante splits o conductos. No lleva circuito de agua y <strong>no produce agua caliente sanitaria</strong>, que hay que resolver aparte.</li>
     </ul>
 
-    <p>La elección depende sobre todo de los emisores que ya tiene la vivienda y de si se necesita cubrir el agua caliente. Le hemos dedicado una guía completa: <a href="/blog/aire-aire-o-aerotermia-cual-elegir/">¿aire-aire o aerotermia? Cuál elegir según tu vivienda</a>.</p>
+    <p>La elección depende sobre todo de los emisores que ya tiene la vivienda y de si se necesita cubrir el agua caliente. Le hemos dedicado una guía completa: <a href="/blog/aire-aire-o-aerotermia-cual-elegir/">¿<span class="nowrap">aire-aire</span> o aerotermia? Cuál elegir según tu vivienda</a>.</p>
 
     <h2 id="requisitos">Quién puede acogerse: el requisito está en tu caldera actual</h2>
 
@@ -314,7 +317,7 @@ gtag('config', 'AW-3024885050');
     <ul>
       <li>La sustitución del equipo de calefacción por una <strong>bomba de calor aerotérmica</strong> corresponde a la ficha <strong>RES060</strong> del catálogo del sistema CAE. Para la solución aire-aire se aplica la actuación correspondiente del catálogo CAE.</li>
       <li>El ahorro generado se convierte en certificados que se canalizan hacia una comercializadora obligada a través de un <strong>sujeto delegado acreditado</strong>: en nuestro caso, <strong>GreenFlex</strong>.</li>
-      <li>Se trata de <strong>financiación privada a través del sistema CAE</strong>: no es dinero público ni procede de la Administración. Se refleja como descuento sobre el presupuesto, que ves antes de firmar: el sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023).</li>
+      <li>Se trata de <strong>financiación privada a través del sistema CAE</strong>: no es dinero público ni procede de la Administración. Se refleja como descuento sobre el presupuesto, que ves antes de firmar: el sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023).</li>
       <li>Las <strong>primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC</strong>. Por eso no anticipamos importes: el valor depende del ahorro efectivamente generado por cada vivienda y solo se concreta tras el estudio técnico.</li>
     </ul>
 
@@ -368,7 +371,7 @@ gtag('config', 'AW-3024885050');
 
       <h3>Fuentes oficiales consultadas</h3>
       <ul>
-        <li>Real Decreto 36/2023 (Sistema de Certificados de Ahorro Energético) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-1866" rel="noopener noreferrer" target="_blank">BOE núm. 22, 25/01/2023</a></li>
+        <li>Real Decreto 36/2023 (Sistema de Certificados de Ahorro Energético) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-2027" rel="noopener noreferrer" target="_blank">BOE núm. 21, 25/01/2023</a></li>
         <li>Orden TED/815/2023 (metodología de cálculo y catálogo de fichas estandarizadas del sistema CAE, incluida la ficha RES060) — <a href="https://www.boe.es" rel="noopener noreferrer" target="_blank">BOE</a></li>
         <li>Código Técnico de la Edificación, Documento Básico HE (zonas climáticas) — <a href="https://www.codigotecnico.org" rel="noopener noreferrer" target="_blank">codigotecnico.org</a></li>
         <li>European Heat Pump Association (EHPA) — datos de implantación de bombas de calor en Europa — <a href="https://www.ehpa.org" rel="noopener noreferrer" target="_blank">ehpa.org</a></li>
@@ -401,7 +404,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>

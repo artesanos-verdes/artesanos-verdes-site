@@ -90,6 +90,8 @@
   (function(){
     var s = null;
     try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+    // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+    if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
     gtag('consent', 'default', {
       ad_storage: (s && s.ads) ? 'granted' : 'denied',
       analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -114,11 +116,11 @@
 </script>
 
 <!-- Medición propia (avTrack, atribución, clics de contacto) -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
 <link rel="preload" as="image" href="/blog/assets/artisan-hero-800.webp" type="image/webp" media="(max-width: 968px)" fetchpriority="high">
@@ -130,7 +132,7 @@
 <script defer src="/assets/quiz.js?v=20261028"></script>
 
 <!-- SDK Firebase chargé en différé : voir assets/firebase-lazy.js -->
-<script src="/assets/firebase-lazy.js?v=20261014" defer></script>
+<script src="/assets/firebase-lazy.js?v=20261028" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -203,9 +205,10 @@
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislar la cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
       </ul>
     </li>
+    <li><a href="/comunidades-de-propietarios/">Comunidades</a></li>
     <li><a href="#cae">Sistema CAE</a></li>
     <li><a href="#proceso">Proceso</a></li>
     <li><a href="#certificaciones">Garantías</a></li>
@@ -287,7 +290,7 @@
       </picture>
       <div class="servicio-card-body">
         <h3>Cubierta inclinada</h3>
-        <p>Aislamiento de rampantes con TETRIS SUPER 12 (R = 6,13 m²·K/W) para buhardillas habitables. Financiación privada vía CAE.</p>
+        <p>Aislamiento de rampantes con TETRIS SUPER 12 para buhardillas habitables. Financiación privada vía CAE.</p>
         <span class="servicio-card-link">Ver el servicio <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
       </div>
     </a>
@@ -308,7 +311,7 @@
         <img src="/assets/servicios/hero-aire-aire.jpg" alt="Técnico comprobando la unidad interior mural de una bomba de calor aire-aire" width="1600" height="1000" loading="lazy" decoding="async">
       </picture>
       <div class="servicio-card-body">
-        <h3>Aire-aire</h3>
+        <h3><span class="nowrap">Aire-aire</span></h3>
         <p>Bomba de calor por aire para viviendas sin circuito de agua. Calefacción en invierno y refrigeración en verano, con financiación privada del sistema CAE.</p>
         <span class="servicio-card-link">Ver el servicio <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
       </div>
@@ -437,7 +440,7 @@
     <div class="section-num reveal">Red de obligados</div>
     <h2 class="reveal reveal-delay-1">Los grandes <em>obligados</em> del sistema CAE.</h2>
     <p class="obligados-desc reveal reveal-delay-2">
-      Nuestro sujeto delegado <strong>GreenFlex</strong> mantiene convenios con los principales sujetos obligados del sistema CAE en España — las grandes empresas energéticas obligadas por ley a conseguir un ahorro energético anual. Esto nos permite colocar los ahorros generados por tu aislamiento y reducir de forma significativa el coste de la obra: el sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.
+      Nuestro sujeto delegado <strong>GreenFlex</strong> mantiene convenios con los principales sujetos obligados del sistema CAE en España — las grandes empresas energéticas obligadas por ley a conseguir un ahorro energético anual. Esto nos permite colocar los ahorros generados por tu aislamiento, lo que puede reducir de forma significativa el coste de la obra: el sistema CAE puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.
     </p>
 
     <div class="logo-wall reveal reveal-delay-2">
@@ -571,7 +574,7 @@
         </div>
         <div class="kicker">iii · Pilar financiero</div>
         <h3>El coste, apoyado por el CAE</h3>
-        <p>Gestionamos los trámites del sistema CAE para que obtengas los beneficios económicos de la reducción de consumo. La financiación privada del sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
+        <p>Gestionamos los trámites del sistema CAE para que obtengas los beneficios económicos de la reducción de consumo. La financiación privada del sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
       </div>
     </div>
   </div>
@@ -686,7 +689,7 @@
     </div>
 
     <div style="max-width: 800px; margin: 3rem auto 0; padding: 1.5rem 2rem; background: var(--ivory); border: 1px solid var(--line); border-radius: 6px; text-align: left;">
-      <div style="font-family: var(--display); font-size: 1rem; color: var(--forest-deep); margin-bottom: 0.5rem; font-weight: 500;">
+      <div style="font-family: var(--display); font-size: 1rem; line-height: 1.2; letter-spacing: -0.012em; color: var(--forest-deep); margin-bottom: 0.5rem; font-weight: 600;">
         <svg class="av-icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Tu tranquilidad, por escrito
       </div>
       <p style="font-size: 0.9rem; color: var(--forest); opacity: 0.8; line-height: 1.6; margin: 0;">
@@ -785,7 +788,7 @@
     <h2 id="guias-title">Antes de decidir, <em>infórmate.</em></h2>
     <div class="guias-grid">
       <a class="guia-card" href="/blog/que-es-el-cae-sistema-ahorro-energetico/"><span class="guia-cat">Sistema CAE</span><span class="guia-title">¿Qué es el CAE? Guía completa del sistema de Certificados de Ahorro Energético (2026)</span><span class="guia-more">Leer la guía</span></a>
-      <a class="guia-card" href="/blog/aire-aire-o-aerotermia-cual-elegir/"><span class="guia-cat">Aerotermia</span><span class="guia-title">¿Aerotermia o bomba de calor aire-aire? Cuál elegir</span><span class="guia-more">Leer la guía</span></a>
+      <a class="guia-card" href="/blog/aire-aire-o-aerotermia-cual-elegir/"><span class="guia-cat">Aerotermia</span><span class="guia-title">¿Aerotermia o bomba de calor <span class="nowrap">aire-aire</span>? Cuál elegir</span><span class="guia-more">Leer la guía</span></a>
       <a class="guia-card" href="/blog/zonas-climaticas-cte-aislamiento-cae/"><span class="guia-cat">Normativa y zonas</span><span class="guia-title">Zonas climáticas del CTE: cómo saber la tuya</span><span class="guia-more">Leer la guía</span></a>
       <a class="guia-card" href="/blog/aislamiento-espana-provincias-cobertura/"><span class="guia-cat">Normativa y zonas</span><span class="guia-title">Aislamiento de cubierta en España: ¿cubrimos tu provincia?</span><span class="guia-more">Leer la guía</span></a>
       <a class="guia-card" href="/blog/senales-casa-pierde-calor-mal-aislada/"><span class="guia-cat">Confort en casa</span><span class="guia-title">7 señales de que tu casa está mal aislada (y pierde calor)</span><span class="guia-more">Leer la guía</span></a>
@@ -805,7 +808,7 @@
         <div class="faq-body">
           <!-- fuente: index.html:428 · index.html:439 · servicios/aislamiento-cubierta-inclinada/index.html:601 · servicios/aerotermia/index.html:160 · LOT1-SPEC §0 (fórmulas validadas de importe y de verificación ENAC) -->
           <p>La obra se financia con el sistema de Certificados de Ahorro Energético (CAE), un mecanismo de financiación privada regulado por el Real Decreto 36/2023. Las grandes empresas energéticas están obligadas por ley a conseguir un ahorro energético anual y aportan el importe a cambio del ahorro que genera tu vivienda, a través de nuestro sujeto delegado, GreenFlex. No es una subvención: el importe no lo aporta la Administración.</p>
-          <p>El sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
+          <p>El sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Las primas están sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
         </div>
       </details>
       <details class="faq-item">
@@ -1180,7 +1183,8 @@
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván (soplado)</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Cubierta inclinada (rampantes)</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
         <li><a href="#cae">Sistema CAE</a></li>
       </ul>
     </div>
@@ -1246,7 +1250,7 @@
   <button class="toast-close" onclick="document.getElementById('toast').classList.remove('show')" aria-label="Cerrar">×</button>
 </div>
 
-<script src="/assets/site.js?v=20261014" defer></script>
+<script src="/assets/site.js?v=20261028" defer></script>
 
 </body>
 </html>

@@ -613,7 +613,13 @@
       btn.type = 'button';
       btn.addEventListener('click', function () {
         remplirChamp('proyecto', 'desvan');
-        try { proyecto.focus(); } catch (err) { /* sans importance */ }
+        // Sur les pages services, #proyecto est en haut du formulaire : le
+        // défilement natif du focus le plaçait sous la nav fixe. On centre son
+        // groupe (libellé compris), puis focus sans nouveau défilement.
+        try {
+          defilerSansAnimation(proyecto.closest('.form-group') || proyecto, 'center');
+          focaliser(proyecto);
+        } catch (err) { /* sans importance */ }
       });
       aviso.appendChild(btn);
       aviso.hidden = false;

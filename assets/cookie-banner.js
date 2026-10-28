@@ -2,14 +2,27 @@
    Cookie Consent Banner — Los Artesanos Verdes
    Uses Google Consent Mode v2. Defaults are set inline before this
    script loads (denied by default for EU compliance).
+   Un choix enregistré n'est valable que s'il porte la VERSION courante
+   et s'il a moins de 12 mois (MAX_AGE) : sinon il est ignoré, la
+   bannière revient et le consentement reste refusé par défaut.
+   Le script inline du <head> de chaque page applique la même règle :
+   si VERSION change ici, la changer aussi dans ce script inline.
    ================================================================ */
 (function () {
   var KEY = 'av_cookie_consent';
   var VERSION = '1';
+  var MAX_AGE = 365 * 864e5; // 12 meses, en ms
+
+  function isValid(s) {
+    return !!s && typeof s === 'object' && s.v === VERSION &&
+      typeof s.ts === 'number' && !(Date.now() - s.ts > MAX_AGE);
+  }
 
   function readStored() {
-    try { return JSON.parse(localStorage.getItem(KEY) || 'null'); }
+    var s = null;
+    try { s = JSON.parse(localStorage.getItem(KEY) || 'null'); }
     catch (e) { return null; }
+    return isValid(s) ? s : null;
   }
   function writeStored(obj) {
     try { localStorage.setItem(KEY, JSON.stringify(obj)); }

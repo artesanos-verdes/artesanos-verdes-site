@@ -125,7 +125,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500..700&family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 <!-- Google Consent Mode v2 defaults (must precede gtag.js) -->
 <script>
@@ -134,6 +134,8 @@
   (function(){
     var s = null;
     try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+    // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+    if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
     gtag('consent', 'default', {
       ad_storage: (s && s.ads) ? 'granted' : 'denied',
       analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -157,14 +159,14 @@
 </script>
 
 <!-- Suivi des clics et attribution (assets/tracking.js) -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
-<link rel="stylesheet" href="/assets/site.css?v=20261014">
-<link rel="stylesheet" href="/assets/quiz.css?v=20261014">
+<link rel="stylesheet" href="/assets/site.css?v=20261028">
+<link rel="stylesheet" href="/assets/quiz.css?v=20261028">
 
 <!-- Styles propres au hub /servicios/ (en-tête de page, ligne « Para quién », aide au choix) -->
 <style>
@@ -172,14 +174,14 @@
   .hub-head-inner { max-width: 1000px; margin: 0 auto; }
   /* Fil d'Ariane aligne sur le contenu de la page (1000 px centres) et non sur 1400 px. */
   .breadcrumb ol { max-width: 1000px; }
-  .hub-head h1 { font-size: clamp(2.2rem, 4.4vw, 3.5rem); line-height: 1.05; max-width: 20ch; }
+  .hub-head h1 { font-size: clamp(2.2rem, 4.4vw, 3.5rem); line-height: 1.1; max-width: 20ch; }
   .hub-intro { font-size: 1.1rem; line-height: 1.7; color: var(--forest); max-width: 690px; }
   .hub-fine { font-size: 0.86rem; line-height: 1.6; color: var(--sage); max-width: 690px; margin-top: 1rem; }
   .hub-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
   .hub-servicios { padding-top: 4.5rem; }
   .hub-servicios .servicios-grid { margin-top: 0; }
   .servicio-card-body .servicio-card-para { flex: 0 0 auto; font-size: 0.92rem; line-height: 1.55; color: var(--forest); background: rgba(34, 160, 68, 0.07); border-left: 3px solid var(--brand-green); border-radius: 0 8px 8px 0; padding: 0.65rem 0.85rem; }
-  .servicio-card-para strong { display: block; color: var(--brand-green-deep); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.15rem; }
+  .servicio-card-para strong { display: block; color: var(--terracotta-deep); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 0.15rem; }
   .hub-ayuda { background: var(--ivory); border-top: 1px solid var(--line-soft); }
   .hub-ayuda-inner { max-width: 1000px; margin: 0 auto; }
   .hub-ayuda-lead { max-width: 690px; color: var(--forest); font-size: 1.05rem; line-height: 1.7; }
@@ -189,10 +191,10 @@
   .hub-ayuda-card > p { color: var(--forest); line-height: 1.65; margin-bottom: 1.1rem; }
   .hub-opciones { list-style: none; display: grid; gap: 0.9rem; margin-bottom: 1.3rem; }
   .hub-opciones li { background: #fff; border: 1px solid var(--line-soft); border-radius: 12px; padding: 0.95rem 1.1rem; line-height: 1.6; color: var(--forest); }
-  .hub-opciones strong { display: block; font-family: var(--display); font-weight: 500; font-size: 1.05rem; color: var(--forest-deep); margin-bottom: 0.2rem; }
-  .hub-opciones a { color: var(--brand-green-deep); font-weight: 600; text-underline-offset: 3px; }
+  .hub-opciones strong { display: block; font-family: var(--display); font-weight: 600; font-size: 1.05rem; line-height: 1.2; letter-spacing: -0.012em; color: var(--forest-deep); margin-bottom: 0.2rem; }
+  .hub-opciones a { color: var(--link, #0f6428); font-weight: 600; text-underline-offset: 3px; }
   .hub-ayuda-nota { margin-top: auto; font-size: 0.9rem; line-height: 1.6; color: var(--sage); }
-  .hub-ayuda-nota a { color: var(--brand-green-deep); font-weight: 600; text-underline-offset: 3px; }
+  .hub-ayuda-nota a { color: var(--link, #0f6428); font-weight: 600; text-underline-offset: 3px; }
   .hub-aviso { margin-top: 1.8rem; background: rgba(200, 148, 74, 0.12); border-left: 3px solid var(--terracotta); border-radius: 0 10px 10px 0; padding: 1.1rem 1.3rem; color: var(--forest); line-height: 1.65; }
   .hub-aviso strong { color: var(--forest-deep); }
   .hub-quiz { margin-top: 2.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; }
@@ -236,9 +238,10 @@
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislar la cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
       </ul>
     </li>
+    <li><a href="/comunidades-de-propietarios/">Comunidades</a></li>
     <li><a href="/#cae">Sistema CAE</a></li>
     <li><a href="/#proceso">Proceso</a></li>
     <li><a href="/#certificaciones">Garantías</a></li>
@@ -268,7 +271,7 @@
     <p class="section-num">Nuestros servicios</p>
     <h1 id="hub-title">Servicios de renovación energética con el sistema CAE</h1>
     <p class="hub-intro">Aislamos desvanes y buhardillas y sustituimos calderas de gas o gasóleo por bombas de calor, con la <strong>financiación privada del sistema CAE</strong>. El sistema CAE puede cubrir gran parte de la inversión, con primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</p>
-    <p class="hub-fine">Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). El sistema CAE es financiación privada: no es una subvención ni una ayuda pública.</p>
+    <p class="hub-fine">Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). El sistema CAE es financiación privada: no es una subvención ni una ayuda pública.</p>
     <div class="hub-actions">
       <a href="/#contacto" class="btn btn-primary" data-cta="hub-intro">
         Pedir mi estudio gratuito
@@ -302,7 +305,7 @@
       </picture>
       <div class="servicio-card-body">
         <h3>Aislamiento de cubierta inclinada</h3>
-        <p>Aislamos por el interior los rampantes, los planos inclinados del techo, sin retirar la teja y conservando la altura útil de la estancia. Ficha CAE RES010.</p>
+        <p>Aislamos por el interior los rampantes, los planos inclinados del techo, con una reducción de altura contenida. Ficha CAE RES010.</p>
         <p class="servicio-card-para"><strong>Para quién:</strong> Una buhardilla habitable (dormitorio, estudio…) o que quieres acondicionar para vivir en ella.</p>
         <span class="servicio-card-link">Ver el servicio <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
       </div>
@@ -325,7 +328,7 @@
         <img src="/assets/servicios/hero-aire-aire.jpg" alt="Técnico revisando la unidad interior mural de una bomba de calor aire-aire en un salón" width="1600" height="1000" loading="lazy" decoding="async">
       </picture>
       <div class="servicio-card-body">
-        <h3>Bomba de calor aire-aire</h3>
+        <h3>Bomba de calor <span class="nowrap">aire-aire</span></h3>
         <p>Sustituimos tu caldera por una bomba de calor que climatiza por aire: calor en invierno y frío en verano, con splits o conductos. No produce agua caliente sanitaria (ACS).</p>
         <p class="servicio-card-para"><strong>Para quién:</strong> Una vivienda con caldera de gas o gasóleo que no tiene circuito de agua (ni radiadores ni suelo radiante de agua).</p>
         <span class="servicio-card-link">Ver el servicio <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
@@ -349,17 +352,17 @@
           <li><strong>Desván o ático no habitable</strong>Vacío o usado como trastero: se insufla lana mineral sobre su suelo. <a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
           <li><strong>Buhardilla habitable</strong>Se usa como estancia o quieres acondicionarla: se aísla el propio techo inclinado por el interior. <a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         </ul>
-        <p class="hub-ayuda-nota">Las dos actuaciones son elegibles en las zonas climáticas C, D y E, donde se encuentran las 13 provincias en las que trabajamos, y sirven también para comunidades de propietarios y edificios terciarios.</p>
+        <p class="hub-ayuda-nota">Las dos actuaciones son elegibles en las zonas climáticas C, D y E, donde se encuentran las 13 provincias en las que trabajamos, y sirven también para <a href="/comunidades-de-propietarios/">comunidades de propietarios</a> y edificios terciarios.</p>
       </div>
 
       <div class="hub-ayuda-card">
-        <h3>¿Aerotermia o aire-aire?</h3>
+        <h3>¿Aerotermia o <span class="nowrap">aire-aire</span>?</h3>
         <p>Las dos son bombas de calor que sustituyen una caldera de gas o gasóleo. Lo que decide es si tu vivienda tiene circuito de agua.</p>
         <ul class="hub-opciones">
           <li><strong>Con radiadores o suelo radiante de agua</strong>La aerotermia aprovecha ese circuito y además produce el agua caliente sanitaria. <a href="/servicios/aerotermia/">Aerotermia</a></li>
-          <li><strong>Sin circuito de agua</strong>La bomba de calor aire-aire climatiza las estancias por aire, pero no produce agua caliente sanitaria. <a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+          <li><strong>Sin circuito de agua</strong>La bomba de calor <span class="nowrap">aire-aire</span> climatiza las estancias por aire, pero no produce agua caliente sanitaria. <a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
         </ul>
-        <p class="hub-ayuda-nota">¿Quieres la comparación completa? <a href="/blog/aire-aire-o-aerotermia-cual-elegir/">Lee nuestra guía para elegir entre aire-aire y aerotermia</a>.</p>
+        <p class="hub-ayuda-nota">¿Quieres la comparación completa? <a href="/blog/aire-aire-o-aerotermia-cual-elegir/">Lee nuestra guía para elegir entre <span class="nowrap">aire-aire</span> y aerotermia</a>.</p>
       </div>
     </div>
 
@@ -379,7 +382,7 @@
     <h2 id="guias-title">Antes de decidir, <em>infórmate.</em></h2>
     <div class="guias-grid">
       <a class="guia-card" href="/blog/que-es-el-cae-sistema-ahorro-energetico/"><span class="guia-cat">Sistema CAE</span><span class="guia-title">¿Qué es el CAE? Guía completa del sistema de Certificados de Ahorro Energético (2026)</span><span class="guia-more">Leer la guía</span></a>
-      <a class="guia-card" href="/blog/aire-aire-o-aerotermia-cual-elegir/"><span class="guia-cat">Aerotermia</span><span class="guia-title">¿Aerotermia o bomba de calor aire-aire? Cuál elegir</span><span class="guia-more">Leer la guía</span></a>
+      <a class="guia-card" href="/blog/aire-aire-o-aerotermia-cual-elegir/"><span class="guia-cat">Aerotermia</span><span class="guia-title">¿Aerotermia o bomba de calor <span class="nowrap">aire-aire</span>? Cuál elegir</span><span class="guia-more">Leer la guía</span></a>
       <a class="guia-card" href="/blog/aislar-cubierta-inclinada-cae/"><span class="guia-cat">Aislamiento</span><span class="guia-title">Aislar la cubierta inclinada con CAE: rampantes, aislante reflectante y financiación privada</span><span class="guia-more">Leer la guía</span></a>
       <a class="guia-card" href="/blog/zonas-climaticas-cte-aislamiento-cae/"><span class="guia-cat">Normativa y zonas</span><span class="guia-title">Zonas climáticas del CTE: cómo saber la tuya</span><span class="guia-more">Leer la guía</span></a>
     </div>
@@ -426,7 +429,8 @@
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván (soplado)</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Cubierta inclinada (rampantes)</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
         <li><a href="/#cae">Sistema CAE</a></li>
       </ul>
     </div>
@@ -473,8 +477,8 @@
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg>
 </a>
 
-<script src="/assets/site.js?v=20261014" defer></script>
-<script src="/assets/quiz.js?v=20261014" defer></script>
+<script src="/assets/site.js?v=20261028" defer></script>
+<script src="/assets/quiz.js?v=20261028" defer></script>
 
 </body>
 </html>

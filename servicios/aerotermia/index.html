@@ -176,6 +176,8 @@
   (function(){
     var s = null;
     try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+    // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+    if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
     gtag('consent', 'default', {
       ad_storage: (s && s.ads) ? 'granted' : 'denied',
       analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -200,9 +202,9 @@
 </script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/tracking.js?v=20261014"></script>
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/tracking.js?v=20261028"></script>
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Facebook Pixel — à réactiver quand on aura le vrai ID Meta Business Manager -->
 <link rel="preload" as="image" href="/assets/servicios/hero-aerotermia-800.webp" type="image/webp" media="(max-width: 968px)" fetchpriority="high">
@@ -210,7 +212,7 @@
 <link rel="stylesheet" href="/assets/site.css?v=20261028">
 
 <!-- SDK Firebase chargé en différé : voir assets/firebase-lazy.js -->
-<script src="/assets/firebase-lazy.js?v=20261014" defer></script>
+<script src="/assets/firebase-lazy.js?v=20261028" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -285,9 +287,10 @@
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislar la cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
       </ul>
     </li>
+    <li><a href="/comunidades-de-propietarios/">Comunidades</a></li>
     <li><a href="/#cae">Sistema CAE</a></li>
     <li><a href="/#proceso">Proceso</a></li>
     <li><a href="/#certificaciones">Garantías</a></li>
@@ -330,38 +333,7 @@
   .av-doble { display: grid; gap: 1.5rem; max-width: 900px; margin: 2.5rem auto 0; }
   @media (min-width: 780px) { .av-doble { grid-template-columns: 1fr 1fr; } }
 
-  .cta-final { background: linear-gradient(150deg, var(--forest) 0%, var(--forest-deep) 100%); text-align: center; overflow: hidden; }
-  .cta-final h2 { color: var(--cream); }
-  .cta-final h2 em { color: #f5c6a8; }
-  .cta-final .cta-lead { color: #e8f0ea; opacity: 0.9; font-size: 1.1rem; line-height: 1.7; max-width: 620px; margin: 0 auto 2.2rem; }
-  .cta-final .cta-fine { color: #c1d9cc; opacity: 0.85; font-size: 0.82rem; letter-spacing: 0.05em; margin-top: 1.4rem; }
 
-  /* Jerarquía de títulos corregida (h3/h4): se conserva el aspecto original */
-  .criterion h3 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 1.3rem;
-    line-height: inherit;
-    margin-bottom: 0.6rem;
-    color: var(--forest-deep);
-  }
-  .step-content h3 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 1.3rem;
-    line-height: inherit;
-    margin-bottom: 0.5rem;
-    color: var(--forest-deep);
-  }
-  .footer-col h4 {
-    font-family: var(--body);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-  }
 </style>
 
 <main id="contenido">
@@ -488,7 +460,7 @@
         </div>
         <div class="spec-row">
           <span class="key">Ficha CAE aplicable</span>
-          <span class="val">RES060 <span class="unit">RD 36/2023</span></span>
+          <span class="val">RES060 <span class="unit">RD&nbsp;36/2023</span></span>
         </div>
       </div>
 
@@ -514,7 +486,7 @@
     <div class="section-num reveal" style="justify-content:center;">Comparativa</div>
     <h2 class="reveal reveal-delay-1">Caldera de combustión <em>frente a</em> aerotermia.</h2>
     <p class="reveal reveal-delay-2" style="max-width:720px; margin:1rem auto 2.5rem; opacity:0.85; line-height:1.7;">
-      Una caldera transforma combustible en calor y su rendimiento nunca supera el 100 % de la energía que consume. Una bomba de calor aerotérmica no genera calor: lo traslada desde el aire exterior, por lo que entrega varias unidades de calor por cada unidad de electricidad. Esa diferencia es la que se traduce en factura, en emisiones y en el ahorro energético que se acredita en el expediente CAE.
+      Una caldera transforma combustible en calor y su rendimiento nunca supera el 100&nbsp;% de la energía que consume. Una bomba de calor aerotérmica no genera calor: lo traslada desde el aire exterior, por lo que entrega varias unidades de calor por cada unidad de electricidad. Esa diferencia es la que se traduce en factura, en emisiones y en el ahorro energético que se acredita en el expediente CAE.
     </p>
 
     <figure class="reveal" style="margin:0;">
@@ -690,7 +662,7 @@
     </div>
 
     <p class="reveal" style="max-width:760px; margin:2rem auto 0; font-size:0.9rem; opacity:0.8; line-height:1.65;">
-      La financiación privada a través del sistema CAE reduce de forma significativa el coste de la obra para el propietario: el sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). <strong>Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</strong> El sistema CAE no es una ayuda pública ni una subvención: es un mecanismo de financiación privada entre particulares y empresas energéticas obligadas. Otras vías de apoyo público —Next Generation, IDAE, deducciones del IRPF— son programas distintos e independientes del CAE. Puedes profundizar en <a href="/blog/aerotermia-primas-cae-cuanto-cuesta/">cómo se calcula la prima CAE de una aerotermia</a>.
+      La financiación privada a través del sistema CAE puede reducir de forma significativa el coste de la obra para el propietario: el sistema CAE puede cubrir gran parte de la inversión. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). <strong>Primas sujetas a verificación del ahorro por una entidad acreditada por ENAC.</strong> El sistema CAE no es una ayuda pública ni una subvención: es un mecanismo de financiación privada entre particulares y empresas energéticas obligadas. Otras vías de apoyo público —Next Generation, IDAE, deducciones del IRPF— son programas distintos e independientes del CAE. Puedes profundizar en <a href="/blog/aerotermia-primas-cae-cuanto-cuesta/">cómo se calcula la prima CAE de una aerotermia</a>.
     </p>
   </div>
 </section>
@@ -738,7 +710,7 @@
     </div>
 
     <div style="max-width: 800px; margin: 3rem auto 0; padding: 1.5rem 2rem; background: var(--ivory); border: 1px solid var(--line); border-radius: 6px; text-align: left;">
-      <div style="font-family: var(--display); font-size: 1rem; color: var(--forest-deep); margin-bottom: 0.5rem; font-weight: 500;">
+      <div style="font-family: var(--display); font-size: 1rem; line-height: 1.2; letter-spacing: -0.012em; color: var(--forest-deep); margin-bottom: 0.5rem; font-weight: 600;">
         <svg class="av-icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Tu tranquilidad, por escrito
       </div>
       <p style="font-size: 0.9rem; color: var(--forest); opacity: 0.8; line-height: 1.6; margin: 0;">
@@ -758,6 +730,8 @@
       <a class="guia-card" href="/blog/aerotermia-consumo-electrico-factura-luz/"><span class="guia-cat">Aerotermia</span><span class="guia-title">Aerotermia y factura de la luz: ¿dispara el consumo eléctrico?</span><span class="guia-more">Leer la guía</span></a>
       <a class="guia-card" href="/blog/bomba-de-calor-frio-invierno-zonas-frias/"><span class="guia-cat">Aerotermia</span><span class="guia-title">¿Funciona la bomba de calor con frío? Aerotermia en zonas D y E</span><span class="guia-more">Leer la guía</span></a>
       <a class="guia-card" href="/blog/cambiar-caldera-gasoleo-requisitos-cae/"><span class="guia-cat">Aerotermia</span><span class="guia-title">Cambiar caldera de gasoil por aerotermia: requisitos CAE (2026)</span><span class="guia-more">Leer la guía</span></a>
+      <a class="guia-card" href="/blog/aerotermia-con-radiadores/"><span class="guia-cat">Aerotermia</span><span class="guia-title">Aerotermia con radiadores: ¿sirven los que ya tienes?</span><span class="guia-more">Leer la guía</span></a>
+      <a class="guia-card" href="/blog/aire-aire-o-aerotermia-cual-elegir/"><span class="guia-cat">Aerotermia</span><span class="guia-title">¿Aerotermia o bomba de calor <span class="nowrap">aire-aire</span>? Cuál elegir</span><span class="guia-more">Leer la guía</span></a>
     </div>
   </div>
 </section>
@@ -1023,7 +997,8 @@
         <li><a href="/servicios/aislamiento-desvan/">Aislar el desván (soplado)</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Cubierta inclinada (rampantes)</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia (bomba de calor)</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
         <li><a href="#cae">Sistema CAE</a></li>
       </ul>
     </div>
@@ -1089,7 +1064,7 @@
   <button class="toast-close" onclick="document.getElementById('toast').classList.remove('show')" aria-label="Cerrar">×</button>
 </div>
 
-<script src="/assets/site.js?v=20261014" defer></script>
+<script src="/assets/site.js?v=20261028" defer></script>
 
 </body>
 </html>

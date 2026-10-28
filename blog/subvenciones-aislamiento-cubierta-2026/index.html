@@ -56,6 +56,8 @@ function gtag(){dataLayer.push(arguments);}
 (function(){
   var s = null;
   try { s = JSON.parse(localStorage.getItem('av_cookie_consent') || 'null'); } catch(e){}
+  // Choix d'une autre version ou de plus de 12 mois : ignoré (même règle que assets/cookie-banner.js, VERSION '1').
+  if (!s || s.v !== '1' || typeof s.ts !== 'number' || Date.now() - s.ts > 365*864e5) s = null;
   gtag('consent', 'default', {
     ad_storage: (s && s.ads) ? 'granted' : 'denied',
     analytics_storage: (s && s.analytics) ? 'granted' : 'denied',
@@ -79,14 +81,14 @@ gtag('config', 'AW-3024885050');
 </script>
 
 <!-- Seguimiento de clics y atribución -->
-<script defer src="/assets/tracking.js?v=20261014"></script>
+<script defer src="/assets/tracking.js?v=20261028"></script>
 
 <!-- Cookie consent banner -->
-<link rel="stylesheet" href="/assets/cookie-banner.css">
-<script defer src="/assets/cookie-banner.js"></script>
+<link rel="stylesheet" href="/assets/cookie-banner.css?v=20261028">
+<script defer src="/assets/cookie-banner.js?v=20261028"></script>
 
 <!-- Magazine enhancements: reading progress + TOC + reveal -->
-<script defer src="/blog/assets/blog.js?v=20261014"></script>
+<script defer src="/blog/assets/blog.js?v=20261028"></script>
 
 <!-- Schema.org JSON-LD : Article -->
 <script type="application/ld+json">
@@ -214,7 +216,7 @@ gtag('config', 'AW-3024885050');
       "name": "¿En qué zonas trabajáis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Trabajamos en 13 provincias del norte y del centro de España, en un radio de 250 km alrededor de León y Valladolid: las ocho provincias de Castilla y León, Madrid, Lugo, Ourense, Asturias y Cantabria. Fuera de esa zona no podemos ejecutar la obra."
+        "text": "Trabajamos en 13 provincias del norte y del centro de España, en un radio de 250 km alrededor de León y Valladolid: ocho de las nueve provincias de Castilla y León (todas salvo Soria), Madrid, Lugo, Ourense, Asturias y Cantabria. Fuera de esa zona no podemos ejecutar la obra."
       }
     }
   ]
@@ -231,6 +233,7 @@ gtag('config', 'AW-3024885050');
     <a href="/" class="av-logo" aria-label="Inicio — Los Artesanos Verdes"><img src="/logo.png" alt="" width="480" height="334"><span>Los Artesanos Verdes</span></a>
     <ul class="av-nav-links">
       <li class="av-nav-link"><a href="/servicios/">Servicios</a></li>
+      <li class="av-nav-link"><a href="/comunidades-de-propietarios/">Comunidades</a></li>
       <li class="av-nav-link"><a href="/#cae">¿Qué es el CAE?</a></li>
       <li class="av-nav-link"><a href="/blog/">Blog</a></li>
       <li><a href="tel:+34632180509" class="av-nav-tel" data-cta="nav-llamar" aria-label="Llamar al +34 632 18 05 09"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>632 18 05 09</span></a></li>
@@ -277,7 +280,7 @@ gtag('config', 'AW-3024885050');
   <!-- Content -->
   <div class="av-content" itemprop="articleBody">
 
-    <p>En invierno, hasta el <strong>30 % del calor de tu vivienda escapa por la cubierta</strong>. En las zonas frías de España — Castilla y León, Galicia, zonas de montaña — esto se traduce en facturas de calefacción desproporcionadas y en un confort térmico mediocre a pesar de tener los radiadores encendidos.</p>
+    <p>En invierno, hasta el <strong>30&nbsp;% del calor de tu vivienda escapa por la cubierta</strong>. En las zonas frías de España — Castilla y León, Galicia, zonas de montaña — esto se traduce en facturas de calefacción desproporcionadas y en un confort térmico mediocre a pesar de tener los radiadores encendidos.</p>
 
     <p>Mucha gente llega hasta aquí buscando «subvenciones para aislar la cubierta». Antes de entrar en materia conviene aclarar una confusión muy extendida, porque de ella depende todo lo demás: <strong>en 2026 conviven en España dos cosas distintas</strong>. Por un lado, las <strong>ayudas públicas</strong> propiamente dichas — NextGeneration EU a través del IDAE y las comunidades autónomas, la deducción en el IRPF y los programas autonómicos —. Por otro, el <strong>sistema CAE</strong>, que <em>no</em> es una ayuda pública.</p>
 
@@ -303,7 +306,7 @@ gtag('config', 'AW-3024885050');
 
     <p>Antes de hablar de quién financia qué, conviene entender por qué el aislamiento de cubierta es, entre todas las actuaciones de rehabilitación energética, <strong>la que ofrece mejor relación coste-beneficio</strong>.</p>
 
-    <p>La física es simple: el aire caliente sube. En una vivienda sin aislamiento en cubierta, el forjado superior se convierte en un radiador invertido que calienta el espacio bajo tejado — y desde ahí, el calor escapa al exterior. Según los estudios publicados por el IDAE, esta fuga representa entre el 25 % y el 30 % de la pérdida térmica total de una vivienda tipo española.</p>
+    <p>La física es simple: el aire caliente sube. En una vivienda sin aislamiento en cubierta, el forjado superior se convierte en un radiador invertido que calienta el espacio bajo tejado — y desde ahí, el calor escapa al exterior. Según los estudios publicados por el IDAE, esta fuga representa entre el 25&nbsp;% y el 30&nbsp;% de la pérdida térmica total de una vivienda tipo española.</p>
 
     <p>Las consecuencias económicas son directas:</p>
     <ul>
@@ -330,7 +333,7 @@ gtag('config', 'AW-3024885050');
       <tbody>
         <tr>
           <td><strong>CAE</strong><br>Certificados de Ahorro Energético</td>
-          <td><strong>No</strong> — financiación privada (RD 36/2023)</td>
+          <td><strong>No</strong> — financiación privada (RD&nbsp;36/2023)</td>
           <td>Comercializadoras de energía obligadas por ley</td>
           <td>Sin convocatoria ni fecha de cierre</td>
         </tr>
@@ -381,7 +384,7 @@ gtag('config', 'AW-3024885050');
 
     <p>Cuando una empresa especializada como Los Artesanos Verdes aísla tu cubierta, el ahorro energético generado se calcula según la ficha estandarizada que corresponda del catálogo del Real Decreto 36/2023 — <strong>RES022</strong> para el aislamiento de desván o ático no habitable, <strong>RES010</strong> para el aislamiento de cubierta inclinada o rampantes —. Ese ahorro <strong>está sujeto a verificación por un organismo acreditado por ENAC</strong> (AENOR, Bureau Veritas, SGS Tecnos, entre otros) y solo entonces se convierte en un certificado CAE. El certificado se transfiere a una comercializadora obligada a través de un <strong>sujeto delegado</strong> — en nuestro caso, <strong>GreenFlex</strong>, una de las entidades acreditadas por la Dirección General de Política Energética y Minas.</p>
 
-    <p>La aportación de la comercializadora a cambio del CAE puede cubrir <strong>gran parte de la inversión</strong> y, en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). Depende del ahorro energético efectivamente verificado, que a su vez depende de la superficie, de la zona climática y del estado previo de la cubierta. Por eso no es serio anunciar de antemano una cifra ni un importe fijo: el resto a cargo del propietario solo se puede determinar tras el estudio técnico, y se refleja siempre en el presupuesto cerrado antes de firmar.</p>
+    <p>La aportación de la comercializadora a cambio del CAE puede cubrir <strong>gran parte de la inversión</strong> y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). Depende del ahorro energético efectivamente verificado, que a su vez depende de la superficie, de la zona climática y del estado previo de la cubierta. Por eso no es serio anunciar de antemano una cifra ni un importe fijo: el resto a cargo del propietario solo se puede determinar tras el estudio técnico, y se refleja siempre en el presupuesto cerrado antes de firmar.</p>
 
     <h3>Requisitos para acogerse al sistema CAE</h3>
 
@@ -394,7 +397,7 @@ gtag('config', 'AW-3024885050');
       <li><strong>Realización de la obra por una empresa con acuerdo con un sujeto delegado</strong> acreditado</li>
     </ul>
 
-    <blockquote><p><strong>Referencia legal</strong>: Real Decreto 36/2023, de 24 de enero, por el que se establece el Sistema de Certificados de Ahorro Energético. Desarrollado por la Orden TED/815/2023. Fichas aplicables al aislamiento de cubierta: <strong>RES022</strong> (desván o ático no habitable) y <strong>RES010</strong> (cubierta inclinada o rampantes). Para la sustitución de caldera por bomba de calor aerotérmica, la ficha aplicable es la <strong>RES060</strong>.</p></blockquote>
+    <blockquote><p><strong>Referencia legal</strong>: Real Decreto 36/2023, de 24 de enero, por el que se establece el Sistema de Certificados de Ahorro Energético. Desarrollado por la Orden TED/815/2023; el catálogo de fichas lo aprueba la Orden TED/845/2023. Fichas aplicables al aislamiento de cubierta: <strong>RES022</strong> (desván o ático no habitable) y <strong>RES010</strong> (cubierta inclinada o rampantes). Para la sustitución de caldera por bomba de calor aerotérmica, la ficha aplicable es la <strong>RES060</strong>.</p></blockquote>
 
     <h2 id="nextgen">NextGeneration EU: la subvención pública principal</h2>
 
@@ -426,7 +429,7 @@ gtag('config', 'AW-3024885050');
 
     <p>Los fondos NextGeneration se encuentran en <strong>fase avanzada de ejecución</strong>. Algunas comunidades autónomas — especialmente Castilla y León, Galicia y Madrid — han gestionado ya un porcentaje alto de su dotación. Esto no significa que los fondos estén agotados, pero sí que conviene anticiparse: las solicitudes se resuelven por orden de llegada y la estimación oficial apunta a un cierre progresivo a lo largo del segundo semestre de 2026.</p>
 
-    <h2 id="irpf">Deducción IRPF: hasta el 60 % adicional</h2>
+    <h2 id="irpf">Deducción IRPF: hasta el 60&nbsp;% adicional</h2>
 
     <h3>Tres tipos de deducción compatibles</h3>
 
@@ -442,24 +445,24 @@ gtag('config', 'AW-3024885050');
       </thead>
       <tbody>
         <tr>
-          <td>Reducción consumo calefacción ≥ 7 %</td>
-          <td>20 % (con el límite de base que fija la normativa del IRPF)</td>
+          <td>Reducción consumo calefacción ≥ 7&nbsp;%</td>
+          <td>20&nbsp;% (con el límite de base que fija la normativa del IRPF)</td>
           <td>Certificado energético que lo acredite</td>
         </tr>
         <tr>
-          <td>Reducción consumo energía primaria ≥ 30 %</td>
-          <td>40 % (con el límite de base que fija la normativa del IRPF)</td>
+          <td>Reducción consumo energía primaria ≥ 30&nbsp;%</td>
+          <td>40&nbsp;% (con el límite de base que fija la normativa del IRPF)</td>
           <td>Mejora de la calificación energética</td>
         </tr>
         <tr>
           <td>Rehabilitación energética completa</td>
-          <td>60 % (con el límite anual que fija la normativa del IRPF)</td>
+          <td>60&nbsp;% (con el límite anual que fija la normativa del IRPF)</td>
           <td>En edificios residenciales colectivos</td>
         </tr>
       </tbody>
     </table></div>
 
-    <p>Para una vivienda unifamiliar, el aislamiento integral de cubierta puede alcanzar el umbral de reducción del consumo de energía primaria exigido para la deducción del 40 %. La comprobación se realiza mediante los certificados de eficiencia energética anterior y posterior a la obra.</p>
+    <p>Para una vivienda unifamiliar, el aislamiento integral de cubierta puede alcanzar el umbral de reducción del consumo de energía primaria exigido para la deducción del 40&nbsp;%. La comprobación se realiza mediante los certificados de eficiencia energética anterior y posterior a la obra.</p>
 
     <h3>Cómo aplicar la deducción</h3>
 
@@ -622,7 +625,7 @@ gtag('config', 'AW-3024885050');
     <p>No. El sistema de Certificados de Ahorro Energético es un mecanismo de <strong>financiación privada</strong> regulado por el Real Decreto 36/2023: son las grandes comercializadoras de energía, obligadas por ley, las que aportan los fondos a cambio del ahorro energético cedido. No sale de los Presupuestos Generales del Estado ni de fondos europeos, no hay convocatoria y no computa como subvención pública. Las ayudas públicas para aislamiento son otras: NextGeneration EU vía IDAE y comunidades autónomas, la deducción del IRPF y los programas autonómicos.</p>
 
     <h3>¿Qué parte del coste cubre? ¿Dónde está la trampa?</h3>
-    <p>No hay letra pequeña, pero tampoco cifras mágicas. La aportación de la comercializadora depende del ahorro energético que genere la obra, calculado con la ficha RES022 o RES010 del catálogo del Real Decreto 36/2023 y <strong>sujeto a verificación por un organismo acreditado por ENAC</strong>. Puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100 %. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD 36/2023). El importe exacto y la parte que quedaría a tu cargo solo se pueden determinar tras el estudio técnico, y se reflejan en el presupuesto cerrado antes de firmar. Desconfía de quien te dé una cifra por teléfono sin haber visto la cubierta.</p>
+    <p>No hay letra pequeña, pero tampoco cifras mágicas. La aportación de la comercializadora depende del ahorro energético que genere la obra, calculado con la ficha RES022 o RES010 del catálogo del Real Decreto 36/2023 y <strong>sujeto a verificación por un organismo acreditado por ENAC</strong>. Puede cubrir gran parte de la inversión y, en determinados casos, la actuación puede quedar cubierta al 100&nbsp;%. Importe sujeto a estudio técnico previo y a la normativa CAE vigente (RD&nbsp;36/2023). El importe exacto y la parte que quedaría a tu cargo solo se pueden determinar tras el estudio técnico, y se reflejan en el presupuesto cerrado antes de firmar. Desconfía de quien te dé una cifra por teléfono sin haber visto la cubierta.</p>
 
     <h3>¿Qué pasa si mi vivienda no cumple los requisitos del CAE?</h3>
     <p>En ese caso estudiamos las vías de ayuda pública: NextGeneration EU (subvención directa), deducción del IRPF (beneficio fiscal posterior), o los programas propios de tu comunidad autónoma. Cuando ninguna vía cubre la totalidad, queda un resto a cargo del propietario, que aparece siempre detallado en el presupuesto cerrado.</p>
@@ -643,7 +646,7 @@ gtag('config', 'AW-3024885050');
     <p>Depende del espesor y el estado del material existente. Si el aislamiento actual tiene menos de 80 mm o está degradado, generalmente se puede insuflar lana mineral por encima para reforzarlo y sigue siendo elegible al CAE. Si el aislamiento existente es reciente y eficiente, la obra no aporta suficiente ahorro adicional para generar CAE, y hay que buscar otras vías.</p>
 
     <h3>¿En qué zonas trabajáis?</h3>
-    <p>Trabajamos en 13 provincias del norte y del centro de España, en un radio de 250 km alrededor de León y Valladolid: las ocho provincias de Castilla y León, Madrid, Lugo, Ourense, Asturias y Cantabria. Fuera de esa zona no podemos ejecutar la obra.</p>
+    <p>Trabajamos en 13 provincias del norte y del centro de España, en un radio de 250 km alrededor de León y Valladolid: ocho de las nueve provincias de Castilla y León (todas salvo Soria), Madrid, Lugo, Ourense, Asturias y Cantabria. Fuera de esa zona no podemos ejecutar la obra.</p>
 
     <!-- ===== Final CTA ===== -->
     <div class="av-cta-final">
@@ -662,7 +665,7 @@ gtag('config', 'AW-3024885050');
       <h2 id="av-related-title">Sigue leyendo</h2>
       <ul class="av-related-list">
         <li><a href="/blog/que-es-el-cae-sistema-ahorro-energetico/"><span class="av-related-cat">Sistema CAE</span><span class="av-related-title">¿Qué es el CAE? Guía completa del sistema de Certificados de Ahorro Energético (2026)</span></a></li>
-        <li><a href="/blog/aislamiento-comunidades-propietarios-cae/"><span class="av-related-cat">Sistema CAE</span><span class="av-related-title">Aislar la cubierta de una comunidad de propietarios con el sistema CAE</span></a></li>
+        <li><a href="/blog/aislamiento-comunidades-propietarios-cae/"><span class="av-related-cat">Comunidades</span><span class="av-related-title">Aislar la cubierta de una comunidad de propietarios con el sistema CAE</span></a></li>
         <li><a href="/blog/zonas-climaticas-cte-aislamiento-cae/"><span class="av-related-cat">Normativa y zonas</span><span class="av-related-title">Zonas climáticas del CTE: cómo saber la tuya</span></a></li>
       </ul>
       <p class="av-related-service">¿Te interesa este tema para tu vivienda? Descubre nuestro servicio de <a href="/servicios/aislamiento-cubierta-inclinada/">aislamiento de cubierta inclinada</a>.</p>
@@ -677,11 +680,12 @@ gtag('config', 'AW-3024885050');
       <ul>
         <li>Ministerio para la Transición Ecológica — <a href="https://www.miteco.gob.es" rel="noopener noreferrer" target="_blank">miteco.gob.es</a></li>
         <li>Instituto para la Diversificación y Ahorro de la Energía — <a href="https://www.idae.es" rel="noopener noreferrer" target="_blank">idae.es</a></li>
-        <li>Real Decreto 36/2023 (Sistema CAE) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-1866" rel="noopener noreferrer" target="_blank">BOE núm. 22, 25/01/2023</a></li>
-        <li>Orden TED/815/2023 (desarrollo del Sistema CAE y catálogo de fichas estandarizadas) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-16537" rel="noopener noreferrer" target="_blank">BOE, 14/07/2023</a></li>
+        <li>Real Decreto 36/2023 (Sistema CAE) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-2027" rel="noopener noreferrer" target="_blank">BOE núm. 21, 25/01/2023</a></li>
+        <li>Orden TED/815/2023 (desarrollo parcial del Sistema CAE) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-16734" rel="noopener noreferrer" target="_blank">BOE núm. 172, 20/07/2023</a></li>
+        <li>Orden TED/845/2023 (catálogo de medidas estandarizadas) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-16940" rel="noopener noreferrer" target="_blank">BOE núm. 174, 22/07/2023</a></li>
         <li>Entidad Nacional de Acreditación — <a href="https://www.enac.es" rel="noopener noreferrer" target="_blank">enac.es</a></li>
         <li>Real Decreto 853/2021 (Rehabilitación residencial PRTR) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-16233" rel="noopener noreferrer" target="_blank">BOE núm. 239, 06/10/2021</a></li>
-        <li>Real Decreto-ley 19/2021 (Deducciones IRPF) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-15778" rel="noopener noreferrer" target="_blank">BOE núm. 234, 30/09/2021</a></li>
+        <li>Real Decreto-ley 19/2021 (Deducciones IRPF) — <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-16230" rel="noopener noreferrer" target="_blank">BOE núm. 239, 06/10/2021</a></li>
       </ul>
 
       <p class="updated">Última actualización: 14 de octubre de 2026</p>
@@ -710,7 +714,8 @@ gtag('config', 'AW-3024885050');
         <li><a href="/servicios/aislamiento-desvan/">Aislamiento de desván</a></li>
         <li><a href="/servicios/aislamiento-cubierta-inclinada/">Aislamiento de cubierta inclinada</a></li>
         <li><a href="/servicios/aerotermia/">Aerotermia</a></li>
-        <li><a href="/servicios/aire-aire/">Bomba de calor aire-aire</a></li>
+        <li><a href="/servicios/aire-aire/">Bomba de calor <span class="nowrap">aire-aire</span></a></li>
+        <li><a href="/comunidades-de-propietarios/">Comunidades de propietarios</a></li>
       </ul></div>
       <div class="av-footer-col"><p class="av-footer-heading">Contenido</p><ul>
         <li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li>
