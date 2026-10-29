@@ -2093,3 +2093,22 @@
 /* Fond sombre : graisse 700 pour épaissir les déliés de la serif (mots pêche / vert pâle sur vert profond). */
 .hero h1, .hero h1 em, .hero h1 .euro-accent,
 .cae-flow h2, .metodo h2, .sedes h2, .sede-card h3, .cta-final h2, .av-trust-title { font-weight: 700; }
+
+/* ===== COMUNIDADES DE PROPIETARIOS (accueil) ===== */
+.comunidades { background: var(--cream); }
+.comunidades-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+.comunidades-text > p { color: var(--forest); opacity: 0.85; font-size: 1.05rem; line-height: 1.7; max-width: 580px; }
+.comunidades-points { list-style: none; margin: 1.8rem 0 2.2rem; display: grid; gap: 0.9rem; max-width: 580px; }
+.comunidades-points li { position: relative; padding-left: 2rem; line-height: 1.55; color: var(--forest); }
+.comunidades-points li::before {
+  content: ''; position: absolute; left: 0; top: 0.2em; width: 1.15rem; height: 1.15rem; border-radius: 50%;
+  background: var(--brand-green-deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 72% no-repeat;
+}
+.comunidades-points strong { color: var(--forest-deep); }
+.comunidades-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.comunidades-figure { margin: 0; }
+.comunidades-figure img { width: 100%; height: auto; display: block; border-radius: 14px; box-shadow: 0 24px 60px -24px rgba(26, 46, 31, 0.35); }
+.comunidades-figure figcaption { margin-top: 0.8rem; font-size: 0.85rem; color: var(--sage); text-align: center; }
+@media (max-width: 900px) {
+  .comunidades-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
