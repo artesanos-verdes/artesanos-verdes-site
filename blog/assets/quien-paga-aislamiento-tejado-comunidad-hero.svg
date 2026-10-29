@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Source Sans 3, sans-serif" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', sans-serif" role="img" aria-labelledby="t d">
   <title id="t">Elementos comunes y privativos de un edificio de viviendas</title>
   <desc id="d">Sección esquemática de un edificio de cuatro plantas con tejado inclinado. La cubierta, el desván, los forjados, la fachada, el portal y la escalera aparecen en tonos verdes como elementos comunes; las viviendas y los locales, en blanco, como elementos privativos. Sobre el suelo del desván hay una capa de aislamiento. El texto explica que el gasto común se reparte según la cuota de participación, salvo que el título o los estatutos establezcan otro reparto.</desc>
   <defs>
@@ -60,8 +60,8 @@
 
   <!-- Leyenda -->
   <text x="1000" y="170" font-size="22" font-weight="700" letter-spacing="3" fill="#2d7a4e">PROPIEDAD HORIZONTAL</text>
-  <text x="1000" y="238" font-family="Source Serif 4, serif" font-size="58" font-weight="700" fill="#1a4d30">Lo común se paga</text>
-  <text x="1000" y="304" font-family="Source Serif 4, serif" font-size="58" font-weight="700" fill="#1a4d30">entre todos</text>
+  <text x="1000" y="238" font-family="'Source Serif 4', serif" font-size="58" font-weight="700" fill="#1a4d30">Lo común se paga</text>
+  <text x="1000" y="304" font-family="'Source Serif 4', serif" font-size="58" font-weight="700" fill="#1a4d30">entre todos</text>
   <rect x="1000" y="332" width="80" height="5" rx="2" fill="#b8733a"/>
 
   <rect x="1000" y="380" width="44" height="44" rx="8" fill="#2d7a4e"/>

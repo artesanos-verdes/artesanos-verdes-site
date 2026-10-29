@@ -1588,3 +1588,16 @@ body::before {
     margin: 0 !important;
   }
 }
+
+/* Les boutons et encarts d'appel à l'action placés dans .av-content gardent leur style :
+   sans ces règles, « .av-content a » (plus spécifique) les recolore en vert et les souligne,
+   ce qui rendait le texte du bouton final presque illisible sur fond vert. */
+.av-content .av-cta-button,
+.av-content .av-cta-button:hover { color: #fff; text-decoration: none; }
+.av-content .av-cta-inline,
+.av-content .av-cta-inline:hover { color: var(--av-forest-deep); text-decoration: none; }
+
+/* Tableaux : défilement horizontal sur petit écran au lieu de déborder de la page. */
+@media (max-width: 700px) {
+  .av-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
