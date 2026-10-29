@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Source Sans 3, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Elementos comunes y privativos de un edificio de viviendas</title>
+  <desc id="d">Sección esquemática de un edificio de cuatro plantas con tejado inclinado. La cubierta, el desván, los forjados, la fachada, el portal y la escalera aparecen en tonos verdes como elementos comunes; las viviendas y los locales, en blanco, como elementos privativos. Sobre el suelo del desván hay una capa de aislamiento. El texto explica que el gasto común se reparte según la cuota de participación, salvo que el título o los estatutos establezcan otro reparto.</desc>
+  <defs>
+    <pattern id="wool" width="20" height="12" patternUnits="userSpaceOnUse">
+      <rect width="20" height="12" fill="#ffffff"/>
+      <path d="M0,8 q5,-8 10,0 t10,0" fill="none" stroke="#b8733a" stroke-width="2.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <rect x="70" y="900" width="920" height="6" rx="3" fill="#1a4d30" opacity="0.25"/>
+
+  <!-- Cubierta (elemento común) y desván -->
+  <polygon points="96,446 530,178 964,446" fill="#2d7a4e"/>
+  <polygon points="178,414 530,197 882,414" fill="#c1d9cc"/>
+  <!-- Aislamiento sobre el suelo del desván -->
+  <polygon points="178,414 882,414 833.4,384 226.6,384" fill="url(#wool)" stroke="#b8733a" stroke-width="2"/>
+
+  <!-- Cuerpo del edificio: viviendas y locales (privativos) -->
+  <rect x="170" y="420" width="720" height="480" fill="#ffffff" stroke="#1a4d30" stroke-width="8"/>
+
+  <!-- Escalera y portal (elementos comunes) -->
+  <rect x="500" y="427" width="60" height="469" fill="#c1d9cc"/>
+  <line x1="500" y1="424" x2="500" y2="896" stroke="#1a4d30" stroke-width="4"/>
+  <line x1="560" y1="424" x2="560" y2="896" stroke="#1a4d30" stroke-width="4"/>
+  <polyline points="504.0,896.0 504.0,882.2 510.5,882.2 510.5,868.5 517.0,868.5 517.0,854.8 523.5,854.8 523.5,841.0 530.0,841.0 530.0,827.2 536.5,827.2 536.5,813.5 543.0,813.5 543.0,799.8 549.5,799.8 549.5,786.0 556.0,786.0" fill="none" stroke="#1a4d30" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="504.0,776.0 504.0,762.2 510.5,762.2 510.5,748.5 517.0,748.5 517.0,734.8 523.5,734.8 523.5,721.0 530.0,721.0 530.0,707.2 536.5,707.2 536.5,693.5 543.0,693.5 543.0,679.8 549.5,679.8 549.5,666.0 556.0,666.0" fill="none" stroke="#1a4d30" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="504.0,656.0 504.0,642.2 510.5,642.2 510.5,628.5 517.0,628.5 517.0,614.8 523.5,614.8 523.5,601.0 530.0,601.0 530.0,587.2 536.5,587.2 536.5,573.5 543.0,573.5 543.0,559.8 549.5,559.8 549.5,546.0 556.0,546.0" fill="none" stroke="#1a4d30" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Escalera de mano hacia la trampilla del desván -->
+  <line x1="518" y1="536" x2="518" y2="427" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="542" y1="536" x2="542" y2="427" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="518" y1="522" x2="542" y2="522" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="518" y1="508" x2="542" y2="508" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="518" y1="494" x2="542" y2="494" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="518" y1="480" x2="542" y2="480" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="518" y1="466" x2="542" y2="466" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="518" y1="452" x2="542" y2="452" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="518" y1="438" x2="542" y2="438" stroke="#1a4d30" stroke-width="3"/>
+
+  <!-- Forjados (elementos comunes) -->
+  <rect x="166" y="413" width="728" height="14" fill="#1a4d30"/>
+  <rect x="514" y="413" width="32" height="14" fill="#c1d9cc"/>
+  <rect x="170" y="536" width="720" height="10" fill="#1a4d30"/>
+  <rect x="170" y="656" width="720" height="10" fill="#1a4d30"/>
+  <rect x="170" y="776" width="720" height="10" fill="#1a4d30"/>
+
+  <!-- Rótulos del edificio -->
+  <text x="288.4" y="301.3" transform="rotate(-31.7 288.4 301.3)" text-anchor="middle" font-size="30" font-weight="700" fill="#1a4d30">Cubierta</text>
+  <text x="530" y="330" text-anchor="middle" font-size="34" font-weight="700" fill="#1a4d30">Desván</text>
+  <text x="337" y="494" text-anchor="middle" font-size="30" font-weight="700" fill="#1a4d30">Último piso</text>
+  <text x="337" y="612" text-anchor="middle" font-size="26" fill="#1a4d30" opacity="0.7">Vivienda</text>
+  <text x="337" y="732" text-anchor="middle" font-size="26" fill="#1a4d30" opacity="0.7">Vivienda</text>
+  <text x="337" y="852" text-anchor="middle" font-size="26" fill="#1a4d30" opacity="0.7">Local</text>
+  <text x="723" y="494" text-anchor="middle" font-size="30" font-weight="700" fill="#1a4d30">Último piso</text>
+  <text x="723" y="612" text-anchor="middle" font-size="26" fill="#1a4d30" opacity="0.7">Vivienda</text>
+  <text x="723" y="732" text-anchor="middle" font-size="26" fill="#1a4d30" opacity="0.7">Vivienda</text>
+  <text x="723" y="852" text-anchor="middle" font-size="26" fill="#1a4d30" opacity="0.7">Local</text>
+
+  <!-- Leyenda -->
+  <text x="1000" y="170" font-size="22" font-weight="700" letter-spacing="3" fill="#2d7a4e">PROPIEDAD HORIZONTAL</text>
+  <text x="1000" y="238" font-family="Source Serif 4, serif" font-size="58" font-weight="700" fill="#1a4d30">Lo común se paga</text>
+  <text x="1000" y="304" font-family="Source Serif 4, serif" font-size="58" font-weight="700" fill="#1a4d30">entre todos</text>
+  <rect x="1000" y="332" width="80" height="5" rx="2" fill="#b8733a"/>
+
+  <rect x="1000" y="380" width="44" height="44" rx="8" fill="#2d7a4e"/>
+  <text x="1066" y="414" font-size="34" font-weight="700" fill="#1a4d30">Elementos comunes</text>
+  <text x="1066" y="456" font-size="26" fill="#1a4d30" opacity="0.85">Cubierta, forjados, fachada, portal</text>
+  <text x="1066" y="490" font-size="26" fill="#1a4d30" opacity="0.85">y escalera. También el desván, salvo</text>
+  <text x="1066" y="524" font-size="26" fill="#1a4d30" opacity="0.85">que el título diga otra cosa.</text>
+
+  <rect x="1000" y="570" width="44" height="44" rx="8" fill="#ffffff" stroke="#1a4d30" stroke-width="3"/>
+  <text x="1066" y="604" font-size="34" font-weight="700" fill="#1a4d30">Elementos privativos</text>
+  <text x="1066" y="646" font-size="26" fill="#1a4d30" opacity="0.85">Cada vivienda y cada local.</text>
+
+  <rect x="1000" y="690" width="44" height="44" rx="8" fill="url(#wool)" stroke="#b8733a" stroke-width="3"/>
+  <text x="1066" y="724" font-size="34" font-weight="700" fill="#1a4d30">Aislamiento del desván</text>
+  <text x="1066" y="766" font-size="26" fill="#1a4d30" opacity="0.85">Una obra sobre un elemento común.</text>
+
+  <rect x="1000" y="806" width="540" height="2" fill="#1a4d30" opacity="0.2"/>
+  <text x="1000" y="852" font-size="26" fill="#1a4d30">El gasto común se reparte según la cuota</text>
+  <text x="1000" y="888" font-size="26" fill="#1a4d30">de participación, salvo que el título o los</text>
+  <text x="1000" y="924" font-size="26" fill="#1a4d30">estatutos establezcan otro reparto.</text>
+</svg>

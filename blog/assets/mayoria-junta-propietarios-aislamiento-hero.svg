@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">De la junta de propietarios al aislamiento de la cubierta</title>
+  <desc id="hero-desc">Sección esquemática de un edificio de viviendas. En la planta baja, varios propietarios votan alrededor de una mesa y la mayoría levanta la mano. Una flecha discontinua sale del edificio, pasa por un acta firmada y sube hasta la cubierta, donde una capa de aislamiento cubre el suelo del desván.</desc>
+
+  <defs>
+    <marker id="hero-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#22a044"/>
+    </marker>
+    <clipPath id="hero-insulation-clip">
+      <polygon points="528,400 1072,400 1031,370 569,370"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fondo y terreno -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <rect x="0" y="860" width="1600" height="140" fill="#c1d9cc"/>
+  <line x1="0" y1="860" x2="1600" y2="860" stroke="#2d7a4e" stroke-width="4"/>
+
+  <!-- Cubierta y desván -->
+  <polygon points="476,404 800,166 1124,404" fill="#b8733a"/>
+  <polygon points="528,400 800,201 1072,400" fill="#faf6ec"/>
+
+  <!-- Capa de aislamiento sobre el suelo del desván -->
+  <polygon points="528,400 1072,400 1031,370 569,370" fill="#c1d9cc"/>
+  <g clip-path="url(#hero-insulation-clip)">
+    <path d="M572 392 q12 -12 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0" fill="none" stroke="#2d7a4e" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Muros y forjados -->
+  <rect x="523" y="403" width="554" height="454" fill="#ffffff"/>
+  <g stroke="#1a4d30" stroke-width="5">
+    <line x1="520" y1="400" x2="1080" y2="400"/>
+    <line x1="520" y1="515" x2="1080" y2="515"/>
+    <line x1="520" y1="630" x2="1080" y2="630"/>
+    <line x1="520" y1="745" x2="1080" y2="745"/>
+  </g>
+  <rect x="520" y="400" width="560" height="460" fill="none" stroke="#1a4d30" stroke-width="6"/>
+
+  <!-- Ventanas de las plantas -->
+  <g fill="#c1d9cc" stroke="#1a4d30" stroke-width="4">
+    <rect x="565" y="428" width="80" height="58" rx="3"/>
+    <rect x="690" y="428" width="80" height="58" rx="3"/>
+    <rect x="830" y="428" width="80" height="58" rx="3"/>
+    <rect x="955" y="428" width="80" height="58" rx="3"/>
+    <rect x="565" y="543" width="80" height="58" rx="3"/>
+    <rect x="690" y="543" width="80" height="58" rx="3"/>
+    <rect x="830" y="543" width="80" height="58" rx="3"/>
+    <rect x="955" y="543" width="80" height="58" rx="3"/>
+    <rect x="565" y="658" width="80" height="58" rx="3"/>
+    <rect x="690" y="658" width="80" height="58" rx="3"/>
+    <rect x="830" y="658" width="80" height="58" rx="3"/>
+    <rect x="955" y="658" width="80" height="58" rx="3"/>
+  </g>
+  <g stroke="#1a4d30" stroke-width="3">
+    <line x1="605" y1="428" x2="605" y2="486"/>
+    <line x1="730" y1="428" x2="730" y2="486"/>
+    <line x1="870" y1="428" x2="870" y2="486"/>
+    <line x1="995" y1="428" x2="995" y2="486"/>
+    <line x1="605" y1="543" x2="605" y2="601"/>
+    <line x1="730" y1="543" x2="730" y2="601"/>
+    <line x1="870" y1="543" x2="870" y2="601"/>
+    <line x1="995" y1="543" x2="995" y2="601"/>
+    <line x1="605" y1="658" x2="605" y2="716"/>
+    <line x1="730" y1="658" x2="730" y2="716"/>
+    <line x1="870" y1="658" x2="870" y2="716"/>
+    <line x1="995" y1="658" x2="995" y2="716"/>
+  </g>
+
+  <!-- Planta baja: la junta -->
+  <rect x="1000" y="775" width="50" height="85" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <g fill="#1a4d30">
+    <circle cx="660" cy="778" r="13"/>
+    <circle cx="708" cy="778" r="13"/>
+    <circle cx="756" cy="778" r="13"/>
+    <circle cx="804" cy="778" r="13"/>
+    <circle cx="852" cy="778" r="13"/>
+    <circle cx="900" cy="778" r="13"/>
+  </g>
+  <g stroke="#2d7a4e" stroke-width="7" stroke-linecap="round">
+    <line x1="673" y1="806" x2="684" y2="770"/>
+    <line x1="721" y1="806" x2="732" y2="770"/>
+    <line x1="817" y1="806" x2="828" y2="770"/>
+    <line x1="865" y1="806" x2="876" y2="770"/>
+  </g>
+  <g fill="#1a4d30">
+    <circle cx="685" cy="765" r="6"/>
+    <circle cx="733" cy="765" r="6"/>
+    <circle cx="829" cy="765" r="6"/>
+    <circle cx="877" cy="765" r="6"/>
+  </g>
+  <g fill="#2d7a4e">
+    <path d="M641 822 V811 A19 19 0 0 1 679 811 V822 Z"/>
+    <path d="M689 822 V811 A19 19 0 0 1 727 811 V822 Z"/>
+    <path d="M737 822 V811 A19 19 0 0 1 775 811 V822 Z"/>
+    <path d="M785 822 V811 A19 19 0 0 1 823 811 V822 Z"/>
+    <path d="M833 822 V811 A19 19 0 0 1 871 811 V822 Z"/>
+    <path d="M881 822 V811 A19 19 0 0 1 919 811 V822 Z"/>
+  </g>
+  <rect x="630" y="822" width="300" height="14" rx="7" fill="#1a4d30"/>
+  <g stroke="#1a4d30" stroke-width="6" stroke-linecap="round">
+    <line x1="650" y1="836" x2="650" y2="856"/>
+    <line x1="910" y1="836" x2="910" y2="856"/>
+  </g>
+
+  <!-- Recorrido del acuerdo: de la junta al acta y a la cubierta -->
+  <path d="M1086 812 H1250 V380 H1114" fill="none" stroke="#22a044" stroke-width="5" stroke-dasharray="16 12" stroke-linejoin="round" marker-end="url(#hero-arrow)"/>
+  <path d="M1196 538 a10 10 0 0 1 10 -10 H1274 L1304 558 V654 a10 10 0 0 1 -10 10 H1206 a10 10 0 0 1 -10 -10 Z" fill="#ffffff" stroke="#1a4d30" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M1274 528 V558 H1304" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4" stroke-linejoin="round"/>
+  <g stroke="#c1d9cc" stroke-width="7" stroke-linecap="round">
+    <line x1="1216" y1="568" x2="1262" y2="568"/>
+    <line x1="1216" y1="590" x2="1284" y2="590"/>
+    <line x1="1216" y1="612" x2="1284" y2="612"/>
+  </g>
+  <path d="M1216 642 q10 -16 20 0 t20 0 t20 0" fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Rótulos -->
+  <g stroke="#1a4d30" stroke-width="3">
+    <line x1="480" y1="350" x2="590" y2="386"/>
+    <line x1="480" y1="800" x2="630" y2="806"/>
+  </g>
+  <circle cx="590" cy="386" r="7" fill="#1a4d30"/>
+  <circle cx="630" cy="806" r="7" fill="#1a4d30"/>
+
+  <text x="468" y="318" text-anchor="end" font-family="'Source Serif 4', serif" font-size="46" font-weight="700" fill="#1a4d30">Aislamiento</text>
+  <text x="468" y="360" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">sobre el suelo del desván</text>
+
+  <text x="468" y="770" text-anchor="end" font-family="'Source Serif 4', serif" font-size="46" font-weight="700" fill="#1a4d30">Junta</text>
+  <text x="468" y="810" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">votan la obra y</text>
+  <text x="468" y="846" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">la cesión del ahorro</text>
+
+  <text x="1328" y="566" font-family="'Source Serif 4', serif" font-size="46" font-weight="700" fill="#1a4d30">Acta</text>
+  <text x="1328" y="606" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">asistentes, votos</text>
+  <text x="1328" y="642" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">y firma digital</text>
+</svg>
