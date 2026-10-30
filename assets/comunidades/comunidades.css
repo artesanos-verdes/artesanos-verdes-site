@@ -502,3 +502,27 @@ html:not(.js) #imprimirDocs { display: none; }
   html.cm-imprimir-docs .cm-impresion-pie { margin-top: 1rem; font-size: 9pt; color: #5a6b4a; }
 }
 @page { margin: 14mm; }
+
+/* ---------- Propuesta en PDF (lote 1-C) ----------
+   Héroe : enlace terciario bajo los dos botones. CTA final : tercer botón,
+   mismo contorno claro que « Enviar fotos por WhatsApp ». */
+.cm-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  margin-top: 0.9rem;
+  color: var(--green-on-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(141, 212, 168, 0.5);
+  text-underline-offset: 4px;
+}
+.cm-pdf svg { width: 18px; height: 18px; flex-shrink: 0; }
+.cm-pdf:hover { color: #fff; text-decoration-color: #fff; }
+.cm-pdf:focus-visible { outline: 2px solid var(--green-on-dark); outline-offset: 3px; border-radius: 4px; }
+.cm-btn-pdf { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+.cm-btn-pdf svg { width: 18px; height: 18px; flex-shrink: 0; }
+.cm-btn-pdf:hover { background: #fff; color: var(--forest); border-color: #fff; }
+.cm-btn-pdf:focus-visible { outline: 2px solid var(--green-on-dark); outline-offset: 3px; }

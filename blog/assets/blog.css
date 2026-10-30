@@ -1461,6 +1461,12 @@ aside.av-cta-inline p { margin: 0; }
   .av-article-card:not(.featured) .av-article-card-visual--diagram img {
     object-fit: cover;
   }
+  /* Infographies pleines de texte : affichees en entier dans la vignette
+     (recadrees, elles etaient coupees en plein mot ; verif. lot 1-C). Les
+     pictogrammes (*-card.svg, card-*.svg) restent en cover. */
+  .av-article-card:not(.featured) .av-article-card-visual--infografia img {
+    object-fit: contain;
+  }
   .av-article-card:not(.featured) .av-article-card-body { padding: 14px 16px 12px; }
   .av-article-card:not(.featured) .av-article-card-tag { margin-bottom: 6px; }
   .av-article-card:not(.featured) h2 { font-size: 18px; line-height: 1.28; margin-bottom: 6px; }
@@ -2299,6 +2305,8 @@ body::before {
   line-height: 1.2;
   letter-spacing: -0.012em;
   color: var(--av-forest-deep);
+  /* Pas de mot orphelin en fin de titre (vérif. lot 1-B, point K). */
+  text-wrap: balance;
 }
 
 .av-related .av-related-list a:hover .av-related-title { color: var(--av-brand-green-deep); }

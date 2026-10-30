@@ -1520,6 +1520,8 @@
   .testimonio:hover { transform: translateY(-5px); }
   .testimonio-mark {
     font-family: var(--display);
+    /* 600 : Source Serif 4 n'est chargee qu'en 500-700 (LOT1B §A) */
+    font-weight: 600;
     font-size: 5rem;
     line-height: 0.5;
     color: var(--brand-green);
@@ -2446,9 +2448,11 @@
     box-shadow: none; border: none; background: transparent;
     min-width: 0; padding: 0 0 .6rem .9rem;
   }
+  /* display: block (et non flex) : en flex, l'espace avant
+     <span class="nowrap">aire-aire</span> disparaissait (lot 1-C). */
   .nav-sub a {
-    display: flex; align-items: center; min-height: 40px;
-    color: var(--on-dark); font-size: .95rem; padding: .4rem .5rem;
+    display: block; min-height: 40px; line-height: 1.5;
+    color: var(--on-dark); font-size: .95rem; padding: .55rem .5rem;
     white-space: normal; text-transform: none; letter-spacing: .01em;
   }
   .nav-sub a:hover { background: rgba(250, 246, 236, 0.07); color: #fff; }
@@ -3059,8 +3063,11 @@ html:not(.js) .servicios-quiz { display: none; }
 @media (max-width: 768px) {
   /* liens de 44 px de haut (cible tactile) au lieu de 19 px */
   .footer-col ul { gap: 0; }
-  /* overflow-wrap : l'adresse e-mail ne deborde pas d'une colonne etroite */
-  .footer-col a { display: flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+  /* overflow-wrap : l'adresse e-mail ne deborde pas d'une colonne etroite.
+     display: block + padding (et non flex) : en flex, « Bomba de calor » et
+     <span class="nowrap">aire-aire</span> devenaient deux elements separes et
+     l'espace entre eux disparaissait (« caloraire-aire », lot 1-C). */
+  .footer-col a { display: block; padding: 0.65rem 0; min-height: 44px; line-height: 1.5; overflow-wrap: anywhere; }
   .footer-col .footer-link-btn { display: flex; align-items: center; min-height: 44px; }
   .footer-col h5,
   .footer-title { margin-bottom: 0.6rem; }
@@ -3167,6 +3174,22 @@ html:not(.js) .servicios-quiz { display: none; }
   .certs-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
+/* ===== MENU LATERAL EN HAUTEUR REDUITE (lot 1-C, verif. visuel-menu-hauteur) =====
+   Avec le lien « Comunidades », le panneau depassait l'ecran : bouton
+   « Estudio gratuito » coupe en 375 x 667, Llamar / WhatsApp coupes en
+   1024 x 768. Liens de 44 px (cible tactile WCAG), marges resserrees.
+   Au-dessus de 640 px, 7rem (et non moins) : le premier lien reste sous le
+   burger (bas a 122 px avec la topbar). Le panneau garde overflow-y: auto. */
+@media (max-width: 1180px) and (max-height: 820px) {
+  .nav-links { padding-top: 7rem; }
+  .nav-links > li > a { min-height: 44px; }
+  .nav-links > li:has(> .nav-cta) { padding-top: 0.75rem; }
+}
+@media (max-width: 640px) and (max-height: 820px) {
+  /* nav de 64 px sans topbar */
+  .nav-links { padding-top: 4.75rem; }
+}
+
 /* ===== MOINS D'ANIMATIONS (prefers-reduced-motion, audit #7) ===== */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
@@ -3233,3 +3256,275 @@ html:not(.js) [data-quiz-open] { display: none; }
 /* Fond sombre : graisse 700 pour épaissir les déliés de la serif (mots pêche / vert pâle sur vert profond). */
 .hero h1, .hero h1 em, .hero h1 .euro-accent,
 .cae-flow h2, .metodo h2, .sedes h2, .sede-card h3, .cta-final h2, .av-trust-title { font-weight: 700; }
+
+/* =====================================================================
+   LOT 1-C (28/10/2026) : maillage « Comunidades », finitions
+   ===================================================================== */
+
+/* ===== FORMULAIRE : champs de meme hauteur, carte plus large =====
+   Input e-mail et select #provincia d'une meme rangee : 53 px contre 48 px
+   selon le chargement des polices. Hauteur fixe commune (52,8 px). */
+.form-group input,
+.form-group select { height: 3.3rem; line-height: 1.25; }
+/* Chevron a 1rem du bord (12 px) : 2,4rem suffisent et evitent « …aerotermi… » a 390 px. */
+.form-group select { padding-right: 2.4rem; }
+/* De 969 a 1300 px, la carte formulaire etait trop etroite : selects
+   tronques (« Comunidad de propietarios », « Selecciona tu provincia »).
+   Carte plus large (colonne d'infos plus etroite, gouttiere reduite)… */
+@media (min-width: 969px) and (max-width: 1300px) {
+  .contacto-inner { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 3rem; }
+  .form { padding: 2.5rem 2.25rem; }
+}
+/* … et, jusqu'a 1180 px, une seule colonne de champs. */
+@media (min-width: 969px) and (max-width: 1180px) {
+  .form-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ===== TITRES DE CARTES : pas de mot orphelin ===== */
+.guia-title { text-wrap: balance; }
+
+/* Bloc Guias a 8 cartes (page comunidades) : 4 colonnes au-dela de 968 px
+   (3 colonnes laissaient 2 cartes seules sur la derniere ligne). */
+@media (min-width: 969px) {
+  .guias-grid:has(> :nth-child(8):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ===== ACCUEIL : section « Comunidades de propietarios » (#comunidades) ===== */
+.comunidades-home { background: var(--cream); }
+.comunidades-home-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 4rem;
+  align-items: center;
+}
+.comunidades-home-media { margin: 0; }
+.comunidades-home-media picture,
+.comunidades-home-media img {
+  display: block;
+  width: 100%;
+}
+/* Variantes dediees au format affiche (verif. visuel-photo-edificio-resolution) :
+   edificio-comunidad-4x3*.webp a partir de 969 px, -16x9*.webp en dessous,
+   meme cadrage que l'ancien recadrage de la panoramique (1600 x 646, qui
+   etait agrandie), tirees de la couverture de la brochure. object-fit reste
+   pour le repli JPEG panoramique. */
+.comunidades-home-media img {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 62% 50%;
+  border-radius: 12px;
+  box-shadow: 0 24px 50px -24px rgba(10, 24, 16, 0.45);
+}
+/* Taille des autres H2 de l'accueil (regle globale h2), verif. visuel-h2-comunidades-taille. */
+.comunidades-home h2 { margin-bottom: 1.1rem; text-wrap: balance; }
+.comunidades-home-lead { font-size: 1.08rem; line-height: 1.7; color: var(--forest); margin-bottom: 1.4rem; }
+.comunidades-home-puntos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.comunidades-home-puntos li {
+  position: relative;
+  padding-left: 1.75rem;
+  font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: var(--forest-deep);
+}
+.comunidades-home-puntos li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.12em;
+  width: 1.15rem; height: 1.15rem;
+  border-radius: 50%;
+  background: var(--brand-green-deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M20 6L9 17l-5-5' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 0.7rem no-repeat;
+}
+.comunidades-home-coste {
+  padding: 0.95rem 1.1rem;
+  border-left: 3px solid var(--terracotta);
+  border-radius: 0 8px 8px 0;
+  background: rgba(200, 148, 74, 0.1);
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--forest-deep);
+  margin-bottom: 1.75rem;
+}
+.comunidades-home-coste small { display: block; margin-top: 0.35rem; font-size: 0.85em; line-height: 1.5; color: var(--forest); opacity: 0.85; }
+.comunidades-home-acciones { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.comunidades-home-acciones .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+/* Contour plus marque que .btn-ghost (15 %) sur fond creme. */
+.comunidades-home-acciones .btn-ghost { border-color: rgba(26, 46, 31, 0.45); }
+.comunidades-home-acciones .btn:focus-visible { outline: 2px solid var(--brand-green-deep); outline-offset: 3px; }
+@media (max-width: 968px) {
+  .comunidades-home-inner { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; }
+  .comunidades-home-media img { aspect-ratio: 16 / 9; }
+}
+@media (max-width: 560px) {
+  .comunidades-home-puntos { grid-template-columns: minmax(0, 1fr); gap: 0.55rem; }
+  .comunidades-home-acciones { flex-direction: column; align-items: stretch; }
+  .comunidades-home-acciones .btn { justify-content: center; text-align: center; }
+}
+
+/* ===== HUB /servicios/ : bandeau « Comunidades de propietarios » ===== */
+.comunidades-banda {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  max-width: 1000px;
+  margin: 1.6rem auto 0;
+  text-align: left;
+  text-decoration: none;
+  color: var(--on-dark);
+  background: var(--forest);
+  border: 1px solid var(--forest);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.comunidades-banda:hover { transform: translateY(-6px); box-shadow: 0 22px 50px rgba(26, 46, 31, .22); }
+.comunidades-banda:focus-visible { outline: 3px solid var(--brand-green-deep); outline-offset: 3px; }
+.comunidades-banda-media { display: block; min-height: 220px; background: #11331f; }
+.comunidades-banda-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; }
+.comunidades-banda-body { display: flex; flex-direction: column; gap: .7rem; padding: 1.9rem 2rem 2rem; }
+.comunidades-banda-cat {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--accent-on-dark);
+}
+.comunidades-banda h3 { font-size: 1.5rem; font-weight: 700; color: #fff; margin: 0; text-wrap: balance; }
+.comunidades-banda-txt { font-size: .98rem; line-height: 1.6; color: var(--on-dark); }
+.comunidades-banda-link { display: inline-flex; align-items: center; gap: .4rem; margin-top: auto; padding-top: .3rem; font-weight: 600; color: var(--green-on-dark); }
+.comunidades-banda:hover .comunidades-banda-link { gap: .7rem; }
+@media (max-width: 768px) {
+  .comunidades-banda { grid-template-columns: minmax(0, 1fr); }
+  .comunidades-banda-media { min-height: 0; aspect-ratio: 16 / 7; }
+  .comunidades-banda-body { padding: 1.5rem 1.4rem 1.6rem; }
+}
+
+/* ===== PAGE DESVAN : encadre « ¿Es usted presidente o administrador…? » ===== */
+.comunidad-aviso {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 1.1rem 1.5rem;
+  align-items: center;
+  /* largeur du conteneur de #oferta (1100 px), comme la grille des criteres
+     juste au-dessus (verif. visuel-desvan-aviso-largeur) */
+  max-width: none;
+  margin: 2.5rem 0 0;
+  padding: 1.5rem 1.75rem;
+  text-align: left;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--brand-green-deep);
+  border-radius: 0 12px 12px 0;
+}
+.comunidad-aviso-icono {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(34, 160, 68, 0.1);
+  color: var(--brand-green-deep);
+}
+.comunidad-aviso-icono svg { width: 26px; height: 26px; }
+.comunidad-aviso h3 { font-size: 1.3rem; margin: 0 0 .35rem; text-wrap: balance; }
+.comunidad-aviso p { font-size: .97rem; line-height: 1.6; color: var(--forest); }
+.comunidad-aviso .btn { white-space: nowrap; }
+.comunidad-aviso .btn:focus-visible { outline: 2px solid var(--brand-green-deep); outline-offset: 3px; }
+@media (max-width: 860px) {
+  .comunidad-aviso { grid-template-columns: auto minmax(0, 1fr); }
+  .comunidad-aviso .btn { grid-column: 1 / -1; justify-self: start; white-space: normal; }
+}
+@media (max-width: 480px) {
+  .comunidad-aviso { grid-template-columns: minmax(0, 1fr); padding: 1.3rem 1.2rem; }
+  .comunidad-aviso .btn { justify-self: stretch; justify-content: center; text-align: center; }
+}
+
+/* ===== PAGE DESVAN : « Materiales que instalamos » (#material) =====
+   Donnees : MATERIALES.md (CRM de l'entreprise, fiches fabricants). */
+.materiales-inner { max-width: 1200px; margin: 0 auto; }
+.materiales-head { max-width: 760px; margin-bottom: 2.5rem; }
+.materiales-head p:not(.section-num) { font-size: 1.05rem; line-height: 1.7; color: var(--forest); }
+.materiales-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.materiales-card {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  padding: 1.6rem 1.5rem 1.4rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.materiales-tag {
+  align-self: flex-start;
+  padding: .25rem .7rem;
+  border-radius: 100px;
+  background: rgba(34, 160, 68, 0.1);
+  color: var(--link);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.materiales-card h3 { font-size: 1.45rem; margin: .35rem 0 0; }
+.materiales-marca { font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--terracotta-deep); }
+.materiales-tipo { font-size: .95rem; line-height: 1.55; color: var(--forest); }
+.materiales-datos { margin: .6rem 0 0; border-top: 1px solid var(--line); }
+.materiales-datos div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.materiales-datos dt { font-size: .9rem; color: var(--forest); opacity: .8; }
+.materiales-datos dd {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.05rem;
+  color: var(--forest-deep);
+  white-space: nowrap;
+  text-align: right;
+}
+.materiales-nota { margin-top: .5rem; font-size: .88rem; line-height: 1.5; color: var(--sage); }
+/* Les tableaux des 3 cartes commencent a la meme hauteur : les cartes
+   partagent les rangees de la grille (subgrid), quelle que soit la longueur
+   de la description (celle de VOLCALIS EASY passe sur 3 lignes entre 969 et
+   ~1140 px, verif. visuel-materiales-alignement). Repli sans subgrid :
+   2 lignes reservees. */
+@media (min-width: 969px) {
+  .materiales-tipo { min-height: 3.1em; }
+  @supports (grid-template-rows: subgrid) {
+    .materiales-card {
+      display: grid;
+      grid-row: span 6; /* etiquette, titre, marque, description, tableau, note */
+      grid-template-rows: subgrid;
+      align-content: start;
+    }
+    .materiales-tag { justify-self: start; }
+    .materiales-tipo { min-height: 0; }
+  }
+}
+/* Fiche detaillee d'Isolene 4 (ancienne section « Material utilizado »). */
+.materiales-detalle { margin-top: 4.5rem; }
+.materiales-detalle h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1.1; }
+.materiales-detalle h3 em { font-style: normal; color: var(--brand-green-deep); }
+@media (max-width: 968px) {
+  .materiales-grid { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
+  .materiales-detalle { margin-top: 3.5rem; }
+}

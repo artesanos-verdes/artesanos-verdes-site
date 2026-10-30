@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-labelledby="junta-title junta-desc" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif">
+  <title id="junta-title">Aprobar el aislamiento en la Junta de propietarios</title>
+  <desc id="junta-desc">Acta de la Junta de propietarios con cuatro puntos marcados y un sello de aprobación.</desc>
+
+  <!-- ===== FONDO + ESCENARIO ===== -->
+  <rect width="640" height="420" fill="#f7f7f5"/>
+  <circle cx="320" cy="180" r="150" fill="#e9f2ec"/>
+
+  <!-- ===== HOJA DE DETRÁS ===== -->
+  <rect x="262" y="78" width="140" height="196" rx="8" fill="#ffffff" stroke="#a8c4b0" stroke-width="3" transform="rotate(6 332 176)"/>
+
+  <!-- ===== ACTA ===== -->
+  <rect x="246" y="84" width="148" height="206" rx="8" fill="#ffffff" stroke="#1a4d30" stroke-width="4" stroke-linejoin="round"/>
+  <!-- encabezado -->
+  <text x="320" y="122" fill="#1a4d30" font-size="20" font-weight="700" letter-spacing="4" text-anchor="middle">ACTA</text>
+  <line x1="268" y1="136" x2="372" y2="136" stroke="#a8c4b0" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- cuatro puntos marcados -->
+  <g fill="#22a044" stroke="#1a4d30" stroke-width="2">
+    <circle cx="274" cy="162" r="9"/>
+    <circle cx="274" cy="192" r="9"/>
+    <circle cx="274" cy="222" r="9"/>
+    <circle cx="274" cy="252" r="9"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M270,162 l3,3 l6,-6"/>
+    <path d="M270,192 l3,3 l6,-6"/>
+    <path d="M270,222 l3,3 l6,-6"/>
+    <path d="M270,252 l3,3 l6,-6"/>
+  </g>
+  <g stroke="#a8c4b0" stroke-width="5" stroke-linecap="round">
+    <line x1="294" y1="162" x2="372" y2="162"/>
+    <line x1="294" y1="192" x2="360" y2="192"/>
+    <line x1="294" y1="222" x2="368" y2="222"/>
+    <line x1="294" y1="252" x2="350" y2="252"/>
+  </g>
+
+  <!-- ===== SELLO DE APROBACIÓN ===== -->
+  <circle cx="392" cy="270" r="30" fill="#22a044" stroke="#1a4d30" stroke-width="3.5"/>
+  <circle cx="392" cy="270" r="22" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  <path d="M380,270 l8,8 l16,-16" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ===== SUELO ===== -->
+  <line x1="150" y1="300" x2="490" y2="300" stroke="#a8c4b0" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ===== ETIQUETA ===== -->
+  <line x1="306" y1="344" x2="334" y2="344" stroke="#22a044" stroke-width="4" stroke-linecap="round"/>
+  <text x="320" y="378" fill="#1a4d30" font-size="26" font-weight="700" letter-spacing="5" text-anchor="middle">JUNTA</text>
+</svg>

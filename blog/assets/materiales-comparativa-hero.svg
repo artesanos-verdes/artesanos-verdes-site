@@ -6,7 +6,7 @@
   <text x="60" y="30" fill="#a8c4b0" font-size="11" font-weight="700" letter-spacing="2.5">COMPARATIVA TÉCNICA</text>
   <text x="60" y="55" fill="#ffffff" font-size="22" font-weight="700" font-family="'Source Serif 4', Georgia, serif">Las 3 técnicas de insuflación para cubierta</text>
 
-  <!-- Card 1: Lana mineral -->
+  <!-- Card 1: Lana mineral — λ y R de .claude/refonte/MATERIALES.md (Isolene 4 y Supafil Loft 045), sin reacción al fuego (28/10/2026) -->
   <g transform="translate(60, 110)">
     <rect x="0" y="0" width="340" height="370" rx="12" fill="#ffffff" stroke="#2d7a4e" stroke-width="3"/>
     <rect x="0" y="0" width="340" height="60" rx="12" fill="#2d7a4e"/>
@@ -18,7 +18,7 @@
     <g fill="none" stroke="#2d7a4e" stroke-width="2.4" stroke-linecap="round"><path d="M150 110 q5 -6 10 0 t10 0 t10 0 t10 0"/><path d="M150 120 q5 -6 10 0 t10 0 t10 0 t10 0"/><path d="M150 130 q5 -6 10 0 t10 0 t10 0 t10 0"/></g>
 
     <text x="170" y="190" fill="#1a4d30" font-size="20" font-weight="700" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif">Lana mineral</text>
-    <text x="170" y="212" fill="#666" font-size="13" font-weight="600" text-anchor="middle">Isolene 4 · Isover</text>
+    <text x="170" y="212" fill="#666" font-size="13" font-weight="600" text-anchor="middle">Isolene 4 (Isover) · Supafil Loft 045 (Knauf)</text>
 
     <!-- Stats -->
     <g transform="translate(30, 240)">
@@ -26,10 +26,10 @@
       <text x="0" y="18" fill="#1a1a1a" font-size="13" font-weight="700">Vidrio reciclado + arena</text>
 
       <text x="0" y="48" fill="#888" font-size="11" font-weight="600">CONDUCTIVIDAD λ</text>
-      <text x="0" y="66" fill="#1a1a1a" font-size="13" font-weight="700">0,040-0,046 W/m·K</text>
+      <text x="0" y="66" fill="#1a1a1a" font-size="13" font-weight="700">0,045-0,046 W/m·K</text>
 
-      <text x="0" y="96" fill="#888" font-size="11" font-weight="600">REACCIÓN FUEGO</text>
-      <text x="0" y="114" fill="#2d7a4e" font-size="13" font-weight="700">A1 · Incombustible</text>
+      <text x="0" y="96" fill="#888" font-size="11" font-weight="600">RESISTENCIA TÉRMICA INSTALADA</text>
+      <text x="0" y="114" fill="#2d7a4e" font-size="13" font-weight="700">R = 4,75-5,00 m²·K/W (220-225 mm)</text>
     </g>
   </g>
 

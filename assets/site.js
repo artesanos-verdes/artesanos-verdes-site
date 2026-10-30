@@ -227,6 +227,49 @@
   };
   var AYUDA_FOTOS_DEFECTO = 'Por ejemplo: la fachada y la zona que quieres mejorar.';
 
+  // Registre des panneaux .form-ok / .form-error et du toast : vouvoiement
+  // (« usted ») quand le <form> porte data-tratamiento="usted" (page
+  // comunidades, brochure au vouvoiement) ; tutoiement partout ailleurs, avec
+  // les textes d'origine inchangés. Pas de délai « 1 hora » au vouvoiement :
+  // la page comunidades annonce « Respuesta en 24 h » au paso 1 (décision
+  // « 1 hora / 24 h » en attente).
+  var TEXTES = {
+    tu: {
+      recibida: 'Hemos recibido tu solicitud',
+      contacto: function (tel) { return 'Te contactaremos en menos de 1 hora al ' + tel + '.'; },
+      fotosBoton: 'Adelanta tu estudio: envíanos unas fotos por WhatsApp',
+      fotosMensaje: function (prenom, ref) {
+        return (prenom ? 'Hola, soy ' + prenom + '.' : 'Hola.') +
+          ' Acabo de pedir el estudio' + (ref ? ' (ref. ' + ref + ')' : '') + '. Os envío unas fotos de mi vivienda.';
+      },
+      ayuda: AYUDA_FOTOS,
+      ayudaDefecto: AYUDA_FOTOS_DEFECTO,
+      error: 'No hemos podido enviar tu solicitud. Puedes enviárnosla por otra vía:',
+      errorToast: 'No hemos podido enviar tu solicitud. Llámanos al '
+    },
+    usted: {
+      recibida: 'Hemos recibido su solicitud',
+      contacto: function (tel) { return 'Le contactaremos muy pronto al ' + tel + '.'; },
+      fotosBoton: 'Adelante su estudio: envíenos unas fotos por WhatsApp',
+      fotosMensaje: function (prenom, ref) {
+        return (prenom ? 'Hola, soy ' + prenom + '.' : 'Hola.') +
+          ' Acabo de pedir el estudio del edificio' + (ref ? ' (ref. ' + ref + ')' : '') + '. Les envío unas fotos de la buhardilla.';
+      },
+      ayuda: {
+        desvan: 'Por ejemplo: la trampilla de acceso y el interior de la buhardilla.',
+        'cubierta-inclinada': 'Por ejemplo: la buhardilla por dentro y el tejado por fuera.',
+        aerotermia: 'Por ejemplo: su caldera actual, un radiador y la fachada.',
+        'aire-aire': 'Por ejemplo: su caldera o sistema actual y las estancias a climatizar.'
+      },
+      ayudaDefecto: 'Por ejemplo: la trampilla de acceso y el interior de la buhardilla.',
+      error: 'No hemos podido enviar su solicitud. Puede enviárnosla por otra vía:',
+      errorToast: 'No hemos podido enviar su solicitud. Llámenos al '
+    }
+  };
+  function textes(form) {
+    return (form && form.getAttribute && form.getAttribute('data-tratamiento') === 'usted') ? TEXTES.usted : TEXTES.tu;
+  }
+
   function creer(tag, classe, texte) {
     var el = document.createElement(tag);
     if (classe) el.className = classe;
@@ -285,7 +328,7 @@
 
     var panneau = creer('div', 'form-error');
     panneau.setAttribute('role', 'alert');
-    panneau.appendChild(creer('p', 'form-error-txt', 'No hemos podido enviar tu solicitud. Puedes enviárnosla por otra vía:'));
+    panneau.appendChild(creer('p', 'form-error-txt', textes(form).error));
     var actions = creer('div', 'form-error-acciones');
 
     var wa = creer('a', 'btn btn-primary', 'Enviar por WhatsApp');
@@ -320,17 +363,17 @@
   function afficherSucces(form, leadData, leadId) {
     var prenom = (leadData.nombre || '').split(' ')[0];
     var ref = String(leadId || '').slice(0, 6).toUpperCase();
+    var t = textes(form);
 
     var panneau = creer('div', 'form-ok');
     panneau.setAttribute('role', 'status');
     panneau.tabIndex = -1;
     panneau.appendChild(creer('h3', 'form-ok-title', prenom ? '¡Gracias, ' + prenom + '!' : '¡Gracias!'));
-    panneau.appendChild(creer('p', 'form-ok-ref', 'Hemos recibido tu solicitud' + (ref ? ' (ref. ' + ref + ')' : '') + '.'));
-    panneau.appendChild(creer('p', 'form-ok-tel', 'Te contactaremos en menos de 1 hora al ' + leadData.telefono + '.'));
+    panneau.appendChild(creer('p', 'form-ok-ref', t.recibida + (ref ? ' (ref. ' + ref + ')' : '') + '.'));
+    panneau.appendChild(creer('p', 'form-ok-tel', t.contacto(leadData.telefono)));
 
-    var texteWa = (prenom ? 'Hola, soy ' + prenom + '.' : 'Hola.') +
-      ' Acabo de pedir el estudio' + (ref ? ' (ref. ' + ref + ')' : '') + '. Os envío unas fotos de mi vivienda.';
-    var wa = creer('a', 'btn btn-primary form-ok-wa', 'Adelanta tu estudio: envíanos unas fotos por WhatsApp');
+    var texteWa = t.fotosMensaje(prenom, ref);
+    var wa = creer('a', 'btn btn-primary form-ok-wa', t.fotosBoton);
     wa.href = WA_BASE + '?text=' + encodeURIComponent(texteWa);
     wa.target = '_blank';
     wa.rel = 'noopener';
@@ -341,11 +384,11 @@
       track('photos_whatsapp_click', { proyecto: leadData.proyecto || '', location: 'form-ok' });
     });
     panneau.appendChild(wa);
-    panneau.appendChild(creer('p', 'form-ok-ayuda', AYUDA_FOTOS[leadData.proyecto] || AYUDA_FOTOS_DEFECTO));
+    panneau.appendChild(creer('p', 'form-ok-ayuda', t.ayuda[leadData.proyecto] || t.ayudaDefecto));
 
     var parent = form.parentNode;
     if (!parent) {
-      showToast('¡Gracias' + (prenom ? ' ' + prenom : '') + '!', 'Hemos recibido tu solicitud. Te contactaremos en menos de 1 hora al ' + leadData.telefono + '.');
+      showToast('¡Gracias' + (prenom ? ' ' + prenom : '') + '!', t.recibida + '. ' + t.contacto(leadData.telefono));
       return;
     }
     form.hidden = true;
@@ -435,7 +478,7 @@
       try {
         afficherErreur(form, leadData);
       } catch (panErr) {
-        showToast('Error al enviar', 'No hemos podido enviar tu solicitud. Llámanos al ' + TEL_AFFICHE + '.', true);
+        showToast('Error al enviar', textes(form).errorToast + TEL_AFFICHE + '.', true);
       }
       return;
     }
@@ -546,9 +589,10 @@
       afficherSucces(form, leadData, leadId);
       form.reset();
     } catch (uiErr) {
+      var tx = textes(form);
       showToast(
         '¡Gracias ' + (leadData.nombre.split(' ')[0] || '') + '!',
-        'Hemos recibido tu solicitud. Te contactaremos en menos de 1 hora al ' + leadData.telefono + '.'
+        tx.recibida + '. ' + tx.contacto(leadData.telefono)
       );
     }
   }

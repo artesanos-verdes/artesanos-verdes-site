@@ -101,6 +101,9 @@
   }
 
   // Nombre d'écrans de questions du parcours (5 au plus, 4 si plus court).
+  // Sert seulement à remplir la barre de progression : le texte affiche
+  // « Pregunta n », sans total (un total qui passait de 5 à 4 en cours de
+  // route — « Paso 2 de 5 » puis « Paso 3 de 4 » — déroutait).
   function totalPasos(r) {
     if (r.mejora === 'aislamiento') return 4;
     if (r.calefaccion === 'electrica' || r.calefaccion === 'otra') return 4;
@@ -143,7 +146,12 @@
     estudiar: 'Hay que estudiarlo con un técnico'
   };
   var TXT_AISLAMIENTO = 'Sí podemos estudiar el aislamiento de tu desván o de tu cubierta.';
+  var TXT_AISLAMIENTO_EDIFICIO = 'Sí podemos estudiar el aislamiento de la cubierta del edificio.';
   var TXT_PISO = 'En un piso, el aislamiento de la cubierta se plantea en comunidad de propietarios: un técnico lo estudia con la comunidad.';
+  // Piso + bomba de calor no elegible (calefacción eléctrica u otra) : on ne
+  // propose pas « tu desván o tu cubierta » à un piso (verif. lot 1-B).
+  var TXT_PISO_AISLAMIENTO = 'El aislamiento de la cubierta hay que estudiarlo con un técnico, en comunidad de propietarios: en un piso, se plantea para todo el edificio.';
+  var COMUNIDADES = { texto: 'Ver nuestra propuesta para comunidades', url: '/comunidades-de-propietarios/' };
 
   // =====================================================
   // Dialogue
@@ -248,10 +256,11 @@
 
   function majProgression(numero, total) {
     var pct = Math.round(((numero - 1) / total) * 100);
+    var libelle = numero > total ? 'Resultado' : 'Pregunta ' + numero;
     ui.barra.style.width = Math.max(pct, 4) + '%';
     ui.progreso.setAttribute('aria-valuenow', String(pct));
-    ui.progreso.setAttribute('aria-valuetext', numero > total ? 'Resultado' : 'Paso ' + numero + ' de ' + total);
-    ui.paso.textContent = numero > total ? 'Resultado' : 'Paso ' + numero + ' de ' + total;
+    ui.progreso.setAttribute('aria-valuetext', libelle);
+    ui.paso.textContent = libelle;
   }
 
   function vider(el) { while (el.firstChild) el.removeChild(el.firstChild); }
@@ -325,17 +334,36 @@
     }
 
     var bloc = creer('div', 'avq-resultado');
+    var tipo = respuestas.tipo;
+    // Un piso dont le résultat parle de l'aislamiento de la cubierta « en
+    // comunidad de propietarios » (TXT_PISO ou TXT_PISO_AISLAMIENTO).
+    var pisoEnComunidad = false;
     if (res.resultado === 'electrica' || res.resultado === 'otra-calefaccion') {
-      bloc.appendChild(creer('p', 'avq-resultado-txt', TXT_AISLAMIENTO));
+      var txtAislamiento = TXT_AISLAMIENTO;
+      if (tipo === 'piso') { txtAislamiento = TXT_PISO_AISLAMIENTO; pisoEnComunidad = true; }
+      else if (tipo === 'comunidad' || tipo === 'terciario') txtAislamiento = TXT_AISLAMIENTO_EDIFICIO;
+      bloc.appendChild(creer('p', 'avq-resultado-txt', txtAislamiento));
     }
     if (res.resultado === 'estudiar' && res.piso) {
       bloc.appendChild(creer('p', 'avq-resultado-txt', TXT_PISO));
+      pisoEnComunidad = true;
     }
     if (res.servicio && location.pathname.indexOf(res.servicio.url) !== 0) {
       var lien = creer('a', 'avq-enlace', 'Ver el servicio');
       lien.href = res.servicio.url;
       lien.setAttribute('data-cta', 'quiz-servicio');
       bloc.appendChild(lien);
+    }
+    // Comunidad de propietarios (y piso, cuando el texto del resultado remite
+    // al aislamiento de la cubierta en comunidad) : enlace a la página
+    // dedicada, salvo si ya estamos en ella. Piso + bomba de calor « No lo
+    // sé » : sin enlace, la página trata de la cubierta (verif. lot 1-C).
+    if ((tipo === 'comunidad' || pisoEnComunidad) &&
+        location.pathname.indexOf(COMUNIDADES.url) !== 0) {
+      var lienCom = creer('a', 'avq-enlace', COMUNIDADES.texto);
+      lienCom.href = COMUNIDADES.url;
+      lienCom.setAttribute('data-cta', 'quiz-comunidades');
+      bloc.appendChild(lienCom);
     }
     if (res.resultado === 'fuera-zona') bloc.appendChild(creer('p', 'avq-zona', TXT_OTRA_PROVINCIA));
     bloc.appendChild(creer('p', 'avq-legal', TXT_LEGAL));
