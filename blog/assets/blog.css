@@ -1601,3 +1601,13 @@ body::before {
 @media (max-width: 700px) {
   .av-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
+
+/* Navigation mobile : le bouton « Estudio gratuito » reste sur une ligne,
+   et le nom de la marque se réduit au lieu de pousser le bouton hors de l'écran. */
+.av-nav-cta { white-space: nowrap; }
+@media (max-width: 480px) {
+  .av-nav-inner { gap: 10px; }
+  .av-logo { font-size: 16px; min-width: 0; }
+  .av-logo span { line-height: 1.15; }
+  .av-nav-cta { padding: 9px 14px; font-size: 14px; }
+}
