@@ -251,6 +251,8 @@
           'cubierta-inclinada': 'Aislamiento de cubierta inclinada',
           aerotermia: 'Aerotermia (bomba de calor)',
           'aire-aire': 'Bomba de calor aire-aire',
+          fachada: 'Aislamiento de fachada',
+          'calefaccion-central': 'Calefacción central por bomba de calor',
           'no-se': 'Por definir'
         },
         calefaccion: {
@@ -315,7 +317,7 @@
 
       showToast(
         '¡Gracias ' + (leadData.nombre.split(' ')[0] || '') + '!',
-        'Hemos recibido tu solicitud. Te contactaremos en menos de 1 hora al ' + leadData.telefono + '.'
+        'Hemos recibido tu solicitud. Te contactaremos ' + (form.dataset.plazo || 'en menos de 1 hora') + ' al ' + leadData.telefono + '.'
       );
 
       form.reset();

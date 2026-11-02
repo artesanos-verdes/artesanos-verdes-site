@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Bombas de calor en un edificio de pisos con calderas individuales</title>
+  <desc id="hero-desc">Esquema de la fachada de un edificio de viviendas de cuatro plantas sobre un bajo. En casi todas las terrazas hay una unidad exterior de bomba de calor colocada en el mismo sitio; dos terrazas no tienen ninguna. En la cubierta plana hay otras dos unidades exteriores, y una tubería discontinua baja por el borde de la fachada hasta una de las viviendas. A la derecha, un recuadro muestra el interior de un piso: un módulo interior con acumulador de agua caliente, conectado a un radiador y a la unidad exterior, y la silueta discontinua de la caldera de gas a la que sustituye. Los rótulos indican que la cubierta es un elemento común, que lo que se instala en las terrazas y en la fachada lo autoriza la junta y que lo que va dentro del piso lo decide cada propietario.</desc>
+
+  <!-- Fondo y terreno -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <rect x="0" y="880" width="1600" height="120" fill="#c1d9cc"/>
+  <line x1="0" y1="880" x2="1600" y2="880" stroke="#2d7a4e" stroke-width="4"/>
+
+  <!-- Edificio: fachada, forjados y peto de la cubierta -->
+  <rect x="470" y="316" width="420" height="564" fill="#ffffff"/>
+  <g stroke="#1a4d30" stroke-width="4">
+    <line x1="470" y1="429" x2="890" y2="429"/>
+    <line x1="470" y1="541" x2="890" y2="541"/>
+    <line x1="470" y1="654" x2="890" y2="654"/>
+    <line x1="470" y1="767" x2="890" y2="767"/>
+  </g>
+  <rect x="470" y="316" width="420" height="564" fill="none" stroke="#1a4d30" stroke-width="6"/>
+  <rect x="456" y="300" width="448" height="16" rx="3" fill="#1a4d30"/>
+
+  <!-- Puertas de las terrazas -->
+  <g fill="#c1d9cc" stroke="#1a4d30" stroke-width="3">
+    <rect x="502" y="330" width="56" height="84" rx="3"/>
+    <rect x="702" y="330" width="56" height="84" rx="3"/>
+    <rect x="502" y="443" width="56" height="84" rx="3"/>
+    <rect x="702" y="443" width="56" height="84" rx="3"/>
+    <rect x="502" y="555" width="56" height="84" rx="3"/>
+    <rect x="702" y="555" width="56" height="84" rx="3"/>
+    <rect x="502" y="668" width="56" height="84" rx="3"/>
+    <rect x="702" y="668" width="56" height="84" rx="3"/>
+  </g>
+  <g stroke="#1a4d30" stroke-width="2">
+    <line x1="530" y1="330" x2="530" y2="414"/>
+    <line x1="730" y1="330" x2="730" y2="414"/>
+    <line x1="530" y1="443" x2="530" y2="527"/>
+    <line x1="730" y1="443" x2="730" y2="527"/>
+    <line x1="530" y1="555" x2="530" y2="639"/>
+    <line x1="730" y1="555" x2="730" y2="639"/>
+    <line x1="530" y1="668" x2="530" y2="752"/>
+    <line x1="730" y1="668" x2="730" y2="752"/>
+  </g>
+
+  <!-- Unidades exteriores en las terrazas, todas en el mismo sitio -->
+  <g fill="#ffffff" stroke="#1a4d30" stroke-width="4">
+    <rect x="584" y="360" width="74" height="54" rx="5"/>
+    <rect x="784" y="360" width="74" height="54" rx="5"/>
+    <rect x="584" y="473" width="74" height="54" rx="5"/>
+    <rect x="784" y="585" width="74" height="54" rx="5"/>
+    <rect x="584" y="698" width="74" height="54" rx="5"/>
+    <rect x="784" y="698" width="74" height="54" rx="5"/>
+  </g>
+  <g fill="#c1d9cc" stroke="#1a4d30" stroke-width="3">
+    <circle cx="611" cy="387" r="17"/>
+    <circle cx="811" cy="387" r="17"/>
+    <circle cx="611" cy="500" r="17"/>
+    <circle cx="811" cy="612" r="17"/>
+    <circle cx="611" cy="725" r="17"/>
+    <circle cx="811" cy="725" r="17"/>
+  </g>
+  <g fill="#1a4d30">
+    <circle cx="611" cy="387" r="4"/>
+    <circle cx="811" cy="387" r="4"/>
+    <circle cx="611" cy="500" r="4"/>
+    <circle cx="811" cy="612" r="4"/>
+    <circle cx="611" cy="725" r="4"/>
+    <circle cx="811" cy="725" r="4"/>
+  </g>
+
+  <!-- Barandillas y losas de las terrazas -->
+  <g fill="#2d7a4e">
+    <rect x="486" y="414" width="188" height="10"/>
+    <rect x="686" y="414" width="188" height="10"/>
+    <rect x="486" y="527" width="188" height="10"/>
+    <rect x="686" y="527" width="188" height="10"/>
+    <rect x="486" y="639" width="188" height="10"/>
+    <rect x="686" y="639" width="188" height="10"/>
+    <rect x="486" y="752" width="188" height="10"/>
+    <rect x="686" y="752" width="188" height="10"/>
+  </g>
+  <g stroke="#1a4d30" stroke-width="3">
+    <line x1="490" y1="378" x2="670" y2="378"/>
+    <line x1="690" y1="378" x2="870" y2="378"/>
+    <line x1="490" y1="491" x2="670" y2="491"/>
+    <line x1="690" y1="491" x2="870" y2="491"/>
+    <line x1="490" y1="603" x2="670" y2="603"/>
+    <line x1="690" y1="603" x2="870" y2="603"/>
+    <line x1="490" y1="716" x2="670" y2="716"/>
+    <line x1="690" y1="716" x2="870" y2="716"/>
+  </g>
+  <g stroke="#1a4d30" stroke-width="2">
+    <path d="M500 378 V414 M520 378 V414 M540 378 V414 M560 378 V414 M580 378 V414 M600 378 V414 M620 378 V414 M640 378 V414 M660 378 V414"/>
+    <path d="M700 378 V414 M720 378 V414 M740 378 V414 M760 378 V414 M780 378 V414 M800 378 V414 M820 378 V414 M840 378 V414 M860 378 V414"/>
+    <path d="M500 491 V527 M520 491 V527 M540 491 V527 M560 491 V527 M580 491 V527 M600 491 V527 M620 491 V527 M640 491 V527 M660 491 V527"/>
+    <path d="M700 491 V527 M720 491 V527 M740 491 V527 M760 491 V527 M780 491 V527 M800 491 V527 M820 491 V527 M840 491 V527 M860 491 V527"/>
+    <path d="M500 603 V639 M520 603 V639 M540 603 V639 M560 603 V639 M580 603 V639 M600 603 V639 M620 603 V639 M640 603 V639 M660 603 V639"/>
+    <path d="M700 603 V639 M720 603 V639 M740 603 V639 M760 603 V639 M780 603 V639 M800 603 V639 M820 603 V639 M840 603 V639 M860 603 V639"/>
+    <path d="M500 716 V752 M520 716 V752 M540 716 V752 M560 716 V752 M580 716 V752 M600 716 V752 M620 716 V752 M640 716 V752 M660 716 V752"/>
+    <path d="M700 716 V752 M720 716 V752 M740 716 V752 M760 716 V752 M780 716 V752 M800 716 V752 M820 716 V752 M840 716 V752 M860 716 V752"/>
+  </g>
+
+  <!-- Bajo: portal y ventanas -->
+  <rect x="650" y="790" width="60" height="90" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <g fill="#c1d9cc" stroke="#1a4d30" stroke-width="3">
+    <rect x="500" y="790" width="80" height="56" rx="3"/>
+    <rect x="780" y="790" width="80" height="56" rx="3"/>
+  </g>
+
+  <!-- Unidades exteriores en la cubierta -->
+  <g fill="#ffffff" stroke="#1a4d30" stroke-width="4">
+    <rect x="600" y="236" width="90" height="64" rx="6"/>
+    <rect x="740" y="236" width="90" height="64" rx="6"/>
+  </g>
+  <g fill="#c1d9cc" stroke="#1a4d30" stroke-width="3">
+    <circle cx="635" cy="268" r="21"/>
+    <circle cx="775" cy="268" r="21"/>
+  </g>
+  <g fill="#1a4d30">
+    <circle cx="635" cy="268" r="5"/>
+    <circle cx="775" cy="268" r="5"/>
+  </g>
+  <g fill="none" stroke="#22a044" stroke-width="4" stroke-linecap="round">
+    <path d="M612 214 q11 -11 22 0 t22 0 t22 0"/>
+    <path d="M752 214 q11 -11 22 0 t22 0 t22 0"/>
+  </g>
+
+  <!-- Tubería de una unidad de la cubierta hasta su vivienda -->
+  <path d="M830 268 H884 V480 H760" fill="none" stroke="#b8733a" stroke-width="5" stroke-dasharray="10 8" stroke-linejoin="round"/>
+  <circle cx="760" cy="480" r="6" fill="#b8733a"/>
+
+  <!-- Detalle del interior de un piso -->
+  <line x1="760" y1="580" x2="1010" y2="520" stroke="#1a4d30" stroke-width="3"/>
+  <circle cx="760" cy="580" r="7" fill="#1a4d30"/>
+  <rect x="1010" y="370" width="530" height="450" rx="18" fill="#ffffff" stroke="#1a4d30" stroke-width="4"/>
+  <line x1="1012" y1="780" x2="1538" y2="780" stroke="#1a4d30" stroke-width="3"/>
+
+  <!-- Conexión con la unidad exterior -->
+  <g fill="none" stroke-width="5" stroke-linejoin="round">
+    <path d="M1330 470 V412 H1012" stroke="#b8733a"/>
+    <path d="M1362 470 V430 H1012" stroke="#2d7a4e"/>
+  </g>
+
+  <!-- Radiador -->
+  <rect x="1060" y="680" width="160" height="80" rx="6" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <path d="M1084 690 V750 M1108 690 V750 M1132 690 V750 M1156 690 V750 M1180 690 V750 M1204 690 V750" stroke="#b8733a" stroke-width="3"/>
+  <path d="M1076 760 V780 M1204 760 V780" stroke="#b8733a" stroke-width="4"/>
+
+  <!-- Módulo interior con acumulador de agua caliente -->
+  <g fill="none" stroke-width="5">
+    <path d="M1290 702 H1220" stroke="#b8733a"/>
+    <path d="M1290 744 H1220" stroke="#2d7a4e"/>
+  </g>
+  <rect x="1290" y="470" width="110" height="310" rx="16" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="1318" y="496" width="54" height="30" rx="4" fill="#ffffff" stroke="#1a4d30" stroke-width="3"/>
+  <path d="M1316 650 q9 -9 18 0 t18 0 t18 0" fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1316 676 q9 -9 18 0 t18 0 t18 0" fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Caldera de gas sustituida (silueta discontinua) -->
+  <rect x="1440" y="430" width="70" height="110" rx="8" fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="10 8"/>
+  <path d="M1475 430 V384" stroke="#b8733a" stroke-width="4" stroke-dasharray="10 8"/>
+
+  <!-- Rótulos -->
+  <g stroke="#1a4d30" stroke-width="3">
+    <line x1="452" y1="250" x2="606" y2="262"/>
+    <line x1="452" y1="500" x2="596" y2="500"/>
+  </g>
+  <g fill="#1a4d30">
+    <circle cx="606" cy="262" r="7"/>
+    <circle cx="596" cy="500" r="7"/>
+  </g>
+
+  <text x="440" y="242" text-anchor="end" font-family="'Source Serif 4', serif" font-size="40" font-weight="700" fill="#1a4d30">Cubierta</text>
+  <text x="440" y="278" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="26" fill="#2d7a4e">elemento común</text>
+
+  <text x="440" y="492" text-anchor="end" font-family="'Source Serif 4', serif" font-size="38" font-weight="700" fill="#1a4d30">Terrazas y fachada</text>
+  <text x="440" y="528" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="26" fill="#2d7a4e">lo que se ve fuera</text>
+  <text x="440" y="560" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="26" fill="#2d7a4e">lo autoriza la junta</text>
+
+  <text x="1010" y="300" font-family="'Source Serif 4', serif" font-size="40" font-weight="700" fill="#1a4d30">Dentro del piso</text>
+  <text x="1010" y="338" font-family="'Source Sans 3', sans-serif" font-size="26" fill="#2d7a4e">lo decide cada propietario</text>
+</svg>

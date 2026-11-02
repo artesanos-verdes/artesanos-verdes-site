@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Calefacción central con bombas de calor en un edificio de viviendas</title>
+  <desc id="hero-desc">Sección esquemática de un bloque de viviendas. Sobre la cubierta plana, tres bombas de calor aire-agua captan la energía del aire exterior. Dos tuberías bajan por un lateral del edificio hasta la sala de calderas del sótano, donde hay un depósito de inercia, un acumulador de agua caliente sanitaria y la caldera existente, dibujada con trazo discontinuo como apoyo opcional. Desde el depósito, el circuito sube por el otro lateral y alimenta los radiadores situados bajo las ventanas de cada planta.</desc>
+
+  <!-- Fondo y terreno -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <rect x="0" y="860" width="1600" height="140" fill="#c1d9cc"/>
+  <line x1="0" y1="860" x2="1600" y2="860" stroke="#2d7a4e" stroke-width="4"/>
+
+  <!-- Edificio: muros y forjados -->
+  <rect x="520" y="300" width="560" height="560" fill="#ffffff"/>
+  <g stroke="#1a4d30" stroke-width="5">
+    <line x1="520" y1="412" x2="1080" y2="412"/>
+    <line x1="520" y1="524" x2="1080" y2="524"/>
+    <line x1="520" y1="636" x2="1080" y2="636"/>
+    <line x1="520" y1="748" x2="1080" y2="748"/>
+  </g>
+  <rect x="520" y="300" width="560" height="560" fill="none" stroke="#1a4d30" stroke-width="6"/>
+  <rect x="504" y="288" width="592" height="16" rx="3" fill="#1a4d30"/>
+
+  <!-- Ventanas de las plantas -->
+  <g fill="#c1d9cc" stroke="#1a4d30" stroke-width="4">
+    <rect x="600" y="318" width="72" height="50" rx="3"/>
+    <rect x="716" y="318" width="72" height="50" rx="3"/>
+    <rect x="832" y="318" width="72" height="50" rx="3"/>
+    <rect x="948" y="318" width="72" height="50" rx="3"/>
+    <rect x="600" y="430" width="72" height="50" rx="3"/>
+    <rect x="716" y="430" width="72" height="50" rx="3"/>
+    <rect x="832" y="430" width="72" height="50" rx="3"/>
+    <rect x="948" y="430" width="72" height="50" rx="3"/>
+    <rect x="600" y="542" width="72" height="50" rx="3"/>
+    <rect x="716" y="542" width="72" height="50" rx="3"/>
+    <rect x="832" y="542" width="72" height="50" rx="3"/>
+    <rect x="948" y="542" width="72" height="50" rx="3"/>
+    <rect x="600" y="654" width="72" height="50" rx="3"/>
+    <rect x="716" y="654" width="72" height="50" rx="3"/>
+    <rect x="832" y="654" width="72" height="50" rx="3"/>
+    <rect x="948" y="654" width="72" height="50" rx="3"/>
+    <rect x="600" y="772" width="72" height="50" rx="3"/>
+    <rect x="948" y="772" width="72" height="50" rx="3"/>
+  </g>
+  <g stroke="#1a4d30" stroke-width="3">
+    <line x1="636" y1="318" x2="636" y2="368"/>
+    <line x1="752" y1="318" x2="752" y2="368"/>
+    <line x1="868" y1="318" x2="868" y2="368"/>
+    <line x1="984" y1="318" x2="984" y2="368"/>
+    <line x1="636" y1="430" x2="636" y2="480"/>
+    <line x1="752" y1="430" x2="752" y2="480"/>
+    <line x1="868" y1="430" x2="868" y2="480"/>
+    <line x1="984" y1="430" x2="984" y2="480"/>
+    <line x1="636" y1="542" x2="636" y2="592"/>
+    <line x1="752" y1="542" x2="752" y2="592"/>
+    <line x1="868" y1="542" x2="868" y2="592"/>
+    <line x1="984" y1="542" x2="984" y2="592"/>
+    <line x1="636" y1="654" x2="636" y2="704"/>
+    <line x1="752" y1="654" x2="752" y2="704"/>
+    <line x1="868" y1="654" x2="868" y2="704"/>
+    <line x1="984" y1="654" x2="984" y2="704"/>
+    <line x1="636" y1="772" x2="636" y2="822"/>
+    <line x1="984" y1="772" x2="984" y2="822"/>
+  </g>
+  <!-- Portal -->
+  <rect x="780" y="772" width="64" height="88" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+
+  <!-- Sala de calderas (sótano) -->
+  <rect x="590" y="878" width="440" height="100" fill="#ffffff" stroke="#1a4d30" stroke-width="5"/>
+
+  <!-- Circuito de distribución: montantes y ramales de cada planta -->
+  <g fill="none" stroke-linejoin="round">
+    <path d="M630 930 H548 V404" stroke="#b8733a" stroke-width="7"/>
+    <path d="M630 948 H564 V392" stroke="#2d7a4e" stroke-width="7"/>
+  </g>
+  <g stroke="#b8733a" stroke-width="5">
+    <line x1="548" y1="404" x2="1012" y2="404"/>
+    <line x1="548" y1="516" x2="1012" y2="516"/>
+    <line x1="548" y1="628" x2="1012" y2="628"/>
+    <line x1="548" y1="740" x2="1012" y2="740"/>
+  </g>
+
+  <!-- Radiadores bajo las ventanas -->
+  <g fill="#ffffff" stroke="#b8733a" stroke-width="4">
+    <rect x="608" y="378" width="56" height="20" rx="3"/>
+    <rect x="724" y="378" width="56" height="20" rx="3"/>
+    <rect x="840" y="378" width="56" height="20" rx="3"/>
+    <rect x="956" y="378" width="56" height="20" rx="3"/>
+    <rect x="608" y="490" width="56" height="20" rx="3"/>
+    <rect x="724" y="490" width="56" height="20" rx="3"/>
+    <rect x="840" y="490" width="56" height="20" rx="3"/>
+    <rect x="956" y="490" width="56" height="20" rx="3"/>
+    <rect x="608" y="602" width="56" height="20" rx="3"/>
+    <rect x="724" y="602" width="56" height="20" rx="3"/>
+    <rect x="840" y="602" width="56" height="20" rx="3"/>
+    <rect x="956" y="602" width="56" height="20" rx="3"/>
+    <rect x="608" y="714" width="56" height="20" rx="3"/>
+    <rect x="724" y="714" width="56" height="20" rx="3"/>
+    <rect x="840" y="714" width="56" height="20" rx="3"/>
+    <rect x="956" y="714" width="56" height="20" rx="3"/>
+  </g>
+  <g stroke="#b8733a" stroke-width="3">
+    <path d="M622 382 V394 M636 382 V394 M650 382 V394 M738 382 V394 M752 382 V394 M766 382 V394 M854 382 V394 M868 382 V394 M882 382 V394 M970 382 V394 M984 382 V394 M998 382 V394"/>
+    <path d="M622 494 V506 M636 494 V506 M650 494 V506 M738 494 V506 M752 494 V506 M766 494 V506 M854 494 V506 M868 494 V506 M882 494 V506 M970 494 V506 M984 494 V506 M998 494 V506"/>
+    <path d="M622 606 V618 M636 606 V618 M650 606 V618 M738 606 V618 M752 606 V618 M766 606 V618 M854 606 V618 M868 606 V618 M882 606 V618 M970 606 V618 M984 606 V618 M998 606 V618"/>
+    <path d="M622 718 V730 M636 718 V730 M650 718 V730 M738 718 V730 M752 718 V730 M766 718 V730 M854 718 V730 M868 718 V730 M882 718 V730 M970 718 V730 M984 718 V730 M998 718 V730"/>
+  </g>
+
+  <!-- Bombas de calor sobre la cubierta -->
+  <rect x="596" y="254" width="388" height="10" fill="#2d7a4e"/>
+  <g fill="#ffffff" stroke="#1a4d30" stroke-width="5">
+    <rect x="606" y="162" width="112" height="92" rx="8"/>
+    <rect x="734" y="162" width="112" height="92" rx="8"/>
+    <rect x="862" y="162" width="112" height="92" rx="8"/>
+  </g>
+  <g fill="#c1d9cc" stroke="#1a4d30" stroke-width="4">
+    <circle cx="662" cy="200" r="28"/>
+    <circle cx="790" cy="200" r="28"/>
+    <circle cx="918" cy="200" r="28"/>
+  </g>
+  <g stroke="#1a4d30" stroke-width="3">
+    <path d="M644 200 H680 M662 182 V218 M772 200 H808 M790 182 V218 M900 200 H936 M918 182 V218"/>
+  </g>
+  <g fill="#1a4d30">
+    <circle cx="662" cy="200" r="6"/>
+    <circle cx="790" cy="200" r="6"/>
+    <circle cx="918" cy="200" r="6"/>
+  </g>
+  <g stroke="#c1d9cc" stroke-width="4" stroke-linecap="round">
+    <path d="M622 238 H702 M622 246 H702 M750 238 H830 M750 246 H830 M878 238 H958 M878 246 H958"/>
+  </g>
+
+  <!-- Aire exterior -->
+  <g fill="none" stroke="#22a044" stroke-width="4" stroke-linecap="round">
+    <path d="M626 140 q12 -12 24 0 t24 0 t24 0"/>
+    <path d="M754 140 q12 -12 24 0 t24 0 t24 0"/>
+    <path d="M882 140 q12 -12 24 0 t24 0 t24 0"/>
+  </g>
+
+  <!-- Circuito de producción: de la cubierta a la sala de calderas -->
+  <g fill="none" stroke-linejoin="round" stroke-width="6">
+    <path d="M640 254 V272 M768 254 V272 M896 254 V272 M640 272 H1040 V886 H644 V902" stroke="#b8733a"/>
+    <path d="M690 254 V281 M818 254 V281 M946 254 V281 M690 281 H1056 V896 H672 V902" stroke="#2d7a4e"/>
+  </g>
+
+  <!-- Equipos de la sala de calderas: depósito de inercia, acumulador de ACS y caldera de apoyo -->
+  <path d="M754 886 V906" stroke="#b8733a" stroke-width="5"/>
+  <path d="M960 916 V886" stroke="#b8733a" stroke-width="5" stroke-dasharray="10 8"/>
+  <rect x="630" y="902" width="56" height="66" rx="18" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="730" y="906" width="48" height="62" rx="16" fill="#ffffff" stroke="#1a4d30" stroke-width="4"/>
+  <path d="M740 940 q7 -7 14 0 t14 0" fill="none" stroke="#b8733a" stroke-width="3" stroke-linecap="round"/>
+  <rect x="930" y="916" width="60" height="52" rx="6" fill="#f5efe1" stroke="#b8733a" stroke-width="4" stroke-dasharray="12 8"/>
+
+  <!-- Rótulos -->
+  <g stroke="#1a4d30" stroke-width="3">
+    <line x1="478" y1="160" x2="622" y2="140"/>
+    <line x1="1122" y1="196" x2="980" y2="208"/>
+    <line x1="478" y1="492" x2="612" y2="500"/>
+    <line x1="1122" y1="910" x2="996" y2="940"/>
+  </g>
+  <g fill="#1a4d30">
+    <circle cx="622" cy="140" r="7"/>
+    <circle cx="980" cy="208" r="7"/>
+    <circle cx="612" cy="500" r="7"/>
+    <circle cx="996" cy="940" r="7"/>
+  </g>
+
+  <text x="468" y="150" text-anchor="end" font-family="'Source Serif 4', serif" font-size="46" font-weight="700" fill="#1a4d30">Aire exterior</text>
+  <text x="468" y="190" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">la energía que se capta</text>
+
+  <text x="1132" y="190" font-family="'Source Serif 4', serif" font-size="46" font-weight="700" fill="#1a4d30">Bombas de calor</text>
+  <text x="1132" y="230" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">aire-agua en cascada,</text>
+  <text x="1132" y="266" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">sobre la cubierta</text>
+
+  <text x="468" y="482" text-anchor="end" font-family="'Source Serif 4', serif" font-size="46" font-weight="700" fill="#1a4d30">Radiadores</text>
+  <text x="468" y="522" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">el circuito existente,</text>
+  <text x="468" y="558" text-anchor="end" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">si el estudio lo confirma</text>
+
+  <text x="1132" y="904" font-family="'Source Serif 4', serif" font-size="46" font-weight="700" fill="#1a4d30">Sala de calderas</text>
+  <text x="1132" y="942" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">depósito de inercia, ACS</text>
+  <text x="1132" y="976" font-family="'Source Sans 3', sans-serif" font-size="28" fill="#2d7a4e">y caldera de apoyo opcional</text>
+</svg>
