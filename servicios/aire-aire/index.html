@@ -225,8 +225,9 @@
         // skips them and FormData omits them. Keeps submit handler logic
         // untouched — leadData reads .get() which returns null for disabled.
         // 'calefaccion' reste ACTIF meme en trafic paye : c'est le critere
-        // d'eligibilite de la pompe a chaleur (gas/gasoleo obligatoire,
-        // electrique exclu). Sans lui, un lead Ads arrive non qualifie.
+        // d'eligibilite de la pompe a chaleur (chaudiere gaz/gasoil, ou
+        // electrique selon les criteres MITECO v6.0 ; radiateurs electriques
+        // sans chaudiere exclus). Sans lui, un lead Ads arrive non qualifie.
         ['tipo', 'mensaje'].forEach(function (id) {
           var el = document.getElementById(id);
           if (!el) return;
