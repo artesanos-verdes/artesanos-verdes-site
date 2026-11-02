@@ -21,9 +21,9 @@
   <rect x="0" y="0" width="1200" height="110" fill="#1a4d30"/>
   <text x="60" y="48" fill="#a8c4b0" font-size="13" font-weight="700" letter-spacing="3.5">LOS ARTESANOS VERDES · AISLAMIENTO DE CUBIERTA INCLINADA</text>
   <text x="60" y="86" fill="#ffffff" font-size="30" font-weight="700">Rampantes aislados con aislante reflectante</text>
-  <g transform="translate(975, 40)">
-    <rect x="0" y="0" width="165" height="30" rx="15" fill="#245c3b"/>
-    <text x="82" y="20" fill="#c1d9cc" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">FICHA CAE · RES010</text>
+  <g transform="translate(910, 40)">
+    <rect x="0" y="0" width="230" height="30" rx="15" fill="#245c3b"/>
+    <text x="115" y="20" fill="#c1d9cc" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">FICHAS CAE · RES010 / RES020</text>
   </g>
 
   <!-- ===== SOMBRA DE SUELO ===== -->
@@ -147,7 +147,7 @@
   <g transform="translate(770, 515)">
     <rect x="0" y="0" width="372" height="30" rx="15" fill="#f0ede4" stroke="#d0ccc0" stroke-width="1.2"/>
     <circle cx="18" cy="15" r="4" fill="#22a044"/>
-    <text x="32" y="20" fill="#5c6b62" font-size="12" font-weight="700">Sistema CAE · financiación privada · ficha RES010</text>
+    <text x="32" y="20" fill="#5c6b62" font-size="12" font-weight="700">Sistema CAE · financiación privada · fichas RES010 / RES020</text>
   </g>
 
   <!-- ===== BARRA INFERIOR ===== -->
