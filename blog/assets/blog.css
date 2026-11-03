@@ -1611,3 +1611,87 @@ body::before {
   .av-logo span { line-height: 1.15; }
   .av-nav-cta { padding: 9px 14px; font-size: 14px; }
 }
+
+/* ============================================
+   LOT 0 (3-11-2026) — maillage : pied de page
+   « Servicios », servicio relacionado, sigue leyendo
+   ============================================ */
+.av-footer-top { grid-template-columns: 2fr 1fr 1fr 1fr; }
+@media (max-width: 980px) {
+  .av-footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .av-footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .av-footer-top { grid-template-columns: 1fr; }
+}
+
+.av-service-box {
+  margin: 40px 0;
+  padding: 24px 26px;
+  background: linear-gradient(135deg, rgba(34, 160, 68, 0.07) 0%, rgba(34, 160, 68, 0.02) 100%);
+  border: 1px solid rgba(34, 160, 68, 0.22);
+  border-left: 4px solid var(--av-brand-green);
+  border-radius: var(--av-radius-md);
+}
+.av-service-kicker {
+  font-family: var(--av-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--av-brand-green-deep);
+  margin: 0 0 14px;
+}
+.av-service-item + .av-service-item {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(34, 160, 68, 0.18);
+}
+.av-content .av-service-title {
+  font-family: var(--av-display);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 6px;
+}
+.av-content .av-service-title a { color: var(--av-forest-deep); text-decoration: none; }
+.av-content .av-service-title a:hover { color: var(--av-brand-green-deep); text-decoration: underline; }
+.av-content .av-service-text { font-size: 15.5px; line-height: 1.6; color: var(--av-text-soft); margin: 0 0 10px; }
+.av-content .av-service-link { font-weight: 600; text-decoration: none; color: var(--av-brand-green-deep); }
+.av-content .av-service-link:hover { text-decoration: underline; }
+
+.av-related {
+  margin: 40px 0 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--av-border);
+}
+.av-content .av-related-title {
+  font-family: var(--av-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--av-text-mute);
+  margin: 0 0 16px;
+}
+.av-content .av-related ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.av-content .av-related li { margin: 0; }
+.av-content .av-related a {
+  display: block;
+  padding: 14px 18px;
+  background: var(--av-ivory);
+  border: 1px solid var(--av-border);
+  border-radius: var(--av-radius-sm);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.av-content .av-related a:hover { border-color: var(--av-brand-green); transform: translateX(3px); }
+.av-content .av-related strong {
+  display: block;
+  font-family: var(--av-display);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--av-forest-deep);
+}
+.av-content .av-related span { display: block; margin-top: 4px; font-size: 14px; line-height: 1.5; color: var(--av-text-soft); }
