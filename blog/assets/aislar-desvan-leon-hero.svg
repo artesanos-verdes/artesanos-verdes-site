@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Provincia de León: zona climática E1 en todos los municipios y desván aislado con 220 mm de lana mineral</title>
+  <desc id="hero-desc">Esquema en dos partes, sin contorno geográfico. A la izquierda, tres franjas apiladas que representan las zonas de la provincia de León por altitud: El Bierzo abajo, la meseta con León en el centro y la montaña arriba; las tres llevan la etiqueta E1, porque la tabla a-Anejo B del DB-HE asigna esa zona a toda la provincia. A la derecha, la sección de una casa con el desván no habitable sobre el último piso y una capa de 220 mm de lana mineral insuflada sobre el suelo del desván, con resistencia térmica de 4,75 m²·K/W.</desc>
+
+  <defs>
+    <marker id="hero-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2d7a4e"/>
+    </marker>
+    <clipPath id="hero-insulation-clip">
+      <rect x="1000" y="388" width="500" height="30"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="80" y="108" font-family="'Source Serif 4', Georgia, serif" font-size="64" font-weight="700" fill="#1a2e1f">Provincia de León: zona E1</text>
+  <text x="80" y="160" font-family="'Source Sans 3', Arial, sans-serif" font-size="32" fill="#2d7a4e">La tabla a-Anejo B del DB-HE da E1 a todos los municipios, sea cual sea su altitud</text>
+
+  <!-- Eje de altitud -->
+  <line x1="48" y1="720" x2="48" y2="236" stroke="#2d7a4e" stroke-width="4" marker-end="url(#hero-arrow)"/>
+  <text x="26" y="478" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e" transform="rotate(-90 26 478)" text-anchor="middle">altitud</text>
+
+  <!-- Franja superior: montaña -->
+  <rect x="80" y="230" width="800" height="150" rx="18" fill="#1a4d30"/>
+  <polygon points="110,230 190,250 270,230" fill="#1a4d30"/>
+  <text x="112" y="292" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#f5efe1">Montaña</text>
+  <text x="112" y="340" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#f5efe1">Villablino · Riaño · Cistierna · La Robla</text>
+  <circle cx="800" cy="305" r="46" fill="#22a044"/>
+  <text x="800" y="319" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#ffffff" text-anchor="middle">E1</text>
+
+  <!-- Franja central: meseta -->
+  <rect x="80" y="400" width="800" height="150" rx="18" fill="#2d7a4e"/>
+  <text x="112" y="462" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#f5efe1">Meseta y páramo</text>
+  <text x="112" y="510" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#f5efe1">León · Astorga · La Bañeza · Sahagún</text>
+  <circle cx="800" cy="475" r="46" fill="#22a044"/>
+  <text x="800" y="489" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#ffffff" text-anchor="middle">E1</text>
+
+  <!-- Franja inferior: El Bierzo -->
+  <rect x="80" y="570" width="800" height="150" rx="18" fill="#b8733a"/>
+  <text x="112" y="632" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#f5efe1">El Bierzo</text>
+  <text x="112" y="680" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#f5efe1">Ponferrada · Bembibre · Villafranca</text>
+  <circle cx="800" cy="645" r="46" fill="#22a044"/>
+  <text x="800" y="659" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#ffffff" text-anchor="middle">E1</text>
+
+  <!-- Tabla a-Anejo B -->
+  <text x="80" y="800" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">La tabla a-Anejo B del DB-HE asigna la zona climática por provincia y tramo de altitud.</text>
+  <text x="80" y="840" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">En la fila de León, todos los tramos dan E1: la provincia entera queda en zona E1.</text>
+
+  <!-- Sección de la casa -->
+  <rect x="940" y="620" width="620" height="40" fill="#c1d9cc"/>
+  <line x1="940" y1="620" x2="1560" y2="620" stroke="#2d7a4e" stroke-width="4"/>
+
+  <!-- Cubierta y desván -->
+  <polygon points="950,424 1250,196 1550,424" fill="#b8733a"/>
+  <polygon points="1000,418 1250,232 1500,418" fill="#faf6ec"/>
+  <text x="1250" y="330" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f" text-anchor="middle">Desván no habitable</text>
+
+  <!-- Capa de aislamiento sobre el suelo del desván -->
+  <rect x="1000" y="388" width="500" height="30" fill="#c1d9cc"/>
+  <g clip-path="url(#hero-insulation-clip)">
+    <path d="M1004 408 q10 -12 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#2d7a4e" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <rect x="1000" y="388" width="500" height="30" fill="none" stroke="#1a4d30" stroke-width="3"/>
+
+  <!-- Cota del espesor -->
+  <line x1="1522" y1="388" x2="1522" y2="418" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="1512" y1="388" x2="1532" y2="388" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="1512" y1="418" x2="1532" y2="418" stroke="#1a2e1f" stroke-width="3"/>
+
+  <!-- Último piso -->
+  <rect x="980" y="420" width="540" height="200" fill="#ffffff" stroke="#1a4d30" stroke-width="6"/>
+  <line x1="950" y1="420" x2="1550" y2="420" stroke="#1a4d30" stroke-width="6"/>
+  <rect x="1040" y="470" width="96" height="76" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <line x1="1088" y1="470" x2="1088" y2="546" stroke="#1a4d30" stroke-width="3"/>
+  <rect x="1364" y="470" width="96" height="76" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <line x1="1412" y1="470" x2="1412" y2="546" stroke="#1a4d30" stroke-width="3"/>
+  <text x="1250" y="540" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#2d7a4e" text-anchor="middle">Último piso</text>
+
+  <!-- Etiquetas del aislamiento -->
+  <text x="1250" y="720" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#1a2e1f" text-anchor="middle">220 mm de lana mineral insuflada</text>
+  <text x="1250" y="762" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#2d7a4e" text-anchor="middle">R = 4,75 m²·K/W · la ficha RES022 pide 4,7 en zona E</text>
+
+  <!-- Firma -->
+  <text x="1520" y="950" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e" text-anchor="end">artesanosverdes.com</text>
+</svg>

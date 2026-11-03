@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Techo frío en el último piso: la superficie del techo pasa de unos 15 °C a unos 19,6 °C al aislar el suelo del desván, y tres salidas posibles</title>
+  <desc id="hero-desc">Sección esquemática de las dos últimas plantas de un edificio con tejado inclinado y desván no habitable a 0 grados. En la mitad izquierda, sin aislar, el calor atraviesa el forjado y la superficie del techo del último piso está a unos 15 grados con 20 grados de aire en la vivienda. En la mitad derecha, con 220 milímetros de lana mineral insuflada sobre el suelo del desván, la superficie del techo está a unos 19,6 grados. El piso de en medio apenas lo nota porque su techo linda con otra vivienda calefactada. A la derecha, tres tarjetas resumen las tres salidas: falso techo aislado por dentro, aislar el suelo del desván desde arriba y aislar los rampantes si el bajo cubierta se habita.</desc>
+
+  <defs>
+    <marker id="hero-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#b8733a"/>
+    </marker>
+    <clipPath id="hero-attic-clip">
+      <polygon points="130,474 470,240 810,474"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="80" y="96" font-family="'Source Serif 4', Georgia, serif" font-size="60" font-weight="700" fill="#1a2e1f">Techo frío en el último piso</text>
+  <text x="80" y="146" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#2d7a4e">Tu techo linda con un desván casi a la temperatura de la calle</text>
+
+  <!-- Tejado y desván -->
+  <polygon points="80,480 470,210 860,480" fill="#b8733a"/>
+  <polygon points="130,474 470,240 810,474" fill="#faf6ec"/>
+  <text x="470" y="352" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">Desván no habitable</text>
+  <text x="470" y="398" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">0 °C</text>
+
+  <!-- Capa de aislamiento sobre el suelo del desván (solo mitad derecha) -->
+  <g clip-path="url(#hero-attic-clip)">
+    <rect x="470" y="446" width="340" height="28" fill="#c1d9cc"/>
+    <path d="M478 462 q10 -12 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#2d7a4e" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="560" y="428" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e">220 mm de lana mineral</text>
+
+  <!-- Forjado -->
+  <rect x="80" y="474" width="780" height="14" fill="#1a2e1f"/>
+
+  <!-- Último piso -->
+  <rect x="80" y="488" width="780" height="252" fill="#ffffff" stroke="#1a2e1f" stroke-width="6"/>
+  <line x1="470" y1="488" x2="470" y2="690" stroke="#1a2e1f" stroke-width="3" stroke-dasharray="14 10"/>
+
+  <!-- Mitad izquierda: sin aislar, el calor atraviesa el forjado -->
+  <g stroke="#b8733a" stroke-width="6" stroke-linecap="round" fill="none" marker-end="url(#hero-arrow)">
+    <line x1="140" y1="560" x2="140" y2="430"/>
+    <line x1="195" y1="560" x2="195" y2="430"/>
+    <line x1="250" y1="560" x2="250" y2="430"/>
+  </g>
+  <text x="275" y="610" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#b8733a">Sin aislar</text>
+  <text x="275" y="664" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="46" font-weight="700" fill="#b8733a">Techo a 15 °C</text>
+
+  <!-- Mitad derecha: aislado por arriba -->
+  <g stroke="#22a044" stroke-width="6" stroke-linecap="round" fill="none">
+    <line x1="560" y1="560" x2="560" y2="520"/>
+    <line x1="615" y1="560" x2="615" y2="520"/>
+    <line x1="670" y1="560" x2="670" y2="520"/>
+    <line x1="540" y1="512" x2="690" y2="512"/>
+  </g>
+  <text x="665" y="610" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#22a044">Aislado por arriba</text>
+  <text x="665" y="664" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="46" font-weight="700" fill="#22a044">Techo a 19,6 °C</text>
+
+  <!-- Rótulo del último piso -->
+  <text x="470" y="722" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">Último piso · 20 °C</text>
+
+  <!-- Piso de en medio -->
+  <rect x="80" y="740" width="780" height="120" fill="#ffffff" stroke="#1a2e1f" stroke-width="6"/>
+  <rect x="100" y="790" width="50" height="50" rx="3" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="790" y="790" width="50" height="50" rx="3" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <text x="470" y="792" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">Piso de en medio</text>
+  <text x="470" y="828" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e">linda con otra vivienda calefactada: apenas lo nota</text>
+
+  <!-- Nota de cálculo -->
+  <text x="80" y="920" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Temperatura de la superficie del techo con 20 °C en la vivienda y 0 °C en el desván: transmitancia de 2,50 a 0,19 W/m²·K.</text>
+
+  <!-- Tres salidas -->
+  <text x="940" y="250" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">Tres salidas</text>
+
+  <!-- 1. Falso techo -->
+  <rect x="940" y="280" width="600" height="150" rx="18" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="992" cy="355" r="30" fill="#b8733a"/>
+  <text x="992" y="367" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">1</text>
+  <text x="1042" y="340" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">Falso techo aislado por dentro</text>
+  <text x="1042" y="376" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e">Obra en tu piso · resta altura</text>
+  <text x="1042" y="406" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e">Deja puentes térmicos en el contorno</text>
+
+  <!-- 2. Suelo del desván -->
+  <rect x="940" y="450" width="600" height="150" rx="18" fill="#1a4d30"/>
+  <circle cx="992" cy="525" r="30" fill="#22a044"/>
+  <text x="992" y="537" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">2</text>
+  <text x="1042" y="510" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#f5efe1">Suelo del desván desde arriba</text>
+  <text x="1042" y="546" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1">Una jornada · sin obra en las viviendas</text>
+  <text x="1042" y="576" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1">Acuerdo de junta · ficha RES022 (CAE)</text>
+
+  <!-- 3. Rampantes -->
+  <rect x="940" y="620" width="600" height="150" rx="18" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="992" cy="695" r="30" fill="#2d7a4e"/>
+  <text x="992" y="707" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">3</text>
+  <text x="1042" y="680" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">Rampantes, si el ático se habita</text>
+  <text x="1042" y="716" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e">Aislante bajo la pendiente del tejado</text>
+  <text x="1042" y="746" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e">Otra obra y otro estudio</text>
+</svg>
