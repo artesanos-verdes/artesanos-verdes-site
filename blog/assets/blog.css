@@ -1695,3 +1695,8 @@ body::before {
   color: var(--av-forest-deep);
 }
 .av-content .av-related span { display: block; margin-top: 4px; font-size: 14px; line-height: 1.5; color: var(--av-text-soft); }
+
+/* Encadré « En resumen » : étiquette + texte long (lot 0) */
+.av-case--resumen li { display: grid; grid-template-columns: 150px 1fr; gap: 6px 18px; align-items: start; }
+.av-case--resumen li strong { color: var(--av-brand-green-deep); font-weight: 600; }
+@media (max-width: 560px) { .av-case--resumen li { grid-template-columns: 1fr; gap: 2px; } }
