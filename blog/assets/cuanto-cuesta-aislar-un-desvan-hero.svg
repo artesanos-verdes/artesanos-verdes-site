@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Los cinco factores que mueven el precio de aislar un desván y la línea que lleva de una vivienda elegible a la obra sin coste</title>
+  <desc id="hero-desc">Cinco tarjetas numeradas muestran lo que hace variar el precio de un aislamiento insuflado: la superficie en planta del desván, medida en la visita; el acceso y la trampilla, por la que entra la manguera; el espesor, que depende de la zona climática y fija la cantidad de material; los obstáculos, como tabiques, conductos, focos y chimeneas; y el estado del forjado, porque las humedades o el amianto se resuelven antes. Debajo, cuatro casillas unidas por flechas recorren la línea «sin coste»: una vivienda elegible, en zona climática C, D o E y con desván no habitable y accesible; la ficha RES022 del sistema CAE; el ahorro cedido, que se paga como descuento en el presupuesto; y la obra sin coste en viviendas elegibles. Una nota recuerda que es financiación privada regulada por el Real Decreto 36/2023, no una ayuda pública.</desc>
+
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#22a044"/>
+    </marker>
+    <pattern id="lana" width="18" height="12" patternUnits="userSpaceOnUse">
+      <rect width="18" height="12" fill="#ffffff"/>
+      <path d="M0,8 q4.5,-7 9,0 t9,0" fill="none" stroke="#b8733a" stroke-width="2.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="70" y="84" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">QUÉ FIJA EL PRECIO</text>
+  <text x="70" y="142" font-family="'Source Serif 4', Georgia, serif" font-size="58" font-weight="700" fill="#1a2e1f">Cuánto cuesta aislar un desván</text>
+  <rect x="70" y="160" width="80" height="5" rx="2" fill="#b8733a"/>
+  <text x="70" y="206" font-size="23" fill="#1a2e1f" opacity="0.8">Cinco factores mueven el presupuesto del insuflado</text>
+
+  <!-- Tarjeta 1: superficie en planta -->
+  <rect x="70" y="240" width="272" height="360" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="104" cy="276" r="20" fill="#22a044"/>
+  <text x="104" y="284" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">1</text>
+  <text x="134" y="284" font-size="24" font-weight="700" fill="#1a2e1f">Superficie</text>
+  <text x="134" y="312" font-size="24" font-weight="700" fill="#1a2e1f">en planta</text>
+  <!-- icono: planta con cotas -->
+  <rect x="120" y="350" width="170" height="110" fill="url(#lana)" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="120" y1="480" x2="290" y2="480" stroke="#b8733a" stroke-width="3" marker-end="url(#flecha)"/>
+  <line x1="104" y1="350" x2="104" y2="460" stroke="#b8733a" stroke-width="3"/>
+  <line x1="96" y1="350" x2="112" y2="350" stroke="#b8733a" stroke-width="3"/>
+  <line x1="96" y1="460" x2="112" y2="460" stroke="#b8733a" stroke-width="3"/>
+  <text x="206" y="515" text-anchor="middle" font-size="21" fill="#1a2e1f">Los m² del suelo</text>
+  <text x="206" y="543" text-anchor="middle" font-size="21" fill="#1a2e1f">del desván, medidos</text>
+  <text x="206" y="571" text-anchor="middle" font-size="21" fill="#1a2e1f">en la visita</text>
+
+  <!-- Tarjeta 2: acceso y trampilla -->
+  <rect x="366" y="240" width="272" height="360" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="400" cy="276" r="20" fill="#22a044"/>
+  <text x="400" y="284" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">2</text>
+  <text x="430" y="284" font-size="24" font-weight="700" fill="#1a2e1f">Acceso</text>
+  <text x="430" y="312" font-size="24" font-weight="700" fill="#1a2e1f">y trampilla</text>
+  <!-- icono: techo con trampilla y escalera -->
+  <rect x="416" y="372" width="172" height="22" fill="#1a2e1f"/>
+  <rect x="470" y="372" width="64" height="22" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
+  <line x1="484" y1="394" x2="484" y2="478" stroke="#b8733a" stroke-width="4"/>
+  <line x1="520" y1="394" x2="520" y2="478" stroke="#b8733a" stroke-width="4"/>
+  <line x1="484" y1="414" x2="520" y2="414" stroke="#b8733a" stroke-width="4"/>
+  <line x1="484" y1="436" x2="520" y2="436" stroke="#b8733a" stroke-width="4"/>
+  <line x1="484" y1="458" x2="520" y2="458" stroke="#b8733a" stroke-width="4"/>
+  <path d="M502 352 l0 -40" stroke="#22a044" stroke-width="4" fill="none" marker-end="url(#flecha)"/>
+  <text x="502" y="515" text-anchor="middle" font-size="21" fill="#1a2e1f">Practicable:</text>
+  <text x="502" y="543" text-anchor="middle" font-size="21" fill="#1a2e1f">la manguera entra</text>
+  <text x="502" y="571" text-anchor="middle" font-size="21" fill="#1a2e1f">por la trampilla</text>
+
+  <!-- Tarjeta 3: espesor según zona climática -->
+  <rect x="662" y="240" width="272" height="360" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="696" cy="276" r="20" fill="#22a044"/>
+  <text x="696" y="284" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">3</text>
+  <text x="726" y="284" font-size="24" font-weight="700" fill="#1a2e1f">Espesor según</text>
+  <text x="726" y="312" font-size="24" font-weight="700" fill="#1a2e1f">zona climática</text>
+  <!-- icono: capa de lana sobre forjado, con cota de espesor -->
+  <rect x="712" y="400" width="170" height="60" fill="url(#lana)" stroke="#b8733a" stroke-width="2"/>
+  <rect x="712" y="460" width="170" height="20" fill="#1a2e1f"/>
+  <line x1="700" y1="400" x2="700" y2="460" stroke="#22a044" stroke-width="3"/>
+  <line x1="692" y1="400" x2="708" y2="400" stroke="#22a044" stroke-width="3"/>
+  <line x1="692" y1="460" x2="708" y2="460" stroke="#22a044" stroke-width="3"/>
+  <text x="797" y="378" text-anchor="middle" font-size="20" font-weight="700" fill="#22a044">C · D · E</text>
+  <text x="798" y="515" text-anchor="middle" font-size="21" fill="#1a2e1f">Más resistencia</text>
+  <text x="798" y="543" text-anchor="middle" font-size="21" fill="#1a2e1f">térmica exigida,</text>
+  <text x="798" y="571" text-anchor="middle" font-size="21" fill="#1a2e1f">más material</text>
+
+  <!-- Tarjeta 4: obstáculos -->
+  <rect x="958" y="240" width="272" height="360" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="992" cy="276" r="20" fill="#22a044"/>
+  <text x="992" y="284" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">4</text>
+  <text x="1022" y="284" font-size="24" font-weight="700" fill="#1a2e1f">Obstáculos</text>
+  <text x="1022" y="312" font-size="24" font-weight="700" fill="#1a2e1f">en el desván</text>
+  <!-- icono: forjado con chimenea, conducto y foco -->
+  <rect x="1008" y="460" width="172" height="20" fill="#1a2e1f"/>
+  <rect x="1020" y="370" width="36" height="90" fill="#b8733a"/>
+  <rect x="1082" y="420" width="70" height="26" rx="13" fill="#ffffff" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="1160" cy="470" r="9" fill="#f5efe1" stroke="#22a044" stroke-width="3"/>
+  <line x1="1082" y1="433" x2="1030" y2="433" stroke="#1a2e1f" stroke-width="3"/>
+  <text x="1094" y="515" text-anchor="middle" font-size="21" fill="#1a2e1f">Tabiques, conductos,</text>
+  <text x="1094" y="543" text-anchor="middle" font-size="21" fill="#1a2e1f">focos y chimeneas:</text>
+  <text x="1094" y="571" text-anchor="middle" font-size="21" fill="#1a2e1f">más tiempo</text>
+
+  <!-- Tarjeta 5: estado del forjado -->
+  <rect x="1254" y="240" width="272" height="360" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="1288" cy="276" r="20" fill="#22a044"/>
+  <text x="1288" y="284" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">5</text>
+  <text x="1318" y="284" font-size="24" font-weight="700" fill="#1a2e1f">Estado</text>
+  <text x="1318" y="312" font-size="24" font-weight="700" fill="#1a2e1f">del forjado</text>
+  <!-- icono: viguetas con mancha de humedad -->
+  <rect x="1304" y="440" width="172" height="20" fill="#1a2e1f"/>
+  <rect x="1320" y="460" width="20" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="1380" y="460" width="20" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="1440" y="460" width="20" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <ellipse cx="1392" cy="405" rx="42" ry="22" fill="#b8733a" opacity="0.35"/>
+  <path d="M1392 360 q-16 26 0 40 q16 -14 0 -40 z" fill="#b8733a"/>
+  <text x="1390" y="515" text-anchor="middle" font-size="21" fill="#1a2e1f">Humedades o amianto</text>
+  <text x="1390" y="543" text-anchor="middle" font-size="21" fill="#1a2e1f">se resuelven antes</text>
+  <text x="1390" y="571" text-anchor="middle" font-size="21" fill="#1a2e1f">de aislar</text>
+
+  <!-- Línea «sin coste» -->
+  <text x="70" y="664" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">LA LÍNEA «SIN COSTE»</text>
+
+  <rect x="70" y="690" width="330" height="170" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <text x="235" y="740" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2e1f">Vivienda elegible</text>
+  <text x="235" y="778" text-anchor="middle" font-size="21" fill="#1a2e1f">zona climática C, D o E,</text>
+  <text x="235" y="806" text-anchor="middle" font-size="21" fill="#1a2e1f">desván no habitable</text>
+  <text x="235" y="834" text-anchor="middle" font-size="21" fill="#1a2e1f">y accesible</text>
+  <line x1="404" y1="775" x2="440" y2="775" stroke="#22a044" stroke-width="4" marker-end="url(#flecha)"/>
+
+  <rect x="446" y="690" width="330" height="170" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <text x="611" y="740" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2e1f">Ficha RES022</text>
+  <text x="611" y="778" text-anchor="middle" font-size="21" fill="#1a2e1f">del sistema CAE,</text>
+  <text x="611" y="806" text-anchor="middle" font-size="21" fill="#1a2e1f">catálogo de la</text>
+  <text x="611" y="834" text-anchor="middle" font-size="21" fill="#1a2e1f">Orden TED/845/2023</text>
+  <line x1="780" y1="775" x2="816" y2="775" stroke="#22a044" stroke-width="4" marker-end="url(#flecha)"/>
+
+  <rect x="822" y="690" width="330" height="170" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <text x="987" y="740" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2e1f">Ahorro cedido</text>
+  <text x="987" y="778" text-anchor="middle" font-size="21" fill="#1a2e1f">verificado tras la obra</text>
+  <text x="987" y="806" text-anchor="middle" font-size="21" fill="#1a2e1f">y pagado como descuento</text>
+  <text x="987" y="834" text-anchor="middle" font-size="21" fill="#1a2e1f">en el presupuesto</text>
+  <line x1="1156" y1="775" x2="1192" y2="775" stroke="#22a044" stroke-width="4" marker-end="url(#flecha)"/>
+
+  <rect x="1198" y="690" width="330" height="170" rx="14" fill="#22a044"/>
+  <text x="1363" y="748" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#ffffff">Sin coste</text>
+  <text x="1363" y="790" text-anchor="middle" font-size="21" fill="#ffffff">en viviendas elegibles,</text>
+  <text x="1363" y="818" text-anchor="middle" font-size="21" fill="#ffffff">obra en una jornada</text>
+
+  <text x="70" y="925" font-size="21" fill="#1a2e1f" opacity="0.8">Financiación privada regulada por el Real Decreto 36/2023, no una ayuda pública. Presupuesto desglosado tras la medición del desván, en el estudio gratuito.</text>
+  <text x="70" y="960" font-size="18" font-weight="700" letter-spacing="2" fill="#b8733a">LOS ARTESANOS VERDES · ARTESANOSVERDES.COM</text>
+</svg>

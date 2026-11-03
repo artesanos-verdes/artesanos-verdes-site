@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Un anuncio de aislamiento por un euro frente a lo que hay detrás del sistema CAE</title>
+  <desc id="hero-desc">A la izquierda, la pantalla de un teléfono muestra un anuncio con el texto «Aísla tu desván por 1 €», «100 % financiado», «Ayuda del Gobierno» y un botón para dejar el teléfono; una lupa con un signo de interrogación se posa sobre el anuncio. A la derecha, bajo el rótulo «Lo que hay detrás», cuatro casillas unidas por flechas explican el recorrido real: la vivienda genera un ahorro que el propietario cede por contrato; un verificador acreditado por ENAC comprueba el ahorro después de la obra; el sujeto delegado, que figura en el listado del MITECO, pide la emisión de los CAE; y un sujeto obligado paga la contraprestación, que llega como descuento en el presupuesto. Debajo, una nota recuerda que es financiación privada regulada por el Real Decreto 36/2023 y no una ayuda pública.</desc>
+
+  <defs>
+    <marker id="hero-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#22a044"/>
+    </marker>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="80" y="100" font-family="'Source Serif 4', Georgia, serif" font-size="54" font-weight="700" fill="#1a2e1f">Aislamiento «gratis» con CAE: lee la oferta</text>
+
+  <!-- Teléfono con el anuncio -->
+  <rect x="120" y="170" width="520" height="700" rx="48" fill="#1a2e1f"/>
+  <rect x="144" y="206" width="472" height="628" rx="28" fill="#ffffff"/>
+  <rect x="300" y="184" width="160" height="10" rx="5" fill="#f5efe1"/>
+
+  <rect x="176" y="240" width="160" height="42" rx="8" fill="#b8733a"/>
+  <text x="256" y="270" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" letter-spacing="2">ANUNCIO</text>
+
+  <text x="176" y="362" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">Aísla tu desván</text>
+  <text x="176" y="446" font-family="'Source Serif 4', Georgia, serif" font-size="84" font-weight="700" fill="#b8733a">por 1 €</text>
+  <text x="176" y="516" font-family="'Source Sans 3', Arial, sans-serif" font-size="34" fill="#1a2e1f">«100 % financiado»</text>
+  <text x="176" y="564" font-family="'Source Sans 3', Arial, sans-serif" font-size="34" fill="#1a2e1f">«Ayuda del Gobierno»</text>
+
+  <rect x="176" y="640" width="408" height="72" rx="12" fill="#22a044"/>
+  <text x="380" y="687" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Déjanos tu teléfono</text>
+
+  <!-- Lupa -->
+  <circle cx="580" cy="470" r="112" fill="#f5efe1" fill-opacity="0.3" stroke="#1a2e1f" stroke-width="14"/>
+  <line x1="662" y1="552" x2="766" y2="656" stroke="#1a2e1f" stroke-width="28" stroke-linecap="round"/>
+  <text x="580" y="496" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="80" font-weight="700" fill="#1a2e1f">?</text>
+
+  <!-- Lo que hay detrás -->
+  <text x="860" y="214" font-family="'Source Serif 4', Georgia, serif" font-size="44" font-weight="700" fill="#1a2e1f">Lo que hay detrás</text>
+
+  <!-- 1 -->
+  <rect x="860" y="246" width="660" height="128" rx="16" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <circle cx="906" cy="310" r="26" fill="#22a044"/>
+  <text x="906" y="320" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">1</text>
+  <text x="950" y="290" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">Tu vivienda genera un ahorro</text>
+  <text x="950" y="326" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">de energía con la obra</text>
+  <text x="950" y="358" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">y tú lo cedes por contrato.</text>
+  <line x1="1190" y1="376" x2="1190" y2="396" stroke="#22a044" stroke-width="5" marker-end="url(#hero-arrow)"/>
+
+  <!-- 2 -->
+  <rect x="860" y="404" width="660" height="128" rx="16" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <circle cx="906" cy="468" r="26" fill="#22a044"/>
+  <text x="906" y="478" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">2</text>
+  <text x="950" y="448" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">Un verificador acreditado por ENAC</text>
+  <text x="950" y="484" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">comprueba el ahorro</text>
+  <text x="950" y="516" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">después de la obra.</text>
+  <line x1="1190" y1="534" x2="1190" y2="554" stroke="#22a044" stroke-width="5" marker-end="url(#hero-arrow)"/>
+
+  <!-- 3 -->
+  <rect x="860" y="562" width="660" height="128" rx="16" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <circle cx="906" cy="626" r="26" fill="#22a044"/>
+  <text x="906" y="636" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">3</text>
+  <text x="950" y="606" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">El sujeto delegado</text>
+  <text x="950" y="642" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">figura en el listado del MITECO</text>
+  <text x="950" y="674" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">y pide la emisión de los CAE.</text>
+  <line x1="1190" y1="692" x2="1190" y2="712" stroke="#22a044" stroke-width="5" marker-end="url(#hero-arrow)"/>
+
+  <!-- 4 -->
+  <rect x="860" y="720" width="660" height="128" rx="16" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <circle cx="906" cy="784" r="26" fill="#b8733a"/>
+  <text x="906" y="794" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">4</text>
+  <text x="950" y="764" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">Un sujeto obligado paga</text>
+  <text x="950" y="800" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">la contraprestación por tu ahorro:</text>
+  <text x="950" y="832" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">un descuento en el presupuesto.</text>
+
+  <!-- Nota -->
+  <text x="800" y="940" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">Financiación privada regulada por el Real Decreto 36/2023. No es una ayuda pública.</text>
+</svg>

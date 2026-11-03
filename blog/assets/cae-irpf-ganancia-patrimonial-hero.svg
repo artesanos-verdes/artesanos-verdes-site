@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="cae-irpf-title cae-irpf-desc">
+  <title id="cae-irpf-title">Del ahorro de tu obra a la declaración de la renta: el recorrido fiscal de la contraprestación del sistema CAE</title>
+  <desc id="cae-irpf-desc">Cuatro pasos unidos por flechas. Uno: tu vivienda, donde la obra genera un ahorro de energía. Dos: el contrato de cesión o convenio CAE, con el que cedes los derechos de ahorro energético. Tres: el sujeto delegado, que paga la contraprestación como un descuento en el presupuesto, la factura compensada. Cuatro: el IRPF, donde esa contraprestación se declara como ganancia patrimonial según el criterio publicado por la Agencia Tributaria en mayo de 2026.</desc>
+
+  <rect x="0" y="0" width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="92" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="52" font-weight="700" fill="#1a2e1f">Del ahorro de tu obra a la declaración de la renta</text>
+  <text x="800" y="140" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#22a044">El recorrido de la contraprestación del sistema CAE</text>
+  <line x1="120" y1="172" x2="1480" y2="172" stroke="#c9dcc9" stroke-width="2"/>
+
+  <!-- Flechas entre tarjetas -->
+  <g stroke="#b8733a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="384" y1="420" x2="436" y2="420"/>
+    <polyline points="420,400 442,420 420,440"/>
+    <line x1="774" y1="420" x2="826" y2="420"/>
+    <polyline points="810,400 832,420 810,440"/>
+    <line x1="1164" y1="420" x2="1216" y2="420"/>
+    <polyline points="1200,400 1222,420 1200,440"/>
+  </g>
+
+  <!-- Tarjeta 1: Tu vivienda -->
+  <rect x="60" y="222" width="320" height="400" rx="24" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="108" cy="270" r="26" fill="#22a044"/>
+  <text x="108" y="280" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">1</text>
+  <text x="150" y="281" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Tu vivienda</text>
+  <!-- icono casa con aislamiento -->
+  <polygon points="220,318 130,392 310,392" fill="#1a2e1f"/>
+  <rect x="150" y="392" width="140" height="92" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <rect x="150" y="392" width="140" height="22" fill="#22a044"/>
+  <rect x="200" y="438" width="40" height="46" fill="#1a2e1f"/>
+  <text x="220" y="536" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">La obra genera</text>
+  <text x="220" y="570" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">un ahorro de energía</text>
+
+  <!-- Tarjeta 2: Contrato de cesión -->
+  <rect x="450" y="222" width="320" height="400" rx="24" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="498" cy="270" r="26" fill="#22a044"/>
+  <text x="498" y="280" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">2</text>
+  <text x="540" y="281" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Convenio CAE</text>
+  <!-- icono documento firmado -->
+  <rect x="552" y="318" width="116" height="156" rx="8" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <line x1="572" y1="350" x2="648" y2="350" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <line x1="572" y1="378" x2="648" y2="378" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <line x1="572" y1="406" x2="624" y2="406" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M572 452 C 590 430, 600 466, 616 446 S 640 438, 652 452" fill="none" stroke="#b8733a" stroke-width="5" stroke-linecap="round"/>
+  <text x="610" y="536" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">Cedes los derechos</text>
+  <text x="610" y="570" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">de ahorro energético</text>
+
+  <!-- Tarjeta 3: Sujeto delegado -->
+  <rect x="840" y="222" width="320" height="400" rx="24" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="888" cy="270" r="26" fill="#22a044"/>
+  <text x="888" y="280" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">3</text>
+  <text x="928" y="281" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">Sujeto delegado</text>
+  <!-- icono intercambio: ahorro cedido / contraprestación -->
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="900" y1="360" x2="1090" y2="360" stroke="#22a044" stroke-width="8"/>
+    <polyline points="1066,338 1094,360 1066,382" stroke="#22a044" stroke-width="8"/>
+    <line x1="1100" y1="440" x2="910" y2="440" stroke="#b8733a" stroke-width="8"/>
+    <polyline points="934,418 906,440 934,462" stroke="#b8733a" stroke-width="8"/>
+  </g>
+  <text x="1000" y="330" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#22a044">ahorro cedido</text>
+  <text x="1000" y="490" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#b8733a">contraprestación</text>
+  <text x="1000" y="524" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">Descuento en</text>
+  <text x="1000" y="556" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">el presupuesto</text>
+  <text x="1000" y="590" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">(factura compensada)</text>
+
+  <!-- Tarjeta 4: IRPF -->
+  <rect x="1230" y="222" width="320" height="400" rx="24" fill="#1a2e1f" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="1278" cy="270" r="26" fill="#b8733a"/>
+  <text x="1278" y="280" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">4</text>
+  <text x="1320" y="281" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#f5efe1">IRPF</text>
+  <!-- icono declaración con marca -->
+  <rect x="1332" y="318" width="116" height="156" rx="8" fill="#f5efe1" stroke="#f5efe1" stroke-width="4"/>
+  <line x1="1352" y1="350" x2="1428" y2="350" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1352" y1="378" x2="1428" y2="378" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1352" y1="406" x2="1404" y2="406" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <polyline points="1356,446 1378,464 1420,428" fill="none" stroke="#22a044" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1390" y="536" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" font-weight="700" fill="#f5efe1">Ganancia patrimonial</text>
+  <text x="1390" y="570" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#f5efe1">Criterio AEAT, mayo de 2026</text>
+
+  <!-- Aviso -->
+  <rect x="120" y="680" width="1360" height="128" rx="20" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
+  <text x="800" y="732" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">«Sin coste» significa que no pagas la obra.</text>
+  <text x="800" y="778" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#b8733a">No significa que la operación no exista para Hacienda.</text>
+
+  <!-- Notas -->
+  <circle cx="100" cy="900" r="10" fill="#22a044"/>
+  <text x="126" y="910" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">Comunidad de propietarios: cada vecino declara su parte</text>
+</svg>

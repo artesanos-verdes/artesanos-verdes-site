@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Plazos de la deducción del IRPF por obras de eficiencia energética tras el Real Decreto-ley 7/2026</title>
+  <desc id="hero-desc">Línea temporal con los años 2026 y 2027. Una barra verde, para las deducciones del 20 % y del 40 % en la vivienda, termina el 31 de diciembre de 2026: la obra debe estar hecha y pagada en esa fecha y el certificado posterior expedido antes del 1 de enero de 2027. Una barra de color tierra, para la deducción del 60 % en edificios residenciales, llega hasta el 31 de diciembre de 2027, con el certificado del edificio expedido antes del 1 de enero de 2028.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="96" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">Deducción del IRPF por obras de eficiencia energética</text>
+  <text x="800" y="146" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#22a044">Plazos tras el Real Decreto-ley 7/2026</text>
+  <line x1="120" y1="178" x2="1480" y2="178" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Barra 1: vivienda, 20 % y 40 % -->
+  <text x="160" y="252" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="600" fill="#1a2e1f">Vivienda habitual o alquilada</text>
+  <rect x="160" y="276" width="640" height="96" rx="12" fill="#22a044"/>
+  <text x="184" y="335" font-family="'Source Serif 4', Georgia, serif" font-size="36" font-weight="700" fill="#ffffff">Deducción del 20 % y del 40 %</text>
+  <line x1="800" y1="214" x2="800" y2="560" stroke="#1a2e1f" stroke-width="3" stroke-dasharray="10 10"/>
+  <text x="820" y="300" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="600" fill="#1a2e1f">Obra realizada y pagada hasta el 31-12-2026</text>
+  <text x="820" y="342" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">Certificado posterior antes del 1-1-2027</text>
+
+  <!-- Eje temporal -->
+  <text x="480" y="536" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#22a044">2026</text>
+  <text x="1120" y="536" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#b8733a">2027</text>
+  <line x1="160" y1="560" x2="1440" y2="560" stroke="#1a2e1f" stroke-width="4"/>
+  <line x1="160" y1="546" x2="160" y2="574" stroke="#1a2e1f" stroke-width="4"/>
+  <line x1="800" y1="546" x2="800" y2="574" stroke="#1a2e1f" stroke-width="4"/>
+  <line x1="1440" y1="546" x2="1440" y2="574" stroke="#1a2e1f" stroke-width="4"/>
+  <text x="160" y="606" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">1-1-2026</text>
+  <text x="800" y="606" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">31-12-2026</text>
+  <text x="1440" y="606" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">31-12-2027</text>
+
+  <!-- Barra 2: edificio, 60 % -->
+  <text x="160" y="680" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="600" fill="#1a2e1f">Edificio de uso residencial (comunidad de propietarios)</text>
+  <rect x="160" y="704" width="1280" height="96" rx="12" fill="#b8733a"/>
+  <text x="184" y="763" font-family="'Source Serif 4', Georgia, serif" font-size="36" font-weight="700" fill="#ffffff">Deducción del 60 %</text>
+  <line x1="1440" y1="622" x2="1440" y2="900" stroke="#1a2e1f" stroke-width="3" stroke-dasharray="10 10"/>
+  <text x="1420" y="846" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="600" fill="#1a2e1f">Cantidades satisfechas hasta el 31-12-2027</text>
+  <text x="1420" y="888" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">Certificado del edificio antes del 1-1-2028</text>
+
+  <!-- Pie -->
+  <text x="160" y="960" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Fuente: Agencia Tributaria · Real Decreto-ley 7/2026 (BOE de 21 de marzo de 2026)</text>
+  <text x="1440" y="960" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#22a044">Los Artesanos Verdes</text>
+</svg>
