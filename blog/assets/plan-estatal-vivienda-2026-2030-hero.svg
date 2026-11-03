@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Plan Estatal de Vivienda 2026-2030: la vía de la ayuda pública y la vía del sistema CAE, en paralelo</title>
+  <desc id="hero-desc">Dos filas de pasos. Arriba, la vía del Plan Estatal: real decreto publicado en el BOE el 23 de abril de 2026, reparto en la Conferencia Sectorial del 21 de mayo de 2026, convenio entre el Ministerio y cada comunidad autónoma, convocatoria en el boletín autonómico y, por último, solicitud y resolución; los tres últimos pasos aparecen como pendientes, porque dependen de cada comunidad autónoma. Abajo, la vía del sistema CAE, financiación privada sin convocatoria ni plazo: estudio gratuito, acuerdo de junta y cesión del ahorro, obra en una jornada y verificación por una entidad acreditada por ENAC antes de emitir los certificados. Entre ambas filas, una nota: las dos vías pueden combinarse y la ayuda pública se declara en el expediente CAE.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="92" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="48" font-weight="700" fill="#1a2e1f">Plan Estatal 2026-2030: dos vías para rehabilitar</text>
+  <text x="800" y="142" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#22a044">La ayuda pública espera a la convocatoria autonómica; el sistema CAE, no</text>
+  <line x1="120" y1="174" x2="1480" y2="174" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Vía 1: Plan Estatal -->
+  <text x="160" y="232" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="600" fill="#1a2e1f">Vía del Plan Estatal: ayuda pública, con convocatoria y plazo</text>
+
+  <rect x="160" y="252" width="240" height="140" rx="14" fill="#22a044"/>
+  <text x="280" y="304" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Real Decreto</text>
+  <text x="280" y="340" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#ffffff">326/2026</text>
+  <text x="280" y="372" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">BOE de 23-4-2026</text>
+  <polygon points="403,314 417,322 403,330" fill="#1a2e1f"/>
+
+  <rect x="420" y="252" width="240" height="140" rx="14" fill="#22a044"/>
+  <text x="540" y="304" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Conferencia</text>
+  <text x="540" y="340" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#ffffff">Sectorial</text>
+  <text x="540" y="372" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">reparto, 21-5-2026</text>
+  <polygon points="663,314 677,322 663,330" fill="#1a2e1f"/>
+
+  <rect x="680" y="252" width="240" height="140" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="800" y="304" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Convenio</text>
+  <text x="800" y="340" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Ministerio y</text>
+  <text x="800" y="372" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">comunidad autónoma</text>
+  <polygon points="923,314 937,322 923,330" fill="#b8733a"/>
+
+  <rect x="940" y="252" width="240" height="140" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="1060" y="304" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Convocatoria</text>
+  <text x="1060" y="340" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">en el boletín</text>
+  <text x="1060" y="372" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">autonómico</text>
+  <polygon points="1183,314 1197,322 1183,330" fill="#b8733a"/>
+
+  <rect x="1200" y="252" width="240" height="140" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="1320" y="304" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Solicitud</text>
+  <text x="1320" y="340" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">y resolución</text>
+  <text x="1320" y="372" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">de la ayuda</text>
+
+  <line x1="680" y1="416" x2="1440" y2="416" stroke="#b8733a" stroke-width="3"/>
+  <line x1="680" y1="408" x2="680" y2="424" stroke="#b8733a" stroke-width="3"/>
+  <line x1="1440" y1="408" x2="1440" y2="424" stroke="#b8733a" stroke-width="3"/>
+  <text x="1060" y="452" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#b8733a">Pendiente: depende de cada comunidad autónoma</text>
+
+  <!-- Nota central -->
+  <rect x="160" y="500" width="1280" height="58" rx="12" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="800" y="537" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Las dos vías pueden combinarse: la ayuda pública se declara en el expediente CAE</text>
+
+  <!-- Vía 2: sistema CAE -->
+  <text x="160" y="620" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="600" fill="#1a2e1f">Vía CAE: financiación privada, sin convocatoria ni plazo</text>
+
+  <rect x="160" y="640" width="290" height="140" rx="14" fill="#1a2e1f"/>
+  <text x="305" y="692" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Estudio gratuito</text>
+  <text x="305" y="728" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#ffffff">fotos y documentos</text>
+  <text x="305" y="760" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">respuesta en 24 h</text>
+  <polygon points="463,702 477,710 463,718" fill="#22a044"/>
+
+  <rect x="490" y="640" width="290" height="140" rx="14" fill="#1a2e1f"/>
+  <text x="635" y="692" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Acuerdo de junta</text>
+  <text x="635" y="728" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#ffffff">y cesión del ahorro</text>
+  <text x="635" y="760" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">artículo 17.2 de la LPH</text>
+  <polygon points="793,702 807,710 793,718" fill="#22a044"/>
+
+  <rect x="820" y="640" width="290" height="140" rx="14" fill="#1a2e1f"/>
+  <text x="965" y="692" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Obra en una jornada</text>
+  <text x="965" y="728" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#ffffff">cubierta del edificio</text>
+  <text x="965" y="760" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">sin obras en las viviendas</text>
+  <polygon points="1123,702 1137,710 1123,718" fill="#22a044"/>
+
+  <rect x="1150" y="640" width="290" height="140" rx="14" fill="#1a2e1f"/>
+  <text x="1295" y="692" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Verificación</text>
+  <text x="1295" y="728" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#ffffff">acreditada por ENAC</text>
+  <text x="1295" y="760" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">y emisión de los CAE</text>
+
+  <text x="160" y="830" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#22a044">En edificios elegibles, el aislamiento de la cubierta se hace sin coste para la comunidad</text>
+
+  <!-- Pie -->
+  <text x="160" y="960" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Fuentes: Real Decreto 326/2026 (BOE de 23 de abril de 2026) · Real Decreto 36/2023 · MITECO</text>
+  <text x="1440" y="960" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#22a044">Los Artesanos Verdes</text>
+</svg>

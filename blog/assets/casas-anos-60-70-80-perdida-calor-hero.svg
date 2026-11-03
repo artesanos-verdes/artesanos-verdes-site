@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Línea temporal de la norma térmica en España: antes de 1979, NBE-CT-79, CTE 2006, DB-HE 2013 y DB-HE 2019, con el muro y el techo de cada época</title>
+  <desc id="d">Cinco tarjetas en fila, cada una con la sección esquemática de un muro de doble hoja y del forjado bajo cubierta. En los años 60 y 70 no había norma básica térmica: la cámara del muro está vacía y el forjado no lleva nada encima. En 1979 la NBE-CT-79 (Real Decreto 2429/1979) es la primera norma básica de condiciones térmicas, con un aislamiento fino, muy por debajo del actual. En 2006 el Código Técnico de la Edificación (Real Decreto 314/2006) fija valores límite por zona climática y el aislamiento crece. En 2013 (Orden FOM/1635/2013) y en 2019 (Real Decreto 732/2019) el DB-HE se actualiza y el aislamiento vuelve a crecer. Debajo, una línea temporal con los cinco hitos y un recuadro que recuerda que el parque anterior a 1981 tiene poco o ningún aislamiento, que las cifras por provincia están en el Censo 2021 del INE y que «antes de 2006» es el criterio de nuestra propuesta, no una exigencia de la ficha RES022. Esquema orientativo, sin escala.</desc>
+  <defs>
+    <pattern id="wool" width="18" height="11" patternUnits="userSpaceOnUse">
+      <rect width="18" height="11" fill="#ffffff"/>
+      <path d="M0,7 q4.5,-7 9,0 t9,0" fill="none" stroke="#b8733a" stroke-width="2.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="70" y="88" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">LÍNEA TEMPORAL DE LA NORMA TÉRMICA</text>
+  <text x="70" y="146" font-family="'Source Serif 4', Georgia, serif" font-size="48" font-weight="700" fill="#1a2e1f">Casas de los años 60, 70 y 80: por qué pierden tanto calor</text>
+  <rect x="70" y="164" width="80" height="5" rx="2" fill="#b8733a"/>
+  <text x="70" y="208" font-size="22" fill="#1a2e1f" opacity="0.8">Qué había en el muro y en el techo en cada época, y qué exigió cada norma</text>
+
+  <!-- Tarjeta 1: años 60-70 -->
+  <rect x="70" y="250" width="268" height="340" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <text x="90" y="292" font-size="26" font-weight="700" fill="#1a2e1f">Años 60 y 70</text>
+  <text x="90" y="318" font-size="18" font-weight="700" fill="#b8733a">Sin norma básica</text>
+  <text x="204" y="356" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">desván</text>
+  <rect x="100" y="364" width="208" height="20" fill="#1a2e1f"/>
+  <rect x="100" y="384" width="24" height="120" fill="#b8733a"/>
+  <rect x="124" y="384" width="16" height="120" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+  <rect x="140" y="384" width="14" height="120" fill="#b8733a" opacity="0.7"/>
+  <text x="236" y="450" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">vivienda</text>
+  <text x="204" y="540" text-anchor="middle" font-size="17" fill="#1a2e1f">Doble hoja con cámara vacía</text>
+  <text x="204" y="564" text-anchor="middle" font-size="17" fill="#1a2e1f">Forjado bajo cubierta sin aislar</text>
+
+  <!-- Tarjeta 2: 1979 -->
+  <rect x="368" y="250" width="268" height="340" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <text x="388" y="292" font-size="26" font-weight="700" fill="#1a2e1f">1979</text>
+  <text x="388" y="318" font-size="18" font-weight="700" fill="#22a044">NBE-CT-79</text>
+  <text x="502" y="346" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">desván</text>
+  <rect x="398" y="354" width="208" height="10" fill="url(#wool)" stroke="#b8733a" stroke-width="1"/>
+  <rect x="398" y="364" width="208" height="20" fill="#1a2e1f"/>
+  <rect x="398" y="384" width="24" height="120" fill="#b8733a"/>
+  <rect x="422" y="384" width="16" height="120" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+  <rect x="422" y="384" width="6" height="120" fill="#22a044"/>
+  <rect x="438" y="384" width="14" height="120" fill="#b8733a" opacity="0.7"/>
+  <text x="534" y="450" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">vivienda</text>
+  <text x="502" y="540" text-anchor="middle" font-size="17" fill="#1a2e1f">Primera norma básica térmica</text>
+  <text x="502" y="564" text-anchor="middle" font-size="17" fill="#1a2e1f">(RD 2429/1979), poco exigente</text>
+
+  <!-- Tarjeta 3: 2006 -->
+  <rect x="666" y="250" width="268" height="340" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <text x="686" y="292" font-size="26" font-weight="700" fill="#1a2e1f">2006</text>
+  <text x="686" y="318" font-size="18" font-weight="700" fill="#22a044">CTE · DB-HE</text>
+  <text x="800" y="336" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">desván</text>
+  <rect x="696" y="342" width="208" height="22" fill="url(#wool)" stroke="#b8733a" stroke-width="1"/>
+  <rect x="696" y="364" width="208" height="20" fill="#1a2e1f"/>
+  <rect x="696" y="384" width="24" height="120" fill="#b8733a"/>
+  <rect x="720" y="384" width="16" height="120" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+  <rect x="720" y="384" width="10" height="120" fill="#22a044"/>
+  <rect x="736" y="384" width="14" height="120" fill="#b8733a" opacity="0.7"/>
+  <text x="832" y="450" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">vivienda</text>
+  <text x="800" y="540" text-anchor="middle" font-size="17" fill="#1a2e1f">Valores límite por zona climática</text>
+  <text x="800" y="564" text-anchor="middle" font-size="17" fill="#1a2e1f">(RD 314/2006)</text>
+
+  <!-- Tarjeta 4: 2013 -->
+  <rect x="964" y="250" width="268" height="340" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <text x="984" y="292" font-size="26" font-weight="700" fill="#1a2e1f">2013</text>
+  <text x="984" y="318" font-size="18" font-weight="700" fill="#22a044">DB-HE actualizado</text>
+  <text x="1098" y="328" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">desván</text>
+  <rect x="994" y="334" width="208" height="30" fill="url(#wool)" stroke="#b8733a" stroke-width="1"/>
+  <rect x="994" y="364" width="208" height="20" fill="#1a2e1f"/>
+  <rect x="994" y="384" width="24" height="120" fill="#b8733a"/>
+  <rect x="1018" y="384" width="16" height="120" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+  <rect x="1018" y="384" width="13" height="120" fill="#22a044"/>
+  <rect x="1034" y="384" width="14" height="120" fill="#b8733a" opacity="0.7"/>
+  <text x="1130" y="450" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">vivienda</text>
+  <text x="1098" y="540" text-anchor="middle" font-size="17" fill="#1a2e1f">Exigencias más estrictas</text>
+  <text x="1098" y="564" text-anchor="middle" font-size="17" fill="#1a2e1f">(Orden FOM/1635/2013)</text>
+
+  <!-- Tarjeta 5: 2019 -->
+  <rect x="1262" y="250" width="268" height="340" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <text x="1282" y="292" font-size="26" font-weight="700" fill="#1a2e1f">2019</text>
+  <text x="1282" y="318" font-size="18" font-weight="700" fill="#22a044">DB-HE 2019</text>
+  <rect x="1292" y="326" width="208" height="38" fill="url(#wool)" stroke="#b8733a" stroke-width="1"/>
+  <rect x="1292" y="364" width="208" height="20" fill="#1a2e1f"/>
+  <rect x="1292" y="384" width="24" height="120" fill="#b8733a"/>
+  <rect x="1316" y="384" width="16" height="120" fill="#22a044"/>
+  <rect x="1332" y="384" width="14" height="120" fill="#b8733a" opacity="0.7"/>
+  <text x="1428" y="450" text-anchor="middle" font-size="15" fill="#1a2e1f" opacity="0.7">vivienda</text>
+  <text x="1396" y="540" text-anchor="middle" font-size="17" fill="#1a2e1f">Consumo de energía casi nulo</text>
+  <text x="1396" y="564" text-anchor="middle" font-size="17" fill="#1a2e1f">(RD 732/2019)</text>
+
+  <!-- Línea temporal -->
+  <line x1="70" y1="650" x2="1530" y2="650" stroke="#1a2e1f" stroke-opacity="0.25" stroke-width="4"/>
+  <circle cx="204" cy="650" r="14" fill="#b8733a"/>
+  <circle cx="502" cy="650" r="14" fill="#22a044"/>
+  <circle cx="800" cy="650" r="14" fill="#22a044"/>
+  <circle cx="1098" cy="650" r="14" fill="#22a044"/>
+  <circle cx="1396" cy="650" r="14" fill="#1a2e1f"/>
+  <text x="204" y="696" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">Antes de 1979</text>
+  <text x="502" y="696" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">1979</text>
+  <text x="800" y="696" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">2006</text>
+  <text x="1098" y="696" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">2013</text>
+  <text x="1396" y="696" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">2019</text>
+
+  <!-- Recuadro final -->
+  <rect x="70" y="740" width="1460" height="170" rx="14" fill="#1a2e1f"/>
+  <text x="110" y="790" font-size="27" font-weight="700" fill="#f5efe1">Parque anterior a 1981: poco o ningún aislamiento</text>
+  <text x="110" y="832" font-size="20" fill="#f5efe1" opacity="0.9">Las cifras por provincia están en el Censo 2021 del INE (tabla 59521).</text>
+  <text x="110" y="868" font-size="20" fill="#f5efe1" opacity="0.9">«Antes de 2006» es el criterio de nuestra propuesta: el año influye en el ahorro que reconoce la ficha RES022.</text>
+  <text x="1530" y="950" text-anchor="end" font-size="16" font-style="italic" fill="#1a2e1f" opacity="0.6">Esquema orientativo, sin escala</text>
+</svg>

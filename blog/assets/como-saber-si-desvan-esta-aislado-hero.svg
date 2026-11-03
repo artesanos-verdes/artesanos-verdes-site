@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">¿Está aislado tu desván? Cuatro escenarios desde la trampilla y la resistencia térmica según el espesor</title>
+  <desc id="d">A la izquierda, cuatro secciones esquemáticas de lo que puede verse al abrir la trampilla del desván: el forjado desnudo, sin ningún aislante; una manta antigua de unos cinco centímetros con papel kraft, desplazada y con huecos; un aislante hundido o mojado por una gotera, que se retira; y una capa continua de 220 milímetros de lana mineral insuflada, con resistencia térmica 4,75 según su certificado ACERMI. A la derecha, una tabla con la resistencia térmica estimada, calculada como espesor dividido por conductividad según la UNE-EN ISO 6946, para espesores de 50 a 300 milímetros y conductividades de 0,035, 0,040 y 0,046 W/m·K; la fila de 220 milímetros aparece destacada.</desc>
+  <defs>
+    <pattern id="wool" width="20" height="12" patternUnits="userSpaceOnUse">
+      <rect width="20" height="12" fill="#ffffff"/>
+      <path d="M0,8 q5,-8 10,0 t10,0" fill="none" stroke="#b8733a" stroke-width="2.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="70" y="92" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">DIAGNÓSTICO DESDE LA TRAMPILLA</text>
+  <text x="70" y="150" font-family="'Source Serif 4', Georgia, serif" font-size="58" font-weight="700" fill="#1a2e1f">¿Está aislado tu desván?</text>
+  <rect x="70" y="168" width="80" height="5" rx="2" fill="#b8733a"/>
+  <text x="70" y="214" font-size="22" fill="#1a2e1f" opacity="0.8">Cuatro escenarios al abrir la trampilla</text>
+
+  <!-- Escenario 1: forjado desnudo -->
+  <rect x="70" y="230" width="330" height="330" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="106" cy="266" r="20" fill="#22a044"/>
+  <text x="106" y="274" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">1</text>
+  <text x="138" y="274" font-size="26" font-weight="700" fill="#1a2e1f">Forjado desnudo</text>
+  <text x="235" y="380" text-anchor="middle" font-size="20" font-style="italic" fill="#1a2e1f" opacity="0.7">Bovedillas y viguetas a la vista</text>
+  <rect x="95" y="420" width="280" height="26" fill="#1a2e1f"/>
+  <rect x="125" y="446" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="220" y="446" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="315" y="446" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="95" y="492" width="280" height="44" rx="10" fill="#f5efe1"/>
+  <text x="235" y="521" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2e1f">R añadida ≈ 0</text>
+
+  <!-- Escenario 2: manta antigua con kraft -->
+  <rect x="420" y="230" width="330" height="330" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="456" cy="266" r="20" fill="#22a044"/>
+  <text x="456" y="274" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">2</text>
+  <text x="488" y="274" font-size="26" font-weight="700" fill="#1a2e1f">Manta antigua con kraft</text>
+  <text x="585" y="360" text-anchor="middle" font-size="20" font-style="italic" fill="#1a2e1f" opacity="0.7">Desplazada, pisada, con huecos</text>
+  <rect x="460" y="388" width="115" height="32" fill="#b8733a" fill-opacity="0.4"/>
+  <rect x="600" y="388" width="110" height="32" fill="#b8733a" fill-opacity="0.4"/>
+  <line x1="460" y1="419" x2="575" y2="419" stroke="#b8733a" stroke-width="4"/>
+  <line x1="600" y1="419" x2="710" y2="419" stroke="#b8733a" stroke-width="4"/>
+  <rect x="445" y="420" width="280" height="26" fill="#1a2e1f"/>
+  <rect x="475" y="446" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="570" y="446" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="665" y="446" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="445" y="492" width="280" height="44" rx="10" fill="#f5efe1"/>
+  <text x="585" y="521" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2e1f">≈ 5 cm · R ≈ 1,25 (estimación)</text>
+
+  <!-- Escenario 3: hundido o mojado -->
+  <rect x="70" y="580" width="330" height="330" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="106" cy="616" r="20" fill="#b8733a"/>
+  <text x="106" y="624" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">3</text>
+  <text x="138" y="624" font-size="26" font-weight="700" fill="#1a2e1f">Hundido o mojado</text>
+  <text x="235" y="662" text-anchor="middle" font-size="20" font-style="italic" fill="#1a2e1f" opacity="0.7">Gotera o condensación</text>
+  <ellipse cx="235" cy="692" rx="6" ry="9" fill="#1a2e1f" opacity="0.55"/>
+  <ellipse cx="235" cy="718" rx="6" ry="9" fill="#1a2e1f" opacity="0.4"/>
+  <path d="M110,736 C170,762 300,762 360,734 L360,770 L110,770 Z" fill="#b8733a" fill-opacity="0.4"/>
+  <ellipse cx="235" cy="760" rx="62" ry="9" fill="#1a2e1f" fill-opacity="0.4"/>
+  <rect x="95" y="770" width="280" height="26" fill="#1a2e1f"/>
+  <rect x="125" y="796" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="220" y="796" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="315" y="796" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="95" y="842" width="280" height="44" rx="10" fill="#f5efe1"/>
+  <text x="235" y="871" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2e1f">R incierta · se retira</text>
+
+  <!-- Escenario 4: 220 mm insuflados -->
+  <rect x="420" y="580" width="330" height="330" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="456" cy="616" r="20" fill="#1a2e1f"/>
+  <text x="456" y="624" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">4</text>
+  <text x="488" y="624" font-size="26" font-weight="700" fill="#1a2e1f">220 mm insuflados</text>
+  <rect x="460" y="660" width="250" height="110" fill="url(#wool)" stroke="#b8733a" stroke-width="2"/>
+  <line x1="724" y1="660" x2="724" y2="770" stroke="#1a2e1f" stroke-width="2"/>
+  <line x1="716" y1="660" x2="732" y2="660" stroke="#1a2e1f" stroke-width="2"/>
+  <line x1="716" y1="770" x2="732" y2="770" stroke="#1a2e1f" stroke-width="2"/>
+  <rect x="538" y="698" width="94" height="34" rx="8" fill="#ffffff" fill-opacity="0.92"/>
+  <text x="585" y="722" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2e1f">220 mm</text>
+  <rect x="445" y="770" width="280" height="26" fill="#1a2e1f"/>
+  <rect x="475" y="796" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="570" y="796" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="665" y="796" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
+  <rect x="445" y="842" width="280" height="44" rx="10" fill="#f5efe1"/>
+  <text x="585" y="871" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2e1f">R = 4,75 según ACERMI</text>
+
+  <!-- Tabla espesor-R -->
+  <text x="840" y="250" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#1a2e1f">Resistencia térmica estimada</text>
+  <text x="840" y="284" font-size="22" fill="#1a2e1f" opacity="0.8">R = espesor ÷ λ, en m²·K/W (UNE-EN ISO 6946); λ en W/m·K</text>
+
+  <rect x="840" y="310" width="690" height="54" fill="#1a2e1f"/>
+  <text x="860" y="345" font-size="24" font-weight="700" fill="#ffffff">Espesor</text>
+  <text x="1096" y="345" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">λ 0,035</text>
+  <text x="1269" y="345" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">λ 0,040</text>
+  <text x="1443" y="345" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">λ 0,046</text>
+
+  <rect x="840" y="364" width="690" height="66" fill="#ffffff"/>
+  <text x="860" y="406" font-size="26" fill="#1a2e1f">50 mm</text>
+  <text x="1096" y="406" text-anchor="middle" font-size="26" fill="#1a2e1f">1,43</text>
+  <text x="1269" y="406" text-anchor="middle" font-size="26" fill="#1a2e1f">1,25</text>
+  <text x="1443" y="406" text-anchor="middle" font-size="26" fill="#1a2e1f">1,09</text>
+
+  <rect x="840" y="430" width="690" height="66" fill="#eaf2ec"/>
+  <text x="860" y="472" font-size="26" fill="#1a2e1f">100 mm</text>
+  <text x="1096" y="472" text-anchor="middle" font-size="26" fill="#1a2e1f">2,86</text>
+  <text x="1269" y="472" text-anchor="middle" font-size="26" fill="#1a2e1f">2,50</text>
+  <text x="1443" y="472" text-anchor="middle" font-size="26" fill="#1a2e1f">2,17</text>
+
+  <rect x="840" y="496" width="690" height="66" fill="#ffffff"/>
+  <text x="860" y="538" font-size="26" fill="#1a2e1f">150 mm</text>
+  <text x="1096" y="538" text-anchor="middle" font-size="26" fill="#1a2e1f">4,29</text>
+  <text x="1269" y="538" text-anchor="middle" font-size="26" fill="#1a2e1f">3,75</text>
+  <text x="1443" y="538" text-anchor="middle" font-size="26" fill="#1a2e1f">3,26</text>
+
+  <rect x="840" y="562" width="690" height="66" fill="#eaf2ec"/>
+  <text x="860" y="604" font-size="26" fill="#1a2e1f">200 mm</text>
+  <text x="1096" y="604" text-anchor="middle" font-size="26" fill="#1a2e1f">5,71</text>
+  <text x="1269" y="604" text-anchor="middle" font-size="26" fill="#1a2e1f">5,00</text>
+  <text x="1443" y="604" text-anchor="middle" font-size="26" fill="#1a2e1f">4,35</text>
+
+  <rect x="840" y="628" width="690" height="66" fill="#22a044" fill-opacity="0.16"/>
+  <rect x="840" y="628" width="8" height="66" fill="#b8733a"/>
+  <text x="860" y="670" font-size="26" font-weight="700" fill="#1a2e1f">220 mm</text>
+  <text x="1096" y="670" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2e1f">6,29</text>
+  <text x="1269" y="670" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2e1f">5,50</text>
+  <text x="1443" y="670" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2e1f">4,78</text>
+
+  <rect x="840" y="694" width="690" height="66" fill="#ffffff"/>
+  <text x="860" y="736" font-size="26" fill="#1a2e1f">300 mm</text>
+  <text x="1096" y="736" text-anchor="middle" font-size="26" fill="#1a2e1f">8,57</text>
+  <text x="1269" y="736" text-anchor="middle" font-size="26" fill="#1a2e1f">7,50</text>
+  <text x="1443" y="736" text-anchor="middle" font-size="26" fill="#1a2e1f">6,52</text>
+
+  <rect x="840" y="310" width="690" height="450" rx="10" fill="none" stroke="#1a2e1f" stroke-opacity="0.25" stroke-width="2"/>
+
+  <text x="840" y="804" font-size="22" fill="#1a2e1f" opacity="0.85">Estimación con el aislante seco, continuo y sin comprimir:</text>
+  <text x="840" y="834" font-size="22" fill="#1a2e1f" opacity="0.85">mojado, pisado o con huecos rinde menos.</text>
+  <text x="840" y="872" font-size="22" fill="#1a2e1f" opacity="0.85">El valor real de un producto es el de su certificado:</text>
+  <text x="840" y="902" font-size="22" font-weight="700" fill="#1a2e1f">Isolene 4 a 220 mm, R = 4,75 m²·K/W (ACERMI).</text>
+</svg>
