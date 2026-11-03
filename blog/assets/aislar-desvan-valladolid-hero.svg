@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Valladolid, zona climática D2: cómo se lee la altitud de un municipio y qué se aísla en un bloque</title>
+  <desc id="d">Infografía en dos partes. A la izquierda, una escala de altitud de 600 a 1000 metros: la tabla a-Anejo B del Código Técnico asigna la zona por provincia y tramo de altitud, y en la fila de Valladolid da D2 por debajo de 800 metros y E1 a partir de 800 metros; la capital, a 704 metros, queda en D2. Las dos franjas son elegibles para la ficha RES022 del sistema CAE. Medina del Campo aparece marcada a 720 metros. A la derecha, la sección de un bloque de viviendas de cuatro plantas con tejado inclinado: sobre el suelo del desván no habitable hay una capa de 220 milímetros de lana mineral insuflada, con resistencia térmica de 4,75 metros cuadrados kelvin por vatio. Abajo se nombran Laguna de Duero, Arroyo de la Encomienda, Tordesillas, Medina del Campo, Íscar, Peñafiel y Medina de Rioseco; la altitud de cada municipio se confirma en el estudio.</desc>
+  <defs>
+    <pattern id="wool" width="20" height="12" patternUnits="userSpaceOnUse">
+      <rect width="20" height="12" fill="#ffffff"/>
+      <path d="M0,8 q5,-8 10,0 t10,0" fill="none" stroke="#b8733a" stroke-width="2.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Cabecera izquierda -->
+  <text x="90" y="118" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">PROVINCIA DE VALLADOLID · CTE DB-HE</text>
+  <text x="90" y="196" font-family="'Source Serif 4', Georgia, serif" font-size="70" font-weight="700" fill="#1a2e1f">Zona climática D2</text>
+  <text x="90" y="244" font-size="28" fill="#1a2e1f" opacity="0.85">Valladolid capital · 704 m de altitud</text>
+  <rect x="90" y="266" width="80" height="5" rx="2" fill="#b8733a"/>
+
+  <!-- Escala de altitud (600 a 1000 m): 1,375 px por metro, 1000 m en y=330 y 600 m en y=880 -->
+  <line x1="170" y1="330" x2="170" y2="880" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="330" x2="180" y2="330" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="467.5" x2="180" y2="467.5" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="605" x2="180" y2="605" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="742.5" x2="180" y2="742.5" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="880" x2="180" y2="880" stroke="#1a2e1f" stroke-width="3"/>
+  <text x="148" y="338" text-anchor="end" font-size="22" fill="#1a2e1f">1000 m</text>
+  <text x="148" y="475" text-anchor="end" font-size="22" fill="#1a2e1f">900 m</text>
+  <text x="148" y="613" text-anchor="end" font-size="22" fill="#1a2e1f">800 m</text>
+  <text x="148" y="750" text-anchor="end" font-size="22" fill="#1a2e1f">700 m</text>
+  <text x="148" y="888" text-anchor="end" font-size="22" fill="#1a2e1f">600 m</text>
+
+  <!-- Franja D2: por debajo de 800 m (y=605) -->
+  <rect x="200" y="605" width="540" height="275" fill="#22a044" opacity="0.16"/>
+  <rect x="200" y="605" width="540" height="275" fill="none" stroke="#22a044" stroke-width="3"/>
+  <!-- Franja E1: 800 m o más -->
+  <rect x="200" y="330" width="540" height="275" fill="#1a2e1f" opacity="0.10"/>
+  <rect x="200" y="330" width="540" height="275" fill="none" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="8 6"/>
+  <!-- Umbral de 800 m -->
+  <line x1="200" y1="605" x2="740" y2="605" stroke="#b8733a" stroke-width="4"/>
+  <text x="740" y="595" text-anchor="end" font-size="22" font-weight="700" fill="#b8733a">800 m de altitud sobre el nivel del mar</text>
+
+  <text x="224" y="372" font-size="26" font-weight="700" fill="#1a2e1f">A partir de 800 m: zona E1, más fría</text>
+  <text x="224" y="404" font-size="22" fill="#1a2e1f" opacity="0.8">También elegible · ficha RES022</text>
+
+  <text x="224" y="645" font-size="30" font-weight="700" fill="#1a2e1f">Por debajo de 800 m: zona D2</text>
+  <text x="224" y="679" font-size="24" fill="#1a2e1f" opacity="0.85">La misma zona que la capital (Anejo B)</text>
+  <text x="224" y="850" font-size="24" font-weight="700" fill="#22a044">Elegible · ficha RES022 del sistema CAE</text>
+
+  <!-- Marcadores: Medina del Campo 720 m (y=715) y Valladolid 704 m (y=737) -->
+  <line x1="200" y1="715" x2="470" y2="715" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="470" cy="715" r="9" fill="#1a2e1f"/>
+  <text x="492" y="712" font-size="24" font-weight="700" fill="#1a2e1f">Medina del Campo</text>
+  <text x="492" y="738" font-size="22" fill="#1a2e1f" opacity="0.8">720 m</text>
+
+  <line x1="200" y1="737" x2="330" y2="737" stroke="#22a044" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="330" cy="737" r="11" fill="#22a044" stroke="#f5efe1" stroke-width="3"/>
+  <text x="330" y="782" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">Valladolid</text>
+  <text x="330" y="808" text-anchor="middle" font-size="22" fill="#1a2e1f" opacity="0.8">704 m de altitud</text>
+
+  <!-- Sección del bloque (derecha) -->
+  <polygon points="900,470 1180,300 1460,470" fill="#1a2e1f"/>
+  <polygon points="952,452 1180,314 1408,452" fill="#ffffff"/>
+  <rect x="958" y="440" width="444" height="30" fill="url(#wool)" stroke="#b8733a" stroke-width="2"/>
+  <rect x="930" y="470" width="500" height="400" fill="#ffffff" stroke="#1a2e1f" stroke-width="8"/>
+  <rect x="926" y="466" width="508" height="12" fill="#1a2e1f"/>
+  <rect x="930" y="570" width="500" height="8" fill="#1a2e1f"/>
+  <rect x="930" y="670" width="500" height="8" fill="#1a2e1f"/>
+  <rect x="930" y="770" width="500" height="8" fill="#1a2e1f"/>
+  <!-- Trampilla -->
+  <rect x="1160" y="466" width="40" height="12" fill="#b8733a"/>
+
+  <text x="1180" y="394" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">Desván no habitable</text>
+  <text x="1180" y="426" text-anchor="middle" font-size="22" fill="#b8733a" font-weight="700">220 mm de lana mineral insuflada</text>
+  <text x="1180" y="528" text-anchor="middle" font-size="28" font-weight="700" fill="#1a2e1f">Último piso</text>
+  <text x="1180" y="628" text-anchor="middle" font-size="24" fill="#1a2e1f" opacity="0.7">Vivienda</text>
+  <text x="1180" y="728" text-anchor="middle" font-size="24" fill="#1a2e1f" opacity="0.7">Vivienda</text>
+  <text x="1180" y="828" text-anchor="middle" font-size="24" fill="#1a2e1f" opacity="0.7">Bajo</text>
+  <rect x="860" y="870" width="640" height="6" rx="3" fill="#1a2e1f" opacity="0.25"/>
+
+  <text x="1180" y="914" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">R = 4,75 m²·K/W · una jornada · sin obras en las viviendas</text>
+
+  <!-- Municipios -->
+  <text x="90" y="958" font-size="22" fill="#1a2e1f" opacity="0.8">Laguna de Duero · Arroyo de la Encomienda · Tordesillas · Medina del Campo · Íscar · Peñafiel · Medina de Rioseco</text>
+  <text x="90" y="986" font-size="20" fill="#1a2e1f" opacity="0.65">La altitud oficial de cada municipio se confirma en el estudio gratuito</text>
+</svg>
