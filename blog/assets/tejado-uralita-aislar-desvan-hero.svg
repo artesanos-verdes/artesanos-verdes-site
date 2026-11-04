@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Tejado de uralita: se aísla el suelo del desván y las placas no se tocan</title>
+  <desc id="d">Sección esquemática de una casa con tejado a dos aguas de placas de fibrocemento intactas. Justo debajo de las placas, una franja rayada marcada «no tocar». El desván no habitable queda ventilado y sobre su suelo, el forjado que hace de techo de la vivienda, hay una capa de lana mineral insuflada. A la derecha, dos listas. Lo que se hace: insuflar lana sobre el suelo del desván, sellar la trampilla y los pasos de instalaciones y mantener el desván ventilado. Lo que no se hace: taladrar, cortar o lijar las placas, fijar nada a la cubierta y aislar los rampantes bajo uralita. Una nota indica que retirar o encapsular las placas corresponde a una empresa inscrita en el RERA.</desc>
+  <defs>
+    <pattern id="wool" width="20" height="12" patternUnits="userSpaceOnUse">
+      <rect width="20" height="12" fill="#ffffff"/>
+      <path d="M0,8 q5,-8 10,0 t10,0" fill="none" stroke="#b8733a" stroke-width="2.4"/>
+    </pattern>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#fbe9d8"/>
+      <rect width="5" height="14" fill="#b8733a" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="70" y="92" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">TEJADO DE URALITA</text>
+  <text x="70" y="150" font-family="'Source Serif 4', Georgia, serif" font-size="56" font-weight="700" fill="#1a2e1f">Se aísla el suelo, no las placas</text>
+  <rect x="70" y="168" width="80" height="5" rx="2" fill="#b8733a"/>
+  <text x="70" y="214" font-size="22" fill="#1a2e1f" opacity="0.8">Desván no habitable: la lana va sobre el forjado y la cubierta no se toca</text>
+
+  <!-- Suelo exterior -->
+  <rect x="70" y="900" width="910" height="6" rx="3" fill="#1a2e1f" opacity="0.25"/>
+
+  <!-- Vivienda -->
+  <rect x="160.0" y="628.0" width="740.0" height="272.0" fill="#ffffff"/>
+  <rect x="160.0" y="628.0" width="24" height="272.0" fill="#1a2e1f" opacity="0.85"/>
+  <rect x="876.0" y="628.0" width="24" height="272.0" fill="#1a2e1f" opacity="0.85"/>
+  <rect x="260" y="700" width="110" height="120" rx="6" fill="#f5efe1" stroke="#1a2e1f" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="315" y1="700" x2="315" y2="820" stroke="#1a2e1f" stroke-opacity="0.35" stroke-width="3"/>
+  <rect x="690" y="700" width="110" height="120" rx="6" fill="#f5efe1" stroke="#1a2e1f" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="745" y1="700" x2="745" y2="820" stroke="#1a2e1f" stroke-opacity="0.35" stroke-width="3"/>
+  <text x="530" y="770" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2e1f">Vivienda</text>
+  <text x="530" y="802" text-anchor="middle" font-size="20" fill="#1a2e1f" opacity="0.75">la casa calefactada</text>
+
+  <!-- Desván -->
+  <polygon points="160.0,600.0 530.0,290.0 900.0,600.0" fill="#fffdf8"/>
+
+  <!-- Franja «no tocar» bajo las placas -->
+  <polygon points="222.1,548.0 530.0,290.0 837.9,548.0 785.0,548.0 530.0,334.4 275.0,548.0" fill="url(#hatch)" stroke="#b8733a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="417.7" y="412.2" text-anchor="middle" font-size="17" font-weight="700" letter-spacing="2" fill="#8a4f22" transform="rotate(-39.96 417.7 406.2)">NO TOCAR</text>
+  <text x="319.2" y="494.8" text-anchor="middle" font-size="17" font-weight="700" letter-spacing="2" fill="#8a4f22" transform="rotate(-39.96 319.2 488.8)">NO TOCAR</text>
+  <text x="642.3" y="412.2" text-anchor="middle" font-size="17" font-weight="700" letter-spacing="2" fill="#8a4f22" transform="rotate(39.96 642.3 406.2)">NO TOCAR</text>
+  <text x="740.8" y="494.8" text-anchor="middle" font-size="17" font-weight="700" letter-spacing="2" fill="#8a4f22" transform="rotate(39.96 740.8 488.8)">NO TOCAR</text>
+
+  <!-- Placas de fibrocemento -->
+  <polygon points="100.0,650.3 85.9,633.4 86.3,627.7 89.0,624.7 94.3,624.8 100.3,625.7 104.4,624.3 105.8,619.7 105.8,613.6 107.2,609.0 111.4,607.7 117.4,608.7 122.7,608.7 125.3,605.6 125.7,599.9 126.2,594.2 129.0,591.3 134.3,591.4 140.3,592.3 144.3,590.9 145.6,586.2 145.7,580.0 147.2,575.5 151.4,574.4 157.4,575.3 162.6,575.3 165.2,572.1 165.6,566.3 166.1,560.7 168.9,557.8 174.3,558.0 180.3,558.9 184.2,557.4 185.5,552.7 185.6,546.5 187.1,542.1 191.4,541.0 197.4,541.9 202.6,541.9 205.1,538.6 205.4,532.8 206.0,527.2 208.9,524.4 214.3,524.7 220.2,525.5 224.2,523.9 225.4,519.1 225.4,513.0 227.0,508.6 231.4,507.6 237.4,508.5 242.5,508.4 245.0,505.1 245.3,499.3 245.9,493.7 248.8,491.0 254.3,491.3 260.2,492.1 264.1,490.5 265.2,485.6 265.3,479.5 266.9,475.2 271.4,474.2 277.4,475.2 282.5,475.0 284.9,471.6 285.2,465.7 285.8,460.2 288.8,457.6 294.3,457.9 300.2,458.7 304.0,457.0 305.1,452.1 305.2,445.9 306.9,441.7 311.3,440.8 317.4,441.8 322.4,441.6 324.8,438.1 325.0,432.2 325.7,426.7 328.8,424.2 334.3,424.6 340.2,425.3 343.9,423.5 344.9,418.5 345.1,412.4 346.8,408.3 351.3,407.4 357.4,408.4 362.4,408.1 364.6,404.6 364.9,398.6 365.5,393.2 368.7,390.8 374.3,391.2 380.1,391.9 383.8,390.0 384.8,385.0 384.9,378.9 386.7,374.8 391.3,374.0 397.4,375.0 402.3,374.7 404.5,371.1 404.7,365.1 405.4,359.7 408.7,357.3 414.3,357.8 420.1,358.5 423.7,356.6 424.7,351.5 424.8,345.4 426.7,341.4 431.3,340.7 437.4,341.7 442.3,341.2 444.4,337.6 444.6,331.6 445.3,326.2 448.7,323.9 454.3,324.5 460.1,325.1 463.6,323.1 464.5,317.9 464.7,311.9 466.6,307.9 471.3,307.3 477.4,308.3 482.2,307.8 484.3,304.1 484.5,298.0 485.3,292.7 488.6,290.5 494.3,291.1 500.1,291.7 503.5,289.6 504.4,284.4 504.6,278.3 506.5,274.5 511.3,273.9 517.3,274.9 530.0,290.0" fill="#a9a596" stroke="#1a2e1f" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="530.0,290.0 544.1,273.1 549.8,272.6 553.3,274.7 554.1,280.0 554.3,286.0 556.3,289.8 561.1,290.3 567.2,289.3 571.9,289.9 573.9,293.8 574.0,299.8 574.9,305.1 578.4,307.1 584.1,306.5 589.8,306.0 593.2,308.2 594.0,313.5 594.1,319.5 596.2,323.2 601.1,323.7 607.1,322.7 611.8,323.4 613.7,327.3 613.9,333.4 614.8,338.5 618.4,340.5 624.1,339.9 629.8,339.4 633.1,341.7 633.8,347.0 634.0,353.0 636.2,356.7 641.1,357.1 647.1,356.1 651.8,356.8 653.6,360.8 653.7,366.9 654.7,372.0 658.3,373.9 664.1,373.2 669.7,372.8 673.0,375.2 673.7,380.6 673.9,386.5 676.1,390.1 681.1,390.5 687.1,389.5 691.7,390.3 693.5,394.4 693.6,400.5 694.6,405.5 698.3,407.3 704.1,406.6 709.7,406.2 712.9,408.7 713.5,414.1 713.8,420.0 716.1,423.6 721.1,423.8 727.1,422.9 731.6,423.7 733.4,427.9 733.5,434.0 734.5,439.0 738.3,440.7 744.1,440.0 749.7,439.6 752.8,442.1 753.4,447.6 753.7,453.6 756.0,457.0 761.1,457.2 767.1,456.2 771.6,457.2 773.2,461.4 773.3,467.5 774.4,472.4 778.2,474.1 784.1,473.4 789.6,473.0 792.7,475.6 793.3,481.2 793.5,487.1 796.0,490.4 801.1,490.6 807.1,489.6 811.5,490.6 813.1,494.9 813.2,501.0 814.3,505.9 818.2,507.5 824.1,506.7 829.6,506.4 832.6,509.1 833.1,514.7 833.4,520.6 835.9,523.9 841.0,524.0 847.1,523.0 851.4,524.1 853.0,528.4 853.1,534.6 854.3,539.4 858.2,540.9 864.1,540.1 869.6,539.9 872.5,542.6 873.0,548.3 873.3,554.1 875.9,557.3 881.0,557.3 887.1,556.4 891.3,557.5 892.8,562.0 892.9,568.1 894.2,572.9 898.2,574.3 904.1,573.5 909.5,573.3 912.3,576.1 912.8,581.8 913.2,587.6 915.8,590.7 921.0,590.7 927.0,589.8 931.3,591.0 932.7,595.5 932.8,601.6 934.1,606.3 938.2,607.7 944.1,606.8 949.5,606.7 952.2,609.6 952.7,615.3 953.1,621.1 955.8,624.1 961.0,624.1 967.0,623.2 971.2,624.5 972.6,629.0 972.7,635.2 960.0,650.3" fill="#a9a596" stroke="#1a2e1f" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="488,306 530,252 572,306 561,314 530,276 499,314" fill="#9c988a" stroke="#1a2e1f" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Lana mineral sobre el forjado -->
+  <polygon points="160.0,600.0 207.7,560.0 852.3,560.0 900.0,600.0" fill="url(#wool)" stroke="#b8733a" stroke-width="2"/>
+  <rect x="160.0" y="600.0" width="740.0" height="28" fill="#1a2e1f"/>
+
+  <!-- Rótulos del desván -->
+  <text x="530" y="462" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">Desván no habitable</text>
+  <text x="530" y="492" text-anchor="middle" font-size="20" fill="#1a2e1f" opacity="0.75">ventilado, más frío tras aislar</text>
+  <rect x="335" y="518" width="390" height="34" rx="17" fill="#ffffff" stroke="#b8733a" stroke-width="2"/>
+  <text x="530" y="542" text-anchor="middle" font-size="20" font-weight="700" fill="#1a2e1f">Lana mineral sobre el forjado</text>
+
+  <!-- Ventilación en los aleros -->
+  <path d="M92,684 Q139,678 186,566" fill="none" stroke="#22a044" stroke-width="4" stroke-linecap="round"/>
+  <path d="M968,684 Q921,678 874,566" fill="none" stroke="#22a044" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="188,562 172,580 194,582" fill="#22a044"/>
+  <polygon points="872,562 888,580 866,582" fill="#22a044"/>
+
+  <!-- Llamada a las placas -->
+  <text x="90" y="300" font-size="24" font-weight="700" fill="#1a2e1f">Placas de fibrocemento</text>
+  <text x="90" y="330" font-size="22" fill="#1a2e1f" opacity="0.8">intactas: se quedan como están</text>
+  <line x1="200" y1="346" x2="268" y2="470" stroke="#1a2e1f" stroke-opacity="0.55" stroke-width="2.5"/>
+  <circle cx="268" cy="470" r="6" fill="#1a2e1f" opacity="0.7"/>
+
+  <!-- Lo que se hace / lo que no se hace -->
+  <rect x="1010" y="250" width="520" height="270" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="1050" cy="294" r="20" fill="#22a044"/>
+  <path d="M1040,295 l7,8 l14,-16" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1084" y="303" font-size="28" font-weight="700" fill="#1a2e1f">Lo que se hace</text>
+  <path d="M1040,350 l6,7 l12,-13" fill="none" stroke="#22a044" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1072" y="358" font-size="22" fill="#1a2e1f">Insuflar lana sobre el suelo del desván</text>
+  <path d="M1040,402 l6,7 l12,-13" fill="none" stroke="#22a044" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1072" y="410" font-size="22" fill="#1a2e1f">Sellar trampilla y pasos de instalaciones</text>
+  <path d="M1040,454 l6,7 l12,-13" fill="none" stroke="#22a044" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1072" y="462" font-size="22" fill="#1a2e1f">Mantener el desván ventilado</text>
+  <rect x="1010" y="548" width="520" height="270" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+  <circle cx="1050" cy="592" r="20" fill="#b8733a"/>
+  <path d="M1042,584 l16,16 M1058,584 l-16,16" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <text x="1084" y="601" font-size="28" font-weight="700" fill="#1a2e1f">Lo que no se hace</text>
+  <path d="M1041,640 l12,12 M1053,640 l-12,12" fill="none" stroke="#b8733a" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="1072" y="656" font-size="22" fill="#1a2e1f">Taladrar, cortar o lijar las placas</text>
+  <path d="M1041,692 l12,12 M1053,692 l-12,12" fill="none" stroke="#b8733a" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="1072" y="708" font-size="22" fill="#1a2e1f">Fijar nada a la cubierta</text>
+  <path d="M1041,744 l12,12 M1053,744 l-12,12" fill="none" stroke="#b8733a" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="1072" y="760" font-size="22" fill="#1a2e1f">Aislar los rampantes bajo uralita</text>
+  <text x="1010" y="868" font-size="20" font-weight="700" fill="#1a2e1f">Retirar o encapsular las placas:</text>
+  <text x="1010" y="896" font-size="20" fill="#1a2e1f" opacity="0.8">empresa inscrita en el RERA</text>
+</svg>

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Provincia de Salamanca, zona climática D2 por debajo de 850 m y E1 a partir de 850 m: altitud de los principales municipios y desván aislado con 220 mm de lana mineral</title>
+  <desc id="hero-desc">Esquema en dos partes, sin contorno geográfico. A la izquierda, una escala de altitud de 600 a 1150 metros: la tabla a-Anejo B del Código Técnico asigna la zona por provincia y tramo de altitud, y en la fila de Salamanca da D2 por debajo de 850 metros y E1 a partir de 850 metros. En la franja E1 aparecen Candelario, a 1136 metros, La Alberca a 1044, Guijuelo a 1003, Béjar a 953 y Peñaranda de Bracamonte a 903; en la franja D2, Alba de Tormes a 836, Salamanca a 798, Santa Marta de Tormes a 779, Vitigudino a 769 y Ciudad Rodrigo a 651, según la altitud que AEMET publica para la capital de cada municipio. Las dos franjas son elegibles para la ficha RES022 del sistema CAE. A la derecha, la sección de un bloque de viviendas con el desván no habitable sobre el último piso y una capa de 220 milímetros de lana mineral insuflada sobre el suelo del desván, con una resistencia térmica de 4,75 metros cuadrados kelvin por vatio.</desc>
+
+  <defs>
+    <clipPath id="hero-desvan-clip">
+      <polygon points="1010,434 1250,280 1490,434"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Cabecera izquierda -->
+  <text x="90" y="104" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">PROVINCIA DE SALAMANCA · CTE DB-HE</text>
+  <text x="90" y="180" font-family="'Source Serif 4', Georgia, serif" font-size="68" font-weight="700" fill="#1a2e1f">Zona climática D2</text>
+  <text x="90" y="226" font-size="28" fill="#1a2e1f" opacity="0.85">Por debajo de 850 m de altitud · a partir de 850 m, zona E1</text>
+  <rect x="90" y="248" width="80" height="5" rx="2" fill="#b8733a"/>
+
+  <!-- Escala de altitud (600 a 1150 m): 1 px por metro, 1150 m en y=350 y 600 m en y=900 -->
+  <line x1="170" y1="350" x2="170" y2="900" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="400" x2="180" y2="400" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="500" x2="180" y2="500" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="600" x2="180" y2="600" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="700" x2="180" y2="700" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="800" x2="180" y2="800" stroke="#1a2e1f" stroke-width="3"/>
+  <line x1="160" y1="900" x2="180" y2="900" stroke="#1a2e1f" stroke-width="3"/>
+  <text x="148" y="408" text-anchor="end" font-size="22" fill="#1a2e1f">1100 m</text>
+  <text x="148" y="508" text-anchor="end" font-size="22" fill="#1a2e1f">1000 m</text>
+  <text x="148" y="608" text-anchor="end" font-size="22" fill="#1a2e1f">900 m</text>
+  <text x="148" y="708" text-anchor="end" font-size="22" fill="#1a2e1f">800 m</text>
+  <text x="148" y="808" text-anchor="end" font-size="22" fill="#1a2e1f">700 m</text>
+  <text x="148" y="908" text-anchor="end" font-size="22" fill="#1a2e1f">600 m</text>
+
+  <!-- Franja E1: 850 m o más (y=350 a 650) -->
+  <rect x="200" y="350" width="620" height="300" fill="#1a2e1f" opacity="0.10"/>
+  <rect x="200" y="350" width="620" height="300" fill="none" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="8 6"/>
+  <!-- Franja D2: por debajo de 850 m (y=650 a 900) -->
+  <rect x="200" y="650" width="620" height="250" fill="#22a044" opacity="0.16"/>
+  <rect x="200" y="650" width="620" height="250" fill="none" stroke="#22a044" stroke-width="3"/>
+  <!-- Umbral de 850 m -->
+  <line x1="200" y1="650" x2="820" y2="650" stroke="#b8733a" stroke-width="4"/>
+  <text x="812" y="640" text-anchor="end" font-size="22" font-weight="700" fill="#b8733a">Umbral de 850 m</text>
+
+  <!-- Etiquetas de las franjas -->
+  <circle cx="770" cy="400" r="34" fill="#1a2e1f"/>
+  <text x="770" y="412" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">E1</text>
+  <text x="806" y="460" text-anchor="end" font-size="20" fill="#1a2e1f">desde 850 m</text>
+  <circle cx="770" cy="860" r="34" fill="#22a044"/>
+  <text x="770" y="872" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">D2</text>
+  <text x="806" y="812" text-anchor="end" font-size="20" fill="#1a2e1f">por debajo de 850 m</text>
+
+  <!-- Marcadores en su altitud real (x=240, y = 900 - (altitud - 600)); etiquetas separadas con línea de guía -->
+  <!-- Candelario 1136 m (y=364) -->
+  <circle cx="240" cy="364" r="9" fill="#1a2e1f"/>
+  <line x1="249" y1="364" x2="298" y2="364" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="372" font-size="22" fill="#1a2e1f">Candelario · 1136 m</text>
+
+  <!-- La Alberca 1044 m (y=456) -->
+  <circle cx="240" cy="456" r="9" fill="#1a2e1f"/>
+  <line x1="249" y1="456" x2="298" y2="450" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="458" font-size="22" fill="#1a2e1f">La Alberca · 1044 m</text>
+
+  <!-- Guijuelo 1003 m (y=497) -->
+  <circle cx="240" cy="497" r="9" fill="#1a2e1f"/>
+  <line x1="249" y1="497" x2="298" y2="494" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="502" font-size="22" fill="#1a2e1f">Guijuelo · 1003 m</text>
+
+  <!-- Béjar 953 m (y=547) -->
+  <circle cx="240" cy="547" r="11" fill="#1a2e1f" stroke="#f5efe1" stroke-width="3"/>
+  <line x1="251" y1="547" x2="298" y2="547" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="555" font-size="24" font-weight="700" fill="#1a2e1f">Béjar · 953 m</text>
+
+  <!-- Peñaranda de Bracamonte 903 m (y=597) -->
+  <circle cx="240" cy="597" r="9" fill="#1a2e1f"/>
+  <line x1="249" y1="597" x2="298" y2="597" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="605" font-size="22" fill="#1a2e1f">Peñaranda de Bracamonte · 903 m</text>
+
+  <!-- Alba de Tormes 836 m (y=664) -->
+  <circle cx="240" cy="664" r="9" fill="#1a2e1f"/>
+  <line x1="249" y1="664" x2="298" y2="672" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="680" font-size="22" fill="#1a2e1f">Alba de Tormes · 836 m</text>
+
+  <!-- Salamanca 798 m (y=702) -->
+  <circle cx="240" cy="702" r="11" fill="#22a044" stroke="#f5efe1" stroke-width="3"/>
+  <line x1="251" y1="702" x2="298" y2="708" stroke="#22a044" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="716" font-size="24" font-weight="700" fill="#1a2e1f">Salamanca · 798 m</text>
+
+  <!-- Santa Marta de Tormes 779 m (y=721) -->
+  <circle cx="240" cy="721" r="9" fill="#1a2e1f"/>
+  <line x1="249" y1="721" x2="298" y2="742" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="750" font-size="22" fill="#1a2e1f">Santa Marta de Tormes · 779 m</text>
+
+  <!-- Vitigudino 769 m (y=731) -->
+  <circle cx="240" cy="731" r="9" fill="#1a2e1f"/>
+  <line x1="249" y1="731" x2="298" y2="776" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="784" font-size="22" fill="#1a2e1f">Vitigudino · 769 m</text>
+
+  <!-- Ciudad Rodrigo 651 m (y=849) -->
+  <circle cx="240" cy="849" r="11" fill="#1a2e1f" stroke="#f5efe1" stroke-width="3"/>
+  <line x1="251" y1="849" x2="298" y2="849" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="310" y="857" font-size="24" font-weight="700" fill="#1a2e1f">Ciudad Rodrigo · 651 m</text>
+
+  <!-- Nota -->
+  <text x="90" y="944" font-size="20" fill="#1a2e1f" opacity="0.8">Altitud de la capital de cada municipio según AEMET; la de tu localidad se confirma en el estudio.</text>
+  <text x="90" y="972" font-size="20" fill="#1a2e1f" opacity="0.8">Tabla a-Anejo B del DB-HE: las dos zonas entran en la ficha RES022 del sistema CAE.</text>
+
+  <!-- Sección de un bloque de viviendas (derecha) -->
+  <rect x="960" y="710" width="580" height="24" fill="#c1d9cc"/>
+  <line x1="960" y1="710" x2="1540" y2="710" stroke="#2d7a4e" stroke-width="4"/>
+
+  <!-- Cubierta y desván -->
+  <polygon points="960,440 1250,250 1540,440" fill="#b8733a"/>
+  <polygon points="1010,434 1250,280 1490,434" fill="#faf6ec"/>
+  <text x="1250" y="380" font-size="26" fill="#1a2e1f" text-anchor="middle">Desván no habitable</text>
+
+  <!-- Capa de aislamiento sobre el suelo del desván (recortada por la cubierta) -->
+  <g clip-path="url(#hero-desvan-clip)">
+    <rect x="1010" y="394" width="480" height="40" fill="#c1d9cc"/>
+    <path d="M1014 416 q10 -12 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#2d7a4e" stroke-width="3" stroke-linecap="round"/>
+    <line x1="1010" y1="394" x2="1490" y2="394" stroke="#1a4d30" stroke-width="3"/>
+  </g>
+  <rect x="1205" y="401" width="90" height="26" rx="13" fill="#f5efe1" stroke="#1a4d30" stroke-width="2"/>
+  <text x="1250" y="420" font-size="18" font-weight="700" fill="#1a2e1f" text-anchor="middle">220 mm</text>
+
+  <!-- Bloque: tres plantas -->
+  <rect x="990" y="440" width="520" height="270" fill="#ffffff" stroke="#1a4d30" stroke-width="6"/>
+  <line x1="960" y1="440" x2="1540" y2="440" stroke="#1a4d30" stroke-width="6"/>
+  <line x1="990" y1="530" x2="1510" y2="530" stroke="#1a4d30" stroke-width="3"/>
+  <line x1="990" y1="620" x2="1510" y2="620" stroke="#1a4d30" stroke-width="3"/>
+  <text x="1250" y="494" font-size="24" fill="#2d7a4e" text-anchor="middle">Último piso</text>
+  <rect x="1040" y="462" width="80" height="48" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="1380" y="462" width="80" height="48" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="1040" y="552" width="80" height="48" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="1210" y="552" width="80" height="48" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="1380" y="552" width="80" height="48" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="1040" y="642" width="80" height="48" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="1210" y="642" width="80" height="68" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+  <rect x="1380" y="642" width="80" height="48" rx="3" fill="#c1d9cc" stroke="#1a4d30" stroke-width="4"/>
+
+  <!-- Etiquetas del aislamiento -->
+  <text x="1250" y="790" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#1a2e1f" text-anchor="middle">220 mm de lana mineral insuflada</text>
+  <text x="1250" y="830" font-size="24" fill="#2d7a4e" text-anchor="middle">R = 4,75 m²·K/W · la ficha RES022 pide 4,7 en zona E</text>
+  <text x="1250" y="868" font-size="22" fill="#1a2e1f" text-anchor="middle" opacity="0.85">El mismo espesor en la capital, en Béjar y en Ciudad Rodrigo</text>
+
+  <!-- Firma -->
+  <text x="1520" y="972" font-size="24" fill="#2d7a4e" text-anchor="end">artesanosverdes.com</text>
+</svg>
