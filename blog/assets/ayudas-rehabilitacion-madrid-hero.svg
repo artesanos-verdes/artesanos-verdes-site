@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Ayudas para rehabilitar en Madrid: tres capas de ayudas públicas y la vía del sistema CAE, a 3 de noviembre de 2026</title>
+  <desc id="hero-desc">Esquema en tres filas. Ayuntamiento de Madrid: el Plan Rehabilita Madrid 2026, con 50 millones de euros y seis líneas, cerró sus solicitudes el 30 de septiembre de 2026, y Transforma tu Barrio 2026, para cinco barrios de cuatro distritos, también tiene el plazo cerrado. Comunidad de Madrid: la convocatoria del Plan Estatal de Vivienda 2026-2030 está pendiente de publicarse en el BOCM y los programas NextGeneration del Real Decreto 853/2021 están en su tramo final. Estado: el Real Decreto 326/2026 está en vigor desde el 24 de abril de 2026 y la deducción del IRPF del 60 % en edificios de uso residencial admite pagos hasta el 31 de diciembre de 2027. Debajo, una banda verde oscura: la vía del sistema CAE, financiación privada sin convocatoria ni plazo, sigue abierta, con estudio gratuito, acuerdo de la junta, obra en una jornada y comprobación del ahorro por un verificador acreditado por ENAC.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="90" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="48" font-weight="700" fill="#1a2e1f">Ayudas para rehabilitar en Madrid: tres capas</text>
+  <text x="800" y="138" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#22a044">Qué está cerrado, qué está pendiente y qué vía sigue abierta · 3 de noviembre de 2026</text>
+  <line x1="120" y1="168" x2="1480" y2="168" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Fila 1: Ayuntamiento de Madrid -->
+  <text x="160" y="258" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Ayuntamiento</text>
+  <text x="160" y="292" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">de Madrid</text>
+
+  <rect x="420" y="196" width="500" height="140" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="444" y="242" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">Plan Rehabilita Madrid 2026</text>
+  <text x="444" y="278" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">50 millones de euros · seis líneas</text>
+  <text x="444" y="314" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#b8733a">Solicitudes cerradas el 30-9-2026</text>
+
+  <rect x="940" y="196" width="500" height="140" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="964" y="242" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">Transforma tu Barrio 2026</text>
+  <text x="964" y="278" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Cinco barrios de cuatro distritos</text>
+  <text x="964" y="314" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#b8733a">Plazo de solicitud cerrado</text>
+
+  <!-- Fila 2: Comunidad de Madrid -->
+  <text x="160" y="428" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Comunidad</text>
+  <text x="160" y="462" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">de Madrid</text>
+
+  <rect x="420" y="366" width="500" height="140" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="444" y="412" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">Convocatoria del Plan Estatal</text>
+  <text x="444" y="448" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">de Vivienda 2026-2030 en la región</text>
+  <text x="444" y="484" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#b8733a">Pendiente de publicar en el BOCM</text>
+
+  <rect x="940" y="366" width="500" height="140" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="964" y="412" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">Programas NextGeneration</text>
+  <text x="964" y="448" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Real Decreto 853/2021</text>
+  <text x="964" y="484" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#b8733a">En su tramo final</text>
+
+  <!-- Fila 3: Estado -->
+  <text x="160" y="614" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Estado</text>
+
+  <rect x="420" y="536" width="500" height="140" rx="14" fill="#22a044"/>
+  <text x="444" y="582" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Plan Estatal de Vivienda</text>
+  <text x="444" y="618" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#ffffff">Real Decreto 326/2026</text>
+  <text x="444" y="654" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#f5efe1">En vigor desde el 24-4-2026</text>
+
+  <rect x="940" y="536" width="500" height="140" rx="14" fill="#22a044"/>
+  <text x="964" y="582" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Deducción del IRPF del 60 %</text>
+  <text x="964" y="618" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#ffffff">Edificios de uso residencial</text>
+  <text x="964" y="654" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#f5efe1">Pagos hasta el 31-12-2027</text>
+
+  <!-- Vía CAE -->
+  <rect x="160" y="716" width="1280" height="120" rx="14" fill="#1a2e1f"/>
+  <text x="800" y="766" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Vía CAE: financiación privada, abierta hoy, sin convocatoria ni plazo</text>
+  <text x="800" y="808" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#c1d9cc">Estudio gratuito · acuerdo de la junta · obra en una jornada · verificador acreditado por ENAC</text>
+
+  <!-- Leyenda -->
+  <rect x="160" y="868" width="36" height="24" rx="4" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="8 5"/>
+  <text x="208" y="887" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Cerrado o pendiente</text>
+  <rect x="460" y="868" width="36" height="24" rx="4" fill="#22a044"/>
+  <text x="508" y="887" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">En vigor</text>
+  <rect x="640" y="868" width="36" height="24" rx="4" fill="#1a2e1f"/>
+  <text x="688" y="887" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Vía abierta</text>
+
+  <!-- Pie -->
+  <text x="160" y="956" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Fuentes: BOCM de 2 y 15 de junio de 2026 · Ayuntamiento de Madrid · BOE</text>
+  <text x="1440" y="956" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#22a044">Los Artesanos Verdes</text>
+</svg>

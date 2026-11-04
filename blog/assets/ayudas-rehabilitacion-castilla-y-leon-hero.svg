@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Ayudas para rehabilitar en Castilla y León: estado de cada vía a 3 de noviembre de 2026</title>
+  <desc id="hero-desc">A la izquierda, nueve recuadros con las provincias de Castilla y León en tres filas: León, Palencia y Burgos; Zamora, Valladolid y Soria; Salamanca, Ávila y Segovia. Ocho aparecen en verde con la mención «estudio gratuito»; Soria, en blanco con borde discontinuo y la mención «sin cobertura». Debajo, una nota: las nueve provincias están en zona climática D o E según el Código Técnico, así que el desván no habitable entra, por zona, en la ficha RES022. A la derecha, seis filas con el estado de cada vía: línea rural de la Junta, comprobar la orden en el BOCyL y los plazos; fondos NextGeneration, convocatorias cerradas y fondos agotados; PREE 5000, solicitudes cerradas y expedientes en tramitación; Plan Estatal de Vivienda 2026-2030, sin convocatoria en el BOCyL; deducción del IRPF, vigente para la vivienda hasta 2026 y para el edificio hasta 2027; y sistema CAE, financiación privada disponible sin convocatoria ni plazo, que no es una ayuda.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="86" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">Ayudas para rehabilitar en Castilla y León</text>
+  <text x="800" y="134" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#22a044">Estado de cada vía a 3 de noviembre de 2026 · las nueve provincias</text>
+  <line x1="120" y1="166" x2="1480" y2="166" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Provincias: esquema en recuadros, sin contornos geográficos -->
+  <text x="120" y="214" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="600" fill="#1a2e1f">Nueve provincias, ocho con estudio gratuito</text>
+
+  <rect x="120" y="236" width="180" height="110" rx="14" fill="#22a044"/>
+  <text x="210" y="286" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">León</text>
+  <text x="210" y="320" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">estudio gratuito</text>
+
+  <rect x="320" y="236" width="180" height="110" rx="14" fill="#22a044"/>
+  <text x="410" y="286" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">Palencia</text>
+  <text x="410" y="320" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">estudio gratuito</text>
+
+  <rect x="520" y="236" width="180" height="110" rx="14" fill="#22a044"/>
+  <text x="610" y="286" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">Burgos</text>
+  <text x="610" y="320" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">estudio gratuito</text>
+
+  <rect x="120" y="366" width="180" height="110" rx="14" fill="#22a044"/>
+  <text x="210" y="416" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">Zamora</text>
+  <text x="210" y="450" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">estudio gratuito</text>
+
+  <rect x="320" y="366" width="180" height="110" rx="14" fill="#22a044"/>
+  <text x="410" y="416" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">Valladolid</text>
+  <text x="410" y="450" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">estudio gratuito</text>
+
+  <rect x="520" y="366" width="180" height="110" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="610" y="416" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">Soria</text>
+  <text x="610" y="450" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#b8733a">sin cobertura</text>
+
+  <rect x="120" y="496" width="180" height="110" rx="14" fill="#22a044"/>
+  <text x="210" y="546" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">Salamanca</text>
+  <text x="210" y="580" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">estudio gratuito</text>
+
+  <rect x="320" y="496" width="180" height="110" rx="14" fill="#22a044"/>
+  <text x="410" y="546" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">Ávila</text>
+  <text x="410" y="580" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">estudio gratuito</text>
+
+  <rect x="520" y="496" width="180" height="110" rx="14" fill="#22a044"/>
+  <text x="610" y="546" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#ffffff">Segovia</text>
+  <text x="610" y="580" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">estudio gratuito</text>
+
+  <!-- Nota de zona climática -->
+  <rect x="120" y="636" width="580" height="134" rx="12" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="410" y="674" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="600" fill="#1a2e1f">Zona climática D o E en las nueve provincias</text>
+  <text x="410" y="706" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">(CTE DB-HE 2019, tabla a-Anejo B):</text>
+  <text x="410" y="738" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">el desván entra, por zona, en la ficha RES022</text>
+
+  <text x="120" y="816" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">Esquema orientativo, sin valor cartográfico.</text>
+  <text x="120" y="850" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">Las vías de la derecha valen para las nueve provincias.</text>
+
+  <!-- Estado de cada vía -->
+  <text x="780" y="214" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="600" fill="#1a2e1f">Estado de cada vía</text>
+
+  <rect x="780" y="236" width="700" height="96" rx="14" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <rect x="796" y="264" width="150" height="40" rx="20" fill="#b8733a"/>
+  <text x="871" y="291" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">COMPROBAR</text>
+  <text x="968" y="278" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">Línea rural de la Junta</text>
+  <text x="968" y="310" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Comprueba la orden en el BOCyL y los plazos</text>
+
+  <rect x="780" y="346" width="700" height="96" rx="14" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <rect x="796" y="374" width="150" height="40" rx="20" fill="#1a2e1f"/>
+  <text x="871" y="401" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">CERRADO</text>
+  <text x="968" y="388" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">Fondos NextGeneration (PRTR)</text>
+  <text x="968" y="420" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Convocatorias cerradas y fondos agotados</text>
+
+  <rect x="780" y="456" width="700" height="96" rx="14" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <rect x="796" y="484" width="150" height="40" rx="20" fill="#1a2e1f"/>
+  <text x="871" y="511" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">CERRADO</text>
+  <text x="968" y="498" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">PREE 5000 (reto demográfico)</text>
+  <text x="968" y="530" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Solicitudes cerradas; expedientes en tramitación</text>
+
+  <rect x="780" y="566" width="700" height="96" rx="14" fill="#ffffff" stroke="#b8733a" stroke-width="3" stroke-dasharray="12 8"/>
+  <rect x="796" y="594" width="150" height="40" rx="20" fill="#b8733a"/>
+  <text x="871" y="621" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">PENDIENTE</text>
+  <text x="968" y="608" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">Plan Estatal de Vivienda 2026-2030</text>
+  <text x="968" y="640" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Sin convocatoria en el BOCyL a 3-11-2026</text>
+
+  <rect x="780" y="676" width="700" height="96" rx="14" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <rect x="796" y="704" width="150" height="40" rx="20" fill="#22a044"/>
+  <text x="871" y="731" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">VIGENTE</text>
+  <text x="968" y="718" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">Deducción del IRPF (20, 40 o 60 %)</text>
+  <text x="968" y="750" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Vivienda hasta 2026; edificio hasta 2027</text>
+
+  <rect x="780" y="786" width="700" height="96" rx="14" fill="#22a044"/>
+  <rect x="796" y="814" width="150" height="40" rx="20" fill="#ffffff"/>
+  <text x="871" y="841" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="19" font-weight="700" fill="#1a2e1f">DISPONIBLE</text>
+  <text x="968" y="828" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">Sistema CAE: financiación privada</text>
+  <text x="968" y="860" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#ffffff">No es una ayuda: sin convocatoria ni plazo</text>
+
+  <!-- Pie -->
+  <line x1="120" y1="916" x2="1480" y2="916" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="800" y="956" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">Revisión trimestral: la próxima, en febrero de 2027 · Los Artesanos Verdes</text>
+</svg>

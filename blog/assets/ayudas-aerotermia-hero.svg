@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Aerotermia: las cuatro capas de financiación y lo que no se combina</title>
+  <desc id="hero-desc">Infografía en dos columnas. A la izquierda, cuatro capas apiladas. Uno: el sistema CAE, con la ficha RES060, financiación privada que no es una ayuda pública, se descuenta del presupuesto y no tiene convocatoria ni plazo de solicitud. Dos: la deducción del IRPF, del 40 % en la vivienda por obras pagadas hasta el 31 de diciembre de 2026 y del 60 % en edificios por pagos hasta el 31 de diciembre de 2027. Tres: el Plan Estatal de Vivienda 2026-2030, ayuda pública que exige reducir al menos un 30 % el consumo de energía primaria no renovable, con las convocatorias autonómicas pendientes. Cuatro: los programas autonómicos y municipales, ayudas públicas con convocatoria, plazo y presupuesto propios. A la derecha, un recuadro con lo que no se combina: el CAE con las ayudas financiadas por el Fondo Nacional de Eficiencia Energética, la parte subvencionada con la base de la deducción del IRPF y las ayudas públicas con una caldera nueva de combustibles fósiles desde el 1 de enero de 2025. Debajo, lo que sí se combina con carácter general: el CAE con las ayudas públicas, que se declaran en el expediente CAE. Estado a 4 de noviembre de 2026.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="92" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="48" font-weight="700" fill="#1a2e1f">Aerotermia: cuatro capas de financiación</text>
+  <text x="800" y="142" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#22a044">Qué es ayuda pública, qué no lo es y qué no se combina</text>
+  <line x1="80" y1="174" x2="1520" y2="174" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Capa 1: sistema CAE -->
+  <rect x="80" y="204" width="980" height="148" rx="18" fill="#1a2e1f"/>
+  <circle cx="140" cy="278" r="32" fill="#22a044"/>
+  <text x="140" y="289" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">1</text>
+  <text x="196" y="262" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#f5efe1">Sistema CAE (ficha RES060)</text>
+  <rect x="806" y="226" width="232" height="46" rx="23" fill="#22a044"/>
+  <text x="922" y="256" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Financiación privada</text>
+  <text x="196" y="304" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">No es una ayuda pública: se descuenta del presupuesto</text>
+  <text x="196" y="338" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">Sin convocatoria ni plazo de solicitud</text>
+
+  <!-- Capa 2: deducción del IRPF -->
+  <rect x="80" y="366" width="980" height="148" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="140" cy="440" r="32" fill="#22a044"/>
+  <text x="140" y="451" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">2</text>
+  <text x="196" y="424" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Deducción del IRPF</text>
+  <rect x="806" y="388" width="232" height="46" rx="23" fill="#1a2e1f"/>
+  <text x="922" y="418" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" fill="#f5efe1">Deducción fiscal</text>
+  <text x="196" y="466" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">40 % en la vivienda: obras pagadas hasta el 31-12-2026</text>
+  <text x="196" y="500" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">60 % en edificios: pagos hasta el 31-12-2027</text>
+
+  <!-- Capa 3: Plan Estatal -->
+  <rect x="80" y="528" width="980" height="148" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="140" cy="602" r="32" fill="#22a044"/>
+  <text x="140" y="613" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">3</text>
+  <text x="196" y="586" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Plan Estatal de Vivienda 2026-2030</text>
+  <rect x="806" y="550" width="232" height="46" rx="23" fill="#f5efe1" stroke="#1a2e1f" stroke-width="2"/>
+  <text x="922" y="580" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" fill="#1a2e1f">Ayuda pública</text>
+  <text x="196" y="628" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">Exige un 30 % menos de energía primaria no renovable</text>
+  <text x="196" y="662" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">Convocatorias autonómicas, pendientes</text>
+
+  <!-- Capa 4: programas autonómicos y municipales -->
+  <rect x="80" y="690" width="980" height="148" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="140" cy="764" r="32" fill="#22a044"/>
+  <text x="140" y="775" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">4</text>
+  <text x="196" y="748" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Programas autonómicos y municipales</text>
+  <rect x="806" y="712" width="232" height="46" rx="23" fill="#f5efe1" stroke="#1a2e1f" stroke-width="2"/>
+  <text x="922" y="742" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" fill="#1a2e1f">Ayuda pública</text>
+  <text x="196" y="790" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">Con convocatoria, plazo y presupuesto propios</text>
+  <text x="196" y="824" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">Compruébalos en el boletín de tu comunidad</text>
+
+  <!-- Recuadro: qué no se combina -->
+  <rect x="1100" y="204" width="420" height="634" rx="18" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
+  <rect x="1100" y="204" width="420" height="72" rx="18" fill="#b8733a"/>
+  <rect x="1100" y="250" width="420" height="26" fill="#b8733a"/>
+  <text x="1310" y="251" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">Qué no se combina</text>
+
+  <circle cx="1140" cy="327" r="16" fill="#b8733a"/>
+  <line x1="1133" y1="320" x2="1147" y2="334" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1147" y1="320" x2="1133" y2="334" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="1172" y="320" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">El CAE con las ayudas</text>
+  <text x="1172" y="350" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">financiadas por el FNEE</text>
+
+  <circle cx="1140" cy="421" r="16" fill="#b8733a"/>
+  <line x1="1133" y1="414" x2="1147" y2="428" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1147" y1="414" x2="1133" y2="428" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="1172" y="414" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">La parte subvencionada</text>
+  <text x="1172" y="444" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">en la base del IRPF</text>
+
+  <circle cx="1140" cy="515" r="16" fill="#b8733a"/>
+  <line x1="1133" y1="508" x2="1147" y2="522" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1147" y1="508" x2="1133" y2="522" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="1172" y="508" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Ayudas públicas para</text>
+  <text x="1172" y="538" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">una caldera fósil nueva</text>
+  <text x="1172" y="568" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#b8733a">(desde el 1-1-2025)</text>
+
+  <line x1="1124" y1="604" x2="1496" y2="604" stroke="#e6d9c0" stroke-width="2"/>
+
+  <rect x="1124" y="626" width="372" height="188" rx="14" fill="#22a044"/>
+  <text x="1148" y="668" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#ffffff">Sí, con carácter general</text>
+  <text x="1148" y="706" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#ffffff">El CAE con las ayudas</text>
+  <text x="1148" y="736" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#ffffff">públicas, que se declaran</text>
+  <text x="1148" y="766" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#ffffff">en el expediente CAE</text>
+
+  <!-- Pie -->
+  <line x1="80" y1="880" x2="1520" y2="880" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="80" y="930" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Estado a 4 de noviembre de 2026</text>
+  <text x="1520" y="930" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#b8733a">Fuentes: BOE, MITECO, AEAT y boletines autonómicos</text>
+</svg>
