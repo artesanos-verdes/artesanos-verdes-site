@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Asturias por tramos de altitud: zona C1 junto al mar, D1 en los valles y el centro, E1 en la montaña, y un desván aislado con lana mineral</title>
+  <desc id="hero-desc">Esquema en dos partes, sin contorno geográfico. A la izquierda, tres franjas apiladas que representan la fila de Asturias en la tabla a-Anejo B del DB-HE: arriba, la montaña desde 550 m, zona E1, con los puertos y pueblos altos del interior; en el centro, los valles y el centro de la región, de 50 a 550 m, zona D1, con Oviedo, Siero, Mieres, Langreo y Cangas del Narcea; abajo, la costa por debajo de 50 m, zona C1, con Gijón, Avilés y Llanes. Debajo, dos notas: la ficha RES022 del sistema CAE admite las zonas C, D y E, y Oviedo, entre 50 y 550 m de altitud, queda en D1. A la derecha, la sección de una casa bajo una nube de lluvia: el desván no habitable sobre el último piso, una capa de lana mineral insuflada sobre su suelo, el techo estanco al aire y flechas de ventilación en los aleros, con una leyenda: 220 mm de lana mineral con R = 4,75 m²·K/W, techo estanco con trampilla y pasos sellados, desván ventilado por los aleros, en una jornada y sin obras en la vivienda.</desc>
+
+  <defs>
+    <marker id="hero-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2d7a4e"/>
+    </marker>
+    <clipPath id="hero-insulation-clip">
+      <polygon points="1010,462 1053,432 1447,432 1490,462"/>
+    </clipPath>
+    <clipPath id="hero-swatch-clip">
+      <rect x="960" y="742" width="44" height="26"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="80" y="100" font-family="'Source Serif 4', Georgia, serif" font-size="58" font-weight="700" fill="#1a2e1f">Asturias, concejo a concejo</text>
+  <text x="80" y="150" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#2d7a4e">La tabla a-Anejo B del DB-HE asigna la zona por tramos de altitud</text>
+
+  <!-- Eje de altitud -->
+  <line x1="48" y1="678" x2="48" y2="204" stroke="#2d7a4e" stroke-width="4" marker-end="url(#hero-arrow)"/>
+  <text x="30" y="440" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#2d7a4e" transform="rotate(-90 30 440)" text-anchor="middle">altitud</text>
+
+  <!-- Franja superior: montaña, E1 -->
+  <rect x="80" y="196" width="780" height="150" rx="18" fill="#1a2e1f"/>
+  <circle cx="152" cy="271" r="46" fill="#f5efe1"/>
+  <text x="152" y="285" font-family="'Source Serif 4', Georgia, serif" font-size="38" font-weight="700" fill="#1a2e1f" text-anchor="middle">E1</text>
+  <text x="228" y="250" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#f5efe1">Montaña · desde 550 m</text>
+  <text x="228" y="290" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">Puertos y pueblos altos</text>
+  <text x="228" y="322" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">de los concejos del interior</text>
+
+  <!-- Franja central: valles y centro, D1 -->
+  <rect x="80" y="362" width="780" height="150" rx="18" fill="#2d7a4e"/>
+  <circle cx="152" cy="437" r="46" fill="#f5efe1"/>
+  <text x="152" y="451" font-family="'Source Serif 4', Georgia, serif" font-size="38" font-weight="700" fill="#1a2e1f" text-anchor="middle">D1</text>
+  <text x="228" y="416" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#f5efe1">Valles y centro · 50 a 550 m</text>
+  <text x="228" y="456" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">Oviedo · Siero · Mieres</text>
+  <text x="228" y="488" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">Langreo · Cangas del Narcea</text>
+
+  <!-- Franja inferior: costa, C1 -->
+  <rect x="80" y="528" width="780" height="150" rx="18" fill="#b8733a"/>
+  <circle cx="152" cy="603" r="46" fill="#f5efe1"/>
+  <text x="152" y="617" font-family="'Source Serif 4', Georgia, serif" font-size="38" font-weight="700" fill="#1a2e1f" text-anchor="middle">C1</text>
+  <text x="228" y="582" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#f5efe1">Costa · por debajo de 50 m</text>
+  <text x="228" y="622" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">Gijón · Avilés · Llanes</text>
+  <text x="228" y="654" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">en la franja junto al mar</text>
+
+  <!-- Notas bajo las franjas -->
+  <text x="80" y="738" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">La ficha RES022 del sistema CAE admite las zonas C, D y E,</text>
+  <text x="80" y="772" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">las tres que hay en Asturias.</text>
+  <text x="80" y="820" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Oviedo, entre 50 y 550 m de altitud, queda en D1.</text>
+
+  <!-- Nube y lluvia -->
+  <ellipse cx="1262" cy="118" rx="82" ry="40" fill="#c1d9cc"/>
+  <ellipse cx="1335" cy="94" rx="72" ry="48" fill="#c1d9cc"/>
+  <ellipse cx="1408" cy="120" rx="78" ry="38" fill="#c1d9cc"/>
+  <text x="1335" y="130" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f" text-anchor="middle">Clima húmedo</text>
+  <line x1="1250" y1="172" x2="1238" y2="206" stroke="#2d7a4e" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1310" y1="172" x2="1298" y2="206" stroke="#2d7a4e" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1370" y1="172" x2="1358" y2="206" stroke="#2d7a4e" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1430" y1="172" x2="1418" y2="206" stroke="#2d7a4e" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Cubierta y desván -->
+  <polygon points="960,470 1250,262 1540,470" fill="#b8733a"/>
+  <polygon points="1010,462 1250,296 1490,462" fill="#faf6ec"/>
+  <text x="1250" y="414" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f" text-anchor="middle">Desván no habitable</text>
+
+  <!-- Capa de lana mineral sobre el suelo del desván -->
+  <polygon points="1010,462 1053,432 1447,432 1490,462" fill="#22a044"/>
+  <g clip-path="url(#hero-insulation-clip)" fill="none" stroke="#f5efe1" stroke-width="2">
+    <path d="M1010 447 q10 -9 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+  </g>
+
+  <!-- Ventilación por los aleros -->
+  <line x1="904" y1="452" x2="980" y2="452" stroke="#2d7a4e" stroke-width="5" marker-end="url(#hero-arrow)"/>
+  <line x1="1520" y1="452" x2="1590" y2="452" stroke="#2d7a4e" stroke-width="5" marker-end="url(#hero-arrow)"/>
+
+  <!-- Forjado: techo estanco al aire -->
+  <rect x="1010" y="462" width="480" height="16" fill="#1a2e1f"/>
+
+  <!-- Último piso -->
+  <rect x="1010" y="478" width="480" height="170" fill="#ffffff" stroke="#2d7a4e" stroke-width="3"/>
+  <rect x="1060" y="524" width="80" height="80" fill="#c1d9cc"/>
+  <rect x="1360" y="524" width="80" height="80" fill="#c1d9cc"/>
+  <text x="1250" y="574" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f" text-anchor="middle">Último piso</text>
+
+  <!-- Suelo -->
+  <rect x="940" y="648" width="620" height="28" fill="#c1d9cc"/>
+  <line x1="940" y1="648" x2="1560" y2="648" stroke="#2d7a4e" stroke-width="4"/>
+
+  <!-- Leyenda de la sección -->
+  <rect x="960" y="742" width="44" height="26" fill="#22a044"/>
+  <g clip-path="url(#hero-swatch-clip)" fill="none" stroke="#f5efe1" stroke-width="2">
+    <path d="M960 755 q5.5 -7 11 0 t11 0 t11 0 t11 0"/>
+  </g>
+  <text x="1020" y="764" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">220 mm de lana mineral: R = 4,75 m²·K/W</text>
+  <rect x="960" y="796" width="44" height="16" fill="#1a2e1f"/>
+  <text x="1020" y="812" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Techo estanco: trampilla y pasos sellados</text>
+  <line x1="960" y1="852" x2="1000" y2="852" stroke="#2d7a4e" stroke-width="5" marker-end="url(#hero-arrow)"/>
+  <text x="1020" y="860" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Desván ventilado por los aleros</text>
+  <text x="1020" y="908" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#2d7a4e">En una jornada y sin obras en la vivienda</text>
+
+  <!-- Pie -->
+  <text x="80" y="958" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#2d7a4e">Los Artesanos Verdes · Esquema orientativo: la zona se confirma en el estudio con la altitud del edificio.</text>
+</svg>
