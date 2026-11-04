@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">¿Por dónde empezar a aislar una casa? Árbol de decisión en cinco pasos, con la ficha CAE de cada uno</title>
+  <desc id="hero-desc">Cinco tarjetas numeradas del 0 al 4, unidas por flechas, plantean una pregunta y la obra que corresponde si la respuesta es sí. Paso 0: si hay goteras o humedades, se reparan antes el tejado, las humedades y la estructura; no tiene ficha CAE, porque es conservación. Paso 1: si el desván o el techo están sin aislar, se aísla el suelo del desván, con la ficha RES022, o los rampantes de una buhardilla habitable, con la RES010 o la RES020. Paso 2: si la fachada está sin aislar, SATE por fuera o insuflado en la cámara de aire, con la RES020 o la RES010 según la superficie. Paso 3: si las ventanas dejan pasar corrientes, se cambian, en la misma obra si se pone SATE, con la ficha RES070 de renovación de ventanas. Paso 4: si hay caldera de gas o gasóleo, se sustituye por una bomba de calor calculada para la casa ya aislada, con la ficha RES060. Una llave bajo los pasos 0 a 3 indica que primero va la envolvente, que reduce la demanda de calefacción, y otra bajo el paso 4, que después va el equipo. Una nota recuerda que las fichas son las del catálogo del sistema CAE y que se trata de financiación privada, no de una ayuda pública.</desc>
+
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#22a044"/>
+    </marker>
+    <pattern id="lana" width="18" height="12" patternUnits="userSpaceOnUse">
+      <rect width="18" height="12" fill="#ffffff"/>
+      <path d="M0,8 q4.5,-7 9,0 t9,0" fill="none" stroke="#b8733a" stroke-width="2.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="70" y="84" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">GUÍA TÉCNICA · ORDEN DE LAS OBRAS</text>
+  <text x="70" y="146" font-family="'Source Serif 4', Georgia, serif" font-size="56" font-weight="700" fill="#1a2e1f">¿Por dónde empezar a aislar una casa?</text>
+  <rect x="70" y="174" width="80" height="5" rx="2" fill="#b8733a"/>
+  <text x="70" y="218" font-size="24" fill="#1a2e1f" opacity="0.8">Cinco pasos en orden, con la ficha CAE de cada uno</text>
+
+  <!-- Paso 0 -->
+  <g>
+    <rect x="70" y="250" width="260" height="570" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+    <rect x="70" y="250" width="260" height="140" rx="14" fill="#b8733a"/>
+    <rect x="70" y="372" width="260" height="18" fill="#b8733a"/>
+    <text x="94" y="290" font-size="18" font-weight="700" letter-spacing="2" fill="#f5efe1" opacity="0.85">PASO 0</text>
+    <text x="94" y="328" font-size="24" font-weight="700" fill="#f5efe1">¿Goteras o</text>
+    <text x="94" y="360" font-size="24" font-weight="700" fill="#f5efe1">humedades?</text>
+    <polygon points="134,468 200,420 266,468" fill="#ffffff" stroke="#1a2e1f" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="150" y="468" width="100" height="50" fill="#ffffff" stroke="#1a2e1f" stroke-width="6"/>
+    <path d="M200 474 q-13 19 0 28 q13 -9 0 -28 z" fill="#b8733a"/>
+    <path d="M222 490 q-8 12 0 18 q8 -6 0 -18 z" fill="#b8733a" opacity="0.7"/>
+    <text x="94" y="572" font-size="21" fill="#1a2e1f"><tspan font-weight="700">Sí:</tspan> repara antes</text>
+    <text x="94" y="600" font-size="21" fill="#1a2e1f">tejado, humedades</text>
+    <text x="94" y="628" font-size="21" fill="#1a2e1f">y estructura.</text>
+    <rect x="94" y="676" width="212" height="50" rx="25" fill="none" stroke="#b8733a" stroke-width="3"/>
+    <text x="200" y="709" text-anchor="middle" font-size="22" font-weight="700" fill="#b8733a">Sin ficha CAE</text>
+    <text x="200" y="752" text-anchor="middle" font-size="18" fill="#1a2e1f" opacity="0.8">es conservación</text>
+  </g>
+  <line x1="336" y1="320" x2="362" y2="320" stroke="#22a044" stroke-width="4" marker-end="url(#flecha)"/>
+  <!-- Paso 1 -->
+  <g>
+    <rect x="370" y="250" width="260" height="570" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+    <rect x="370" y="250" width="260" height="140" rx="14" fill="#1a2e1f"/>
+    <rect x="370" y="372" width="260" height="18" fill="#1a2e1f"/>
+    <text x="394" y="290" font-size="18" font-weight="700" letter-spacing="2" fill="#f5efe1" opacity="0.85">PASO 1</text>
+    <text x="394" y="328" font-size="24" font-weight="700" fill="#f5efe1">¿Desván o techo</text>
+    <text x="394" y="360" font-size="24" font-weight="700" fill="#f5efe1">sin aislar?</text>
+    <polygon points="418,500 500,424 582,500" fill="#ffffff" stroke="#1a2e1f" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="442" y="484" width="116" height="16" fill="url(#lana)"/>
+    <rect x="408" y="500" width="184" height="10" fill="#1a2e1f"/>
+    <text x="394" y="572" font-size="21" fill="#1a2e1f"><tspan font-weight="700">Sí:</tspan> aísla el suelo</text>
+    <text x="394" y="600" font-size="21" fill="#1a2e1f">del desván o los</text>
+    <text x="394" y="628" font-size="21" fill="#1a2e1f">rampantes.</text>
+    <rect x="394" y="652" width="212" height="44" rx="22" fill="#22a044"/>
+    <text x="500" y="682" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">RES022</text>
+    <text x="500" y="722" text-anchor="middle" font-size="18" fill="#1a2e1f" opacity="0.8">suelo del desván</text>
+    <rect x="394" y="728" width="212" height="44" rx="22" fill="#22a044"/>
+    <text x="500" y="758" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">RES010 / RES020</text>
+    <text x="500" y="798" text-anchor="middle" font-size="18" fill="#1a2e1f" opacity="0.8">rampantes</text>
+  </g>
+  <line x1="636" y1="320" x2="662" y2="320" stroke="#22a044" stroke-width="4" marker-end="url(#flecha)"/>
+  <!-- Paso 2 -->
+  <g>
+    <rect x="670" y="250" width="260" height="570" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+    <rect x="670" y="250" width="260" height="140" rx="14" fill="#1a2e1f"/>
+    <rect x="670" y="372" width="260" height="18" fill="#1a2e1f"/>
+    <text x="694" y="290" font-size="18" font-weight="700" letter-spacing="2" fill="#f5efe1" opacity="0.85">PASO 2</text>
+    <text x="694" y="328" font-size="24" font-weight="700" fill="#f5efe1">¿Fachada</text>
+    <text x="694" y="360" font-size="24" font-weight="700" fill="#f5efe1">sin aislar?</text>
+    <rect x="748" y="420" width="46" height="100" fill="#b8733a"/>
+    <line x1="748" y1="445" x2="794" y2="445" stroke="#f5efe1" stroke-width="2"/>
+    <line x1="748" y1="470" x2="794" y2="470" stroke="#f5efe1" stroke-width="2"/>
+    <line x1="748" y1="495" x2="794" y2="495" stroke="#f5efe1" stroke-width="2"/>
+    <rect x="794" y="420" width="30" height="100" fill="url(#lana)" stroke="#1a2e1f" stroke-width="2"/>
+    <rect x="824" y="420" width="7" height="100" fill="#1a2e1f"/>
+    <text x="694" y="572" font-size="21" fill="#1a2e1f"><tspan font-weight="700">Sí:</tspan> SATE por fuera</text>
+    <text x="694" y="600" font-size="21" fill="#1a2e1f">o insuflado en la</text>
+    <text x="694" y="628" font-size="21" fill="#1a2e1f">cámara de aire.</text>
+    <rect x="694" y="676" width="212" height="50" rx="25" fill="#22a044"/>
+    <text x="800" y="709" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">RES020 / RES010</text>
+    <text x="800" y="752" text-anchor="middle" font-size="18" fill="#1a2e1f" opacity="0.8">según la superficie</text>
+  </g>
+  <line x1="936" y1="320" x2="962" y2="320" stroke="#22a044" stroke-width="4" marker-end="url(#flecha)"/>
+  <!-- Paso 3 -->
+  <g>
+    <rect x="970" y="250" width="260" height="570" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+    <rect x="970" y="250" width="260" height="140" rx="14" fill="#1a2e1f"/>
+    <rect x="970" y="372" width="260" height="18" fill="#1a2e1f"/>
+    <text x="994" y="290" font-size="18" font-weight="700" letter-spacing="2" fill="#f5efe1" opacity="0.85">PASO 3</text>
+    <text x="994" y="328" font-size="24" font-weight="700" fill="#f5efe1">¿Ventanas con</text>
+    <text x="994" y="360" font-size="24" font-weight="700" fill="#f5efe1">corrientes?</text>
+    <rect x="1044" y="420" width="92" height="96" fill="#ffffff" stroke="#1a2e1f" stroke-width="6"/>
+    <line x1="1090" y1="420" x2="1090" y2="516" stroke="#1a2e1f" stroke-width="5"/>
+    <line x1="1044" y1="468" x2="1136" y2="468" stroke="#1a2e1f" stroke-width="5"/>
+    <path d="M1146 444 q8 -8 16 0 t16 0" fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1146 470 q8 -8 16 0 t16 0" fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1146 496 q8 -8 16 0 t16 0" fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round"/>
+    <text x="994" y="572" font-size="21" fill="#1a2e1f"><tspan font-weight="700">Sí:</tspan> cámbialas; si</text>
+    <text x="994" y="600" font-size="21" fill="#1a2e1f">pones SATE, en la</text>
+    <text x="994" y="628" font-size="21" fill="#1a2e1f">misma obra.</text>
+    <rect x="994" y="676" width="212" height="50" rx="25" fill="#22a044"/>
+    <text x="1100" y="709" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">RES070</text>
+    <text x="1100" y="752" text-anchor="middle" font-size="18" fill="#1a2e1f" opacity="0.8">renovación de ventanas</text>
+  </g>
+  <line x1="1236" y1="320" x2="1262" y2="320" stroke="#22a044" stroke-width="4" marker-end="url(#flecha)"/>
+  <!-- Paso 4 -->
+  <g>
+    <rect x="1270" y="250" width="260" height="570" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
+    <rect x="1270" y="250" width="260" height="140" rx="14" fill="#1a2e1f"/>
+    <rect x="1270" y="372" width="260" height="18" fill="#1a2e1f"/>
+    <text x="1294" y="290" font-size="18" font-weight="700" letter-spacing="2" fill="#f5efe1" opacity="0.85">PASO 4</text>
+    <text x="1294" y="328" font-size="24" font-weight="700" fill="#f5efe1">¿Caldera de gas</text>
+    <text x="1294" y="360" font-size="24" font-weight="700" fill="#f5efe1">o gasóleo?</text>
+    <rect x="1338" y="428" width="124" height="84" rx="8" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+    <circle cx="1382" cy="470" r="29" fill="none" stroke="#1a2e1f" stroke-width="4"/>
+    <path d="M1382 470 l0 -22 M1382 470 l19 11 M1382 470 l-19 11" stroke="#22a044" stroke-width="5" stroke-linecap="round"/>
+    <line x1="1426" y1="446" x2="1426" y2="494" stroke="#1a2e1f" stroke-width="3"/>
+    <line x1="1436" y1="446" x2="1436" y2="494" stroke="#1a2e1f" stroke-width="3"/>
+    <line x1="1446" y1="446" x2="1446" y2="494" stroke="#1a2e1f" stroke-width="3"/>
+    <rect x="1350" y="512" width="14" height="8" fill="#1a2e1f"/>
+    <rect x="1436" y="512" width="14" height="8" fill="#1a2e1f"/>
+    <text x="1294" y="572" font-size="21" fill="#1a2e1f"><tspan font-weight="700">Sí:</tspan> bomba de calor</text>
+    <text x="1294" y="600" font-size="21" fill="#1a2e1f">calculada para la</text>
+    <text x="1294" y="628" font-size="21" fill="#1a2e1f">casa ya aislada.</text>
+    <rect x="1294" y="676" width="212" height="50" rx="25" fill="#22a044"/>
+    <text x="1400" y="709" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">RES060</text>
+    <text x="1400" y="752" text-anchor="middle" font-size="18" fill="#1a2e1f" opacity="0.8">sustitución de caldera</text>
+  </g>
+
+  <!-- Llaves: envolvente y equipo -->
+  <path d="M70 846 v14 h1160 v-14" fill="none" stroke="#22a044" stroke-width="3"/>
+  <text x="650" y="900" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2e1f">Primero, la envolvente: menos demanda de calefacción</text>
+  <path d="M1270 846 v14 h260 v-14" fill="none" stroke="#b8733a" stroke-width="3"/>
+  <text x="1400" y="900" text-anchor="middle" font-size="22" font-weight="700" fill="#b8733a">Después, el equipo</text>
+
+  <!-- Nota -->
+  <text x="70" y="958" font-size="19" fill="#1a2e1f" opacity="0.75">Fichas del catálogo vigente del sistema CAE (Orden TED/845/2023 y resoluciones posteriores). Financiación privada, no una ayuda pública.</text>
+</svg>

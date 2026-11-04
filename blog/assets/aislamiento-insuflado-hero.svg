@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Aislamiento insuflado: en el suelo del desván y en la cámara de la fachada</title>
+  <desc id="hero-desc">Dos esquemas en sección. A la izquierda, una casa con tejado inclinado: una máquina en la calle impulsa el aislante por una manguera que cruza la vivienda, sube por la trampilla y reparte lana mineral sobre el suelo del desván, con una regla graduada que marca el espesor y la ventilación libre junto a los aleros; debajo, tres condiciones: desván no habitable con acceso, capa continua con el espesor medido, y ventilación libre con la trampilla estanca. A la derecha, una fachada de doble hoja de ladrillo: una manguera introduce el aislante en la cámara de aire por una perforación de la hoja exterior, la cámara se llena de abajo arriba y el forjado la corta en cada planta; debajo, tres condiciones: fachada de doble hoja, cámara continua y libre, e inspección previa con catas o endoscopio. Abajo, una banda indica cuándo no se insufla: muro sin cámara, cámara ya rellena, humedades sin resolver o desván habitable.</desc>
+
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="80" y="110" font-family="'Source Serif 4', Georgia, serif" font-size="60" font-weight="700" fill="#1a2e1f">Aislamiento insuflado</text>
+  <text x="80" y="162" font-family="'Source Sans 3', Arial, sans-serif" font-size="32" fill="#1a2e1f" opacity="0.85">Dónde se aplica y qué hay que comprobar antes</text>
+
+  <!-- ===== Tarjeta 1: suelo del desván ===== -->
+  <rect x="80" y="200" width="700" height="630" rx="24" fill="#ffffff" stroke="#d9d2c0" stroke-width="3"/>
+  <circle cx="132" cy="256" r="26" fill="#22a044"/>
+  <text x="132" y="266" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="176" y="268" font-family="'Source Serif 4', Georgia, serif" font-size="36" font-weight="700" fill="#1a2e1f">Suelo del desván</text>
+
+  <!-- Suelo exterior -->
+  <line x1="100" y1="640" x2="760" y2="640" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Volumen del desván -->
+  <polygon points="214,485 430,330 646,485" fill="#efe4cc"/>
+
+  <!-- Vivienda -->
+  <rect x="250" y="505" width="360" height="135" fill="#fbf6ea"/>
+  <rect x="230" y="505" width="20" height="55" fill="#8a8f86"/>
+  <rect x="610" y="505" width="20" height="135" fill="#8a8f86"/>
+  <text x="400" y="575" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f" opacity="0.75" text-anchor="middle">Vivienda</text>
+
+  <!-- Forjado con el hueco de la trampilla -->
+  <rect x="222" y="485" width="248" height="20" fill="#8a8f86"/>
+  <rect x="510" y="485" width="128" height="20" fill="#8a8f86"/>
+  <rect x="470" y="480" width="40" height="8" fill="#5d6b60" transform="rotate(-35 470 484)"/>
+
+  <!-- Lana insuflada sobre el forjado (sin tapar los aleros) -->
+  <polygon points="262,485 300,455 466,455 466,485" fill="#e9d8a6"/>
+  <polygon points="514,485 514,455 560,455 598,485" fill="#e9d8a6"/>
+  <g fill="#fffaf0" opacity="0.9">
+    <circle cx="300" cy="470" r="5"/><circle cx="322" cy="463" r="4"/><circle cx="340" cy="476" r="5"/>
+    <circle cx="378" cy="465" r="4"/><circle cx="402" cy="476" r="5"/><circle cx="426" cy="463" r="4"/>
+    <circle cx="450" cy="474" r="5"/><circle cx="530" cy="466" r="4"/><circle cx="552" cy="477" r="5"/>
+    <circle cx="574" cy="470" r="4"/>
+  </g>
+
+  <!-- Regla graduada -->
+  <rect x="358" y="430" width="8" height="55" fill="#1a2e1f"/>
+  <g stroke="#1a2e1f" stroke-width="2">
+    <line x1="366" y1="438" x2="376" y2="438"/>
+    <line x1="366" y1="448" x2="372" y2="448"/>
+    <line x1="366" y1="458" x2="376" y2="458"/>
+    <line x1="366" y1="468" x2="372" y2="468"/>
+    <line x1="366" y1="478" x2="376" y2="478"/>
+  </g>
+
+  <!-- Tejado -->
+  <polyline points="196,497 430,320 664,497" fill="none" stroke="#b8733a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Ventilación junto a los aleros -->
+  <g fill="none" stroke="#22a044" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M222 476 L256 466"/>
+    <path d="M246 460 L256 466 L248 474"/>
+    <path d="M638 476 L604 466"/>
+    <path d="M614 460 L604 466 L612 474"/>
+  </g>
+
+  <text x="430" y="410" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f" text-anchor="middle">Desván</text>
+
+  <!-- Máquina y manguera -->
+  <rect x="104" y="566" width="76" height="74" rx="10" fill="#1a2e1f"/>
+  <rect x="116" y="578" width="52" height="14" rx="4" fill="#22a044"/>
+  <text x="142" y="552" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f" text-anchor="middle">Máquina</text>
+  <path d="M180 612 L460 612 C480 612 490 604 490 588 L490 452 C490 436 480 428 464 428 L424 428" fill="none" stroke="#22a044" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="404" y="421" width="22" height="14" rx="3" fill="#1a2e1f"/>
+  <g fill="#e9d8a6" stroke="#b8a370" stroke-width="1">
+    <circle cx="392" cy="432" r="5"/><circle cx="380" cy="440" r="4"/><circle cx="394" cy="444" r="4"/>
+    <circle cx="372" cy="448" r="5"/><circle cx="386" cy="451" r="4"/>
+  </g>
+
+  <!-- Condiciones (tarjeta 1) -->
+  <g font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <rect x="120" y="672" width="40" height="40" rx="8" fill="#22a044"/>
+    <path d="M129 693 L137 701 L151 683" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="178" y="702">Desván no habitable con acceso</text>
+    <rect x="120" y="722" width="40" height="40" rx="8" fill="#22a044"/>
+    <path d="M129 743 L137 751 L151 733" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="178" y="752">Capa continua y espesor medido</text>
+    <rect x="120" y="772" width="40" height="40" rx="8" fill="#22a044"/>
+    <path d="M129 793 L137 801 L151 783" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="178" y="802">Ventilación libre y trampilla estanca</text>
+  </g>
+
+  <!-- ===== Tarjeta 2: cámara de la fachada ===== -->
+  <rect x="820" y="200" width="700" height="630" rx="24" fill="#ffffff" stroke="#d9d2c0" stroke-width="3"/>
+  <circle cx="872" cy="256" r="26" fill="#22a044"/>
+  <text x="872" y="266" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="916" y="268" font-family="'Source Serif 4', Georgia, serif" font-size="36" font-weight="700" fill="#1a2e1f">Cámara de la fachada</text>
+
+  <text x="900" y="330" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f" opacity="0.75">Exterior</text>
+  <text x="1480" y="330" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f" opacity="0.75" text-anchor="end">Interior</text>
+
+  <!-- Hoja exterior de ladrillo -->
+  <rect x="1060" y="350" width="60" height="290" fill="#b8733a"/>
+  <g stroke="#f5efe1" stroke-width="3">
+    <line x1="1060" y1="378" x2="1120" y2="378"/><line x1="1060" y1="406" x2="1120" y2="406"/>
+    <line x1="1060" y1="434" x2="1120" y2="434"/><line x1="1060" y1="462" x2="1120" y2="462"/>
+    <line x1="1060" y1="490" x2="1120" y2="490"/><line x1="1060" y1="518" x2="1120" y2="518"/>
+    <line x1="1060" y1="546" x2="1120" y2="546"/><line x1="1060" y1="574" x2="1120" y2="574"/>
+    <line x1="1060" y1="602" x2="1120" y2="602"/><line x1="1060" y1="630" x2="1120" y2="630"/>
+  </g>
+
+  <!-- Cámara de aire: planta superior llenándose, planta inferior llena -->
+  <rect x="1120" y="350" width="40" height="70" fill="#fbf6ea"/>
+  <rect x="1120" y="420" width="40" height="86" fill="#e9d8a6"/>
+  <rect x="1120" y="530" width="40" height="110" fill="#e9d8a6"/>
+  <g fill="#fffaf0" opacity="0.9">
+    <circle cx="1132" cy="440" r="4"/><circle cx="1148" cy="462" r="4"/><circle cx="1134" cy="486" r="4"/>
+    <circle cx="1146" cy="552" r="4"/><circle cx="1132" cy="578" r="4"/><circle cx="1148" cy="604" r="4"/>
+    <circle cx="1134" cy="626" r="4"/>
+  </g>
+
+  <!-- Hoja interior -->
+  <rect x="1160" y="350" width="44" height="156" fill="#d8b48f"/>
+  <rect x="1160" y="530" width="44" height="110" fill="#d8b48f"/>
+  <g stroke="#ffffff" stroke-width="2">
+    <line x1="1160" y1="380" x2="1204" y2="380"/><line x1="1160" y1="410" x2="1204" y2="410"/>
+    <line x1="1160" y1="440" x2="1204" y2="440"/><line x1="1160" y1="470" x2="1204" y2="470"/>
+    <line x1="1160" y1="560" x2="1204" y2="560"/><line x1="1160" y1="590" x2="1204" y2="590"/>
+    <line x1="1160" y1="620" x2="1204" y2="620"/>
+  </g>
+
+  <!-- Forjado que corta la cámara -->
+  <rect x="1120" y="506" width="360" height="24" fill="#8a8f86"/>
+  <text x="1470" y="496" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f" text-anchor="end">Forjado</text>
+
+  <!-- Rótulo de la cámara -->
+  <line x1="1160" y1="392" x2="1236" y2="392" stroke="#1a2e1f" stroke-width="2"/>
+  <text x="1244" y="400" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#1a2e1f">Cámara de aire</text>
+
+  <!-- Manguera y perforación en la hoja exterior -->
+  <line x1="860" y1="640" x2="1500" y2="640" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M900 640 C900 520 960 378 1030 378" fill="none" stroke="#22a044" stroke-width="10" stroke-linecap="round"/>
+  <rect x="1026" y="372" width="104" height="12" rx="3" fill="#1a2e1f"/>
+  <g fill="#e9d8a6" stroke="#b8a370" stroke-width="1">
+    <circle cx="1140" cy="392" r="4"/><circle cx="1132" cy="404" r="4"/><circle cx="1146" cy="410" r="4"/>
+  </g>
+
+  <!-- Condiciones (tarjeta 2) -->
+  <g font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <rect x="860" y="672" width="40" height="40" rx="8" fill="#22a044"/>
+    <path d="M869 693 L877 701 L891 683" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="918" y="702">Fachada de doble hoja</text>
+    <rect x="860" y="722" width="40" height="40" rx="8" fill="#22a044"/>
+    <path d="M869 743 L877 751 L891 733" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="918" y="752">Cámara continua y libre</text>
+    <rect x="860" y="772" width="40" height="40" rx="8" fill="#22a044"/>
+    <path d="M869 793 L877 801 L891 783" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="918" y="802">Inspección previa con catas o endoscopio</text>
+  </g>
+
+  <!-- ===== Banda inferior: cuándo no se insufla ===== -->
+  <rect x="80" y="860" width="1440" height="104" rx="20" fill="#1a2e1f"/>
+  <text x="800" y="902" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" font-weight="700" fill="#f5efe1" text-anchor="middle">Cuándo no se insufla</text>
+  <text x="800" y="944" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#f5efe1" text-anchor="middle">Muro sin cámara · cámara ya rellena · humedades sin resolver · desván habitable</text>
+</svg>

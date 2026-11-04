@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Sistema CAE: calendario de 2014 a 2031, con la propuesta K-838 marcada como propuesta</title>
+  <desc id="hero-desc">Cronología horizontal con siete hitos. 2014: la Ley 18/2014 crea la obligación de ahorro energético. 2020: el Real Decreto-ley 23/2020 la prorroga hasta el 31 de diciembre de 2030. 2023: el Real Decreto 36/2023 crea el sistema CAE, en vigor desde el 26 de enero de 2023, y el catálogo nace con 52 fichas. 2024: la Resolución de 3 de julio de 2024 amplía el catálogo a 114 fichas. 2026: el Real Decreto-ley 7/2026, de 20 de marzo, en vigor desde el 22 de marzo, y la Resolución de 3 de junio de 2026, que crea la ficha RES022 del desván no habitable. 2027: la propuesta K-838 de coeficientes multiplicadores para la bomba de calor, dibujada con línea discontinua porque no consta aprobada a 4 de noviembre de 2026. 2030 y 2031: fin de la obligación el 31 de diciembre de 2030 y última fecha de inicio de las actuaciones antes del 1 de enero de 2031.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="92" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="48" font-weight="700" fill="#1a2e1f">Sistema CAE: calendario hasta 2030</text>
+  <text x="800" y="142" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#22a044">Obligación de ahorro hasta el 31-12-2030 · actuaciones iniciadas antes del 1-1-2031</text>
+  <line x1="120" y1="174" x2="1480" y2="174" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Eje de la cronología -->
+  <line x1="110" y1="560" x2="1470" y2="560" stroke="#1a2e1f" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="1466,544 1498,560 1466,576" fill="#1a2e1f"/>
+
+  <!-- 2014 (arriba) -->
+  <line x1="200" y1="452" x2="200" y2="536" stroke="#22a044" stroke-width="3"/>
+  <circle cx="200" cy="560" r="22" fill="#22a044"/>
+  <text x="200" y="300" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">2014</text>
+  <text x="200" y="344" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Ley 18/2014:</text>
+  <text x="200" y="376" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">nace la obligación</text>
+  <text x="200" y="408" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">de ahorro energético</text>
+
+  <!-- 2020 (abajo) -->
+  <line x1="400" y1="584" x2="400" y2="650" stroke="#22a044" stroke-width="3"/>
+  <circle cx="400" cy="560" r="22" fill="#22a044"/>
+  <text x="400" y="700" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">2020</text>
+  <text x="400" y="744" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">RDL 23/2020:</text>
+  <text x="400" y="776" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">la obligación se prorroga</text>
+  <text x="400" y="808" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">hasta el 31-12-2030</text>
+
+  <!-- 2023 (arriba) -->
+  <line x1="600" y1="452" x2="600" y2="536" stroke="#22a044" stroke-width="3"/>
+  <circle cx="600" cy="560" r="22" fill="#22a044"/>
+  <text x="600" y="300" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">2023</text>
+  <text x="600" y="344" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">RD 36/2023: sistema CAE</text>
+  <text x="600" y="376" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">en vigor el 26-1-2023;</text>
+  <text x="600" y="408" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">catálogo con 52 fichas</text>
+
+  <!-- 2024 (abajo) -->
+  <line x1="800" y1="584" x2="800" y2="650" stroke="#22a044" stroke-width="3"/>
+  <circle cx="800" cy="560" r="22" fill="#22a044"/>
+  <text x="800" y="700" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">2024</text>
+  <text x="800" y="744" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Resolución de 3-7-2024:</text>
+  <text x="800" y="776" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">el catálogo pasa</text>
+  <text x="800" y="808" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">de 52 a 114 fichas</text>
+
+  <!-- 2026 (arriba) -->
+  <line x1="1000" y1="452" x2="1000" y2="536" stroke="#22a044" stroke-width="3"/>
+  <circle cx="1000" cy="560" r="22" fill="#22a044"/>
+  <text x="1000" y="300" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">2026</text>
+  <text x="1000" y="344" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">RDL 7/2026: en vigor el 22-3-2026</text>
+  <text x="1000" y="376" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Resolución de 3-6-2026:</text>
+  <text x="1000" y="408" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#22a044">nueva ficha RES022 (desván)</text>
+
+  <!-- 2027 (abajo, propuesta) -->
+  <line x1="1200" y1="584" x2="1200" y2="650" stroke="#b8733a" stroke-width="3" stroke-dasharray="8 6"/>
+  <circle cx="1200" cy="560" r="22" fill="#f5efe1" stroke="#b8733a" stroke-width="5" stroke-dasharray="9 6"/>
+  <text x="1200" y="700" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#b8733a">2027</text>
+  <text x="1200" y="744" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Propuesta K-838: coeficientes</text>
+  <text x="1200" y="776" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">×2, ×3, ×4 para la bomba de calor</text>
+  <text x="1200" y="808" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#b8733a">no consta aprobada a 4-11-2026</text>
+
+  <!-- 2030-2031 (arriba) -->
+  <line x1="1400" y1="452" x2="1400" y2="536" stroke="#22a044" stroke-width="3"/>
+  <circle cx="1400" cy="560" r="22" fill="#1a2e1f"/>
+  <text x="1400" y="300" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">2030 · 2031</text>
+  <text x="1400" y="344" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">31-12-2030: fin de la</text>
+  <text x="1400" y="376" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">obligación de ahorro;</text>
+  <text x="1400" y="408" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">inicio antes del 1-1-2031</text>
+
+  <!-- Leyenda -->
+  <line x1="120" y1="880" x2="1480" y2="880" stroke="#c1d9cc" stroke-width="2"/>
+  <circle cx="160" cy="930" r="12" fill="#22a044"/>
+  <text x="186" y="938" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">En vigor (publicado en el BOE)</text>
+  <circle cx="600" cy="930" r="12" fill="#f5efe1" stroke="#b8733a" stroke-width="4" stroke-dasharray="6 4"/>
+  <text x="626" y="938" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Propuesta en tramitación (expediente K-838)</text>
+  <text x="1480" y="938" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#b8733a">Última comprobación: 4-11-2026</text>
+</svg>
