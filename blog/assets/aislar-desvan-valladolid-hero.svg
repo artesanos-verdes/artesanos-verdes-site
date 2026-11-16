@@ -30,7 +30,7 @@
   <text x="148" y="750" text-anchor="end" font-size="22" fill="#1a2e1f">700 m</text>
   <text x="148" y="888" text-anchor="end" font-size="22" fill="#1a2e1f">600 m</text>
 
-  <!-- Franja D2: por debajo de 800 m (y=605) -->
+  <!-- Franja D2: hasta 800 m (y=605) -->
   <rect x="200" y="605" width="540" height="275" fill="#22a044" opacity="0.16"/>
   <rect x="200" y="605" width="540" height="275" fill="none" stroke="#22a044" stroke-width="3"/>
   <!-- Franja E1: 800 m o más -->
