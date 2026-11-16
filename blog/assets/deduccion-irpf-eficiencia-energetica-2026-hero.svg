@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="irpf-title irpf-desc" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif">
+  <title id="irpf-title">Deducción del IRPF por obras de eficiencia energética</title>
+  <desc id="irpf-desc">Vivienda con el desván aislado y una bomba de calor, dos certificados de eficiencia energética (antes y después de la obra) y un calendario que marca el 31 de diciembre de 2026.</desc>
+
+  <!-- ===== FONDO + ESCENARIO ===== -->
+  <rect width="1200" height="630" fill="#f7f7f5"/>
+  <circle cx="600" cy="285" r="255" fill="#e9f2ec"/>
+
+  <!-- ===== VIVIENDA ===== -->
+  <g stroke="#1a4d30" stroke-linejoin="round" stroke-linecap="round">
+    <!-- muros -->
+    <rect x="196" y="262" width="230" height="168" fill="#ffffff" stroke-width="4"/>
+    <!-- manta aislante en el desván (sobre el último forjado) -->
+    <path d="M206,262 C206,250 226,242 250,241 C272,240 284,234 311,234 C338,234 350,240 372,241 C396,242 416,250 416,262 Z" fill="#a8c4b0" stroke-width="2.5"/>
+    <!-- tejado -->
+    <path d="M172,264 L311,166 L450,264" fill="none" stroke-width="6"/>
+    <!-- chimenea -->
+    <path d="M372,206 L372,180 L394,180 L394,222" fill="#ffffff" stroke-width="4"/>
+    <!-- ventanas -->
+    <rect x="224" y="292" width="54" height="50" rx="4" fill="#a8c4b0" stroke-width="3"/>
+    <line x1="251" y1="292" x2="251" y2="342" stroke-width="2.5"/>
+    <rect x="344" y="292" width="54" height="50" rx="4" fill="#a8c4b0" stroke-width="3"/>
+    <line x1="371" y1="292" x2="371" y2="342" stroke-width="2.5"/>
+    <!-- puerta -->
+    <path d="M290,430 L290,370 Q311,356 332,370 L332,430" fill="#ffffff" stroke-width="3.5"/>
+  </g>
+  <g fill="#1a4d30" opacity="0.22">
+    <circle cx="238" cy="254" r="2.4"/>
+    <circle cx="266" cy="248" r="2.6"/>
+    <circle cx="296" cy="252" r="2.2"/>
+    <circle cx="326" cy="246" r="2.6"/>
+    <circle cx="356" cy="252" r="2.2"/>
+    <circle cx="386" cy="255" r="2.4"/>
+  </g>
+  <circle cx="311" cy="214" r="7" fill="#22a044" stroke="#1a4d30" stroke-width="2"/>
+
+  <!-- ===== BOMBA DE CALOR (unidad exterior) ===== -->
+  <g stroke="#1a4d30" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="446" y="356" width="104" height="68" rx="10" fill="#ffffff" stroke-width="3.5"/>
+    <g stroke="#a8c4b0" stroke-width="4">
+      <line x1="458" y1="374" x2="482" y2="374"/>
+      <line x1="458" y1="386" x2="482" y2="386"/>
+      <line x1="458" y1="398" x2="482" y2="398"/>
+      <line x1="458" y1="410" x2="482" y2="410"/>
+    </g>
+    <circle cx="516" cy="390" r="24" fill="#f7f7f5" stroke-width="2.5"/>
+    <g transform="translate(516,390)" fill="#a8c4b0" stroke-width="1.2">
+      <path d="M0,0 C4,-7 2,-16 -4,-20 C1,-12 -2,-6 0,0 Z" transform="rotate(10)"/>
+      <path d="M0,0 C4,-7 2,-16 -4,-20 C1,-12 -2,-6 0,0 Z" transform="rotate(130)"/>
+      <path d="M0,0 C4,-7 2,-16 -4,-20 C1,-12 -2,-6 0,0 Z" transform="rotate(250)"/>
+    </g>
+    <circle cx="516" cy="390" r="5" fill="#22a044" stroke-width="1.2"/>
+  </g>
+
+  <!-- suelo -->
+  <line x1="150" y1="432" x2="580" y2="432" stroke="#a8c4b0" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ===== CERTIFICADO «ANTES» ===== -->
+  <g transform="translate(624,150) rotate(-5)">
+    <rect x="0" y="0" width="176" height="232" rx="12" fill="#ffffff" stroke="#1a4d30" stroke-width="3.5"/>
+    <text x="20" y="34" fill="#1a4d30" font-size="15" font-weight="700" letter-spacing="2.5">CEE · ANTES</text>
+    <g stroke="none">
+      <rect x="20" y="52"  width="64"  height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="72"  width="78"  height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="92"  width="92"  height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="112" width="106" height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="132" width="120" height="14" rx="3" fill="#1a4d30"/>
+      <rect x="20" y="152" width="134" height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="172" width="136" height="14" rx="3" fill="#a8c4b0"/>
+    </g>
+    <path d="M150,139 L166,131 L166,147 Z" fill="#1a4d30"/>
+    <line x1="20" y1="206" x2="96" y2="206" stroke="#a8c4b0" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== CERTIFICADO «DESPUÉS» ===== -->
+  <g transform="translate(742,206) rotate(4)">
+    <rect x="0" y="0" width="176" height="232" rx="12" fill="#ffffff" stroke="#1a4d30" stroke-width="3.5"/>
+    <text x="20" y="34" fill="#1a4d30" font-size="15" font-weight="700" letter-spacing="2.5">CEE · DESPUÉS</text>
+    <g stroke="none">
+      <rect x="20" y="52"  width="64"  height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="72"  width="78"  height="14" rx="3" fill="#22a044"/>
+      <rect x="20" y="92"  width="92"  height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="112" width="106" height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="132" width="120" height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="152" width="134" height="14" rx="3" fill="#a8c4b0"/>
+      <rect x="20" y="172" width="136" height="14" rx="3" fill="#a8c4b0"/>
+    </g>
+    <path d="M108,79 L124,71 L124,87 Z" fill="#22a044" stroke="#1a4d30" stroke-width="1.5" stroke-linejoin="round"/>
+    <!-- sello -->
+    <circle cx="136" cy="204" r="16" fill="#e9f2ec" stroke="#1a4d30" stroke-width="2.5"/>
+    <path d="M128,204 L134,210 L145,197" fill="none" stroke="#22a044" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ===== CALENDARIO ===== -->
+  <g transform="translate(962,180)">
+    <rect x="0" y="0" width="150" height="160" rx="14" fill="#ffffff" stroke="#1a4d30" stroke-width="3.5"/>
+    <path d="M0,14 Q0,0 14,0 L136,0 Q150,0 150,14 L150,46 L0,46 Z" fill="#1a4d30"/>
+    <text x="75" y="31" fill="#ffffff" font-size="17" font-weight="700" letter-spacing="3" text-anchor="middle">DIC 2026</text>
+    <text x="75" y="126" fill="#1a4d30" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="66" font-weight="700" text-anchor="middle">31</text>
+    <g stroke="#1a4d30" stroke-width="5" stroke-linecap="round">
+      <line x1="40" y1="-10" x2="40" y2="10"/>
+      <line x1="110" y1="-10" x2="110" y2="10"/>
+    </g>
+  </g>
+
+  <!-- ===== ETIQUETA ===== -->
+  <line x1="580" y1="500" x2="620" y2="500" stroke="#22a044" stroke-width="4" stroke-linecap="round"/>
+  <text x="600" y="544" fill="#1a4d30" font-size="30" font-weight="700" letter-spacing="6" text-anchor="middle">DEDUCCIÓN IRPF</text>
+  <text x="600" y="584" fill="#2d5a3d" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="24" font-weight="600" text-anchor="middle">20 % · 40 % · 60 %</text>
+</svg>
