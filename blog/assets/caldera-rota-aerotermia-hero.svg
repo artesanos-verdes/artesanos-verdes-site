@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Caldera rota en invierno: reparar, cambiar o pasar a aerotermia</title>
+  <desc id="hero-desc">Árbol de decisión. Una caldera rota abre tres salidas. Reparar: diagnóstico y presupuesto por escrito, y la aerotermia sigue abierta dentro del plazo. Caldera nueva: según el RITE es una reforma, la ejecuta una empresa habilitada y no tiene coeficiente multiplicador CAE. Aerotermia con la ficha RES060_FM: bomba de calor aire-agua para la calefacción y el agua caliente sanitaria, en la vivienda habitual, con coeficiente 2 en una casa y 2,5 en un piso. Debajo, tres gestos antes de desmontar nada: fotos de la instalación, y de la placa de la caldera como consejo; las facturas del invierno, del 1 de noviembre al 31 de marzo, sin huecos y con más de 75 kWh al mes de media; y la factura de la obra con número de serie y fecha dentro del plazo. Una franja temporal marca el plazo de las actuaciones con factor multiplicador: iniciadas del 22 de marzo de 2026 al 30 de noviembre de 2027, con expedientes desde el 15 de enero de 2027.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="80" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">Caldera rota: ¿reparar, cambiar o aerotermia?</text>
+  <text x="800" y="126" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f" fill-opacity="0.8">Tres salidas y tres gestos antes de desmontar nada</text>
+  <line x1="80" y1="154" x2="1520" y2="154" stroke="#1a2e1f" stroke-opacity="0.15" stroke-width="2"/>
+
+  <!-- Raíz del árbol -->
+  <rect x="590" y="176" width="420" height="76" rx="38" fill="#1a2e1f"/>
+  <text x="800" y="224" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" font-weight="700" fill="#f5efe1">Se ha roto la caldera</text>
+
+  <!-- Ramas -->
+  <path d="M800 252 V286 M310 286 H1290 M310 286 V320 M800 286 V320 M1290 286 V320" fill="none" stroke="#1a2e1f" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- ===== Salida 1: Reparar ===== -->
+  <rect x="90" y="320" width="440" height="280" rx="18" fill="#ffffff" stroke="#b8733a" stroke-opacity="0.45" stroke-width="2"/>
+  <rect x="90" y="320" width="440" height="70" rx="18" fill="#b8733a"/>
+  <rect x="90" y="366" width="440" height="24" fill="#b8733a"/>
+  <text x="310" y="366" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">Reparar</text>
+  <circle cx="128" cy="432" r="7" fill="#b8733a"/>
+  <text x="146" y="440" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#1a2e1f">Diagnóstico y presupuesto</text>
+  <text x="146" y="472" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">por escrito</text>
+  <circle cx="128" cy="522" r="7" fill="#b8733a"/>
+  <text x="146" y="530" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#1a2e1f">La aerotermia sigue</text>
+  <text x="146" y="562" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">abierta dentro del plazo</text>
+
+  <!-- ===== Salida 2: Caldera nueva ===== -->
+  <rect x="580" y="320" width="440" height="280" rx="18" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="580" y="320" width="440" height="70" rx="18" fill="#1a2e1f"/>
+  <rect x="580" y="366" width="440" height="24" fill="#1a2e1f"/>
+  <text x="800" y="366" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#f5efe1">Caldera nueva</text>
+  <circle cx="618" cy="432" r="7" fill="#1a2e1f"/>
+  <text x="636" y="440" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#1a2e1f">Reforma según el RITE,</text>
+  <text x="636" y="472" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">por empresa habilitada</text>
+  <circle cx="618" cy="522" r="7" fill="#1a2e1f"/>
+  <text x="636" y="530" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#1a2e1f">Sin coeficiente</text>
+  <text x="636" y="562" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">multiplicador CAE</text>
+
+  <!-- ===== Salida 3: Aerotermia ===== -->
+  <rect x="1070" y="320" width="440" height="280" rx="18" fill="#ffffff" stroke="#22a044" stroke-opacity="0.6" stroke-width="3"/>
+  <rect x="1070" y="320" width="440" height="70" rx="18" fill="#22a044"/>
+  <rect x="1070" y="366" width="440" height="24" fill="#22a044"/>
+  <text x="1290" y="366" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">Aerotermia (RES060_FM)</text>
+  <circle cx="1108" cy="432" r="7" fill="#22a044"/>
+  <text x="1126" y="440" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#1a2e1f">Aire-agua: calefacción</text>
+  <text x="1126" y="472" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">y agua caliente (ACS)</text>
+  <circle cx="1108" cy="522" r="7" fill="#22a044"/>
+  <text x="1126" y="530" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#1a2e1f">En vivienda habitual:</text>
+  <text x="1126" y="562" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">2 en casa y 2,5 en piso</text>
+
+  <!-- ===== Antes de desmontar nada ===== -->
+  <text x="90" y="662" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#1a2e1f">Antes de desmontar nada</text>
+
+  <rect x="90" y="684" width="440" height="160" rx="16" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15" stroke-width="2"/>
+  <circle cx="140" cy="734" r="26" fill="#b8733a"/>
+  <text x="140" y="743" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">1</text>
+  <text x="182" y="743" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Fotos de la instalación</text>
+  <text x="182" y="782" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Y de la placa de la caldera</text>
+  <text x="182" y="814" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-style="italic" fill="#1a2e1f" fill-opacity="0.75">(consejo, no exigencia)</text>
+
+  <rect x="580" y="684" width="440" height="160" rx="16" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15" stroke-width="2"/>
+  <circle cx="630" cy="734" r="26" fill="#b8733a"/>
+  <text x="630" y="743" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">2</text>
+  <text x="672" y="743" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Facturas del invierno</text>
+  <text x="672" y="782" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Del 1-11 al 31-3, sin huecos</text>
+  <text x="672" y="814" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Más de 75 kWh al mes de media</text>
+
+  <rect x="1070" y="684" width="440" height="160" rx="16" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15" stroke-width="2"/>
+  <circle cx="1120" cy="734" r="26" fill="#b8733a"/>
+  <text x="1120" y="743" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">3</text>
+  <text x="1162" y="743" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Factura de la obra</text>
+  <text x="1162" y="782" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Con número de serie</text>
+  <text x="1162" y="814" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">y fecha dentro del plazo</text>
+
+  <!-- ===== Franja del plazo ===== -->
+  <text x="90" y="900" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#1a2e1f">Plazo de las actuaciones con factor multiplicador (casa o piso)</text>
+  <rect x="90" y="914" width="1420" height="18" rx="9" fill="#22a044"/>
+  <circle cx="99" cy="923" r="13" fill="#1a2e1f"/>
+  <circle cx="777" cy="923" r="11" fill="#f5efe1" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="1501" cy="923" r="13" fill="#1a2e1f"/>
+  <text x="90" y="968" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="600" fill="#1a2e1f">22-3-2026: inicio</text>
+  <text x="777" y="968" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">15-1-2027: se abren los expedientes</text>
+  <text x="1510" y="968" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="600" fill="#1a2e1f">30-11-2027: fin</text>
+</svg>

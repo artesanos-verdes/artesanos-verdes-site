@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Qué hacer con el depósito de gasóleo al pasar a aerotermia: anularlo o mantenerlo en servicio</title>
+  <desc id="hero-desc">Infografía en dos columnas. Izquierda, si retiras la caldera: el tanque se anula según la instrucción técnica MI-IP 06; lo hace una empresa reparadora, que lo desgasifica y lo limpia, mide la atmósfera para comprobar que queda por debajo del 20 % del límite inferior de explosividad y, si el tanque está enterrado, lo rellena de material inerte, nunca con fluidos, o lo extrae; con las tuberías se sigue un procedimiento similar; la empresa reparadora emite un certificado y el titular presenta la documentación ante su comunidad autónoma. Derecha, si dejas la caldera solo para emergencias: el tanque sigue en servicio según la instrucción técnica MI-IP 03; la caldera queda en preinstalación, sin hibridar y solo para emergencias, como pide la ficha RES060_FM; el titular responde de su buen estado; si es de superficie y no requirió proyecto, se revisa cada 10 años; si está enterrado, el tanque y las tuberías pasan pruebas de estanquidad certificadas por un organismo de control; si un día deja de usarse, toca la anulación. Abajo: los depósitos de hasta 1.000 litros quedan fuera de la anulación de la MI-IP 06; pregunta a una empresa reparadora cómo vaciarlo y qué hacer con el gasóleo que quede.</desc>
+
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <text x="800" y="84" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">¿Qué hacer con el depósito de gasóleo?</text>
+  <text x="800" y="132" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">Al pasar a aerotermia, depende de lo que hagas con la caldera</text>
+  <line x1="70" y1="164" x2="1530" y2="164" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Columna 1: retiras la caldera -->
+  <rect x="70" y="194" width="700" height="630" rx="18" fill="#ffffff" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="86" y="210" width="668" height="72" rx="12" fill="#1a2e1f"/>
+  <text x="420" y="257" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#f5efe1">Retiras la caldera</text>
+  <text x="104" y="334" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">El tanque se anula (MI-IP 06)</text>
+  <circle cx="114" cy="364" r="6" fill="#22a044"/>
+  <text x="132" y="372" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Lo hace una empresa reparadora</text>
+  <circle cx="114" cy="400" r="6" fill="#22a044"/>
+  <text x="132" y="408" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Desgasifica y limpia el tanque</text>
+  <circle cx="114" cy="436" r="6" fill="#22a044"/>
+  <text x="132" y="444" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Mide la atmósfera: por debajo del 20 %</text>
+  <text x="132" y="472" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">del límite inferior de explosividad</text>
+  <circle cx="114" cy="500" r="6" fill="#22a044"/>
+  <text x="132" y="508" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Enterrado: se rellena de material inerte</text>
+  <text x="132" y="536" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">(nunca con fluidos) o se extrae</text>
+  <circle cx="114" cy="564" r="6" fill="#22a044"/>
+  <text x="132" y="572" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Tuberías: un procedimiento similar</text>
+  <circle cx="114" cy="600" r="6" fill="#22a044"/>
+  <text x="132" y="608" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Certificado de la empresa reparadora</text>
+  <rect x="86" y="682" width="668" height="122" rx="12" fill="#f5efe1"/>
+  <text x="420" y="730" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#1a2e1f">El titular presenta la documentación</text>
+  <text x="420" y="764" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">ante su comunidad autónoma</text>
+
+  <!-- Columna 2: la caldera se queda para emergencias -->
+  <rect x="830" y="194" width="700" height="630" rx="18" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
+  <rect x="846" y="210" width="668" height="72" rx="12" fill="#b8733a"/>
+  <text x="1180" y="257" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">Dejas la caldera para emergencias</text>
+  <text x="864" y="334" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">El tanque sigue en servicio (MI-IP 03)</text>
+  <circle cx="874" cy="364" r="6" fill="#b8733a"/>
+  <text x="892" y="372" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Caldera en preinstalación, sin hibridar,</text>
+  <text x="892" y="400" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">solo para emergencias (ficha RES060_FM)</text>
+  <circle cx="874" cy="428" r="6" fill="#b8733a"/>
+  <text x="892" y="436" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">El titular responde de su buen estado</text>
+  <circle cx="874" cy="464" r="6" fill="#b8733a"/>
+  <text x="892" y="472" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">De superficie, sin proyecto:</text>
+  <text x="892" y="500" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">revisión cada 10 años</text>
+  <circle cx="874" cy="528" r="6" fill="#b8733a"/>
+  <text x="892" y="536" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Enterrado: pruebas de estanquidad</text>
+  <text x="892" y="564" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">del tanque y de las tuberías, certificadas</text>
+  <text x="892" y="592" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">por un organismo de control</text>
+  <rect x="846" y="682" width="668" height="122" rx="12" fill="#b8733a"/>
+  <text x="1180" y="730" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#ffffff">Si un día deja de usarse:</text>
+  <text x="1180" y="764" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#ffffff">anulación, como en la otra columna</text>
+
+  <!-- Franja inferior: umbral de 1.000 litros -->
+  <rect x="70" y="852" width="1460" height="104" rx="16" fill="#1a2e1f"/>
+  <text x="800" y="894" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#f5efe1">Hasta 1.000 litros: fuera de la anulación de la MI-IP 06</text>
+  <text x="800" y="932" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#f5efe1">Pregunta a una empresa reparadora cómo vaciarlo y qué hacer con el gasóleo que quede</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Qué hacer con el gas al poner aerotermia: gas natural, propano en depósito o bombonas</title>
+  <desc id="hero-desc">Infografía en tres columnas con los tres puntos de partida. Gas natural de red: con baja total, se pide la baja a la comercializadora y lo del contador se consulta con la distribuidora; si solo queda la cocina, el contrato sigue y la instalación se inspecciona cada cinco años; en los dos casos, la caldera la desconecta un instalador, que emite un certificado. Propano en depósito: para retirarlo de servicio, una empresa instaladora lo inertiza o lo desgasifica y emite un certificado, del que se entrega copia a la comunidad autónoma; si la caldera se queda, siguen el contrato de mantenimiento, la revisión cada cinco años y la prueba de presión cada quince años; ojo: dos años sin consumo suponen el cese de actividad. Bombonas de butano o propano: la baja se pide en la agencia distribuidora, se devuelven los envases y la fianza sigue las condiciones del distribuidor; la cocina de butano puede quedarse, porque no forma parte de la sustitución de la caldera. Abajo: antes de dar de baja nada, descarga las facturas del invierno, del 1 de noviembre al 31 de marzo. Las calderas de gas natural, propano o butano pueden acogerse a la ficha RES060_FM si se cumplen sus requisitos.</desc>
+
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <text x="800" y="84" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">¿Qué hacer con el gas al poner aerotermia?</text>
+  <text x="800" y="132" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">La caldera cambia; el gas puede quedarse o irse</text>
+  <line x1="70" y1="164" x2="1530" y2="164" stroke="#22a044" stroke-opacity="0.35" stroke-width="2"/>
+
+  <!-- Columna 1: gas natural de red -->
+  <rect x="70" y="194" width="460" height="630" rx="18" fill="#ffffff" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="86" y="210" width="428" height="72" rx="12" fill="#1a2e1f"/>
+  <text x="300" y="257" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#f5efe1">Gas natural de red</text>
+  <text x="104" y="334" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">Baja total</text>
+  <circle cx="114" cy="364" r="6" fill="#22a044"/>
+  <text x="132" y="372" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Baja con la comercializadora</text>
+  <circle cx="114" cy="400" r="6" fill="#22a044"/>
+  <text x="132" y="408" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Contador: consulta</text>
+  <text x="132" y="436" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">a la distribuidora</text>
+  <text x="104" y="498" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">Solo para la cocina</text>
+  <circle cx="114" cy="528" r="6" fill="#22a044"/>
+  <text x="132" y="536" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">El contrato sigue</text>
+  <circle cx="114" cy="564" r="6" fill="#22a044"/>
+  <text x="132" y="572" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Inspección cada 5 años</text>
+  <rect x="86" y="682" width="428" height="122" rx="12" fill="#f5efe1"/>
+  <text x="300" y="730" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#1a2e1f">Al desconectar la caldera:</text>
+  <text x="300" y="764" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">instalador con certificado</text>
+
+  <!-- Columna 2: propano en depósito -->
+  <rect x="570" y="194" width="460" height="630" rx="18" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
+  <rect x="586" y="210" width="428" height="72" rx="12" fill="#b8733a"/>
+  <text x="800" y="257" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">Propano en depósito</text>
+  <text x="604" y="334" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">Retirarlo de servicio</text>
+  <circle cx="614" cy="364" r="6" fill="#b8733a"/>
+  <text x="632" y="372" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Inertizado o desgasificado</text>
+  <text x="632" y="400" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">por una empresa instaladora</text>
+  <circle cx="614" cy="428" r="6" fill="#b8733a"/>
+  <text x="632" y="436" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Certificado, con copia</text>
+  <text x="632" y="464" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">a la comunidad autónoma</text>
+  <text x="604" y="526" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">Si la caldera se queda</text>
+  <circle cx="614" cy="556" r="6" fill="#b8733a"/>
+  <text x="632" y="564" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Contrato de mantenimiento</text>
+  <circle cx="614" cy="592" r="6" fill="#b8733a"/>
+  <text x="632" y="600" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Revisión cada 5 años</text>
+  <circle cx="614" cy="628" r="6" fill="#b8733a"/>
+  <text x="632" y="636" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Prueba de presión cada 15 años</text>
+  <rect x="586" y="682" width="428" height="122" rx="12" fill="#b8733a"/>
+  <text x="800" y="730" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#ffffff">Ojo: 2 años sin consumo</text>
+  <text x="800" y="764" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#ffffff">= cese de actividad y retirada</text>
+
+  <!-- Columna 3: bombonas -->
+  <rect x="1070" y="194" width="460" height="630" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <rect x="1086" y="210" width="428" height="72" rx="12" fill="#22a044"/>
+  <text x="1300" y="257" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">Bombonas</text>
+  <text x="1104" y="334" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">La baja</text>
+  <circle cx="1114" cy="364" r="6" fill="#22a044"/>
+  <text x="1132" y="372" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">En la agencia distribuidora</text>
+  <circle cx="1114" cy="400" r="6" fill="#22a044"/>
+  <text x="1132" y="408" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Devuelves los envases</text>
+  <circle cx="1114" cy="436" r="6" fill="#22a044"/>
+  <text x="1132" y="444" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Fianza: según el distribuidor</text>
+  <text x="1104" y="526" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">La cocina de butano</text>
+  <circle cx="1114" cy="556" r="6" fill="#22a044"/>
+  <text x="1132" y="564" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Puede quedarse: no forma</text>
+  <text x="1132" y="592" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">parte de la sustitución</text>
+  <text x="1132" y="620" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">de la caldera</text>
+  <rect x="1086" y="682" width="428" height="122" rx="12" fill="#f5efe1"/>
+  <text x="1300" y="730" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#1a2e1f">Caldera con bombonas:</text>
+  <text x="1300" y="764" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">instalador con certificado</text>
+
+  <!-- Franja inferior -->
+  <rect x="70" y="852" width="1460" height="104" rx="16" fill="#1a2e1f"/>
+  <text x="800" y="894" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#f5efe1">Antes de dar de baja nada: descarga las facturas del invierno (1 de noviembre a 31 de marzo)</text>
+  <text x="800" y="932" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#f5efe1">Calderas de gas natural, propano o butano: ficha RES060_FM del sistema CAE, si se cumplen sus requisitos</text>
+</svg>

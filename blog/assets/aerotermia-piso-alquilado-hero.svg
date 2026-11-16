@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Caldera y aerotermia en un piso alquilado: quién hace qué</title>
+  <desc id="hero-desc">Tabla con dos columnas, arrendador e inquilino, y cuatro filas. Avería, artículo 21 de la Ley de Arrendamientos Urbanos: el arrendador paga la reparación necesaria sin subir la renta, salvo daño imputable al inquilino; el inquilino avisa por escrito y paga las pequeñas reparaciones por el desgaste del uso ordinario. Mejora, artículo 22: el arrendador avisa por escrito con tres meses de antelación, con la naturaleza, el comienzo, la duración y el coste previsible de la obra; el inquilino puede desistir en el mes siguiente, salvo que la obra no le afecte o le afecte de modo irrelevante, y, si se queda, tiene derecho a una rebaja proporcional de la renta y a la indemnización de los gastos. Renta, artículo 19: tras cinco años de contrato, o siete si el arrendador es persona jurídica, el arrendador puede subirla aplicando a lo invertido el interés legal del dinero más tres puntos; la subida tiene un tope del 20 % de la renta vigente y se notifica por escrito con los cálculos y los justificantes. CAE, ficha RES060_FM: cede el ahorro quien invierte en la obra; la vivienda habitual se acredita con el uso del invierno previo, del 1 de noviembre al 31 de marzo; coeficiente 2 en una casa y 2,5 en un piso con calefacción individual.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="84" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">Caldera y aerotermia en un piso alquilado</text>
+  <text x="800" y="130" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="600" fill="#22a044">Quién hace qué, según la Ley de Arrendamientos Urbanos y el sistema CAE</text>
+  <line x1="60" y1="156" x2="1540" y2="156" stroke="#1a2e1f" stroke-opacity="0.15" stroke-width="2"/>
+
+  <!-- Cabeceras de columna -->
+  <rect x="380" y="178" width="570" height="58" rx="12" fill="#1a2e1f"/>
+  <text x="665" y="217" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#f5efe1">Arrendador</text>
+  <rect x="970" y="178" width="570" height="58" rx="12" fill="#b8733a"/>
+  <text x="1255" y="217" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">Inquilino</text>
+
+  <!-- ===== Fila 1: Avería ===== -->
+  <rect x="60" y="252" width="300" height="148" rx="14" fill="#1a2e1f"/>
+  <text x="88" y="314" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#f5efe1">Avería</text>
+  <text x="88" y="354" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1" fill-opacity="0.85">Artículo 21 LAU</text>
+
+  <rect x="380" y="252" width="570" height="148" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12" stroke-width="2"/>
+  <text font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <tspan x="408" y="300">Paga la reparación necesaria, sin</tspan>
+    <tspan x="408" y="336">subir la renta, salvo daño imputable</tspan>
+    <tspan x="408" y="372">al inquilino</tspan>
+  </text>
+
+  <rect x="970" y="252" width="570" height="148" rx="14" fill="#ffffff" stroke="#b8733a" stroke-opacity="0.35" stroke-width="2"/>
+  <text font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <tspan x="998" y="300">Avisa por escrito y paga las</tspan>
+    <tspan x="998" y="336">pequeñas reparaciones por el</tspan>
+    <tspan x="998" y="372">desgaste del uso ordinario</tspan>
+  </text>
+
+  <!-- ===== Fila 2: Mejora ===== -->
+  <rect x="60" y="412" width="300" height="148" rx="14" fill="#1a2e1f"/>
+  <text x="88" y="474" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#f5efe1">Mejora</text>
+  <text x="88" y="514" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1" fill-opacity="0.85">Artículo 22 LAU</text>
+
+  <rect x="380" y="412" width="570" height="148" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12" stroke-width="2"/>
+  <text font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <tspan x="408" y="460">Avisa por escrito con 3 meses:</tspan>
+    <tspan x="408" y="496">naturaleza, comienzo, duración</tspan>
+    <tspan x="408" y="532">y coste previsible de la obra</tspan>
+  </text>
+
+  <rect x="970" y="412" width="570" height="148" rx="14" fill="#ffffff" stroke="#b8733a" stroke-opacity="0.35" stroke-width="2"/>
+  <text font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <tspan x="998" y="460">Puede desistir en 1 mes si la obra</tspan>
+    <tspan x="998" y="496">le afecta; si se queda, rebaja de</tspan>
+    <tspan x="998" y="532">renta e indemnización de gastos</tspan>
+  </text>
+
+  <!-- ===== Fila 3: Renta ===== -->
+  <rect x="60" y="572" width="300" height="148" rx="14" fill="#1a2e1f"/>
+  <text x="88" y="634" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#f5efe1">Renta</text>
+  <text x="88" y="674" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1" fill-opacity="0.85">Artículo 19 LAU</text>
+
+  <rect x="380" y="572" width="570" height="148" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12" stroke-width="2"/>
+  <text font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <tspan x="408" y="620">Tras 5 años de contrato (7 si es</tspan>
+    <tspan x="408" y="656">persona jurídica), puede subirla:</tspan>
+    <tspan x="408" y="692">interés legal + 3 puntos sobre lo invertido</tspan>
+  </text>
+
+  <rect x="970" y="572" width="570" height="148" rx="14" fill="#ffffff" stroke="#b8733a" stroke-opacity="0.35" stroke-width="2"/>
+  <text font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <tspan x="998" y="620">Tope: 20 % de la renta vigente,</tspan>
+    <tspan x="998" y="656">notificado por escrito con los</tspan>
+    <tspan x="998" y="692">cálculos y los justificantes</tspan>
+  </text>
+
+  <!-- ===== Fila 4: CAE ===== -->
+  <rect x="60" y="732" width="300" height="148" rx="14" fill="#22a044"/>
+  <text x="88" y="794" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">CAE</text>
+  <text x="88" y="834" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#ffffff">Ficha RES060_FM</text>
+
+  <rect x="380" y="732" width="1160" height="148" rx="14" fill="#ffffff" stroke="#22a044" stroke-opacity="0.5" stroke-width="2"/>
+  <text font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">
+    <tspan x="408" y="780" font-weight="700">Cede el ahorro quien invierte en la obra.</tspan>
+    <tspan x="408" y="816">Vivienda habitual: uso del invierno previo, del 1 de noviembre al 31 de marzo.</tspan>
+    <tspan x="408" y="852">Coeficiente 2 en una casa y 2,5 en un piso con calefacción individual.</tspan>
+  </text>
+
+  <!-- Nota -->
+  <text x="800" y="934" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f" fill-opacity="0.75">Resumen orientativo de los artículos 19, 21 y 22 de la LAU y de la ficha RES060_FM (BOE de 7 de noviembre de 2026)</text>
+</svg>

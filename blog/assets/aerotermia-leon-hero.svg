@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Aerotermia en León: una casa de gasóleo antes y después del cambio de caldera</title>
+  <desc id="hero-desc">Infografía en dos paneles con la misma casa en sección. Antes: caldera de gasóleo, con el año y el tipo en su placa; depósito de gasóleo que alimenta la caldera; radiadores de agua calentados por la caldera; desván sin aislar sobre la última planta, y humo en la chimenea. Después, con una bomba de calor aire-agua y la ficha RES060_FM del sistema CAE: la bomba cubre la calefacción y el agua caliente sanitaria; lleva un sistema de seguridad para las heladas, porque la zona es E; la caldera se retira o queda solo para emergencias; el depósito que queda sin uso se anula cuando lo exige la instrucción técnica MI-IP 06; y el desván se aísla si el certificado energético es F o G. Abajo, una franja indica que toda la provincia de León es zona climática E1 a cualquier altitud, según el Anejo B del Documento Básico HE del Código Técnico de la Edificación, con tres puntos: Ponferrada, Astorga y León. El coeficiente de la ficha es 2 en una casa que es vivienda habitual.</desc>
+
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <text x="800" y="122" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="46" font-weight="700" fill="#1a2e1f">Aerotermia en León: tu casa de gasóleo, antes y después</text>
+  <text x="800" y="168" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">Bomba de calor aire-agua con el sistema CAE: ficha RES060_FM, coeficiente 2 si es tu vivienda habitual</text>
+  <line x1="60" y1="196" x2="1540" y2="196" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- ===== Panel Antes ===== -->
+  <rect x="60" y="216" width="710" height="560" rx="18" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <rect x="88" y="236" width="130" height="42" rx="21" fill="#b8733a"/>
+  <text x="153" y="265" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Antes</text>
+
+  <!-- humo y chimenea -->
+  <circle cx="273" cy="334" r="8" fill="#d8cfbd"/>
+  <circle cx="283" cy="313" r="10" fill="#d8cfbd"/>
+  <circle cx="297" cy="291" r="12" fill="#d8cfbd"/>
+  <rect x="262" y="352" width="22" height="60" fill="#e8dcc4" stroke="#1a2e1f" stroke-width="3"/>
+  <!-- tejado y desván -->
+  <polygon points="74,450 202,338 330,450" fill="#e8dcc4" stroke="#1a2e1f" stroke-width="4" stroke-linejoin="round"/>
+  <!-- muros -->
+  <rect x="92" y="446" width="220" height="270" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <!-- terreno y depósito enterrado -->
+  <rect x="64" y="716" width="288" height="50" fill="#e8dcc4"/>
+  <line x1="64" y1="716" x2="352" y2="716" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="104" y="727" width="124" height="30" rx="15" fill="#ffffff" stroke="#1a2e1f" stroke-width="3"/>
+  <!-- caldera con placa y llama -->
+  <rect x="110" y="592" width="58" height="116" rx="6" fill="#f5efe1" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="119" y="606" width="40" height="20" rx="3" fill="#ffffff" stroke="#b8733a" stroke-width="2"/>
+  <path d="M139,700 C127,692 129,680 135,672 C136,680 141,682 141,676 C141,668 146,662 150,658 C149,668 155,674 153,686 C152,694 146,700 139,700 Z" fill="#b8733a"/>
+  <!-- tubería y radiador -->
+  <line x1="168" y1="676" x2="206" y2="676" stroke="#1a2e1f" stroke-width="3"/>
+  <g fill="#ffffff" stroke="#1a2e1f" stroke-width="2.5">
+    <rect x="206" y="646" width="11" height="52" rx="4"/>
+    <rect x="222" y="646" width="11" height="52" rx="4"/>
+    <rect x="238" y="646" width="11" height="52" rx="4"/>
+    <rect x="254" y="646" width="11" height="52" rx="4"/>
+    <rect x="270" y="646" width="11" height="52" rx="4"/>
+    <rect x="286" y="646" width="11" height="52" rx="4"/>
+  </g>
+  <!-- marcadores -->
+  <g font-family="'Source Sans 3', Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <circle cx="139" cy="566" r="15" fill="#b8733a"/><text x="139" y="573">1</text>
+    <circle cx="252" cy="742" r="15" fill="#b8733a"/><text x="252" y="749">2</text>
+    <circle cx="252" cy="620" r="15" fill="#b8733a"/><text x="252" y="627">3</text>
+    <circle cx="202" cy="414" r="15" fill="#b8733a"/><text x="202" y="421">4</text>
+  </g>
+  <!-- leyenda Antes -->
+  <g font-family="'Source Sans 3', Arial, sans-serif" fill="#1a2e1f">
+    <circle cx="392" cy="308" r="15" fill="#b8733a"/><text x="392" y="315" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">1</text>
+    <text x="418" y="316" font-size="25" font-weight="700">Caldera de gasóleo</text>
+    <text x="418" y="346" font-size="21">año y tipo, en su placa</text>
+    <circle cx="392" cy="410" r="15" fill="#b8733a"/><text x="392" y="417" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">2</text>
+    <text x="418" y="418" font-size="25" font-weight="700">Depósito de gasóleo</text>
+    <text x="418" y="448" font-size="21">que alimenta la caldera</text>
+    <circle cx="392" cy="512" r="15" fill="#b8733a"/><text x="392" y="519" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">3</text>
+    <text x="418" y="520" font-size="25" font-weight="700">Radiadores de agua</text>
+    <text x="418" y="550" font-size="21">calentados por la caldera</text>
+    <circle cx="392" cy="614" r="15" fill="#b8733a"/><text x="392" y="621" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">4</text>
+    <text x="418" y="622" font-size="25" font-weight="700">Desván sin aislar</text>
+    <text x="418" y="652" font-size="21">sobre la última planta</text>
+  </g>
+
+  <!-- flecha -->
+  <circle cx="800" cy="496" r="24" fill="#1a2e1f"/>
+  <path d="M787,496 H811 M801,485 L812,496 L801,507" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ===== Panel Después ===== -->
+  <rect x="830" y="216" width="710" height="560" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <rect x="858" y="236" width="160" height="42" rx="21" fill="#22a044"/>
+  <text x="938" y="265" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Después</text>
+
+  <!-- chimenea sin humo -->
+  <rect x="1032" y="352" width="22" height="60" fill="#e8dcc4" stroke="#1a2e1f" stroke-width="3"/>
+  <!-- tejado -->
+  <polygon points="844,450 972,338 1100,450" fill="#e8dcc4" stroke="#1a2e1f" stroke-width="4" stroke-linejoin="round"/>
+  <!-- aislamiento sobre el suelo del desván -->
+  <rect x="876" y="426" width="192" height="18" rx="4" fill="#b8733a"/>
+  <polyline points="882,440 892,430 902,440 912,430 922,440 932,430 942,440 952,430 962,440 972,430 982,440 992,430 1002,440 1012,430 1022,440 1032,430 1042,440 1052,430 1062,440" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <!-- muros -->
+  <rect x="862" y="446" width="220" height="270" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <!-- terreno y depósito anulado -->
+  <rect x="834" y="716" width="356" height="50" fill="#e8dcc4"/>
+  <line x1="834" y1="716" x2="1190" y2="716" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="874" y="727" width="124" height="30" rx="15" fill="none" stroke="#1a2e1f" stroke-width="3" stroke-dasharray="7 5" opacity="0.6"/>
+  <!-- caldera retirada o en preinstalación -->
+  <rect x="880" y="592" width="58" height="116" rx="6" fill="none" stroke="#1a2e1f" stroke-width="3" stroke-dasharray="8 6" opacity="0.55"/>
+  <!-- módulo hidráulico con sistema de seguridad -->
+  <rect x="956" y="562" width="40" height="64" rx="5" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <polyline points="976,570 966,578 986,586 966,594 986,602 966,610 976,618" fill="none" stroke="#b8733a" stroke-width="3" stroke-linejoin="round"/>
+  <!-- tuberías y radiador -->
+  <polyline points="976,626 976,680 1010,680" fill="none" stroke="#1a2e1f" stroke-width="3"/>
+  <polyline points="996,590 1138,590 1138,636" fill="none" stroke="#1a2e1f" stroke-width="3"/>
+  <g fill="#ffffff" stroke="#1a2e1f" stroke-width="2.5">
+    <rect x="1010" y="650" width="11" height="52" rx="4"/>
+    <rect x="1026" y="650" width="11" height="52" rx="4"/>
+    <rect x="1042" y="650" width="11" height="52" rx="4"/>
+    <rect x="1058" y="650" width="11" height="52" rx="4"/>
+  </g>
+  <!-- unidad exterior de la bomba de calor -->
+  <rect x="1094" y="636" width="88" height="78" rx="8" fill="#ffffff" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="1128" cy="675" r="25" fill="none" stroke="#22a044" stroke-width="4"/>
+  <circle cx="1128" cy="675" r="5" fill="#22a044"/>
+  <path d="M1128,675 L1128,655 M1128,675 L1145,685 M1128,675 L1111,685" stroke="#22a044" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1164" y1="650" x2="1164" y2="700" stroke="#1a2e1f" stroke-width="2"/>
+  <line x1="1171" y1="650" x2="1171" y2="700" stroke="#1a2e1f" stroke-width="2"/>
+  <!-- marcadores -->
+  <g font-family="'Source Sans 3', Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <circle cx="1178" cy="610" r="15" fill="#22a044"/><text x="1178" y="617">1</text>
+    <circle cx="976" cy="536" r="15" fill="#22a044"/><text x="976" y="543">2</text>
+    <circle cx="909" cy="566" r="15" fill="#22a044"/><text x="909" y="573">3</text>
+    <circle cx="1022" cy="742" r="15" fill="#22a044"/><text x="1022" y="749">4</text>
+    <circle cx="972" cy="398" r="15" fill="#22a044"/><text x="972" y="405">5</text>
+  </g>
+  <!-- leyenda Después -->
+  <g font-family="'Source Sans 3', Arial, sans-serif" fill="#1a2e1f">
+    <circle cx="1228" cy="292" r="15" fill="#22a044"/><text x="1228" y="299" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">1</text>
+    <text x="1254" y="300" font-size="24" font-weight="700">Bomba aire-agua</text>
+    <text x="1254" y="328" font-size="20">calefacción y ACS</text>
+    <circle cx="1228" cy="384" r="15" fill="#22a044"/><text x="1228" y="391" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">2</text>
+    <text x="1254" y="392" font-size="24" font-weight="700">Sistema de seguridad</text>
+    <text x="1254" y="420" font-size="20">para las heladas (zona E)</text>
+    <circle cx="1228" cy="476" r="15" fill="#22a044"/><text x="1228" y="483" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">3</text>
+    <text x="1254" y="484" font-size="24" font-weight="700">Caldera retirada</text>
+    <text x="1254" y="512" font-size="20">o solo para emergencias</text>
+    <circle cx="1228" cy="568" r="15" fill="#22a044"/><text x="1228" y="575" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">4</text>
+    <text x="1254" y="576" font-size="24" font-weight="700">Depósito sin uso</text>
+    <text x="1254" y="604" font-size="20">anulación, si procede</text>
+    <circle cx="1228" cy="660" r="15" fill="#22a044"/><text x="1228" y="667" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">5</text>
+    <text x="1254" y="668" font-size="24" font-weight="700">Desván aislado</text>
+    <text x="1254" y="696" font-size="20">si el certificado es F o G</text>
+  </g>
+
+  <!-- ===== Franja: toda la provincia en zona E1 ===== -->
+  <rect x="60" y="796" width="1480" height="96" rx="20" fill="#1a2e1f"/>
+  <text x="96" y="838" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#f5efe1">Toda la provincia de León es zona E1</text>
+  <text x="96" y="873" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#f5efe1">A cualquier altitud, según el Anejo B del DB-HE del CTE</text>
+  <rect x="860" y="814" width="652" height="60" rx="30" fill="#22a044"/>
+  <text x="896" y="855" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">E1</text>
+  <g font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#ffffff">
+    <circle cx="1000" cy="844" r="9" fill="#f5efe1"/><text x="1018" y="852">Ponferrada</text>
+    <circle cx="1200" cy="844" r="9" fill="#f5efe1"/><text x="1218" y="852">Astorga</text>
+    <circle cx="1380" cy="844" r="9" fill="#f5efe1"/><text x="1398" y="852">León</text>
+  </g>
+
+  <text x="800" y="948" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="19" fill="#1a2e1f">Fuentes: CTE DB-HE, Anejo B · Resolución de 3 de noviembre de 2026 (BOE de 7 de noviembre), ficha RES060_FM · ITC MI-IP 06 (Real Decreto 1416/2006)</text>
+</svg>

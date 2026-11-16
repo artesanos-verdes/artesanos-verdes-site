@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">El ruido de la aerotermia: de dónde sale, qué dato mirar y dónde poner la unidad exterior</title>
+  <desc id="hero-desc">Infografía en tres columnas. A la izquierda, la unidad exterior de una aerotermia con sus dos principales fuentes de ruido, el ventilador y el compresor, montada sobre soportes antivibratorios y con el agua de desescarche conducida a un desagüe. En el centro, la etiqueta energética del equipo, que indica el nivel de potencia acústica LWA en el exterior y, si procede, en el interior, en dB: es lo que emite el equipo, no lo que oyes. A la derecha, cuatro buenas prácticas de ubicación: lejos de los dormitorios de los vecinos, sobre soportes antivibratorios, con modo nocturno silencioso si el equipo lo tiene y con el agua de desescarche conducida a un desagüe. Abajo: los límites los fija sobre todo la ordenanza de tu municipio, dentro de la Ley 37/2003, del Ruido.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="84" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="46" font-weight="700" fill="#1a2e1f">El ruido de la aerotermia</text>
+  <text x="800" y="130" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">De dónde sale, qué dato mirar y dónde poner la unidad exterior</text>
+  <line x1="60" y1="160" x2="1540" y2="160" stroke="#22a044" stroke-width="2"/>
+
+  <!-- Cabeceras de columna -->
+  <circle cx="84" cy="206" r="22" fill="#22a044"/>
+  <text x="84" y="215" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">1</text>
+  <text x="118" y="216" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">De dónde sale el ruido</text>
+
+  <circle cx="684" cy="206" r="22" fill="#22a044"/>
+  <text x="684" y="215" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">2</text>
+  <text x="718" y="216" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Qué dato mirar</text>
+
+  <circle cx="1144" cy="206" r="22" fill="#22a044"/>
+  <text x="1144" y="215" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">3</text>
+  <text x="1178" y="216" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Dónde ponerla</text>
+
+  <!-- Tarjetas -->
+  <rect x="60" y="240" width="560" height="620" rx="18" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <rect x="660" y="240" width="420" height="620" rx="18" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <rect x="1120" y="240" width="420" height="620" rx="18" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- 1. Unidad exterior -->
+  <text x="120" y="300" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Ventilador</text>
+  <text x="392" y="300" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#b8733a">Compresor</text>
+
+  <rect x="120" y="340" width="420" height="270" rx="16" fill="#f5efe1" stroke="#1a2e1f" stroke-width="4"/>
+  <rect x="114" y="330" width="432" height="16" rx="6" fill="#1a2e1f"/>
+
+  <!-- Ventilador -->
+  <circle cx="255" cy="475" r="105" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="255" cy="475" r="84" fill="none" stroke="#c1d9cc" stroke-width="2"/>
+  <circle cx="255" cy="475" r="60" fill="none" stroke="#c1d9cc" stroke-width="2"/>
+  <g fill="#22a044">
+    <path d="M255 475 C263 432 298 414 318 436 C304 462 280 474 255 475 Z"/>
+    <path d="M255 475 C263 432 298 414 318 436 C304 462 280 474 255 475 Z" transform="rotate(90 255 475)"/>
+    <path d="M255 475 C263 432 298 414 318 436 C304 462 280 474 255 475 Z" transform="rotate(180 255 475)"/>
+    <path d="M255 475 C263 432 298 414 318 436 C304 462 280 474 255 475 Z" transform="rotate(270 255 475)"/>
+  </g>
+  <circle cx="255" cy="475" r="18" fill="#1a2e1f"/>
+
+  <!-- Compresor (vista en corte) -->
+  <rect x="390" y="362" width="130" height="228" rx="10" fill="#ffffff" stroke="#1a2e1f" stroke-width="2" stroke-dasharray="8 6"/>
+  <path d="M440 430 V398 H404" fill="none" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 430 V386 H508" fill="none" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="420" y="440" width="70" height="130" rx="26" fill="#b8733a"/>
+  <ellipse cx="455" cy="442" rx="35" ry="14" fill="#8f5a2c"/>
+
+  <!-- Líneas de referencia -->
+  <line x1="190" y1="308" x2="236" y2="368" stroke="#1a2e1f" stroke-width="2"/>
+  <circle cx="236" cy="368" r="4" fill="#1a2e1f"/>
+  <line x1="455" y1="308" x2="455" y2="424" stroke="#b8733a" stroke-width="2"/>
+  <circle cx="455" cy="426" r="4" fill="#b8733a"/>
+
+  <!-- Ondas de sonido -->
+  <g fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round">
+    <path d="M566.0 462.4 A22 22 0 0 1 566.0 487.6"/>
+    <path d="M580.8 452.1 A40 40 0 0 1 580.8 497.9"/>
+    <path d="M595.5 441.7 A58 58 0 0 1 595.5 508.3"/>
+  </g>
+
+  <!-- Soportes antivibratorios -->
+  <rect x="165" y="610" width="70" height="20" rx="4" fill="#1a2e1f"/>
+  <rect x="425" y="610" width="70" height="20" rx="4" fill="#1a2e1f"/>
+  <g fill="none" stroke="#f5efe1" stroke-width="2">
+    <path d="M171 620 q5 -5 10 0 t10 0 t10 0 t10 0 t10 0 t10 0"/>
+    <path d="M431 620 q5 -5 10 0 t10 0 t10 0 t10 0 t10 0 t10 0"/>
+  </g>
+  <rect x="100" y="630" width="440" height="12" rx="3" fill="#c1d9cc"/>
+  <line x1="200" y1="664" x2="200" y2="634" stroke="#1a2e1f" stroke-width="2"/>
+  <text x="100" y="692" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Soportes antivibratorios</text>
+
+  <!-- Agua de desescarche -->
+  <path d="M540 596 H566 V688" fill="none" stroke="#1a2e1f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M566 698 C561 706 559 710 559 714 C559 718 562 721 566 721 C570 721 573 718 573 714 C573 710 571 706 566 698 Z" fill="#22a044"/>
+  <rect x="540" y="734" width="52" height="14" rx="3" fill="#1a2e1f"/>
+  <g stroke="#f5efe1" stroke-width="2">
+    <line x1="552" y1="737" x2="552" y2="745"/>
+    <line x1="562" y1="737" x2="562" y2="745"/>
+    <line x1="572" y1="737" x2="572" y2="745"/>
+    <line x1="582" y1="737" x2="582" y2="745"/>
+  </g>
+  <text x="600" y="790" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Agua de desescarche</text>
+  <text x="600" y="820" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">a un desagüe</text>
+
+  <!-- 2. Etiqueta energética -->
+  <rect x="700" y="262" width="340" height="410" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="700" y="262" width="340" height="52" rx="14" fill="#1a2e1f"/>
+  <rect x="700" y="296" width="340" height="18" fill="#1a2e1f"/>
+  <text x="870" y="298" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#f5efe1">Etiqueta energética</text>
+
+  <polygon points="724,334 834,334 844,344 834,354 724,354" fill="#1f8f3d"/>
+  <polygon points="724,360 864,360 874,370 864,380 724,380" fill="#22a044"/>
+  <polygon points="724,386 894,386 904,396 894,406 724,406" fill="#7cbf5a"/>
+  <polygon points="724,412 924,412 934,422 924,432 724,432" fill="#d29a5c"/>
+  <polygon points="724,438 954,438 964,448 954,458 724,458" fill="#b8733a"/>
+
+  <line x1="720" y1="478" x2="1020" y2="478" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="724" y="510" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#1a2e1f">Potencia acústica LWA</text>
+
+  <g transform="translate(724 546)">
+    <path d="M0 -9 H9 L21 -19 V19 L9 9 H0 Z" fill="#1a2e1f"/>
+    <path d="M28 -8 Q34 0 28 8" fill="none" stroke="#1a2e1f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M33 -15 Q43 0 33 15" fill="none" stroke="#1a2e1f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="784" y="555" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Interior*</text>
+  <text x="1016" y="556" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">xx dB</text>
+
+  <rect x="712" y="580" width="316" height="60" rx="10" fill="#f5efe1" stroke="#b8733a" stroke-width="3"/>
+  <g transform="translate(724 610)">
+    <path d="M0 -9 H9 L21 -19 V19 L9 9 H0 Z" fill="#b8733a"/>
+    <path d="M28 -8 Q34 0 28 8" fill="none" stroke="#b8733a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M33 -15 Q43 0 33 15" fill="none" stroke="#b8733a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="784" y="619" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#1a2e1f">Exterior</text>
+  <text x="1016" y="620" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#b8733a">xx dB</text>
+
+  <text x="700" y="712" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">* Si procede</text>
+  <text x="870" y="772" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#b8733a">Lo que emite el equipo,</text>
+  <text x="870" y="804" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#b8733a">no lo que oyes</text>
+
+  <!-- 3. Buenas prácticas -->
+  <g stroke="#ece5d3" stroke-width="2">
+    <line x1="1144" y1="387" x2="1516" y2="387"/>
+    <line x1="1144" y1="537" x2="1516" y2="537"/>
+    <line x1="1144" y1="687" x2="1516" y2="687"/>
+  </g>
+
+  <!-- Dormitorio -->
+  <circle cx="1170" cy="312" r="30" fill="#22a044"/>
+  <g fill="#ffffff">
+    <rect x="1151" y="300" width="5" height="26" rx="1"/>
+    <rect x="1156" y="312" width="34" height="8" rx="2"/>
+    <rect x="1159" y="304" width="11" height="7" rx="2"/>
+    <rect x="1186" y="318" width="4" height="8" rx="1"/>
+  </g>
+  <text x="1218" y="306" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">Lejos de dormitorios</text>
+  <text x="1218" y="338" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">de los vecinos</text>
+
+  <!-- Soportes -->
+  <circle cx="1170" cy="462" r="30" fill="#22a044"/>
+  <g fill="#ffffff">
+    <rect x="1154" y="444" width="32" height="20" rx="3"/>
+    <rect x="1157" y="467" width="9" height="6" rx="1"/>
+    <rect x="1174" y="467" width="9" height="6" rx="1"/>
+    <rect x="1150" y="475" width="40" height="3" rx="1"/>
+  </g>
+  <text x="1218" y="456" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">Soportes</text>
+  <text x="1218" y="488" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">antivibratorios</text>
+
+  <!-- Modo nocturno -->
+  <circle cx="1170" cy="612" r="30" fill="#22a044"/>
+  <circle cx="1166" cy="613" r="16" fill="#ffffff"/>
+  <circle cx="1174" cy="606" r="14" fill="#22a044"/>
+  <text x="1218" y="606" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">Modo nocturno</text>
+  <text x="1218" y="638" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">silencioso, si lo tiene</text>
+
+  <!-- Agua de desescarche -->
+  <circle cx="1170" cy="762" r="30" fill="#22a044"/>
+  <path d="M1170 744 C1162 756 1158 763 1158 769 C1158 776 1163 781 1170 781 C1177 781 1182 776 1182 769 C1182 763 1178 756 1170 744 Z" fill="#ffffff"/>
+  <text x="1218" y="756" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">Agua de desescarche</text>
+  <text x="1218" y="788" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">conducida a un desagüe</text>
+
+  <!-- Banda inferior -->
+  <rect x="60" y="890" width="1480" height="70" rx="14" fill="#1a2e1f"/>
+  <text x="800" y="934" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#f5efe1">Límites: los fija sobre todo la ordenanza de tu municipio, dentro de la Ley 37/2003, del Ruido</text>
+</svg>
