@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Bonificación del IBI y del ICIO por aerotermia: de la ley a tu ayuntamiento</title>
+  <desc id="hero-desc">Infografía en tres pasos. Uno, la ley: el Real Decreto-ley 7/2026, en vigor desde el 22 de marzo de 2026, permite bonificar hasta el 50 % de la cuota íntegra del IBI y hasta el 95 % del ICIO por sistemas de energía ambiente, como la aerotermia, si la instalación está homologada. Dos, tu ayuntamiento: sus ordenanzas fiscales del IBI y del ICIO deciden si la aplica, el porcentaje, los años que dura, los requisitos y el plazo, y deben estar publicadas en el boletín oficial; sin ordenanza no hay bonificación. Tres, tu solicitud: la pide el titular del inmueble en el IBI y el dueño de la obra en el ICIO, con los papeles de la instalación y en el plazo de la ordenanza. Abajo, un recuadro: este beneficio fiscal municipal es distinto del CAE, que es financiación privada a cambio del ahorro de energía que cedes.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="96" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="54" font-weight="700" fill="#1a2e1f">Bonificación del IBI y del ICIO por aerotermia</text>
+  <text x="800" y="146" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">Del Real Decreto-ley 7/2026 a tu recibo: quién decide qué</text>
+  <line x1="72" y1="180" x2="1528" y2="180" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Tarjeta 1: la ley -->
+  <rect x="72" y="214" width="432" height="520" rx="20" fill="#ffffff" stroke="#d8ccb0" stroke-width="2"/>
+  <rect x="72" y="214" width="432" height="84" rx="20" fill="#1a2e1f"/>
+  <rect x="72" y="270" width="432" height="28" fill="#1a2e1f"/>
+  <text x="288" y="268" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="31" font-weight="600" fill="#f5efe1">1 · La ley</text>
+  <text x="288" y="346" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">Real Decreto-ley 7/2026</text>
+  <text x="288" y="380" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">en vigor desde el 22-3-2026</text>
+  <text x="288" y="470" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="80" font-weight="700" fill="#22a044">50 %</text>
+  <text x="288" y="506" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">del IBI, como máximo</text>
+  <text x="288" y="588" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="80" font-weight="700" fill="#22a044">95 %</text>
+  <text x="288" y="624" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">del ICIO, como máximo</text>
+  <line x1="120" y1="648" x2="456" y2="648" stroke="#d8ccb0" stroke-width="2"/>
+  <text x="288" y="684" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="600" fill="#b8733a">Energía ambiente (aerotermia)</text>
+  <text x="288" y="714" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="600" fill="#b8733a">Instalación homologada</text>
+
+  <!-- Flecha 1 -->
+  <line x1="514" y1="474" x2="562" y2="474" stroke="#22a044" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="560,460 578,474 560,488" fill="#22a044"/>
+
+  <!-- Tarjeta 2: tu ayuntamiento -->
+  <rect x="584" y="214" width="432" height="520" rx="20" fill="#ffffff" stroke="#d8ccb0" stroke-width="2"/>
+  <rect x="584" y="214" width="432" height="84" rx="20" fill="#1a2e1f"/>
+  <rect x="584" y="270" width="432" height="28" fill="#1a2e1f"/>
+  <text x="800" y="268" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="31" font-weight="600" fill="#f5efe1">2 · Tu ayuntamiento</text>
+  <text x="800" y="346" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">Ordenanza fiscal</text>
+  <text x="800" y="380" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">del IBI y del ICIO</text>
+
+  <g font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">
+    <rect x="632" y="420" width="26" height="26" rx="6" fill="#22a044"/>
+    <polyline points="638,433 644,440 653,427" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="676" y="442">Si la aplica o no</text>
+    <rect x="632" y="472" width="26" height="26" rx="6" fill="#22a044"/>
+    <polyline points="638,485 644,492 653,479" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="676" y="494">Porcentaje</text>
+    <rect x="632" y="524" width="26" height="26" rx="6" fill="#22a044"/>
+    <polyline points="638,537 644,544 653,531" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="676" y="546">Años que dura</text>
+    <rect x="632" y="576" width="26" height="26" rx="6" fill="#22a044"/>
+    <polyline points="638,589 644,596 653,583" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="676" y="598">Requisitos y plazo</text>
+  </g>
+  <line x1="632" y1="648" x2="968" y2="648" stroke="#d8ccb0" stroke-width="2"/>
+  <text x="800" y="684" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="600" fill="#b8733a">Publicada en el boletín oficial</text>
+  <text x="800" y="714" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="600" fill="#b8733a">Sin ordenanza, no hay bonificación</text>
+
+  <!-- Flecha 2 -->
+  <line x1="1026" y1="474" x2="1074" y2="474" stroke="#22a044" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="1072,460 1090,474 1072,488" fill="#22a044"/>
+
+  <!-- Tarjeta 3: tu solicitud -->
+  <rect x="1096" y="214" width="432" height="520" rx="20" fill="#ffffff" stroke="#d8ccb0" stroke-width="2"/>
+  <rect x="1096" y="214" width="432" height="84" rx="20" fill="#1a2e1f"/>
+  <rect x="1096" y="270" width="432" height="28" fill="#1a2e1f"/>
+  <text x="1312" y="268" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="31" font-weight="600" fill="#f5efe1">3 · Tu solicitud</text>
+  <!-- Icono: solicitud con sello -->
+  <path d="M1268 340 H1342 L1370 368 V458 H1268 Z" fill="#f5efe1" stroke="#1a2e1f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M1342 340 V368 H1370" fill="none" stroke="#1a2e1f" stroke-width="4" stroke-linejoin="round"/>
+  <line x1="1286" y1="386" x2="1334" y2="386" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1286" y1="408" x2="1350" y2="408" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1286" y1="430" x2="1326" y2="430" stroke="#1a2e1f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="1370" cy="446" r="24" fill="#22a044"/>
+  <polyline points="1359,446 1367,454 1382,438" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1312" y="518" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">La pides tú</text>
+  <text x="1312" y="558" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">IBI: el titular del inmueble</text>
+  <text x="1312" y="592" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">ICIO: el dueño de la obra</text>
+  <line x1="1144" y1="648" x2="1480" y2="648" stroke="#d8ccb0" stroke-width="2"/>
+  <text x="1312" y="684" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="600" fill="#b8733a">Con los papeles de la instalación</text>
+  <text x="1312" y="714" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="600" fill="#b8733a">En el plazo de la ordenanza</text>
+
+  <!-- Recuadro: beneficio fiscal municipal ≠ CAE -->
+  <rect x="72" y="772" width="1456" height="164" rx="20" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
+  <text x="800" y="832" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="38" font-weight="700" fill="#1a2e1f">Beneficio fiscal municipal ≠ CAE (financiación privada)</text>
+  <text x="800" y="876" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">La bonificación rebaja impuestos municipales.</text>
+  <text x="800" y="912" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">Con el CAE cedes el ahorro de energía a cambio de financiación privada.</text>
+</svg>

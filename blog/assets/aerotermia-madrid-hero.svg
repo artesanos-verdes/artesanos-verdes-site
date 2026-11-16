@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Tu edificio en Madrid: tres caminos para cambiar la caldera por aerotermia con el sistema CAE</title>
+  <desc id="hero-desc">Tres edificios de viviendas, cada uno con su coeficiente del sistema CAE. Primero: en un edificio con calderas individuales, un piso cambia su caldera de gas por una bomba de calor propia, coeficiente 2,5 si es vivienda habitual (ficha RES060_FM). Segundo: un edificio con calefacción central sustituye la caldera central por bombas de calor en la cubierta y sigue con calefacción central, coeficiente 3 (ficha RES060_FM). Tercero: un edificio en el que cada piso tenía su caldera pasa a una bomba de calor central, coeficiente 4 (ficha RES062_FM). Notas al pie: coeficientes de la Resolución de 3 de noviembre de 2026, publicada en el BOE el 7 de noviembre; pasar de calefacción central a bombas individuales no tiene coeficiente; en una casa unifamiliar que es vivienda habitual, el coeficiente es 2. Un recuadro con montañas indica que la sierra, por encima de 1.000 m de altitud, es zona climática E1, y Madrid capital, D3.</desc>
+
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <text x="800" y="80" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="56" font-weight="700" fill="#1a2e1f">Tu edificio en Madrid: tres caminos</text>
+  <text x="800" y="126" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">Cambiar la caldera de gas o gasóleo por aerotermia, con el sistema CAE</text>
+
+  <rect x="80" y="654" width="1440" height="8" rx="3" fill="#1a2e1f"/>
+
+  <!-- 1. Piso con caldera individual: ×2,5 -->
+  <circle cx="300" cy="214" r="54" fill="#22a044"/>
+  <text x="300" y="229" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="42" font-weight="700" fill="#ffffff">×2,5</text>
+  <rect x="170" y="334" width="260" height="320" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+  <rect x="173" y="401" width="254" height="58" fill="#e3f1e7"/>
+  <rect x="158" y="322" width="284" height="12" rx="3" fill="#1a2e1f"/>
+  <path d="M170 398 H430 M170 462 H430 M170 526 H430 M170 590 H430" stroke="#1a2e1f" stroke-width="4" fill="none"/>
+  <g fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3">
+    <rect x="276" y="348" width="50" height="36" rx="3"/>
+    <rect x="276" y="412" width="50" height="36" rx="3"/>
+    <rect x="276" y="476" width="50" height="36" rx="3"/>
+    <rect x="276" y="540" width="50" height="36" rx="3"/>
+    <rect x="276" y="600" width="50" height="54"/>
+  </g>
+  <rect x="362" y="344" width="38" height="46" rx="5" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <path d="M381 382 c-7 0 -12 -5 -10 -12 c1 -5 5 -8 6 -13 c4 3 5 7 4 10 c3 -2 5 -6 4 -11 c6 5 8 10 8 16 c0 6 -5 10 -12 10 z" fill="#b8733a"/>
+  <rect x="190" y="416" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M206 421 V441 M222 421 V441 M238 421 V441" stroke="#22a044" stroke-width="3"/>
+  <rect x="362" y="408" width="38" height="46" rx="5" fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="8 6"/>
+  <rect x="362" y="472" width="38" height="46" rx="5" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <path d="M381 510 c-7 0 -12 -5 -10 -12 c1 -5 5 -8 6 -13 c4 3 5 7 4 10 c3 -2 5 -6 4 -11 c6 5 8 10 8 16 c0 6 -5 10 -12 10 z" fill="#b8733a"/>
+  <rect x="362" y="536" width="38" height="46" rx="5" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <path d="M381 574 c-7 0 -12 -5 -10 -12 c1 -5 5 -8 6 -13 c4 3 5 7 4 10 c3 -2 5 -6 4 -11 c6 5 8 10 8 16 c0 6 -5 10 -12 10 z" fill="#b8733a"/>
+  <path d="M430 460 H518" stroke="#1a2e1f" stroke-width="6" stroke-linecap="round"/>
+  <rect x="442" y="414" width="70" height="44" rx="6" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="468" cy="436" r="16" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="468" cy="436" r="4" fill="#1a2e1f"/>
+  <path d="M494 427 H502 M494 436 H502 M494 445 H502" stroke="#1a2e1f" stroke-width="3"/>
+  <path d="M442 444 H404" stroke="#22a044" stroke-width="6" stroke-linecap="round"/>
+  <text x="150" y="438" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#136a2e">tu piso</text>
+  <text x="300" y="712" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Piso con caldera individual</text>
+  <text x="300" y="752" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">Bomba de calor para tu piso</text>
+  <text x="300" y="790" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">Vivienda habitual · ficha RES060_FM</text>
+
+  <!-- 2. Edificio con calefacción central que se mantiene: ×3 -->
+  <circle cx="800" cy="214" r="54" fill="#22a044"/>
+  <text x="800" y="229" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="42" font-weight="700" fill="#ffffff">×3</text>
+  <rect x="670" y="334" width="260" height="320" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+  <rect x="658" y="322" width="284" height="12" rx="3" fill="#1a2e1f"/>
+  <path d="M670 398 H930 M670 462 H930 M670 526 H930 M670 590 H930" stroke="#1a2e1f" stroke-width="4" fill="none"/>
+  <g fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3">
+    <rect x="776" y="348" width="50" height="36" rx="3"/>
+    <rect x="776" y="412" width="50" height="36" rx="3"/>
+    <rect x="776" y="476" width="50" height="36" rx="3"/>
+    <rect x="776" y="540" width="50" height="36" rx="3"/>
+    <rect x="776" y="600" width="50" height="54"/>
+  </g>
+  <rect x="690" y="276" width="90" height="42" rx="6" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="715" cy="297" r="15" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="715" cy="297" r="4" fill="#1a2e1f"/>
+  <path d="M740 288 H770 M740 297 H770 M740 306 H770" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="810" y="276" width="90" height="42" rx="6" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="835" cy="297" r="15" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="835" cy="297" r="4" fill="#1a2e1f"/>
+  <path d="M860 288 H890 M860 297 H890 M860 306 H890" stroke="#1a2e1f" stroke-width="3"/>
+  <path d="M855 318 V328 H678 V566 M735 318 V328" fill="none" stroke="#22a044" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M678 367 H690" stroke="#22a044" stroke-width="7" stroke-linecap="round"/>
+  <rect x="690" y="352" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M706 357 V377 M722 357 V377 M738 357 V377" stroke="#22a044" stroke-width="3"/>
+  <path d="M678 431 H690" stroke="#22a044" stroke-width="7" stroke-linecap="round"/>
+  <rect x="690" y="416" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M706 421 V441 M722 421 V441 M738 421 V441" stroke="#22a044" stroke-width="3"/>
+  <path d="M678 495 H690" stroke="#22a044" stroke-width="7" stroke-linecap="round"/>
+  <rect x="690" y="480" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M706 485 V505 M722 485 V505 M738 485 V505" stroke="#22a044" stroke-width="3"/>
+  <path d="M678 559 H690" stroke="#22a044" stroke-width="7" stroke-linecap="round"/>
+  <rect x="690" y="544" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M706 549 V569 M722 549 V569 M738 549 V569" stroke="#22a044" stroke-width="3"/>
+  <rect x="850" y="600" width="58" height="50" rx="5" fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="8 6"/>
+  <text x="800" y="712" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Calefacción central</text>
+  <text x="800" y="752" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">La caldera central pasa a</text>
+  <text x="800" y="790" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">bomba de calor central · RES060_FM</text>
+
+  <!-- 3. Edificio que centraliza sus calderas individuales: ×4 -->
+  <circle cx="1300" cy="214" r="54" fill="#22a044"/>
+  <text x="1300" y="229" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="42" font-weight="700" fill="#ffffff">×4</text>
+  <rect x="1170" y="334" width="260" height="320" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+  <rect x="1158" y="322" width="284" height="12" rx="3" fill="#1a2e1f"/>
+  <path d="M1170 398 H1430 M1170 462 H1430 M1170 526 H1430 M1170 590 H1430" stroke="#1a2e1f" stroke-width="4" fill="none"/>
+  <g fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3">
+    <rect x="1276" y="348" width="50" height="36" rx="3"/>
+    <rect x="1276" y="412" width="50" height="36" rx="3"/>
+    <rect x="1276" y="476" width="50" height="36" rx="3"/>
+    <rect x="1276" y="540" width="50" height="36" rx="3"/>
+    <rect x="1276" y="600" width="50" height="54"/>
+  </g>
+  <rect x="1190" y="276" width="90" height="42" rx="6" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="1215" cy="297" r="15" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="1215" cy="297" r="4" fill="#1a2e1f"/>
+  <path d="M1240 288 H1270 M1240 297 H1270 M1240 306 H1270" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="1310" y="276" width="90" height="42" rx="6" fill="#ffffff" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="1335" cy="297" r="15" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="1335" cy="297" r="4" fill="#1a2e1f"/>
+  <path d="M1360 288 H1390 M1360 297 H1390 M1360 306 H1390" stroke="#1a2e1f" stroke-width="3"/>
+  <path d="M1355 318 V328 H1178 V566 M1235 318 V328" fill="none" stroke="#22a044" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M1178 367 H1190" stroke="#22a044" stroke-width="7" stroke-linecap="round"/>
+  <rect x="1190" y="352" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M1206 357 V377 M1222 357 V377 M1238 357 V377" stroke="#22a044" stroke-width="3"/>
+  <path d="M1178 431 H1190" stroke="#22a044" stroke-width="7" stroke-linecap="round"/>
+  <rect x="1190" y="416" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M1206 421 V441 M1222 421 V441 M1238 421 V441" stroke="#22a044" stroke-width="3"/>
+  <path d="M1178 495 H1190" stroke="#22a044" stroke-width="7" stroke-linecap="round"/>
+  <rect x="1190" y="480" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M1206 485 V505 M1222 485 V505 M1238 485 V505" stroke="#22a044" stroke-width="3"/>
+  <path d="M1178 559 H1190" stroke="#22a044" stroke-width="7" stroke-linecap="round"/>
+  <rect x="1190" y="544" width="64" height="30" rx="4" fill="#ffffff" stroke="#22a044" stroke-width="4"/>
+  <path d="M1206 549 V569 M1222 549 V569 M1238 549 V569" stroke="#22a044" stroke-width="3"/>
+  <rect x="1362" y="344" width="38" height="46" rx="5" fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="8 6"/>
+  <rect x="1362" y="408" width="38" height="46" rx="5" fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="8 6"/>
+  <rect x="1362" y="472" width="38" height="46" rx="5" fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="8 6"/>
+  <rect x="1362" y="536" width="38" height="46" rx="5" fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="8 6"/>
+  <text x="1300" y="712" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Edificio que centraliza</text>
+  <text x="1300" y="752" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">De calderas de piso a</text>
+  <text x="1300" y="790" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">bomba de calor central · RES062_FM</text>
+
+  <!-- Notas -->
+  <path d="M80 826 H1520" stroke="#c1d9cc" stroke-width="3"/>
+  <text x="80" y="878" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">Coeficientes de la Resolución de 3 de noviembre de 2026 (BOE de 7 de noviembre).</text>
+  <text x="80" y="914" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">De calefacción central a bombas de calor individuales: sin coeficiente.</text>
+  <text x="80" y="950" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">Casa unifamiliar que es vivienda habitual: ×2.</text>
+
+  <!-- Recuadro: la sierra -->
+  <rect x="1090" y="846" width="430" height="124" rx="10" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <path d="M1108 950 L1146 884 L1166 914 L1186 892 L1214 950 Z" fill="#1a2e1f"/>
+  <path d="M1146 884 L1134 905 L1146 900 L1156 906 Z M1186 892 L1179 904 L1187 901 L1193 905 Z" fill="#ffffff"/>
+  <text x="1232" y="892" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">La sierra, por encima</text>
+  <text x="1232" y="924" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">de 1.000 m: zona E1</text>
+  <text x="1232" y="954" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Madrid capital: zona D3</text>
+</svg>
