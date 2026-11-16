@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="cae-irpf-title cae-irpf-desc">
   <title id="cae-irpf-title">Del ahorro de tu obra a la declaración de la renta: el recorrido fiscal de la contraprestación del sistema CAE</title>
-  <desc id="cae-irpf-desc">Cuatro pasos unidos por flechas. Uno: tu vivienda, donde la obra genera un ahorro de energía. Dos: el contrato de cesión o convenio CAE, con el que cedes los derechos de ahorro energético. Tres: el sujeto delegado, que paga la contraprestación como un descuento en el presupuesto, la factura compensada. Cuatro: el IRPF, donde esa contraprestación se declara como ganancia patrimonial según el criterio publicado por la Agencia Tributaria en mayo de 2026. Debajo, un aviso: «sin coste» significa que no pagas la obra, no que la operación no exista para Hacienda.</desc>
+  <desc id="cae-irpf-desc">Cuatro pasos unidos por flechas. Uno: tu vivienda, donde la obra genera un ahorro de energía. Dos: el contrato de cesión o convenio CAE, con el que cedes los derechos de ahorro energético. Tres: el sujeto delegado, que paga la contraprestación como un descuento en el presupuesto, la factura compensada. Cuatro: el IRPF, donde esa contraprestación se declara como ganancia patrimonial según el criterio publicado por la Agencia Tributaria en mayo de 2026. Debajo, un aviso: la contraprestación llega como descuento, no como dinero, y aun así la operación existe para Hacienda.</desc>
 
   <rect x="0" y="0" width="1600" height="1000" fill="#f5efe1"/>
 
@@ -80,8 +80,8 @@
 
   <!-- Aviso -->
   <rect x="120" y="680" width="1360" height="128" rx="20" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
-  <text x="800" y="732" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">«Sin coste» significa que no pagas la obra.</text>
-  <text x="800" y="778" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#b8733a">No significa que la operación no exista para Hacienda.</text>
+  <text x="800" y="732" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">La contraprestación llega como descuento, no como dinero.</text>
+  <text x="800" y="778" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#b8733a">Aun así, la operación existe para Hacienda.</text>
 
   <!-- Notas -->
   <circle cx="100" cy="900" r="10" fill="#22a044"/>

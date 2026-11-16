@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="hero-title hero-desc">
-  <title id="hero-title">Los cinco factores que mueven el precio de aislar un desván y la línea que lleva de una vivienda elegible a la obra sin coste</title>
-  <desc id="hero-desc">Cinco tarjetas numeradas muestran lo que hace variar el precio de un aislamiento insuflado: la superficie en planta del desván, medida en la visita; el acceso y la trampilla, por la que entra la manguera; el espesor, que depende de la zona climática y fija la cantidad de material; los obstáculos, como tabiques, conductos, focos y chimeneas; y el estado del forjado, porque las humedades o el amianto se resuelven antes. Debajo, cuatro casillas unidas por flechas recorren la línea «sin coste»: una vivienda elegible, en zona climática C, D o E y con desván no habitable y accesible; la ficha RES022 del sistema CAE; el ahorro cedido, que se paga como descuento en el presupuesto; y la obra sin coste en viviendas elegibles. Una nota recuerda que es financiación privada regulada por el Real Decreto 36/2023, no una ayuda pública.</desc>
+  <title id="hero-title">Los cinco factores que mueven el precio de aislar un desván y la vía del sistema CAE, de una vivienda elegible al presupuesto cerrado</title>
+  <desc id="hero-desc">Cinco tarjetas numeradas muestran lo que hace variar el precio de un aislamiento insuflado: la superficie en planta del desván, medida en la visita; el acceso y la trampilla, por la que entra la manguera; el espesor, que depende de la zona climática y fija la cantidad de material; los obstáculos, como tabiques, conductos, focos y chimeneas; y el estado del forjado, porque las humedades o el amianto se resuelven antes. Debajo, cuatro casillas unidas por flechas recorren la vía del sistema CAE: una vivienda elegible, en zona climática C, D o E y con desván no habitable y accesible; la ficha RES022 del sistema CAE; el ahorro cedido, verificado tras la obra y pagado como descuento en el presupuesto; y gran parte de la inversión, que puede quedar cubierta por la financiación privada del sistema CAE. Una nota recuerda que es financiación privada regulada por el Real Decreto 36/2023, no una ayuda pública.</desc>
 
   <defs>
     <marker id="flecha" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
@@ -106,8 +106,8 @@
   <text x="1390" y="543" text-anchor="middle" font-size="21" fill="#1a2e1f">se resuelven antes</text>
   <text x="1390" y="571" text-anchor="middle" font-size="21" fill="#1a2e1f">de aislar</text>
 
-  <!-- Línea «sin coste» -->
-  <text x="70" y="664" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">LA LÍNEA «SIN COSTE»</text>
+  <!-- Vía del sistema CAE -->
+  <text x="70" y="664" font-size="22" font-weight="700" letter-spacing="3" fill="#22a044">LA VÍA DEL SISTEMA CAE</text>
 
   <rect x="70" y="690" width="330" height="170" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.15"/>
   <text x="235" y="740" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2e1f">Vivienda elegible</text>
@@ -131,9 +131,9 @@
   <line x1="1156" y1="775" x2="1192" y2="775" stroke="#22a044" stroke-width="4" marker-end="url(#flecha)"/>
 
   <rect x="1198" y="690" width="330" height="170" rx="14" fill="#22a044"/>
-  <text x="1363" y="748" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#ffffff">Sin coste</text>
-  <text x="1363" y="790" text-anchor="middle" font-size="21" fill="#ffffff">en viviendas elegibles,</text>
-  <text x="1363" y="818" text-anchor="middle" font-size="21" fill="#ffffff">obra en una jornada</text>
+  <text x="1363" y="748" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#ffffff">Gran parte</text>
+  <text x="1363" y="790" text-anchor="middle" font-size="21" fill="#ffffff">de la inversión puede</text>
+  <text x="1363" y="818" text-anchor="middle" font-size="21" fill="#ffffff">quedar cubierta</text>
 
   <text x="70" y="925" font-size="21" fill="#1a2e1f" opacity="0.8">Financiación privada regulada por el Real Decreto 36/2023, no una ayuda pública. Presupuesto desglosado tras la medición del desván, en el estudio gratuito.</text>
   <text x="70" y="960" font-size="18" font-weight="700" letter-spacing="2" fill="#b8733a">LOS ARTESANOS VERDES · ARTESANOSVERDES.COM</text>

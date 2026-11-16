@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="'Source Sans 3', Arial, sans-serif" role="img" aria-labelledby="t d">
   <title id="t">¿Está aislado tu desván? Cuatro escenarios desde la trampilla y la resistencia térmica según el espesor</title>
-  <desc id="d">A la izquierda, cuatro secciones esquemáticas de lo que puede verse al abrir la trampilla del desván: el forjado desnudo, sin ningún aislante; una manta antigua de unos cinco centímetros con papel kraft, desplazada y con huecos; un aislante hundido o mojado por una gotera, que se retira; y una capa continua de 220 milímetros de lana mineral insuflada, con resistencia térmica 4,75 según su certificado ACERMI. A la derecha, una tabla con la resistencia térmica estimada, calculada como espesor dividido por conductividad según la UNE-EN ISO 6946, para espesores de 50 a 300 milímetros y conductividades de 0,035, 0,040 y 0,046 W/m·K; la fila de 220 milímetros aparece destacada.</desc>
+  <desc id="d">A la izquierda, cuatro secciones esquemáticas de lo que puede verse al abrir la trampilla del desván: el forjado desnudo, sin ningún aislante; una manta antigua de unos cinco centímetros con papel kraft, desplazada y con huecos; un aislante hundido o mojado por una gotera, que se retira; y una capa continua de 220 milímetros de lana mineral insuflada, con resistencia térmica 4,75 según la ficha técnica del fabricante. A la derecha, una tabla con la resistencia térmica estimada, calculada como espesor dividido por conductividad según la UNE-EN ISO 6946, para espesores de 50 a 300 milímetros y conductividades de 0,035, 0,040 y 0,046 W/m·K; la fila de 220 milímetros aparece destacada.</desc>
   <defs>
     <pattern id="wool" width="20" height="12" patternUnits="userSpaceOnUse">
       <rect width="20" height="12" fill="#ffffff"/>
@@ -80,7 +80,7 @@
   <rect x="570" y="796" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
   <rect x="665" y="796" width="22" height="18" fill="#1a2e1f" opacity="0.7"/>
   <rect x="445" y="842" width="280" height="44" rx="10" fill="#f5efe1"/>
-  <text x="585" y="871" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2e1f">R = 4,75 según ACERMI</text>
+  <text x="585" y="871" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2e1f">R = 4,75 (fabricante)</text>
 
   <!-- Tabla espesor-R -->
   <text x="840" y="250" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#1a2e1f">Resistencia térmica estimada</text>
@@ -133,6 +133,6 @@
 
   <text x="840" y="804" font-size="22" fill="#1a2e1f" opacity="0.85">Estimación con el aislante seco, continuo y sin comprimir:</text>
   <text x="840" y="834" font-size="22" fill="#1a2e1f" opacity="0.85">mojado, pisado o con huecos rinde menos.</text>
-  <text x="840" y="872" font-size="22" fill="#1a2e1f" opacity="0.85">El valor real de un producto es el de su certificado:</text>
-  <text x="840" y="902" font-size="22" font-weight="700" fill="#1a2e1f">Isolene 4 a 220 mm, R = 4,75 m²·K/W (ACERMI).</text>
+  <text x="840" y="872" font-size="22" fill="#1a2e1f" opacity="0.85">El valor real de un producto es el de su ficha técnica:</text>
+  <text x="840" y="902" font-size="22" font-weight="700" fill="#1a2e1f">Isolene 4 a 220 mm, R = 4,75 m²·K/W (ficha técnica).</text>
 </svg>

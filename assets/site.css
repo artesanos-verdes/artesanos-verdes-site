@@ -564,6 +564,31 @@
     margin-left: 0.8rem;
     align-self: center;
   }
+  /* Décision du client (28/10) : « Gran parte » en texte, et non un « 100 % » géant.
+     Vert de marque sur la forêt : contraste AA en grand texte. */
+  .offer-price.offer-price--texto {
+    display: block;
+    font-size: clamp(2.6rem, 11vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.012em;
+    font-variant-numeric: normal;
+    margin: 1rem 0 0.6rem;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
+  /* Suite de la phrase sous « Gran parte » : texte clair sur la forêt. */
+  .offer-price-sub {
+    position: relative;
+    max-width: 40ch;
+    text-wrap: balance;
+    margin: 0 0 1.1rem;
+    font-family: var(--body);
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #e8f0ea;
+  }
   .offer-caption {
     position: relative;
     font-size: 0.95rem;
@@ -1924,6 +1949,7 @@
     h1 { font-size: 2.6rem; }
     h2 { font-size: 1.9rem; }
     .offer-price { font-size: 4.5rem; }
+    .offer-price.offer-price--texto { font-size: clamp(2.4rem, 11vw, 3rem); }
     .offer-card { padding: 1.8rem; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .hero-actions .btn { justify-content: center; }
