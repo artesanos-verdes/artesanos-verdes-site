@@ -18,7 +18,14 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  /* Défilement doux seulement si l'utilisateur n'a pas demandé moins d'animations. */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  /* Débordement horizontal (bug mobile à ~694 px) : clip, et non hidden, pour ne pas
+     transformer html/body en conteneur de défilement (la nav sticky resterait sinon
+     bloquée). hidden reste en repli pour les navigateurs sans clip. */
+  html { overflow-x: clip; }
   body {
     font-family: var(--body);
     background: var(--ivory);
@@ -26,6 +33,7 @@
     line-height: 1.6;
     font-weight: 400;
     overflow-x: hidden;
+    overflow-x: clip;
     position: relative;
   }
 
@@ -81,11 +89,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--line-soft);
+    transition: all 0.4s ease;
+  }
+  /* Fond flouté porté par un pseudo-élément : un backdrop-filter sur <nav> en faisait
+     le bloc conteneur du panneau position:fixed du menu mobile, qui élargissait alors
+     la page à ~694 px sur mobile (barre CTA et bouton WhatsApp hors écran). */
+  nav::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background: rgba(250, 246, 236, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line-soft);
-    transition: all 0.4s ease;
+    pointer-events: none;
   }
 
   .logo {
@@ -468,6 +486,16 @@
     padding: 2.5rem;
     box-shadow: 0 40px 80px -20px rgba(10, 24, 16, 0.35);
     overflow: hidden;
+  }
+  /* La variante statique (hors du hero) doit l'emporter sur .offer-card, déclarée
+     après elle avec la même spécificité (position:absolute) : sinon la carte d'offre
+     sortait du flux et recouvrait la section suivante. */
+  .offer-card.offer-card--static {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 620px;
   }
   .offer-card::before {
     content: '';
@@ -1785,8 +1813,11 @@
   }
 
   /* ===== REVEAL ===== */
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 1s cubic-bezier(0.23, 1, 0.32, 1); }
-  .reveal.in { opacity: 1; transform: translateY(0); }
+  /* Contenu visible sans JavaScript : l'animation d'apparition ne s'applique que si
+     la classe .js a été posée sur <html> par le script en tête de page. */
+  .reveal { transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 1s cubic-bezier(0.23, 1, 0.32, 1); }
+  .js .reveal { opacity: 0; transform: translateY(30px); }
+  .js .reveal.in { opacity: 1; transform: translateY(0); }
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
@@ -2112,4 +2143,14 @@
 .comunidades-figure figcaption { margin-top: 0.8rem; font-size: 0.85rem; color: var(--sage); text-align: center; }
 @media (max-width: 900px) {
   .comunidades-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* ===== MOINS D'ANIMATIONS (prefers-reduced-motion) ===== */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

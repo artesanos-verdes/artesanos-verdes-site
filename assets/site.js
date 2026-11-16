@@ -189,18 +189,6 @@
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
 
-    // Track GA4 conversion
-    track('generate_lead', {
-      form_location: 'contact_form',
-      provincia: leadData.provincia,
-      tipo_vivienda: leadData.tipo,
-      ano_construccion: leadData.ano,
-      calefaccion: leadData.calefaccion,
-      proyecto: leadData.proyecto,
-      value: 1,
-      currency: 'EUR'
-    });
-
     // Save to Firestore
     const saveToFirestore = async () => {
       if (!window.__firestore) throw new Error('Firebase not loaded');
@@ -227,6 +215,18 @@
 
       const leadId = await saveToFirestore();
       console.log('[lead saved]', leadId);
+      // Conversion GA4 / Google Ads : envoyée seulement après l'enregistrement réussi du lead
+      // (auparavant envoyée avant, même si l'enregistrement échouait).
+      track('generate_lead', {
+        form_location: 'contact_form',
+        provincia: leadData.provincia,
+        tipo_vivienda: leadData.tipo,
+        ano_construccion: leadData.ano,
+        calefaccion: leadData.calefaccion,
+        proyecto: leadData.proyecto,
+        value: 1,
+        currency: 'EUR'
+      });
     // ========================================
     // Déclencher les emails automatiques (Resend)
     // ========================================
