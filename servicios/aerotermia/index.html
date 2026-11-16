@@ -159,6 +159,14 @@
     },
     {
       "@type": "Question",
+      "name": "¿Qué bomba de calor instaláis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Thaleos Mont-blanc R290, una bomba de calor aire-agua de marca francesa que funciona con propano (R290), un refrigerante natural: monobloc de 4 a 16 kW o bibloc de 8 a 16 kW, con un módulo interior que lleva un depósito de ACS de 190 L. Según su ficha técnica, su SCOP va de 4,96 a 5,24 a 35 °C y de 3,86 a 4,03 a 55 °C, y lleva una resistencia de apoyo integrada. Para edificios con calefacción central instalamos su versión MAX, de 26 a 40 kW por unidad. El modelo y la potencia se eligen en el estudio (el equipo que instalamos)."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Mi calefacción es eléctrica, ¿puedo acogerme?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -411,7 +419,7 @@
 
   /* Enlaces dentro del texto: color oscuro y subrayado verde (contraste AA incluso con opacidad) */
   #factor-multiplicador a, #elegibilidad a, #plazos .flow-note a, #como-funciona a, #comparativa a,
-  #emisores a, #dimensionado a, #proceso .step-content a, #cae .flow-note a, #cae p a, #documentos a, #certificaciones a, #faq a {
+  #emisores a, #equipo a, #dimensionado a, #proceso .step-content a, #cae .flow-note a, #cae p a, #documentos a, #certificaciones a, #faq a {
     color: var(--forest-deep);
     font-weight: 600;
     text-decoration: underline;
@@ -421,7 +429,7 @@
     transition: color 0.2s ease;
   }
   #factor-multiplicador a:hover, #elegibilidad a:hover, #plazos .flow-note a:hover, #como-funciona a:hover, #comparativa a:hover,
-  #emisores a:hover, #dimensionado a:hover, #proceso .step-content a:hover, #cae .flow-note a:hover, #cae p a:hover, #documentos a:hover, #certificaciones a:hover, #faq a:hover { color: var(--brand-green-deep); }
+  #emisores a:hover, #equipo a:hover, #dimensionado a:hover, #proceso .step-content a:hover, #cae .flow-note a:hover, #cae p a:hover, #documentos a:hover, #certificaciones a:hover, #faq a:hover { color: var(--brand-green-deep); }
 
   /* Textos de apoyo bajo los títulos y al pie de las secciones */
   .av-intro { max-width: 760px; margin: 1rem auto 0; font-size: 1.02rem; line-height: 1.7; color: var(--forest); opacity: 0.85; }
@@ -492,6 +500,55 @@
   .av-guias-grupo a::after { content: '→'; flex-shrink: 0; color: var(--brand-green-deep); transition: transform 0.2s ease; }
   .av-guias-grupo a:hover { color: var(--brand-green-deep); }
   .av-guias-grupo a:hover::after { transform: translateX(3px); }
+
+  /* El equipo que instalamos: foto, formatos, tabla de rendimiento, características y versión MAX */
+  #equipo { background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%); }
+  #equipo picture { display: block; }
+  #equipo img { display: block; max-width: 100%; height: auto; }
+  #equipo h3 { font-size: 1.35rem; line-height: 1.25; margin-bottom: 0.8rem; }
+  #equipo figcaption { margin-top: 0.6rem; font-size: 0.85rem; line-height: 1.5; color: var(--sage); }
+  .av-equipo-top { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 3rem; align-items: center; margin-top: 2.5rem; text-align: left; }
+  .av-equipo-foto { margin: 0; }
+  .av-equipo-foto img { width: 100%; border-radius: 6px; box-shadow: 0 24px 60px -24px rgba(10, 24, 16, 0.28); }
+  .av-equipo-gama .av-compara { max-width: none; margin: 0; }
+  .av-equipo-gama .av-compara .spec-row { grid-template-columns: minmax(0, 6.5rem) minmax(0, 1fr); gap: 1rem; padding: 1rem 0; }
+  .av-equipo-piezas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.4rem; }
+  .av-equipo-pieza { margin: 0; padding: 1rem 0.8rem 0.9rem; background: var(--ivory); border: 1px solid var(--line); border-radius: 8px; text-align: center; }
+  #equipo .av-equipo-pieza img { width: 100%; height: 150px; object-fit: contain; }
+  .av-equipo-bloque { max-width: 760px; margin: 3.5rem auto 0; text-align: left; }
+  .av-equipo-bloque > p { font-size: 1rem; line-height: 1.7; color: var(--forest); margin: 0; }
+  .av-equipo-bloque .material-specs { margin-top: 1.4rem; }
+  #equipo .av-equipo-nota { margin-top: 1.1rem; font-size: 0.92rem; line-height: 1.65; color: var(--forest); }
+
+  /* Tabla de rendimiento: una fila por modelo, legible a 390 px */
+  .av-equipo-tabla .spec-row { grid-template-columns: minmax(0, 5rem) repeat(3, minmax(0, 1fr)); gap: 1rem; padding: 0.8rem 0; }
+  .av-equipo-tabla .spec-row .key { font-family: var(--display); font-weight: 600; color: var(--forest-deep); opacity: 1; white-space: nowrap; }
+  .av-equipo-tabla .spec-row .val { font-size: 1.15rem; line-height: 1.2; color: #136a2e; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .av-equipo-tabla .spec-row .val .unit { display: block; margin: 0.2rem 0 0; font-family: var(--body); font-weight: 400; font-size: 0.8rem; }
+  .av-equipo-tabla .av-equipo-cab { align-items: end; }
+  .av-equipo-tabla .av-equipo-cab .key, .av-equipo-tabla .av-equipo-cab .val { font-family: var(--body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.35; color: var(--terracotta-deep); white-space: normal; }
+  .av-equipo-tabla .av-equipo-cab .val .unit { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em; text-transform: none; color: var(--sage); }
+
+  /* Versión MAX junto al párrafo sobre edificios */
+  .av-equipo-max { display: grid; grid-template-columns: minmax(0, 12rem) minmax(0, 1fr); gap: 2.5rem; align-items: center; max-width: 880px; margin: 3.5rem auto 0; text-align: left; }
+  #equipo .av-equipo-max .av-equipo-pieza img { height: 220px; }
+  .av-equipo-max p { font-size: 1rem; line-height: 1.7; color: var(--forest); margin: 0; }
+
+  @media (max-width: 968px) {
+    .av-equipo-top { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+    .av-equipo-foto { max-width: 680px; width: 100%; margin: 0 auto; }
+  }
+  @media (max-width: 640px) {
+    .av-equipo-gama .av-compara .spec-row { grid-template-columns: minmax(0, 1fr); gap: 0.3rem; }
+    #equipo .av-equipo-pieza img { height: 120px; }
+    .av-equipo-tabla .spec-row { grid-template-columns: minmax(0, 4.1rem) repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+    .av-equipo-tabla .av-equipo-cab .key, .av-equipo-tabla .av-equipo-cab .val { letter-spacing: 0.04em; }
+    .av-equipo-tabla .spec-row .key { font-size: 0.9rem; }
+    .av-equipo-tabla .spec-row .val { font-size: 1rem; }
+    .av-equipo-max { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
+    .av-equipo-max .av-equipo-pieza { width: 100%; max-width: 13rem; margin: 0 auto; }
+    #equipo .av-equipo-max .av-equipo-pieza img { height: 180px; }
+  }
 
   /* Contraste AA en fondo claro: títulos de las notas, etiquetas, numerales y unidades */
   .flow-note strong { color: var(--terracotta-deep); }
@@ -881,6 +938,174 @@
   </div>
 </section>
 
+<!-- EL EQUIPO QUE INSTALAMOS -->
+<section id="equipo">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-num" style="justify-content:center;">Bomba de calor aire-agua</div>
+      <h2>El equipo que <em>instalamos.</em></h2>
+      <p class="av-intro">
+        La bomba de calor que instalamos, Thaleos Mont-blanc R290, es un equipo aire-agua de una marca francesa que da calefacción y agua caliente sanitaria. Funciona con R290, es decir, con propano: un refrigerante natural, que no es un gas fluorado (<a href="/blog/aerotermia-r32-r290/">R32 o R290: qué prohíbe la UE</a>). Las cifras de esta sección son las que declara el fabricante en su ficha técnica.
+      </p>
+    </div>
+
+    <div class="av-equipo-top">
+      <figure class="av-equipo-foto reveal">
+        <picture>
+          <source srcset="/assets/servicios/thaleos-montblanc-r290-casa.webp" type="image/webp">
+          <img src="/assets/servicios/thaleos-montblanc-r290-casa.jpg" alt="Bomba de calor aire-agua Thaleos Mont-blanc R290 instalada junto a una vivienda" width="1200" height="900" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>Imagen del fabricante.</figcaption>
+      </figure>
+
+      <div class="av-equipo-gama reveal reveal-delay-1">
+        <h3>Monobloc o bibloc</h3>
+        <div class="material-specs av-compara">
+          <div class="spec-row">
+            <span class="key">Monobloc</span>
+            <span class="val">Una sola unidad exterior, de 4 a 16 kW en monofásica y de 8 a 16 kW en trifásica. El circuito de refrigerante va cerrado de fábrica en la unidad exterior, y el agua caliente sanitaria se acumula en un depósito aparte.</span>
+          </div>
+          <div class="spec-row">
+            <span class="key">Bibloc</span>
+            <span class="val">Una unidad exterior de 8 a 16 kW y un módulo interior de 60 × 60 cm de planta y 1,72 m de alto, que lleva un depósito de ACS de 190 L de acero inoxidable.</span>
+          </div>
+        </div>
+
+        <div class="av-equipo-piezas">
+          <figure class="av-equipo-pieza">
+            <picture>
+              <source srcset="/assets/servicios/thaleos-montblanc-r290-monobloc.webp" type="image/webp">
+              <img src="/assets/servicios/thaleos-montblanc-r290-monobloc.png" alt="Unidad exterior monobloc de la bomba de calor aire-agua" width="800" height="686" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>Unidad exterior monobloc</figcaption>
+          </figure>
+          <figure class="av-equipo-pieza">
+            <picture>
+              <source srcset="/assets/servicios/thaleos-montblanc-r290-interior.webp" type="image/webp">
+              <img src="/assets/servicios/thaleos-montblanc-r290-interior.png" alt="Módulo interior del sistema bibloc, con pantalla de control y depósito de agua caliente sanitaria de 190 litros" width="403" height="1113" loading="lazy" decoding="async">
+            </picture>
+            <figcaption>Módulo interior con depósito de 190 L</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="av-equipo-bloque reveal">
+      <h3>Rendimiento, modelo a modelo</h3>
+      <p>Gama monobloc monofásica, según la ficha técnica del fabricante. Con el mismo equipo y el mismo aire exterior, el COP baja cuando el agua sale más caliente: el modelo de 8 kW pasa de 5,00 con agua a 35 °C a 3,30 con agua a 55 °C.</p>
+
+      <div class="material-specs av-equipo-tabla" role="table" aria-label="Capacidad, COP y SCOP de la gama monobloc monofásica según la ficha técnica del fabricante" aria-describedby="equipo-tabla-nota">
+        <div class="spec-row av-equipo-cab" role="row">
+          <span class="key" role="columnheader">Modelo</span>
+          <span class="val" role="columnheader">A7/W35 <span class="unit">COP · kW</span></span>
+          <span class="val" role="columnheader">A7/W55 <span class="unit">COP · kW</span></span>
+          <span class="val" role="columnheader">SCOP <span class="unit">35 / 55 °C</span></span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="key" role="rowheader">4 kW</span>
+          <span class="val" role="cell">5,15 <span class="unit">4,50 kW</span></span>
+          <span class="val" role="cell">3,20 <span class="unit">4,60 kW</span></span>
+          <span class="val" role="cell">5,20 / 4,00</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="key" role="rowheader">6 kW</span>
+          <span class="val" role="cell">4,95 <span class="unit">6,35 kW</span></span>
+          <span class="val" role="cell">3,15 <span class="unit">6,40 kW</span></span>
+          <span class="val" role="cell">5,24 / 4,03</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="key" role="rowheader">8 kW</span>
+          <span class="val" role="cell">5,00 <span class="unit">8,40 kW</span></span>
+          <span class="val" role="cell">3,30 <span class="unit">7,80 kW</span></span>
+          <span class="val" role="cell">5,21 / 3,94</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="key" role="rowheader">10 kW</span>
+          <span class="val" role="cell">4,80 <span class="unit">10,00 kW</span></span>
+          <span class="val" role="cell">3,25 <span class="unit">9,50 kW</span></span>
+          <span class="val" role="cell">5,16 / 3,93</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="key" role="rowheader">12 kW</span>
+          <span class="val" role="cell">4,90 <span class="unit">12,00 kW</span></span>
+          <span class="val" role="cell">3,25 <span class="unit">12,00 kW</span></span>
+          <span class="val" role="cell">4,96 / 3,86</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="key" role="rowheader">14 kW</span>
+          <span class="val" role="cell">4,80 <span class="unit">14,00 kW</span></span>
+          <span class="val" role="cell">3,20 <span class="unit">14,00 kW</span></span>
+          <span class="val" role="cell">5,13 / 3,93</span>
+        </div>
+        <div class="spec-row" role="row">
+          <span class="key" role="rowheader">16 kW</span>
+          <span class="val" role="cell">4,70 <span class="unit">15,10 kW</span></span>
+          <span class="val" role="cell">3,15 <span class="unit">15,10 kW</span></span>
+          <span class="val" role="cell">5,16 / 3,89</span>
+        </div>
+      </div>
+
+      <p class="av-equipo-nota" id="equipo-tabla-nota">A7/W35: aire exterior a 7 °C e impulsión a 35 °C (retorno a 30 °C). A7/W55: aire a 7 °C e impulsión a 55 °C (retorno a 47 °C). La capacidad es el calor que da el equipo en ese ensayo. En trifásica (8 a 16 kW), la ficha da la misma capacidad y el mismo COP; en bibloc, el mismo COP con algo menos de capacidad, y en las dos el SCOP va de 4,98 a 5,16 a 35 °C y de 3,86 a 3,93 a 55 °C. SCOP declarado por el fabricante: para el CAE, la ficha RES060_FM toma el SCOP del clima que corresponde a tu zona y a la temperatura de impulsión de tu instalación (anexo I).</p>
+    </div>
+
+    <div class="av-equipo-bloque reveal">
+      <h3>Características de la gama</h3>
+      <div class="material-specs">
+        <div class="spec-row">
+          <span class="key">Refrigerante</span>
+          <span class="val">R290 <span class="unit">propano</span></span>
+        </div>
+        <div class="spec-row">
+          <span class="key">Agua de calefacción</span>
+          <span class="val">Hasta 80 °C</span>
+        </div>
+        <div class="spec-row">
+          <span class="key">Agua caliente sanitaria</span>
+          <span class="val">Hasta 75 °C</span>
+        </div>
+        <div class="spec-row">
+          <span class="key">Calefacción con aire exterior</span>
+          <span class="val">Hasta −25 °C</span>
+        </div>
+        <div class="spec-row">
+          <span class="key">Resistencia de apoyo integrada</span>
+          <span class="val">3 kW <span class="unit">monofásica</span> · 9 kW <span class="unit">trifásica</span></span>
+        </div>
+        <div class="spec-row">
+          <span class="key">Potencia sonora de la unidad exterior</span>
+          <span class="val">56 a 60 <span class="unit">dB(A)</span></span>
+        </div>
+        <div class="spec-row">
+          <span class="key">Clase energética en calefacción</span>
+          <span class="val">A+++ <span class="unit">a 35 y 55 °C</span></span>
+        </div>
+        <div class="spec-row">
+          <span class="key">Detección de fugas</span>
+          <span class="val">Integrada</span>
+        </div>
+      </div>
+
+      <p class="av-equipo-nota">La resistencia de apoyo sirve de sistema de seguridad, el que la ficha RES060_FM exige en las zonas D y E para cuando la temperatura exterior es negativa. La potencia sonora la declara el fabricante para cada modelo; lo que oirás depende de dónde se coloque la unidad (<a href="/blog/ruido-aerotermia/">el ruido de la aerotermia</a>). Cada modelo monobloc tiene su número de registro en EPREL, la base de datos europea del etiquetado energético. Además, su función de red inteligente (Smart Grid) adapta el funcionamiento de la bomba de calor a las señales de la red eléctrica y permite conectarla a una instalación fotovoltaica.</p>
+    </div>
+
+    <div class="av-equipo-max reveal">
+      <figure class="av-equipo-pieza">
+        <picture>
+          <source srcset="/assets/servicios/thaleos-montblanc-r290-max.webp" type="image/webp">
+          <img src="/assets/servicios/thaleos-montblanc-r290-max.png" alt="Unidad exterior de la versión MAX, con dos ventiladores, para edificios con calefacción central" width="560" height="776" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>Versión MAX, de 26 a 40 kW</figcaption>
+      </figure>
+      <div>
+        <h3>Para edificios con calefacción central</h3>
+        <p>En un edificio con calefacción central, o en una comunidad que pasa de calderas individuales a una bomba de calor central (<a href="/blog/centralizar-calefaccion-aerotermia/">centralizar la calefacción con el ×4</a>), instalamos la versión MAX de la gama: unidades trifásicas de 26, 30 y 40 kW que se conectan en cascada, hasta 8 en paralelo y 320 kW. Según su ficha técnica, funcionan en calefacción con hasta −30 °C en el exterior, dan agua de calefacción hasta 85 °C y llevan en la unidad exterior un separador de gas que impide que el R290 llegue a la instalación interior por el circuito de agua. Lo estudiamos con tu comunidad en nuestro <a href="/servicios/comunidades-de-propietarios/">servicio para comunidades de propietarios</a>.</p>
+      </div>
+    </div>
+
+    <p class="av-pie reveal" style="text-align:center;">El modelo y la potencia se eligen en el estudio, según la demanda de tu vivienda y la temperatura exterior de proyecto de tu municipio: <a href="/blog/potencia-aerotermia/">cómo se calcula la potencia</a>.</p>
+  </div>
+</section>
+
 <!-- DIMENSIONADO -->
 <section id="dimensionado">
   <div style="max-width:1100px; margin:0 auto;">
@@ -1236,6 +1461,13 @@
         <summary>¿Me da también agua caliente sanitaria?</summary>
         <div class="faq-body">
           <p>Sí, y para el factor multiplicador es obligatorio: la bomba de calor debe cubrir toda la calefacción y el agua caliente sanitaria, que se acumula en un depósito (<a href="/blog/deposito-acs-aerotermia/">cuántos litros de depósito necesitas</a>). Muchos equipos dan además refrigeración en verano.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>¿Qué bomba de calor instaláis?</summary>
+        <div class="faq-body">
+          <p>La Thaleos Mont-blanc R290, una bomba de calor aire-agua de marca francesa que funciona con propano (R290), un refrigerante natural: monobloc de 4 a 16 kW o bibloc de 8 a 16 kW, con un módulo interior que lleva un depósito de ACS de 190 L. Según su ficha técnica, su SCOP va de 4,96 a 5,24 a 35 °C y de 3,86 a 4,03 a 55 °C, y lleva una resistencia de apoyo integrada. Para edificios con calefacción central instalamos su versión MAX, de 26 a 40 kW por unidad. El modelo y la potencia se eligen en el estudio (<a href="#equipo">el equipo que instalamos</a>).</p>
         </div>
       </details>
 
