@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="cf-title cf-desc" font-family="'Source Sans 3', -apple-system, 'Segoe UI', Arial, sans-serif">
   <title id="cf-title">Ficha de producto del aislante reflectante alveolar TETRIS SUPER 12</title>
-  <desc id="cf-desc">Ficha del aislante reflectante alveolar flexible TETRIS SUPER 12, tecnología TRIPLEX del Groupe ORION. Aislante dos en uno que combina aislamiento térmico y estanqueidad al aire. Composición con films de baja emisividad y núcleo alveolar de aire. Resistencia térmica R igual a 6,13 metros cuadrados kelvin por vatio según la norma EN 16012, refleja hasta el 95 por ciento de la radiación infrarroja, barrera de vapor integrada con Sd superior a 60 metros, estanco al aire, calidad del aire interior A+ y marcado CE según EN 13984 de 2013.</desc>
+  <desc id="cf-desc">Ficha del aislante reflectante alveolar flexible TETRIS SUPER 12, tecnología TRIPLEX del Groupe ORION. Aislante dos en uno que combina aislamiento térmico y estanqueidad al aire. Composición con films de baja emisividad y núcleo alveolar de aire. Resistencia térmica R igual a 6,13 metros cuadrados kelvin por vatio según la norma EN 16012, refleja hasta el 95 por ciento de la radiación infrarroja, barrera de vapor integrada con Sd superior a 60 metros, estanco al aire, calidad del aire interior A+ y marcado CE según EN 13984 de 2013. Clasificación de reacción al fuego Euroclase F: instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado), que es el revestimiento que aporta la protección frente al fuego del conjunto.</desc>
 
   <defs>
     <linearGradient id="cf-foil" x1="0" y1="0" x2="0" y2="1">
@@ -146,5 +146,5 @@
   </g>
 
   <!-- ===== FOOTER ===== -->
-  <text x="60" y="508" fill="#a09a8a" font-size="11" font-weight="600">Aislante reflectante alveolar flexible · tecnología TRIPLEX (Groupe ORION) · sistema CAE, financiación privada · Los Artesanos Verdes</text>
+  <text x="60" y="508" fill="#5c6b62" font-size="11" font-weight="600">Euroclase F · instalado siempre protegido detrás del acabado interior (placa de yeso laminado o entablado), que es el revestimiento que aporta la protección frente al fuego del conjunto.</text>
 </svg>
