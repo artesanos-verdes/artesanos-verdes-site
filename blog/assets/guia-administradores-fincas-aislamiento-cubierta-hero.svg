@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Aislar la cubierta de la comunidad: quién hace qué en cada paso</title>
+  <desc id="hero-desc">Cinco pasos en filas, con lo que se hace y quién interviene. 1, estudio: fotos de la trampilla y de la buhardilla y nota simple o escritura del edificio; las envía el administrador. 2, votación en junta: un mismo acuerdo aprueba el aislamiento y la cesión del ahorro energético del sistema CAE; convoca el presidente y vota la junta. 3, documentos y firmas: acta firmada por el presidente y el secretario, CIF de la comunidad y DNI; la cesión del ahorro la firma el presidente; intervienen el administrador y el presidente. 4, obra: certificado energético inicial y, el mismo día, aislamiento del desván; lo hace Los Artesanos Verdes. 5, fin de obra: firman el presidente y el administrador, y basta una firma digital para enviarlo. Al pie: una jornada de obra, sin obras en las viviendas, y certificado energético del edificio antes y después.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="82" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="48" font-weight="700" fill="#1a2e1f">Aislar la cubierta de la comunidad: quién hace qué</text>
+  <text x="800" y="128" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f" fill-opacity="0.8">Los cinco pasos, del estudio al fin de obra</text>
+  <line x1="80" y1="156" x2="1520" y2="156" stroke="#1a2e1f" stroke-opacity="0.15" stroke-width="2"/>
+
+  <!-- Cabeceras de columna -->
+  <g font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#b8733a">
+    <text x="110" y="196">PASO</text>
+    <text x="600" y="196">QUÉ SE HACE</text>
+    <text x="1330" y="196" text-anchor="middle">QUIÉN</text>
+  </g>
+
+  <!-- Línea que une los pasos -->
+  <line x1="140" y1="270" x2="140" y2="822" stroke="#2d7a4e" stroke-width="3" stroke-dasharray="6 8" stroke-opacity="0.5"/>
+
+  <!-- Paso 1: estudio -->
+  <g transform="translate(0,210)">
+    <rect x="80" y="0" width="1440" height="124" rx="16" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12" stroke-width="2"/>
+    <circle cx="140" cy="62" r="32" fill="#2d7a4e"/>
+    <text x="140" y="74" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">1</text>
+    <text x="196" y="74" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Estudio</text>
+    <line x1="568" y1="24" x2="568" y2="100" stroke="#1a2e1f" stroke-opacity="0.1" stroke-width="2"/>
+    <text font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">
+      <tspan x="600" y="54">Fotos de la trampilla y de la buhardilla</tspan>
+      <tspan x="600" y="88">y nota simple o escritura del edificio</tspan>
+    </text>
+    <rect x="1176" y="22" width="308" height="80" rx="40" fill="#1a2e1f"/>
+    <text x="1330" y="71" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#f5efe1">El administrador</text>
+  </g>
+
+  <!-- Paso 2: votación en junta -->
+  <g transform="translate(0,348)">
+    <rect x="80" y="0" width="1440" height="124" rx="16" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12" stroke-width="2"/>
+    <circle cx="140" cy="62" r="32" fill="#2d7a4e"/>
+    <text x="140" y="74" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">2</text>
+    <text x="196" y="74" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Votación en junta</text>
+    <line x1="568" y1="24" x2="568" y2="100" stroke="#1a2e1f" stroke-opacity="0.1" stroke-width="2"/>
+    <text font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">
+      <tspan x="600" y="54">Un mismo acuerdo: el aislamiento y la</tspan>
+      <tspan x="600" y="88">cesión del ahorro energético (sistema CAE)</tspan>
+    </text>
+    <rect x="1176" y="22" width="308" height="80" rx="40" fill="#b8733a"/>
+    <text text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#ffffff">
+      <tspan x="1330" y="56">Convoca el presidente;</tspan>
+      <tspan x="1330" y="86">vota la junta</tspan>
+    </text>
+  </g>
+
+  <!-- Paso 3: documentos y firmas -->
+  <g transform="translate(0,486)">
+    <rect x="80" y="0" width="1440" height="124" rx="16" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12" stroke-width="2"/>
+    <circle cx="140" cy="62" r="32" fill="#2d7a4e"/>
+    <text x="140" y="74" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">3</text>
+    <text x="196" y="74" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Documentos</text>
+    <line x1="568" y1="24" x2="568" y2="100" stroke="#1a2e1f" stroke-opacity="0.1" stroke-width="2"/>
+    <text font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">
+      <tspan x="600" y="54">Acta firmada por presidente y secretario,</tspan>
+      <tspan x="600" y="88">CIF y DNI. La cesión la firma el presidente</tspan>
+    </text>
+    <rect x="1176" y="22" width="308" height="80" rx="40" fill="#c1d9cc"/>
+    <text text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#1a2e1f">
+      <tspan x="1330" y="56">El administrador</tspan>
+      <tspan x="1330" y="86">y el presidente</tspan>
+    </text>
+  </g>
+
+  <!-- Paso 4: obra -->
+  <g transform="translate(0,624)">
+    <rect x="80" y="0" width="1440" height="124" rx="16" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12" stroke-width="2"/>
+    <circle cx="140" cy="62" r="32" fill="#2d7a4e"/>
+    <text x="140" y="74" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">4</text>
+    <text x="196" y="74" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Obra</text>
+    <line x1="568" y1="24" x2="568" y2="100" stroke="#1a2e1f" stroke-opacity="0.1" stroke-width="2"/>
+    <text font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">
+      <tspan x="600" y="54">Certificado energético inicial y, el mismo</tspan>
+      <tspan x="600" y="88">día, aislamiento del suelo del desván</tspan>
+    </text>
+    <rect x="1176" y="22" width="308" height="80" rx="40" fill="#22a044"/>
+    <text x="1330" y="71" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#ffffff">Los Artesanos Verdes</text>
+  </g>
+
+  <!-- Paso 5: fin de obra -->
+  <g transform="translate(0,762)">
+    <rect x="80" y="0" width="1440" height="124" rx="16" fill="#ffffff" stroke="#1a2e1f" stroke-opacity="0.12" stroke-width="2"/>
+    <circle cx="140" cy="62" r="32" fill="#2d7a4e"/>
+    <text x="140" y="74" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">5</text>
+    <text x="196" y="74" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Fin de obra</text>
+    <line x1="568" y1="24" x2="568" y2="100" stroke="#1a2e1f" stroke-opacity="0.1" stroke-width="2"/>
+    <text font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">
+      <tspan x="600" y="54">Firman el presidente y el administrador;</tspan>
+      <tspan x="600" y="88">basta una firma digital para enviarlo</tspan>
+    </text>
+    <rect x="1176" y="22" width="308" height="80" rx="40" fill="#c1d9cc"/>
+    <text text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" font-weight="700" fill="#1a2e1f">
+      <tspan x="1330" y="56">El presidente</tspan>
+      <tspan x="1330" y="86">y el administrador</tspan>
+    </text>
+  </g>
+
+  <!-- Pie -->
+  <text x="800" y="944" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f" fill-opacity="0.8">Una jornada de obra, sin obras en las viviendas · Certificado energético del edificio, antes y después</text>
+</svg>
