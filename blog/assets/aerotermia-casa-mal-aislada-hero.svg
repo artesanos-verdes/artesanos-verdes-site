@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Aerotermia en una casa mal aislada: la época de construcción y los dos caminos para aislar</title>
+  <desc id="hero-desc">Infografía en dos partes. A la izquierda, un gráfico de barras con el valor de referencia de la demanda de calefacción en vivienda unifamiliar, en kilovatios hora por metro cuadrado y año, que fija el anexo IV de la ficha RES060_FM para León, Burgos y Valladolid según la época de construcción: hasta 1940, 260,5, 269,5 y 230,7; de 1961 a 1980, 235,7, 244,1 y 208,3; de 1981 a 2007, 147,0, 152,9 y 128,3; después de 2019, 71,8, 75,2 y 61,5. Debajo, una nota: en vivienda unifamiliar, la ficha pone un tope de dos veces el valor de referencia. A la derecha, dos caminos. Uno: aislar antes, en una obra previa con su propio expediente, el desván o la cubierta, y después la bomba de calor con la ficha RES060_FM, calculada para la casa aislada. Dos: todo a la vez, la envolvente y la bomba de calor en una sola obra, con la ficha RES080_FM de rehabilitación profunda, que aplica el multiplicador solo a la parte de la bomba de calor y pide cuatro certificados energéticos. Abajo, un aviso: con letra F o G en las zonas climáticas D y E, el propietario firma que le han informado del aislamiento deficiente. Fuente: Resolución publicada en el BOE el 7 de noviembre de 2026.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="86" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">Aerotermia en una casa mal aislada</text>
+  <text x="800" y="134" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#22a044">Cuánto pesa la época de construcción y en qué orden aislar</text>
+  <line x1="80" y1="164" x2="1520" y2="164" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Panel izquierdo: demanda de referencia (anexo IV) -->
+  <rect x="80" y="190" width="790" height="694" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="112" y="240" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Demanda de referencia de calefacción</text>
+  <text x="112" y="276" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#b8733a">Vivienda unifamiliar · kWh/m²·año · anexo IV, ficha RES060_FM</text>
+
+  <!-- Leyenda -->
+  <rect x="112" y="302" width="24" height="24" rx="4" fill="#1a2e1f"/>
+  <text x="146" y="322" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">León</text>
+  <rect x="236" y="302" width="24" height="24" rx="4" fill="#22a044"/>
+  <text x="270" y="322" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Burgos</text>
+  <rect x="380" y="302" width="24" height="24" rx="4" fill="#b8733a"/>
+  <text x="414" y="322" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Valladolid</text>
+
+  <!-- Barras: escala 4/3 px por kWh/m²·año, base en y = 790 -->
+  <!-- Hasta 1940 -->
+  <rect x="131" y="442.7" width="48" height="347.3" fill="#1a2e1f"/>
+  <rect x="187" y="430.7" width="48" height="359.3" fill="#22a044"/>
+  <rect x="243" y="482.4" width="48" height="307.6" fill="#b8733a"/>
+  <text x="155" y="432" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">260,5</text>
+  <text x="211" y="420" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">269,5</text>
+  <text x="267" y="472" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">230,7</text>
+  <!-- 1961-1980 -->
+  <rect x="314" y="475.7" width="48" height="314.3" fill="#1a2e1f"/>
+  <rect x="370" y="464.5" width="48" height="325.5" fill="#22a044"/>
+  <rect x="426" y="512.3" width="48" height="277.7" fill="#b8733a"/>
+  <text x="338" y="466" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">235,7</text>
+  <text x="394" y="454" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">244,1</text>
+  <text x="450" y="502" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">208,3</text>
+  <!-- 1981-2007 -->
+  <rect x="496" y="594.0" width="48" height="196.0" fill="#1a2e1f"/>
+  <rect x="552" y="586.1" width="48" height="203.9" fill="#22a044"/>
+  <rect x="608" y="618.9" width="48" height="171.1" fill="#b8733a"/>
+  <text x="520" y="584" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">147,0</text>
+  <text x="576" y="576" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">152,9</text>
+  <text x="632" y="609" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">128,3</text>
+  <!-- Después de 2019 -->
+  <rect x="679" y="694.3" width="48" height="95.7" fill="#1a2e1f"/>
+  <rect x="735" y="689.7" width="48" height="100.3" fill="#22a044"/>
+  <rect x="791" y="708.0" width="48" height="82.0" fill="#b8733a"/>
+  <text x="703" y="684" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">71,8</text>
+  <text x="759" y="680" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">75,2</text>
+  <text x="815" y="698" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="16" font-weight="700" fill="#1a2e1f">61,5</text>
+
+  <!-- Eje y épocas -->
+  <line x1="120" y1="790" x2="850" y2="790" stroke="#1a2e1f" stroke-width="2"/>
+  <text x="211" y="826" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Hasta 1940</text>
+  <text x="394" y="826" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">1961-1980</text>
+  <text x="576" y="826" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">1981-2007</text>
+  <text x="759" y="826" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Después de 2019</text>
+  <text x="112" y="864" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-style="italic" fill="#1a2e1f">Tope de la ficha en unifamiliar: 2 × el valor de referencia</text>
+
+  <!-- Columna derecha: dos caminos -->
+  <text x="900" y="232" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Dos caminos</text>
+
+  <!-- Camino 1 -->
+  <rect x="900" y="252" width="620" height="240" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="950" cy="304" r="28" fill="#22a044"/>
+  <text x="950" y="315" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">1</text>
+  <text x="996" y="314" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">Aislar antes, en una obra previa</text>
+  <text x="932" y="368" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Desván o cubierta, con su propio expediente</text>
+  <rect x="932" y="392" width="248" height="50" rx="25" fill="#f5efe1" stroke="#22a044" stroke-width="2"/>
+  <text x="1056" y="425" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#1a2e1f">1.º Aislamiento</text>
+  <line x1="1190" y1="417" x2="1236" y2="417" stroke="#1a2e1f" stroke-width="3"/>
+  <polygon points="1236,407 1252,417 1236,427" fill="#1a2e1f"/>
+  <rect x="1262" y="392" width="228" height="50" rx="25" fill="#22a044"/>
+  <text x="1376" y="425" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">2.º RES060_FM</text>
+  <text x="932" y="474" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">La bomba se calcula para la casa aislada</text>
+
+  <!-- Camino 2 -->
+  <rect x="900" y="508" width="620" height="262" rx="18" fill="#1a2e1f"/>
+  <circle cx="950" cy="560" r="28" fill="#22a044"/>
+  <text x="950" y="571" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">2</text>
+  <text x="996" y="570" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#f5efe1">Todo a la vez, en una sola obra</text>
+  <text x="932" y="622" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1">Envolvente y bomba de calor juntas</text>
+  <rect x="932" y="642" width="248" height="50" rx="25" fill="#22a044"/>
+  <text x="1056" y="675" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Ficha RES080_FM</text>
+  <text x="1200" y="675" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#f5efe1">Rehabilitación profunda</text>
+  <text x="932" y="726" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#f5efe1">Multiplicador solo sobre la parte de la bomba</text>
+  <text x="932" y="754" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#f5efe1">y cuatro certificados energéticos</text>
+
+  <!-- Aviso F o G -->
+  <rect x="900" y="786" width="620" height="98" rx="18" fill="#b8733a"/>
+  <text x="932" y="826" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">Letra F o G en zonas D y E: el propietario firma</text>
+  <text x="932" y="858" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#ffffff">que le han informado del aislamiento deficiente</text>
+
+  <!-- Pie -->
+  <line x1="80" y1="912" x2="1520" y2="912" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="80" y="954" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Valores de referencia de la ficha, no la demanda de tu casa</text>
+  <text x="1520" y="954" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#b8733a">Fuente: BOE de 7 de noviembre de 2026 (BOE-A-2026-23367)</text>
+</svg>

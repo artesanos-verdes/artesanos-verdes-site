@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Aerotermia híbrida con caldera: tres vías y la cobertura oficial del modo paralelo</title>
+  <desc id="hero-desc">Infografía en dos columnas. A la izquierda, las tres vías para la caldera al instalar una bomba de calor con factor multiplicador del sistema CAE. Uno: retirar la caldera, ficha RES060_FM; la bomba cubre toda la calefacción y el agua caliente sanitaria y, en las zonas D y E, lleva su propio sistema de seguridad. Dos: dejarla solo para emergencias, ficha RES060_FM; queda en preinstalación, sin hibridar y con accionamiento manual, y no sirve de apoyo en los días de helada. Tres: hibridarla, fichas RES090_FM a RES099_FM; en paralelo la caldera completa a la bomba, en alternativo la caldera la releva por debajo de una temperatura exterior, y el ahorro reconocido se multiplica por la cobertura Cb. Debajo: coeficiente 2 en vivienda unifamiliar y 2,5 en piso con sistema individual, solo en vivienda habitual. A la derecha, un gráfico con la cobertura oficial en modo paralelo con aerotermia: porcentaje de la demanda anual cubierta según la potencia de la bomba sobre la potencia de proyecto. Con un 15 % o menos, la cobertura es cero; con un 50 %, la bomba cubre el 80,45 % en la zona D y el 75,36 % en la zona E1; con un 100 % o más, el 100 %. Nota: en modo alternativo, en las zonas D y E1, la cobertura es cero por debajo del 58,46 %. Fuente: Resolución de 3 de noviembre de 2026, BOE de 7 de noviembre de 2026.</desc>
+
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+  <text x="800" y="86" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="48" font-weight="700" fill="#1a2e1f">¿Qué hacer con la caldera al poner aerotermia?</text>
+  <text x="800" y="134" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#22a044">Tres vías con factor multiplicador del CAE y la cobertura oficial en paralelo</text>
+  <line x1="70" y1="166" x2="1530" y2="166" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Vía 1 -->
+  <rect x="70" y="196" width="700" height="190" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="126" cy="254" r="30" fill="#22a044"/>
+  <text x="126" y="265" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">1</text>
+  <text x="176" y="264" font-family="'Source Serif 4', Georgia, serif" font-size="31" font-weight="700" fill="#1a2e1f">Retirar la caldera</text>
+  <rect x="600" y="230" width="150" height="42" rx="21" fill="#1a2e1f"/>
+  <text x="675" y="258" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">RES060_FM</text>
+  <text x="176" y="312" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">La bomba cubre toda la calefacción y el ACS</text>
+  <text x="176" y="348" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Zonas D y E: sistema de seguridad en la bomba</text>
+  <!-- Vía 2 -->
+  <rect x="70" y="402" width="700" height="190" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <circle cx="126" cy="460" r="30" fill="#22a044"/>
+  <text x="126" y="471" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">2</text>
+  <text x="176" y="470" font-family="'Source Serif 4', Georgia, serif" font-size="31" font-weight="700" fill="#1a2e1f">Dejarla para emergencias</text>
+  <rect x="600" y="436" width="150" height="42" rx="21" fill="#1a2e1f"/>
+  <text x="675" y="464" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">RES060_FM</text>
+  <text x="176" y="518" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Preinstalación, sin hibridar, accionamiento manual</text>
+  <text x="176" y="554" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">No es el apoyo de los días de helada</text>
+  <!-- Vía 3 -->
+  <rect x="70" y="608" width="700" height="226" rx="18" fill="#1a2e1f" stroke="#1a2e1f" stroke-width="3"/>
+  <circle cx="126" cy="666" r="30" fill="#22a044"/>
+  <text x="126" y="677" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">3</text>
+  <text x="176" y="676" font-family="'Source Serif 4', Georgia, serif" font-size="31" font-weight="700" fill="#f5efe1">Hibridarla</text>
+  <rect x="470" y="642" width="280" height="42" rx="21" fill="#b8733a"/>
+  <text x="610" y="670" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">RES090_FM a RES099_FM</text>
+  <text x="176" y="724" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1">Paralelo: la caldera completa a la bomba</text>
+  <text x="176" y="760" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1">Alternativo: bajo cierta temperatura, solo la caldera</text>
+  <text x="176" y="796" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#f5efe1">Ahorro reconocido × cobertura C<tspan font-size="17" dy="6">b</tspan></text>
+  <text x="70" y="878" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#1a2e1f">Coeficiente: 2 en unifamiliar · 2,5 en piso con sistema individual</text>
+  <text x="70" y="912" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">Solo vivienda habitual · caldera de gas natural, propano, butano o gasóleo</text>
+
+  <!-- Gráfico de cobertura en paralelo -->
+  <rect x="820" y="196" width="710" height="728" rx="18" fill="#ffffff" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="1175" y="244" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="29" font-weight="700" fill="#1a2e1f">Cobertura oficial en modo paralelo</text>
+  <text x="1175" y="278" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">Aerotermia · anexo V de las fichas RES093_FM y RES094_FM</text>
+  <line x1="930" y1="740" x2="1470" y2="740" stroke="#e4ddcc" stroke-width="2"/>
+  <text x="918" y="747" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">0 %</text>
+  <line x1="930" y1="638" x2="1470" y2="638" stroke="#e4ddcc" stroke-width="1.5"/>
+  <text x="918" y="644" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">25 %</text>
+  <line x1="930" y1="535" x2="1470" y2="535" stroke="#e4ddcc" stroke-width="1.5"/>
+  <text x="918" y="542" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">50 %</text>
+  <line x1="930" y1="432" x2="1470" y2="432" stroke="#e4ddcc" stroke-width="1.5"/>
+  <text x="918" y="440" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">75 %</text>
+  <line x1="930" y1="330" x2="1470" y2="330" stroke="#e4ddcc" stroke-width="1.5"/>
+  <text x="918" y="337" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">100 %</text>
+  <text x="930" y="772" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">0 %</text>
+  <text x="1065" y="772" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">25 %</text>
+  <text x="1200" y="772" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">50 %</text>
+  <text x="1335" y="772" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">75 %</text>
+  <text x="1470" y="772" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">100 %</text>
+  <line x1="1200" y1="740" x2="1200" y2="330" stroke="#1a2e1f" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.5"/>
+  <polyline points="930.0,740.0 1011.0,740.0 1038.0,592.4 1065.0,559.7 1092.0,528.8 1119.0,500.3 1146.0,474.4 1173.0,451.4 1200.0,431.0 1227.0,413.1 1254.0,397.3 1281.0,384.2 1308.0,373.0 1335.0,363.1 1362.0,355.5 1389.0,349.4 1416.0,344.4 1443.0,340.8 1470.0,330.0" fill="none" stroke="#b8733a" stroke-width="5" stroke-linejoin="round"/>
+  <polyline points="930.0,740.0 1011.0,740.0 1038.0,578.2 1065.0,542.1 1092.0,508.6 1119.0,478.4 1146.0,452.1 1173.0,429.8 1200.0,410.2 1227.0,393.3 1254.0,378.9 1281.0,367.7 1308.0,358.7 1335.0,351.3 1362.0,346.1 1389.0,342.0 1416.0,338.9 1443.0,336.6 1470.0,330.0" fill="none" stroke="#22a044" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="1200.0" cy="410.2" r="9" fill="#22a044" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="1200.0" cy="431.0" r="9" fill="#b8733a" stroke="#ffffff" stroke-width="3"/>
+  <text x="1182" y="396" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#22a044">D: 80,45 %</text>
+  <text x="1218" y="465" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#b8733a">E1: 75,36 %</text>
+  <line x1="1290" y1="586" x2="1326" y2="586" stroke="#22a044" stroke-width="5"/>
+  <text x="1336" y="592" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Zona D (D1 a D3)</text>
+  <line x1="1290" y1="624" x2="1326" y2="624" stroke="#b8733a" stroke-width="5"/>
+  <text x="1336" y="630" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Zona E1</text>
+  <text x="1200" y="810" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Potencia de la bomba (A7/Wxx) sobre la potencia de proyecto</text>
+  <text x="848" y="535" text-anchor="middle" transform="rotate(-90 848 535)" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Demanda anual cubierta</text>
+  <text x="1175" y="858" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" fill="#1a2e1f">Con un 15 % o menos, la cobertura es cero</text>
+  <text x="1175" y="888" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">En alternativo (D y E1): cero por debajo del 58,46 %</text>
+
+  <text x="800" y="968" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" fill="#1a2e1f">Fuente: Resolución de 3 de noviembre de 2026 (BOE de 7 de noviembre), fichas RES060_FM y RES090_FM a RES099_FM</text>
+</svg>

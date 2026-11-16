@@ -58,7 +58,7 @@
       <path d="M -8 8 Q 6 -4 20 -14" stroke="#ffffff" stroke-width="2" fill="none"/>
     </g>
     <text x="732" y="194" fill="#1a4d30" font-size="21" font-weight="800">Aerotermia</text>
-    <text x="732" y="216" fill="#4d6b58" font-size="13" font-weight="600">Bomba de calor aire-agua / aire-aire</text>
+    <text x="732" y="216" fill="#4d6b58" font-size="13" font-weight="600">Bomba de calor aire-agua</text>
 
     <!-- Row 1: Eficiencia -->
     <text x="650" y="262" fill="#888" font-size="11" font-weight="700" letter-spacing="1.5">EFICIENCIA · ÍNDICE RELATIVO</text>

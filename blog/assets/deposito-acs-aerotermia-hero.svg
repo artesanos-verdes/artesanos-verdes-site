@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Aerotermia y agua caliente: el acumulador de ACS y el depósito de inercia</title>
+  <desc id="hero-desc">Esquema simplificado de una instalación de aerotermia. A la izquierda, fuera de la casa, la unidad exterior de una bomba de calor aire-agua. Atraviesan el muro dos pares de tuberías: el de arriba lleva el calor al serpentín de un acumulador de agua caliente sanitaria, que guarda el agua de consumo; de su parte alta sale el agua caliente hacia duchas y grifos y por abajo entra el agua de red. El par de abajo va a un depósito de inercia, que guarda agua de la calefacción y la reparte a los radiadores o al suelo radiante. A la derecha, dos recuadros. El primero recoge la referencia del Código Técnico de la Edificación: 28 litros por persona y día a 60 °C; con tres dormitorios, cuatro personas y 112 litros al día. El segundo resume la ficha CAE RES060_FM: la bomba de calor cubre la calefacción y el agua caliente, y el certificado de inercia indica los litros totales y los litros por kW, según el fabricante. Al pie, la advertencia de que el volumen de cada depósito depende del equipo y de que no hay una regla única.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="84" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="46" font-weight="700" fill="#1a2e1f">Aerotermia y agua caliente: dos depósitos distintos</text>
+  <text x="800" y="130" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#22a044">El acumulador guarda el agua que usas; el de inercia, la de la calefacción</text>
+  <line x1="60" y1="158" x2="1540" y2="158" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Muro: fuera / dentro -->
+  <text x="300" y="232" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#b8733a">Exterior</text>
+  <text x="350" y="232" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#b8733a">Interior</text>
+  <rect x="318" y="250" width="14" height="600" fill="#1a2e1f"/>
+
+  <!-- Unidad exterior de la bomba de calor -->
+  <rect x="60" y="410" width="220" height="180" rx="14" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+  <circle cx="140" cy="500" r="56" fill="#f5efe1" stroke="#1a2e1f" stroke-width="4"/>
+  <g fill="#22a044">
+    <path d="M140 500 C128 470 136 452 150 448 C156 466 152 486 140 500 Z"/>
+    <path d="M140 500 C170 494 186 504 186 518 C168 522 150 514 140 500 Z"/>
+    <path d="M140 500 C122 524 104 528 96 518 C106 502 124 496 140 500 Z"/>
+  </g>
+  <circle cx="140" cy="500" r="8" fill="#1a2e1f"/>
+  <g stroke="#1a2e1f" stroke-width="3">
+    <line x1="218" y1="440" x2="262" y2="440"/>
+    <line x1="218" y1="460" x2="262" y2="460"/>
+    <line x1="218" y1="480" x2="262" y2="480"/>
+    <line x1="218" y1="500" x2="262" y2="500"/>
+    <line x1="218" y1="520" x2="262" y2="520"/>
+    <line x1="218" y1="540" x2="262" y2="540"/>
+    <line x1="218" y1="560" x2="262" y2="560"/>
+  </g>
+  <text x="170" y="640" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Bomba de calor</text>
+  <text x="170" y="674" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">aire-agua</text>
+
+  <!-- Tuberías hacia el acumulador de ACS (ida y retorno) -->
+  <g fill="none" stroke-width="6" stroke-linejoin="round">
+    <path d="M280 450 H385 V350 H450" stroke="#b8733a"/>
+    <path d="M450 420 H410 V475 H280" stroke="#1a2e1f"/>
+  </g>
+
+  <!-- Tuberías hacia el depósito de inercia (ida y retorno) -->
+  <g fill="none" stroke-width="6" stroke-linejoin="round">
+    <path d="M280 525 H410 V640 H450" stroke="#b8733a"/>
+    <path d="M450 780 H385 V550 H280" stroke="#1a2e1f"/>
+  </g>
+
+  <!-- Acumulador de ACS con serpentín -->
+  <rect x="450" y="200" width="160" height="270" rx="36" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+  <path d="M450 350 H575 V372 H478 V396 H575 V420 H450" fill="none" stroke="#b8733a" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M478 250 q13 -12 26 0 t26 0 t26 0 t26 0" fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M478 278 q13 -12 26 0 t26 0 t26 0 t26 0" fill="none" stroke="#b8733a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Agua caliente hacia duchas y grifos -->
+  <path d="M530 200 V176 H700 V204" fill="none" stroke="#b8733a" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M676 204 H724 L736 222 H664 Z" fill="#1a2e1f"/>
+  <g stroke="#b8733a" stroke-width="4" stroke-linecap="round">
+    <line x1="678" y1="234" x2="672" y2="252"/>
+    <line x1="700" y1="234" x2="700" y2="254"/>
+    <line x1="722" y1="234" x2="728" y2="252"/>
+  </g>
+  <text x="752" y="226" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Duchas y grifos</text>
+
+  <!-- Entrada de agua de red -->
+  <path d="M700 452 H610" fill="none" stroke="#22a044" stroke-width="5" stroke-dasharray="12 8"/>
+  <text x="716" y="460" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Agua de red</text>
+
+  <!-- Rótulo del acumulador -->
+  <text x="640" y="322" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Acumulador de ACS</text>
+  <text x="640" y="358" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">guarda el agua de consumo</text>
+
+  <!-- Depósito de inercia -->
+  <rect x="450" y="600" width="160" height="220" rx="36" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+  <g stroke="#c1d9cc" stroke-width="4">
+    <line x1="480" y1="680" x2="580" y2="680"/>
+    <line x1="480" y1="710" x2="580" y2="710"/>
+    <line x1="480" y1="740" x2="580" y2="740"/>
+  </g>
+
+  <!-- Del depósito de inercia a los radiadores -->
+  <g fill="none" stroke-width="6">
+    <path d="M610 655 H760" stroke="#b8733a"/>
+    <path d="M610 745 H760" stroke="#1a2e1f"/>
+  </g>
+  <rect x="760" y="640" width="150" height="120" rx="8" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <g stroke="#b8733a" stroke-width="3">
+    <line x1="785" y1="652" x2="785" y2="748"/>
+    <line x1="810" y1="652" x2="810" y2="748"/>
+    <line x1="835" y1="652" x2="835" y2="748"/>
+    <line x1="860" y1="652" x2="860" y2="748"/>
+    <line x1="885" y1="652" x2="885" y2="748"/>
+  </g>
+  <g stroke="#b8733a" stroke-width="4">
+    <line x1="774" y1="760" x2="774" y2="780"/>
+    <line x1="896" y1="760" x2="896" y2="780"/>
+  </g>
+  <text x="835" y="818" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Radiadores o suelo radiante</text>
+
+  <!-- Rótulo del depósito de inercia -->
+  <text x="640" y="582" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Depósito de inercia</text>
+  <text x="640" y="616" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">agua de la calefacción</text>
+
+  <!-- Recuadro 1: referencia del CTE -->
+  <rect x="1060" y="190" width="480" height="310" rx="20" fill="#1a2e1f"/>
+  <text x="1092" y="240" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#f5efe1">Referencia del CTE</text>
+  <text x="1092" y="322" font-family="'Source Serif 4', Georgia, serif" font-size="68" font-weight="700" fill="#22a044">28 litros</text>
+  <text x="1092" y="366" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#f5efe1">por persona y día, a 60 °C</text>
+  <line x1="1092" y1="396" x2="1508" y2="396" stroke="#22a044" stroke-width="2"/>
+  <text x="1092" y="438" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#f5efe1">3 dormitorios: 4 personas</text>
+  <text x="1092" y="474" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#f5efe1">112 litros al día, sin pérdidas</text>
+
+  <!-- Recuadro 2: ficha CAE RES060_FM -->
+  <rect x="1060" y="530" width="480" height="310" rx="20" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
+  <rect x="1060" y="530" width="480" height="70" rx="20" fill="#b8733a"/>
+  <rect x="1060" y="574" width="480" height="26" fill="#b8733a"/>
+  <text x="1300" y="576" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#ffffff">Ficha CAE RES060_FM</text>
+  <text x="1092" y="644" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">La bomba de calor cubre</text>
+  <text x="1092" y="678" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2e1f">calefacción y agua caliente</text>
+  <line x1="1092" y1="702" x2="1508" y2="702" stroke="#e6d9c0" stroke-width="2"/>
+  <text x="1092" y="742" font-family="'Source Serif 4', Georgia, serif" font-size="27" font-weight="700" fill="#1a2e1f">Certificado de inercia:</text>
+  <text x="1092" y="778" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#1a2e1f">litros totales y l/kW,</text>
+  <text x="1092" y="812" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#b8733a">según el fabricante</text>
+
+  <!-- Pie -->
+  <line x1="60" y1="876" x2="1540" y2="876" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="60" y="922" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Esquema simplificado. El volumen de cada depósito depende del equipo: no hay una regla única.</text>
+  <text x="60" y="962" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#b8733a">Fuentes: CTE DB-HE, anejo F (RD 732/2019) · Resolución de 3 de noviembre de 2026 (BOE de 7 de noviembre)</text>
+</svg>

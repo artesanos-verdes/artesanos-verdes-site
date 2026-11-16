@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Cómo se calcula el CAE de la aerotermia: la fórmula de la ficha RES060_FM y un ejemplo en kWh</title>
+  <desc id="hero-desc">Infografía. Arriba, la fórmula oficial de la ficha RES060_FM: el ahorro total es la demanda de calefacción por la superficie, por la diferencia entre la inversa del rendimiento de la caldera y la inversa del SCOP de la bomba de calor en calefacción, más la demanda de agua caliente por la misma diferencia con el SCOP en agua caliente, todo multiplicado por el coeficiente. Debajo, de dónde sale cada dato: la demanda y la superficie, del certificado energético posterior a la obra; el agua caliente, 11 o 16 kWh por metro cuadrado y año; el rendimiento de la caldera, de la tabla del anexo II; el SCOP, del fabricante a W35, W45 o W55; el coeficiente, 2, 2,5 o 3. A la izquierda, un ejemplo con valores supuestos para una casa unifamiliar de la provincia de León, en zona E1, de 1975, con 120 metros cuadrados y una caldera de gasóleo de 1990: calefacción, 24.107 kWh al año; agua caliente, 1.414 kWh; suma, 25.521 kWh; con el coeficiente 2 de una casa unifamiliar, unos 51.043 kWh al año. A la derecha, el rendimiento por defecto de las calderas de gasóleo según la tabla: 65 % antes de 1985, 70 % de 1985 a 1997, 79 % desde 1998 sin condensación y 83 % de condensación; en las de gas, del 55 % al 85 % según el año y el tipo. Son kWh de ahorro de energía final, no euros.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="86" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="52" font-weight="700" fill="#1a2e1f">Cómo se calcula el CAE de la aerotermia</text>
+  <text x="800" y="132" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">Ficha RES060_FM · kWh de ahorro de energía final al año, no euros</text>
+
+  <!-- Fórmula -->
+  <rect x="80" y="160" width="1440" height="100" rx="18" fill="#1a2e1f"/>
+  <text x="800" y="222" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="36" font-weight="700" fill="#f5efe1">AE<tspan font-size="22" dy="8">TOTAL</tspan><tspan dy="-8"> = [(D</tspan><tspan font-size="22" dy="8">cal</tspan><tspan dy="-8"> · S) · (1/η</tspan><tspan font-size="22" dy="8">i</tspan><tspan dy="-8"> − 1/SCOP</tspan><tspan font-size="22" dy="8">bdc</tspan><tspan dy="-8">) + D</tspan><tspan font-size="22" dy="8">ACS</tspan><tspan dy="-8"> · (1/η</tspan><tspan font-size="22" dy="8">i</tspan><tspan dy="-8"> − 1/SCOP</tspan><tspan font-size="22" dy="8">dhw</tspan><tspan dy="-8">)] · f</tspan><tspan font-size="22" dy="8">M</tspan></text>
+
+  <!-- De dónde sale cada dato -->
+  <rect x="80" y="282" width="268" height="104" rx="14" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="214" y="324" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">D<tspan font-size="18" dy="6">cal</tspan><tspan dy="-6"> y S</tspan></text>
+  <text x="214" y="362" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Certificado posterior</text>
+
+  <rect x="373" y="282" width="268" height="104" rx="14" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="507" y="324" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">D<tspan font-size="18" dy="6">ACS</tspan></text>
+  <text x="507" y="362" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">11 o 16 kWh/m²·año</text>
+
+  <rect x="666" y="282" width="268" height="104" rx="14" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="800" y="324" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">η<tspan font-size="18" dy="6">i</tspan></text>
+  <text x="800" y="362" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Tabla del anexo II</text>
+
+  <rect x="959" y="282" width="268" height="104" rx="14" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="1093" y="324" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">SCOP</text>
+  <text x="1093" y="362" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">W35, W45 o W55</text>
+
+  <rect x="1252" y="282" width="268" height="104" rx="14" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="1386" y="324" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a2e1f">f<tspan font-size="18" dy="6">M</tspan></text>
+  <text x="1386" y="362" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">2, 2,5 o 3</text>
+
+  <!-- Panel izquierdo: ejemplo -->
+  <rect x="80" y="410" width="880" height="508" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="120" y="462" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Ejemplo con valores supuestos</text>
+  <text x="120" y="500" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Casa en León (zona E1), 1975, 120 m², gasóleo de 1990</text>
+  <line x1="120" y1="524" x2="920" y2="524" stroke="#c1d9cc" stroke-width="2"/>
+
+  <text x="120" y="570" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Calefacción</text>
+  <text x="120" y="604" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">180 × 120 × (1/0,70 − 1/3,2)</text>
+  <text x="920" y="590" text-anchor="end" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#1a2e1f">24.107 kWh</text>
+
+  <text x="120" y="656" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Agua caliente</text>
+  <text x="120" y="690" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">11 × 120 × (1/0,70 − 1/2,8)</text>
+  <text x="920" y="676" text-anchor="end" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#1a2e1f">1.414 kWh</text>
+
+  <line x1="120" y1="716" x2="920" y2="716" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="120" y="760" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#1a2e1f">Suma</text>
+  <text x="920" y="760" text-anchor="end" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">25.521 kWh/año</text>
+
+  <rect x="120" y="784" width="800" height="64" rx="12" fill="#b8733a"/>
+  <text x="144" y="826" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Con el coeficiente ×2 (casa)</text>
+  <text x="896" y="827" text-anchor="end" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">≈ 51.043 kWh/año</text>
+
+  <text x="120" y="888" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">Demanda 180 kWh/m²·año · η 0,70 · SCOP 3,2 (W55) y 2,8 (ACS)</text>
+
+  <!-- Panel derecho: rendimiento de la caldera -->
+  <rect x="990" y="410" width="530" height="508" rx="18" fill="#1a2e1f"/>
+  <text x="1026" y="462" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#f5efe1">Rendimiento de la caldera</text>
+  <text x="1026" y="498" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#f5efe1">Gasóleo · tabla del anexo II</text>
+
+  <text x="1026" y="546" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#f5efe1">Antes de 1985</text>
+  <rect x="1026" y="558" width="234" height="28" rx="6" fill="#22a044"/>
+  <text x="1274" y="581" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#f5efe1">65 %</text>
+
+  <text x="1026" y="630" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#f5efe1">De 1985 a 1997</text>
+  <rect x="1026" y="642" width="252" height="28" rx="6" fill="#22a044"/>
+  <text x="1292" y="665" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#f5efe1">70 %</text>
+
+  <text x="1026" y="714" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#f5efe1">Desde 1998, sin condensación</text>
+  <rect x="1026" y="726" width="284" height="28" rx="6" fill="#22a044"/>
+  <text x="1324" y="749" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#f5efe1">79 %</text>
+
+  <text x="1026" y="798" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#f5efe1">De condensación</text>
+  <rect x="1026" y="810" width="299" height="28" rx="6" fill="#22a044"/>
+  <text x="1339" y="833" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" font-weight="700" fill="#f5efe1">83 %</text>
+
+  <text x="1026" y="888" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#f5efe1">Gas: del 55 % al 85 %, según año y tipo</text>
+
+  <!-- Fuente -->
+  <text x="800" y="962" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#1a2e1f">Fuente: Resolución de 3 de noviembre de 2026 (BOE de 7 de noviembre), ficha RES060_FM · Cálculo propio con valores supuestos</text>
+</svg>

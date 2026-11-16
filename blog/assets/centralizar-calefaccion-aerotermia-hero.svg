@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">De calderas individuales a una bomba de calor central: ficha RES062_FM</title>
+  <desc id="hero-desc">Dos edificios de cuatro plantas sobre un bajo comercial. Antes: cada piso tiene su propia caldera de gas o gasóleo. Una flecha con el coeficiente 4 lleva al después: dos bombas de calor en la cubierta alimentan una instalación central que da calefacción y agua caliente a tres pisos, cuyas calderas quedan inhabilitadas y dadas de baja; el segundo piso no se suma y mantiene su caldera, y el local comercial queda fuera de la ficha. Una leyenda resume lo que exige la ficha, también que la caldera no puede quedar de apoyo. Abajo, los plazos para comunidades: fin de la obra el 31-12-2027, con facturas antes del 1-1-2028, y último día para presentar el expediente el 28-2-2028; el cupo es para 2027, así que conviene no apurar.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="80" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">De calderas individuales a una bomba de calor central</text>
+  <text x="800" y="126" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">Ficha RES062_FM del sistema CAE · coeficiente 4 para los pisos que se conectan</text>
+
+  <!-- Rótulos de los dos edificios -->
+  <text x="290" y="184" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="36" font-weight="700" fill="#1a2e1f">Antes</text>
+  <text x="290" y="216" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">una caldera en cada piso</text>
+  <text x="860" y="184" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="36" font-weight="700" fill="#1a2e1f">Después</text>
+  <text x="860" y="216" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">calefacción y agua caliente para todo el edificio</text>
+
+  <!-- Terreno -->
+  <rect x="60" y="780" width="1040" height="10" rx="3" fill="#1a2e1f"/>
+
+  <!-- ===== Edificio ANTES ===== -->
+  <rect x="110" y="300" width="360" height="480" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+  <rect x="98" y="286" width="384" height="14" rx="3" fill="#1a2e1f"/>
+  <g stroke="#1a2e1f" stroke-width="4">
+    <line x1="110" y1="397" x2="470" y2="397"/>
+    <line x1="110" y1="494" x2="470" y2="494"/>
+    <line x1="110" y1="591" x2="470" y2="591"/>
+    <line x1="110" y1="688" x2="470" y2="688"/>
+  </g>
+  <!-- Ventanas -->
+  <g fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3">
+    <rect x="140" y="320" width="64" height="56" rx="3"/>
+    <rect x="232" y="320" width="64" height="56" rx="3"/>
+    <rect x="140" y="417" width="64" height="56" rx="3"/>
+    <rect x="232" y="417" width="64" height="56" rx="3"/>
+    <rect x="140" y="514" width="64" height="56" rx="3"/>
+    <rect x="232" y="514" width="64" height="56" rx="3"/>
+    <rect x="140" y="611" width="64" height="56" rx="3"/>
+    <rect x="232" y="611" width="64" height="56" rx="3"/>
+  </g>
+  <!-- Calderas individuales y salidas de humos -->
+  <g fill="#ffffff" stroke="#b8733a" stroke-width="4">
+    <rect x="384" y="322" width="44" height="58" rx="6"/>
+    <rect x="384" y="419" width="44" height="58" rx="6"/>
+    <rect x="384" y="516" width="44" height="58" rx="6"/>
+    <rect x="384" y="613" width="44" height="58" rx="6"/>
+  </g>
+  <g fill="none" stroke="#b8733a" stroke-width="4" stroke-linejoin="round">
+    <path d="M406 322 V310 H486"/>
+    <path d="M406 419 V407 H486"/>
+    <path d="M406 516 V504 H486"/>
+    <path d="M406 613 V601 H486"/>
+  </g>
+  <g fill="#b8733a">
+    <path d="M406 372 c-8 0 -13 -6 -11 -13 c1 -5 5 -8 6 -14 c4 3 5 7 4 11 c3 -2 5 -6 4 -12 c6 5 9 11 9 17 c0 7 -5 11 -12 11 z"/>
+    <path d="M406 469 c-8 0 -13 -6 -11 -13 c1 -5 5 -8 6 -14 c4 3 5 7 4 11 c3 -2 5 -6 4 -12 c6 5 9 11 9 17 c0 7 -5 11 -12 11 z"/>
+    <path d="M406 566 c-8 0 -13 -6 -11 -13 c1 -5 5 -8 6 -14 c4 3 5 7 4 11 c3 -2 5 -6 4 -12 c6 5 9 11 9 17 c0 7 -5 11 -12 11 z"/>
+    <path d="M406 663 c-8 0 -13 -6 -11 -13 c1 -5 5 -8 6 -14 c4 3 5 7 4 11 c3 -2 5 -6 4 -12 c6 5 9 11 9 17 c0 7 -5 11 -12 11 z"/>
+  </g>
+  <!-- Bajo comercial -->
+  <rect x="130" y="708" width="100" height="52" rx="3" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="260" y="708" width="50" height="72" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <text x="180" y="742" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#1a2e1f">Local</text>
+
+  <!-- ===== Flecha y coeficiente ===== -->
+  <path d="M496 525 H636" stroke="#b8733a" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="634,505 666,525 634,545" fill="#b8733a"/>
+  <circle cx="572" cy="525" r="52" fill="#22a044"/>
+  <text x="572" y="541" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="44" font-weight="700" fill="#ffffff">×4</text>
+  <text x="572" y="612" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">coeficiente</text>
+
+  <!-- ===== Edificio DESPUÉS ===== -->
+  <!-- Bombas de calor en la cubierta -->
+  <g fill="#ffffff" stroke="#1a2e1f" stroke-width="4">
+    <rect x="730" y="234" width="110" height="52" rx="6"/>
+    <rect x="880" y="234" width="110" height="52" rx="6"/>
+  </g>
+  <g fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3">
+    <circle cx="768" cy="260" r="17"/>
+    <circle cx="918" cy="260" r="17"/>
+  </g>
+  <g fill="#1a2e1f">
+    <circle cx="768" cy="260" r="4"/>
+    <circle cx="918" cy="260" r="4"/>
+  </g>
+  <g stroke="#1a2e1f" stroke-width="3">
+    <path d="M800 248 H826 M800 260 H826 M800 272 H826"/>
+    <path d="M950 248 H976 M950 260 H976 M950 272 H976"/>
+  </g>
+
+  <rect x="680" y="300" width="360" height="480" fill="#ffffff" stroke="#1a2e1f" stroke-width="5"/>
+  <rect x="668" y="286" width="384" height="14" rx="3" fill="#1a2e1f"/>
+  <g stroke="#1a2e1f" stroke-width="4">
+    <line x1="680" y1="397" x2="1040" y2="397"/>
+    <line x1="680" y1="494" x2="1040" y2="494"/>
+    <line x1="680" y1="591" x2="1040" y2="591"/>
+    <line x1="680" y1="688" x2="1040" y2="688"/>
+  </g>
+
+  <!-- Montante de la instalación central -->
+  <g fill="none" stroke="#22a044" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M785 286 V312 H712 V639"/>
+    <path d="M935 286 V312 H785"/>
+    <path d="M712 357 H760"/>
+    <path d="M712 454 H760"/>
+    <path d="M712 639 H760"/>
+  </g>
+
+  <!-- Radiadores de los pisos que se adhieren (4.º, 3.º y 1.º) -->
+  <g fill="#ffffff" stroke="#22a044" stroke-width="4">
+    <rect x="760" y="337" width="100" height="40" rx="5"/>
+    <rect x="760" y="434" width="100" height="40" rx="5"/>
+    <rect x="760" y="619" width="100" height="40" rx="5"/>
+  </g>
+  <g stroke="#22a044" stroke-width="3">
+    <path d="M780 343 V371 M800 343 V371 M820 343 V371 M840 343 V371"/>
+    <path d="M780 440 V468 M800 440 V468 M820 440 V468 M840 440 V468"/>
+    <path d="M780 625 V653 M800 625 V653 M820 625 V653 M840 625 V653"/>
+  </g>
+
+  <!-- Calderas dadas de baja (silueta discontinua) -->
+  <g fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="9 7">
+    <rect x="964" y="322" width="44" height="58" rx="6"/>
+    <rect x="964" y="419" width="44" height="58" rx="6"/>
+    <rect x="964" y="613" width="44" height="58" rx="6"/>
+  </g>
+  <g font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#b8733a" text-anchor="end">
+    <text x="950" y="359">baja</text>
+    <text x="950" y="456">baja</text>
+    <text x="950" y="650">baja</text>
+  </g>
+
+  <!-- Piso que no se suma (2.º): mantiene su caldera -->
+  <rect x="964" y="516" width="44" height="58" rx="6" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <path d="M986 566 c-8 0 -13 -6 -11 -13 c1 -5 5 -8 6 -14 c4 3 5 7 4 11 c3 -2 5 -6 4 -12 c6 5 9 11 9 17 c0 7 -5 11 -12 11 z" fill="#b8733a"/>
+  <path d="M986 516 V504 H1056" fill="none" stroke="#b8733a" stroke-width="4" stroke-linejoin="round"/>
+  <text x="740" y="551" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="700" fill="#b8733a">no se suma</text>
+
+  <!-- Bajo comercial -->
+  <rect x="740" y="708" width="100" height="52" rx="3" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <rect x="880" y="708" width="50" height="72" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <text x="790" y="742" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" font-weight="700" fill="#1a2e1f">Local</text>
+
+  <!-- ===== Leyenda ===== -->
+  <text x="1100" y="318" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">Lo que exige la ficha</text>
+
+  <circle cx="1112" cy="362" r="18" fill="#22a044"/>
+  <path d="M1103 362 l6 7 l12 -14" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1146" y="370" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#1a2e1f">Pisos que se adhieren</text>
+  <text x="1146" y="400" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">conectados a la instalación central</text>
+
+  <rect x="1094" y="428" width="36" height="46" rx="5" fill="none" stroke="#b8733a" stroke-width="4" stroke-dasharray="8 6"/>
+  <text x="1146" y="452" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#1a2e1f">Su caldera, de baja</text>
+  <text x="1146" y="482" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">inhabilitada y retirada si procede</text>
+
+  <rect x="1094" y="510" width="36" height="46" rx="5" fill="#ffffff" stroke="#b8733a" stroke-width="4"/>
+  <path d="M1112 551 c-6.4 0 -10.4 -4.8 -8.8 -10.4 c0.8 -4 4 -6.4 4.8 -11.2 c3.2 2.4 4 5.6 3.2 8.8 c2.4 -1.6 4 -4.8 3.2 -9.6 c4.8 4 7.2 8.8 7.2 13.6 c0 5.6 -4 8.8 -9.6 8.8 z" fill="#b8733a"/>
+  <text x="1146" y="534" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#1a2e1f">Piso que no se suma</text>
+  <text x="1146" y="564" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">mantiene su instalación individual</text>
+
+  <rect x="1094" y="592" width="36" height="46" rx="3" fill="#c1d9cc" stroke="#1a2e1f" stroke-width="3"/>
+  <text x="1146" y="616" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#1a2e1f">Local comercial</text>
+  <text x="1146" y="646" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">fuera de la ficha</text>
+
+  <circle cx="1112" cy="698" r="18" fill="#b8733a"/>
+  <path d="M1105 691 l14 14 M1119 691 l-14 14" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <text x="1146" y="706" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#1a2e1f">Sin hibridación</text>
+  <text x="1146" y="736" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">la caldera del piso no queda de apoyo</text>
+
+  <!-- ===== Plazos para comunidades ===== -->
+  <rect x="60" y="808" width="1480" height="162" rx="20" fill="#ffffff" stroke="#c1d9cc" stroke-width="3"/>
+  <text x="100" y="864" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">Plazos para comunidades</text>
+  <text x="100" y="906" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">El cupo es para 2027:</text>
+  <text x="100" y="942" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#b8733a">sin apurar</text>
+
+  <line x1="560" y1="884" x2="1480" y2="884" stroke="#1a2e1f" stroke-width="4"/>
+  <circle cx="760" cy="884" r="14" fill="#22a044"/>
+  <circle cx="1260" cy="884" r="14" fill="#b8733a"/>
+  <text x="760" y="860" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">31-12-2027</text>
+  <text x="760" y="924" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">fin de la obra</text>
+  <text x="760" y="954" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">facturas antes del 1-1-2028</text>
+  <text x="1260" y="860" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#1a2e1f">28-2-2028</text>
+  <text x="1260" y="924" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">último día para el expediente</text>
+  <text x="1260" y="954" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">de una comunidad</text>
+</svg>

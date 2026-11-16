@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Factor multiplicador CAE para la aerotermia: coeficientes y calendario</title>
+  <desc id="hero-desc">Cuatro tarjetas con los coeficientes que la Resolución de 3 de noviembre de 2026 aplica a los kWh de ahorro certificados cuando una bomba de calor hidrónica sustituye a una caldera de gas o gasóleo: por 2 en una casa unifamiliar, por 2,5 en un piso con calefacción individual, por 3 en un edificio con calefacción central y por 4 en un edificio que pasa de calderas individuales a una bomba de calor central (ficha RES062_FM). Debajo, una banda indica que cada coeficiente se multiplica por 1,5 si residen consumidores vulnerables (Real Decreto 897/2017). Abajo, una línea de tiempo: 22-3-2026, la factura debe ser posterior a esta fecha; 8-11-2026, entrada en vigor; 15-1-2027, se abren los expedientes; 30-11-2027, fin del plazo de las actuaciones, con facturas anteriores al 1-12-2027; 31-12-2027, cierre de los expedientes. Comunidades de propietarios: actuaciones hasta el 31-12-2027 y expedientes hasta el 28-2-2028.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="90" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="50" font-weight="700" fill="#1a2e1f">Factor multiplicador CAE para la aerotermia</text>
+  <text x="800" y="140" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="29" fill="#1a2e1f">Multiplica los kWh de ahorro al sustituir una caldera de gas o gasóleo por aerotermia</text>
+  <line x1="72" y1="172" x2="1528" y2="172" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Tarjeta 1: casa unifamiliar -->
+  <rect x="72" y="200" width="346" height="330" rx="20" fill="#ffffff" stroke="#d8ccb0" stroke-width="2"/>
+  <polygon points="185,272 245,224 305,272" fill="#1a2e1f"/>
+  <rect x="197" y="270" width="96" height="52" fill="#1a2e1f"/>
+  <rect x="209" y="282" width="20" height="16" fill="#22a044"/>
+  <rect x="249" y="290" width="22" height="32" fill="#f5efe1"/>
+  <text x="245" y="428" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="112" font-weight="700" fill="#22a044">×2</text>
+  <text x="245" y="476" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" font-weight="600" fill="#1a2e1f">Casa</text>
+  <text x="245" y="508" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">unifamiliar</text>
+
+  <!-- Tarjeta 2: piso con calefacción individual -->
+  <rect x="442" y="200" width="346" height="330" rx="20" fill="#ffffff" stroke="#d8ccb0" stroke-width="2"/>
+  <rect x="567" y="224" width="96" height="98" fill="#1a2e1f"/>
+  <rect x="581" y="236" width="26" height="16" fill="#f5efe1"/>
+  <rect x="623" y="236" width="26" height="16" fill="#f5efe1"/>
+  <rect x="581" y="264" width="26" height="16" fill="#f5efe1"/>
+  <rect x="623" y="264" width="26" height="16" fill="#22a044"/>
+  <rect x="581" y="292" width="26" height="16" fill="#f5efe1"/>
+  <rect x="623" y="292" width="26" height="16" fill="#f5efe1"/>
+  <text x="615" y="428" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="112" font-weight="700" fill="#22a044">×2,5</text>
+  <text x="615" y="476" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" font-weight="600" fill="#1a2e1f">Piso con</text>
+  <text x="615" y="508" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">calefacción individual</text>
+
+  <!-- Tarjeta 3: edificio con calefacción central -->
+  <rect x="812" y="200" width="346" height="330" rx="20" fill="#ffffff" stroke="#d8ccb0" stroke-width="2"/>
+  <rect x="919" y="224" width="96" height="98" fill="#1a2e1f"/>
+  <rect x="933" y="236" width="26" height="16" fill="#f5efe1"/>
+  <rect x="975" y="236" width="26" height="16" fill="#f5efe1"/>
+  <rect x="933" y="264" width="26" height="16" fill="#f5efe1"/>
+  <rect x="975" y="264" width="26" height="16" fill="#f5efe1"/>
+  <rect x="933" y="292" width="26" height="16" fill="#f5efe1"/>
+  <rect x="975" y="292" width="26" height="16" fill="#f5efe1"/>
+  <line x1="1015" y1="306" x2="1027" y2="306" stroke="#22a044" stroke-width="5"/>
+  <rect x="1027" y="288" width="38" height="34" rx="4" fill="#22a044"/>
+  <text x="985" y="428" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="112" font-weight="700" fill="#22a044">×3</text>
+  <text x="985" y="476" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" font-weight="600" fill="#1a2e1f">Edificio con</text>
+  <text x="985" y="508" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">calefacción central</text>
+
+  <!-- Tarjeta 4: edificio que centraliza (RES062_FM) -->
+  <rect x="1182" y="200" width="346" height="330" rx="20" fill="#ffffff" stroke="#d8ccb0" stroke-width="2"/>
+  <rect x="1271" y="224" width="96" height="98" fill="#1a2e1f"/>
+  <rect x="1285" y="236" width="26" height="16" fill="#b8733a"/>
+  <rect x="1327" y="236" width="26" height="16" fill="#b8733a"/>
+  <rect x="1285" y="264" width="26" height="16" fill="#b8733a"/>
+  <rect x="1327" y="264" width="26" height="16" fill="#b8733a"/>
+  <rect x="1285" y="292" width="26" height="16" fill="#b8733a"/>
+  <rect x="1327" y="292" width="26" height="16" fill="#b8733a"/>
+  <line x1="1373" y1="305" x2="1393" y2="305" stroke="#1a2e1f" stroke-width="5"/>
+  <polygon points="1391,295 1405,305 1391,315" fill="#1a2e1f"/>
+  <rect x="1409" y="288" width="38" height="34" rx="4" fill="#22a044"/>
+  <text x="1355" y="428" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="112" font-weight="700" fill="#22a044">×4</text>
+  <text x="1355" y="476" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" font-weight="600" fill="#1a2e1f">Edificio que centraliza</text>
+  <text x="1355" y="508" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#1a2e1f">(ficha RES062_FM)</text>
+
+  <!-- Banda: consumidores vulnerables -->
+  <rect x="72" y="556" width="1456" height="64" rx="32" fill="#1a2e1f"/>
+  <text x="800" y="598" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="29" fill="#f5efe1"><tspan font-weight="700">Cada coeficiente × 1,5</tspan> si residen consumidores vulnerables (Real Decreto 897/2017)</text>
+
+  <line x1="72" y1="648" x2="1528" y2="648" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Línea de tiempo -->
+  <line x1="110" y1="772" x2="1470" y2="772" stroke="#1a2e1f" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="1466,756 1498,772 1466,788" fill="#1a2e1f"/>
+
+  <!-- 22-3-2026 -->
+  <circle cx="180" cy="772" r="16" fill="#22a044"/>
+  <text x="180" y="738" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">22-3-2026</text>
+  <text x="180" y="820" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">La factura debe ser</text>
+  <text x="180" y="848" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">posterior a esta fecha</text>
+
+  <!-- 8-11-2026 -->
+  <circle cx="480" cy="772" r="16" fill="#22a044"/>
+  <text x="480" y="738" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">8-11-2026</text>
+  <text x="480" y="820" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Entrada en vigor</text>
+  <text x="480" y="848" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">(BOE de 7-11-2026)</text>
+
+  <!-- 15-1-2027 -->
+  <circle cx="790" cy="772" r="16" fill="#22a044"/>
+  <text x="790" y="738" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">15-1-2027</text>
+  <text x="790" y="820" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Se abren</text>
+  <text x="790" y="848" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">los expedientes</text>
+
+  <!-- 30-11-2027 -->
+  <circle cx="1100" cy="772" r="16" fill="#22a044"/>
+  <text x="1100" y="738" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">30-11-2027</text>
+  <text x="1100" y="820" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Fin del plazo de las</text>
+  <text x="1100" y="848" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">actuaciones: facturas</text>
+  <text x="1100" y="876" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">antes del 1-12-2027</text>
+
+  <!-- 31-12-2027 -->
+  <circle cx="1400" cy="772" r="16" fill="#1a2e1f"/>
+  <text x="1400" y="738" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="30" font-weight="700" fill="#1a2e1f">31-12-2027</text>
+  <text x="1400" y="820" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">Cierre de</text>
+  <text x="1400" y="848" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#1a2e1f">los expedientes</text>
+
+  <!-- Comunidades -->
+  <line x1="72" y1="906" x2="1528" y2="906" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="800" y="952" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" font-weight="600" fill="#b8733a">Comunidades de propietarios: actuaciones hasta el 31-12-2027 y expedientes hasta el 28-2-2028</text>
+</svg>

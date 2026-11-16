@@ -16,8 +16,8 @@
   <rect x="0" y="0" width="1200" height="110" fill="#1a4d30"/>
   <text x="60" y="48" fill="#a8c4b0" font-size="13" font-weight="700" letter-spacing="3.5">LOS ARTESANOS VERDES · CLIMATIZACIÓN EFICIENTE</text>
   <text x="60" y="86" fill="#ffffff" font-size="32" font-weight="700">Aerotermia — bomba de calor</text>
-  <text x="1140" y="44" fill="#ffffff" font-size="15" font-weight="700" text-anchor="end">Aire-agua · Aire-aire</text>
-  <text x="1140" y="68" fill="#a8c4b0" font-size="12" font-weight="600" letter-spacing="1" text-anchor="end">Ficha CAE · RES060</text>
+  <text x="1140" y="44" fill="#ffffff" font-size="15" font-weight="700" text-anchor="end">Aire-agua · hidrónica</text>
+  <text x="1140" y="68" fill="#a8c4b0" font-size="12" font-weight="600" letter-spacing="1" text-anchor="end">Fichas CAE · RES060 y RES060_FM</text>
 
   <!-- ========== SUN (energía del entorno) ========== -->
   <g opacity="0.9">

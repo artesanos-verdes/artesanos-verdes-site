@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
-  <title id="hero-title">Sistema CAE: calendario de 2014 a 2031, con la propuesta K-838 marcada como propuesta</title>
-  <desc id="hero-desc">Cronología horizontal con siete hitos. 2014: la Ley 18/2014 crea la obligación de ahorro energético. 2020: el Real Decreto-ley 23/2020 la prorroga hasta el 31 de diciembre de 2030. 2023: el Real Decreto 36/2023 crea el sistema CAE, en vigor desde el 26 de enero de 2023, y el catálogo nace con 52 fichas. 2024: la Resolución de 3 de julio de 2024 amplía el catálogo a 114 fichas. 2026: el Real Decreto-ley 7/2026, de 20 de marzo, en vigor desde el 22 de marzo, y la Resolución de 3 de junio de 2026, que crea la ficha RES022 del desván no habitable. 2027: la propuesta K-838 de coeficientes multiplicadores para la bomba de calor, dibujada con línea discontinua porque no consta aprobada a 4 de noviembre de 2026. 2030 y 2031: fin de la obligación el 31 de diciembre de 2030 y última fecha de inicio de las actuaciones antes del 1 de enero de 2031.</desc>
+  <title id="hero-title">Sistema CAE: calendario de 2014 a 2031, con los coeficientes de la bomba de calor aprobados el 3 de noviembre de 2026</title>
+  <desc id="hero-desc">Cronología horizontal con siete hitos. 2014: la Ley 18/2014 crea la obligación de ahorro energético. 2020: el Real Decreto-ley 23/2020 la prorroga hasta el 31 de diciembre de 2030. 2023: el Real Decreto 36/2023 crea el sistema CAE, en vigor desde el 26 de enero de 2023, y el catálogo nace con 52 fichas. 2024: la Resolución de 3 de julio de 2024 amplía el catálogo a 114 fichas. 2026: el Real Decreto-ley 7/2026, de 20 de marzo, en vigor desde el 22 de marzo, y la Resolución de 3 de junio de 2026, que crea la ficha RES022 del desván no habitable. 2027: la Resolución de 3 de noviembre de 2026, en vigor desde el 8 de noviembre, fija los coeficientes multiplicadores de la bomba de calor (×2, ×2,5, ×3 y ×4), con expedientes del 15 de enero al 31 de diciembre de 2027. 2030 y 2031: fin de la obligación el 31 de diciembre de 2030 y última fecha de inicio de las actuaciones antes del 1 de enero de 2031.</desc>
 
   <!-- Fondo -->
   <rect width="1600" height="1000" fill="#f5efe1"/>
@@ -54,13 +54,13 @@
   <text x="1000" y="376" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Resolución de 3-6-2026:</text>
   <text x="1000" y="408" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#22a044">nueva ficha RES022 (desván)</text>
 
-  <!-- 2027 (abajo, propuesta) -->
-  <line x1="1200" y1="584" x2="1200" y2="650" stroke="#b8733a" stroke-width="3" stroke-dasharray="8 6"/>
-  <circle cx="1200" cy="560" r="22" fill="#f5efe1" stroke="#b8733a" stroke-width="5" stroke-dasharray="9 6"/>
-  <text x="1200" y="700" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#b8733a">2027</text>
-  <text x="1200" y="744" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Propuesta K-838: coeficientes</text>
-  <text x="1200" y="776" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">×2, ×3, ×4 para la bomba de calor</text>
-  <text x="1200" y="808" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#b8733a">no consta aprobada a 4-11-2026</text>
+  <!-- 2027 (abajo) -->
+  <line x1="1200" y1="584" x2="1200" y2="650" stroke="#22a044" stroke-width="3"/>
+  <circle cx="1200" cy="560" r="22" fill="#22a044"/>
+  <text x="1200" y="700" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#1a2e1f">2027</text>
+  <text x="1200" y="744" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Resolución de 3-11-2026:</text>
+  <text x="1200" y="776" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" font-weight="600" fill="#22a044">coeficientes ×2, ×2,5, ×3 y ×4</text>
+  <text x="1200" y="808" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">expedientes del 15-1 al 31-12-2027</text>
 
   <!-- 2030-2031 (arriba) -->
   <line x1="1400" y1="452" x2="1400" y2="536" stroke="#22a044" stroke-width="3"/>
@@ -74,7 +74,5 @@
   <line x1="120" y1="880" x2="1480" y2="880" stroke="#c1d9cc" stroke-width="2"/>
   <circle cx="160" cy="930" r="12" fill="#22a044"/>
   <text x="186" y="938" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">En vigor (publicado en el BOE)</text>
-  <circle cx="600" cy="930" r="12" fill="#f5efe1" stroke="#b8733a" stroke-width="4" stroke-dasharray="6 4"/>
-  <text x="626" y="938" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Propuesta en tramitación (expediente K-838)</text>
-  <text x="1480" y="938" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#b8733a">Última comprobación: 4-11-2026</text>
+  <text x="1480" y="938" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#b8733a">Última comprobación: 16-11-2026</text>
 </svg>

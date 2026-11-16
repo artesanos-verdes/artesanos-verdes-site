@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Bombas de calor y gases fluorados: el calendario del Reglamento (UE) 2024/573</title>
+  <desc id="hero-desc">Infografía en tres bloques. A la izquierda, el 1 de enero de 2027: desde esa fecha no pueden introducirse en el mercado bombas de calor nuevas con gases fluorados de PCG igual o superior a 150 de tres tipos: monobloc de hasta 12 kW, según la lectura del sector (EHPA) del punto 8 b; monobloc de más de 12 y hasta 50 kW, punto 8 d; y bibloc aire-agua de hasta 12 kW, punto 9 b; salvo excepciones por requisitos de seguridad. A la derecha, las fechas siguientes: en 2029, los split aire-aire de hasta 12 kW con PCG igual o superior a 150 y los partidos de más de 12 kW con PCG igual o superior a 750; en 2030, otros aparatos autónomos con PCG igual o superior a 150; en 2032, los autónomos de hasta 12 kW con cualquier gas fluorado, según la misma lectura del sector del punto 8 c; en 2033, los partidos de más de 12 kW con PCG igual o superior a 150; en 2035, los partidos de hasta 12 kW con cualquier gas fluorado; todas salvo requisitos de seguridad. Abajo, dos refrigerantes: el R32 o HFC-32, gas fluorado con un PCG de 675, afectado por los límites de PCG 150 y por los de cualquier gas fluorado, pero no por el de 750, y el R290 o propano, no fluorado, con un PCG de 0,02 e inflamable, de clase A3. Al pie: tu equipo instalado puede seguir funcionando y repararse. Fuente: Reglamento (UE) 2024/573, anexos I, IV y VI.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="86" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="42" font-weight="700" fill="#1a2e1f">Bombas de calor y gases fluorados: el calendario de la UE</text>
+  <text x="800" y="134" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="27" fill="#22a044">Reglamento (UE) 2024/573 · desde cada fecha no pueden introducirse en el mercado equipos nuevos</text>
+  <line x1="80" y1="164" x2="1520" y2="164" stroke="#c1d9cc" stroke-width="2"/>
+
+  <!-- Bloque 2027 -->
+  <rect x="80" y="194" width="720" height="500" rx="18" fill="#1a2e1f"/>
+  <text x="120" y="254" font-family="'Source Serif 4', Georgia, serif" font-size="40" font-weight="700" fill="#f5efe1">1 de enero de 2027</text>
+  <text x="120" y="296" font-family="'Source Sans 3', Arial, sans-serif" font-size="25" fill="#c1d9cc">Gases fluorados con PCG ≥ 150 en:</text>
+
+  <rect x="112" y="324" width="656" height="76" rx="12" fill="#f5efe1"/>
+  <text x="140" y="373" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#1a2e1f">Monobloc hasta 12 kW*</text>
+  <rect x="632" y="342" width="112" height="40" rx="20" fill="#22a044"/>
+  <text x="688" y="369" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Punto 8 b</text>
+
+  <rect x="112" y="414" width="656" height="76" rx="12" fill="#f5efe1"/>
+  <text x="140" y="463" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#1a2e1f">Monobloc de más de 12 a 50 kW</text>
+  <rect x="632" y="432" width="112" height="40" rx="20" fill="#22a044"/>
+  <text x="688" y="459" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Punto 8 d</text>
+
+  <rect x="112" y="504" width="656" height="76" rx="12" fill="#f5efe1"/>
+  <text x="140" y="553" font-family="'Source Serif 4', Georgia, serif" font-size="26" font-weight="700" fill="#1a2e1f">Bibloc aire-agua hasta 12 kW</text>
+  <rect x="632" y="522" width="112" height="40" rx="20" fill="#22a044"/>
+  <text x="688" y="549" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Punto 9 b</text>
+
+  <text x="120" y="628" font-family="'Source Sans 3', Arial, sans-serif" font-size="23" fill="#f5efe1">Salvo excepciones por requisitos de seguridad</text>
+  <text x="120" y="664" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#c1d9cc">* Según la lectura del sector (EHPA) de los puntos 8 b y 8 c</text>
+
+  <!-- Fechas siguientes -->
+  <rect x="840" y="194" width="680" height="500" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="880" y="254" font-family="'Source Serif 4', Georgia, serif" font-size="34" font-weight="700" fill="#1a2e1f">Las fechas siguientes</text>
+  <line x1="900" y1="312" x2="900" y2="604" stroke="#c1d9cc" stroke-width="4"/>
+
+  <circle cx="900" cy="312" r="11" fill="#b8733a"/>
+  <text x="928" y="322" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#b8733a">2029</text>
+  <text x="1016" y="321" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Split aire-aire hasta 12 kW: PCG ≥ 150</text>
+  <text x="1016" y="351" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Partidos de más de 12 kW: PCG ≥ 750</text>
+
+  <circle cx="900" cy="408" r="11" fill="#22a044"/>
+  <text x="928" y="418" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">2030</text>
+  <text x="1016" y="417" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Otros aparatos autónomos: PCG ≥ 150</text>
+
+  <circle cx="900" cy="474" r="11" fill="#22a044"/>
+  <text x="928" y="484" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">2032</text>
+  <text x="1016" y="483" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Autónomos hasta 12 kW*: cualquier gas fluorado</text>
+
+  <circle cx="900" cy="540" r="11" fill="#22a044"/>
+  <text x="928" y="550" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">2033</text>
+  <text x="1016" y="549" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Partidos de más de 12 kW: PCG ≥ 150</text>
+
+  <circle cx="900" cy="606" r="11" fill="#22a044"/>
+  <text x="928" y="616" font-family="'Source Serif 4', Georgia, serif" font-size="28" font-weight="700" fill="#1a2e1f">2035</text>
+  <text x="1016" y="615" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#1a2e1f">Partidos hasta 12 kW: cualquier gas fluorado</text>
+
+  <text x="880" y="664" font-family="'Source Sans 3', Arial, sans-serif" font-size="21" fill="#b8733a">Todas, salvo excepciones por requisitos de seguridad</text>
+
+  <!-- Refrigerantes -->
+  <rect x="80" y="724" width="720" height="132" rx="18" fill="#b8733a"/>
+  <text x="120" y="778" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">R32 (HFC-32)</text>
+  <text x="120" y="822" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#ffffff">Gas fluorado · PCG 675 · afectado por el límite de 150</text>
+
+  <rect x="840" y="724" width="680" height="132" rx="18" fill="#22a044"/>
+  <text x="880" y="778" font-family="'Source Serif 4', Georgia, serif" font-size="32" font-weight="700" fill="#ffffff">R290 (propano)</text>
+  <text x="880" y="822" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#ffffff">No fluorado · PCG 0,02 · inflamable, clase A3</text>
+
+  <!-- Pie -->
+  <line x1="80" y1="892" x2="1520" y2="892" stroke="#c1d9cc" stroke-width="2"/>
+  <text x="80" y="940" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#1a2e1f">Tu equipo instalado puede seguir funcionando y repararse</text>
+  <text x="1520" y="940" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#b8733a">Fuente: Reglamento (UE) 2024/573, anexos I, IV y VI</text>
+</svg>
