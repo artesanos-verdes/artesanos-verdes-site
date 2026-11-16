@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Aerotermia en Burgos: la tabla de referencia es un tope, manda tu certificado</title>
+  <desc id="hero-desc">Infografía. A la izquierda, barras horizontales con la demanda de calefacción de referencia que la ficha RES060_FM da a las casas construidas de 1981 a 2007, en kWh por metro cuadrado y año: Burgos 152,9, la más alta de la tabla; Ávila 152,7; Soria 149,9; León 147,0; y Valladolid 128,3. Para las casas anteriores a 1981, Ávila va primera y Burgos, segunda. A la derecha, la regla de la ficha en una casa: la demanda del cálculo es la menor entre la del certificado energético posterior a la obra y el doble de la referencia; en Burgos, para una casa de 1981 a 2007, ese tope es de 305,8 (cálculo propio). La tabla es un tope: manda tu certificado; en un piso solo cuenta el certificado. Abajo, una nota sobre la zona climática: Miranda de Ebro, a 474 metros según AEMET, es zona D1; la capital y Aranda de Duero son E1; en la provincia, la E1 empieza a 600 metros.</desc>
+
+  <!-- Fondo -->
+  <rect width="1600" height="1000" fill="#f5efe1"/>
+
+  <!-- Título -->
+  <text x="800" y="84" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="52" font-weight="700" fill="#1a2e1f">Aerotermia en Burgos: la tabla es un tope</text>
+  <text x="800" y="130" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">Ficha RES060_FM: demanda de calefacción de referencia y demanda que cuenta en una casa</text>
+
+  <!-- Panel izquierdo: referencia del anexo IV, casas de 1981 a 2007 -->
+  <rect x="60" y="168" width="900" height="600" rx="18" fill="#ffffff" stroke="#22a044" stroke-width="3"/>
+  <text x="100" y="226" font-family="'Source Serif 4', Georgia, serif" font-size="36" font-weight="700" fill="#1a2e1f">Casas de 1981 a 2007</text>
+  <text x="100" y="264" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#4a5a4f">Referencia del anexo IV, en kWh/m²·año</text>
+  <line x1="300" y1="308" x2="300" y2="700" stroke="#d9d2c3" stroke-width="2"/>
+  <path d="M300 320.0 H796.6 A8 8 0 0 1 804.6 328.0 V356.0 A8 8 0 0 1 796.6 364.0 H300 Z" fill="#22a044"/>
+  <text x="282" y="352" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" font-weight="700" fill="#1a2e1f">Burgos</text>
+  <text x="818.6" y="352" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" font-weight="700" fill="#1a2e1f">152,9</text>
+  <path d="M300 402.0 H795.9 A8 8 0 0 1 803.9 410.0 V438.0 A8 8 0 0 1 795.9 446.0 H300 Z" fill="#8c9f92"/>
+  <text x="282" y="434" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">Ávila</text>
+  <text x="817.9" y="434" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">152,7</text>
+  <path d="M300 484.0 H786.7 A8 8 0 0 1 794.7 492.0 V520.0 A8 8 0 0 1 786.7 528.0 H300 Z" fill="#8c9f92"/>
+  <text x="282" y="516" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">Soria</text>
+  <text x="808.7" y="516" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">149,9</text>
+  <path d="M300 566.0 H777.1 A8 8 0 0 1 785.1 574.0 V602.0 A8 8 0 0 1 777.1 610.0 H300 Z" fill="#8c9f92"/>
+  <text x="282" y="598" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">León</text>
+  <text x="799.1" y="598" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">147,0</text>
+  <path d="M300 648.0 H715.4 A8 8 0 0 1 723.4 656.0 V684.0 A8 8 0 0 1 715.4 692.0 H300 Z" fill="#8c9f92"/>
+  <text x="282" y="680" text-anchor="end" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">Valladolid</text>
+  <text x="737.4" y="680" font-family="'Source Sans 3', Arial, sans-serif" font-size="30" fill="#1a2e1f">128,3</text>
+  <text x="100" y="734" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#4a5a4f">Antes de 1981, Ávila va primera y Burgos, segunda.</text>
+
+  <!-- Panel derecho: la regla de la ficha en una casa -->
+  <rect x="1000" y="168" width="540" height="600" rx="18" fill="#ffffff" stroke="#b8733a" stroke-width="3"/>
+  <text x="1040" y="226" font-family="'Source Serif 4', Georgia, serif" font-size="36" font-weight="700" fill="#1a2e1f">La regla en una casa</text>
+  <text x="1040" y="272" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">Cuenta la menor de dos demandas:</text>
+  <circle cx="1052" cy="313" r="6" fill="#1a2e1f"/>
+  <text x="1072" y="322" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">la de tu certificado posterior</text>
+  <circle cx="1052" cy="361" r="6" fill="#1a2e1f"/>
+  <text x="1072" y="370" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">el doble de la referencia</text>
+  <line x1="1040" y1="404" x2="1500" y2="404" stroke="#d9d2c3" stroke-width="2"/>
+  <text x="1040" y="452" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#4a5a4f">Tope en Burgos, casa de 1981 a 2007</text>
+  <text x="1040" y="518" font-family="'Source Sans 3', Arial, sans-serif" font-size="64" font-weight="700" fill="#1a2e1f">305,8</text>
+  <text x="1228" y="518" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" fill="#1a2e1f">kWh/m²·año</text>
+  <text x="1040" y="556" font-family="'Source Sans 3', Arial, sans-serif" font-size="24" fill="#4a5a4f">(cálculo propio: 2 × 152,9)</text>
+  <rect x="1040" y="592" width="460" height="64" rx="32" fill="#22a044"/>
+  <text x="1270.0" y="635" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="32" font-weight="700" fill="#ffffff">Manda tu certificado</text>
+  <text x="1040" y="704" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">En un piso, la tabla no se usa:</text>
+  <text x="1040" y="738" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#1a2e1f">solo cuenta el certificado.</text>
+
+  <!-- Banda inferior: zona climática -->
+  <rect x="60" y="800" width="1480" height="104" rx="18" fill="#1a2e1f"/>
+  <rect x="84" y="824" width="330" height="56" rx="28" fill="#b8733a"/>
+  <text x="249" y="862" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Miranda de Ebro: D1</text>
+  <text x="444" y="849" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#f5efe1">A 474 m según AEMET, por debajo de los 600 m de la E1.</text>
+  <text x="444" y="884" font-family="'Source Sans 3', Arial, sans-serif" font-size="26" fill="#f5efe1">La capital y Aranda de Duero son E1.</text>
+  <text x="800" y="952" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="22" fill="#4a5a4f">Fuentes: ficha RES060_FM (BOE de 7 de noviembre de 2026), anexo IV · CTE DB-HE, tabla a-Anejo B · AEMET</text>
+</svg>
