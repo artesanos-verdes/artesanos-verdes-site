@@ -579,6 +579,20 @@
     .av-cta-mid { padding: 1.3rem 1.1rem; }
     .av-cta-mid .btn { width: 100%; justify-content: center; }
   }
+  /* Visuels d'installation (17/11/2026) */
+  .av-instalacion { max-width: 1100px; margin: 3rem auto 0; }
+  .av-figura-ancha { max-width: 1100px; margin: 2.2rem auto 2.8rem; }
+  .av-instalacion img, .av-figura-ancha img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 24px 60px -24px rgba(10, 24, 16, 0.28); }
+  .av-instalacion figcaption, .av-figura-ancha figcaption { margin-top: 0.7rem; font-size: 0.85rem; line-height: 1.5; color: var(--sage); text-align: center; }
+  .av-obra { max-width: 1100px; margin: 3.5rem auto 0; }
+  .av-obra-tit { text-align: center; margin: 0 0 1.4rem; }
+  .av-obra-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; }
+  .av-obra-grid figure { margin: 0; }
+  .av-obra-grid img { display: block; width: 100%; height: auto; aspect-ratio: 762 / 515; object-fit: cover; border-radius: 6px; box-shadow: 0 14px 34px -18px rgba(10, 24, 16, 0.3); }
+  .av-obra-grid figcaption { margin-top: 0.6rem; font-size: 0.9rem; line-height: 1.5; color: var(--forest); }
+  .av-obra-nota { margin: 0.9rem 0 0; font-size: 0.8rem; color: var(--sage); text-align: center; }
+  @media (max-width: 900px) { .av-obra-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .av-obra-grid { grid-template-columns: minmax(0, 1fr); } .av-instalacion { margin-top: 2.2rem; } }
 </style>
 
 <!-- HERO -->
@@ -993,6 +1007,14 @@
       </div>
     </div>
 
+    <figure class="av-instalacion reveal">
+      <picture>
+        <source type="image/webp" srcset="/assets/servicios/aerotermia-instalacion-thaleos-800.webp 800w, /assets/servicios/aerotermia-instalacion-thaleos.webp 1600w" sizes="(max-width: 1100px) 100vw, 1100px">
+        <img src="/assets/servicios/aerotermia-instalacion-thaleos.jpg" alt="Instalación de una bomba de calor aire-agua Thaleos Mont-blanc R290: unidad exterior sobre una losa de hormigón nivelada con soportes antivibración, seta de parada de emergencia junto al equipo y, dentro de la vivienda, módulo interior con depósito de agua caliente sanitaria" width="1600" height="806" loading="lazy" decoding="async">
+      </picture>
+      <figcaption>Así queda instalada: la unidad exterior sobre una losa de hormigón nivelada y soportes antivibración, y dentro de casa el módulo interior con el depósito de agua caliente. Imagen ilustrativa.</figcaption>
+    </figure>
+
     <div class="av-equipo-bloque reveal">
       <h3>Rendimiento, modelo a modelo</h3>
       <p>Gama monobloc monofásica, según la ficha técnica del fabricante. Con el mismo equipo y el mismo aire exterior, el COP baja cuando el agua sale más caliente: el modelo de 8 kW pasa de 5,00 con agua a 35 °C a 3,30 con agua a 55 °C.</p>
@@ -1120,6 +1142,14 @@
       </p>
     </div>
 
+    <figure class="av-figura-ancha reveal">
+      <picture>
+        <source type="image/webp" srcset="/assets/servicios/aerotermia-invierno-thaleos-800.webp 800w, /assets/servicios/aerotermia-invierno-thaleos.webp 1600w" sizes="(max-width: 1100px) 100vw, 1100px">
+        <img src="/assets/servicios/aerotermia-invierno-thaleos.jpg" alt="Dos técnicos revisan con una tableta una bomba de calor aire-agua Thaleos Mont-blanc R290 instalada junto a una vivienda, en un día de nieve" width="1600" height="900" loading="lazy" decoding="async">
+      </picture>
+      <figcaption>Según su ficha técnica, la Mont-blanc R290 da calefacción con aire exterior de hasta −25 °C. Imagen ilustrativa.</figcaption>
+    </figure>
+
     <div class="criteria-grid">
       <div class="criterion reveal">
         <span class="step">i.</span>
@@ -1235,6 +1265,49 @@
         </div>
       </div>
     </div>
+    <div class="av-obra reveal">
+      <h3 class="av-obra-tit">Así es la instalación</h3>
+      <div class="av-obra-grid">
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="/assets/servicios/aerotermia-obra-unidad-exterior.webp">
+            <img src="/assets/servicios/aerotermia-obra-unidad-exterior.jpg" alt="Dos técnicos montan la unidad exterior de una bomba de calor aire-agua y conectan sus tomas de agua" width="762" height="515" loading="lazy" decoding="async">
+          </picture>
+          <figcaption><strong>Unidad exterior.</strong> La montamos y conectamos el circuito de agua.</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="/assets/servicios/aerotermia-obra-modulo-interior.webp">
+            <img src="/assets/servicios/aerotermia-obra-modulo-interior.jpg" alt="Dos técnicos conectan las tuberías del módulo interior de la bomba de calor en un cuarto técnico" width="762" height="515" loading="lazy" decoding="async">
+          </picture>
+          <figcaption><strong>Módulo interior.</strong> Conectamos la calefacción y el agua caliente sanitaria.</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="/assets/servicios/aerotermia-obra-puesta-en-marcha.webp">
+            <img src="/assets/servicios/aerotermia-obra-puesta-en-marcha.jpg" alt="Un técnico con una tableta y otro junto al equipo durante la puesta en marcha de la bomba de calor" width="762" height="515" loading="lazy" decoding="async">
+          </picture>
+          <figcaption><strong>Puesta en marcha.</strong> Ajustamos las curvas de temperatura y comprobamos el equipo.</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source type="image/webp" srcset="/assets/servicios/aerotermia-obra-explicacion.webp">
+            <img src="/assets/servicios/aerotermia-obra-explicacion.jpg" alt="Un técnico explica a una pareja el funcionamiento de la bomba de calor instalada junto a su casa" width="762" height="515" loading="lazy" decoding="async">
+          </picture>
+          <figcaption><strong>Entrega.</strong> Te explicamos el funcionamiento y el control por wifi y app.</figcaption>
+        </figure>
+      </div>
+      <p class="av-obra-nota">Imágenes ilustrativas.</p>
+    </div>
+
+    <div class="av-cta-mid reveal">
+      <p>El primer paso es el estudio de elegibilidad: <strong>gratuito y por escrito</strong>.</p>
+      <a href="#contacto" class="btn btn-primary">
+        Solicitar estudio gratuito
+        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
   </div>
 </section>
 
